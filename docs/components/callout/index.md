@@ -2,13 +2,14 @@
   import iOS from './ios.md';
   import data from './data.json';
   import { mapFrameworkStatuses } from '../utils.js';
+  import android from './android.md';
 </script>
 
 # Callout
 
 {{ data.description }}
 
-::: warning iOS only
+::: Warning! Native only!
 For the web implementation of a "callout", see [Components - Attention - Callout](/components/attention/#callout).
 :::
 
@@ -24,6 +25,13 @@ For the web implementation of a "callout", see [Components - Attention - Callout
 
 <component-questions />
 
-## iOS implementation
+## Frameworks
 
-<iOS />
+<tabs-content>
+<template #iOS>
+    <iOS />
+  </template>
+  <template #android>
+    <android />
+  </template>
+</tabs-content>

@@ -2454,6 +2454,78 @@ export const android = {
       ],
     ]
   },
+  Callout: {
+    required: [
+      [
+        'title', 
+        'String', 
+        '', 
+        'The text to be displayed in the callout'
+      ],
+      [
+        'state', 
+        'CalloutState', 
+        '', 
+        'The state of the callout. If visible or not'
+      ],
+      [
+        'onDismiss', 
+        '() -> Unit', 
+        '', 
+        'The lambda to be invoked when dismissed'
+      ],
+    ],
+    props: [
+      [
+        'size',
+        'CalloutSize.Default <br /> CalloutSize.Small',
+        'CalloutSize.Default',
+        'Size of the callout',
+      ],
+      [
+        'type',
+        'CalloutSize.Popover <br /> CalloutSize.Inline',
+        'CalloutSize.Popover',
+        'Type of the callout',
+      ],
+      [
+        'inlineModifier',
+        'Modifier',
+        'Modifier',
+        'Modifier only used for the Inline callout type',
+      ],
+      [
+        'horizontalOffset',
+        'Dp',
+        '0.dp',
+        'Horizontal offset used only for the Popover type callout',
+      ],
+      [
+        'verticalOffset',
+        'Dp',
+        '0.dp',
+        'Vertical offset used only for the Popover type callout',
+      ],
+      [
+        'edge',
+        'Edge.Top <br /> Edge.Bottom <br /> Edge.Leading <br /> Edge.Trailing',
+        'Edge.Top',
+        'Edge that determines the direction of the arrow',
+      ],
+      [
+        'closable',
+        'Boolean',
+        'false',
+        'If should show the close icon',
+      ],
+      [
+        'anchorView', 
+        '@Composable () -> Unit', 
+        'null', 
+        'The anchor which the callout points to'
+      ],
+    ]
+  },
 };
 
 export const iOS = {
