@@ -1,17 +1,17 @@
 <script setup>
-  import iOS from './ios.md';
-  import data from './data.json';
-  import { mapFrameworkStatuses } from '../utils.js';
   import android from './android.md';
+  import data from './data.json';
+  import Elements from './elements.md';
+  import iOS from './ios.md';
+  import React from './react.md';
+  import Vue from './vue.md';
+  
+  import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
 # Callout
 
 {{ data.description }}
-
-::: warning Native only!
-For the web implementation of a "callout", see [Components - Attention - Callout](/components/attention/#callout).
-:::
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
@@ -28,6 +28,15 @@ For the web implementation of a "callout", see [Components - Attention - Callout
 ## Frameworks
 
 <tabs-content>
+  <template #react>
+    <react />
+  </template>
+  <template #vue>
+    <vue />
+  </template>
+  <template #elements>
+    <elements />
+  </template>
 <template #iOS>
     <iOS />
   </template>

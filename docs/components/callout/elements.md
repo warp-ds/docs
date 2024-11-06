@@ -6,8 +6,6 @@ import '@warp-ds/elements/components/attention';
 
 ### Visual options
 
-#### Callout
-
 ```js
 <w-attention placement="right" show callout class="flex items-center">
   <div id="target" slot="target">
