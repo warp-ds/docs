@@ -9,7 +9,7 @@
 
 {{ data.description }}
 
-::: Warning! Native only!
+::: warning Native only!
 For the web implementation of a "callout", see [Components - Attention - Callout](/components/attention/#callout).
 :::
 
