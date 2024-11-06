@@ -578,6 +578,7 @@ export default defineConfig({
             { text: 'Modal', link: '/components/modal/' },
             { text: 'Pagination', link: '/components/pagination/' },
             { text: 'Pill', link: '/components/pill/' },
+            { text: 'Popover', link: '/components/popover/' },
             { text: 'Radio', link: '/components/radio/' },
             { text: 'Radio buttons', link: '/components/radiobuttons/' },
             { text: 'Select', link: '/components/select/' },

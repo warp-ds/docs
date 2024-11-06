@@ -1,0 +1,25 @@
+{
+  "title": "Popover",
+  "description": "A Popover is a message box that is displayed floating over page content after pressing a trigger element, like an info-icon.",
+  "category": "Overlays",
+  "placeholder": {
+    "label": "Popover component"
+  },
+  "frameworks": [
+    {
+      "name": "React",
+      "status": "released"
+    },
+    {
+      "name": "Vue",
+      "status": "released"
+    },
+    {
+      "name": "Elements",
+      "status": "released"
+    },
+    {
+      "name": "Figma"
+    }
+  ]
+}
