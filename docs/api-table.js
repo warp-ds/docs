@@ -1767,6 +1767,12 @@ export const android = {
         'Sets the textfield to a single line'
       ],
       [
+        'minLines', 
+        'Int', 
+        '1', 
+        'Sets the minimum amount of lines'
+      ],
+      [
         'maxLines', 
         'Int', 
         'Int.MAX_VALUE', 
