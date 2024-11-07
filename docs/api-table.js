@@ -39,7 +39,7 @@ export const react = {
       ['targetEl', 'MutableRefObject<unknown>', '', 'The reference container to which the Attention component is positioned relative to. Optional if `callout`.'],
     ],
     props: [
-      ['isShowing', 'boolean', 'false', 'Whether Attention component is shown Used for tooltip'],
+      ['isShowing', 'boolean', 'false', 'Whether Attention component is shown.'],
       [
         'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position',
       ],
@@ -207,6 +207,33 @@ export const react = {
         '',
         "Sets the button's width to its parent's width. Useful especially on mobile when button should take full width.",
       ],
+    ],
+  },
+  Callout: {
+    required: [
+      ['targetEl', 'MutableRefObject<unknown>', '', 'The reference container to which the Attention component is positioned relative to. Required if `highlight` but optional if `callout`.'],
+    ],
+    props: [
+      ['isShowing', 'boolean', 'false', 'Whether Attention component is shown.'],
+      [
+        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position',
+      ],
+      ['children', 'Element | Element[]', '', 'Elements inside of the Attention component'],
+      ['className', 'string', '', 'Extend the Attention component container styling'],
+      ['callout', 'boolean', 'false', 'Whether Attention component is rendered as a callout, displayed inline within content.'],
+      ['highlight', 'boolean', 'false', 'Whether Attention component is rendered as a highlight, elevated above content with subtle shadow.'],
+      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
+      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
+      ['noArrow', 'boolean', 'false', 'Render Attention component without arrow'],
+      ['canClose', 'boolean', 'false', 'Whether a close button is shown'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['crossAxis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallbackPlacements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['onDismiss', '() => void', '', 'Called when user clicks the close button or presses Escape when the button is in focus.'],
     ],
   },
   Card: {
@@ -386,6 +413,32 @@ export const react = {
     events: [
         ['onClick', 'Action to be called when the pill is clicked.'],
         ['onClose', 'Action to be called when the close button is clicked.'],
+    ],
+  },
+  Popover: {
+    required: [
+      ['targetEl', 'MutableRefObject<unknown>', '', 'The reference container to which the Attention component is positioned relative to.'],
+    ],
+    props: [
+      ['isShowing', 'boolean', 'false', 'Whether Attention component is shown.'],
+      [
+        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position',
+      ],
+      ['children', 'Element | Element[]', '', 'Elements inside of the Attention component'],
+      ['className', 'string', '', 'Extend the Attention component container styling'],
+      ['popover', 'boolean', 'false', 'Whether Attention component is rendered as a popover'],
+      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
+      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
+      ['noArrow', 'boolean', 'false', 'Render Attention component without arrow'],
+      ['canClose', 'boolean', 'false', 'Whether a close button is shown'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['crossAxis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallbackPlacements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['onDismiss', '() => void', '', 'Called when user clicks the close button or presses Escape when the button is in focus.'],
     ],
   },
   Select: {
@@ -783,6 +836,31 @@ export const react = {
       ['className', 'string', '', 'Custom classes applied to the wrapping container'],
       ['equalWidth', 'boolean', '', 'Will make each option equal width, only applied when "radio-button" type is set'],
       ['small', 'boolean', '', 'Whether the elements should be small, only applied when "radio-button" type is set'],
+    ],
+  },
+  Tooltip: {
+    required: [
+      ['targetEl', 'MutableRefObject<unknown>', '', 'The reference container to which the Attention component is positioned relative to.'],
+    ],
+    props: [
+      ['isShowing', 'boolean', 'false', 'Whether Attention component is shown.'],
+      [
+        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position',
+      ],
+      ['children', 'Element | Element[]', '', 'Elements inside of the Attention component'],
+      ['className', 'string', '', 'Extend the Attention component container styling'],
+      ['tooltip', 'boolean', 'false', 'Whether Attention component is rendered as a tooltip'],
+      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
+      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
+      ['noArrow', 'boolean', 'false', 'Render Attention component without arrow'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['crossAxis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallbackPlacements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['onDismiss', '() => void', '', 'Called when user clicks the close button or presses Escape when the button is in focus.'],
     ],
   },
 };
