@@ -115,4 +115,4 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 
 ### Props
 
-<api-table type="elements" component="Attention" />
+<api-table type="elements" component="Callout" />

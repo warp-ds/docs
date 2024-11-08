@@ -240,4 +240,4 @@ Read more: [MDN aria-details](https://developer.mozilla.org/en-US/docs/Web/Acces
 
 ### Props
 
-<api-table type="vue" component="Attention" />
+<api-table type="vue" component="Tooltip" />

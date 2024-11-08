@@ -34,35 +34,6 @@ export const react = {
       ],
     ],
   },
-  Attention: {
-    required: [
-      ['targetEl', 'MutableRefObject<unknown>', '', 'The reference container to which the Attention component is positioned relative to. Optional if `callout`.'],
-    ],
-    props: [
-      ['isShowing', 'boolean', 'false', 'Whether Attention component is shown.'],
-      [
-        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position',
-      ],
-      ['children', 'Element | Element[]', '', 'Elements inside of the Attention component'],
-      ['className', 'string', '', 'Extend the Attention component container styling'],
-      ['tooltip', 'boolean', 'false', 'Whether Attention component is rendered as a tooltip'],
-      ['callout', 'boolean', 'false', 'Whether Attention component is rendered as a callout'],
-      ['popover', 'boolean', 'false', 'Whether Attention component is rendered as a popover'],
-      ['highlight', 'boolean', 'false', 'Whether Attention component is rendered as a highlight'],
-      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
-      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
-      ['noArrow', 'boolean', 'false', 'Render Attention component without arrow'],
-      ['canClose', 'boolean', 'false', 'Whether a close button is shown'],
-      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
-      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
-      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
-      ['crossAxis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
-      ['fallbackPlacements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
-    ],
-    events: [
-      ['onDismiss', '() => void', '', 'Called when user clicks the close button or presses Escape when the button is in focus.'],
-    ],
-  },
   Badge: {
     required: [],
     props: [
@@ -221,7 +192,7 @@ export const react = {
       ['children', 'Element | Element[]', '', 'Elements inside of the Attention component'],
       ['className', 'string', '', 'Extend the Attention component container styling'],
       ['callout', 'boolean', 'false', 'Whether Attention component is rendered as a callout, displayed inline within content.'],
-      ['highlight', 'boolean', 'false', 'Whether Attention component is rendered as a highlight, elevated above content with subtle shadow.'],
+      ['highlight', 'boolean', 'false', 'Whether Attention component is rendered as a highlight, elevated above content with shadow.'],
       ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
       ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
       ['noArrow', 'boolean', 'false', 'Render Attention component without arrow'],
@@ -878,33 +849,6 @@ export const vue = {
       ['info', 'boolean', 'undefined', 'Creates an info alert'],
     ],
   },
-  Attention: {
-    required: [
-      ['v-model', 'boolean', '', 'Whether Attention component should be visible'],
-      ['target-el', 'string', '', 'Selector of element that the Attention component is rendered relatively to. Optional if `callout`.'],
-    ],
-    props: [
-      [
-        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position.',
-      ],
-      ['tooltip', 'boolean', 'false', 'Render tooltip'],
-      ['callout', 'boolean', 'false', 'Whether Attention component is rendered as an inline callout'],
-      ['popover', 'boolean', 'false', 'Whether Attention component is rendered as a popover'],
-      ['highlight', 'boolean', 'false', 'Whether Attention component is rendered as a highlight'],
-      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
-      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
-      ['no-arrow', 'boolean', 'false', 'Render Attention component without arrow'],
-      ['can-close', 'boolean', 'false', 'Whether a close button is shown'],
-      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
-      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally'],
-      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
-      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
-      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
-    ],
-    events: [
-      ['@dismiss', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.'],
-    ],
-  },
   Badge: {
     required: [],
     props: [
@@ -958,6 +902,31 @@ export const vue = {
         'Her er du',
         'Defines a string value that labels the current element.',
       ],
+    ],
+  },
+  Callout: {
+    required: [
+      ['v-model', 'boolean', '', 'Whether Attention component should be visible'],
+      ['target-el', 'string', '', 'Selector of element that the Attention component is rendered relatively to. Required if `highlight` but optional if `callout`.'],
+    ],
+    props: [
+      [
+        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position.',
+      ],
+      ['callout', 'boolean', 'false', 'Whether Attention component is rendered as a callout, displayed inline within content.'],
+      ['highlight', 'boolean', 'false', 'Whether Attention component is rendered as a highlight, elevated above content with shadow.'],
+      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
+      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
+      ['no-arrow', 'boolean', 'false', 'Render Attention component without arrow'],
+      ['can-close', 'boolean', 'false', 'Whether a close button is shown'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['@dismiss', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.'],
     ],
   },
   Card: {
@@ -1213,6 +1182,30 @@ export const vue = {
     ],
     events: [['close', 'the close button is pressed']],
   },
+  Popover: {
+    required: [
+      ['v-model', 'boolean', '', 'Whether Attention component should be visible'],
+      ['target-el', 'string', '', 'Selector of element that the Attention component is rendered relatively to.'],
+    ],
+    props: [
+      [
+        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position.',
+      ],
+      ['popover', 'boolean', 'false', 'Whether Attention component is rendered as a popover'],
+      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
+      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
+      ['no-arrow', 'boolean', 'false', 'Render Attention component without arrow'],
+      ['can-close', 'boolean', 'false', 'Whether a close button is shown'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['@dismiss', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.'],
+    ],
+  },
   Slider: {
     required: [],
     props: [
@@ -1313,6 +1306,29 @@ export const vue = {
       ['small', 'boolean', '', 'Whether the elements should be small, only applied when radio-button is set'],
     ],
   },
+  Tooltip: {
+    required: [
+      ['v-model', 'boolean', '', 'Whether Attention component should be visible'],
+      ['target-el', 'string', '', 'Selector of element that the Attention component is rendered relatively to.'],
+    ],
+    props: [
+      [
+        'placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. The arrow will point to the opposite side of this position.',
+      ],
+      ['tooltip', 'boolean', 'false', 'Whether Attention component is rendered as a tooltip'],
+      ['role', 'string', '', 'Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`).'],
+      ['aria-label', 'string', '', 'Allows the user to override the default aria-label attribute for the Attention component'],
+      ['no-arrow', 'boolean', 'false', 'Render Attention component without arrow'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['@dismiss', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.'],
+    ],
+  },
 };
 
 export const elements = {
@@ -1337,29 +1353,6 @@ export const elements = {
     props: [
       ['show', 'boolean', 'false', 'Controls when the alert shows'],
       ['role', 'string', 'alert', 'ARIA live region "role" attribute value'],
-    ],
-  },
-  Attention: {
-    required: [
-      ['target-selector', 'string', '', 'Selector of element that the Attention component is rendered relatively to'],
-    ],
-    props: [
-      ['placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. Arrow would be on the opposite side of this position'],
-      ['show', 'boolean', 'false', 'Whether Attention element should be visible'],
-      ['tooltip', 'boolean', 'false', 'Render tooltip'],
-      ['callout', 'boolean', 'false', 'Whether Attention element is rendered as an inline callout'],
-      ['popover', 'boolean', 'false', 'Whether Attention element is rendered as a popover'],
-      ['highlight', 'boolean', 'false', 'Whether Attention element is rendered as a highlight'],
-      ['no-arrow', 'boolean', 'false', 'Render Attention element without an arrow'],
-      ['can-close', 'boolean', 'false', 'Render Attention element with a close button'],
-      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
-      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
-      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
-      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
-      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
-    ],
-    events: [
-      ['@close', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.']
     ],
   },
   Badge: {
@@ -1461,6 +1454,27 @@ export const elements = {
       ],
     ],
   },
+  Callout: {
+    required: [
+      ['target-selector', 'string', '', 'Selector of element that the Attention component is rendered relatively to'],
+    ],
+    props: [
+      ['placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. Arrow would be on the opposite side of this position'],
+      ['show', 'boolean', 'false', 'Whether Attention element should be visible'],
+      ['callout', 'boolean', 'false', 'Whether Attention element is rendered as a callout, displayed inline within content.'],
+      ['highlight', 'boolean', 'false', 'Whether Attention element is rendered as a highlight, elevated above content with shadow.'],
+      ['no-arrow', 'boolean', 'false', 'Render Attention element without an arrow'],
+      ['can-close', 'boolean', 'false', 'Render Attention element with a close button'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['@close', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.']
+    ],
+  },
   Card: {
     required: [],
     props: [
@@ -1543,6 +1557,26 @@ export const elements = {
     events: [
       ['w-pill-click', 'Event to be called when the pill is clicked.'],
       ['w-pill-close', 'Event to be called when the close button is clicked.']
+    ],
+  },
+  Popover: {
+    required: [
+      ['target-selector', 'string', '', 'Selector of element that the Attention component is rendered relatively to'],
+    ],
+    props: [
+      ['placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. Arrow would be on the opposite side of this position'],
+      ['show', 'boolean', 'false', 'Whether Attention element should be visible'],
+      ['popover', 'boolean', 'false', 'Whether Attention element is rendered as a popover'],
+      ['no-arrow', 'boolean', 'false', 'Render Attention element without an arrow'],
+      ['can-close', 'boolean', 'false', 'Render Attention element with a close button'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['@close', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.']
     ],
   },
 
@@ -1654,6 +1688,25 @@ export const elements = {
       ['duration', 'number', '5000', 'Duration of toast in milliseconds. For accessibility reasons, toasts should never be interactive and therefore need to auto remove. If you must disable auto remove, set duration to Number.POSITIVE_INFINITY.'],
       ['canclose', 'boolean', 'false', 'Adds a close button. WARNING! For accessibility reasons, toasts should not be interactive and canclose should always be false. If the toast absolutely must be dismissible, set this to true.'],
     ]
+  },
+  Tooltip: {
+    required: [
+      ['target-selector', 'string', '', 'Selector of element that the Attention component is rendered relatively to'],
+    ],
+    props: [
+      ['placement', "'top-start' | 'top' | 'top-end' | 'bottom-start' | 'bottom' | 'bottom-end' | 'left-start' | 'left' | 'left-end' | 'right-start' | 'right' | 'right-end'", "'bottom'", 'Placement according to the target element. Arrow would be on the opposite side of this position'],
+      ['show', 'boolean', 'false', 'Whether Attention element should be visible'],
+      ['tooltip', 'boolean', 'false', 'Whether Attention component is rendered as a tooltip'],
+      ['no-arrow', 'boolean', 'false', 'Render Attention element without an arrow'],
+      ['distance', 'number', '8', 'Distance from which to offset the Attention component from the targetEl vertically'],
+      ['skidding', 'number', '0', 'Distance from which to offset the Attention component along its targetEl horizontally.'],
+      ['flip', 'boolean', 'false', 'Whether Attention element should flip its placement in order to keep it in view'],
+      ['cross-axis', 'boolean', 'false', 'Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true.'],
+      ['fallback-placements', 'array', 'undefined', 'Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true.'],
+    ],
+    events: [
+      ['@close', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.']
+    ],
   },
 };
 

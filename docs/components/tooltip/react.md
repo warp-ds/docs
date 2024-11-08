@@ -262,4 +262,4 @@ Read more: [MDN aria-details](https://developer.mozilla.org/en-US/docs/Web/Acces
 
 ### Props
 
-<api-table type="react" component="Attention" />
+<api-table type="react" component="Tooltip" />
