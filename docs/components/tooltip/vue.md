@@ -21,25 +21,6 @@ import { wAttention } from '@warp-ds/vue/attention';
 
 ### Visual options
 
-#### Callout
-
-```vue
-<script setup>
-import { ref } from 'vue';
-import { wAttention, wBox } from '#components';
-
-const showing = ref(false);
-</script>
-<template>
-  <w-box neutral as="h4" aria-details="callout-bubbletext">
-    I am a box full of info
-  </w-box>
-  <w-attention callout placement="right" v-model="showing">
-    <p id="callout-bubbletext">Hello Warp! This thing is new!</p>
-  </w-attention>
-</template>
-```
-
 #### Tooltip
 
 ```vue
@@ -79,125 +60,19 @@ const showing = ref(false);
 </template>
 ```
 
-#### Popover
-
-```vue
-<script setup>
-import { ref } from 'vue';
-import { wAttention, wButton } from '#components';
-
-const target = ref(null);
-const showing = ref(false);
-</script>
-<template>
-  <w-button
-    utility
-    :aria-expanded="showing"
-    aria-controls="popover-example"
-    aria-details="popover-bubbletext"
-    ref="target"
-    @click="() => (showing = !showing)"
-  >
-    Open popover
-  </w-button>
-  <w-attention
-    popover
-    placement="right"
-    flip
-    cross-axis
-    :fallback-placements="['left', 'bottom', 'top']"
-    :target-el="target ? target.$el : null"
-    v-model="showing"
-    id="popover-example"
-  >
-    <p id="popover-bubbletext">Hello Warp!</p>
-  </w-attention>
-</template>
-```
-
-#### Popover with icon as target element
-
-```vue
-<script setup>
-import { ref } from 'vue';
-import { wAttention, wButton } from '#components';
-import IconInfo16 from '@warp-ds/icons/vue/info-16';
-
-const target = ref(null);
-const showing = ref(false);
-</script>
-<template>
- <w-button
-  :aria-expanded="popoverIconTargetShowing"
-  aria-controls="popover-icon-target-example"
-  type="button"
-  utility
-  quiet
-  ref="popoverIconTarget"
-  @click="() => (popoverIconTargetShowing = !popoverIconTargetShowing)"
-  >
-    <icon-info-16 />
-  </w-button>
-  <w-attention
-    popover
-    placement="right-end"
-    :distance="-8"
-    :skidding="27"
-    :target-el="popoverIconTarget ? popoverIconTarget.$el : null"
-    v-model="popoverIconTargetShowing"
-  >
-    <p>Hello Warp!</p>
-  </w-attention>
-</template>
-```
-
-#### Highlight (with optional close button)
-
-```vue
-<script setup>
-import { ref } from 'vue'
-import { wAttention, wButton } from '#components'
-
-const highlightTarget = ref(null)
-const highlightShowing = ref(false)
-</script>
-<template>
-  <w-button
-    :aria-expanded="highlightShowing"
-    aria-controls="highlight-attention-example"
-    aria-details="highlighted-bubbletext"
-    ref="highlightTarget"
-    @click="highlightShowing = !highlightShowing"
-    >Click me</w-button
-  >
-  <w-attention
-    id="highlight-attention-example"
-    highlight
-    placement="bottom"
-    flip
-    :fallback-placements="['top']"
-    can-close
-    @dismiss="highlightShowing = false"
-    :target-el="highlightTarget ? highlightTarget.$el : null"
-    v-model="highlightShowing"
-  >
-    <p id="highlighted-bubbletext">I'm a dismissible highlight</p>
-  </w-attention>
-</template>
-```
 ### Flip prop
 The attention component uses the Floating-ui library to calculate its position.
 By default, the `flip` prop is set to `false`, which means that the attention component will not flip its position to the opposite side.
 
 Try to scroll and see how the attention component doesn't move:
 
-<attention-static-example />
+<tooltip-static-example />
 
 When `flip` is set to `true`, it will instead trigger [Floating-ui's flip() function](https://floating-ui.com/docs/flip) that will make sure that the attention component stays in viewport, by flipping it to the opposite side.
 
 Try to scroll and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
 
-<attention-flip-example />
+<tooltip-flip-example />
 
 ### Cross-axis prop
 The `cross-axis` prop decides whether to check for cross axis overflow or not when `flip` is set to `true`.
@@ -211,9 +86,9 @@ If `flip`is set to `true`, then you have the option to also use `fallback-placem
 
 Read more: [Floating-ui fallbackPlacements](https://floating-ui.com/docs/flip#fallbackplacements)
 
-Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
+Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` but then moves to the `top`: 
 
-<attention-fallback-placements-example />
+<tooltip-fallback-placements-example />
 
 ### Accessibility
 The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute (`role="tooltip"` for tooltip and `role="img"` otherwise), and a default localized `aria-label`.

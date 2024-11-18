@@ -562,7 +562,6 @@ export default defineConfig({
           items: [
             { text: 'Component overview', link: '/components/' },
             { text: 'Alert', link: '/components/alert/' },
-            { text: 'Attention', link: '/components/attention/' },
             { text: 'Badge', link: '/components/badge/' },
             { text: 'Box', link: '/components/box/' },
             { text: 'Breadcrumbs', link: '/components/breadcrumbs/' },

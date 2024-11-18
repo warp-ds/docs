@@ -15,7 +15,7 @@
 
 ## Example
 <ThemeSwitcher />
-<callout-example />
+<popover-example />
 
 ## Usage
 

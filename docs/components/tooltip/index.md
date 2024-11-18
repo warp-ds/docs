@@ -25,7 +25,7 @@ Tooltips should be used sparingly and contain succinct, supplementary informatio
 
 <component-questions />
 
-## iOS implementation
+## Frameworks
 
 <tabs-content>
   <template #react>

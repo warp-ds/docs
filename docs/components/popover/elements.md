@@ -6,26 +6,6 @@ import '@warp-ds/elements/components/attention';
 
 ### Visual options
 
-```js
-<w-attention placement="right" show callout class="flex items-center">
-  <div id="target" slot="target">
-    <p>This is a target to callout attention element</p>
-  </div>
-  <span slot="message">Callout on right</span>
-</w-attention>
-```
-
-#### Tooltip
-
-```js
-<w-attention placement="right" tooltip flip>
-  <button id="target" slot="target">
-    Hover or focus to show a tooltip on right
-  </button>
-  <span slot="message">I'm a tooltip on right</span>
-</w-attention>
-```
-
 #### Popover
 
 ```js
@@ -48,33 +28,19 @@ import '@warp-ds/elements/components/attention';
 </w-attention>
 ```
 
-#### Highlight (with optional close button)
-
-```js
-<w-attention placement="right" highlight id="highlight" can-close flip fallback-placements='["top"]'>
-  <button
-    id="highlightTarget"
-    slot="target"
-  >
-    Click to toggle a highlight on right
-  </button>
-  <span slot="message">I'm a dismissible highlight on right</span>
-</w-attention>
-```
-
 ### Flip prop
 The attention component uses the Floating-ui library to calculate its position.
 By default, the `flip` prop is set to `false`, which means that the attention component will not flip its position to the opposite side.
 
 Try to scroll and see how the attention component doesn't move:
 
-<attention-static-example />
+<popover-static-example />
 
 When `flip` is set to `true`, it will instead trigger [Floating-ui's flip() function](https://floating-ui.com/docs/flip)  that will make sure that the attention component stays in viewport, by flipping it to the opposite side.
 
 Try to scroll and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
 
-<attention-flip-example />
+<popover-flip-example />
 
 ### Cross-axis prop
 The `cross-axis` prop decides whether to check for cross axis overflow or not when `flip` is set to `true`.
@@ -89,7 +55,7 @@ Read more: [Floating-ui fallbackPlacements](https://floating-ui.com/docs/flip#fa
 
 Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
 
-<attention-fallback-placements-example />
+<popover-fallback-placements-example />
 
 ### Accessibility
 If the Attention element has "left" or "top" position, it should be placed before the target element in the DOM.
@@ -102,13 +68,13 @@ To do that set the `role` attribute on the relevant text element nested in `w-at
 The `aria-details` attribute is on the target element, not on `w-attention`.
 
 ```js
-<w-attention placement="top" tooltip>
+<w-attention placement="top" popover>
   <div slot="message">
-    <p id="aria-content" role="tooltip">This tooltip text is important</p>
+    <p id="aria-content">This popover text is important</p>
     <p>(this text is less relevant)</p>
   </div>
   <button aria-describedby="aria-content" id="target" slot="target">
-    Click to toggle a tooltip on top
+    Click to toggle a popover on top
   </button>
 </w-attention>
 ```

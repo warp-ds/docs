@@ -27,145 +27,6 @@ import { Attention } from '@warp-ds/react/components/attention'
 </div>
 ```
 
-#### Tooltip
-
-```js
-function Example() {
-  const [show, setShow] = React.useState(false)
-  const targetEl = React.useRef()
-
-  return (
-    <div>
-      <Button
-        ref={targetEl}
-        utility
-        aria-describedby='tooltip-bubbletext'
-        aria-expanded={show}
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
-        onFocus={() => setShow(true)}
-        onBlur={() => setShow(false)}
-      >
-        hover this for useless info
-      </Button>
-      <Attention
-        tooltip
-        placement='right'
-        flip={true}
-        targetEl={targetEl}
-        isShowing={show}
-      >
-        <p id='tooltip-bubbletext'>I am a tooltip</p>
-      </Attention>
-    </div>
-  )
-}
-```
-
-#### Popover
-
-```js
-function Example() {
-  const [show, setShow] = React.useState(false)
-  const targetEl = React.useRef()
-
-  return (
-    <div>
-      <Button
-        small
-        aria-expanded={show}
-        aria-controls='popover-attention-example'
-        aria-details='popover-bubbletext'
-        utility
-        onClick={() => setShow(!show)}
-        ref={targetEl}
-      >
-        Open menu
-      </Button>
-      <Attention
-        popover
-        placement='right'
-        flip={true}
-        crossAxis={true}
-        fallbackPlacements={['left', 'bottom', 'top']}
-        targetEl={targetEl}
-        isShowing={show}
-        id='popover-attention-example'
-      >
-        <ul id='popover-bubbletext'>
-          <li>Hello</li>
-          <li>World</li>
-        </ul>
-      </Attention>
-    </div>
-  )
-}
-```
-
-#### Popover with icon as target element
-
-```js
-function PopoverIconAsTargetEl() {
-  const [show, setShow] = React.useState(false)
-  const containerRef = React.useRef<HTMLDivElement>(null)
-  const targetEl = React.useRef<any>(null);
-
-  React.useEffect(() => {
-    function onBlurHandler(e) {
-      if (containerRef.current && !containerRef.current.contains(e.target)) {
-        setShow(false)
-      }
-    }
-    document.addEventListener('mousedown', onBlurHandler)
-    return () => {
-      document.removeEventListener('mousedown', onBlurHandler)
-    }
-  })
-
-  return (
-  <div className='flex items-center justify-center'>
-    <div ref={containerRef}>
-      <Button
-        small
-        aria-expanded={show}
-        aria-controls='popover-icon-target-el-attention-example'
-        utility
-        quiet
-        onClick={() => setShow(!show)}
-        className='w-max mb-0'
-        ref={targetEl}
-      >
-        <IconInfo16 />
-      </Button>
-      <Attention
-        popover
-        placement='right-end'
-        distance={-8}
-        skidding={27}
-        targetEl={targetEl}
-        isShowing={show}
-      >
-        <ul className='bg-white w-full text-center'>
-          <li
-            tabIndex={0}
-            className='p-2 px-40 hover:bg-blue-200 hover:text-blue-500 cursor-pointer'
-          >
-            Hello
-          </li>
-          <li
-            tabIndex={0}
-            className='p-2 px-40 hover:bg-blue-200 hover:text-blue-500 cursor-pointer'
-          >
-            World
-          </li>
-        </ul>
-      </Attention>
-    </div>
-  </div>
-  )
-}
-```
-
 #### Highlight (with optional close button)
 
 ```js
@@ -218,13 +79,13 @@ By default, the `flip` prop is set to `false`, which means that the attention co
 
 Try to scroll and see how the attention component doesn't move:
 
-<attention-static-example />
+<callout-static-example />
 
 When `flip` is set to `true`, it will instead trigger [Floating-ui's flip() function](https://floating-ui.com/docs/flip) that will make sure that the attention component stays in viewport, by flipping it to the opposite side.
 
 Try to scroll and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
 
-<attention-flip-example />
+<callout-flip-example />
 
 ### CrossAxis prop
 The `crossAxis` prop decides whether to check for cross axis overflow or not when `flip` is set to `true`.
@@ -240,7 +101,7 @@ Read more: [Floating-ui fallbackPlacements](https://floating-ui.com/docs/flip#fa
 
 Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
 
-<attention-fallback-placements-example />
+<callout-fallback-placements-example />
 
 ### Accessibility
 The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute (`role="tooltip"` for tooltip and `role="img"` otherwise), and a default localized `aria-label`.
@@ -248,9 +109,9 @@ The attention component handles accessibility automatically by wrapping its slot
 It is possible to remove the default `role` and override the `aria-label` attribute:
 
 ```js
-<Attention tooltip placement='right' isShowing={true} role='' aria-label=''>
-  <p id='tooltip-bubbletext' role='tooltip'>
-    I'm a tooltip speech bubble with overridden role and aria-label attributes
+<Attention highlight placement='right' isShowing={true} role='' aria-label=''>
+  <p id='highlight-bubbletext'>
+    I'm a highlight speech bubble with overridden role and aria-label attributes
     pointing up.
   </p>
 </Attention>
