@@ -24,9 +24,7 @@ const popoverShowing = ref(false)
       flip
       :target-el="popoverTarget ? popoverTarget.$el : null"
       v-model="popoverShowing"
-      id="popover-example"
-      tabindex="0"
-    >
+      id="popover-example">
       <p id="popover-bubbletext">This is a popover</p>
     </w-attention>
   </div>

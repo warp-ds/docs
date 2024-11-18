@@ -32,9 +32,7 @@ const popoverIconTargetShowing = ref(false)
         :fallback-placements="['left', 'bottom', 'top']"
         :target-el="popoverTarget ? popoverTarget.$el : null"
         v-model="popoverShowing"
-        id="popover-example"
-        tabindex="0"
-      >
+        id="popover-example">
         <p id="popover-bubbletext">This is a popover</p>
       </w-attention>
     </div>
@@ -57,9 +55,7 @@ const popoverIconTargetShowing = ref(false)
           :distance="-6"
           :skidding="8"
           :target-el="popoverIconTarget ? popoverIconTarget.$el : null"
-          v-model="popoverIconTargetShowing"
-          tabindex="0"
-        >
+          v-model="popoverIconTargetShowing">
           <p>Hello Warp!</p>
         </w-attention>
     </div>

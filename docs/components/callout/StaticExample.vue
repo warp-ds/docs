@@ -23,9 +23,7 @@ const highlightShowing = ref(false)
       placement="bottom-start"
       :target-el="highlightTarget ? highlightTarget.$el : null"
       v-model="highlightShowing"
-      id="highlight-example"
-      tabindex="0"
-    >
+      id="highlight-example">
       <p id="highlight-bubbletext">This is a highlight</p>
     </w-attention>
   </div>
