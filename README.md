@@ -10,5 +10,5 @@ Run `pnpm install`.
 Start the development server, with hot reloading:
 
 ```bash
-pnpm docs:dev
+pnpm dev
 ```
