@@ -22,6 +22,7 @@ fun WarpTextField(
     keyboardOptions: KeyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences), 
     keyboardActions: KeyboardActions = KeyboardActions.Default, 
     singleLine: Boolean = true, 
+    minLines: Int = 1,
     maxLines: Int = Int.MAX_VALUE, 
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }
 )
@@ -185,7 +186,8 @@ To support layouts still written in xml the WarpTextField can be used as a custo
         app:isError="false"
         app:prefixText="kronor"
         app:suffixText="kr"
-        app:maxLines="2"
+        app:maxLines="6"
+        app:minLines="2"
         app:singleLine="false"
         />
 ```
