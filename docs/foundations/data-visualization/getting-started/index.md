@@ -65,7 +65,7 @@ We have not (yet) decided on a recommended charting library. Make sure to check 
 
 ## How do you provide feedback or get help?
 
-Don’t hesitate to reach out to the design system team [on Slack (#nmp-warp-design-system)](https://sch-chat.slack.com/archives/C04P0GYTHPV) if you have any feedback or questions.
+Don’t hesitate to reach out to the design system team [on Slack (#smp-warp-design-system)](https://sch-chat.slack.com/archives/C04P0GYTHPV) if you have any feedback or questions.
 
 [Jon Olav](https://sch-chat.slack.com/team/U03KEH3V4) is an information designer working across verticals and brands in NMP, and can help you with:
 
