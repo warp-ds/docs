@@ -16,7 +16,23 @@ fun WarpButton(
     @DrawableRes leadingIcon: Int? = null,
     leadingIconContentDescr: String? = null,
     @DrawableRes trailingIcon: Int? = null,
-    trailingIconContentDescr: String? = null
+    trailingIconContentDescr: String? = null,
+    small: Boolean = false,
+    iconModifier: Modifier = Modifier
+)
+
+@Composable
+fun WarpButton(
+    text: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    enabled: Boolean = true,
+    style: WarpButtonStyle = WarpButtonStyle.Primary,
+    maxLines: Int = 1,
+    loading: Boolean = false,
+    leadingIcon: @Composable (() -> Unit)? = null,
+    trailingIcon: @Composable (() -> Unit)? = null,
+    small: Boolean = false
 )
 ```
 To add custom content follow this syntax:
@@ -28,13 +44,14 @@ fun WarpButton(
     enabled: Boolean = true,
     style: WarpButtonStyle = WarpButtonStyle.Primary,
     loading: Boolean = false,
+    small: Boolean = false,
     content: @Composable RowScope.() -> Unit
 )
 ```
 
 ## Visual options
 
-The button supports a variety of styles: 
+The button supports a variety of styles, including a small version for each of these: 
 ```kotlin example
 WarpButtonStyle {
     Primary,
@@ -123,7 +140,8 @@ WarpButton(
 
 ### Icon
 
-An optional leading or trailing icon can be displayed at the start of the button text. Always remember to include a content description string for accessibility :) 
+An optional leading or trailing icon can be displayed at the start of the button text. 
+There are 2 options - by supplying a drawable id or by using the WarpIcon component. WarpIcon handles content description for each brand automatically.
 
 ```kotlin example
 WarpButton(
@@ -138,8 +156,15 @@ WarpButton(
     onClick = { },
     style = WarpButtonStyle.Secondary,
     text = "With icon",
-    trailingIcon = R.drawable.ic_clock,
-    trailingIconContentDescr = "Clock icon"
+    trailingIcon = R.drawable.clock,
+    trailingIconContentDescr = R.string.clock
+)
+
+WarpButton(
+    onClick = { },
+    style = WarpButtonStyle.Secondary,
+    text = "With Warp icon",
+    leadingIcon = { WarpIcon(icon = icons.clock, size = dimensions.icon.small) }
 )
 ```
 
@@ -151,12 +176,13 @@ To support layouts still written in xml the WarpButton can be used as a custom v
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:warpButtonStyle="primary"
-    app:buttonLeadingIcon="@drawable/ic_duck"
-    app:buttonleadingIconContentDescr="Icon content description"
-    app:buttonTrailingIcon="@drawable/ic_clock"
-    app:buttonTrailingIconContentDescr="Icon content description"
+    app:buttonLeadingIcon="@drawable/duck"
+    app:buttonleadingIconContentDescr="@string/duck"
+    app:buttonTrailingIcon="@drawable/clock"
+    app:buttonTrailingIconContentDescr="@string/clock"
     app:buttonText="Send"
     app:loading="false"
+    app:small="false"
     app:enabled="true"/>
 ```
 
