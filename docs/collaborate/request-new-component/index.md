@@ -12,7 +12,7 @@ Things to consider when requesting a new component:
 - If no, is this something that benefits more than just your team?
 - What variants and use cases do you see?
 
-Reach out to the Warp team on Slack: [#nmp-warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) with your request, and we will help you.
+Reach out to the Warp team on Slack: [#smp-warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) with your request, and we will help you.
 
 ## Prioritisation of component requests
 We prioritise the requests based on:
