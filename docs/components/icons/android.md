@@ -1,6 +1,6 @@
 ### Warp Resources
 
-Warp icons are located withing the WarpResources object. They are WarpIconResources created from vector drawables located in res/drawable and content descriptions located in res/values/strings.xml. Each brand has their corresponding translations of the text.
+Warp icons are located within the WarpResources object. They are WarpIconResources created from vector drawables located in res/drawable and content descriptions located in res/values/strings.xml. Each brand has their corresponding translations of the text.
 
 ```kotlin
 object WarpResources {
