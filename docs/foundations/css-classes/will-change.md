@@ -5,7 +5,7 @@
 Utilities for optimizing upcoming animations of elements that are expected to change.
 
 ::: warning Partially Unsupported
-Some of this functionality is not yet supported! If you need this, reach out to us on [#nmp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV).
+Some of this functionality is not yet supported! If you need this, reach out to us on [#smp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV).
 :::
 
 ## Quick reference

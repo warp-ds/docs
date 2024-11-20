@@ -131,5 +131,5 @@ Make sure to also align the `resets.css` and `components.css` stylesheets to v2:
 ## What's next
 
 Since most packages are in the next branch, expect some bugs.
-Report any issues on the [#nmp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV) Slack channel.
+Report any issues on the [#smp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV) Slack channel.
 We’re here to help!

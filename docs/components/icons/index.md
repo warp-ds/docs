@@ -52,7 +52,7 @@ Warp icon library contains of ~300 icons in sizes 16px, 24px and 32px. It's base
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 ## Need new icons?
-If you need a new icon or adjustments to an existing one, please make a request in #nmp-warp-design-system in Slack.
+If you need a new icon or adjustments to an existing one, please make a request in #smp-warp-design-system in Slack.
 
 
 ## Usage

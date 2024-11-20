@@ -4,7 +4,7 @@ Support guidance from the WARP Team.
 ## Slack
 We are always available in our slack channel and we really want that to be a blossoming place for all kinds of community driven discussions where anyone should be able to ask questions and engage in discussions about how to take our design system to the next level.
 
-[#nmp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)
+[#smp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)
 
 ## Team 
 <div style="display:flex; gap:8px;">
