@@ -1,6 +1,6 @@
 ---
 title: 'WARP Android release v.0.0.34'
-date: 2024-11-18
+date: 2024-11-19
 ---
 
 WarpIcon component & localization
@@ -8,7 +8,7 @@ WarpIcon component & localization
 
 # Warp Android release 0.0.34
 
-## 2024-11-18
+## 2024-11-19
 
 ### WarpIcon component
 
