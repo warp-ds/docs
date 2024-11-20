@@ -9,7 +9,6 @@ const tooltipShowing = ref(false)
 <template>
   <div class="component space-y-32">
     <div>
-      <h3 class="t4">Tooltip</h3>
       <w-button
         utility
         ref="tooltipTarget"
@@ -25,7 +24,7 @@ const tooltipShowing = ref(false)
       </w-button>
       <w-attention
         tooltip
-        placement="top-end"
+        placement="top"
         flip
         :target-el="tooltipTarget ? tooltipTarget.$el : null"
         v-model="tooltipShowing"

@@ -19,9 +19,7 @@ or import it individually to optimize your JS bundle size by adding only the com
 import { wAttention } from '@warp-ds/vue/attention';
 ```
 
-### Visual options
-
-#### Tooltip
+### Visual option
 
 ```vue
 <script setup>
@@ -51,7 +49,6 @@ const showing = ref(false);
   <w-attention
     tooltip
     placement="right"
-    flip
     :target-el="target?.$el"
     v-model="showing"
   >
@@ -64,13 +61,13 @@ const showing = ref(false);
 The attention component uses the Floating-ui library to calculate its position.
 By default, the `flip` prop is set to `false`, which means that the attention component will not flip its position to the opposite side.
 
-Try to scroll and see how the attention component doesn't move:
+Try to scroll up and down and see how the attention component doesn't move:
 
 <tooltip-static-example />
 
 When `flip` is set to `true`, it will instead trigger [Floating-ui's flip() function](https://floating-ui.com/docs/flip) that will make sure that the attention component stays in viewport, by flipping it to the opposite side.
 
-Try to scroll and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
+Try to scroll up and down and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
 
 <tooltip-flip-example />
 
@@ -86,12 +83,12 @@ If `flip`is set to `true`, then you have the option to also use `fallback-placem
 
 Read more: [Floating-ui fallbackPlacements](https://floating-ui.com/docs/flip#fallbackplacements)
 
-Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` but then moves to the `top`: 
+Try to scroll up and down and see how the attention component's position starts at the `bottom` but then moves to the `right` but then moves to the `top`: 
 
 <tooltip-fallback-placements-example />
 
 ### Accessibility
-The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute (`role="tooltip"` for tooltip and `role="img"` otherwise), and a default localized `aria-label`.
+The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute set to `tooltip` when the `tooltip` prop is activated, and a default localized `aria-label`.
 
 It is possible to remove the default `role` and override the `aria-label` attribute:
 

@@ -6,28 +6,28 @@ import '@warp-ds/elements/components/attention';
 
 ### Visual options
 
-#### Callout
+#### Default (inline type)
 
 ```js
-<w-attention placement="right" show callout class="flex items-center">
+<w-attention callout placement="right" show class="flex items-center">
   <div id="target" slot="target">
-    <p>This is a target to callout attention element</p>
+    <p>This is a target to callout element</p>
   </div>
-  <span slot="message">Callout on right</span>
+  <span slot="message">I am a callout (inline type)</span>
 </w-attention>
 ```
 
-#### Highlight (with optional close button)
+#### Highlight with close button (popover type)
 
 ```js
-<w-attention placement="right" highlight id="highlight" can-close flip fallback-placements='["top"]'>
+<w-attention highlight placement="right" can-close id="highlight">
   <button
     id="highlightTarget"
     slot="target"
   >
-    Click to toggle a highlight on right
+    Click to toggle a highlight (popover type) on the right
   </button>
-  <span slot="message">I'm a dismissible highlight on right</span>
+  <span slot="message">I'm a highlight (popover type) that is dismissable</span>
 </w-attention>
 ```
 
@@ -35,13 +35,13 @@ import '@warp-ds/elements/components/attention';
 The attention component uses the Floating-ui library to calculate its position.
 By default, the `flip` prop is set to `false`, which means that the attention component will not flip its position to the opposite side.
 
-Try to scroll and see how the attention component doesn't move:
+Try to scroll up and down and see how the attention component doesn't move:
 
 <callout-static-example />
 
 When `flip` is set to `true`, it will instead trigger [Floating-ui's flip() function](https://floating-ui.com/docs/flip)  that will make sure that the attention component stays in viewport, by flipping it to the opposite side.
 
-Try to scroll and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
+Try to scroll up and down and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
 
 <callout-flip-example />
 
@@ -56,14 +56,14 @@ By default, `fallback-placements` is `undefined`. If `flip`is set to `true`, the
 
 Read more: [Floating-ui fallbackPlacements](https://floating-ui.com/docs/flip#fallbackplacements)
 
-Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
+Try to scroll up and down and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
 
 <callout-fallback-placements-example />
 
 ### Accessibility
 If the Attention element has "left" or "top" position, it should be placed before the target element in the DOM.
 
-Attention element handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute (`role="tooltip"` for tooltip and `role="img"` otherwise), and a default localized `aria-label`.
+Attention element handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute set to `img` when the `callout` or `highlight` prop is activated, and a default localized `aria-label`.
 In addition, Attention automatically sets an `aria-details` on its target element, pointing to the slotted message element.
 
 It is possible to tell assistive technologies to recognize only a part of Attention's text content.
@@ -71,13 +71,13 @@ To do that set the `role` attribute on the relevant text element nested in `w-at
 The `aria-details` attribute is on the target element, not on `w-attention`.
 
 ```js
-<w-attention placement="top" highlight>
+<w-attention highlight placement="top">
   <div slot="message">
-    <p id="aria-content">This highlight text is important</p>
+    <p id="aria-content">This text is important</p>
     <p>(this text is less relevant)</p>
   </div>
   <button aria-describedby="aria-content" id="target" slot="target">
-    Click to toggle a highlight on top
+    Click to toggle a highlight (popover type) on top
   </button>
 </w-attention>
 ```

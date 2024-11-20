@@ -7,7 +7,7 @@ const popoverShowing = ref(false)
 </script>
 
 <template>
-  <div class="component">
+  <div>
     <w-button
       utility
       :aria-expanded="popoverShowing"

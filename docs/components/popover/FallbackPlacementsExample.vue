@@ -7,7 +7,7 @@ const popoverShowing = ref(false)
 </script>
 
 <template>
-  <div class="component">
+  <div>
     <w-button
       utility
       :aria-expanded="popoverShowing"
@@ -20,7 +20,7 @@ const popoverShowing = ref(false)
     </w-button>
     <w-attention
       popover
-      placement="bottom"
+      placement="bottom-start"
       flip
       cross-axis
       :fallback-placements="['right', 'top']"

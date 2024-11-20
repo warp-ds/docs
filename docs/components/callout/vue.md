@@ -21,7 +21,7 @@ import { wAttention } from '@warp-ds/vue/attention';
 
 ### Visual options
 
-#### Callout
+#### Default (inline type)
 
 ```vue
 <script setup>
@@ -35,12 +35,12 @@ const showing = ref(false);
     I am a box full of info
   </w-box>
   <w-attention callout placement="right" v-model="showing">
-    <p id="callout-bubbletext">Hello Warp! This thing is new!</p>
+    <p id="callout-bubbletext">I am a callout (inline type)</p>
   </w-attention>
 </template>
 ```
 
-#### Highlight (with optional close button)
+#### Highlight with close button (popover type)
 
 ```vue
 <script setup>
@@ -53,24 +53,22 @@ const highlightShowing = ref(false)
 <template>
   <w-button
     :aria-expanded="highlightShowing"
-    aria-controls="highlight-attention-example"
-    aria-details="highlighted-bubbletext"
+    aria-controls="highlight-example"
+    aria-details="highlight-bubble-text"
     ref="highlightTarget"
     @click="highlightShowing = !highlightShowing"
     >Click me</w-button
   >
   <w-attention
-    id="highlight-attention-example"
     highlight
-    placement="bottom"
-    flip
-    :fallback-placements="['top']"
+    placement="right"
     can-close
+    id="highlight-example"
     @dismiss="highlightShowing = false"
     :target-el="highlightTarget ? highlightTarget.$el : null"
     v-model="highlightShowing"
   >
-    <p id="highlighted-bubbletext">I'm a dismissible highlight</p>
+    <p id="highlight-bubble-text">I'm a highlight (popover type) that is dismissable</p>
   </w-attention>
 </template>
 ```
@@ -78,13 +76,13 @@ const highlightShowing = ref(false)
 The attention component uses the Floating-ui library to calculate its position.
 By default, the `flip` prop is set to `false`, which means that the attention component will not flip its position to the opposite side.
 
-Try to scroll and see how the attention component doesn't move:
+Try to scroll up and down and see how the attention component doesn't move:
 
 <callout-static-example />
 
 When `flip` is set to `true`, it will instead trigger [Floating-ui's flip() function](https://floating-ui.com/docs/flip) that will make sure that the attention component stays in viewport, by flipping it to the opposite side.
 
-Try to scroll and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
+Try to scroll up and down and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
 
 <callout-flip-example />
 
@@ -100,12 +98,12 @@ If `flip`is set to `true`, then you have the option to also use `fallback-placem
 
 Read more: [Floating-ui fallbackPlacements](https://floating-ui.com/docs/flip#fallbackplacements)
 
-Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
+Try to scroll up and down and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
 
 <callout-fallback-placements-example />
 
 ### Accessibility
-The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute (`role="tooltip"` for tooltip and `role="img"` otherwise), and a default localized `aria-label`.
+The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute set to `img` when the `callout` or `highlight` prop is activated, and a default localized `aria-label`.
 
 It is possible to remove the default `role` and override the `aria-label` attribute:
 
@@ -117,8 +115,8 @@ It is possible to remove the default `role` and override the `aria-label` attrib
   role=''
   aria-label=''
 >
-  <p id='highlight-bubbletext'>
-    I'm a highlight speech bubble with overridden role and aria-label attributes pointing up.
+  <p id='popover-bubbletext'>
+    I'm a highlight (popover type) speech bubble with overridden role and aria-label attributes pointing up.
   </p>
 </w-attention>
 ```

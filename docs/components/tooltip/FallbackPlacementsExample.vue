@@ -7,9 +7,8 @@ const tooltipShowing = ref(false)
 </script>
 
 <template>
-  <div class="component space-y-32">
+  <div class="component">
     <div>
-      <h3 class="t4">Tooltip</h3>
       <w-button
         utility
         ref="tooltipTarget"

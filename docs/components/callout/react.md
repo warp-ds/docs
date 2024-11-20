@@ -12,7 +12,7 @@ import { Attention } from '@warp-ds/react/components/attention'
 
 ### Visual options
 
-#### Callout
+#### Default (inline type)
 
 ```js
 <div>
@@ -21,13 +21,13 @@ import { Attention } from '@warp-ds/react/components/attention'
   </Box>
   <Attention callout placement='right' isShowing={true}>
     <p id='callout-bubbletext'>
-      I'm a callout because that box over there is new or something
+      I'm a callout (inline type)
     </p>
   </Attention>
 </div>
 ```
 
-#### Highlight (with optional close button)
+#### Highlight with close button (popover type)
 
 ```js
 function DismissibleHighlight() {
@@ -39,7 +39,7 @@ function DismissibleHighlight() {
       <Button
         small
         aria-expanded={show}
-        aria-controls='highlight-attention-example'
+        aria-controls='highlight-example'
         utility
         onClick={() => setShow(!show)}
         className='w-max mb-0'
@@ -54,17 +54,15 @@ function DismissibleHighlight() {
         </div>
         <Attention
           highlight
+          placement='right'
+          isShowing={show}
           canClose
           onDismiss={() => setShow(false)}
-          placement='bottom'
-          isShowing={show}
           targetEl={targetEl}
-          flip={true}
-          fallbackPlacements={['top']}
-          id='highlight-attention-example'
+          id='highlight-example'
         >
           <p id='highlight-bubble-text'>
-            I'm a highlight that can dismiss itself
+            I'm a highlight (popover type) that is dismissable
           </p>
         </Attention>
       </div>
@@ -77,13 +75,13 @@ function DismissibleHighlight() {
 The attention component uses the Floating-ui library to calculate its position.
 By default, the `flip` prop is set to `false`, which means that the attention component will not flip its position to the opposite side.
 
-Try to scroll and see how the attention component doesn't move:
+Try to scroll up and down and see how the attention component doesn't move:
 
 <callout-static-example />
 
 When `flip` is set to `true`, it will instead trigger [Floating-ui's flip() function](https://floating-ui.com/docs/flip) that will make sure that the attention component stays in viewport, by flipping it to the opposite side.
 
-Try to scroll and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
+Try to scroll up and down and see how the attention component moves its position to the opposite side to keep itself in viewport as long as possible:
 
 <callout-flip-example />
 
@@ -99,19 +97,19 @@ If `flip`is set to `true`, then you have the option to also use `fallbackPlaceme
 
 Read more: [Floating-ui fallbackPlacements](https://floating-ui.com/docs/flip#fallbackplacements)
 
-Try to scroll and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
+Try to scroll up and down and see how the attention component's position starts at the `bottom` but then moves to the `right` and then to the `top`: 
 
 <callout-fallback-placements-example />
 
 ### Accessibility
-The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute (`role="tooltip"` for tooltip and `role="img"` otherwise), and a default localized `aria-label`.
+The attention component handles accessibility automatically by wrapping its slotted content with a `div` that has a default `role` attribute set to `img` when the `callout` or `highlight` prop is activated, and a default localized `aria-label`.
 
 It is possible to remove the default `role` and override the `aria-label` attribute:
 
 ```js
 <Attention highlight placement='right' isShowing={true} role='' aria-label=''>
   <p id='highlight-bubbletext'>
-    I'm a highlight speech bubble with overridden role and aria-label attributes
+    I'm a highlight (popover type) speech bubble with overridden role and aria-label attributes
     pointing up.
   </p>
 </Attention>
