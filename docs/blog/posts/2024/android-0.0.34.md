@@ -6,7 +6,7 @@ date: 2024-11-19
 WarpIcon component & localization
 ---
 
-# Warp Android release 0.0.34
+# Warp Android release 0.0.34 
 
 ## 2024-11-19
 
