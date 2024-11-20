@@ -35,11 +35,11 @@ function Example() {
       <Attention
         popover
         placement='right'
+        isShowing={show}
         flip={true}
         crossAxis={true}
         fallbackPlacements={['left', 'bottom', 'top']}
         targetEl={targetEl}
-        isShowing={show}
         id='popover-attention-example'
       >
         <ul id='popover-bubbletext'>

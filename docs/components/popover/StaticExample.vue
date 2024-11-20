@@ -20,11 +20,15 @@ const popoverShowing = ref(false)
     </w-button>
     <w-attention
       popover
-      placement="bottom-start"
+      placement="bottom"
       :target-el="popoverTarget ? popoverTarget.$el : null"
       v-model="popoverShowing"
-      id="popover-example">
-      <p id="popover-bubbletext">This is a popover</p>
+      id="popover-example"
+      class="w-1/2">
+        <div>
+          <h3 class="h4">Heading</h3>
+          <p id="popover-bubbletext">Text goes in this box and is responsive so that if more text is written, the box grows in size</p>
+        </div>
     </w-attention>
   </div>
 </template>

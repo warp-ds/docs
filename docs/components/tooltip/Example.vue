@@ -29,7 +29,7 @@ const tooltipShowing = ref(false)
         :target-el="tooltipTarget ? tooltipTarget.$el : null"
         v-model="tooltipShowing"
       >
-        <p id="tooltip-bubbletext">This is a tooltip</p>
+        <p id="tooltip-bubbletext">Tooltip</p>
       </w-attention>
     </div>
   </div>
