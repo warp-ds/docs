@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import { wAttention, wButton } from '@warp-ds/vue'
 
 const tooltipTarget = ref(null)
-
 const tooltipShowing = ref(false)
 </script>
 
@@ -25,7 +24,8 @@ const tooltipShowing = ref(false)
       </w-button>
       <w-attention
         tooltip
-        placement="right"
+        placement="top"
+        flip
         :target-el="tooltipTarget ? tooltipTarget.$el : null"
         v-model="tooltipShowing"
       >

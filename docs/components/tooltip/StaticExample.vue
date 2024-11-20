@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import { wAttention, wButton } from '@warp-ds/vue'
 
 const tooltipTarget = ref(null)
-
 const tooltipShowing = ref(false)
 </script>
 

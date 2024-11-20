@@ -1,9 +1,9 @@
 {
-  "title": "Attention",
-  "description": "Attention shows information that highlight content.",
+  "title": "Popover",
+  "description": "A Popover is a message box that is displayed floating over page content after pressing a trigger element, like an info-icon.",
   "category": "Overlays",
   "placeholder": {
-    "label": "Attention component"
+    "label": "Popover component"
   },
   "frameworks": [
     {

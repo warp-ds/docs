@@ -1,15 +1,13 @@
 <script setup>
-  import android from './android.md';
   import data from './data.json';
   import Elements from './elements.md';
-  import iOS from './ios.md';
   import React from './react.md';
   import Vue from './vue.md';
   
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Callout
+# Popover
 
 {{ data.description }}
 
@@ -17,11 +15,11 @@
 
 ## Example
 <ThemeSwitcher />
-<callout-example />
+<popover-example />
 
 ## Usage
 
-<component-design-guidelines name="Warp - Components / Callout" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components-2.0?node-id=381-42328&t=ypV9S2xFCv8kSzjB-0" />
+<component-design-guidelines name="Warp - Components / Popover" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38513&node-type=canvas&t=kRrtnWerTmpa3PeU-0" />
 
 <component-questions />
 
@@ -36,11 +34,5 @@
   </template>
   <template #elements>
     <elements />
-  </template>
-<template #iOS>
-    <iOS />
-  </template>
-  <template #android>
-    <android />
   </template>
 </tabs-content>

@@ -1,6 +1,9 @@
 <script setup>
-  import iOS from './ios.md';
   import data from './data.json';
+  import Elements from './elements.md';
+  import iOS from './ios.md';
+  import React from './react.md';
+  import Vue from './vue.md';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
@@ -9,9 +12,6 @@
 {{ data.description }}
 Tooltips should be used sparingly and contain succinct, supplementary information.
 
-::: warning iOS only
-For the web implementation of a "tooltip", see [Components - Attention - Tooltip](/components/attention/#tooltip).
-:::
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
@@ -25,6 +25,19 @@ For the web implementation of a "tooltip", see [Components - Attention - Tooltip
 
 <component-questions />
 
-## iOS implementation
+## Frameworks
 
-<iOS />
+<tabs-content>
+  <template #react>
+    <react />
+  </template>
+  <template #vue>
+    <vue />
+  </template>
+  <template #elements>
+    <elements />
+  </template>
+<template #iOS>
+    <iOS />
+  </template>
+</tabs-content>

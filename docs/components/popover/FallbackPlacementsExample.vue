@@ -7,7 +7,7 @@ const popoverShowing = ref(false)
 </script>
 
 <template>
-  <div class="component">
+  <div>
     <w-button
       utility
       :aria-expanded="popoverShowing"
@@ -23,12 +23,15 @@ const popoverShowing = ref(false)
       placement="bottom"
       flip
       cross-axis
-      :fallback-placements="['right', 'top']"
+      :fallback-placements="['right-start', 'top']"
       :target-el="popoverTarget ? popoverTarget.$el : null"
       v-model="popoverShowing"
       id="popover-example"
-    >
-      <p id="popover-bubbletext">This is a popover</p>
+      class="w-1/2">
+        <div>
+          <h3 class="h4">Heading</h3>
+          <p id="popover-bubbletext">Text goes in this box and is responsive so that if more text is written, the box grows in size</p>
+        </div>
     </w-attention>
   </div>
 </template>
