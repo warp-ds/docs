@@ -1760,9 +1760,9 @@ export const android = {
       ],
       [
         'leadingIcon', 
-        'Int', 
+        'Int or @Composable () -> Unit', 
         'null', 
-        'The id of the icon drawable resource to be displayed in the button before the text'
+        'The id of the icon drawable resource or the WarpIcon component to be displayed in the button before the text'
       ],
       [
         'leadingIconContentDescr', 
@@ -1772,15 +1772,27 @@ export const android = {
       ],
       [
         'trailingIcon', 
-        'Int', 
+        'Int or @Composable () -> Unit', 
         'null', 
-        'The id of the icon drawable resource to be displayed in the button after the text'
+        'The id of the icon drawable resource or the WarpIcon component to be displayed in the button after the text'
       ],
       [
         'trailingIconContentDescr', 
         'String', 
         'null', 
         'The content description of the icon'
+      ],
+      [
+        'small',
+        'Boolean',
+        'false',
+        'Set to show a smaller slimmed version of the button',
+      ],
+      [
+        'iconModifier',
+        'Modifier',
+        'Modifier',
+        'Sets the modifier for the icon',
       ],
     ],
   },
