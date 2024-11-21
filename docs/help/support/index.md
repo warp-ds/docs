@@ -30,7 +30,7 @@ We are always available in our slack channel and we really want that to be a blo
     <div>
         Prash Mehra 
         <br>
-        Tech Lead
+        Senior Developer & Tech Lead
     </div>
 </div>
 <br>
@@ -39,7 +39,7 @@ We are always available in our slack channel and we really want that to be a blo
     <div>
         Julita Barkauskaite
         <br>
-        Android developer
+        Lead Android Developer
     </div>
 </div>
 <br>
@@ -57,7 +57,7 @@ We are always available in our slack channel and we really want that to be a blo
     <div>
         Felicia Häggqvist
         <br>
-        Web developer
+        Front End Developer
     </div>
 </div>
 <br>
@@ -66,7 +66,7 @@ We are always available in our slack channel and we really want that to be a blo
     <div>
         Snorre Nygaard
         <br>
-        Web developer
+        Senior Front End Developer
     </div>
 </div>
 <br>
@@ -75,7 +75,7 @@ We are always available in our slack channel and we really want that to be a blo
     <div>
         Balbina Kotula
         <br>
-        Web developer
+        Developer
     </div>
 </div>
 <br>
@@ -101,24 +101,6 @@ We are always available in our slack channel and we really want that to be a blo
     <img src="/help/daniel.png" style="width: 50px;" alt="Picture of Daniel Talakoubi"/> 
     <div>
         Daniel Talakoubi
-        <br>
-        Visual Designer
-    </div>
-</div>
-<br>
-<div style="display:flex; gap:8px;">
-    <img src="/help/henrik-sahlin.png" style="width: 50px;" alt="Picture of Henrik Sahlin"/> 
-    <div>
-        Henrik Sahlin
-        <br>
-        Visual Designer
-    </div>
-</div>
-<br>
-<div style="display:flex; gap:8px;">
-    <img src="/help/fredrik.png" style="width: 50px;" alt="Picture of Fredrik Øverlie"/> 
-    <div>
-        Fredrik Øverlie
         <br>
         Visual Designer
     </div>
