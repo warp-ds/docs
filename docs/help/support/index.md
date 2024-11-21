@@ -48,7 +48,7 @@ We are always available in our slack channel and we really want that to be a blo
     <div>
         Mohsen Hosseinpour
         <br>
-        iOS developer
+        Lead iOS Developer
     </div>
 </div>
 <br>
