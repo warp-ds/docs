@@ -78,6 +78,8 @@ When using the element in Lit, you can listen to the event in the standard way:
 html`<w-select label="Berries" auto-focus @change=${e => handleChange(e)}>`
 ```
 
+The selected dropdown value is available on the `detail` field of the event (event.detail).
+
 To use the event in other frameworks, such as Svelte, an event handler must be added manually:
 ```js
 selectElement.addEventListener('change', e => handleChange(e))
