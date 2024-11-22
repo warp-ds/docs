@@ -68,3 +68,19 @@ error.
 ```
 
 <api-table type=elements component="Select" />
+
+### Event handling
+The w-select component triggers the custom `change` event, on the element level, when the dropdown select element changes value.
+
+When using the element in Lit, you can listen to the event in the standard way:
+
+```js
+html`<w-select label="Berries" auto-focus @change=${e => handleChange(e)}>`
+```
+
+To use the event in other frameworks, such as Svelte, an event handler must be added manually:
+```js
+selectElement.addEventListener('change', e => handleChange(e))
+```
+
+In Svelte, the element can be accessed using query selection or using bind (see [bind:this](https://svelte.dev/docs/svelte/bind#bind:this)).
