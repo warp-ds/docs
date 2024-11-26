@@ -41,6 +41,8 @@ import Text from '../components/text/Example.vue';
 
 import QrColorTable from "./qr-color-table.vue";
 
+import fontWeights from "../foundations/font-weights/FontWeights.vue";
+
 buildWc('alert-example', Alert);
 buildWc('badge-example', Badge);
 buildWc('box-example', Box);
@@ -88,3 +90,5 @@ buildWc('divide-color-table', QrColorTable, { dataId: 'divideColor' });
 buildWc('outline-color-table', QrColorTable, { dataId: 'outlineColor' });
 buildWc('icon-color-table', QrColorTable, { dataId: 'iconColor' });
 buildWc('text-color-table', QrColorTable, { dataId: 'textColor' });
+
+buildWc('font-weights', fontWeights);
