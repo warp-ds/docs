@@ -150,7 +150,7 @@ No, browsers do not artificially thicken or thin fonts. They rely entirely on th
 This difference is due to how the fonts are set up in Figma versus on the web:
 
 #### On the Web
-The FinnType font files are explicitly mapped to the correct `font-weight` values in CSS:
+The FinnType font files are explicitly mapped to the `font-weight` values in CSS:
 - `FinnType-Light` is used for `font-weight: 400` (regular text).
 - `FinnType-Medium` is used for `font-weight: 700` (bold text).
 
@@ -162,11 +162,3 @@ No, designers don’t need to think about `font-weight` mappings. Simply choose 
 
 #### Why is this setup confusing?
 We acknowledge this setup can be a bit confusing, especially when inspecting fonts in Figma’s **Dev Mode**. However, the fonts are consistent between Figma and the web for visual purposes. This setup ensures proper rendering across platforms, even if the underlying mappings differ slightly.
-=======
-## FAQ
-### Why does Figma's 500 weight look different on the web?
-Figma visually simulates intermediate weights like 500. On the web, 500 maps to 400 (FINNType-Light) because no 500 font file exists.
-
-## Can browsers artificially thicken fonts?
-No, browsers do not artificially thicken or thin fonts. They use the provided font files directly.
-
