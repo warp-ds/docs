@@ -67,23 +67,10 @@ Our current font setup uses two distinct weights for each brand. For finn this s
 
 
 ## How does font-weights actually effect these fonts
-This is in not the way to use font-weights in Warp, its just set up to illustrate what happens if font-weights other than 400(normal), or 700(bold) is set.
 
 <ThemeSwitcher />
 <font-weights />
 
-```html example
-<p style="font-weight:100">This is a text, hardcoded font-weight:100</p>
-<p style="font-weight:200">This is a text, hardcoded font-weight:200</p>
-<p style="font-weight:300">This is a text, hardcoded font-weight:300</p>
-<p style="font-weight:400">This is a text, hardcoded font-weight:400</p>
-<p style="font-weight:500">This is a text, hardcoded font-weight:500</p>
-<p style="font-weight:501">This is a text, hardcoded font-weight:501</p>
-<p style="font-weight:600">This is a text, hardcoded font-weight:600</p>
-<p style="font-weight:700">This is a text, hardcoded font-weight:700</p>
-<p style="font-weight:800">This is a text, hardcoded font-weight:800</p>
-<p style="font-weight:900">This is a text, hardcoded font-weight:900</p>
-```
 ### So whats going on in this example
 Based on the font setup the browser will try to use the 'closest' defined font file. If we hardcode font-weight 1-500 it will end up with using the lightest font, if we hardcode 501-900 it will end up using the boldest font.
 
@@ -115,7 +102,7 @@ To avoid confusion and unintended fallbacks, explicitly use these classes for de
 ```
 
 ### Avoid Intermediate Weights
-Do not use weights like 300 or 500, as they will fallback to 400 (Light) and may not appear as intended.
+Do not use weights like 300 or 500, as they will fallback to 400 (Light) and may not appear as intended, that fallback might change in the future if more font-files are added.
 
 
 #### Example
