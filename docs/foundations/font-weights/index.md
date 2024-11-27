@@ -86,13 +86,6 @@ This is in not the way to use font-weights in Warp, its just set up to illustrat
 ```
 ### So whats going on in this example
 Based on the font setup the browser will try to use the 'closest' defined font file. If we hardcode font-weight 1-500 it will end up with using the lightest font, if we hardcode 501-900 it will end up using the boldest font.
-| Weight category | Font Weight   | Font File Used    | In Browser      |
-| --------------- | ------------- | ----------------- | --------------- |
-| thin            | `100`         | `FINNType-Light`  | font-weight:400 |
-| Normal          | **`400`**     | `FINNType-Light`  | font-weight:400 |
-| Medium          | `401-500`     | `FINNType-Light`  | font-weight:400 |
-| Bold            | **`501-700`** | `FINNType-Medium` | font-weight:700 |
-| Extra Bold      | `701-900`     | `FINNType-Medium` | font-weight:700 |
 
 ## Key Observations
 
@@ -123,6 +116,7 @@ To avoid confusion and unintended fallbacks, explicitly use these classes for de
 
 ### Avoid Intermediate Weights
 Do not use weights like 300 or 500, as they will fallback to 400 (Light) and may not appear as intended.
+
 
 #### Example
 - If another font-file is defined at a later stage, lets say a medium font (500) in between the regular and bold we use today in Warp, the calculations of the breakpoints between what font-file wins will change as well
@@ -168,3 +162,11 @@ No, designers don’t need to think about `font-weight` mappings. Simply choose 
 
 #### Why is this setup confusing?
 We acknowledge this setup can be a bit confusing, especially when inspecting fonts in Figma’s **Dev Mode**. However, the fonts are consistent between Figma and the web for visual purposes. This setup ensures proper rendering across platforms, even if the underlying mappings differ slightly.
+=======
+## FAQ
+### Why does Figma's 500 weight look different on the web?
+Figma visually simulates intermediate weights like 500. On the web, 500 maps to 400 (FINNType-Light) because no 500 font file exists.
+
+## Can browsers artificially thicken fonts?
+No, browsers do not artificially thicken or thin fonts. They use the provided font files directly.
+
