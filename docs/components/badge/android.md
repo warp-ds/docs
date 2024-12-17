@@ -7,7 +7,8 @@ fun WarpBadge(
     modifier: Modifier = Modifier,
     text: String,
     style: WarpBadgeStyle = WarpBadgeStyle.Neutral,
-    alignmentStyle: WarpBadgeAlignment = WarpBadgeAlignment.None
+    alignmentStyle: WarpBadgeAlignment = WarpBadgeAlignment.None,
+    icon: WarpIconResource? = null
 )
 ```
 

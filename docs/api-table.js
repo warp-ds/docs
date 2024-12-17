@@ -2012,6 +2012,12 @@ export const android = {
         'WarpBadgeAlignment.None',
         'Sets the alignment style for the badge',
       ],
+      [
+        'icon',
+        'WarpIconResource?',
+        'null',
+        'Sets the icon for the badge',
+      ],
     ],
   },
   Alert: {
