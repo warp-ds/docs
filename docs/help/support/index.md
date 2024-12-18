@@ -53,29 +53,11 @@ We are always available in our slack channel and we really want that to be a blo
 </div>
 <br>
 <div style="display:flex; gap:8px;">
-    <img src="/help/felicia.png" style="width: 50px;" alt="Picture of Felicia Häggqvist"/> 
-    <div>
-        Felicia Häggqvist
-        <br>
-        Front End Developer
-    </div>
-</div>
-<br>
-<div style="display:flex; gap:8px;">
     <img src="/help/snorre.png" style="width: 50px;" alt="Picture of Snorre Nygaard"/> 
     <div>
         Snorre Nygaard
         <br>
         Senior Front End Developer
-    </div>
-</div>
-<br>
-<div style="display:flex; gap:8px;">
-    <img src="/help/balbina.png" style="width: 50px;" alt="Picture of Balbina Kotula"/> 
-    <div>
-        Balbina Kotula
-        <br>
-        Developer
     </div>
 </div>
 <br>
