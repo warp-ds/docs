@@ -1972,15 +1972,9 @@ export const android = {
       ],
       [
         'icon', 
-        'Int', 
+        'WarpIconResource?', 
         'null', 
-        'The id of the icon drawable resource to be displayed in the pill after the text'
-      ],
-      [
-        'iconContentDescription', 
-        'String', 
-        'null', 
-        'The content description of the close icon. Used for accessibility purposes'
+        'The icon to be displayed in the pill after the text'
       ],
     ],
   },
