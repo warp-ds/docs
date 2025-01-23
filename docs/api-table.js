@@ -2678,6 +2678,78 @@ export const android = {
 };
 
 export const iOS = {
+  Alert: {
+    required: [
+    [
+      'style',
+      'Warp.AlertStyle',
+      '',
+      'The visual style of the alert, which dictates its colors, icons, and overall appearance.<br /> Use one of the predefined `AlertStyle` values: `.info`, `.warning`, `.critical`, or `.success`.',
+    ],
+    [
+      'title', 
+      'String', 
+      '', 
+      'The primary text displayed at the top of the alert, used to capture the user\'s attention.'
+    ],
+    [
+      'subtitle', 
+      'String', 
+      '', 
+      'Additional information displayed below the title, used to provide further context to the alert.'
+    ],
+  ],
+    props: [
+      [
+        'link', 
+        '(title: String, action: () -> Void)?', 
+        'nil', 
+        'An optional tuple containing the title and action for a clickable link that appears below the subtitle.'
+      ],
+      [
+        'primaryButton', 
+        '(title: String, action: () -> Void)?', 
+        'nil', 
+        'An optional tuple containing the title and action for a primary button.'
+      ],
+      [
+        'secondaryButton', 
+        '(title: String, action: () -> Void)?', 
+        'nil', 
+        'An optional tuple containing the title and action for a secondary button.'
+      ],
+    ],
+  },
+  Badge: {
+    required: [
+    [
+      'text', 
+      'String', 
+      '', 
+      'The text to display inside the badge.'
+    ],
+    [
+      'variant',
+      'Warp.BadgeVariant',
+      '',
+      'The style of the badge.<br /> Use one of the predefined `BadgeVariant` values: `.info`, `.success`, `.warning`, `.negative`, `.disabled`, `.sponsored`, `.neutral`, or `.price`',
+    ],
+  ],
+    props: [
+      [
+        'icon',
+        'Warp.Icon?',
+        'nil',
+        'The optional icon to display inside the badge.',
+      ],
+      [
+        'position',
+        'Warp.BadgePosition',
+        '.default',
+        'The corner position for the badge.<br /> Use one of the predefined `BadgePosition` values: `.default`, `.topLeft`, `.topRight`, `.bottomLeft`, or `.bottomRight`',
+      ],
+    ],
+  },
   Button: {
     required: [
       [
@@ -2802,72 +2874,6 @@ export const iOS = {
         'Bool',
         'true',
         'If the changes support animation',
-      ],
-    ],
-  },
-  Badge: {
-    required: [
-    [
-      'text', 
-      'String', 
-      '', 
-      'The text to be displayed on the badge'
-    ],
-    [
-      'variant',
-      'Warp.Badge.Variant.info <br />Warp.Badge.Variant.success <br />Warp.Badge.Variant.warning <br />Warp.Badge.Variant.error <br />Warp.Badge.Variant.disabled <br />Warp.Badge.Variant.sponsored <br />Warp.Badge.Variant.neutral',
-      '',
-      'Sets the appearance of the badge',
-    ],
-  ],
-    props: [
-      [
-        'position',
-        'Warp.Badge.Position.default <br />Warp.Badge.Position.topLeft <br />Warp.Badge.Position.topRight <br />Warp.Badge.Position.bottomLeft <br />Warp.Badge.Position.bottomRight',
-        'Warp.Badge.Position.default',
-        'Sets the corners that need radius',
-      ],
-    ],
-  },
-  Alert: {
-    required: [
-    [
-      'style',
-      'Warp.AlertStyle.info <br />Warp.AlertStyle.warning <br />Warp.AlertStyle.critical <br />Warp.AlertStyle.success',
-      '',
-      'Sets the style and icon of the alert',
-    ],
-    [
-      'title', 
-      'String', 
-      '', 
-      'The title to be displayed in the alert'
-    ],
-    [
-      'subtitle', 
-      'String', 
-      '', 
-      'The subtitle text to be displayed in the alert'
-    ],
-  ],
-    props: [
-      [
-        'link', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'The link text and action in the alert'
-      ],
-      [
-        'primaryButton', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'The primary button text and action in the alert'
-      ],
-      [
-        'secondaryButton', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'The secondary button text and action in the alert'
       ],
     ],
   },

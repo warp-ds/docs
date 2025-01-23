@@ -2,14 +2,14 @@
 ## Syntax
 
 ```swift example
-func Warp.Alert(
-            style: Warp.AlertStyle,
-            title: String,
-            subtitle: String,
-            link: ButtonConstructor?,
-            primaryButton: ButtonConstructor?,
-            secondaryButton: ButtonConstructor?
-        )
+Warp.Alert(
+    style: Warp.AlertStyle,
+    title: String,
+    subtitle: String,
+    link: ButtonConstructor? = nil,
+    primaryButton: ButtonConstructor? = nil,
+    secondaryButton: ButtonConstructor? = nil
+)
 ```
 
 ButtonConstructor is a typealias for `(title: String, action: () -> Void)`.
@@ -19,20 +19,20 @@ Warp.Alert(
     style: .critical,
     title: "This is the critical variant of the alert component",
     subtitle: "With an additional description"
-    )
+)
 ```
 
 There are four types of alert styles:
 
 ```swift example
 public enum AlertStyle {
-    /// Display messages to provide user with general information.
+    /// Used to display messages that provide the user with general information.
     case info
-    /// Indicate that something is not working as expected.
+    /// Used to indicate that something is not working as expected or might need attention.
     case warning
-    /// Indicate a severe problem or error.
+    /// Used to indicate a severe problem or error that requires immediate attention.
     case critical
-    /// Indicating a successful action or completing a task.
+    /// Used to indicate that an action was successful or that a task was completed successfully.
     case success
 }
 ```
@@ -46,12 +46,21 @@ Warp.Alert(
     link: (title: "Link to more information", action: {}),
     primaryButton: (title: "Button", action: {}),
     secondaryButton: (title: "Button", action: {})
-    )
+)
 ```
 
 
 ### Legacy support
-Coming soon
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift exmaple
+Warp.Alert(
+    style: .critical,
+    title: "This is the critical variant of the alert component",
+    subtitle: "With an additional description"
+).uiView
+```
 
 ### Parameters
 

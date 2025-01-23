@@ -34,26 +34,47 @@ To start using Warp you must first initialize the theme depending on the selecte
 Warp.Config.warpTheme = .tori
 ```
 
-Right now we support `.finn`, `.tori` and `.dba` with `.finn` as the default one.
+Right now we support `.finn`, `.tori`, `.dba` and `.blocket` with `.finn` as the default one.
 
 ## 3. Use Warp components
 
-Use the Warp components just like any other SwiftUI or UIKit view. The selected target will give it the correct colors and styling. 
+Use the Warp components just like any other SwiftUI or UIKit view. The selected theme will give it the correct colors, styling and language.
 
 ```swift exmaple
-Warp.Button.create(
-    for: .primary,
+Warp.Button(
     title: "button",
-    icon: Image(systemName: "plus"),
     action: {}
 )
 ```
 
 ## 4. Use Warp tokens
 
-We hightly recommend using `Warp.Token.SOME_TOKEN` to specify a color.
+We hightly recommend using `Warp.Token.SOME_TOKEN` for `Color` and `Warp.UIToken.SOME_TOKEN` for `UIColor` to specify a color.
+
 To get you started tokens will start with one of the following categories:
 `Surface`
+`Background`
+`Border`
+`Icon`
+`Text`
+
+In some special cases we have some brand specific colors that can be used by `Warp.Color.SOME_COLOR` for `Color` and `Warp.UIColor.SOME_COLOR` for `UIColor`.
+
+An example of this case is `Warp.Color.badgeNeutralBackground` which is defined below.
+
+```swift exmaple
+public var badgeNeutralBackground: Color {
+    switch Warp.Theme {
+    case .blocket: return Color.dynamicColor(defaultColor: BlocketColors.gray100, darkModeColor: BlocketColors.gray600)
+    case .dba: return Color.dynamicColor(defaultColor: DbaColors.gray100, darkModeColor: DbaColors.gray600)
+    case .finn: return Color.dynamicColor(defaultColor: FinnColors.gray100, darkModeColor: FinnColors.gray600)
+    case .tori: return Color.dynamicColor(defaultColor: ToriColors.gray100, darkModeColor: ToriColors.gray600)
+    }
+}
+```
+
+Another group of colors available is `Warp.DatavizToken.SOME_TOKEN` for `Color` and `Warp.DatavizToken.SOME_TOKEN` for `UIColor` that should be used on charts and similar use cases, and had the following categories:
+`Line`
 `Background`
 `Border`
 `Icon`
@@ -81,4 +102,14 @@ private lazy var myView: UIView = {
 
 
 ### Legacy support
+
 All Warp components will provide a bridge to be able to use with legacy code. Check each component's documentations for more information.
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift exmaple
+Warp.Button(
+    title: "button",
+    action: {}
+).uiView
+```
