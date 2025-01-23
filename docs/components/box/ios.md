@@ -2,28 +2,28 @@
 ## Syntax
 
 ```swift example
-func Warp.Box(
-            style: Warp.BoxStyle,
-            title: String?,
-            shouldShowToolTipImage: Bool = true,
-            subtitle: String,
-            link: ButtonConstructor? = nil,
-            button: ButtonConstructor? = nil
-        )
+Warp.Box(
+    style: Warp.BoxStyle,
+    title: String?,
+    shouldShowToolTipImage: Bool = true,
+    subtitle: String,
+    link: ButtonConstructor? = nil,
+    button: Warp.Button? = nil
+)
 ```
 
 ```swift example
 Warp.Box(
-        style: .info,
-        title: "Success",
-        subtitle: "Your message goes here"
-    )
+    style: .info,
+    title: "Success",
+    subtitle: "Your message goes here"
+)
 ```
 
-There are a variety of variants and combination supported for the box component. Supporting a button and a link, a title and an icon.
+There are a variety of variants and combination supported for the box component. Supporting a button and a link, a title, a description and an icon.
 
 ```swift example
-Warp.BoxStyle {
+enum BoxStyle {
     /// Used to group information that separates itself from other elements in a page layout.
     /// Use this box to show generic information that isn’t necessarily directly related to the main focus content on your page.
     case neutral
@@ -41,7 +41,16 @@ Warp.BoxStyle {
 ```
 
 ### Legacy support
-Coming soon
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift example
+Warp.Box(
+    style: .info,
+    title: "Success",
+    subtitle: "Your message goes here"
+).uiView
+```
 
 ### Parameters
 

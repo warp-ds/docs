@@ -2750,6 +2750,48 @@ export const iOS = {
       ],
     ],
   },
+  Box: {
+    required: [
+    [
+      'style', 
+      'Warp.BoxStyle',
+      '', 
+      'Preferred style of box.<br /> Use one of the predefined `BoxStyle` values: `.neutral`, `.info`, `.bordered`'
+    ],
+    [
+      'title', 
+      'String?', 
+      '', 
+      'Text that will be shown as box\'s heading.'
+    ],
+    [
+      'subtitle', 
+      'String',
+      '', 
+      'Text that will be shown after title in the middle of the box.'
+    ],
+  ],
+    props: [
+      [
+        'shouldShowToolTipImage', 
+        'Bool',
+        'true', 
+        'Flag indicating tooltip image should be shown.'
+      ],
+      [
+        'link', 
+        '(title: String, action: () -> Void)?', 
+        'nil', 
+        'Tuple that will provide a title and an action for creating a link view below subtitle. <br />Passing `nil` will skip adding link view.'
+      ],
+      [
+        'button', 
+        'Warp.Button?', 
+        'nil', 
+        'A button view below link. <br />Passing `nil` will skip adding button view.'
+      ],
+    ],
+  },
   Button: {
     required: [
       [
@@ -3013,48 +3055,6 @@ export const iOS = {
         'Edge.top', 
         'The direction of the arrow'
       ],  
-    ],
-  },
-  Box: {
-    required: [
-    [
-      'style', 
-      'Warp.BoxStyle.neutral <br />Warp.BoxStyle.info <br />Warp.BoxStyle.bordered',
-      '', 
-      'Preferred style of box.'
-    ],
-    [
-      'subtitle', 
-      'String',
-      '', 
-      'Text that will be shown after title in the middle of the box.'
-    ],
-  ],
-    props: [
-      [
-        'title', 
-        'String?', 
-        '', 
-        'Text that will be shown as box heading. <br />If there is no title the icon would be hidden too.'
-      ],
-      [
-        'shouldShowToolTipImage', 
-        'Bool',
-        'true', 
-        'Flag indicating tooltip image should be shown.'
-      ],
-      [
-        'link', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'Tuple that will provide a title and an action for creating a link view below subtitle. <br />Passing `nil` will skip adding link view.'
-      ],
-      [
-        'button', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'Tuple that will provide a title and an action for creating a button view below link. <br />Passing `nil` will skip adding button view.'
-      ],
     ],
   },
   Broadcast: {
