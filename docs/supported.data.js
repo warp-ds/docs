@@ -3,7 +3,7 @@ import { presetWarp } from '@warp-ds/uno';
 import { formatCSS } from '@itsy/okay';
 import * as classLists from './supported.list.js';
 
-const uno = createGenerator({ presets: [presetWarp()] });
+const uno = await createGenerator({ presets: [presetWarp()] });
 const cssFor = async (selector) => {
   const result = await uno.parseToken(selector);
   const css = result ? formatCSS(result[0][2]).replaceAll(':', ': ').replaceAll(';', '') : null;

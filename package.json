@@ -13,13 +13,13 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@itsy/okay": "0.0.4",
-    "@unocss/core": "0.61.5",
+    "@unocss/core": "0.65.4",
     "@vueuse/core": "10.11.0",
     "@warp-ds/css": "2.0.1",
     "@warp-ds/icons": "2.3.0",
     "@warp-ds/preset-docs": "0.0.16",
     "@warp-ds/react": "2.0.3",
-    "@warp-ds/uno": "2.0.0",
+    "@warp-ds/uno": "2.0.2",
     "@warp-ds/vue": "2.1.3",
     "camelcase": "8.0.0",
     "decamelize": "6.0.0",
@@ -27,11 +27,11 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "sass": "1.77.8",
-    "unocss": "0.61.5",
+    "unocss": "0.65.4",
     "vite": "5.3.5",
     "vite-svg-loader": "^5.1.0",
     "vitepress": "1.3.1",
-    "vue": "3.4.34"
+    "vue": "3.4.37"
   },
   "dependencies": {
     "markdown-it-container": "^4.0.0"
