@@ -21,7 +21,7 @@ Warp.Badge(
 There are a variety of variants and positions supported for the badge component:
 
 ```swift example
-public enum BadgeVariant {
+enum Warp.BadgeVariant {
     /// Used to convey general information that isn’t critical.
     case info
     /// Used to communicate success.
@@ -40,7 +40,7 @@ public enum BadgeVariant {
     case price
 }
 
-public enum BadgePosition {
+enum Warp.BadgePosition {
     case `default`
     case topLeft
     case topRight

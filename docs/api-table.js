@@ -2792,6 +2792,36 @@ export const iOS = {
       ],
     ],
   },
+  Broadcast: {
+    required: [
+    [
+      'text', 
+      'String',
+      '', 
+      'Text that will be shown in the broadcast'
+    ],
+    [
+      'broadcastEdge', 
+      'Warp.BroadcastEdge',
+      '', 
+      'Edge from where the broadcast is presented.<br />Use one of the predefined `BroadcastEdge` values: `.top`, or `.bottom`'
+    ],
+    [
+      'isPresented', 
+      'Binding Bool', 
+      '', 
+      'Binding to a boolean value that allows the broadcast to control dismissal'
+    ],
+  ],
+    props: [
+      [
+        'isDismissable', 
+        'Bool', 
+        'true', 
+        'Determines if dismissable by the user or not. Will add a close button.'
+      ],  
+    ],
+  },
   Button: {
     required: [
       [
@@ -3055,30 +3085,6 @@ export const iOS = {
         'Edge.top', 
         'The direction of the arrow'
       ],  
-    ],
-  },
-  Broadcast: {
-    required: [
-    [
-      'text', 
-      'String',
-      '', 
-      'Text that will be shown in the broadcast'
-    ],
-    [
-      'broadcastEdge', 
-      'Warp.BroadcastEdge.top <br />Warp.BroadcastEdge.bottom',
-      '', 
-      'Edge from where the broadcast is presented'
-    ],
-    [
-      'isPresented', 
-      'Binding Bool', 
-      '', 
-      'Binding to a boolean value that allows the broadcast to control dismissal'
-    ],
-  ],
-    props: [  
     ],
   },
   Spinner: {

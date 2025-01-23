@@ -23,7 +23,7 @@ Warp.Box(
 There are a variety of variants and combination supported for the box component. Supporting a button and a link, a title, a description and an icon.
 
 ```swift example
-enum BoxStyle {
+enum Warp.BoxStyle {
     /// Used to group information that separates itself from other elements in a page layout.
     /// Use this box to show generic information that isn’t necessarily directly related to the main focus content on your page.
     case neutral

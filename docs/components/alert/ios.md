@@ -25,7 +25,7 @@ Warp.Alert(
 There are four types of alert styles:
 
 ```swift example
-public enum AlertStyle {
+enum Warp.AlertStyle {
     /// Used to display messages that provide the user with general information.
     case info
     /// Used to indicate that something is not working as expected or might need attention.
