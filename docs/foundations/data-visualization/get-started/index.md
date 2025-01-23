@@ -2,7 +2,7 @@
 
 Here you will find guidelines about data visualisation in customer facing products and services.
 
-![A bar chart, donut chart and bubble graph](/foundations/dataviz-graphs.svg)
+![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs.svg)
 
 ## What do you need to think about?
 
@@ -29,7 +29,7 @@ Before you make a visualisation it can be useful to define the goal of the visua
 - Should your visualisation **explain** an insight, or allow people to **explore** on their own?
 - Should your visualisation enable people to **read** off the information in detail, or rather provide them an overall **feeling** of the data?
 
-![A scale ranging from Explain to Explore, and another scale ranging from Read to Feel](/foundations/dataviz-explain-explore-read-feel.svg)
+![A scale ranging from Explain to Explore, and another scale ranging from Read to Feel](/foundations/dataviz/explain-explore-read-feel.svg)
 
 ### Explain vs Explore
 
@@ -47,28 +47,15 @@ A good visualisation communicates insight in a clear and engaging way without th
 
 Consider this example:
 
-![A pile of bottles next to The Eiffel tower. Text: Every day the equivalent of a bottle pile half the size of the Eiffel Tower in Paris is sold around the world. ](/foundations/dataviz-eiffel.jpg)
+![A pile of bottles next to The Eiffel tower. Text: Every day the equivalent of a bottle pile half the size of the Eiffel Tower in Paris is sold around the world. ](/foundations/dataviz/eiffel.jpg)
 Source: [REUTERS](https://www.reuters.com/graphics/ENVIRONMENT-PLASTIC/0100B275155/index.html)
 
 The visualisation above puts a number (that otherwise would be very abstract) into a context that makes it possible to understand. In addition, the visual form itself grabs your attention and makes the insight memorable. Text is used to explain the visuals.
 
 It seems that the goal of this visualisation is to explain a specific message, rather than make you explore a dataset. In addition, the goal seems to be to make you feel something and get an overall understanding rather than enable you to read off exact values.
 
-![A scale where a dot is placed close to 'Explain' and far from 'Explore'. Another scale with a dot placed close to 'Feel' and far from 'Read' ](/foundations/dataviz-explain-feel.svg)
-
-
-## Which visualisation library should you use?
-There are many JavaScript libraries available, such as [HighCharts](https://www.highcharts.com), [D3](https://d3js.org/), [visx](https://airbnb.io/visx/), [Recharts](https://recharts.org/) and [Apexcharts](https://apexcharts.com/). 
-
-We have not (yet) decided on a recommended charting library. Make sure to check if the library allows you to follow the [Success criteria](/foundations/data-visualization/success-criteria/), for example for screen reader accessibility.
-
+![A scale where a dot is placed close to 'Explain' and far from 'Explore'. Another scale with a dot placed close to 'Feel' and far from 'Read' ](/foundations/dataviz/explain-feel.svg)
 
 ## How do you provide feedback or get help?
 
 Don’t hesitate to reach out to the design system team [on Slack (#smp-warp-design-system)](https://sch-chat.slack.com/archives/C04P0GYTHPV) if you have any feedback or questions.
-
-[Jon Olav](https://sch-chat.slack.com/team/U03KEH3V4) is an information designer working across verticals and brands in NMP, and can help you with:
-
-- Questions or unresolved needs related to these guidelines
-- Process guidance on how to figure out what data to present to users
-- Designing concrete graphs and visualisations

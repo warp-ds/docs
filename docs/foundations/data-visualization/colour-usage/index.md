@@ -1,14 +1,18 @@
-# Colour usage
+# Colour Usage
 
-Colour plays a pivotal role in data visualisation. It is among the initial aspects we perceive on a screen and can be strategically utilised to guide a user's focus.
+Colour plays an important role in data visualisation, and can be used to encode data in many ways. In addition, colour is often the first thing we perceive on a screen and can be used to guide the user's attention.
 
-Not only does colour capture attention, but it also serves as a tool to convey information. This can be achieved by assigning different colours to represent distinct values, or to indicate positive or negative outcomes.
+## Colours for chart elements and data representation
 
-Nonetheless, considering the variability in colour perception among individuals (including those who may not perceive it at all), it's crucial to ensure that the information remains accessible to all (see [Success criteria](/foundations/data-visualization/colour-usage/) for further details).
+There are two main categories of dataviz colours:
+- **Chart colours** for non-data element in the chart, such as gridlines, axes and text labels
+- **Data colours** for visual elements that encode data, such as lines, bars and areas.
 
-<br>
-<br>
+![Empty chart with axes, labels and gridlines using WARP colours to the left, bars and lines using dataviz colours to the right](/foundations/dataviz/chart-vs-data-colours.png)
 
-::: info
-This page will provide guidelines for colour usage in graphs. We have not yet decided on colours, nor implemented colour tokens for data visualisation in NMP.
-:::
+For data colours, there are different semantic colours that should be used intentionally:
+
+- **Primary colour** – the default blue colour <span style="display: inline-block; width: 14px; height: 14px; background-color: #1087de; border-radius: 2px; vertical-align: -1px;"></span> to use when you only need one colour
+- **Secondary colour** - a grey colour <span style="display: inline-block; width: 14px; height: 14px; background-color: #919499; border-radius: 2px; vertical-align: -1px;"></span> to indicate secondary data
+- **Category colours** - a collection of 8 colours <span style="display: inline-block; width: 14px; height: 14px; background-color: #795af4; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #c88800; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #eb5ec7; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #00a881; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #e84c23; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #19818f; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #2b97ef; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #919499; border-radius: 2px; vertical-align: -1px;"></span> to indicate different categories of data
+- **Evaluation colours** - a collection of 4 colours <span style="display: inline-block; width: 14px; height: 14px; background-color: #00a881; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #c88800; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #f2334e; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #81858c; border-radius: 2px; vertical-align: -1px;"></span> to indicate if the data is positive,  negative or neutral

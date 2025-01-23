@@ -533,20 +533,58 @@ export default defineConfig({
             collapsed: true,
             items: [
               {
-                text: 'Getting Started',
-                link: '/foundations/data-visualization/getting-started/',
+                text: 'Get Started',
+                link: '/foundations/data-visualization/get-started/',
               },
               {
-                text: 'Chart types',
-                link: '/foundations/data-visualization/chart-types/',
+                text: 'Figma Library',
+                link: '/foundations/data-visualization/figma-library/',
+              },
+              {
+                text: 'CSS Classes',
+                link: '/foundations/data-visualization/css-utility/',
               },
               {
                 text: 'Colour Usage',
                 link: '/foundations/data-visualization/colour-usage/',
+                items: [  // Add a nested items array to include sub-pages
+                  {
+                    text: 'Chart colours',
+                    link: '/foundations/data-visualization/colour-usage/chart-colours/',
+                  },
+                  {
+                    text: 'Data colours',
+                    link: '/foundations/data-visualization/colour-usage/data-colours/',
+                  },
+                  {
+                    text: 'Primary & Secondary',
+                    link: '/foundations/data-visualization/colour-usage/primary/',
+                  },
+                  {
+                    text: 'Category',
+                    link: '/foundations/data-visualization/colour-usage/category/',
+                  },
+                  {
+                    text: 'Evaluation',
+                    link: '/foundations/data-visualization/colour-usage/evaluation/',
+                  },
+                ]
               },
               {
-                text: 'Success criteria',
+                text: 'Interactive States',
+                link: '/foundations/data-visualization/interactive/',
+              },
+              {
+                text: 'Library & Components',
+                link: '/foundations/data-visualization/library-components/',
+              },
+              {
+                text: 'Success Criteria',
                 link: '/foundations/data-visualization/success-criteria/',
+              },
+              {
+                text: '(Chart Types)',
+                link: '/foundations/data-visualization/chart-types/',
               },
             ],
           },
