@@ -6,14 +6,11 @@ We have defined a colour palette for data visualization that should be used acro
 See [Colour Usage](/foundations/data-visualization/colour-usage/) for detailed descriptions and examples of the different colours. 
 :::
 
-A data visualization typically contains both **elements representing data** (like bars or lines), and **non-data elements** like axes and labels that provides context. 
-- Use **WARP colours** for non-data elements like background, labels, gridlines, baseline and ticks
-- Use **dataviz colours** for elements representing data, such as bars, areas, lines and points 
+## Colours for non-data elements 
 
-![Empty chart with axes, labels and gridlines using WARP colours to the left, bars and lines using dataviz colours to the right](/foundations/dataviz/chart-vs-data-colours.png)
+..to do..
 
-## WARP colours for non-data elements 
-
+::: details (outdated)
 Use these regular WARP colours for non-data elements:
 - `s-bg`or `background-color: var(--w-s-color-background)` for chart background
 - `s-text` or `color: var(--w-s-color-text)` for prominent text
@@ -22,6 +19,7 @@ Use these regular WARP colours for non-data elements:
 - ~~`s-border-subtle` or `border-color: var(--w-s-color-border-subtle)` for non-crucial lines like gridlines~~ (yet to be added)
 
 See [text colour](/foundations/css-classes/text-color/), [border colour](/foundations/css-classes/border-color/) and [border colour](/foundations/css-classes/background-color/) for more information. 
+:::
 
 ## Dataviz colours for elements representing data
 We have defined different colours to use with **different visual elements** representing data:

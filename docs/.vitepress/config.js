@@ -533,12 +533,16 @@ export default defineConfig({
             collapsed: true,
             items: [
               {
-                text: 'Get Started',
-                link: '/foundations/data-visualization/get-started/',
+                text: 'Introduction',
+                link: '/foundations/data-visualization/introduction/',
               },
               {
                 text: 'Figma Library',
                 link: '/foundations/data-visualization/figma-library/',
+              },
+              {
+                text: 'Components',
+                link: '/foundations/data-visualization/components/',
               },
               {
                 text: 'CSS Classes',
@@ -575,16 +579,8 @@ export default defineConfig({
                 link: '/foundations/data-visualization/interactive/',
               },
               {
-                text: 'Library & Components',
-                link: '/foundations/data-visualization/library-components/',
-              },
-              {
                 text: 'Success Criteria',
                 link: '/foundations/data-visualization/success-criteria/',
-              },
-              {
-                text: '(Chart Types)',
-                link: '/foundations/data-visualization/chart-types/',
               },
             ],
           },

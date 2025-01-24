@@ -1,8 +1,12 @@
-# Getting started
+# Introduction to data visualisation
 
-Here you will find guidelines about data visualisation in customer facing products and services.
+![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)
 
-![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs.svg)
+WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/colour-usage/).
+
+There is no dedicated code library or components for dataviz available in code, as different teams currently use a variety of libraries. However, there are come components available in Figma. See [Components](/foundations/data-visualization/components/).
+
+On this page you will find a general introduction to working with data visualisation – commonly referred to as ✨ **dataviz** ✨.
 
 ## What do you need to think about?
 
@@ -29,7 +33,7 @@ Before you make a visualisation it can be useful to define the goal of the visua
 - Should your visualisation **explain** an insight, or allow people to **explore** on their own?
 - Should your visualisation enable people to **read** off the information in detail, or rather provide them an overall **feeling** of the data?
 
-![A scale ranging from Explain to Explore, and another scale ranging from Read to Feel](/foundations/dataviz/explain-explore-read-feel.svg)
+![A scale ranging from Explain to Explore, and another scale ranging from Read to Feel](/foundations/dataviz/explain-explore-read-feel.svg){width=700px}
 
 ### Explain vs Explore
 
@@ -40,6 +44,23 @@ Before you make a visualisation it can be useful to define the goal of the visua
 - **Read**: the focus is on being able to read the data as efficiently and precise as possible. In this case, make sure to use the graph types and elements that allows for a precise reading. For example, it is hard to compare one angle with another, or the size of an area with another, while it is easier to compare the length of lines next to each other.
 - **Feel**: the focus is on evoking a feeling or overall impression of the data. In this case, consider visual means that evoke associations and emotions and make the visualisation memorable.
 
+## Chart functions
+
+In order to find a good chart it is useful to figure out what you want to show about the data. In other words, what function the chart should serve.
+
+![Circles organised to show comparison, correlation, distribution, trend over time, parts to whole, and geolocation. ](/foundations/dataviz/functions.svg)
+
+The most common functions are:
+- **Comparison**. Compare two or more values
+- **Correlation.** See the relationship between two or more values
+- **Distribution.** See how values are spread out within one variable
+- **Trend over time**. See how values change over time
+- **Part to whole**. See the composition of a whole
+- **Geolocation**. See the geographical distribution of a particular variable.
+
+::: tip
+For a full overview of different chart types you can use for different functions, have a look at the [DataViz Project](https://datavizproject.com/).
+:::
 
 ## What is a good visualisation?
 
