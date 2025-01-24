@@ -3008,6 +3008,48 @@ export const iOS = {
       ],
     ],
   },
+  Expandable: {
+    required: [
+      [
+        'style', 
+        'Warp.ExpandableStyle',
+        '', 
+        'The style of the `Expandable`. <br />Use one of the predefined `ExpandableStyle` values: `.default`, `.box`, or `.boxBleed`'
+      ],
+      [
+        'title', 
+        'String',
+        '', 
+        'The title for the top sticky part of the `Expandable`'
+      ],
+    ],
+    props: [  
+      [
+        'expandableView', 
+        'View',
+        '', 
+        'The view for the bottom hidden part of the `Expandable`. Either this or `subtitle` needs to be provided.'
+      ],
+      [
+        'subtitle', 
+        'String',
+        '', 
+        'The subtitle for the bottom hidden part of the `Expandable`. Either this or `expandableView` needs to be provided.'
+      ],
+      [
+        'isAnimated', 
+        'Bool',
+        'true', 
+        'Determines if the `Expandable` will expand and collapse with animation'
+      ],
+      [
+        'isExpanded', 
+        'Bool',
+        'false', 
+        'Controls the state of the `Expandable`'
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
@@ -3282,48 +3324,6 @@ export const iOS = {
         '.vertical', 
         'The orientation of the step indicator'
       ]
-    ],
-  },
-  Expandable: {
-    required: [
-      [
-        'style', 
-        'Warp.ExpandableStyle.default <br />Warp.ExpandableStyle.box <br />Warp.ExpandableStyle.boxBleed',
-        '', 
-        'The style of the Expandable'
-      ],
-      [
-        'title', 
-        'String',
-        '', 
-        'The title for the top sticky part of the Expandable'
-      ],
-      [
-        'expandableView', 
-        'View',
-        '', 
-        'The view for the bottom hidden part of the Expandable. Either this or subtitle needs to be provided.'
-      ],
-      [
-        'subtitle', 
-        'String',
-        '', 
-        'The subtitle for the bottom hidden part of the Expandable. Either this or expandableView needs to be provided.'
-      ],
-      [
-        'isAnimated', 
-        'Bool',
-        'true', 
-        'Determines if the Expandable will expand and collapse with animation'
-      ],
-      [
-        'isExpanded', 
-        'Bool',
-        'false', 
-        'The initial state of the Expandable'
-      ],
-    ],
-    props: [  
     ],
   },
 };
