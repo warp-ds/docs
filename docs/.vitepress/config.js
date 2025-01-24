@@ -568,6 +568,7 @@ export default defineConfig({
             { text: 'Broadcast', link: '/components/broadcast/' },
             { text: 'Button', link: '/components/buttons/' },
             { text: 'Button group', link: '/components/buttongroup/' },
+            { text: 'Button pill', link: '/components/buttonpill/' },
             { text: 'Callout', link: '/components/callout/'},
             { text: 'Card', link: '/components/card/' },
             { text: 'Checkbox', link: '/components/checkbox/' },
