@@ -2,11 +2,15 @@
 
 ![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)
 
+On this page you will find a general introduction to working with data visualisation – commonly referred to as ✨ **dataviz** ✨.
+
+
+## Dataviz in WARP
+
 WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/colour-usage/).
 
 There is no dedicated code library or components for dataviz available in code, as different teams currently use a variety of libraries. However, there are come components available in Figma. See [Components](/foundations/data-visualization/components/).
 
-On this page you will find a general introduction to working with data visualisation – commonly referred to as ✨ **dataviz** ✨.
 
 ## What do you need to think about?
 
@@ -33,22 +37,26 @@ Before you make a visualisation it can be useful to define the goal of the visua
 - Should your visualisation **explain** an insight, or allow people to **explore** on their own?
 - Should your visualisation enable people to **read** off the information in detail, or rather provide them an overall **feeling** of the data?
 
-![A scale ranging from Explain to Explore, and another scale ranging from Read to Feel](/foundations/dataviz/explain-explore-read-feel.svg){width=700px}
+::: image-block
+![A scale ranging from Explain to Explore, and another scale ranging from Read to Feel](/foundations/dataviz/explain-explore-read-feel.png){width=400px}
+:::
 
 ### Explain vs Explore
 
-- **Explanatory**: your visualisation explains or communicates a specific story or insight to someone. In this case, you need to figure out what story to tell, and how to tell it.
+- **Explanatory**: your visualisation explains or communicates a specific story or insight to someone. In this case, you need to figure out what story to tell, and how to tell it
 - **Exploratory**: users should explore data freely and find their own insight, for example in an analytical dashboard. In this case, you need to figure out how they are going to do that, for example using filters and sorting.
 
 ### Read vs Feel
-- **Read**: the focus is on being able to read the data as efficiently and precise as possible. In this case, make sure to use the graph types and elements that allows for a precise reading. For example, it is hard to compare one angle with another, or the size of an area with another, while it is easier to compare the length of lines next to each other.
+- **Read**: the focus is on being able to read the data as efficiently and precise as possible. In this case, make sure to use the graph types and elements that allows for a precise reading. For example, it is hard to compare one angle with another, or the size of an area with another, while it is easier to compare the length of lines next to each other
 - **Feel**: the focus is on evoking a feeling or overall impression of the data. In this case, consider visual means that evoke associations and emotions and make the visualisation memorable.
 
 ## Chart functions
 
 In order to find a good chart it is useful to figure out what you want to show about the data. In other words, what function the chart should serve.
 
-![Circles organised to show comparison, correlation, distribution, trend over time, parts to whole, and geolocation. ](/foundations/dataviz/functions.svg)
+::: image-block
+![Circles organised to show comparison, correlation, distribution, trend over time, parts to whole, and geolocation. ](/foundations/dataviz/chart-functions.png){width=500px}
+:::
 
 The most common functions are:
 - **Comparison**. Compare two or more values
@@ -67,15 +75,18 @@ For a full overview of different chart types you can use for different functions
 A good visualisation communicates insight in a clear and engaging way without the need of somebody to explain the insight to you. Don’t be afraid to add some text to make the visualisation clear. The best visualisations enable users to take action based on the insights they get from the visualisation.
 
 Consider this example:
-
+::: image-block
 ![A pile of bottles next to The Eiffel tower. Text: Every day the equivalent of a bottle pile half the size of the Eiffel Tower in Paris is sold around the world. ](/foundations/dataviz/eiffel.jpg)
-Source: [REUTERS](https://www.reuters.com/graphics/ENVIRONMENT-PLASTIC/0100B275155/index.html)
+:::
+Image source: [REUTERS](https://www.reuters.com/graphics/ENVIRONMENT-PLASTIC/0100B275155/index.html)
 
 The visualisation above puts a number (that otherwise would be very abstract) into a context that makes it possible to understand. In addition, the visual form itself grabs your attention and makes the insight memorable. Text is used to explain the visuals.
 
 It seems that the goal of this visualisation is to explain a specific message, rather than make you explore a dataset. In addition, the goal seems to be to make you feel something and get an overall understanding rather than enable you to read off exact values.
 
-![A scale where a dot is placed close to 'Explain' and far from 'Explore'. Another scale with a dot placed close to 'Feel' and far from 'Read' ](/foundations/dataviz/explain-feel.svg)
+::: image-block
+![A scale where a dot is placed close to 'Explain' and far from 'Explore'. Another scale with a dot placed close to 'Feel' and far from 'Read' ](/foundations/dataviz/explain-feel.png){width=400px}
+:::
 
 ## How do you provide feedback or get help?
 

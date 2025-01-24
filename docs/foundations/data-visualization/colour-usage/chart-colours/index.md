@@ -33,4 +33,5 @@ Some of the chart colours are identical to regular WARP colours, for example the
 - In Figma, it is convenient for designers to have all the colours they need for charts in one library
 - In code, the dataviz colours can be applied to SVG elements using utility classes 
 - Users of the dataviz library get all the colours they need for creating charts, and the library can therefore be used independent of WARP
-- At the time of writing (jan 2025) are is no border-subtle in WARP, which is needed for gridlines etc.
+- The ChartBackground colour ensures good contrast between the dataviz elements and the background, which might not be the case if using other WARP background colours 
+- At the time of writing (jan 2025) there is no distinction in WARP between border and border subtle in WARP, which is needed for gridlines etc.

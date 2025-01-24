@@ -6,6 +6,12 @@ We have defined a colour palette for data visualization that should be used acro
 See [Colour Usage](/foundations/data-visualization/colour-usage/) for detailed descriptions and examples of the different colours. 
 :::
 
+## Applying colours to SVG elements
+On web, graphs are typically render as SVGs. SVG elements have different properties than HTML for applying colours.  
+
+![-----](/foundations/dataviz/props-html-svg.png)
+
+
 ## Colours for non-data elements 
 
 ..to do..
@@ -41,7 +47,7 @@ For each element type, there are different **semantic colours** to use in differ
 ### How to import the dataviz colours
 
 #### Alternative 1: Use CSS variables
-For CSS variables to work, you need to include a link to the CSS file in your project: *[URL to be inserted]*
+For CSS variables to work, you need to include a link to the CSS file in your project: [https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.3/tokens/dataviz.css](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.3/tokens/dataviz.css) (temporary!)
 
 The CSS variables can be applied to all kinds of content, including HTML tags and SVG elements. You don’t need to use WARP to use the dataviz CSS variables. 
 
@@ -99,12 +105,12 @@ Note that regular WARP colours will not work in this way; you can't use WARP uti
 </text>
 ```  
 
-### Focus colours
+### Highlight colours
 
-Use the focus colour on hover, tap and keyboard focus. Add `-focus` to the end of the variable name or class name to get the focus colour. 
+Use the `highlight` colour on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highglight colour. 
 
 Example with `primary` colour:
 
-`dv-s-line-primary-focus` or `color: var(--w-dv-s-color-line-primary-focus)`. 
+`dv-s-line-primary-highlight` or `color: var(--w-dv-s-color-line-primary-highlight)`. 
 
-In addition, consider **dimming the other elements** that are not in focus, to **80% opacity**. In bar charts, placing hoverable areas immediately next to each other with no space in-between, to avoid a 'flickering effect' when moving the cursor across the bar. If you are not able to do so, do not dim the other bars.
+In addition, consider **dimming the other elements** that are not highlighted, to **80% opacity**. In bar charts, place hoverable areas immediately next to each other with no space in-between, to avoid a 'flickering effect' when moving the cursor across the bars. If you are not able to do so, do not dim the other bars.
