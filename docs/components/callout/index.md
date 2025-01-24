@@ -37,10 +37,10 @@
   <template #elements>
     <elements />
   </template>
-<template #iOS>
-    <iOS />
-  </template>
   <template #android>
     <android />
+  </template>
+  <template #iOS>
+    <iOS />
   </template>
 </tabs-content>

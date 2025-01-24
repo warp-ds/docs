@@ -2860,7 +2860,7 @@ export const iOS = {
         'size',
         'Warp.ButtonSize',
         '.big',
-        'Sets the size of button.<br />Use one of the predefined `ButtonSize` values: `.big`, `.small`',
+        'Sets the size of button.<br />Use one of the predefined `ButtonSize` values: `.big`, or `.small`',
       ],
       [
         'isEnabled',
@@ -2903,6 +2903,36 @@ export const iOS = {
         '(([(String, Bool)]) -> Void)?',
         'nil', 
         'An optional closure that receives the updated button array whenever the selection changes.',
+      ],
+    ],
+  },
+  Callout: {
+    required: [
+    [
+      'title', 
+      'String', 
+      '', 
+      'The text to be displayed'
+    ],
+  ],
+    props: [  
+      [
+        'size', 
+        'Warp.CalloutSize',
+        '.default', 
+        'The size of the Callout.<br />Use one of the predefined `CalloutSize` values: `.default`, or `.small`.'
+      ],
+      [
+        'type', 
+        'Warp.CalloutType',
+        '.inline', 
+        'The type of the Callout.<br />Use one of the predefined `CalloutType` values: `.inline`, or `.popover`.<br /> Popover accepts an optional onClose action, which will display a close button.'
+      ],
+      [
+        'arrowEdge', 
+        'Edge',
+        '.top', 
+        'The direction of the arrow.<br />Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing`'
       ],
     ],
   },
@@ -3063,36 +3093,6 @@ export const iOS = {
       'Warp.TextStyle.display <br />Warp.TextStyle.title1 <br />Warp.TextStyle.title2 <br />Warp.TextStyle.title3 <br />Warp.TextStyle.title4 <br />Warp.TextStyle.title5 <br />Warp.TextStyle.title6 <br />Warp.TextStyle.preamble <br />Warp.TextStyle.body <br />Warp.TextStyle.bodyStrong <br />Warp.TextStyle.caption <br />Warp.TextStyle.captionStrong <br />Warp.TextStyle.detail <br />Warp.TextStyle.detailStrong',
       '', 
       'Sets the appearance of the text - font and size',
-    ],
-  ],
-    props: [  
-    ],
-  },
-  Callout: {
-    required: [
-    [
-      'size', 
-      'Warp.CalloutSize.default <br />Warp.CalloutSize.small',
-      'Warp.CalloutSize.default', 
-      'The size of the Callout'
-    ],
-    [
-      'type', 
-      'Warp.CalloutType.inline <br />Warp.CalloutType.popover',
-      'Warp.CalloutType.inline', 
-      'The type of the Callout, popover accepts a onClose action'
-    ],
-    [
-      'title', 
-      'String', 
-      '', 
-      'The text to be displayed'
-    ],
-    [
-      'arrowEdge', 
-      'Edge.top <br />Edge.leading <br />Edge.bottom <br />Edge.trailing ',
-      'Edge.top', 
-      'The direction of the arrow'
     ],
   ],
     props: [  
