@@ -2882,6 +2882,30 @@ export const iOS = {
       ],
     ],
   },
+  ButtonGroup: {
+    required: [
+    [
+      'buttons', 
+      'Binding<[(title: String, isSelected: Bool)]>', 
+      '', 
+      'A binding to an array of tuples representing each button\'s title and selection state.'
+    ],
+  ],
+    props: [  
+      [
+        'singleSelect', 
+        'Bool',
+        'false', 
+        'Specifies the selection behavior. If `true`, only one button can be selected at a time. If `false`, multiple buttons can be selected.',
+      ],
+      [
+        'onSelectionChange', 
+        '(([(String, Bool)]) -> Void)?',
+        'nil', 
+        'An optional closure that receives the updated button array whenever the selection changes.',
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
