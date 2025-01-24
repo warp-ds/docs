@@ -2832,41 +2832,41 @@ export const iOS = {
       ],
       [
         'action',
-        '() -> Void',
+        '@escaping () -> Void',
         '',
-        'Action to be invoked when clicked',
+        'Action to be invoked when tapped',
       ],
-      [
-        'buttonType',
-        'Warp.ButtonType.primary <br />Warp.ButtonType.secondary <br />Warp.ButtonType.tertiary <br />Warp.ButtonType.critical <br />Warp.ButtonType.criticalTertiary <br />Warp.ButtonType.utility <br />Warp.ButtonType.utilityTertiary <br />Warp.ButtonType.utilityOverlay',
-        '',
-        'Controls the appearance of the button',
-      ]
     ],
     props: [
       [
         'leadingIcon',
-        'Image?',
+        'Warp.Icon?',
         'nil',
-        'Sets the button image leading the title',
+        'Sets the button icon leading the title',
       ],
       [
         'trailingIcon',
-        'Image?',
+        'Warp.Icon?',
         'nil',
-        'Sets the button image trailing the title',
+        'Sets the button icon trailing the title',
+      ],
+      [
+        'type',
+        'Warp.ButtonType',
+        '.primary',
+        'Controls the appearance of the button.<br />Use one of the predefined `ButtonType` values: `.primary`, `.secondary`, `.quiet`, `.critical`, `.criticalQuiet`, `.utility`, `.utilityQuiet`, or `.utilityOverlay`',
       ],
       [
         'size',
-        'Warp.ButtonSize.big <br />Warp.ButtonSize.small',
-        'Warp.ButtonSize.big',
-        'Sets the size of button',
+        'Warp.ButtonSize',
+        '.big',
+        'Sets the size of button.<br />Use one of the predefined `ButtonSize` values: `.big`, `.small`',
       ],
       [
         'isEnabled',
         'Bool',
         'true',
-        'Sets the button in disabled mode',
+        'Indicating that interactions are enabled.',
       ],
       [
         'fullWidth',
@@ -2874,9 +2874,14 @@ export const iOS = {
         'false',
         'Change the width behaviour of the button',
       ],
+      [
+        'isLoading',
+        'Bool',
+        'false',
+        'Indicating whether the button is loading.',
+      ],
     ],
   },
-
   TextField: {
     required: [
       [
