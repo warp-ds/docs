@@ -545,42 +545,53 @@ export default defineConfig({
                 link: '/foundations/data-visualization/components/',
               },
               {
-                text: 'CSS Classes',
-                link: '/foundations/data-visualization/css-utility/',
-              },
-              {
-                text: 'Colour',
+                text: 'Colour usage',
                 link: '/foundations/data-visualization/colour/',
                 items: [  // Add a nested items array to include sub-pages
                   {
+                    text: 'Lines & Points',
+                    link: '/foundations/data-visualization/colour/lines-points/',
+                  },
+                  {
+                    text: 'Bars & Areas',
+                    link: '/foundations/data-visualization/colour/bars-areas/',
+                  },
+                  {
+                    text: 'Text & Icons',
+                    link: '/foundations/data-visualization/colour/text-icons/',
+                  },
+                ]
+              },
+              {
+                text: 'Tokens & CSS',
+                link: '/foundations/data-visualization/tokens/',
+                items: [  // Add a nested items array to include sub-pages
+                  {
                     text: 'Chart colours',
-                    link: '/foundations/data-visualization/colour/chart-colours/',
+                    link: '/foundations/data-visualization/tokens/chart/',
                   },
-                  {
-                    text: 'Data colours',
-                    link: '/foundations/data-visualization/colour/data-colours/',
-                  },
-                  {
-                    text: 'Line',
-                    link: '/foundations/data-visualization/colour/line/',
-                  },
+
                   {
                     text: 'Background',
-                    link: '/foundations/data-visualization/colour/background/',
+                    link: '/foundations/data-visualization/tokens/background/',
                   },
                   {
                     text: 'Border',
-                    link: '/foundations/data-visualization/colour/border/',
-                  },
-                  {
-                    text: 'Text',
-                    link: '/foundations/data-visualization/colour/text/',
+                    link: '/foundations/data-visualization/tokens/border/',
                   },
                   {
                     text: 'Icon',
-                    link: '/foundations/data-visualization/colour/icon/',
+                    link: '/foundations/data-visualization/tokens/icon/',
+                  },
+                  {
+                    text: 'Line',
+                    link: '/foundations/data-visualization/tokens/line/',
                   },
 
+                  {
+                    text: 'Text',
+                    link: '/foundations/data-visualization/tokens/text/',
+                  },
                 ]
               },
               {

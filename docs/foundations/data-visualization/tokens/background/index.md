@@ -1,11 +1,5 @@
 # Background
 
-## ChartBackground
-
-| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
-| ----- | ------ | --- | ---------- | -------- | ---------- | 
-| `ChartBackground/Default` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #ffffff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #1b1b1f; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-chartbackground-default)` | `dv-s-chartbg-default` | `dv-s-fill-chartbg-default` | `dv-s-stroke-chartbg-default` |
-
 ## Primary & Secondary
 
 | Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |

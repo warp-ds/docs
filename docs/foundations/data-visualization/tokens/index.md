@@ -1,4 +1,4 @@
-# CSS & Utility Classes
+# Tokens & CSS
 
 We have defined a colour palette for data visualization that should be used across all brands. You can apply the dataviz colours using CSS variables or Utility classes.
 
@@ -11,70 +11,40 @@ We have defined a colour palette for data visualization that should be used acro
 See [Colour Usage](/foundations/data-visualization/colour-usage/) for detailed descriptions and examples of the different colours. 
 :::
 
-## Applying colours to SVG elements
-On web, graphs are typically render as SVGs. SVG elements have different properties than HTML for applying colours.  
 
-![-----](/foundations/dataviz/props-html-svg.png)
+## How to import the dataviz colours
 
-
-## Colours for non-data elements 
-
-..to do..
-
-::: details (outdated)
-Use these regular WARP colours for non-data elements:
-- `s-bg`or `background-color: var(--w-s-color-background)` for chart background
-- `s-text` or `color: var(--w-s-color-text)` for prominent text
-- `s-text-subtle` or `color: var(--w-s-color-text-subtle)` for supportive text
-- `s-border` or `border-color: var(--w-s-color-border)` for main axis lines
-- ~~`s-border-subtle` or `border-color: var(--w-s-color-border-subtle)` for non-crucial lines like gridlines~~ (yet to be added)
-
-See [text colour](/foundations/css-classes/text-color/), [border colour](/foundations/css-classes/border-color/) and [border colour](/foundations/css-classes/background-color/) for more information. 
-:::
-
-## Dataviz colours for elements representing data
-We have defined different colours to use with **different visual elements** representing data:
-- **Lines**: for lines and points, for example in a line graph or scatter plot
-- **Background**: for bars and areas, for example in a bar chart or area chart
-- **Background subtle**: for bars and areas. NB: needs a border to achieve good contrast
-- **Border**: for borders around subtle bars/areas, and pattern fill
-- **Icon**: for icons representing data
-- **Text**: for text representing data
-
-### Semantic colours
-
-For each element type, there are different **semantic colours** to use in different situations:
-- `primary`– when you only need one colour, or need to indicate the most important data (combined with the secondary colour)
-- `secondary` for data that is less important than the primary data
-- `category[1-8]` – indicate different categories of data that are equal in importance
-- `negative`, `positive`, `neutral`, `warning` – indicate data points that range from positive to negative for the user/reader.
-
-### How to import the dataviz colours
-
-#### Alternative 1: Use CSS variables
+### Alternative 1: Use CSS variables
 For CSS variables to work, you need to include a link to the CSS file in your project: [https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.3/tokens/dataviz.css](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.3/tokens/dataviz.css) (temporary!)
 
 The CSS variables can be applied to all kinds of content, including HTML tags and SVG elements. You don’t need to use WARP to use the dataviz CSS variables. 
 
-#### Alternative 2: Use Utility classes
+### Alternative 2: Use Utility classes
 We use UnoCSS, see [Introduction to CSS classes](/foundations/css-classes/unocss/).
 
-### CSS variables and utility classes
+## CSS variables and utility classes
 
 The CSS variables should work for both HTML and SVG elements, while these utility classes only work for HTML elements. Examples using the `primary` colour:
 
 | Visual element | Class (HTML only)   | CSS variable      |  
 | -------------- | ------------------- |  ----------------- | 
-| Line           | `dv-s-line-primary` | `color: var(--w-dv-s-color-line-primary)` |
-| Background     | `dv-s-bg-primary` |  `color: var(--w-dv-s-color-background-primary)` | 
-| Background subtle | `dv-s-bg-primary-subtle` |`color: var( --w-dv-s-color-background-primary-subtle)` | 
-| Border         | `dv-s-border-primary` |`color: var(--w-dv-s-color-border-primary)` |
-| Icon           | `dv-s-icon-primary` | `color: var(--w-dv-s-color-icon-primary)` |
-| Text           | `dv-s-text-primary` | `color: var(--w-dv-s-color-text-primary)` |
+| Line           | `dv-s-line-primary` | `var(--w-dv-s-color-line-primary)` |
+| Background     | `dv-s-bg-primary` |  `var(--w-dv-s-color-background-primary)` | 
+| Background subtle | `dv-s-bg-primary-subtle` |`var( --w-dv-s-color-background-primary-subtle)` | 
+| Border         | `dv-s-border-primary` |`var(--w-dv-s-color-border-primary)` |
+| Icon           | `dv-s-icon-primary` | `var(--w-dv-s-color-icon-primary)` |
+| Text           | `dv-s-text-primary` | `var(--w-dv-s-color-text-primary)` |
 
-### Utility classes for SVG elements
+## Utility classes for SVG elements
 
 We have defined specific utility classes for use on SVG elements.
+
+::: details Why are there different utility classes for SVGs?
+On web, graphs are typically render as SVGs. SVG elements have different properties than HTML for applying colours.  
+
+![-----](/foundations/dataviz/props-html-svg.png)
+:::
+
 
 SVG uses [two attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) for applying colours for a node: 
 - `fill` sets the color inside the object (for example text or a rectange)
@@ -91,8 +61,12 @@ The utility class names are different depending on what you want to style. Examp
 | Icon           | `dv-s-fill-icon-primary` | `dv-s-stroke-icon-primary` | 
 | Text           | `dv-s-fill-text-primary`* | `dv-s-stroke-text-primary`* | 
 
- \* should normally not be used
+ \* You might find it strange that it is possible to apply a Background colour as stroke, or Line colour as fill. However, there are situations where this might be useful:
+- if you want to use the background colour as a stroke around a bar to create a gap to underlying content
+- if you want to use the line colour to fill a point in a line graph 
 
+
+### Example of applying utility classes to SVG elements
 Example of a rectange using the `primary background subtle` as `fill` and `primary border` as `stroke`: 
 
 ``` xml
@@ -110,7 +84,7 @@ Note that regular WARP colours will not work in this way; you can't use WARP uti
 </text>
 ```  
 
-### Highlight colours
+## Highlight colours
 
 Use the `highlight` colour on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highglight colour. 
 

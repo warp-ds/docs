@@ -1,12 +1,5 @@
 # Text
 
-## ChartText
-
-| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
-| ----- | ------ | --- | ---------- | -------- | ---------- | 
-| `ChartText/Default` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #1b1b1f; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #ffffff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-charttext-default)` | `dv-s-charttext-default` | `dv-s-fill-charttext-default` | `dv-s-stroke-charttext-default` |
-| `ChartText/Subtle` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #5c5c66; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #afafb8; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-charttext-subtle)` | `dv-s-charttext-subtle` | `dv-s-fill-charttext-subtle` | `dv-s-stroke-charttext-subtle` |
-
 ## Primary & Secondary
 
 | Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |

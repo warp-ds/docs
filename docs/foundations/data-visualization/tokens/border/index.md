@@ -1,5 +1,6 @@
 # Border
 
+<!-- TEST
 ::: details Background Primary <span style="display: inline-block; width: 14px; height: 14px; background-color: #1087DE; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #47A6F8; border-radius: 2px; vertical-align: -1px;"></span>
 The primary colour to use for bars and areas.
 |         | Value       | 
@@ -25,7 +26,7 @@ Subtle variant of the primary colour. Use for bars and areas. Needs a border to 
 | Android | Not supported yet | 
 
 :::
-
+ -->
 
 ## Primary & Secondary
 
