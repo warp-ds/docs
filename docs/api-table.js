@@ -3050,6 +3050,30 @@ export const iOS = {
       ],
     ],
   },
+  IconView: {
+    required: [
+    [
+      'icon',
+      'Warp.Icon',
+      '',
+      'The `Warp.Icon` to display.',
+    ],
+  ],
+    props: [
+      [
+        'size', 
+        'Warp.IconSize', 
+        '.default', 
+        'The size of the icon (`.small`, `.default`, `.large`, or `.custom`).'
+      ],
+      [
+        'color', 
+        'Color',
+        'Warp.Token.icon', 
+        'The color of the icon.'
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
