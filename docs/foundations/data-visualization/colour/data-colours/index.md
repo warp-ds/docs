@@ -10,7 +10,7 @@
 
 # Data Colours
 
-In dataviz we use visual elements to encode data (sometimes referred to as ‘data marks’). We have defined a set of semantic colour categories. These don't map
+In dataviz we use visual elements to encode data (sometimes referred to as ‘data marks’). We have defined a set of semantic colour categories. There is not always a direct mapping between visual elements and the semantic colours.
 
 ::: image-block
 ![Screenshot from Figma](/foundations/dataviz/mapping-datavizelement-to-token.png){width=433px}
@@ -26,12 +26,11 @@ There are five types of semantic colour tokens:
 - **Text**: Text colour for... your guessed it... text!
 
 
-
 **Visual elements representing data**
 
 In dataviz we use visual elements to encode data (sometimes referred to as ‘data marks’). These elements include:
-- **Lines**, for example in a line chart
-- **Points**, for example in a scatter plot
+- **Lines**, for example in a line chart. Use the `line` colours
+- **Points**, for example in a scatter plot. Use the `line` colours, and `background` inside if  the point (if applicable)
 - **Bars** or columns, for example in a bar chart 
 - **Areas**, for example in an area chart
 - **Text**, for example for numbers or labels
@@ -64,3 +63,5 @@ Specific semantic colours should be used for each type of visual element.
     <Patterns />
   </template>
 </tabs-content>
+
+ 

@@ -2,6 +2,11 @@
 
 We have defined a colour palette for data visualization that should be used across all brands. You can apply the dataviz colours using CSS variables or Utility classes.
 
+**On this page:**
+[[toc]]
+
+<br>
+
 ::: tip Pro tip
 See [Colour Usage](/foundations/data-visualization/colour-usage/) for detailed descriptions and examples of the different colours. 
 :::

@@ -549,29 +549,38 @@ export default defineConfig({
                 link: '/foundations/data-visualization/css-utility/',
               },
               {
-                text: 'Colour Usage',
-                link: '/foundations/data-visualization/colour-usage/',
+                text: 'Colour',
+                link: '/foundations/data-visualization/colour/',
                 items: [  // Add a nested items array to include sub-pages
                   {
                     text: 'Chart colours',
-                    link: '/foundations/data-visualization/colour-usage/chart-colours/',
+                    link: '/foundations/data-visualization/colour/chart-colours/',
                   },
                   {
                     text: 'Data colours',
-                    link: '/foundations/data-visualization/colour-usage/data-colours/',
+                    link: '/foundations/data-visualization/colour/data-colours/',
                   },
                   {
-                    text: 'Primary & Secondary',
-                    link: '/foundations/data-visualization/colour-usage/primary/',
+                    text: 'Line',
+                    link: '/foundations/data-visualization/colour/line/',
                   },
                   {
-                    text: 'Category',
-                    link: '/foundations/data-visualization/colour-usage/category/',
+                    text: 'Background',
+                    link: '/foundations/data-visualization/colour/background/',
                   },
                   {
-                    text: 'Evaluation',
-                    link: '/foundations/data-visualization/colour-usage/evaluation/',
+                    text: 'Border',
+                    link: '/foundations/data-visualization/colour/border/',
                   },
+                  {
+                    text: 'Text',
+                    link: '/foundations/data-visualization/colour/text/',
+                  },
+                  {
+                    text: 'Icon',
+                    link: '/foundations/data-visualization/colour/icon/',
+                  },
+
                 ]
               },
               {

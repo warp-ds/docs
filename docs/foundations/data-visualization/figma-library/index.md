@@ -2,6 +2,11 @@
 
 Datviz colours and components are in a dedicated library that you need to add to your Figma file. We use the same dataviz colours across all brands. However, the library allows you to swap between dark mode and light mode. ✨
 
+**On this page:**
+[[toc]]
+
+<br>
+
 ::: tip Pro tips 💡 
 - Check your design in both Light mode and Dark mode to easily see if you have added colour tokens for all elements in your frame 🤠 
 - Design your page in Light mode, and make the whole page into a component. Then, create an instance of it, and change the mode of the instance to Dark mode. Now, if you only make changes in the master frame, you will see the result in both Light mode and Dark mode. 

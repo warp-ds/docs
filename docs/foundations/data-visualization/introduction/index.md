@@ -4,6 +4,8 @@
 
 On this page you will find a general introduction to working with data visualisation – commonly referred to as ✨ **dataviz** ✨.
 
+**On this page:**
+[[toc]]
 
 ## Dataviz in WARP
 
