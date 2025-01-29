@@ -576,6 +576,7 @@ export default defineConfig({
             { text: 'Expandable', link: '/components/expandable/' },
             { text: 'Icons', link: '/components/icons/' },
             { text: 'Modal', link: '/components/modal/' },
+            { text: 'PageIndicator', link: '/components/pageindicator/' },
             { text: 'Pagination', link: '/components/pagination/' },
             { text: 'Pill', link: '/components/pill/' },
             { text: 'Popover', link: '/components/popover/' },

@@ -3134,6 +3134,24 @@ export const iOS = {
       ]  
     ],
   },
+  PageIndicator: {
+    required: [
+    [
+      'pageCount', 
+      'Int', 
+      '', 
+      'The total number of pages.'
+    ],
+    [
+      'selectedPage', 
+      'Binding Int', 
+      '', 
+      'Binding to an integer representing the currently selected page.'
+    ],
+  ],
+    props: [  
+    ],
+  },
   TextField: {
     required: [
       [
