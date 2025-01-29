@@ -3326,6 +3326,24 @@ export const iOS = {
       ]
     ],
   },
+  Switch: {
+    required: [
+    [
+      'isOn', 
+      'Binding Bool', 
+      '', 
+      'Binding to a Boolean value indicating whether the switch is on or off.'
+    ],
+  ],
+    props: [
+      [
+        'state', 
+        'Warp.SwitchState',
+        '.default', 
+        'The state of the switch. <br />Use one of the predefined `SwitchState` values: `.default`, or `.disabled`',
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
