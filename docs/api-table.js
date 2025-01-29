@@ -3362,6 +3362,30 @@ export const iOS = {
     props: [  
     ],
   },
+  Text: {
+    required: [
+    [
+      'text', 
+      'String', 
+      '', 
+      'The text to be displayed'
+    ],
+    [
+      'style', 
+      'Warp.TextStyle',
+      '', 
+      'Sets the appearance of the text - font and size. <br />Use one of the predefined `TextStyle` values: `.display`, `.title1`, `.title2`, `.title3`, `.title4`, `.title5`, `.title6`, `.preamble`, `.body`, `.bodyStrong`, `.caption`, `.captionStrong`, `.detail`, or `.detailStrong`',
+    ],
+  ],
+    props: [  
+      [
+        'color', 
+        'Color', 
+        'Warp.Token.text', 
+        'A solid color for the text.'
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
@@ -3462,24 +3486,6 @@ export const iOS = {
     ],
   ],
     props: [
-    ],
-  },
-  Text: {
-    required: [
-    [
-      'text', 
-      'String', 
-      '', 
-      'The text to be displayed'
-    ],
-    [
-      'style', 
-      'Warp.TextStyle.display <br />Warp.TextStyle.title1 <br />Warp.TextStyle.title2 <br />Warp.TextStyle.title3 <br />Warp.TextStyle.title4 <br />Warp.TextStyle.title5 <br />Warp.TextStyle.title6 <br />Warp.TextStyle.preamble <br />Warp.TextStyle.body <br />Warp.TextStyle.bodyStrong <br />Warp.TextStyle.caption <br />Warp.TextStyle.captionStrong <br />Warp.TextStyle.detail <br />Warp.TextStyle.detailStrong',
-      '', 
-      'Sets the appearance of the text - font and size',
-    ],
-  ],
-    props: [  
     ],
   },
   Tooltip: {
