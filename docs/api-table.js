@@ -3530,7 +3530,7 @@ export const iOS = {
       'toastEdge', 
       'Warp.ToastEdge',
       '', 
-      'The position of the toast to be displayed <br />Use one of the predefined `ToastEdge` values: `.top`, or `.bottom`'
+      'The position of the toast to be displayed. <br />Use one of the predefined `ToastEdge` values: `.top`, or `.bottom`'
     ],
     [
       'isPresented', 
@@ -3554,9 +3554,9 @@ export const iOS = {
     props: [
       [
         'arrowEdge', 
-        'Edge.top <br />Edge.leading <br />Edge.bottom <br />Edge.trailing ',
-        'Edge.top', 
-        'The direction of the arrow'
+        'Edge',
+        '.top', 
+        'The direction of the arrow. <br />Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing`'
       ],  
     ],
   },

@@ -3,20 +3,22 @@
 ### Syntax
 
 ```swift example
-func Warp.Tooltip(
-            title: String,
-            arrowEdge: Edge = .top
-        )
+Warp.Tooltip(
+    title: String,
+    arrowEdge: Edge = .top
+)
 ```
 
 ```swift example
 Warp.Tooltip(title: "This is a Tooltip")
 ```
 
-There are a variety of positions supported for the Tooltip component:
+## Visual options
+
+There are a variety of positions supported for the `Tooltip` component:
 
 ```swift example
-public enum Edge {
+enum Edge {
     case top
     case leading
     case bottom
@@ -25,7 +27,12 @@ public enum Edge {
 ```
 
 ### Legacy support
-Coming soon
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift example
+Warp.Tooltip(title: "This is a Tooltip").uiView
+```
 
 ### Parameters
 
