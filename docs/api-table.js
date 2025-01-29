@@ -2675,6 +2675,42 @@ export const android = {
       ],
     ]
   },
+  Expandable: {
+    required: [
+      [
+        'title', 
+        'String', 
+        '', 
+        'The title to be displayed in the expandable'
+      ],
+      [
+        'expandedContent', 
+        '@Composable () -> Unit', 
+        '', 
+        'The content to be shown when expanded'
+      ],
+    ],
+    props: [
+      [
+        'modifier',
+        'Modifier',
+        'Modifier',
+        'Sets the modifier for the expandable',
+      ],
+      [
+        'initiallyExpanded',
+        'Boolean',
+        'false',
+        'If should show expanded content',
+      ],
+      [
+        'type',
+        'WarpExpandableType.Default <br /> WarpExpandableType.Box',
+        'WarpExpandableType.Default',
+        'Style of the expandable',
+      ],
+    ]
+  },
 };
 
 export const iOS = {
