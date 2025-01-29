@@ -3386,6 +3386,60 @@ export const iOS = {
       ],
     ],
   },
+  TextArea: {
+    required: [
+      [
+        'title', 
+        'String', 
+        '', 
+        'The main title text to display.'
+      ],
+      [
+        'text', 
+        'Binding String', 
+        '', 
+        'Binding to the text content.'
+      ],
+      [
+        'placeholder', 
+        'String', 
+        '', 
+        'Text to display when the text area is empty.'
+      ],
+    ],
+    props: [
+      [
+        'additionalInformation', 
+        'String?',
+        'nil', 
+        'Optional text to display after the title.'
+      ],
+      [
+        'tooltipContent', 
+        'AnyView?',
+        'nil', 
+        'An optional view to display when the tooltip icon is tapped.'
+      ],
+      [
+        'style', 
+        'Warp.TextAreaStyle',
+        '.default', 
+        'The style of the text area. <br />Use one of the predefined `TextAreaStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly`'
+      ],
+      [
+        'helpText', 
+        'String?',
+        'nil', 
+        'Optional `String` to display below the text area.'
+      ],
+      [
+        'minHeight', 
+        'CGFloat',
+        '88', 
+        'Minimum height for the text area.'
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
