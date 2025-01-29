@@ -59,12 +59,24 @@ enum Warp.IconSize {
 }
 ```
 
+We have a component for `Logo` also.
+
+```swift
+Warp.Logo(for brand: Warp.BrandLogo)
+```
+
+```swift
+Warp.Logo(for: .finn(.small))
+```
+
 ### Legacy support
 
 By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
 ```swift example
 Warp.IconView(.activeAds).uiView
+
+Warp.Logo(for: .finn(.small)).uiView
 ```
 
 ### Parameters
