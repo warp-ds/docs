@@ -3314,7 +3314,7 @@ export const iOS = {
       'stepModel', 
       'Warp.StepIndicatorModel',
       '', 
-      'An array of `Warp.StepIndicatorItem`s which contains `title`, `description` and `progress` of the steps, the first two are strings and `progress` can be `incomplete`, `inProgress`, or `complete` with default value as `incomplete`.'
+      'An array of `Warp.StepIndicatorItem` objects which contains `title`, `description` and `progress` of the steps, the first two are strings and `progress` can be `incomplete`, `inProgress`, or `complete` with default value as `incomplete`.'
     ]
   ],
     props: [  
@@ -3342,6 +3342,24 @@ export const iOS = {
         '.default', 
         'The state of the switch. <br />Use one of the predefined `SwitchState` values: `.default`, or `.disabled`',
       ],
+    ],
+  },
+  Tabs: {
+    required: [
+    [
+      'tabs', 
+      '[Warp.TabItem]', 
+      '', 
+      'An array of `Warp.TabItem` objects to display as selectable tabs.'
+    ],
+    [
+      'selectedIndex', 
+      'Binding Int',
+      '', 
+      'A binding to the index of the currently selected tab.',
+    ],
+  ],
+    props: [  
     ],
   },
   TextField: {
