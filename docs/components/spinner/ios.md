@@ -1,9 +1,11 @@
 ### Syntax
 
 ```swift
-func Warp.Spinner(size: SpinnerSize = .default,
-                  duration: CGFloat = 1,
-                  lineWidth: CGFloat = 3)
+Warp.Spinner(
+    size: SpinnerSize = .default,
+    duration: CGFloat = 1,
+    lineWidth: CGFloat = 3
+)
 ```
 ```swift
 Warp.Spinner(size: .large)
@@ -13,29 +15,21 @@ Warp.Spinner(size: .large)
 There are a variety of variants supported for the Spinner component:
 
 ```swift
-public enum SpinnerSize: Hashable {        
+enum Warp.SpinnerSize {        
     case small
     case `default`
     case large
     case custom(Double)
-    
-    var value: Double {
-        switch self {
-          case .small:
-              return 16
-          case .default:
-              return 24
-          case .large:
-              return 32
-          case .custom(let size):
-              return size
-        }
-    }
 }
 ```
 
 ### Legacy support
-Coming soon...
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift example
+Warp.Spinner(size: .large).uiView
+```
 
 ### Parameters
 

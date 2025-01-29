@@ -3284,6 +3284,30 @@ export const iOS = {
       ],
     ],
   },
+  Spinner: {
+    required: [
+  ],
+    props: [
+      [
+        'size', 
+        'Warp.SpinnerSize',
+        '.default', 
+        'Size of the `Spinner`.<br />Use one of the predefined `SpinnerSize` values: `.small`, `.default`, `.large`, or `.custom`.'
+      ],
+      [
+        'duration', 
+        'CGFloat',
+        '1', 
+        'Duration of Spinner animation'
+      ],
+      [
+        'lineWidth', 
+        'CGFloat', 
+        '3', 
+        'The thickness of the `Spinner`'
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
@@ -3420,30 +3444,6 @@ export const iOS = {
         'Edge.top', 
         'The direction of the arrow'
       ],  
-    ],
-  },
-  Spinner: {
-    required: [
-    [
-      'size', 
-      'Warp.SpinnerSize.small <br />Warp.SpinnerSize.default <br />Warp.SpinnerSize.large <br />Warp.SpinnerSize.custom',
-      'Warp.SpinnerSize.default', 
-      'Size of the spinner'
-    ],
-    [
-      'duration', 
-      'CGFloat',
-      '1', 
-      'Duration of Spinner animation'
-    ],
-    [
-      'lineWidth', 
-      'CGFloat', 
-      '3', 
-      'The thickness of Spinner'
-    ],
-  ],
-    props: [  
     ],
   },
   StepIndicator: {
