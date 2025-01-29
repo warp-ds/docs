@@ -3516,21 +3516,21 @@ export const iOS = {
     required: [
     [
       'style',
-      'Warp.ToastStyle.error <br />Warp.ToastStyle.success <br />Warp.ToastStyle.warning',
+      'Warp.ToastStyle',
       '',
-      'Sets the style and icon of the toast',
+      'Sets the style and icon of the `Toast`.  <br />Use one of the predefined `ToastStyle` values: `.error`, `.success`, or `.warning`',
     ],
     [
       'title', 
       'String', 
       '', 
-      'The title to be displayed in the toast'
+      'The title to be displayed in the `Toast`'
     ],
     [
       'toastEdge', 
-      'Warp.ToastEdge.top <br />Warp.ToastEdge.bottom',
+      'Warp.ToastEdge',
       '', 
-      'The position of the toast to be displayed'
+      'The position of the toast to be displayed <br />Use one of the predefined `ToastEdge` values: `.top`, or `.bottom`'
     ],
     [
       'isPresented', 
