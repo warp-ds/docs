@@ -1,39 +1,31 @@
 # Border
 
-<!-- TEST
-::: details Background Primary <span style="display: inline-block; width: 14px; height: 14px; background-color: #1087DE; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #47A6F8; border-radius: 2px; vertical-align: -1px;"></span>
-The primary colour to use for bars and areas.
-|         | Value       | 
-| ----------- | ----------- |    
-| Figma name | `DV/Semantic/Color/Background/Primary` | 
-| CSS variable | `color: var(--w-dv-s-color-background-primary)` | 
-| HTML class |`dv-s-bg-primary` |
-| SVG fill class |`dv-s-fill-bg-primary` | 
-| SVG stroke class |`dv-s-stroke-bg-primary` | 
-:::
+## Naming pattern for border colours
 
-::: details Background Primary Subtle <span style="display: inline-block; width: 14px; height: 14px; background-color: #B4DEFD; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 14px; height: 14px; background-color: #165887; border-radius: 2px; vertical-align: -1px;"></span>
-Subtle variant of the primary colour. Use for bars and areas. Needs a border to achieve good contrast against the background.
+| Method | Pattern | Example | 
+| ----- | ------ | ------ | 
+| Figma | `../Border/[semantic colour])` | `../Border/Primary` | 
+| CSS variable | `var(--w-dv-s-color-border-[semantic colour])` | `var(--w-dv-s-color-border-primary)` | 
+| HTML class | `dv-s-border-[semantic colour]` | `dv-s-border-primary` | 
+| SVG fill class* | `dv-s-fill-border-[semantic colour]` | `dv-s-fill-border-primary` | 
+| SVG stroke class | `dv-s-stroke-border-[semantic colour]` | `dv-s-stroke-border-primary` | 
+| iOS | `border[Semantic colour]` | `borderPrimary` | 
 
-| Platform / attribute | Value       | 
-| ----------- | ----------- |    
-| Figma name | `DV/Semantic/Color/Background/Primary-Subtle` | 
-| CSS variable | `  var(--w-dv-s-color-background-primary-subtle)` | 
-| HTML class |`dv-s-bg-primary-subtle` |
-| SVG fill class |`dv-s-fill-bg-primary-subtle` | 
-| SVG stroke class |`dv-s-stroke-bg-primary-subtle` | 
-| iOS |`backgroundPrimarySubtle` | 
-| Android | Not supported yet | 
+\* Yes, it is a bit strange to apply a `border` colour as `fill`, but it is possible.
 
-:::
- -->
+## Primary
 
-## Primary & Secondary
-
-| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| Figma | Colour* | CSS | HTML class | SVG Fill | SVG Stroke |
 | ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Border/Primary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #1087de; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #47a6f8; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-primary)` | `dv-s-border-primary` | `dv-s-fill-border-primary` | `dv-s-stroke-border-primary` |
 | `Border/Primary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #0e6cac; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #93caff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-primary-highlight)` | `dv-s-border-primary-highlight` | `dv-s-fill-border-primary-highlight` | `dv-s-stroke-border-primary-highlight` |
+
+\* Light mode and dark mode preview
+
+## Secondary
+
+| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Border/Secondary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #919499; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #a1a1a1; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-secondary)` | `dv-s-border-secondary` | `dv-s-fill-border-secondary` | `dv-s-stroke-border-secondary` |
 | `Border/Secondary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #c3c6c9; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-secondary-highlight)` | `dv-s-border-secondary-highlight` | `dv-s-fill-border-secondary-highlight` | `dv-s-stroke-border-secondary-highlight` |
 

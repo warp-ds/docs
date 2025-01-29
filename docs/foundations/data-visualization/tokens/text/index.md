@@ -1,13 +1,28 @@
 # Text
 
+## Naming pattern for text colours
+
+| Method | Pattern | Example | 
+| ----- | ------ | ------ | 
+| Figma | `../Text/[semantic colour])` | `../Text/Primary` | 
+| CSS variable | `var(--w-dv-s-color-text-[semantic colour])` | `var(--w-dv-s-color-text-primary)` | 
+| HTML class | `dv-s-text-[semantic colour]` | `dv-s-text-primary` | 
+| SVG fill class | `dv-s-fill-text-[semantic colour]` | `dv-s-fill-text-primary` | 
+| SVG stroke class* | `dv-s-stroke-text-[semantic colour]` | `dv-s-stroke-text-primary` | 
+| iOS | `text[Semantic colour]` | `textPrimary` | 
+
+\* Yes, it is a bit strange to apply a `text` colour as `stroke` (as it will outline the text), but it is possible.
+
 ## Primary & Secondary
 
-| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| Figma | Colour* | CSS | HTML class | SVG Fill | SVG Stroke |
 | ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Text/Primary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #007ac8; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #93caff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-text-primary)` | `dv-s-text-primary` | `dv-s-fill-text-primary` | `dv-s-stroke-text-primary` |
 | `Text/Primary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #165887; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #d6edff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-text-primary-highlight)` | `dv-s-text-primary-highlight` | `dv-s-fill-text-primary-highlight` | `dv-s-stroke-text-primary-highlight` |
 | `Text/Secondary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #c3c6c9; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-text-secondary)` | `dv-s-text-secondary` | `dv-s-fill-text-secondary` | `dv-s-stroke-text-secondary` |
 | `Text/Secondary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #e9eaea; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-text-secondary-highlight)` | `dv-s-text-secondary-highlight` | `dv-s-fill-text-secondary-highlight` | `dv-s-stroke-text-secondary-highlight` |
+
+\* Light mode and dark mode preview
 
 ## Category
 

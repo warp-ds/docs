@@ -1,13 +1,26 @@
 # Icon Colours
 
+## Naming pattern for icon colours
+
+| Method | Pattern | Example | 
+| ----- | ------ | ------ | 
+| Figma | `../Icon/[semantic colour])` | `../Icon/Primary` | 
+| CSS variable | `var(--w-dv-s-color-icon-[semantic colour])` | `var(--w-dv-s-color-icon-primary)` | 
+| HTML class | `dv-s-icon-[semantic colour]` | `dv-s-icon-primary` | 
+| SVG fill class | `dv-s-fill-icon-[semantic colour]` | `dv-s-fill-icon-primary` | 
+| SVG stroke class | `dv-s-stroke-icon-[semantic colour]` | `dv-s-stroke-icon-primary` | 
+| iOS | `icon[Semantic colour]` | `iconPrimary` | 
+
 ## Primary & Secondary
 
-| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| Figma | Colour* | CSS | HTML class | SVG Fill | SVG Stroke |
 | ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Icon/Primary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #007ac8; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #93caff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-primary)` | `dv-s-icon-primary` | `dv-s-fill-icon-primary` | `dv-s-stroke-icon-primary` |
 | `Icon/Primary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #165887; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #d6edff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-primary-highlight)` | `dv-s-icon-primary-highlight` | `dv-s-fill-icon-primary-highlight` | `dv-s-stroke-icon-primary-highlight` |
 | `Icon/Secondary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #c3c6c9; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-secondary)` | `dv-s-icon-secondary` | `dv-s-fill-icon-secondary` | `dv-s-stroke-icon-secondary` |
 | `Icon/Secondary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #e9eaea; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-secondary-highlight)` | `dv-s-icon-secondary-highlight` | `dv-s-fill-icon-secondary-highlight` | `dv-s-stroke-icon-secondary-highlight` |
+
+\* Light mode and dark mode preview
 
 ## Category
 

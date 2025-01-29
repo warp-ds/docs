@@ -1,13 +1,33 @@
 # Background
 
-## Primary & Secondary
+## Naming pattern for background colours
 
-| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| Method | Pattern | Example | 
+| ----- | ------ | ------ | 
+| Figma | `../Background/[semantic colour])` | `../Background/Primary` | 
+| CSS variable | `var(--w-dv-s-color-background-[semantic colour])` | `var(--w-dv-s-color-background-primary)` | 
+| HTML class | `dv-s-bg-[semantic colour]` | `dv-s-bg-primary` | 
+| SVG fill class | `dv-s-fill-bg-[semantic colour]` | `dv-s-fill-bg-primary` | 
+| SVG stroke class* | `dv-s-stroke-bg-[semantic colour]` | `dv-s-stroke-bg-primary` | 
+| iOS | `background[Semantic colour]` | `backgroundPrimary` | 
+
+\* Yes, it is a bit strange to apply a `background` colour as `stroke`, but it is possible.
+
+## Primary
+
+| Figma | Colour* | CSS | HTML class | SVG Fill | SVG Stroke |
 | ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Background/Primary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #1087de; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #47a6f8; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-background-primary)` | `dv-s-bg-primary` | `dv-s-fill-bg-primary` | `dv-s-stroke-bg-primary` |
 | `Background/Primary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #0e6cac; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #93caff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-background-primary-highlight)` | `dv-s-bg-primary-highlight` | `dv-s-fill-bg-primary-highlight` | `dv-s-stroke-bg-primary-highlight` |
 | `Background/Primary-Subtle` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #b4defd; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #165887; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-background-primary-subtle)` | `dv-s-bg-primary-subtle` | `dv-s-fill-bg-primary-subtle` | `dv-s-stroke-bg-primary-subtle` |
 | `Background/Primary-Subtle-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #6eb9fe; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #007ac8; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-background-primary-subtle-highlight)` | `dv-s-bg-primary-subtle-highlight` | `dv-s-fill-bg-primary-subtle-highlight` | `dv-s-stroke-bg-primary-subtle-highlight` |
+
+\* Light mode and dark mode preview
+
+## Secondary
+
+| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Background/Secondary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #919499; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #a1a1a1; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-background-secondary)` | `dv-s-bg-secondary` | `dv-s-fill-bg-secondary` | `dv-s-stroke-bg-secondary` |
 | `Background/Secondary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #c3c6c9; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-background-secondary-highlight)` | `dv-s-bg-secondary-highlight` | `dv-s-fill-bg-secondary-highlight` | `dv-s-stroke-bg-secondary-highlight` |
 | `Background/Secondary-Subtle` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #d6d9db; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-background-secondary-subtle)` | `dv-s-bg-secondary-subtle` | `dv-s-fill-bg-secondary-subtle` | `dv-s-stroke-bg-secondary-subtle` |

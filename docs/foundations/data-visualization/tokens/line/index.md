@@ -1,13 +1,28 @@
 # Line
 
+## Naming pattern for line colours
+
+| Method | Pattern | Example | 
+| ----- | ------ | ------ | 
+| Figma | `../Line/[semantic colour])` | `../Line/Primary` | 
+| CSS variable | `var(--w-dv-s-color-line-[semantic colour])` | `var(--w-dv-s-color-line-primary)` | 
+| HTML class | `dv-s-line-[semantic colour]` | `dv-s-line-primary` | 
+| SVG fill class* | `dv-s-fill-line-[semantic colour]` | `dv-s-fill-line-primary` | 
+| SVG stroke class | `dv-s-stroke-line-[semantic colour]` | `dv-s-stroke-line-primary` | 
+| iOS | `line[Semantic colour]` | `linePrimary` | 
+
+\* Yes, it is a bit strange to apply a `line` colour as `fill`, but it is possible.
+
 ## Primary & secondary
 
-| Figma name | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| Figma name | Colour* | CSS | HTML class | SVG Fill | SVG Stroke |
 | ---------- | ------ | --- | ---------- | -------- | ---------- | 
 | `Line/Primary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #1087de; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #6eb9fe; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-line-primary)` | `dv-s-line-primary` | `dv-s-fill-line-primary` | `dv-s-stroke-line-primary` |
 | `Line/Primary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #0e6cac; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #b4defd; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-line-primary-highlight)` | `dv-s-line-primary-highlight` | `dv-s-fill-line-primary-highlight` | `dv-s-stroke-line-primary-highlight` |
 | `Line/Secondary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #919499; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #a1a1a1; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-line-secondary)` | `dv-s-line-secondary` | `dv-s-fill-line-secondary` | `dv-s-stroke-line-secondary` |
 | `Line/Secondary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #c3c6c9; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-line-secondary-highlight)` | `dv-s-line-secondary-highlight` | `dv-s-fill-line-secondary-highlight` | `dv-s-stroke-line-secondary-highlight` |
+
+\* Light mode and dark mode preview
 
 
 ## Category 1-8
