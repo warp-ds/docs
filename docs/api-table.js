@@ -3254,6 +3254,36 @@ export const iOS = {
       ],
     ],
   },
+  Slider: {
+    required: [
+      [
+        'value', 
+        'Binding Double', 
+        '', 
+        'Binding value to update the slider value'
+      ],
+      [
+        'range', 
+        'ClosedRange Double', 
+        '', 
+        'Defines the range for the slider'
+      ],
+    ],
+    props: [
+      [
+        'step', 
+        'Double',
+        '1.0', 
+        'Step value for the slider'
+      ],
+      [
+        'onEditingChanged', 
+        '((Double) -> Void)?',
+        'nil', 
+        'Completion handler to return the value when handle is dropped'
+      ],
+    ],
+  },
   TextField: {
     required: [
       [
