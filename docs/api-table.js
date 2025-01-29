@@ -2966,7 +2966,7 @@ export const iOS = {
       'action', 
       '@escaping () -> Void', 
       '', 
-      'A closure that is executed when the `checkbox` is tapped. This can be mapped into the `onSelection` on `checkboxGroup`'
+      'A closure that is executed when the `checkbox` is tapped. This can be mapped into the `onSelection` on `CheckboxGroup`'
     ],
   ],
     props: [  
@@ -2974,13 +2974,13 @@ export const iOS = {
         'title', 
         'String?',
         'nil', 
-        'An optional title for the checkbox group.'
+        'An optional title for the `CheckboxGroup`.'
       ],
       [
         'helpText', 
         'String?',
         'nil', 
-        'An optional help text displayed below the title or the checkboxes.'
+        'An optional help text displayed below the `CheckboxGroup`.'
       ],
       [
         'style', 
@@ -3191,6 +3191,66 @@ export const iOS = {
         'Warp.PillStyle ',
         '.filter', 
         'The style of the pill (`.filter`, `.suggestion`)'
+      ],
+    ],
+  },
+  Radio: {
+    required: [
+      [
+        'selectedOption', 
+        'Binding Option', 
+        '', 
+        'A binding to the currently selected option. This will provide `isSelected` of `Radio`.'
+      ],
+      [
+        'options', 
+        '[Option]', 
+        '', 
+        'The array of options that conform to `RadioOption`. This will provide `label` and optional `extraContent` of `Radio`.'
+      ],
+      [
+        'action', 
+        '@escaping () -> Void', 
+        '', 
+        'A closure that is executed when the `radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup`'
+      ],
+    ],
+    props: [  
+      [
+        'title', 
+        'String?',
+        'nil', 
+        'An optional title for the `RadioGroup`.'
+      ],
+      [
+        'helpText', 
+        'String?',
+        'nil', 
+        'An optional help text displayed below the `RadioGroup`.'
+      ],
+      [
+        'style', 
+        'Warp.RadioStyle',
+        '.default', 
+        'The style of the `RadioGroup` which will be passed to the style of each `Radio`.<br />Use one of the predefined `RadioStyle` values: `.default`, `.error`, or `.disabled`'
+      ],
+      [
+        'axis', 
+        'Axis.Set',
+        '.vertical', 
+        'Determines whether the list of radios is aligned vertically or horizontally.<br />Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`.'
+      ],
+      [
+        'onSelection', 
+        '((Option, Option) -> Void)?',
+        'nil', 
+        'A closure that will be triggered when an option is selected, providing the old and newly selected options.'
+      ],
+      [
+        'extraContent', 
+        'AnyView?',
+        'nil', 
+        'An optional view that will be displayed beside the label. This is only for `Radio` and can be passed from the `Options` in `RadioGroup`.'
       ],
     ],
   },

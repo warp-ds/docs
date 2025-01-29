@@ -13,12 +13,13 @@ Warp.Checkbox(
     action: @escaping () -> Void
 )
 
-Warp.CheckboxGroup(title: String? = nil,
-            helpText: String? = nil,
-            options: Binding<[Option]>,
-            style: CheckboxStyle = .default,
-            axis: Axis.Set = .vertical,
-            onSelection: ((Option, [Option]) -> Void)? = nil
+Warp.CheckboxGroup(
+    title: String? = nil,
+    helpText: String? = nil,
+    options: Binding<[Option]>,
+    style: CheckboxStyle = .default,
+    axis: Axis.Set = .vertical,
+    onSelection: ((Option, [Option]) -> Void)? = nil
 )
 ```
 
@@ -30,20 +31,20 @@ Warp.Checkbox(
 )
 
 Warp.CheckboxGroup(
-            title: "Title",
-            helpText: "Any descriptive text",
-            options: Binding(
-                get: {
-                    options
-                },
-                set: { newOptions in
-                    options = newOptions
-                }
-            ),
-            onSelection: { latestSelection, options in
-                print("Selected: \(latestSelection.title)")
-                print("Currently selected options: \(options.map { "\($0.title) is \($0.isSelected.wrappedValue ? "selected" : "not selected")" })")
-            }
+    title: "Title",
+    helpText: "Any descriptive text",
+    options: Binding(
+        get: {
+            options
+        },
+        set: { newOptions in
+            options = newOptions
+        }
+    ),
+    onSelection: { latestSelection, options in
+        print("Selected: \(latestSelection.title)")
+        print("Currently selected options: \(options.map { "\($0.title) is \($0.isSelected.wrappedValue ? "selected" : "not selected")" })")
+    }
 )
 ```
 
