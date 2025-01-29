@@ -12,6 +12,8 @@ Warp.Box(
 )
 ```
 
+ButtonConstructor is a typealias for `(title: String, action: () -> Void)`.
+
 ```swift example
 Warp.Box(
     style: .info,
