@@ -3,70 +3,47 @@
 
 ```swift example
 Warp.Modal(
-        title: String,
-        subtitle: String? = nil,
-        bodyText: String,
-        primaryButton: ButtonConstructor? = nil,
-        secondaryButton: ButtonConstructor? = nil,
-        hasCloseButton: Bool = false,
-        onDismiss: (() -> Void)? = nil,
-        isPresented: Binding<Bool>,
-        colorProvider: ColorProvider = Config.colorProvider
-        )
+    title: String,
+    subtitle: String? = nil,
+    bodyText: String,
+    primaryButton: ButtonConstructor? = nil,
+    secondaryButton: ButtonConstructor? = nil,
+    hasCloseButton: Bool = false,
+    onDismiss: (() -> Void)? = nil,
+    isPresented: Binding<Bool>
+)
 ```
 
-## Visual options
-The default style for the modal requires a title and a body text.
-The buttons displayed are WarpButtons using Primary and Secondary style.
+ButtonConstructor is a typealias for `(title: String, action: () -> Void)`.
 
-### Subtitle
-
-It's possible to add an optional subtitle.
+You can create the `Modal` yourself or add it as a modifier to your view.
 
 ```swift example
 Warp.Modal(
-        title: "Modal Title",
-        subtitle: "Subtitle",
-        bodyText: "This is the body of the modal dialog.",
-        primaryButton: ("Title", {}),
-        secondaryButton: ("Button Title", {}),
-        hasCloseButton: true,
-        isPresented: .constant(true)
-    )
-```
+    title: "Modal",
+    bodyText: "Body goes here",
+    isPresented: $modalIsPresented
+)
 
-### Single button
-
-It's possible to just show one button.
-
-```swift example
-Warp.Modal(
-        title: "Modal Title",
-        subtitle: "Subtitle",
-        bodyText: "This is the body of the modal dialog.",
-        primaryButton: ("Title", {}),
-        hasCloseButton: true,
-        isPresented: .constant(true)
-    )
-```
-
-
-### No buttons
-
-It's possible to show a modal without buttons. In this case it is recommended to show the close icon.
-
-```swift example
-Warp.Modal(
-        title: "Modal Title",
-        subtitle: "Subtitle",
-        bodyText: "This is the body of the modal dialog.",
-        hasCloseButton: true,
-        isPresented: .constant(true)
-    )
+.warpModal(
+    title: "Modal",
+    bodyText: "Body goes here",
+    dismissOnClickOutside: false,
+    isPresented: $modalIsPresented
+)
 ```
 
 ### Legacy support
-The bridge will be added soon.
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift example
+Warp.Modal(
+    title: "Modal",
+    bodyText: "Body goes here",
+    isPresented: $modalIsPresented
+).uiView
+```
 
 ### Parameters
 
