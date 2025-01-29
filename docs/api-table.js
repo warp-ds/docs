@@ -3308,6 +3308,24 @@ export const iOS = {
       ],
     ],
   },
+  StepIndicator: {
+    required: [
+    [
+      'stepModel', 
+      'Warp.StepIndicatorModel',
+      '', 
+      'An array of `Warp.StepIndicatorItem`s which contains `title`, `description` and `progress` of the steps, the first two are strings and `progress` can be `incomplete`, `inProgress`, or `complete` with default value as `incomplete`.'
+    ]
+  ],
+    props: [  
+      [
+        'layoutOrientation', 
+        'LayoutOrientation',
+        '.vertical', 
+        'The orientation of the step indicator. <br />Use one of the predefined `LayoutOrientation` values: `.vertical`, or `.horizontal`.'
+      ]
+    ],
+  },
   TextField: {
     required: [
       [
@@ -3444,24 +3462,6 @@ export const iOS = {
         'Edge.top', 
         'The direction of the arrow'
       ],  
-    ],
-  },
-  StepIndicator: {
-    required: [
-    [
-      'stepModel', 
-      'Warp.StepIndicatorModel',
-      '', 
-      'An array of Warp.StepIndicatorItems wich contains title, description and progress of the steps, progress can be incomplete, inProgress, complete.'
-    ]
-  ],
-    props: [  
-      [
-        'layoutOrientation', 
-        'LayoutOrientation.vertical <br />LayoutOrientation.horizontal',
-        '.vertical', 
-        'The orientation of the step indicator'
-      ]
     ],
   },
 };
