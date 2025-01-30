@@ -11,48 +11,94 @@ We have defined a colour palette for data visualization that should be used acro
 See [Colour Usage](/foundations/data-visualization/colour-usage/) for detailed descriptions and examples of the different colours. 
 :::
 
+## Alternative 1: CSS variables
+For CSS variables to work, you need to include a link to the dataviz [CSS](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.5/tokens/dataviz.css) file in your project.
 
-## How to import the dataviz colours
+Add this to your `index.html`
 
-### Alternative 1: Use CSS variables
-For CSS variables to work, you need to include a link to the CSS file in your project: [https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.3/tokens/dataviz.css](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.3/tokens/dataviz.css) (temporary!)
+```html
+<link
+  rel="stylesheet"
+  href="https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.5/tokens/dataviz.css"
+/>
+```
 
-The CSS variables can be applied to all kinds of content, including HTML tags and SVG elements. You don’t need to use WARP to use the dataviz CSS variables. 
+We have defined different colour shades to be used for different element types (background, border, icon, line and text). We call these colour categories. 
 
-### Alternative 2: Use Utility classes
-We use UnoCSS, see [Introduction to CSS classes](/foundations/css-classes/unocss/).
+The pattern for the variable name is: `var(--w-dv-s-color-[colour category]-[semantic colour]`
 
-## CSS variables and utility classes
+Example of CSS variables for the `Primary` semantic colour:
 
-The CSS variables should work for both HTML and SVG elements, while these utility classes only work for HTML elements. Examples using the `primary` colour:
+| Colour category | CSS variable      |  
+| -------------- | ----------------- | 
+| Background     | `var(--w-dv-s-color-background-primary)` | 
+| Background Subtle | `var(--w-dv-s-color-background-primary-subtle)` | 
+| Border         | `var(--w-dv-s-color-border-primary)` |
+| Icon           | `var(--w-dv-s-color-icon-primary)` |
+| Line           | `var(--w-dv-s-color-line-primary)` |
+| Text           | `var(--w-dv-s-color-text-primary)` |
 
-| Visual element | Class (HTML only)   | CSS variable      |  
+CSS variables can applied to both HTML and SVG elements. 
+
+### HTML example
+Example of applying the primary dataviz border colour to a `<div>` border:
+
+``` html
+<div style="width: 24px; height: 80px; 
+            border: 2px solid var(--w-dv-s-color-border-primary);">
+</div>
+```  
+
+### SVG example
+Example of applying the primary dataviz border colour to a `<rect>` stroke in an SVG:
+
+``` xml
+<rect x="16" y="16" width="24" height="80"
+  stroke="var(--w-dv-s-color-border-primary)" 
+  stroke-width="2">
+</rect>
+
+```  
+
+## Alternative 2: Utility classes
+
+Before using the utility classes, you need to install UnoCSS, see [Get started for Web developers](/get-started/developers/web/). You need `version 2.1` of UnoCSS for the dataviz colours to work.
+
+### Utility classes for HTML elements
+
+Example of HTML utility classes for the `Primary` semantic colour:
+
+| Colour category | Class   | Description |  
 | -------------- | ------------------- |  ----------------- | 
-| Line           | `dv-s-line-primary` | `var(--w-dv-s-color-line-primary)` |
-| Background     | `dv-s-bg-primary` |  `var(--w-dv-s-color-background-primary)` | 
-| Background subtle | `dv-s-bg-primary-subtle` |`var( --w-dv-s-color-background-primary-subtle)` | 
-| Border         | `dv-s-border-primary` |`var(--w-dv-s-color-border-primary)` |
-| Icon           | `dv-s-icon-primary` | `var(--w-dv-s-color-icon-primary)` |
-| Text           | `dv-s-text-primary` | `var(--w-dv-s-color-text-primary)` |
+| Background     | `dv-s-bg-primary` |  `background-color: var(--w-dv-s-color-background-primary)` |
+| Background Subtle | `dv-s-bg-primary-subtle` |  `background-color: var(--w-dv-s-color-background-primary-subtle)` |  
+| Border         | `dv-s-border-primary` |`border-color: var(--w-dv-s-color-border-primary)` |
+| Icon           | `dv-s-icon-primary` | `color: var(--w-dv-s-color-icon-primary)` |
+| Line           | `dv-s-line-primary` | `border-color: var(--w-dv-s-color-line-primary)` |
+| Text           | `dv-s-text-primary` | `color: var(--w-dv-s-color-text-primary)` |
 
-## Utility classes for SVG elements
+#### Example
 
-We have defined specific utility classes for use on SVG elements.
+Example of a `<div>` using using the `primary background subtle` as `background-color` and `primary border` colour as `border-color`: 
 
-::: details Why are there different utility classes for SVGs?
-On web, graphs are typically render as SVGs. SVG elements have different properties than HTML for applying colours.  
+``` html
+<div style="width: 24px; height: 80px;" 
+     class="dv-s-bg-primary-subtle dv-s-border-primary">
+</div>
+```  
 
-![-----](/foundations/dataviz/props-html-svg.png)
-:::
+### Utility classes for SVG elements
+
+Since SVGs have different props for applying colour than HTML has, we have defined utility classes specifically for applying colours to SVG elements using `fill` or `stroke`. Read more about [SVG fill and stroke](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes).
+
+The utility class names are different depending on what you want to style – `fill` or `stroke`. 
+- **Fill** `dv-s-fill-[element type]-[semantic colour]`
+- **Stroke** `dv-s-stroke-[element type]-[semantic colour]`
 
 
-SVG uses [two attributes](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes) for applying colours for a node: 
-- `fill` sets the color inside the object (for example text or a rectange)
-- `stroke` sets the color of the line drawn around the object (for example a line or the  border of the rectange)
+Example using the `primary` colour:
 
-The utility class names are different depending on what you want to style. Example using the `primary` colour:
-
-| Visual element | Fill                | Stroke               |
+| Colour category | Fill                | Stroke               |
 | -------------- | ------------------- | ------------------- |
 | Line           | `dv-s-fill-line-primary`* | `dv-s-stroke-line-primary` |
 | Background     | `dv-s-fill-bg-primary` | `dv-s-stroke-bg-primary`* |  
@@ -61,13 +107,11 @@ The utility class names are different depending on what you want to style. Examp
 | Icon           | `dv-s-fill-icon-primary` | `dv-s-stroke-icon-primary` | 
 | Text           | `dv-s-fill-text-primary`* | `dv-s-stroke-text-primary`* | 
 
- \* You might find it strange that it is possible to apply a Background colour as stroke, or Line colour as fill. However, there are situations where this might be useful:
-- if you want to use the background colour as a stroke around a bar to create a gap to underlying content
-- if you want to use the line colour to fill a point in a line graph 
+ \* Yes, it is a bit strange that it is possible to apply a Background colour as stroke, or Line colour as fill. But it is technically possible, and might be useful in some situations.
 
 
-### Example of applying utility classes to SVG elements
-Example of a rectange using the `primary background subtle` as `fill` and `primary border` as `stroke`: 
+#### Example
+Example of an SVG `<rect>` using the primary background subtle colour as `fill` and primary border colour as `stroke`: 
 
 ``` xml
 <rect x="16" y="16" width="24" height="80"
@@ -76,7 +120,10 @@ Example of a rectange using the `primary background subtle` as `fill` and `prima
 </rect>
 ```  
 
-Note that regular WARP colours will not work in this way; you can't use WARP utility classes directly as `fill` or `stroke` in an SVG, but you can do something like this:
+
+#### Hack to apply HTML classes to SVG elements
+
+The regular WARP utility classes don't work for applying SVG `fill` or `stroke`. But you can do something like this to:
 
 ``` xml
 <text className="s-text" fill="currentColor">
@@ -88,8 +135,24 @@ Note that regular WARP colours will not work in this way; you can't use WARP uti
 
 Use the `highlight` colour on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highglight colour. 
 
-Example with `primary` colour:
+Example with primary line colour:
 
 `dv-s-line-primary-highlight` or `color: var(--w-dv-s-color-line-primary-highlight)`. 
 
 In addition, consider **dimming the other elements** that are not highlighted, to **80% opacity**. In bar charts, place hoverable areas immediately next to each other with no space in-between, to avoid a 'flickering effect' when moving the cursor across the bars. If you are not able to do so, do not dim the other bars.
+
+## iOS
+
+The pattern for the variable name is: `[colour category][Semantic colour]`
+
+Examples:
+- `backgroundPrimary`
+- `borderCategory1`
+- `lineSecondary`
+- `lineSecondaryHighlight`
+ 
+
+## Android
+
+TBD
+

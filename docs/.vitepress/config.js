@@ -545,9 +545,17 @@ export default defineConfig({
                 link: '/foundations/data-visualization/components/',
               },
               {
-                text: 'Colour usage',
+                text: 'Colour Guidelines',
                 link: '/foundations/data-visualization/colour/',
                 items: [  // Add a nested items array to include sub-pages
+                  {
+                    text: 'Chart Colours',
+                    link: '/foundations/data-visualization/colour/chart-colors/',
+                  },
+                  {
+                    text: 'Data Colours',
+                    link: '/foundations/data-visualization/colour/data-colors/',
+                  },
                   {
                     text: 'Lines & Points',
                     link: '/foundations/data-visualization/colour/lines-points/',
@@ -567,7 +575,7 @@ export default defineConfig({
                 link: '/foundations/data-visualization/tokens/',
                 items: [  // Add a nested items array to include sub-pages
                   {
-                    text: 'Chart colours',
+                    text: 'Chart Colours',
                     link: '/foundations/data-visualization/tokens/chart/',
                   },
 
