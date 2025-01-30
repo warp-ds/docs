@@ -3389,25 +3389,19 @@ export const iOS = {
   TextArea: {
     required: [
       [
-        'title', 
-        'String', 
-        '', 
-        'The main title text to display.'
-      ],
-      [
         'text', 
         'Binding String', 
         '', 
         'Binding to the text content.'
       ],
-      [
-        'placeholder', 
-        'String', 
-        '', 
-        'Text to display when the text area is empty.'
-      ],
     ],
     props: [
+      [
+        'title', 
+        'String', 
+        'empty', 
+        'The main title text to display.'
+      ],
       [
         'additionalInformation', 
         'String?',
@@ -3419,6 +3413,12 @@ export const iOS = {
         'AnyView?',
         'nil', 
         'An optional view to display when the tooltip icon is tapped.'
+      ],
+      [
+        'placeholder', 
+        'String', 
+        'empty', 
+        'Text to display when the text area is empty.'
       ],
       [
         'style', 
@@ -3443,72 +3443,72 @@ export const iOS = {
   TextField: {
     required: [
       [
-        'text',
-        'String',
-        '',
-        'The text displayed currently in the textfield',
-      ],
-      [
-        'state',
-        'Binding<Warp.TextFieldState.normal> <br />Binding<Warp.TextFieldState.active> <br />Binding<Warp.TextFieldState.disabled> <br />Binding<Warp.TextFieldState.error> <br />Binding<Warp.TextFieldState.readOnly>',
-        '',
-        'The state the TextField is in',
+        'text', 
+        'Binding String', 
+        '', 
+        'Binding to the text content.'
       ],
     ],
     props: [
       [
-        'placeholder',
-        'String',
-        'empty',
-        'Text hint that occupies the textfield when it is empty',
+        'title', 
+        'String', 
+        'empty', 
+        'The main title text to display.'
       ],
       [
-        'title',
+        'additionalInformation', 
         'String?',
-        'nil',
-        'The title to display above the textfield',
+        'nil', 
+        'Optional text to display after the title.'
       ],
       [
-        'additionalInformation',
-        'String?',
-        'nil',
-        'Additional information to display above the textfield',
-      ],
-      [
-        'infoToolTipView',
+        'tooltipContent', 
         'AnyView?',
-        'nil',
-        'The view to display when additionalInformation is tapped',
+        'nil', 
+        'An optional view to display when the tooltip icon is tapped.'
       ],
       [
-        'leftView',
-        'AnyView?',
-        'nil',
-        'The view on the left side of the textfield',
+        'leftIcon', 
+        'Warp.Icon?',
+        'nil', 
+        'An optional `Warp.Icon` displayed on the left side of the text field.'
       ],
       [
-        'rightView',
-        'AnyView?',
-        'nil',
-        'The view on the right side of the textfield',
-      ],
-      [
-        'errorMessage',
+        'prefix', 
         'String?',
-        'nil',
-        'The error message to show when in Warp.TextFieldState.error',
+        'nil', 
+        'An optional string displayed before the text input.'
       ],
       [
-        'helpMessage',
+        'placeholder', 
+        'String', 
+        'empty', 
+        'Text to display when the text field is empty.'
+      ],
+      [
+        'suffix', 
+        'String?', 
+        'nil', 
+        'An optional string displayed after the text input.'
+      ],
+      [
+        'rightIcon', 
+        'Warp.Icon?', 
+        'nil', 
+        'An optional `Warp.Icon` displayed on the right side of the text field.'
+      ],
+      [
+        'style', 
+        'Warp.TextFieldStyle',
+        '.default', 
+        'The style of the text field. <br />Use one of the predefined `TextFieldStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly`'
+      ],
+      [
+        'helpText', 
         'String?',
-        'nil',
-        'The content to display as the help text below the textfield',
-      ],
-      [
-        'isAnimated',
-        'Bool',
-        'true',
-        'If the changes support animation',
+        'nil', 
+        'Optional `String` to display below the text field.'
       ],
     ],
   },

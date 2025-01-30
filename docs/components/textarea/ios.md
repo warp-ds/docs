@@ -2,11 +2,11 @@
 
 ```swift
 Warp.TextArea(
-    title: String,
+    title: String = "",
     additionalInformation: String? = nil,
     tooltipContent: AnyView? = nil,
     text: Binding<String>,
-    placeholder: String,
+    placeholder: String = "",
     style: Warp.TextAreaStyle = .default,
     helpText: String? = nil,
     minHeight: CGFloat = 88

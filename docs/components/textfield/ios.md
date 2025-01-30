@@ -1,21 +1,43 @@
-
 ## Syntax
 
 ```swift
 Warp.TextField(
-    placeholder: String = "",
-    title: String? = nil,
+    title: String = "",
     additionalInformation: String? = nil,
-    infoToolTipView: AnyView? = nil,
-    leftView: AnyView? = nil,
-    rightView: AnyView? = nil,
-    errorMessage: String? = nil,
-    helpMessage: String? = nil,
-    isAnimated: Bool = true,
+    tooltipContent: AnyView? = nil,
+    leftIcon: Warp.Icon? = nil,
+    prefix: String? = nil,
     text: Binding<String>,
-    state: TextFieldState = .normal,
-    colorProvider: ColorProvider = Config.colorProvider
+    placeholder: String = "",
+    suffix: String? = nil,
+    rightIcon: Warp.Icon? = nil,
+    style: Warp.TextFieldStyle = .default,
+    helpText: String? = nil
 )
+```
+
+### Visual options
+There are a variety of variants supported for the TextArea component:
+
+```swift
+enum Warp.TextAreaStyle {
+    case `default`
+    case disabled
+    case error
+    case readOnly
+}
+```
+
+### Legacy support
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift example
+Warp.TextField(
+    title: "Title",
+    text: $text,
+    placeholder: "Please fill me"
+).uiView
 ```
 
 ## Params
