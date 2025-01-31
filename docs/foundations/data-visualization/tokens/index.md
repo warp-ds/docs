@@ -1,6 +1,6 @@
 # Tokens & CSS
 
-We have defined a colour palette for data visualization that should be used across all brands. You can apply the dataviz colours using CSS variables or Utility classes.
+We have defined a colour palette for data visualization that should be used across all brands. On web, you can apply the dataviz colours using CSS variables or Utility classes. For native, see [iOS](#ios) and [Android](#android)
 
 **On this page:**
 [[toc]]

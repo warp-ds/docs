@@ -1,41 +1,93 @@
+<script setup>
+const pages = [{
+  title: "Figma Library",
+  description: "How to connect and use the Figma library. Mostly for designers.",
+  href: "../figma-library/",
+},
+{
+  title: "Components for dataviz",
+  description: "Overview of Figma components. Mostly for designers.",
+  href: "../components/",
+},
+{
+  title: "Colour Guidelines",
+  description: "Guidelines for using the dataviz colours. Mostly for designers.",
+  href: "../colour/",
+},
+{
+  title: "Tokens & CSS",
+  description: "Guidelines for implementing colours in code using tokens and CSS. Mostly for developers.",
+  href: "../tokens/",
+},
+{
+  title: "Interaction",
+  description: "Guidelines for interacting with dataviz. For designers and developers.",
+  href: "../interaction/",
+},
+{
+  title: "Success Criteria",
+  description: "Success criteria for creating accessible and useful data visualisations. For designers and developers.",
+  href: "../success-criteria/",
+}]
+</script>
+
 # Introduction to data visualisation
 
 ![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)
 
+
+<br>
+<cards class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+  <card
+    v-for="page in pages"
+    :key="page.title"
+    class="flex flex-col border border-gray-200 p-4 rounded-md shadow-sm"
+  >
+    <h3 class="h4 text-m! static! mt-16! mx-16!">
+      <a
+        :href="page.href"
+        class="block before:content-empty before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 focus:outline-0"
+      >
+        {{ page.title }}
+      </a>
+    </h3>
+    <p class="m-16! text-s">{{ page.description }}</p>
+  </card>
+</cards>
+<br>
+
+
 On this page you will find a general introduction to working with data visualisation – commonly referred to as ✨ **dataviz** ✨.
 
 **On this page:**
+
 [[toc]]
 
 ## Dataviz in WARP
 
-WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/colour-usage/).
+WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/colour-usage/) for guidelines, and [Tokens & CSS](/foundations/data-visualization/colour-usage/) for implementation in code.
 
 There is no dedicated code library or components for dataviz available in code, as different teams currently use a variety of libraries. However, there are come components available in Figma. See [Components](/foundations/data-visualization/components/).
-
 
 ## What do you need to think about?
 
 When you create visualisations you want to:
 
 1. **Answer real questions**<br>
-    Visualisation is not a goal in itself, so don’t visualise data just because you can. Show information in the best way you can to make it useful and actionable for your users.
-    
+   Visualisation is not a goal in itself, so don’t visualise data just because you can. Show information in the best way you can to make it useful and actionable for your users.
 2. **Present data honestly**<br>
-    Be truthful and transparent when presenting information in order to gain trust.
-    
+   Be truthful and transparent when presenting information in order to gain trust.
 3. **Choose clarity and understanding over wow**<br>
-    The purpose of our visualisations is to create insight. Beauty can be a bonus, but should not be your primary goal.
-    
+   The purpose of our visualisations is to create insight. Beauty can be a bonus, but should not be your primary goal.
 4. **Make the information accessible for everyone**<br>
-    Make the information available in multiple ways so that all users can benefit from it.
+   Make the information available in multiple ways so that all users can benefit from it.
 
 These are high level principles we should strive for. In the section [Success criteria](/foundations/data-visualization/success-criteria/) there are more specific guidelines.
-
 
 ## How do you define the goal of your visualisation?
 
 Before you make a visualisation it can be useful to define the goal of the visualisation. One way of doing so is two answer two core questions:
+
 - Should your visualisation **explain** an insight, or allow people to **explore** on their own?
 - Should your visualisation enable people to **read** off the information in detail, or rather provide them an overall **feeling** of the data?
 
@@ -49,6 +101,7 @@ Before you make a visualisation it can be useful to define the goal of the visua
 - **Exploratory**: users should explore data freely and find their own insight, for example in an analytical dashboard. In this case, you need to figure out how they are going to do that, for example using filters and sorting.
 
 ### Read vs Feel
+
 - **Read**: the focus is on being able to read the data as efficiently and precise as possible. In this case, make sure to use the graph types and elements that allows for a precise reading. For example, it is hard to compare one angle with another, or the size of an area with another, while it is easier to compare the length of lines next to each other
 - **Feel**: the focus is on evoking a feeling or overall impression of the data. In this case, consider visual means that evoke associations and emotions and make the visualisation memorable.
 
@@ -61,6 +114,7 @@ In order to find a good chart it is useful to figure out what you want to show a
 :::
 
 The most common functions are:
+
 - **Comparison**. Compare two or more values
 - **Correlation.** See the relationship between two or more values
 - **Distribution.** See how values are spread out within one variable

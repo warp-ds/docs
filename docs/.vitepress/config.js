@@ -603,8 +603,8 @@ export default defineConfig({
                 ]
               },
               {
-                text: 'Interactive States',
-                link: '/foundations/data-visualization/interactive/',
+                text: 'Interaction',
+                link: '/foundations/data-visualization/interaction/',
               },
               {
                 text: 'Success Criteria',
