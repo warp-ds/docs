@@ -1,4 +1,4 @@
-# Components for data visualisation
+# Components for dataviz
 
 ## Code
 

@@ -1,4 +1,6 @@
-# Bars & areas
+# Bars & Areas
+
+*For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) > [Background](/foundations/data-visualization/tokens/background/) or [Border](/foundations/data-visualization/tokens/border/).*
 
 ### Use `Background` and `Border` colours for bars and columns
 

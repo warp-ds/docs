@@ -1,5 +1,11 @@
 # Line
 
+For usage guidelines, see [Colour Guidelines > Lines & Points](/foundations/data-visualization/colour/lines-points/)
+
+::: details Visual overview
+![Preview of Primary, Secondary, Category and Evaluation colours for light mode and dark mode](/foundations/dataviz/token-overview-line.png)
+:::
+
 ## Naming pattern for line colours
 
 | Method | Pattern | Example | 

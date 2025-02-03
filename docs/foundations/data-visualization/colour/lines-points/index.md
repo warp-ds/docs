@@ -1,5 +1,7 @@
 # Lines & Points
 
+*For implementation, see [Tokens & CSS > Line](/foundations/data-visualization/tokens/line/).*
+
 ### Use the `Line` colours for lines
 
 - Lines should have a width of minimum **3 px** to ensure sufficient contrast against the background

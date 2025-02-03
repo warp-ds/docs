@@ -1,4 +1,4 @@
-# Figma library
+# Figma Library
 
 Datviz colours and components are in a dedicated library that you need to add to your Figma file. We use the same dataviz colours across all brands. However, the library allows you to swap between dark mode and light mode. ✨
 
@@ -8,6 +8,7 @@ Datviz colours and components are in a dedicated library that you need to add to
 <br>
 
 ::: tip Pro tips 💡 
+- Learn how to use WARP and colour tokens in Figma before you dive into dataviz colours
 - Check your design in both Light mode and Dark mode to easily see if you have added colour tokens for all elements in your frame 🤠 
 - Design your page in Light mode, and make the whole page into a component. Then, create an instance of it, and change the mode of the instance to Dark mode. Now, if you only make changes in the master frame, you will see the result in both Light mode and Dark mode. 
 - The same approach can be used to automagically see the design across different brands ✨
@@ -48,7 +49,7 @@ Since the dataviz colours are in a different library than the regular WARP compo
 
 You don’t need to change the dataviz mode when changing from one brand to another, since we use the same dataviz colours across all brands.
 
-## Why are the dataviz resources in a separate library?
+## FAQ: Why are the dataviz resources in a separate library?
 There are several reasons for having dataviz resources in a separate library:
 
 - Many teams that use WARP don’t need dataviz colours. We want to keep the WARP - Components library as clean as possible

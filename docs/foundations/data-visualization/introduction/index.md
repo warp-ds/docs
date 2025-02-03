@@ -31,7 +31,7 @@ const pages = [{
 }]
 </script>
 
-# Introduction to data visualisation
+# Introduction to Data Visualisation
 
 ![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)
 

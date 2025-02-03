@@ -529,87 +529,46 @@ export default defineConfig({
           { text: 'Accessibility', link: '/foundations/accessibility/' },
           { text: 'Brands', link: '/foundations/brands/' },
           {
-            text: 'Data visualisation',
+            text: 'Data visualisation', 
             collapsed: true,
             items: [
-              {
-                text: 'Introduction',
-                link: '/foundations/data-visualization/introduction/',
-              },
-              {
-                text: 'Figma Library',
-                link: '/foundations/data-visualization/figma-library/',
-              },
-              {
-                text: 'Components',
-                link: '/foundations/data-visualization/components/',
-              },
-              {
-                text: 'Colour Guidelines',
-                link: '/foundations/data-visualization/colour/',
-                items: [  // Add a nested items array to include sub-pages
-                  {
-                    text: 'Chart Colours',
-                    link: '/foundations/data-visualization/colour/chart-colors/',
-                  },
-                  {
-                    text: 'Data Colours',
-                    link: '/foundations/data-visualization/colour/data-colors/',
-                  },
-                  {
-                    text: 'Lines & Points',
-                    link: '/foundations/data-visualization/colour/lines-points/',
-                  },
-                  {
-                    text: 'Bars & Areas',
-                    link: '/foundations/data-visualization/colour/bars-areas/',
-                  },
-                  {
-                    text: 'Text & Icons',
-                    link: '/foundations/data-visualization/colour/text-icons/',
-                  },
+              { text: 'Introduction', link: '/foundations/data-visualization/introduction/' },
+              { text: 'Figma Library',link: '/foundations/data-visualization/figma-library/' },
+              { text: 'Colour Guidelines',
+                collapsed: true,
+                items: [ 
+                  { text: 'Introduction', link: '/foundations/data-visualization/colour/introduction/' },
+                  { text: 'Chart Colours', link: '/foundations/data-visualization/colour/chart-colors/' },
+                  { text: 'Data Colours', link: '/foundations/data-visualization/colour/data-colors/' },
+                  { text: 'Lines & Points', link: '/foundations/data-visualization/colour/lines-points/' },
+                  { text: 'Bars & Areas', link: '/foundations/data-visualization/colour/bars-areas/' },
+                  { text: 'Text & Icons', link: '/foundations/data-visualization/colour/text-icons/' },
                 ]
               },
               {
                 text: 'Tokens & CSS',
-                link: '/foundations/data-visualization/tokens/',
-                items: [  // Add a nested items array to include sub-pages
-                  {
-                    text: 'Chart Colours',
-                    link: '/foundations/data-visualization/tokens/chart/',
-                  },
-
-                  {
-                    text: 'Background',
-                    link: '/foundations/data-visualization/tokens/background/',
-                  },
-                  {
-                    text: 'Border',
-                    link: '/foundations/data-visualization/tokens/border/',
-                  },
-                  {
-                    text: 'Icon',
-                    link: '/foundations/data-visualization/tokens/icon/',
-                  },
-                  {
-                    text: 'Line',
-                    link: '/foundations/data-visualization/tokens/line/',
-                  },
-
-                  {
-                    text: 'Text',
-                    link: '/foundations/data-visualization/tokens/text/',
-                  },
+                collapsed: true,
+                items: [ 
+                  { text: 'Introduction', link: '/foundations/data-visualization/tokens/introduction/' },
+                  { text: 'Chart Colours', link: '/foundations/data-visualization/tokens/chart/' },
+                  { text: 'Background', link: '/foundations/data-visualization/tokens/background/' },
+                  { text: 'Border', link: '/foundations/data-visualization/tokens/border/' },
+                  { text: 'Icon', link: '/foundations/data-visualization/tokens/icon/' },
+                  { text: 'Line', link: '/foundations/data-visualization/tokens/line/' },
+                  { text: 'Text', link: '/foundations/data-visualization/tokens/text/' },
                 ]
               },
-              {
-                text: 'Interaction',
-                link: '/foundations/data-visualization/interaction/',
-              },
-              {
-                text: 'Success Criteria',
-                link: '/foundations/data-visualization/success-criteria/',
-              },
+              { text: 'Components', link: '/foundations/data-visualization/components/' },
+              {  text: 'Interaction', link: '/foundations/data-visualization/interaction/' },
+              { text: 'Success Criteria', collapsed: true,
+                items: [ 
+                  { text: 'Introduction', link: '/foundations/data-visualization/success-criteria/introduction/' },
+                  { text: 'Cognitive Accessibility', link: '/foundations/data-visualization/success-criteria/cognitive/' },
+                  { text: 'Visual Accessibility', link: '/foundations/data-visualization/success-criteria/visual/' },
+                  { text: 'Keyboard Navigation', link: '/foundations/data-visualization/success-criteria/keyboard/' },
+                  { text: 'Screen Reader', link: '/foundations/data-visualization/success-criteria/screenreader/' },
+                ]
+               },
             ],
           },
           { text: 'Elevation', link: '/foundations/elevation/' },

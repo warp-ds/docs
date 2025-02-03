@@ -1,11 +1,4 @@
-<script setup>
-  import Cognitive from './cognitive.md';
-  import Visual from './visual.md';
-  import Keyboard from './keyboard.md';
-  import Screenreader from './screenreader.md';
-</script>
-
-# Success criteria
+# Introduction to Dataviz Success Sriteria
 
 The following success criteria will help you create graphs that effectively communicate insights and are accessible for everyone. Some criteria are most relevant for designers, while others are more relevant for developers.
 
@@ -18,18 +11,3 @@ The criteria are put into four categories:
 ::: info Credit
 The success criteria are adapted from accessibility criteria formulated by [Sarah Fossheim](http://fossheim.io/), based on [WCAG success criteria](https://www.w3.org/TR/WCAG21/) and inspired by the [Chartability](https://chartability.fizz.studio/) framework. 
 :::
-
-<tabs-content>
-  <template #cognitive>
-   <cognitive />
-  </template>
-  <template #visual>
-    <visual />
-  </template>
-  <template #keyboard_navigation>
-    <keyboard />
-  </template>
-  <template #screen_reader>
-    <screenreader />
-  </template>
-</tabs-content>

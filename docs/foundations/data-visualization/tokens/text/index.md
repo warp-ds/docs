@@ -1,5 +1,11 @@
 # Text
 
+For usage guidelines, see [Colour Guidelines > Text & Icons](/foundations/data-visualization/colour/text-icons/).
+
+::: details Visual overview
+![Preview of Primary, Secondary, Category and Evaluation colours for light mode and dark mode](/foundations/dataviz/token-overview-text.png)
+:::
+
 ## Naming pattern for text colours
 
 | Method | Pattern | Example | 

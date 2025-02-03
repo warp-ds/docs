@@ -164,7 +164,15 @@ html.dark body {
 /* line-height was comically large */
 .vp-doc p {
   line-height: 1.5;
+  /* less space below for lists */
+  margin-bottom: 8px;
 }
+
+/* less space above lists */
+.vp-doc ul, .vp-doc ol {
+  margin-top: 8px;
+}
+
 /* Ensure tables behave like tables and take full width */
 .vp-doc table {
   display: table;   /* Override any display: block */

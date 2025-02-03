@@ -1,5 +1,8 @@
 # Text & Icons
 
+*For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) > [Text](/foundations/data-visualization/tokens/text/) or [Icon](/foundations/data-visualization/tokens/icon/).*
+
+
 ### Use `Text` or `ChartText` colours for text
 
 In general, use `ChartText` (black/gray/white) colour for numbers and labels. 

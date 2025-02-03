@@ -1,5 +1,13 @@
 # Background
 
+For usage guidelines, see [Colour Guidelines > Bars & Areas](/foundations/data-visualization/colour/bars-areas/)
+
+::: details Visual overview
+The `-subtle` colours need a 3px border to achieve good contrast against the background (see [border tokens](/foundations/data-visualization/tokens/border/) ). Therefore, the border is included in the illustration. 
+
+![Preview of Primary, Secondary, Category and Evaluation colours for light mode and dark mode](/foundations/dataviz/token-overview-background-with-border.png)
+:::
+
 **On this page:**
 [[toc]]
 

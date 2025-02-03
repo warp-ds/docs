@@ -1,5 +1,13 @@
 # Icon Colours
 
+For usage guidelines, see [Colour Guidelines > Text & Icons](/foundations/data-visualization/colour/text-icons/)
+
+For actual icons to use, see [Components > Icons](/components/icons/). For dataviz, the most relevant icons are probably `TrendUp`, `TrendFlat`, `TrendDown`.
+
+::: details Visual overview
+![Preview of Primary, Secondary, Category and Evaluation colours for light mode and dark mode](/foundations/dataviz/token-overview-icon.png)
+:::
+
 ## Naming pattern for icon colours
 
 | Method | Pattern | Example | 
@@ -11,16 +19,22 @@
 | SVG stroke class | `dv-s-stroke-icon-[semantic colour]` | `dv-s-stroke-icon-primary` | 
 | iOS | `icon[Semantic colour]` | `iconPrimary` | 
 
-## Primary & Secondary
+## Primary
 
 | Figma | Colour* | CSS | HTML class | SVG Fill | SVG Stroke |
 | ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Icon/Primary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #007ac8; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #93caff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-primary)` | `dv-s-icon-primary` | `dv-s-fill-icon-primary` | `dv-s-stroke-icon-primary` |
 | `Icon/Primary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #165887; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #d6edff; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-primary-highlight)` | `dv-s-icon-primary-highlight` | `dv-s-fill-icon-primary-highlight` | `dv-s-stroke-icon-primary-highlight` |
+
+\* Light mode and dark mode preview
+
+## Secondary
+
+| Figma | Colour | CSS | HTML class | SVG Fill | SVG Stroke |
+| ----- | ------ | --- | ---------- | -------- | ---------- | 
 | `Icon/Secondary` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #c3c6c9; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-secondary)` | `dv-s-icon-secondary` | `dv-s-fill-icon-secondary` | `dv-s-stroke-icon-secondary` |
 | `Icon/Secondary-highlight` | <span style="display: inline-block; width: 18px; height: 18px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #e9eaea; border: 1px solid #D4D9E3; border-radius: 2px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-icon-secondary-highlight)` | `dv-s-icon-secondary-highlight` | `dv-s-fill-icon-secondary-highlight` | `dv-s-stroke-icon-secondary-highlight` |
 
-\* Light mode and dark mode preview
 
 ## Category
 

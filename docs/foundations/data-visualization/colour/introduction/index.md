@@ -1,4 +1,6 @@
-# Colour Guidelines for Design
+# Introduction to Colour Guidelines for Design
+
+*For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/).*
 
 Colour plays an important role in data visualisation, and can be used to encode data in many ways. In addition, colour is often the first thing we perceive on a screen and can be used to guide the user's attention.
 

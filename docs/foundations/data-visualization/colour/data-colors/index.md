@@ -1,5 +1,7 @@
 # Data Colours
 
+*For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/).*
+
 In dataviz we use visual elements to encode data (sometimes referred to as ‘data marks’). 
 
 For data colours, there are different semantic colours that should be used intentionally: Primary, Secondary, Category and Evaluation colXWours.

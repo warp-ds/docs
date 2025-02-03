@@ -1,6 +1,11 @@
-# Chart colours
+# Chart Colours
 
-For usage guidelines, see [Colour usage > Chart Colours](/foundations/data-visualization/colour/#chart-colours)
+For usage guidelines, see [Colour Guidelines > Chart Colours](/foundations/data-visualization/colour/chart-colors)
+
+::: details Visual overview
+![Preview of ChartBackground, ChartLine and ChartText colours in Light and Dark mode](/foundations/dataviz/token-overview-chart.png)
+:::
+
 
 ## ChartBackground
 

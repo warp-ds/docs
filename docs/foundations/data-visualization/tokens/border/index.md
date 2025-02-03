@@ -1,5 +1,15 @@
 # Border
 
+For usage guidelines, see [Colour Guidelines > Bars & Areas](/foundations/data-visualization/colour/bars-areas/)
+
+The `border` colours are typically used around a subtle background colour. 
+
+::: details Visual overview
+Since the `border` colours are used with a subtle background colour, the (see [background tokens](/foundations/data-visualization/tokens/background/) ), the subtle background colours are included in the illustration. 
+
+![Preview of Primary, Secondary, Category and Evaluation colours for light mode and dark mode](/foundations/dataviz/token-overview-border-with-subtle.png)
+:::
+
 ## Naming pattern for border colours
 
 | Method | Pattern | Example | 
