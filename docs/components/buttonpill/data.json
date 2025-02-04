@@ -1,0 +1,17 @@
+{
+  "title": "Button pill",
+  "description": "Button pill allows users to toggle an element to their favourites.",
+  "category": "Actions",
+  "placeholder": {
+    "label": "Button pill component"
+  },
+  "frameworks": [
+    {
+      "name": "iOS",
+      "status": "released"
+    },
+    {
+      "name": "Figma"
+    }
+  ]
+}

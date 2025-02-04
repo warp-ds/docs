@@ -1,0 +1,17 @@
+{
+  "title": "Page indicator",
+  "description": "Shows the number of pages in a series and indicates which page is currently on display.",
+  "category": "Actions",
+  "placeholder": {
+    "label": "Page indicator component"
+  },
+  "frameworks": [
+    {
+      "name": "iOS",
+      "status": "released"
+    },
+    {
+      "name": "Figma"
+    }
+  ]
+}

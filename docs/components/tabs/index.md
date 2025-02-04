@@ -2,6 +2,7 @@
   import Vue from './vue.md';
   import React from './react.md';
   import data from './data.json';
+  import iOS from './ios.md';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
@@ -36,5 +37,8 @@ This is because aria-controls and aria-labelledby rely on id attributes, and the
   </template>
   <template #vue>
     <vue />
+  </template>
+      <template #iOS>
+    <iOS />
   </template>
 </tabs-content>

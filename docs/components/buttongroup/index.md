@@ -1,6 +1,7 @@
 <script setup>
   import Vue from './vue.md';
   import data from './data.json';
+  import iOS from './ios.md';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
@@ -27,5 +28,8 @@ For a React equivalent that serves a similar purpose, use the `Toggle` in [Radio
 <tabs-content>
   <template #vue>
     <vue />
+  </template>
+    <template #iOS>
+    <iOS />
   </template>
 </tabs-content>

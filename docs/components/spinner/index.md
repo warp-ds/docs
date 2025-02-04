@@ -11,7 +11,7 @@
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
-::: warning iOS only
+::: warning Native only
 For the web implementation of a "spinner", see [CSS - Animation - Spinner](../../foundations/css-classes/animation#spinner).
 :::
 

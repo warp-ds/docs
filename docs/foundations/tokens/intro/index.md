@@ -17,7 +17,7 @@ Add token support status on brands: https://nmp-jira.atlassian.net/browse/WARP-5
 | FINN        | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
 | Tori        | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
 | DBA         | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
-| Blocket     | TBA ⌛      | TBA ⌛      | TBA ⌛      | TBA ⌛      |
+| Blocket     | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
 | Bilbasen    | TBA ⌛      | TBA ⌛      | TBA ⌛      | TBA ⌛      |
 | Oikotie     | TBA ⌛      | TBA ⌛      | TBA ⌛      | TBA ⌛      |
 

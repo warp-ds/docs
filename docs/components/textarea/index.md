@@ -2,6 +2,7 @@
   import Vue from './vue.md';
   import React from './react.md';
   import data from './data.json';
+  import iOS from './ios.md';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
@@ -33,5 +34,8 @@ If the field is labeled by a separate element, an `aria-labelledby` prop must be
   </template>
   <template #vue>
     <vue />
+  </template>
+    <template #iOS>
+    <iOS />
   </template>
 </tabs-content>

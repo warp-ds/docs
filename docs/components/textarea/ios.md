@@ -1,23 +1,27 @@
-## Syntax
+### Syntax
 
 ```swift
-Warp.TextField(
+Warp.TextArea(
     title: String = "",
     additionalInformation: String? = nil,
     tooltipContent: AnyView? = nil,
-    leftIcon: Warp.Icon? = nil,
-    prefix: String? = nil,
     text: Binding<String>,
     placeholder: String = "",
-    suffix: String? = nil,
-    rightIcon: Warp.Icon? = nil,
-    style: Warp.TextFieldStyle = .default,
-    helpText: String? = nil
+    style: Warp.TextAreaStyle = .default,
+    helpText: String? = nil,
+    minHeight: CGFloat = 88
+)
+```
+```swift
+Warp.TextArea(
+    title: "Title",
+    text: $text,
+    placeholder: "Please fill me"
 )
 ```
 
 ### Visual options
-There are a variety of variants supported for the TextField component:
+There are a variety of variants supported for the TextArea component:
 
 ```swift
 enum Warp.TextAreaStyle {
@@ -33,13 +37,13 @@ enum Warp.TextAreaStyle {
 By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
 ```swift example
-Warp.TextField(
+Warp.TextArea(
     title: "Title",
     text: $text,
     placeholder: "Please fill me"
 ).uiView
 ```
 
-## Params
+### Parameters
 
-<api-table type=iOS component="TextField" />
+<api-table type=iOS component="TextArea" />

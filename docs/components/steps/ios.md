@@ -4,15 +4,14 @@ A step indicator displays a user’s progress through a set of steps, guiding to
 
 ```swift example
 Warp.StepIndicator(
-            layoutOrientation: LayoutOrientation = .vertical,
-            stepModel: Warp.StepIndicatorModel,
-            colorProvider: ColorProvider = Config.colorProvider
-        )
+    layoutOrientation: LayoutOrientation = .vertical,
+    stepModel: Warp.StepIndicatorModel
+)
 ```
 
 Use step indicators to keep the user on track when completing a specific set of tasks or processes.
 
-Horizontal Step Indicator.
+Horizontal `StepIndicator`.
 ```swift example
 var steps: [Warp.StepIndicatorItem] = [
         .init(
@@ -33,15 +32,12 @@ var steps: [Warp.StepIndicatorItem] = [
     ]
 do {
     var stepModel = try? Warp.StepIndicatorModel(from: steps)
-    Warp.StepIndicator(
-                    layoutOrientation: .horizontal,
-                    stepModel: stepModel
-                    )
+    Warp.StepIndicator(layoutOrientation: .horizontal, stepModel: stepModel)
 } catch {
     print("Error: \(error)")
 }
 ```
-Vertical Step Indicator.
+Vertical `StepIndicator`.
 
 ```swift example
 var steps: [Warp.StepIndicatorItem] = [
@@ -63,23 +59,25 @@ var steps: [Warp.StepIndicatorItem] = [
     ]
 do {
     var stepModel = try? Warp.StepIndicatorModel(from: steps)
-    Warp.StepIndicator(
-                    layoutOrientation: .vertical,
-                    stepModel: stepModel
-                    )
+    Warp.StepIndicator(layoutOrientation: .vertical, stepModel: stepModel)
 } catch {
     print("Error: \(error)")
 }
 ```
-StepIndicatorModel is a helper class that takes an array of StepIndicatorItem and creates the model for the StepIndicator.
+`StepIndicatorModel` is a helper class that takes an array of `StepIndicatorItem`s and creates the model for the `StepIndicator`.
 Run through all steps and ensure that there are : <br />
-    - no inProgress steps after an incompleted step<br />
-    - no completed steps after an incompleted step<br />
-    - no completed steps after an inProgress step<br />
-    - one inProgress step at a time<br />
+    - no `inProgress` steps after an `incompleted` step<br />
+    - no `completed` steps after an `incompleted` step<br />
+    - no `completed` steps after an `inProgress` step<br />
+    - one `inProgress` step at a time<br />
 
 ### Legacy support
-The bridge will be added soon.
+
+By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+
+```swift example
+Warp.StepIndicator(layoutOrientation: .horizontal, stepModel: stepModel).uiView
+```
 
 ### Parameters
 

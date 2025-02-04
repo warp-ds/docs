@@ -2714,130 +2714,45 @@ export const android = {
 };
 
 export const iOS = {
-  Button: {
+  Alert: {
     required: [
-      [
-        'title',
-        'String',
-        '',
-        'The text to be displayed on the button'
-      ],
-      [
-        'action',
-        '() -> Void',
-        '',
-        'Action to be invoked when clicked',
-      ],
-      [
-        'buttonType',
-        'Warp.ButtonType.primary <br />Warp.ButtonType.secondary <br />Warp.ButtonType.tertiary <br />Warp.ButtonType.critical <br />Warp.ButtonType.criticalTertiary <br />Warp.ButtonType.utility <br />Warp.ButtonType.utilityTertiary <br />Warp.ButtonType.utilityOverlay',
-        '',
-        'Controls the appearance of the button',
-      ]
+    [
+      'style',
+      'Warp.AlertStyle',
+      '',
+      'The visual style of the alert, which dictates its colors, icons, and overall appearance.<br /> Use one of the predefined `AlertStyle` values: `.info`, `.warning`, `.critical`, or `.success`.',
     ],
+    [
+      'title', 
+      'String', 
+      '', 
+      'The primary text displayed at the top of the alert, used to capture the user\'s attention.'
+    ],
+    [
+      'subtitle', 
+      'String', 
+      '', 
+      'Additional information displayed below the title, used to provide further context to the alert.'
+    ],
+  ],
     props: [
       [
-        'leadingIcon',
-        'Image?',
-        'nil',
-        'Sets the button image leading the title',
+        'link', 
+        '(title: String, action: () -> Void)?', 
+        'nil', 
+        'An optional tuple containing the title and action for a clickable link that appears below the subtitle.'
       ],
       [
-        'trailingIcon',
-        'Image?',
-        'nil',
-        'Sets the button image trailing the title',
+        'primaryButton', 
+        '(title: String, action: () -> Void)?', 
+        'nil', 
+        'An optional tuple containing the title and action for a primary button.'
       ],
       [
-        'size',
-        'Warp.ButtonSize.big <br />Warp.ButtonSize.small',
-        'Warp.ButtonSize.big',
-        'Sets the size of button',
-      ],
-      [
-        'isEnabled',
-        'Bool',
-        'true',
-        'Sets the button in disabled mode',
-      ],
-      [
-        'fullWidth',
-        'Bool',
-        'false',
-        'Change the width behaviour of the button',
-      ],
-    ],
-  },
-
-  TextField: {
-    required: [
-      [
-        'text',
-        'String',
-        '',
-        'The text displayed currently in the textfield',
-      ],
-      [
-        'state',
-        'Binding<Warp.TextFieldState.normal> <br />Binding<Warp.TextFieldState.active> <br />Binding<Warp.TextFieldState.disabled> <br />Binding<Warp.TextFieldState.error> <br />Binding<Warp.TextFieldState.readOnly>',
-        '',
-        'The state the TextField is in',
-      ],
-    ],
-    props: [
-      [
-        'placeholder',
-        'String',
-        'empty',
-        'Text hint that occupies the textfield when it is empty',
-      ],
-      [
-        'title',
-        'String?',
-        'nil',
-        'The title to display above the textfield',
-      ],
-      [
-        'additionalInformation',
-        'String?',
-        'nil',
-        'Additional information to display above the textfield',
-      ],
-      [
-        'infoToolTipView',
-        'AnyView?',
-        'nil',
-        'The view to display when additionalInformation is tapped',
-      ],
-      [
-        'leftView',
-        'AnyView?',
-        'nil',
-        'The view on the left side of the textfield',
-      ],
-      [
-        'rightView',
-        'AnyView?',
-        'nil',
-        'The view on the right side of the textfield',
-      ],
-      [
-        'errorMessage',
-        'String?',
-        'nil',
-        'The error message to show when in Warp.TextFieldState.error',
-      ],
-      [
-        'helpMessage',
-        'String?',
-        'nil',
-        'The content to display as the help text below the textfield',
-      ],
-      [
-        'isAnimated',
-        'Bool',
-        'true',
-        'If the changes support animation',
+        'secondaryButton', 
+        '(title: String, action: () -> Void)?', 
+        'nil', 
+        'An optional tuple containing the title and action for a secondary button.'
       ],
     ],
   },
@@ -2847,211 +2762,43 @@ export const iOS = {
       'text', 
       'String', 
       '', 
-      'The text to be displayed on the badge'
+      'The text to display inside the badge.'
     ],
     [
       'variant',
-      'Warp.Badge.Variant.info <br />Warp.Badge.Variant.success <br />Warp.Badge.Variant.warning <br />Warp.Badge.Variant.error <br />Warp.Badge.Variant.disabled <br />Warp.Badge.Variant.sponsored <br />Warp.Badge.Variant.neutral',
+      'Warp.BadgeVariant',
       '',
-      'Sets the appearance of the badge',
+      'The style of the badge.<br /> Use one of the predefined `BadgeVariant` values: `.info`, `.success`, `.warning`, `.negative`, `.disabled`, `.sponsored`, `.neutral`, or `.price`',
     ],
   ],
     props: [
+      [
+        'icon',
+        'Warp.Icon?',
+        'nil',
+        'The optional icon to display inside the badge.',
+      ],
       [
         'position',
-        'Warp.Badge.Position.default <br />Warp.Badge.Position.topLeft <br />Warp.Badge.Position.topRight <br />Warp.Badge.Position.bottomLeft <br />Warp.Badge.Position.bottomRight',
-        'Warp.Badge.Position.default',
-        'Sets the corners that need radius',
+        'Warp.BadgePosition',
+        '.default',
+        'The corner position for the badge.<br /> Use one of the predefined `BadgePosition` values: `.default`, `.topLeft`, `.topRight`, `.bottomLeft`, or `.bottomRight`',
       ],
-    ],
-  },
-  Alert: {
-    required: [
-    [
-      'style',
-      'Warp.AlertStyle.info <br />Warp.AlertStyle.warning <br />Warp.AlertStyle.critical <br />Warp.AlertStyle.success',
-      '',
-      'Sets the style and icon of the alert',
-    ],
-    [
-      'title', 
-      'String', 
-      '', 
-      'The title to be displayed in the alert'
-    ],
-    [
-      'subtitle', 
-      'String', 
-      '', 
-      'The subtitle text to be displayed in the alert'
-    ],
-  ],
-    props: [
-      [
-        'link', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'The link text and action in the alert'
-      ],
-      [
-        'primaryButton', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'The primary button text and action in the alert'
-      ],
-      [
-        'secondaryButton', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
-        'The secondary button text and action in the alert'
-      ],
-    ],
-  },
-  Toast: {
-    required: [
-    [
-      'style',
-      'Warp.ToastStyle.error <br />Warp.ToastStyle.success <br />Warp.ToastStyle.warning',
-      '',
-      'Sets the style and icon of the toast',
-    ],
-    [
-      'title', 
-      'String', 
-      '', 
-      'The title to be displayed in the toast'
-    ],
-    [
-      'toastEdge', 
-      'Warp.ToastEdge.top <br />Warp.ToastEdge.bottom',
-      '', 
-      'The position of the toast to be displayed'
-    ],
-    [
-      'isPresented', 
-      'Binding Bool', 
-      '', 
-      'The binding to control the visibility'
-    ],
-  ],
-    props: [
-    ],
-  },
-  Pill: {
-    required: [
-    [
-      'text',
-      'String', 
-      '',
-      'The text to be displayed on the pill',
-    ],
-    [
-      'onTap', 
-      '() -> Void',
-      '{}', 
-      'The action that will trigger on pill tap'
-    ],
-    [
-      'style', 
-      'Warp.PillStyle.filter <br />Warp.PillStyle.suggestion ',
-      '.filter', 
-      'The style of the pill'
-    ],
-  ],
-    props: [
-      [
-        'icon', 
-        'Image?',
-        'nil', 
-        'Pill icon. If you provide onClose then the Pill will have a close button instead of this icon.'
-      ],
-      [
-        'onClose', 
-        '(() -> Void)?',
-        'nil', 
-        'If added will show a close button and replace any provided icon, and the action will trigger on pill close.'
-      ],
-      [
-        'iconContentDescription', 
-        'String?',
-        'nil', 
-        'The a11y text for the icon'
-      ],
-    ],
-  },
-  Text: {
-    required: [
-    [
-      'text', 
-      'String', 
-      '', 
-      'The text to be displayed'
-    ],
-    [
-      'style', 
-      'Warp.TextStyle.display <br />Warp.TextStyle.title1 <br />Warp.TextStyle.title2 <br />Warp.TextStyle.title3 <br />Warp.TextStyle.title4 <br />Warp.TextStyle.title5 <br />Warp.TextStyle.title6 <br />Warp.TextStyle.preamble <br />Warp.TextStyle.body <br />Warp.TextStyle.bodyStrong <br />Warp.TextStyle.caption <br />Warp.TextStyle.captionStrong <br />Warp.TextStyle.detail <br />Warp.TextStyle.detailStrong',
-      '', 
-      'Sets the appearance of the text - font and size',
-    ],
-  ],
-    props: [  
-    ],
-  },
-  Callout: {
-    required: [
-    [
-      'size', 
-      'Warp.CalloutSize.default <br />Warp.CalloutSize.small',
-      'Warp.CalloutSize.default', 
-      'The size of the Callout'
-    ],
-    [
-      'type', 
-      'Warp.CalloutType.inline <br />Warp.CalloutType.popover',
-      'Warp.CalloutType.inline', 
-      'The type of the Callout, popover accepts a onClose action'
-    ],
-    [
-      'title', 
-      'String', 
-      '', 
-      'The text to be displayed'
-    ],
-    [
-      'arrowEdge', 
-      'Edge.top <br />Edge.leading <br />Edge.bottom <br />Edge.trailing ',
-      'Edge.top', 
-      'The direction of the arrow'
-    ],
-  ],
-    props: [  
-    ],
-  },
-  Tooltip: {
-    required: [
-      [
-        'title', 
-        'String', 
-        '', 
-        'The text to be displayed'
-      ],
-    ],
-    props: [
-      [
-        'arrowEdge', 
-        'Edge.top <br />Edge.leading <br />Edge.bottom <br />Edge.trailing ',
-        'Edge.top', 
-        'The direction of the arrow'
-      ],  
     ],
   },
   Box: {
     required: [
     [
       'style', 
-      'Warp.BoxStyle.neutral <br />Warp.BoxStyle.info <br />Warp.BoxStyle.bordered',
+      'Warp.BoxStyle',
       '', 
-      'Preferred style of box.'
+      'Preferred style of box.<br /> Use one of the predefined `BoxStyle` values: `.neutral`, `.info`, `.bordered`'
+    ],
+    [
+      'title', 
+      'String?', 
+      '', 
+      'Text that will be shown as box\'s heading.'
     ],
     [
       'subtitle', 
@@ -3061,12 +2808,6 @@ export const iOS = {
     ],
   ],
     props: [
-      [
-        'title', 
-        'String?', 
-        '', 
-        'Text that will be shown as box heading. <br />If there is no title the icon would be hidden too.'
-      ],
       [
         'shouldShowToolTipImage', 
         'Bool',
@@ -3081,9 +2822,9 @@ export const iOS = {
       ],
       [
         'button', 
-        '(title: String, action: () -> Void)?', 
+        'Warp.Button?', 
         'nil', 
-        'Tuple that will provide a title and an action for creating a button view below link. <br />Passing `nil` will skip adding button view.'
+        'A button view below link. <br />Passing `nil` will skip adding button view.'
       ],
     ],
   },
@@ -3097,9 +2838,9 @@ export const iOS = {
     ],
     [
       'broadcastEdge', 
-      'Warp.BroadcastEdge.top <br />Warp.BroadcastEdge.bottom',
+      'Warp.BroadcastEdge',
       '', 
-      'Edge from where the broadcast is presented'
+      'Edge from where the broadcast is presented.<br />Use one of the predefined `BroadcastEdge` values: `.top`, or `.bottom`'
     ],
     [
       'isPresented', 
@@ -3108,31 +2849,265 @@ export const iOS = {
       'Binding to a boolean value that allows the broadcast to control dismissal'
     ],
   ],
-    props: [  
+    props: [
+      [
+        'isDismissable', 
+        'Bool', 
+        'true', 
+        'Determines if dismissable by the user or not. Will add a close button.'
+      ],  
     ],
   },
-  Spinner: {
+  Button: {
+    required: [
+      [
+        'title',
+        'String',
+        '',
+        'The text to be displayed on the button'
+      ],
+      [
+        'action',
+        '@escaping () -> Void',
+        '',
+        'Action to be invoked when tapped',
+      ],
+    ],
+    props: [
+      [
+        'leadingIcon',
+        'Warp.Icon?',
+        'nil',
+        'Sets the button icon leading the title',
+      ],
+      [
+        'trailingIcon',
+        'Warp.Icon?',
+        'nil',
+        'Sets the button icon trailing the title',
+      ],
+      [
+        'type',
+        'Warp.ButtonType',
+        '.primary',
+        'Controls the appearance of the button.<br />Use one of the predefined `ButtonType` values: `.primary`, `.secondary`, `.quiet`, `.critical`, `.criticalQuiet`, `.utility`, `.utilityQuiet`, or `.utilityOverlay`',
+      ],
+      [
+        'size',
+        'Warp.ButtonSize',
+        '.big',
+        'Sets the size of button.<br />Use one of the predefined `ButtonSize` values: `.big`, or `.small`',
+      ],
+      [
+        'isEnabled',
+        'Bool',
+        'true',
+        'Indicating that interactions are enabled.',
+      ],
+      [
+        'fullWidth',
+        'Bool',
+        'false',
+        'Change the width behaviour of the button',
+      ],
+      [
+        'isLoading',
+        'Bool',
+        'false',
+        'Indicating whether the button is loading.',
+      ],
+    ],
+  },
+  ButtonGroup: {
     required: [
     [
-      'size', 
-      'Warp.SpinnerSize.small <br />Warp.SpinnerSize.default <br />Warp.SpinnerSize.large <br />Warp.SpinnerSize.custom',
-      'Warp.SpinnerSize.default', 
-      'Size of the spinner'
-    ],
-    [
-      'duration', 
-      'CGFloat',
-      '1', 
-      'Duration of Spinner animation'
-    ],
-    [
-      'lineWidth', 
-      'CGFloat', 
-      '3', 
-      'The thickness of Spinner'
+      'buttons', 
+      'Binding<[(title: String, isSelected: Bool)]>', 
+      '', 
+      'A binding to an array of tuples representing each button\'s title and selection state.'
     ],
   ],
     props: [  
+      [
+        'singleSelect', 
+        'Bool',
+        'false', 
+        'Specifies the selection behavior. If `true`, only one button can be selected at a time. If `false`, multiple buttons can be selected.',
+      ],
+      [
+        'onSelectionChange', 
+        '(([(String, Bool)]) -> Void)?',
+        'nil', 
+        'An optional closure that receives the updated button array whenever the selection changes.',
+      ],
+    ],
+  },
+  ButtonPill: {
+    required: [
+    [
+      'type', 
+      'Warp.ButtonPillType', 
+      '', 
+      'The type of the button (`flat` or `overlay`).'
+    ],
+    [
+      'selected', 
+      'Binding Bool', 
+      '', 
+      'A binding to the selected state of the button.'
+    ],
+  ],
+    props: [  
+    ],
+  },
+  Callout: {
+    required: [
+    [
+      'title', 
+      'String', 
+      '', 
+      'The text to be displayed'
+    ],
+  ],
+    props: [  
+      [
+        'size', 
+        'Warp.CalloutSize',
+        '.default', 
+        'The size of the Callout.<br />Use one of the predefined `CalloutSize` values: `.default`, or `.small`.'
+      ],
+      [
+        'type', 
+        'Warp.CalloutType',
+        '.inline', 
+        'The type of the Callout.<br />Use one of the predefined `CalloutType` values: `.inline`, or `.popover`.<br /> Popover accepts an optional onClose action, which will display a close button.'
+      ],
+      [
+        'arrowEdge', 
+        'Edge',
+        '.top', 
+        'The direction of the arrow.<br />Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing`'
+      ],
+    ],
+  },
+  Checkbox: {
+    required: [
+    [
+      'options', 
+      'Binding<[Option]>', 
+      '', 
+      'The array of options that conform to `CheckboxOption`. This will provide `isSelected`, `label` and optional `extraContent` of `Checkbox`.'
+    ],
+    [
+      'action', 
+      '@escaping () -> Void', 
+      '', 
+      'A closure that is executed when the `checkbox` is tapped. This can be mapped into the `onSelection` on `CheckboxGroup`'
+    ],
+  ],
+    props: [  
+      [
+        'title', 
+        'String?',
+        'nil', 
+        'An optional title for the `CheckboxGroup`.'
+      ],
+      [
+        'helpText', 
+        'String?',
+        'nil', 
+        'An optional help text displayed below the `CheckboxGroup`.'
+      ],
+      [
+        'style', 
+        'Warp.CheckboxStyle',
+        '.default', 
+        'The style of the `CheckboxGroup` which will be passed to the style of each `Checkbox`.<br />Use one of the predefined `CheckboxStyle` values: `.default`, `.error`, or `.disabled`'
+      ],
+      [
+        'axis', 
+        'Axis.Set',
+        '.vertical', 
+        'Determines whether the list of checkboxes is aligned vertically or horizontally.<br />Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`.'
+      ],
+      [
+        'onSelection', 
+        '((Option, [Option]) -> Void)?',
+        'nil', 
+        'A closure that will be triggered when an option is selected, providing the latest selected option and the updated list of options.'
+      ],
+      [
+        'extraContent', 
+        'AnyView?',
+        'nil', 
+        'An optional view that will be displayed beside the label. This is only for `Checkbox` and can be passed from the `Options` in `CheckboxGroup`.'
+      ],
+    ],
+  },
+  Expandable: {
+    required: [
+      [
+        'style', 
+        'Warp.ExpandableStyle',
+        '', 
+        'The style of the `Expandable`. <br />Use one of the predefined `ExpandableStyle` values: `.default`, `.box`, or `.boxBleed`'
+      ],
+      [
+        'title', 
+        'String',
+        '', 
+        'The title for the top sticky part of the `Expandable`'
+      ],
+    ],
+    props: [  
+      [
+        'expandableView', 
+        'View',
+        '', 
+        'The view for the bottom hidden part of the `Expandable`. Either this or `subtitle` needs to be provided.'
+      ],
+      [
+        'subtitle', 
+        'String',
+        '', 
+        'The subtitle for the bottom hidden part of the `Expandable`. Either this or `expandableView` needs to be provided.'
+      ],
+      [
+        'isAnimated', 
+        'Bool',
+        'true', 
+        'Determines if the `Expandable` will expand and collapse with animation'
+      ],
+      [
+        'isExpanded', 
+        'Bool',
+        'false', 
+        'Controls the state of the `Expandable`'
+      ],
+    ],
+  },
+  IconView: {
+    required: [
+    [
+      'icon',
+      'Warp.Icon',
+      '',
+      'The `Warp.Icon` to display.',
+    ],
+  ],
+    props: [
+      [
+        'size', 
+        'Warp.IconSize', 
+        '.default', 
+        'The size of the icon (`.small`, `.default`, `.large`, or `.custom`).'
+      ],
+      [
+        'color', 
+        'Color',
+        'Warp.Token.icon', 
+        'The color of the icon.'
+      ],
     ],
   },
   Modal: {
@@ -3147,13 +3122,13 @@ export const iOS = {
       'bodyText', 
       'String',
       '', 
-      'The main body text content of the component.'
+      'The main body text content of the modal.'
     ],
     [
       'isPresented', 
       'Binding Bool', 
       '', 
-      'A binding to a Boolean value that controls the visibility of the component.'
+      'A binding to control the visibility of the modal.'
     ],
   ],
     props: [
@@ -3167,19 +3142,25 @@ export const iOS = {
         'primaryButton', 
         '(title: String, action: () -> Void)?',
         'nil', 
-        'An optional primary button constructor for defining the primary action.'
+        'An optional provider for defining the primary button.'
       ],
       [
         'secondaryButton', 
         '(title: String, action: () -> Void)?',  
         'nil', 
-        'An optional secondary button constructor for defining a secondary action.'
+        'An optional provider for defining the secondary button.'
       ],
       [
         'hasCloseButton', 
         'Bool', 
         'false', 
         'A Boolean value indicating whether a close button should be shown.'
+      ],
+      [
+        'dismissOnClickOutside', 
+        'Bool', 
+        'true', 
+        'Determines whether the component should be dismissed when the user clicks outside of it.'
       ],
       [
         'onDismiss', 
@@ -3189,64 +3170,430 @@ export const iOS = {
       ]  
     ],
   },
+  PageIndicator: {
+    required: [
+    [
+      'pageCount', 
+      'Int', 
+      '', 
+      'The total number of pages.'
+    ],
+    [
+      'selectedPage', 
+      'Binding Int', 
+      '', 
+      'Binding to an integer representing the currently selected page.'
+    ],
+  ],
+    props: [  
+    ],
+  },
+  Pill: {
+    required: [
+    [
+      'text',
+      'String', 
+      '',
+      'The text to be displayed on the pill',
+    ],
+  ],
+    props: [
+      [
+        'icon', 
+        'Warp.Icon?',
+        'nil', 
+        'Pill icon. If you provide `onClose` then the Pill will have a close button instead of this icon.'
+      ],
+      [
+        'onTap', 
+        '() -> Void',
+        '{}', 
+        'The action that will trigger on pill tap.'
+      ],
+      [
+        'onClose', 
+        '(() -> Void)?',
+        'nil', 
+        'If added will show a close button and replace any provided icon, and the action will trigger on pill close.'
+      ],
+      [
+        'iconContentDescription', 
+        'String?',
+        'nil', 
+        'The content description of the icon. Used for accessibility purposes. If not provided and we have `onClose` the default accessibility text is `Close` and for the `Warp.Icon` it is the accessibility of the icon.'
+      ],
+      [
+        'style', 
+        'Warp.PillStyle ',
+        '.filter', 
+        'The style of the pill (`.filter`, `.suggestion`)'
+      ],
+    ],
+  },
+  Radio: {
+    required: [
+      [
+        'selectedOption', 
+        'Binding Option', 
+        '', 
+        'A binding to the currently selected option. This will provide `isSelected` of `Radio`.'
+      ],
+      [
+        'options', 
+        '[Option]', 
+        '', 
+        'The array of options that conform to `RadioOption`. This will provide `label` and optional `extraContent` of `Radio`.'
+      ],
+      [
+        'action', 
+        '@escaping () -> Void', 
+        '', 
+        'A closure that is executed when the `radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup`'
+      ],
+    ],
+    props: [  
+      [
+        'title', 
+        'String?',
+        'nil', 
+        'An optional title for the `RadioGroup`.'
+      ],
+      [
+        'helpText', 
+        'String?',
+        'nil', 
+        'An optional help text displayed below the `RadioGroup`.'
+      ],
+      [
+        'style', 
+        'Warp.RadioStyle',
+        '.default', 
+        'The style of the `RadioGroup` which will be passed to the style of each `Radio`.<br />Use one of the predefined `RadioStyle` values: `.default`, `.error`, or `.disabled`'
+      ],
+      [
+        'axis', 
+        'Axis.Set',
+        '.vertical', 
+        'Determines whether the list of radios is aligned vertically or horizontally.<br />Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`.'
+      ],
+      [
+        'onSelection', 
+        '((Option, Option) -> Void)?',
+        'nil', 
+        'A closure that will be triggered when an option is selected, providing the old and newly selected options.'
+      ],
+      [
+        'extraContent', 
+        'AnyView?',
+        'nil', 
+        'An optional view that will be displayed beside the label. This is only for `Radio` and can be passed from the `Options` in `RadioGroup`.'
+      ],
+    ],
+  },
+  Slider: {
+    required: [
+      [
+        'value', 
+        'Binding Double', 
+        '', 
+        'Binding value to update the slider value'
+      ],
+      [
+        'range', 
+        'ClosedRange Double', 
+        '', 
+        'Defines the range for the slider'
+      ],
+    ],
+    props: [
+      [
+        'step', 
+        'Double',
+        '1.0', 
+        'Step value for the slider'
+      ],
+      [
+        'onEditingChanged', 
+        '((Double) -> Void)?',
+        'nil', 
+        'Completion handler to return the value when handle is dropped'
+      ],
+    ],
+  },
+  Spinner: {
+    required: [
+  ],
+    props: [
+      [
+        'size', 
+        'Warp.SpinnerSize',
+        '.default', 
+        'Size of the `Spinner`.<br />Use one of the predefined `SpinnerSize` values: `.small`, `.default`, `.large`, or `.custom`.'
+      ],
+      [
+        'duration', 
+        'CGFloat',
+        '1', 
+        'Duration of Spinner animation'
+      ],
+      [
+        'lineWidth', 
+        'CGFloat', 
+        '3', 
+        'The thickness of the `Spinner`'
+      ],
+    ],
+  },
   StepIndicator: {
     required: [
     [
       'stepModel', 
       'Warp.StepIndicatorModel',
       '', 
-      'An array of Warp.StepIndicatorItems wich contains title, description and progress of the steps, progress can be incomplete, inProgress, complete.'
+      'An array of `Warp.StepIndicatorItem` objects which contains `title`, `description` and `progress` of the steps, the first two are strings and `progress` can be `incomplete`, `inProgress`, or `complete` with default value as `incomplete`.'
     ]
   ],
     props: [  
       [
         'layoutOrientation', 
-        'LayoutOrientation.vertical <br />LayoutOrientation.horizontal',
+        'LayoutOrientation',
         '.vertical', 
-        'The orientation of the step indicator'
+        'The orientation of the step indicator. <br />Use one of the predefined `LayoutOrientation` values: `.vertical`, or `.horizontal`.'
       ]
     ],
   },
-  Expandable: {
+  Switch: {
     required: [
+    [
+      'isOn', 
+      'Binding Bool', 
+      '', 
+      'Binding to a Boolean value indicating whether the switch is on or off.'
+    ],
+  ],
+    props: [
       [
-        'style', 
-        'Warp.ExpandableStyle.default <br />Warp.ExpandableStyle.box <br />Warp.ExpandableStyle.boxBleed',
-        '', 
-        'The style of the Expandable'
-      ],
-      [
-        'title', 
-        'String',
-        '', 
-        'The title for the top sticky part of the Expandable'
-      ],
-      [
-        'expandableView', 
-        'View',
-        '', 
-        'The view for the bottom hidden part of the Expandable. Either this or subtitle needs to be provided.'
-      ],
-      [
-        'subtitle', 
-        'String',
-        '', 
-        'The subtitle for the bottom hidden part of the Expandable. Either this or expandableView needs to be provided.'
-      ],
-      [
-        'isAnimated', 
-        'Bool',
-        'true', 
-        'Determines if the Expandable will expand and collapse with animation'
-      ],
-      [
-        'isExpanded', 
-        'Bool',
-        'false', 
-        'The initial state of the Expandable'
+        'state', 
+        'Warp.SwitchState',
+        '.default', 
+        'The state of the switch. <br />Use one of the predefined `SwitchState` values: `.default`, or `.disabled`',
       ],
     ],
+  },
+  Tabs: {
+    required: [
+    [
+      'tabs', 
+      '[Warp.TabItem]', 
+      '', 
+      'An array of `Warp.TabItem` objects to display as selectable tabs.'
+    ],
+    [
+      'selectedIndex', 
+      'Binding Int',
+      '', 
+      'A binding to the index of the currently selected tab.',
+    ],
+  ],
     props: [  
+    ],
+  },
+  Text: {
+    required: [
+    [
+      'text', 
+      'String', 
+      '', 
+      'The text to be displayed'
+    ],
+    [
+      'style', 
+      'Warp.TextStyle',
+      '', 
+      'Sets the appearance of the text - font and size. <br />Use one of the predefined `TextStyle` values: `.display`, `.title1`, `.title2`, `.title3`, `.title4`, `.title5`, `.title6`, `.preamble`, `.body`, `.bodyStrong`, `.caption`, `.captionStrong`, `.detail`, or `.detailStrong`',
+    ],
+  ],
+    props: [  
+      [
+        'color', 
+        'Color', 
+        'Warp.Token.text', 
+        'A solid color for the text.'
+      ],
+    ],
+  },
+  TextArea: {
+    required: [
+      [
+        'text', 
+        'Binding String', 
+        '', 
+        'Binding to the text content.'
+      ],
+    ],
+    props: [
+      [
+        'title', 
+        'String', 
+        'empty', 
+        'The main title text to display.'
+      ],
+      [
+        'additionalInformation', 
+        'String?',
+        'nil', 
+        'Optional text to display after the title.'
+      ],
+      [
+        'tooltipContent', 
+        'AnyView?',
+        'nil', 
+        'An optional view to display when the tooltip icon is tapped.'
+      ],
+      [
+        'placeholder', 
+        'String', 
+        'empty', 
+        'Text to display when the text area is empty.'
+      ],
+      [
+        'style', 
+        'Warp.TextAreaStyle',
+        '.default', 
+        'The style of the text area. <br />Use one of the predefined `TextAreaStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly`'
+      ],
+      [
+        'helpText', 
+        'String?',
+        'nil', 
+        'Optional `String` to display below the text area.'
+      ],
+      [
+        'minHeight', 
+        'CGFloat',
+        '88', 
+        'Minimum height for the text area.'
+      ],
+    ],
+  },
+  TextField: {
+    required: [
+      [
+        'text', 
+        'Binding String', 
+        '', 
+        'Binding to the text content.'
+      ],
+    ],
+    props: [
+      [
+        'title', 
+        'String', 
+        'empty', 
+        'The main title text to display.'
+      ],
+      [
+        'additionalInformation', 
+        'String?',
+        'nil', 
+        'Optional text to display after the title.'
+      ],
+      [
+        'tooltipContent', 
+        'AnyView?',
+        'nil', 
+        'An optional view to display when the tooltip icon is tapped.'
+      ],
+      [
+        'leftIcon', 
+        'Warp.Icon?',
+        'nil', 
+        'An optional `Warp.Icon` displayed on the left side of the text field.'
+      ],
+      [
+        'prefix', 
+        'String?',
+        'nil', 
+        'An optional string displayed before the text input.'
+      ],
+      [
+        'placeholder', 
+        'String', 
+        'empty', 
+        'Text to display when the text field is empty.'
+      ],
+      [
+        'suffix', 
+        'String?', 
+        'nil', 
+        'An optional string displayed after the text input.'
+      ],
+      [
+        'rightIcon', 
+        'Warp.Icon?', 
+        'nil', 
+        'An optional `Warp.Icon` displayed on the right side of the text field.'
+      ],
+      [
+        'style', 
+        'Warp.TextFieldStyle',
+        '.default', 
+        'The style of the text field. <br />Use one of the predefined `TextFieldStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly`'
+      ],
+      [
+        'helpText', 
+        'String?',
+        'nil', 
+        'Optional `String` to display below the text field.'
+      ],
+    ],
+  },
+  Toast: {
+    required: [
+    [
+      'style',
+      'Warp.ToastStyle',
+      '',
+      'Sets the style and icon of the `Toast`.  <br />Use one of the predefined `ToastStyle` values: `.error`, `.success`, or `.warning`',
+    ],
+    [
+      'title', 
+      'String', 
+      '', 
+      'The title to be displayed in the `Toast`'
+    ],
+    [
+      'toastEdge', 
+      'Warp.ToastEdge',
+      '', 
+      'The position of the toast to be displayed. <br />Use one of the predefined `ToastEdge` values: `.top`, or `.bottom`'
+    ],
+    [
+      'isPresented', 
+      'Binding Bool', 
+      '', 
+      'The binding to control the visibility'
+    ],
+  ],
+    props: [
+    ],
+  },
+  Tooltip: {
+    required: [
+      [
+        'title', 
+        'String', 
+        '', 
+        'The text to be displayed'
+      ],
+    ],
+    props: [
+      [
+        'arrowEdge', 
+        'Edge',
+        '.top', 
+        'The direction of the arrow. <br />Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing`'
+      ],  
     ],
   },
 };
