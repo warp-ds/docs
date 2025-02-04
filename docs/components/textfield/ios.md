@@ -17,7 +17,7 @@ Warp.TextField(
 ```
 
 ### Visual options
-There are a variety of variants supported for the TextArea component:
+There are a variety of variants supported for the TextField component:
 
 ```swift
 enum Warp.TextAreaStyle {

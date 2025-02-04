@@ -22,7 +22,7 @@ Warp.Box(
 )
 ```
 
-There are a variety of variants and combination supported for the box component. Supporting a button and a link, a title, a description and an icon.
+There are a variety of variants and combinations supported for the box component. Supporting a button and a link, a title, a description and an icon.
 
 ```swift example
 enum Warp.BoxStyle {
