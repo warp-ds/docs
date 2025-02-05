@@ -2711,6 +2711,78 @@ export const android = {
       ],
     ]
   },
+  TabRow: {
+    required: [
+    [
+      'tabs', 
+      '@Composable () -> Unit', 
+      '', 
+      '`WarpTab` objects to display as selectable tabs.'
+    ],
+    [
+      'selectedTabIndex', 
+      'Int',
+      '', 
+      'Index of the currently selected tab.',
+    ],
+  ],
+    props: [  
+      [
+        'modifier', 
+        'Modifier',
+        'Modifier', 
+        'The modifier for the TabRow.',
+      ],
+      [
+        'scrollable', 
+        'Boolean',
+        'false', 
+        'If set to true, tabs can be scrolled horizontally.',
+      ],
+    ],
+  },
+  Tab: {
+    required: [
+    [
+      'text', 
+      'String', 
+      '', 
+      'Title of the tab'
+    ],
+    [
+      'selected', 
+      'Boolean',
+      '', 
+      'If the tab is selected or not',
+    ],
+  ],
+    props: [  
+      [
+        'icon', 
+        'WarpIconResource',
+        'null', 
+        'Icon displayed before the title.',
+      ],
+      [
+        'modifier', 
+        'Modifier',
+        'Modifier', 
+        'The modifier for the Tab.',
+      ],
+      [
+        'onClick', 
+        '() -> Unit',
+        '{}', 
+        'The function to be invoked when clicked ',
+      ],
+      [
+        'interactionSource', 
+        'MutableInteractionSource',
+        'MutableInteractionSource', 
+        'The interaction source to be used for the tab.',
+      ],
+    ],
+  },
 };
 
 export const iOS = {

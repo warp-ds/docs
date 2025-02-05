@@ -3,6 +3,7 @@
   import React from './react.md';
   import data from './data.json';
   import iOS from './ios.md';
+  import Android from './android.md';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
@@ -40,5 +41,8 @@ This is because aria-controls and aria-labelledby rely on id attributes, and the
   </template>
       <template #iOS>
     <iOS />
+  </template>
+      <template #android>
+    <android />
   </template>
 </tabs-content>

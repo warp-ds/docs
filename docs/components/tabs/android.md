@@ -22,7 +22,7 @@ fun WarpTabRow(
 ```
 
 ## Structure
-WarpTab consists of WarpTabRow which hols multiple WarpTab objects. The tabs can be either fixed or scrollable. The tabs can be either text or text together with an icon. The icon is always on the left of the text.
+The WarpTabs component consists of WarpTabRow which holds multiple WarpTab objects. The tabs can be either fixed or scrollable. The tabs can show either a title or text together with an icon. The icon is always on the left of the text.
 
 ```kotlin example
 var selectedTab by remember { mutableStateOf(0) }
@@ -53,5 +53,7 @@ WarpTabRow(
 
 ### Parameters
 
-<api-table type=android component="Tabs" />
+<api-table type=android component="TabRow" />
+<api-table type=android component="Tab" />
+
 
