@@ -20,7 +20,7 @@ Warp.TextField(
 There are a variety of variants supported for the TextField component:
 
 ```swift
-enum Warp.TextAreaStyle {
+enum Warp.TextFieldStyle {
     case `default`
     case disabled
     case error
