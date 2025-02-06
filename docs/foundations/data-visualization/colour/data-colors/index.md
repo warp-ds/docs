@@ -4,45 +4,50 @@
 
 In dataviz we use visual elements to encode data (sometimes referred to as ‘data marks’). 
 
-For data colours, there are different semantic colours that should be used intentionally: Primary, Secondary, Category and Evaluation colXWours.
+For data colours, there are different semantic colours that should be used intentionally: Primary, Secondary, Category and Evaluation colours.
 
 ### Primary – when you only need one colour
 
-<!-- <span style="display: inline-block; width: 18px; height: 18px; background-color: #1087de; border-radius: 2px; vertical-align: -1px;"></span>  -->
+![Example of blue bars and a blue line in light mode and dark mode](/foundations/dataviz/color-primary.png)
 
-![Screenshot from Figma](/foundations/dataviz/color-primary.png)
+If you only need one colour (or hue) in a chart, use the Primary colour. The primary colour is **blue**, but the shade varies across light mode, dark mode and the it is applied to.
 
-If you only need one colour (or hue) in a chart, use the Primary colour. The primary colour is blue, but the shade varies across light mode, dark mode and what element it is applied to.
+By using the primary colour across multiple graphs, our pages get a consistent and professional look and feel.
 
-
+#### Semantic tokens
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/colourlist-primarycolours.png){width=620px}
+![List of colours with preview: background/primary, background/primary-subtle, line/primary, border/primary, text/primary and icon/primary](/foundations/dataviz/colourlist-primarycolours.png){width=620px}
 :::
+
+| Name | Colour | Description | 
+| ---- | :---- | ----------- | 
+| `Background/Primary` | ![](/foundations/dataviz/col-preview/primary-bg.png){width=80px} | For bars and areas | 
+| `Background/Primary-Subtle` | ![](/foundations/dataviz/col-preview/primary-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Primary` | ![](/foundations/dataviz/col-preview/primary-line.png){width=80px} | For lines and points | 
+| `Border/Primary` | ![](/foundations/dataviz/col-preview/primary-border.png){width=80px} | For border around `Primary-Subtle` | 
+| `Text/Primary` | ![](/foundations/dataviz/col-preview/primary-text.png){width=80px} | For text | 
+| `Icon/Primary` |  ![](/foundations/dataviz/col-preview/primary-icon.png){width=80px} |For icons | 
+
+
 
 ### Secondary – for secondary information
 
-<!-- <span style="display: inline-block; width: 18px; height: 18px; background-color: #919499; border-radius: 2px; vertical-align: -1px;"></span> -->  
+![List of colours with preview: background/primary, background/primary-subtle, line/primary, border/primary, text/primary and icon/primary](/foundations/dataviz/color-primary-and-secondary.png)
 
-![Screenshot from Figma](/foundations/dataviz/color-primary-and-secondary.png)
+When you want to indicate that a data category is secondary, you may use the secondary colour. The primary colour is **gray**. 
 
-
-When you want to indicate that a data category is secondary, you may use the secondary colour. This can for example be useful if you want to compare some important data with a reference data, for example this year against last year, or your own data against others’. 
+The secondary colour can be useful if you want to compare some important data with reference data, for example this year against last year, or your own performance against others’. 
 
 In general the Secondary colour should be used together with the Primary colour, and it doesn’t make much sense to use the Secondary colour alone.
-
 
 
 #### Semantic tokens
 
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/colourlist-secondarycolours.png){width=620px}
+![List of colours with preview: background/primary, background/primary-subtle, line/primary, border/primary, text/primary and icon/primary](/foundations/dataviz/colourlist-secondarycolours.png){width=620px}
 :::
 
-
 ### Category – to differentiate between categories
-
-<!-- <span style="display: inline-block; width: 18px; height: 18px; background-color: #795af4; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #c88800; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #eb5ec7; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #00a881; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #e84c23; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #19818f; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #2b97ef; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 18px; height: 18px; background-color: #919499; border-radius: 2px; vertical-align: -1px;"></span>  
- -->
 
 ![Screenshot from Figma](/foundations/dataviz/color-category.png)
 

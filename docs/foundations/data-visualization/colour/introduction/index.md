@@ -9,7 +9,7 @@ Colour plays an important role in data visualisation, and can be used to encode 
 
 <br>
 
-## Introduction to dataviz colours
+## Chart colours vs data colours
 
 ::: image-block
 ![Empty chart with axes, labels and gridlines using WARP colours to the left, bars and lines using dataviz colours to the right](/foundations/dataviz/chart-vs-data-colours.png)
@@ -19,7 +19,7 @@ There are two main categories of dataviz colours:
 - We use **Chart colours** for non-data elements in the chart, such as gridlines, axes and text labels
 - We use **Data colours** are for visual elements that encode data, such as lines, bars and areas.
 
-### Semantic tokens
+## Semantic tokens
 
 The dataviz library is structured in a similar way as the regular WARP UI library, using **semantic tokens**. Semantic tokens are variables that refer to another colour, but can be changed dynamically, for example when switching between light mode and dark mode. The dataviz colours are the same across all Vend brands. 
 
@@ -31,7 +31,7 @@ Colour values are stored in colour primitives, which are connected to semantic t
 Semantic tokens allow us to use colours in a consistent and meaningful way, makes it easy to swap between light mode and dark mode. In addition, if we want to adjust a colour, we only have to do change one value and it will be applied everywhere the token is used.
 
 
-### Mapping dataviz elements to semantic tokens
+## Mapping dataviz elements to semantic tokens
 Data visualisations can be made using a variety of shapes, and it is not necessary or useful to define colours for all those shapes. We have have defined 5 semantic token categories that should cater for most use cases: `line`, `background`, `border`, `text` and `icon`.
 
 Some visual elements need to use more than one colour token. For example, a bar with a subtle background colour needs both a `background` colour and a `border` colour. 
@@ -81,4 +81,14 @@ For measuring contrast for each individual colour, we have used both WCAG 2 (3:1
 
 In addition, we have adjusted lightness in order to make the colours work well together in the different palettes. For example, the lightness of the categorical colours vary so that they are easier to differentiate for people with colour deficiencies.
 
+## Why use dataviz chart colours and not regular WARP colours?
+Some of the chart colours are identical to regular WARP colours, for example the background and the text colours. However, there are a few reaasons why we provide these colours in the dataviz library: 
 
+- In Figma, it is convenient for designers to have all the colours they need for charts in one library
+- In code, the dataviz colours can be applied to SVG elements using utility classes
+- Some components (in Figma) need the ChartBackground colour as part of the component
+- Users of the dataviz library get all the colours they need for creating charts, and the library can therefore be used independent of WARP
+- The ChartBackground colour ensures good contrast between the dataviz elements and the background, which might not be the case if using other WARP background colours 
+- At the time of writing (January 2025) there is no distinction in WARP between border and border subtle in WARP, which is needed for gridlines etc.
+
+However, it is of course possible for a developer to use other colours for chart elements if there is a good reason to do so.

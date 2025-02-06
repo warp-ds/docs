@@ -26,9 +26,9 @@ Since the `border` colours are used with a subtle background colour, the (see [b
 ## Primary
 
 | Figma | Colour* | CSS | HTML class | SVG Fill | SVG Stroke |
-| ----- | ------ | --- | ---------- | -------- | ---------- | 
-| `Border/Primary` | <span style="display: inline-block; width: 19px; height: 28px; background-color: #1087de; border: 4px solid #ffffff; border-radius: 3px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 19px; height: 28px; background-color: #47a6f8; border: 4px solid #1B1B1F; border-radius: 3px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-primary)` | `dv-s-border-primary` | `dv-s-fill-border-primary` | `dv-s-stroke-border-primary` |
-| `Border/Primary-highlight` | <span style="display: inline-block; width: 19px; height: 28px; background-color: #0e6cac; border: 4px solid #ffffff; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 19px; height: 28px; background-color: #93caff; border: 4px solid #1B1B1F; border-radius: 3px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-primary-highlight)` | `dv-s-border-primary-highlight` | `dv-s-fill-border-primary-highlight` | `dv-s-stroke-border-primary-highlight` |
+| ----- | :------: | --- | ---------- | -------- | ---------- | 
+| `Border/Primary` | <span style="display: inline-block; width: 30px; height: 30px; background-color: #1087de; border: 4px solid #ffffff; border-radius: 3px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 30px; height: 30px; background-color: #47a6f8; border: 4px solid #1B1B1F; border-radius: 3px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-primary)` | `dv-s-border-primary` | `dv-s-fill-border-primary` | `dv-s-stroke-border-primary` |
+| `Border/Primary-highlight` | <span style="display: inline-block; width: 19px; height: 19px; background-color: #0e6cac; border: 4px solid #ffffff; border-radius: 2px; vertical-align: -1px;"></span> <span style="display: inline-block; width: 19px; height: 19px; background-color: #93caff; border: 4px solid #1B1B1F; border-radius: 3px; vertical-align: -1px;"></span> | `var(--w-dv-s-color-border-primary-highlight)` | `dv-s-border-primary-highlight` | `dv-s-fill-border-primary-highlight` | `dv-s-stroke-border-primary-highlight` |
 
 \* Light mode and dark mode preview
 
