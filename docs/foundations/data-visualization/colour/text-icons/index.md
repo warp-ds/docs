@@ -22,7 +22,7 @@ Use `Body Strong` font style or larger with `Text` to ensure good contrast.
 In general, use WARP colours on icons in the interface.
 
 However, icons with the dataviz `icon` colours can be relevant in two situations:
-- **Indicate trend**. Place an icon next to a value to help users understand if the value is trending up or down. Use Evaluation colours to reenforce the message of the icon.
+- **Indicate trend**. Place an icon next to a value to help users understand if the value is trending up or down. Use Evaluation colours to reinforce the message of the icon.
 - **Label values**. Use an icon to label the data, possibly in combination with text labels. Using the same colour on the icon and the text can help users visually connect the label to the data.
 
 Only use colour on icons if it makes it easier to visually connect the text to the data marks, or interpret values. Otherwise, use the default icon colour.

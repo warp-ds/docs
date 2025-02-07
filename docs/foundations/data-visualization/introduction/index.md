@@ -69,6 +69,8 @@ WARP offers a comprehensive **colour palette** for data visualisation, available
 
 There is no dedicated code library or components for dataviz available in code, as different teams currently use a variety of libraries. However, there are come components available in Figma. See [Components](/foundations/data-visualization/components/).
 
+These guidelines and resources primarily apply to graphs and charts, not maps.
+
 ## What do you need to think about?
 
 When you create visualisations you want to:

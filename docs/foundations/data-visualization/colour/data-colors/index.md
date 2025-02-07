@@ -57,7 +57,7 @@ The category colours are suited for “nominal data” – which means data tha
 
 #### Order of colours
 
-The colours don’t have to be applied in any particular order, and all combinations of categorical colours should work reasonably well. However, randomly choosing colours can have some negative consequenses. 
+The colours don’t have to be applied in any particular order, and all combinations of categorical colours should work reasonably well. However, randomly choosing colours can have some negative consequences. 
 
 If you choose to not follow the order of colour in the library, consider this:
 - Avoid using orange unless there are already many other categorical colours in use, as orange alone can easily be perceived as negative. In particular, avoid orange together with green or teal. Use the evaluation colours if the intension is to indicate something good or bad

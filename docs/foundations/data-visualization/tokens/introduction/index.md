@@ -18,14 +18,14 @@ See [Colour Usage](/foundations/data-visualization/colour-usage/) for detailed d
 :::
 
 ## Alternative 1: CSS variables
-For CSS variables to work, you need to include a link to the dataviz [CSS](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.5/tokens/dataviz.css) file in your project.
+For CSS variables to work, you need to include a link to the dataviz [CSS](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.6/tokens/dataviz.css) file in your project.
 
 Add this to your `index.html`
 
 ```html
 <link
   rel="stylesheet"
-  href="https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.5/tokens/dataviz.css"
+  href="https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.6/tokens/dataviz.css"
 />
 ```
 
@@ -139,7 +139,7 @@ The regular WARP utility classes don't work for applying SVG `fill` or `stroke`.
 
 ## Highlight colours
 
-Use the `highlight` colour on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highglight colour. 
+Use the `highlight` colour on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highlight colour. 
 
 Example with primary line colour:
 

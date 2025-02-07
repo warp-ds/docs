@@ -77,12 +77,12 @@ The only exception we envision is to use the Primary UI colour if a graph is int
 The lightness of the colours are based on accessibility requirements.
 
 For measuring contrast for each individual colour, we have used both WCAG 2 (3:1 for visual elements) the 
-[Accessible Perceptual Contrast Algorithm](https://git.apcacontrast.com/documentation/APCAeasyIntro.html) (APCA). APCA is more accurately accounts for how perception works than WCAG 2. In addition, it takes the size and width of elements into account. This is particularily noticeable in dark mode, where APCA requires higher contrast.
+[Accessible Perceptual Contrast Algorithm](https://git.apcacontrast.com/documentation/APCAeasyIntro.html) (APCA). APCA is more accurately accounts for how perception works than WCAG 2. In addition, it takes the size and width of elements into account. This is particularly noticeable in dark mode, where APCA requires higher contrast.
 
 In addition, we have adjusted lightness in order to make the colours work well together in the different palettes. For example, the lightness of the categorical colours vary so that they are easier to differentiate for people with colour deficiencies.
 
 ## Why use dataviz chart colours and not regular WARP colours?
-Some of the chart colours are identical to regular WARP colours, for example the background and the text colours. However, there are a few reaasons why we provide these colours in the dataviz library: 
+Some of the chart colours are identical to regular WARP colours, for example the background and the text colours. However, there are a few reasons why we provide these colours in the dataviz library: 
 
 - In Figma, it is convenient for designers to have all the colours they need for charts in one library
 - In code, the dataviz colours can be applied to SVG elements using utility classes

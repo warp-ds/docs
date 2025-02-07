@@ -13,7 +13,7 @@ Chart elements, and which semantic colours to use:
 - **Labels**: text on the x or y axis, often next to ticks or gridlines 
 
 ::: image-block
-![Empty graph with annotated elements like background, lable, gridline and tick](/foundations/dataviz/chart-colours.png){width=433px}
+![Empty graph with annotated elements like background, label, gridline and tick](/foundations/dataviz/chart-colours.png){width=433px}
 :::
 
 All chart colours start with `Chart-`.
@@ -34,7 +34,7 @@ You don't necessarily need to include all chart elements in every graph. Less is
 Things to consider:
 - Gridlines combined with labels (example to the left) make it possible to see the approximate value of the data mark (for example a bar), and can be useful if there are many data marks in the graph 
 - If there are few data marks in the graph, you could consider showing the value for each data mark (example to the right). In that case, you don't really need the gridlines and value labels on the axes
-- The baseline is useful to ground the visual marks and connect all the elements together. Especially when using lines and points it is necessary to have a baseline to be able to visually see the dinstance from 0 to the visual marks. However, for a bar chart or area chart it might be ok to skip the baseline, as long as the data marks are not too far from each other.
+- The baseline is useful to ground the visual marks and connect all the elements together. Especially when using lines and points it is necessary to have a baseline to be able to visually see the distance from 0 to the visual marks. However, for a bar chart or area chart it might be ok to skip the baseline, as long as the data marks are not too far from each other.
 
 
 ## Which chart colours should you use?
