@@ -1,21 +1,13 @@
-# Introduction to Tokens & CSS
+# Introduction to Tokens & CSS for Dataviz Colours
 
-*For usage guidelines, see [Colour Guidelines](/foundations/data-visualization/colour/introduction/).*
+*For design guidelines, see [Colour Guidelines](/foundations/data-visualization/colour/introduction/).*
 
-We have defined a colour palette for data visualization that should be used across all brands: 
-- On web, you can apply the dataviz colours using [CSS variables](#alternative-1-css-variables) or [Utility classes](#alternative-2-utility-classes). 
-- For native, see [iOS](#ios) and [Android](#android)
+We have defined a colour palette for data visualization that should be used across all brands. On web, you can apply the dataviz colours using [CSS variables](#alternative-1-css-variables) or [Utility classes](#alternative-2-utility-classes). 
 
-<br>
+The dataviz colour names include `dv` for dataviz, to differentiate them from regular WARP colours.
 
 **On this page:**
 [[toc]]
-
-<br>
-
-::: tip Pro tip
-See [Colour Usage](/foundations/data-visualization/colour-usage/) for detailed descriptions and examples of the different colours. 
-:::
 
 ## Alternative 1: CSS variables
 For CSS variables to work, you need to include a link to the dataviz [CSS](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.6/tokens/dataviz.css) file in your project.
@@ -139,13 +131,27 @@ The regular WARP utility classes don't work for applying SVG `fill` or `stroke`.
 
 ## Highlight colours
 
-Use the `highlight` colour on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highlight colour. 
+All dataviz colours tokens (except the chart colours) have a corresponding `highlight` token to be used on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highlight colour.
 
-Example with primary line colour:
+#### Example: CSS variable
 
-`dv-s-line-primary-highlight` or `color: var(--w-dv-s-color-line-primary-highlight)`. 
+CSS variable example, primary background colour:
 
-In addition, consider **dimming the other elements** that are not highlighted, to **80% opacity**. In bar charts, place hoverable areas immediately next to each other with no space in-between, to avoid a 'flickering effect' when moving the cursor across the bars. If you are not able to do so, do not dim the other bars.
+| Default colour | Highlight colour |  
+| ----- | ------ | 
+| `var(--w-dv-s-color-background-primary)` | `var(--w-dv-s-color-background-primary-highlight)` | 
+
+#### Example: Utility class
+
+Utility class example, primary background colour:
+
+| Type | Default colour | Highlight colour |  
+| --- | ----- | ------ |  
+| HTML background | `dv-s-bg-primary` | `dv-s-bg-primary-highlight` | 
+| SVG fill| `dv-s-fill-bg-primary` | `dv-s-fill-bg-primary-highlight` | 
+| SVG stroke| `dv-s-stroke-bg-primary` | `dv-s-stroke-bg-primary-highlight` | 
+
+See [Interaction](/foundations/data-visualization/interaction/) for more information and examples.
 
 ## iOS
 

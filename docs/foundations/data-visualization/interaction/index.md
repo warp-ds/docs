@@ -1,6 +1,6 @@
-# Interaction with dataviz
+# Interaction with Dataviz
 
-It can be highly useful for a user to be able to get more details on demand, for example about each data point in a graph. 
+It can be valuable for a user to filter or sort the data, or get more details on demand. These guidelines deal primarily with getting more information about each data point in a graph.
 
 Interactive features should be accessible for all users – including [keyboard navigation](/foundations/data-visualization/success-criteria/keyboard/) and [screen reader](/foundations/data-visualization/success-criteria/screenreader/). In addition, consider making the information available in a table view.
 
@@ -8,9 +8,9 @@ Interactive features should be accessible for all users – including [keyboard
 
 [[toc]]
 
-## Guidelines
+## Interaction states and pseudo-classes
 
-Guidelines for interaction with graphs and charts.
+Guidelines for interaction states and pseudo-classes for graphs and charts.
 
 ### Hover and tap
 ::: image-block
@@ -19,13 +19,12 @@ Guidelines for interaction with graphs and charts.
 
 For graphs, users typically expect the same interactive behaviour for hover (using a pointing device) and tap (on a touch device). When hovering or tapping, they expect to get details about the data point.
 
-Optionally, keep the tooltip open until another tooltip opens, or the pointing device has left the graph.
+Optionally, keep the tooltip open until another tooltip opens, or the pointing device has left the graph. This might be particularly useful if the data point target sizes are small.
 
 #### Styling for hover and tap
 Use [highlight colour](#highlight-colour) for the data mark, and provide information about the data mark in a [tooltip](#tooltip). You can also [dim other data marks](#dim-other-elements).
 
 #### Target size for hover and tap
-
 The interactive area for hover and tap (the 'target') can be larger than the data element itself. The target size should ideally be at least [44 by 44 CSS pixels](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html). We should strive for this, even thought it might not always be possible, for example if multiple points are close to one another.
 
 **Bars:**
@@ -79,24 +78,7 @@ All dataviz colours (except the chart colours) have a highlight version. These t
 
 See [this Figma prototype](https://www.figma.com/proto/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz-(Beta)?page-id=1%3A285&node-id=2532-18695&viewport=-2724%2C329%2C0.21&t=k48dzMq2bHNm9UVm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2532%3A18695) for an interactive preview of the highlight colours. 
 
-#### Example: CSS variable
-
-CSS variable example, primary background colour:
-
-| Default colour | Highlight colour |  
-| ----- | ------ | 
-| `var(--w-dv-s-color-background-primary)` | `var( --w-dv-s-color-background-primary-highlight)` | 
-
-#### Example: Utility class
-
-Utility class example, primary background colour:
-
-| Type | Default colour | Highlight colour |  
-| --- | ----- | ------ |  
-| HTML background | `dv-s-bg-primary` | `dv-s-bg-primary-highlight` | 
-| SVG fill| `dv-s-fill-bg-primary` | `dv-s-fill-bg-primary-highlight` | 
-
-For applying utility classes to HTML vs SVG elements, see [Introduction to Tokens & CSS](/foundations/data-visualization/tokens/introduction/#alternative-2-utility-classes). 
+For implementation examples, see [Tokens & CSS > Introduction](foundations/data-visualization/tokens/introduction/#highlight-colours).
 
 ### Dim other elements
 In addition to using the highlight colour, consider **dimming the other elements** that are not highlighted. A good starting point is **80% opacity** when using hover and keyboard focus.
