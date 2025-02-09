@@ -24,12 +24,12 @@ If you only need one colour (or hue) in a chart, use the Primary colour. The pri
 By using the primary colour across multiple graphs, our pages get a consistent and professional look and feel.
 
 #### Primary: Blue
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/primary, background/primary-subtle, line/primary, border/primary, text/primary and icon/primary](/foundations/dataviz/colourlist-primary.png){width=620px}
-:::
+::: -->
 
 | Name | Light/Dark mode | Description | 
-| ---- | -- | ----------- | 
+| ---- | --------------- | ----------- | 
 | `Background/Primary` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg.png){width=80px} | Bars and areas | 
 | `Background/Primary-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
 | `Line/Primary` | ![blue lines](/foundations/dataviz/col-preview/primary-line.png){width=80px} | Lines and points | 
@@ -51,9 +51,18 @@ In general the Secondary colour should be used together with the Primary colour,
 
 #### Secondary: Gray
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/primary, background/primary-subtle, line/primary, border/primary, text/primary and icon/primary](/foundations/dataviz/colourlist-secondary.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Secondary` | ![blue boxes](/foundations/dataviz/col-preview/secondary-bg.png){width=80px} | Bars and areas | 
+| `Background/Secondary-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/secondary-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Secondary` | ![blue lines](/foundations/dataviz/col-preview/secondary-line.png){width=80px} | Lines and points | 
+| `Border/Secondary` | ![blue lines](/foundations/dataviz/col-preview/secondary-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Secondary` | ![blue text](/foundations/dataviz/col-preview/secondary-text.png){width=80px} | Text | 
+| `Icon/Secondary` |  ![blue icons](/foundations/dataviz/col-preview/secondary-icon.png){width=80px} | Icons | 
 
 ### Category – to differentiate between categories
 
@@ -65,51 +74,123 @@ The category colours are suited for “nominal data” – which means data tha
 
 #### Category1: Indigo
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category1, background/category1, line/category1, border/category1, text/category1 and icon/category1](/foundations/dataviz/colourlist-category1.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category1` | ![blue boxes](/foundations/dataviz/col-preview/category1-bg.png){width=80px} | Bars and areas | 
+| `Background/Category1-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category1-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category1` | ![blue lines](/foundations/dataviz/col-preview/category1-line.png){width=80px} | Lines and points | 
+| `Border/Category1` | ![blue lines](/foundations/dataviz/col-preview/category1-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category1` | ![blue text](/foundations/dataviz/col-preview/category1-text.png){width=80px} | Text | 
+| `Icon/Category1` |  ![blue icons](/foundations/dataviz/col-preview/category1-icon.png){width=80px} | Icons | 
 
 #### Category2: Yellow
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category2, background/category2, line/category2, border/category2, text/category2 and icon/category2](/foundations/dataviz/colourlist-category2.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category2` | ![blue boxes](/foundations/dataviz/col-preview/category2-bg.png){width=80px} | Bars and areas | 
+| `Background/Category2-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category2-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category2` | ![blue lines](/foundations/dataviz/col-preview/category2-line.png){width=80px} | Lines and points | 
+| `Border/Category2` | ![blue lines](/foundations/dataviz/col-preview/category2-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category2` | ![blue text](/foundations/dataviz/col-preview/category2-text.png){width=80px} | Text | 
+| `Icon/Category2` |  ![blue icons](/foundations/dataviz/col-preview/category2-icon.png){width=80px} | Icons | 
 
 #### Category3: Pink
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category3, background/category3, line/category3, border/category3, text/category3 and icon/category3](/foundations/dataviz/colourlist-category3.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category3` | ![blue boxes](/foundations/dataviz/col-preview/category3-bg.png){width=80px} | Bars and areas | 
+| `Background/Category3-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category3-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category3` | ![blue lines](/foundations/dataviz/col-preview/category3-line.png){width=80px} | Lines and points | 
+| `Border/Category3` | ![blue lines](/foundations/dataviz/col-preview/category3-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category3` | ![blue text](/foundations/dataviz/col-preview/category3-text.png){width=80px} | Text | 
+| `Icon/Category3` |  ![blue icons](/foundations/dataviz/col-preview/category3-icon.png){width=80px} | Icons | 
 
 #### Category4: Green
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category4, background/category4, line/category4, border/category4, text/category4 and icon/category4](/foundations/dataviz/colourlist-category4.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category4` | ![blue boxes](/foundations/dataviz/col-preview/category4-bg.png){width=80px} | Bars and areas | 
+| `Background/Category4-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category4-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category4` | ![blue lines](/foundations/dataviz/col-preview/category4-line.png){width=80px} | Lines and points | 
+| `Border/Category4` | ![blue lines](/foundations/dataviz/col-preview/category4-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category4` | ![blue text](/foundations/dataviz/col-preview/category4-text.png){width=80px} | Text | 
+| `Icon/Category4` |  ![blue icons](/foundations/dataviz/col-preview/category4-icon.png){width=80px} | Icons | 
 
 #### Category5: Orange
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category5, background/category5, line/category5, border/category5, text/category5 and icon/category5](/foundations/dataviz/colourlist-category5.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category5` | ![blue boxes](/foundations/dataviz/col-preview/category5-bg.png){width=80px} | Bars and areas | 
+| `Background/Category5-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category5-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category5` | ![blue lines](/foundations/dataviz/col-preview/category5-line.png){width=80px} | Lines and points | 
+| `Border/Category5` | ![blue lines](/foundations/dataviz/col-preview/category5-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category5` | ![blue text](/foundations/dataviz/col-preview/category5-text.png){width=80px} | Text | 
+| `Icon/Category5` |  ![blue icons](/foundations/dataviz/col-preview/category5-icon.png){width=80px} | Icons | 
 
 #### Category6: Teal
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category6, background/category6, line/category6, border/category6, text/category6 and icon/category6](/foundations/dataviz/colourlist-category6.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category6` | ![blue boxes](/foundations/dataviz/col-preview/category6-bg.png){width=80px} | Bars and areas | 
+| `Background/Category6-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category6-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category6` | ![blue lines](/foundations/dataviz/col-preview/category6-line.png){width=80px} | Lines and points | 
+| `Border/Category6` | ![blue lines](/foundations/dataviz/col-preview/category6-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category6` | ![blue text](/foundations/dataviz/col-preview/category6-text.png){width=80px} | Text | 
+| `Icon/Category6` |  ![blue icons](/foundations/dataviz/col-preview/category6-icon.png){width=80px} | Icons | 
 
 #### Category7: Blue
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category7, background/category7, line/category7, border/category7, text/category7 and icon/category7](/foundations/dataviz/colourlist-category7.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category7` | ![blue boxes](/foundations/dataviz/col-preview/category7-bg.png){width=80px} | Bars and areas | 
+| `Background/Category7-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category7-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category7` | ![blue lines](/foundations/dataviz/col-preview/category7-line.png){width=80px} | Lines and points | 
+| `Border/Category7` | ![blue lines](/foundations/dataviz/col-preview/category7-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category7` | ![blue text](/foundations/dataviz/col-preview/category7-text.png){width=80px} | Text | 
+| `Icon/Category7` |  ![blue icons](/foundations/dataviz/col-preview/category7-icon.png){width=80px} | Icons | 
 
 #### Category8: Gray
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/category8, background/category8, line/category8, border/category8, text/category8 and icon/category8](/foundations/dataviz/colourlist-category8.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Category8` | ![blue boxes](/foundations/dataviz/col-preview/category8-bg.png){width=80px} | Bars and areas | 
+| `Background/Category8-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category8-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Category8` | ![blue lines](/foundations/dataviz/col-preview/category8-line.png){width=80px} | Lines and points | 
+| `Border/Category8` | ![blue lines](/foundations/dataviz/col-preview/category8-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category8` | ![blue text](/foundations/dataviz/col-preview/category8-text.png){width=80px} | Text | 
+| `Icon/Category8` |  ![blue icons](/foundations/dataviz/col-preview/category8-icon.png){width=80px} | Icons | 
 
 ### Evaluation - to indicate something positive, neutral or negative
 
@@ -137,29 +218,63 @@ What is positive or negative for the user depends on the context. Sometimes it i
 
 #### Positive: Green
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/positive, background/positive, line/positive, border/positive, text/positive and icon/positive](/foundations/dataviz/colourlist-positive.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Positive` | ![blue boxes](/foundations/dataviz/col-preview/positive-bg.png){width=80px} | Bars and areas | 
+| `Background/Positive-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/positive-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Positive` | ![blue lines](/foundations/dataviz/col-preview/positive-line.png){width=80px} | Lines and points | 
+| `Border/Positive` | ![blue lines](/foundations/dataviz/col-preview/positive-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Positive` | ![blue text](/foundations/dataviz/col-preview/positive-text.png){width=80px} | Text | 
+| `Icon/Positive` |  ![blue icons](/foundations/dataviz/col-preview/positive-icon.png){width=80px} | Icons | 
 
 #### Warning: Yellow
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/warning, background/warning, line/warning, border/warning, text/warning and icon/warning](/foundations/dataviz/colourlist-warning.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Warning` | ![blue boxes](/foundations/dataviz/col-preview/warning-bg.png){width=80px} | Bars and areas | 
+| `Background/Warning-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/warning-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Warning` | ![blue lines](/foundations/dataviz/col-preview/warning-line.png){width=80px} | Lines and points | 
+| `Border/Warning` | ![blue lines](/foundations/dataviz/col-preview/warning-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Warning` | ![blue text](/foundations/dataviz/col-preview/warning-text.png){width=80px} | Text | 
+| `Icon/Warning` |  ![blue icons](/foundations/dataviz/col-preview/warning-icon.png){width=80px} | Icons | 
 
 #### Negative: Red
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/negative, background/negative, line/negative, border/negative, text/negative and icon/negative](/foundations/dataviz/colourlist-negative.png){width=620px}
-:::
+::: -->
+
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Negative` | ![blue boxes](/foundations/dataviz/col-preview/negative-bg.png){width=80px} | Bars and areas | 
+| `Background/Negative-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/negative-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Negative` | ![blue lines](/foundations/dataviz/col-preview/negative-line.png){width=80px} | Lines and points | 
+| `Border/Negative` | ![blue lines](/foundations/dataviz/col-preview/negative-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Negative` | ![blue text](/foundations/dataviz/col-preview/negative-text.png){width=80px} | Text | 
+| `Icon/Negative` |  ![blue icons](/foundations/dataviz/col-preview/negative-icon.png){width=80px} | Icons | 
 
 #### Neutral: Gray
 
-::: image-block
+<!-- ::: image-block
 ![List of colours with preview: background/neutral, background/neutral, line/neutral, border/neutral, text/neutral and icon/neutral](/foundations/dataviz/colourlist-neutral.png){width=620px}
-:::
+::: -->
 
-
+| Name | Light/Dark mode | Description | 
+| ---- | --------------- | ----------- | 
+| `Background/Neutral` | ![blue boxes](/foundations/dataviz/col-preview/neutral-bg.png){width=80px} | Bars and areas | 
+| `Background/Neutral-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/neutral-bg-subtle.png){width=80px} | Subtle colour for bars and areas | 
+| `Line/Neutral` | ![blue lines](/foundations/dataviz/col-preview/neutral-line.png){width=80px} | Lines and points | 
+| `Border/Neutral` | ![blue lines](/foundations/dataviz/col-preview/neutral-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Neutral` | ![blue text](/foundations/dataviz/col-preview/neutral-text.png){width=80px} | Text | 
+| `Icon/Neutral` |  ![blue icons](/foundations/dataviz/col-preview/neutral-icon.png){width=80px} | Icons | 
 
 
 ## Colour guidelines

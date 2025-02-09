@@ -24,6 +24,8 @@ Optionally, keep the tooltip open until another tooltip opens, or the pointing d
 #### Styling for hover and tap
 Use [highlight colour](#highlight-colour) for the data mark, and provide information about the data mark in a [tooltip](#tooltip). You can also [dim other data marks](#dim-other-elements).
 
+For **lines**, consider using a thicker line on hover. For **points**, consider scaling up the points.
+
 #### Target size for hover and tap
 The interactive area for hover and tap (the 'target') can be larger than the data element itself. The target size should ideally be at least [44 by 44 CSS pixels](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html). We should strive for this, even thought it might not always be possible, for example if multiple points are close to one another.
 
