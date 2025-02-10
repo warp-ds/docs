@@ -10,14 +10,16 @@ The dataviz colour names include `dv` for dataviz, to differentiate them from re
 [[toc]]
 
 ## Alternative 1: CSS variables
-For CSS variables to work, you need to include a link to the dataviz [CSS](https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.6/tokens/dataviz.css) file in your project.
+For CSS variables to work, you need to include a link to the dataviz CSS file in your project:
+
+- `https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/dataviz.css`
 
 Add this to your `index.html`
 
 ```html
 <link
   rel="stylesheet"
-  href="https://assets.finn.no/pkg/@warp-ds/css/2.1.0-next.6/tokens/dataviz.css"
+  href="https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/dataviz.css"
 />
 ```
 
