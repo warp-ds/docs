@@ -12,12 +12,12 @@ const pages = [{
 {
   title: "Colour Guidelines",
   description: "Guidelines for using the dataviz colours. Mostly for designers.",
-  href: "../colour/",
+  href: "../colour/introduction/",
 },
 {
   title: "Tokens & CSS",
   description: "Guidelines for implementing colours in code using tokens and CSS. Mostly for developers.",
-  href: "../tokens/",
+  href: "../tokens/introduction/",
 },
 {
   title: "Interaction",
@@ -27,7 +27,7 @@ const pages = [{
 {
   title: "Success Criteria",
   description: "Success criteria for creating accessible and useful data visualisations. For designers and developers.",
-  href: "../success-criteria/",
+  href: "../success-criteria/introduction/",
 }]
 </script>
 
@@ -67,7 +67,7 @@ On this page you will find a general introduction to working with data visualisa
 
 WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/colour-usage/) for guidelines, and [Tokens & CSS](/foundations/data-visualization/colour-usage/) for implementation in code.
 
-There is no dedicated code library or components for dataviz available in code, as different teams currently use a variety of libraries. However, there are come components available in Figma. See [Components](/foundations/data-visualization/components/).
+There is no dedicated dataviz library in Vend, as different teams currently use a variety of libraries. However, there are some components available in Figma. See [Components](/foundations/data-visualization/components/).
 
 These guidelines and resources primarily apply to graphs and charts, not maps.
 
@@ -104,7 +104,7 @@ Before you make a visualisation it can be useful to define the goal of the visua
 
 ### Read vs Feel
 
-- **Read**: the focus is on being able to read the data as efficiently and precise as possible. In this case, make sure to use the graph types and elements that allows for a precise reading. For example, it is hard to compare one angle with another, or the size of an area with another, while it is easier to compare the length of lines next to each other
+- **Read**: the focus is on being able to read the data as efficiently and precise as possible. In this case, make sure to use the graph types and elements that allow for a precise reading. For example, it is hard to compare one angle with another, or the size of an area with another, while it is easier to compare the length of lines next to each other
 - **Feel**: the focus is on evoking a feeling or overall impression of the data. In this case, consider visual means that evoke associations and emotions and make the visualisation memorable.
 
 ## Chart functions

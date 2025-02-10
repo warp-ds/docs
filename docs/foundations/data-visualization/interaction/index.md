@@ -27,7 +27,7 @@ Use [highlight colour](#highlight-colour) for the data mark, and provide informa
 For **lines**, consider using a thicker line on hover. For **points**, consider scaling up the points.
 
 #### Target size for hover and tap
-The interactive area for hover and tap (the 'target') can be larger than the data element itself. The target size should ideally be at least [44 by 44 CSS pixels](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html). We should strive for this, even thought it might not always be possible, for example if multiple points are close to one another.
+The interactive area for hover and tap (the 'target') can be larger than the data element itself. The target size should ideally be at least [44 by 44 CSS pixels](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html). We should strive for this, even though it might not always be possible, for example if multiple points are close to one another.
 
 **Bars:**
 

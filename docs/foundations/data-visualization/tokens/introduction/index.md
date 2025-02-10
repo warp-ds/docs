@@ -131,7 +131,7 @@ The regular WARP utility classes don't work for applying SVG `fill` or `stroke`.
 </text>
 ```  
 
-## Highlight colours
+## Hover, focus and active
 
 All dataviz colours tokens (except the chart colours) have a corresponding `highlight` token to be used on hover, tap and keyboard focus. Add `-highlight` to the end of the variable name or class name to get the highlight colour.
 

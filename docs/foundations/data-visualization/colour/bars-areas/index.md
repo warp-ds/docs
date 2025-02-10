@@ -34,7 +34,7 @@ In Figma, this is implemented in the bar components.
 If you are creating stacked bar charts, add white space between each colour to make it easier to identify each part.
 :::
 
-If you add white space between each bar segment, and there are several stacked bars next to each, the white space should not affect the total hight/width of the stacked bars. In stead, remove the same amount of height/width from each bar segment (for example one pixel per bar segment). In this way, the total height/width of each stacked bar can be compared width one another.
+If you add white space between each bar segment, and there are several stacked bars next to each, the white space should not affect the total hight/width of the stacked bars. Instead, remove the same amount of height/width from each bar segment (for example one pixel per bar segment). In this way, the total height/width of each stacked bar can be compared with one another.
 
 ::: image-block
 ![Stacked bar with two bar segments, separated by a small white gap](/foundations/dataviz/bar-whitespace.png){width=434px}

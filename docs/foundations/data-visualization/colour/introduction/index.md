@@ -32,7 +32,7 @@ Semantic tokens allow us to use colours in a consistent and meaningful way, make
 
 ### Token categories 
 
-Data visualisations can be made using a variety of shapes, and it is not necessary nor useful to define colours for all those shapes. We have have defined 5 semantic token categories that should cater for most use cases: `line`, `background`, `border`, `text` and `icon`.
+Data visualisations can be made using a variety of shapes, and it is not necessary nor useful to define colours for all those shapes. We have defined 5 semantic token categories that should cater for most use cases: `line`, `background`, `border`, `text` and `icon`.
 
 ::: image-block
 ![Screenshot from Figma](/foundations/dataviz/semantic-categories.png){width=617px}
@@ -90,7 +90,7 @@ Yes, we know it’s a lot. Here are some reasons why we need so many dataviz col
 The lightness of the colours are based on accessibility requirements.
 
 For measuring contrast for each individual colour, we have used both WCAG 2 (3:1 for visual elements) the 
-[Accessible Perceptual Contrast Algorithm](https://git.apcacontrast.com/documentation/APCAeasyIntro.html) (APCA). APCA is more accurately accounts for how perception works than WCAG 2. In addition, it takes the size and width of elements into account. This is particularly noticeable in dark mode, where APCA requires higher contrast.
+[Accessible Perceptual Contrast Algorithm](https://git.apcacontrast.com/documentation/APCAeasyIntro.html) (APCA). APCA more accurately accounts for how perception works than WCAG 2. In addition, it takes the size and width of elements into account. This is particularly noticeable in dark mode, where APCA requires higher contrast.
 
 In addition, we have adjusted lightness in order to make the colours work well together in the different palettes. For example, the lightness of the categorical colours vary so that they are easier to differentiate for people with colour deficiencies.
 
