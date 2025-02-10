@@ -529,7 +529,7 @@ export default defineConfig({
           { text: 'Accessibility', link: '/foundations/accessibility/' },
           { text: 'Brands', link: '/foundations/brands/' },
           {
-            text: 'Data visualisation', 
+            text: 'Data visualisation <span style="color: white; background-color: #BE3830; padding: 2px 8px; margin: 0px 8px; border-radius: 4px; font-weight: bold;">WIP</span>', 
             collapsed: true,
             items: [
               { text: 'Introduction', link: '/foundations/data-visualization/introduction/' },
