@@ -88,7 +88,7 @@ These are high level principles we should strive for. In the section [Success cr
 
 ## How do you define the goal of your visualisation?
 
-Before you make a visualisation it can be useful to define the goal of the visualisation. One way of doing so is two answer two core questions:
+Before you make a visualisation it can be useful to define the goal of the visualisation. One way of doing so is to answer two core questions:
 
 - Should your visualisation **explain** an insight, or allow people to **explore** on their own?
 - Should your visualisation enable people to **read** off the information in detail, or rather provide them an overall **feeling** of the data?

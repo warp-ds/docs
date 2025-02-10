@@ -28,7 +28,7 @@ The dataviz library is structured in a similar way as the regular WARP UI librar
 
 Colour values are stored in colour primitives, which are connected to semantic tokens, which are applied to dataviz elements.
 
-Semantic tokens allow us to use colours in a consistent and meaningful way, makes it easy to swap between light mode and dark mode. In addition, if we want to adjust a colour, we only have to do change one value and it will be applied everywhere the token is used.
+Semantic tokens allow us to use colours in a consistent and meaningful way, makes it easy to swap between light mode and dark mode. In addition, if we want to adjust a colour, we only have to change one value and it will be applied everywhere the token is used.
 
 ### Token categories 
 
@@ -46,7 +46,7 @@ Some visual elements need to use more than one colour token. For example, a bar 
 ![Screenshot from Figma](/foundations/dataviz/mapping-datavizelement-to-token.png){width=500px}
 :::
 
-In the following pages you can read more about thw two main categories of dataviz colours:
+In the following pages you can read more about the two main categories of dataviz colours:
 - [Chart colours](/foundations/data-visualization/colour/chart-colors/) 
 - [Data colours](/foundations/data-visualization/colour/data-colors/). 
 
