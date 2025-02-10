@@ -1,6 +1,6 @@
 # Line (dataviz)
 
-The dataviz `line` colours are used for lines and points. For design guidelines, see [Colour Guidelines > Lines & Points](/foundations/data-visualization/colour/lines-points/)
+The dataviz `line` colours are used for lines and points. For design guidelines, see [Colour Guidelines > Lines & Points](/foundations/data-visualization/color/lines-points/)
 
 ::: details Visual overview
 ![Preview of Primary, Secondary, Category and Evaluation colours for light mode and dark mode](/foundations/dataviz/token-overview-line.png)

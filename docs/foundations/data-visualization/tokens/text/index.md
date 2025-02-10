@@ -1,6 +1,6 @@
 # Text (dataviz)
 
-The dataviz `text` colours are used for text representing data. For design guidelines, see [Colour Guidelines > Text & Icons](/foundations/data-visualization/colour/text-icons/).
+The dataviz `text` colours are used for text representing data. For design guidelines, see [Colour Guidelines > Text & Icons](/foundations/data-visualization/color/text-icons/).
 
 ::: details Visual overview
 ![Preview of Primary, Secondary, Category and Evaluation colours for light mode and dark mode](/foundations/dataviz/token-overview-text.png)

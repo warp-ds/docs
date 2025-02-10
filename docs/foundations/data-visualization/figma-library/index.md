@@ -29,7 +29,7 @@ The library includes colours and a few chart components.
 ## Use components and colours from the library
 When you have added the library, you will find some basic components under **Assets** in the left side panel. See [Components](/foundations/data-visualization/components/) for an overview.
 
-In addition, there are lots of colours available to use in your graphs. See [Colour Usage](/foundations/data-visualization/colour-usage/) on how to choose the right colours.
+In addition, there are lots of colours available to use in your graphs. See [Colour Guidelines](/foundations/data-visualization/color/introduction/) on how to choose the right colours.
 
 ## Switch mode
 To switch between light mode and dark mode:

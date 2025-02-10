@@ -12,7 +12,7 @@ const pages = [{
 {
   title: "Colour Guidelines",
   description: "Guidelines for using the dataviz colours. Mostly for designers.",
-  href: "../colour/introduction/",
+  href: "../color/introduction/",
 },
 {
   title: "Tokens & CSS",
@@ -31,10 +31,10 @@ const pages = [{
 }]
 </script>
 
-# Introduction to Data Visualisation
+<span style="color: white; background-color: #BE3830; padding: 2px 8px; margin: 8px 0px; border-radius: 4px; font-weight: bold;">Work in progress</span>
+# Introduction to Data Visualisation 
 
 ![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)
-
 
 <br>
 <cards class="grid grid-cols-1 sm:grid-cols-2 gap-12">
@@ -65,7 +65,7 @@ On this page you will find a general introduction to working with data visualisa
 
 ## Dataviz in WARP
 
-WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/colour-usage/) for guidelines, and [Tokens & CSS](/foundations/data-visualization/colour-usage/) for implementation in code.
+WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/color/introduction/) for guidelines, and [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) for implementation in code.
 
 There is no dedicated dataviz library in Vend, as different teams currently use a variety of libraries. However, there are some components available in Figma. See [Components](/foundations/data-visualization/components/).
 

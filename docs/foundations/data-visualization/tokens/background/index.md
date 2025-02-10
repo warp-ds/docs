@@ -2,7 +2,7 @@
 
 # Background (dataviz)
 
-The dataviz `background` colours are used as fill/background colour in areas, bars and columns. For design guidelines, see [Colour Guidelines > Bars & Areas](/foundations/data-visualization/colour/bars-areas/).
+The dataviz `background` colours are used as fill/background colour in areas, bars and columns. For design guidelines, see [Colour Guidelines > Bars & Areas](/foundations/data-visualization/color/bars-areas/).
 
 ::: details Visual overview
 The `-subtle` colours need a border to achieve good contrast against the background (see [border tokens](/foundations/data-visualization/tokens/border/) ). Therefore, the border is included in the illustration. 

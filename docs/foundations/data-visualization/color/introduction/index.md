@@ -15,8 +15,8 @@ Colour plays an important role in data visualisation, and can be used to encode 
 :::
 
 There are two main categories of dataviz colours: 
-- We use [**Chart colours**](/foundations/data-visualization/colour/chart-colors/)  for non-data elements in the chart, such as gridlines, axes and text labels
-- We use [**Data colours**](/foundations/data-visualization/colour/data-colors/) are for visual elements that encode data, such as lines, bars and areas.
+- We use [**Chart colours**](/foundations/data-visualization/color/chart-colors/)  for non-data elements in the chart, such as gridlines, axes and text labels
+- We use [**Data colours**](/foundations/data-visualization/color/data-colors/) are for visual elements that encode data, such as lines, bars and areas.
 
 The dataviz colours are the same across all Vend brands. 
 
@@ -47,13 +47,13 @@ Some visual elements need to use more than one colour token. For example, a bar 
 :::
 
 In the following pages you can read more about the two main categories of dataviz colours:
-- [Chart colours](/foundations/data-visualization/colour/chart-colors/) 
-- [Data colours](/foundations/data-visualization/colour/data-colors/). 
+- [Chart colours](/foundations/data-visualization/color/chart-colors/) 
+- [Data colours](/foundations/data-visualization/color/data-colors/). 
 
 Then, you can read more about which semantic tokens to use for data colours:
-- [Lines & Points](/foundations/data-visualization/colour/lines-points/)
-- [Bars & Areas](/foundations/data-visualization/colour/bars-areas/) (and Patterns)
-- [Text & icons](/foundations/data-visualization/colour/text-icons/)
+- [Lines & Points](/foundations/data-visualization/color/lines-points/)
+- [Bars & Areas](/foundations/data-visualization/color/bars-areas/) (and Patterns)
+- [Text & icons](/foundations/data-visualization/color/text-icons/)
  
 
 ## FAQ

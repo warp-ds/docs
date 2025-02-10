@@ -537,12 +537,12 @@ export default defineConfig({
               { text: 'Colour Guidelines',
                 collapsed: true,
                 items: [ 
-                  { text: 'Introduction', link: '/foundations/data-visualization/colour/introduction/' },
-                  { text: 'Chart Colours', link: '/foundations/data-visualization/colour/chart-colors/' },
-                  { text: 'Data Colours', link: '/foundations/data-visualization/colour/data-colors/' },
-                  { text: 'Lines & Points', link: '/foundations/data-visualization/colour/lines-points/' },
-                  { text: 'Bars & Areas', link: '/foundations/data-visualization/colour/bars-areas/' },
-                  { text: 'Text & Icons', link: '/foundations/data-visualization/colour/text-icons/' },
+                  { text: 'Introduction', link: '/foundations/data-visualization/color/introduction/' },
+                  { text: 'Chart Colours', link: '/foundations/data-visualization/color/chart-colors/' },
+                  { text: 'Data Colours', link: '/foundations/data-visualization/color/data-colors/' },
+                  { text: 'Lines & Points', link: '/foundations/data-visualization/color/lines-points/' },
+                  { text: 'Bars & Areas', link: '/foundations/data-visualization/color/bars-areas/' },
+                  { text: 'Text & Icons', link: '/foundations/data-visualization/color/text-icons/' },
                 ]
               },
               {

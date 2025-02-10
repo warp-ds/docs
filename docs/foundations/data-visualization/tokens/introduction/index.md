@@ -1,6 +1,6 @@
 # Introduction to Tokens & CSS for Dataviz Colours
 
-*For design guidelines, see [Colour Guidelines](/foundations/data-visualization/colour/introduction/).*
+*For design guidelines, see [Colour Guidelines](/foundations/data-visualization/color/introduction/).*
 
 We have defined a colour palette for data visualization that should be used across all brands. On web, you can apply the dataviz colours using [CSS variables](#alternative-1-css-variables) or [Utility classes](#alternative-2-utility-classes). 
 

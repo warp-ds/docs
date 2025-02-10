@@ -1,6 +1,6 @@
 # Border (dataviz)
 
-The dataviz `border` colours are typically used around a `background-subtle` colour. For line charts, use `line` colours. For design guidelines, see [Colour Guidelines > Bars & Areas](/foundations/data-visualization/colour/bars-areas/).
+The dataviz `border` colours are typically used around a `background-subtle` colour. For line charts, use `line` colours. For design guidelines, see [Colour Guidelines > Bars & Areas](/foundations/data-visualization/color/bars-areas/).
 
 ::: details Visual overview
 Since the `border` colours are used with a subtle background colour, the (see [background tokens](/foundations/data-visualization/tokens/background/) ), the subtle background colours are included in the illustration. 
