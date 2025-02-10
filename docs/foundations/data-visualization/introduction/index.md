@@ -84,7 +84,7 @@ When you create visualisations you want to:
 4. **Make the information accessible for everyone**<br>
    Make the information available in multiple ways so that all users can benefit from it.
 
-These are high level principles we should strive for. In the section [Success criteria](/foundations/data-visualization/success-criteria/) there are more specific guidelines.
+These are high level principles we should strive for. In the section [Success criteria](/foundations/data-visualization/success-criteria/introduction/) there are more specific guidelines.
 
 ## How do you define the goal of your visualisation?
 
