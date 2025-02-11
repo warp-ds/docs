@@ -80,7 +80,7 @@ All dataviz colours (except the chart colours) have a highlight version. These t
 
 See [this Figma prototype](https://www.figma.com/proto/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz-(Beta)?page-id=1%3A285&node-id=2532-18695&viewport=-2724%2C329%2C0.21&t=k48dzMq2bHNm9UVm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2532%3A18695) for an interactive preview of the highlight colours. 
 
-For implementation examples, see [Tokens & CSS > Introduction](/foundations/data-visualization/tokens/introduction/).
+For implementation examples, see [Tokens & CSS > Introduction](/foundations/data-visualization/tokens/introduction#hover-focus-and-active).
 
 ### Dim other elements
 In addition to using the highlight colour, consider **dimming the other elements** that are not highlighted. A good starting point is **80% opacity** when using hover and keyboard focus.
