@@ -529,25 +529,46 @@ export default defineConfig({
           { text: 'Accessibility', link: '/foundations/accessibility/' },
           { text: 'Brands', link: '/foundations/brands/' },
           {
-            text: 'Data visualisation',
+            text: 'Data visualisation <span style="color: white; background-color: #BE3830; padding: 2px 8px; margin: 0px 8px; border-radius: 4px; font-weight: bold;">WIP</span>', 
             collapsed: true,
             items: [
-              {
-                text: 'Getting Started',
-                link: '/foundations/data-visualization/getting-started/',
+              { text: 'Introduction', link: '/foundations/data-visualization/introduction/' },
+              { text: 'Figma Library',link: '/foundations/data-visualization/figma-library/' },
+              { text: 'Colour Guidelines',
+                collapsed: true,
+                items: [ 
+                  { text: 'Introduction', link: '/foundations/data-visualization/color/introduction/' },
+                  { text: 'Chart Colours', link: '/foundations/data-visualization/color/chart-colors/' },
+                  { text: 'Data Colours', link: '/foundations/data-visualization/color/data-colors/' },
+                  { text: 'Lines & Points', link: '/foundations/data-visualization/color/lines-points/' },
+                  { text: 'Bars & Areas', link: '/foundations/data-visualization/color/bars-areas/' },
+                  { text: 'Text & Icons', link: '/foundations/data-visualization/color/text-icons/' },
+                ]
               },
               {
-                text: 'Chart types',
-                link: '/foundations/data-visualization/chart-types/',
+                text: 'Tokens & CSS',
+                collapsed: true,
+                items: [ 
+                  { text: 'Introduction', link: '/foundations/data-visualization/tokens/introduction/' },
+                  { text: 'Chart Colours', link: '/foundations/data-visualization/tokens/chart/' },
+                  { text: 'Background', link: '/foundations/data-visualization/tokens/background/' },
+                  { text: 'Border', link: '/foundations/data-visualization/tokens/border/' },
+                  { text: 'Icon', link: '/foundations/data-visualization/tokens/icon/' },
+                  { text: 'Line', link: '/foundations/data-visualization/tokens/line/' },
+                  { text: 'Text', link: '/foundations/data-visualization/tokens/text/' },
+                ]
               },
-              {
-                text: 'Colour Usage',
-                link: '/foundations/data-visualization/colour-usage/',
-              },
-              {
-                text: 'Success criteria',
-                link: '/foundations/data-visualization/success-criteria/',
-              },
+              { text: 'Components', link: '/foundations/data-visualization/components/' },
+              {  text: 'Interaction', link: '/foundations/data-visualization/interaction/' },
+              { text: 'Success Criteria', collapsed: true,
+                items: [ 
+                  { text: 'Introduction', link: '/foundations/data-visualization/success-criteria/introduction/' },
+                  { text: 'Cognitive Accessibility', link: '/foundations/data-visualization/success-criteria/cognitive/' },
+                  { text: 'Visual Accessibility', link: '/foundations/data-visualization/success-criteria/visual/' },
+                  { text: 'Keyboard Navigation', link: '/foundations/data-visualization/success-criteria/keyboard/' },
+                  { text: 'Screen Reader', link: '/foundations/data-visualization/success-criteria/screenreader/' },
+                ]
+               },
             ],
           },
           { text: 'Elevation', link: '/foundations/elevation/' },

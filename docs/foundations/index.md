@@ -32,7 +32,7 @@ const pages = [{
 {
   title: "Data visualisation",
   description: "Getting started, chart types, colour usage and success criteria.",
-  href: "data-visualization/getting-started/",
+  href: "data-visualization/introduction/",
 },
 {
   title: "Elevation",
