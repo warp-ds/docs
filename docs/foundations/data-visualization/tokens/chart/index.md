@@ -1,6 +1,6 @@
 # Chart Colours
 
-Chart colours are used for non-data elements in a chart. For design guidelines, see [Colour Guidelines > Chart Colours](/foundations/data-visualization/color/chart-colors)
+Chart colours are used for non-data elements in a chart. For design guidelines, see [Colour Guidelines > Chart Colours](/foundations/data-visualization/color/chart-colors/)
 
 ::: details Visual overview
 ![Preview of ChartBackground, ChartLine and ChartText colours in Light and Dark mode](/foundations/dataviz/token-overview-chart.png)

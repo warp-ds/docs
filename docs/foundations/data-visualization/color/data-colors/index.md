@@ -290,7 +290,7 @@ What is positive or negative for the user depends on the context. Sometimes it i
   </do>
 </do-dont>
 
-See [visual success criteria nr. 1: Don’t rely on colour alone to explain data](/foundations/data-visualization/success-criteria/).
+See [visual success criteria nr. 1: Don’t rely on colour alone to explain data](/foundations/data-visualization/success-criteria/visual/).
 
 ### Consider the order of categorical colours
 
