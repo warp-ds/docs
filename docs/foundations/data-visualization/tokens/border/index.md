@@ -12,12 +12,12 @@ Since the `border` colours are used with a subtle background colour, the (see [b
 
 | Method | Pattern | Example | 
 | ----- | ------ | ------ | 
-| Figma | `../Border/[semantic colour])` | `../Border/Primary` | 
-| CSS variable | `var(--w-dv-s-color-border-[semantic colour])` | `var(--w-dv-s-color-border-primary)` | 
-| HTML class | `dv-s-border-[semantic colour]` | `dv-s-border-primary` | 
-| SVG fill class* | `dv-s-fill-border-[semantic colour]` | `dv-s-fill-border-primary` | 
-| SVG stroke class | `dv-s-stroke-border-[semantic colour]` | `dv-s-stroke-border-primary` | 
-| iOS | `border[Semantic colour]` | `borderPrimary` | 
+| Figma | `../Border/[semantic-colour])` | `../Border/Primary` | 
+| CSS variable | `var(--w-dv-s-color-border-[semantic-colour])` | `var(--w-dv-s-color-border-primary)` | 
+| HTML class | `dv-s-border-[semantic-colour]` | `dv-s-border-primary` | 
+| SVG fill class* | `dv-s-fill-border-[semantic-colour]` | `dv-s-fill-border-primary` | 
+| SVG stroke class | `dv-s-stroke-border-[semantic-colour]` | `dv-s-stroke-border-primary` | 
+| iOS | `border[semantic-colour]` | `borderPrimary` | 
 
 \* Yes, it is a bit strange to apply a `border` colour as `fill`, but it is possible.
 

@@ -10,12 +10,12 @@ The dataviz `line` colours are used for lines and points. For design guidelines,
 
 | Method | Pattern | Example | 
 | ----- | ------ | ------ | 
-| Figma | `../Line/[semantic colour])` | `../Line/Primary` | 
-| CSS variable | `var(--w-dv-s-color-line-[semantic colour])` | `var(--w-dv-s-color-line-primary)` | 
-| HTML class | `dv-s-line-[semantic colour]` | `dv-s-line-primary` | 
-| SVG fill class* | `dv-s-fill-line-[semantic colour]` | `dv-s-fill-line-primary` | 
-| SVG stroke class | `dv-s-stroke-line-[semantic colour]` | `dv-s-stroke-line-primary` | 
-| iOS | `line[Semantic colour]` | `linePrimary` | 
+| Figma | `../Line/[semantic-colour])` | `../Line/Primary` | 
+| CSS variable | `var(--w-dv-s-color-line-[semantic-colour])` | `var(--w-dv-s-color-line-primary)` | 
+| HTML class | `dv-s-line-[semantic-colour]` | `dv-s-line-primary` | 
+| SVG fill class* | `dv-s-fill-line-[semantic-colour]` | `dv-s-fill-line-primary` | 
+| SVG stroke class | `dv-s-stroke-line-[semantic-colour]` | `dv-s-stroke-line-primary` | 
+| iOS | `line[semantic-colour]` | `linePrimary` | 
 
 
 ## Primary DV Line

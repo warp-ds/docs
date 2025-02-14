@@ -17,12 +17,12 @@ The `-subtle` colours need a border to achieve good contrast against the backgro
 
 | Method | Pattern | Example | 
 | ----- | ------ | ------ | 
-| Figma | `../Background/[semantic colour])` | `../Background/Primary` | 
-| CSS variable | `var(--w-dv-s-color-background-[semantic colour])` | `var(--w-dv-s-color-background-primary)` | 
-| HTML class | `dv-s-bg-[semantic colour]` | `dv-s-bg-primary` | 
-| SVG fill class | `dv-s-fill-bg-[semantic colour]` | `dv-s-fill-bg-primary` | 
-| SVG stroke class* | `dv-s-stroke-bg-[semantic colour]` | `dv-s-stroke-bg-primary` | 
-| iOS | `background[Semantic colour]` | `backgroundPrimary` | 
+| Figma | `../Background/[semantic-colour])` | `../Background/Primary` | 
+| CSS variable | `var(--w-dv-s-color-background-[semantic-colour])` | `var(--w-dv-s-color-background-primary)` | 
+| HTML class | `dv-s-bg-[semantic-colour]` | `dv-s-bg-primary` | 
+| SVG fill class | `dv-s-fill-bg-[semantic-colour]` | `dv-s-fill-bg-primary` | 
+| SVG stroke class* | `dv-s-stroke-bg-[semantic-colour]` | `dv-s-stroke-bg-primary` | 
+| iOS | `background[semantic-colour]` | `backgroundPrimary` | 
 
 \* Yes, it is a bit strange to apply a `background` colour as `stroke`, but it is possible.
 

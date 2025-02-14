@@ -10,12 +10,12 @@ The dataviz `text` colours are used for text representing data. For design guide
 
 | Method | Pattern | Example | 
 | ----- | ------ | ------ | 
-| Figma | `../Text/[semantic colour])` | `../Text/Primary` | 
-| CSS variable | `var(--w-dv-s-color-text-[semantic colour])` | `var(--w-dv-s-color-text-primary)` | 
-| HTML class | `dv-s-text-[semantic colour]` | `dv-s-text-primary` | 
-| SVG fill class | `dv-s-fill-text-[semantic colour]` | `dv-s-fill-text-primary` | 
-| SVG stroke class* | `dv-s-stroke-text-[semantic colour]` | `dv-s-stroke-text-primary` | 
-| iOS | `text[Semantic colour]` | `textPrimary` | 
+| Figma | `../Text/[semantic-colour])` | `../Text/Primary` | 
+| CSS variable | `var(--w-dv-s-color-text-[semantic-colour])` | `var(--w-dv-s-color-text-primary)` | 
+| HTML class | `dv-s-text-[semantic-colour]` | `dv-s-text-primary` | 
+| SVG fill class | `dv-s-fill-text-[semantic-colour]` | `dv-s-fill-text-primary` | 
+| SVG stroke class* | `dv-s-stroke-text-[semantic-colour]` | `dv-s-stroke-text-primary` | 
+| iOS | `text[semantic-colour]` | `textPrimary` | 
 
 ## Primary DV Text
 
