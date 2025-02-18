@@ -95,3 +95,7 @@ When using keyboard navigation, use a focus border around the active data elemen
 `s-border-focus` or `border-color: var(--w-s-color-border-focus)`.
 
 See [CSS Border Color](/foundations/css-classes/border-color).
+
+## Legend
+
+If the visualization includes a legend, consider making the legend interactive so that the user can turn a data series or category on or off. This can make the information in the chart more accessible, for example for people with color deficiencies.
