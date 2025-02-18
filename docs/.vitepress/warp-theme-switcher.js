@@ -6,6 +6,11 @@ export default {
       'DBA light': 'dba-dk',
       'Finn light': 'finn-no',
       'Tori light': 'tori-fi',
+      'Blocket light': 'blocket-se',
+      'DBA dark': 'dba-dk-dark',
+      'Finn dark': 'finn-no-dark',
+      'Tori dark': 'tori-fi-dark',
+      'Blocket dark': 'blocket-se-dark',
     };
 
     const state = reactive({

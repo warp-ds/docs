@@ -25,7 +25,7 @@ Add this to your `index.html`
 
 We have defined different colour shades to be used for different element types (background, border, icon, line and text). We call these colour categories. 
 
-The pattern for the variable name is: `var(--w-dv-s-color-[colour category]-[semantic colour]`
+The pattern for the variable name is: `var(--w-dv-s-color-[colour category]-[semantic-colour]`
 
 Example of CSS variables for the `Primary` semantic colour:
 
@@ -92,8 +92,8 @@ Example of a `<div>` using using the `primary background subtle` as `background-
 Since SVGs have different props for applying colour than HTML has, we have defined utility classes specifically for applying colours to SVG elements using `fill` or `stroke`. Read more about [SVG fill and stroke](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Fills_and_Strokes).
 
 The utility class names are different depending on what you want to style – `fill` or `stroke`. 
-- **Fill** `dv-s-fill-[element type]-[semantic colour]`
-- **Stroke** `dv-s-stroke-[element type]-[semantic colour]`
+- **Fill** `dv-s-fill-[element type]-[semantic-colour]`
+- **Stroke** `dv-s-stroke-[element type]-[semantic-colour]`
 
 
 Example using the `primary` colour:

@@ -12,12 +12,12 @@ For actual icons to use, see [Components > Icons](/components/icons/). For datav
 
 | Method | Pattern | Example | 
 | ----- | ------ | ------ | 
-| Figma | `../Icon/[semantic colour])` | `../Icon/Primary` | 
-| CSS variable | `var(--w-dv-s-color-icon-[semantic colour])` | `var(--w-dv-s-color-icon-primary)` | 
-| HTML class | `dv-s-icon-[semantic colour]` | `dv-s-icon-primary` | 
-| SVG fill class | `dv-s-fill-icon-[semantic colour]` | `dv-s-fill-icon-primary` | 
-| SVG stroke class | `dv-s-stroke-icon-[semantic colour]` | `dv-s-stroke-icon-primary` | 
-| iOS | `icon[Semantic colour]` | `iconPrimary` | 
+| Figma | `../Icon/[semantic-colour])` | `../Icon/Primary` | 
+| CSS variable | `var(--w-dv-s-color-icon-[semantic-colour])` | `var(--w-dv-s-color-icon-primary)` | 
+| HTML class | `dv-s-icon-[semantic-colour]` | `dv-s-icon-primary` | 
+| SVG fill class | `dv-s-fill-icon-[semantic-colour]` | `dv-s-fill-icon-primary` | 
+| SVG stroke class | `dv-s-stroke-icon-[semantic-colour]` | `dv-s-stroke-icon-primary` | 
+| iOS | `icon[Semantic-colour]` | `iconPrimary` | 
 
 ## Primary Icon (dataviz)
 
