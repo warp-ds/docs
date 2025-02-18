@@ -1,4 +1,4 @@
-# Components for dataviz
+# Chart Components
 
 **On this page:**
 [[toc]]
@@ -27,7 +27,7 @@ Sub-components include:
 
 These sup-components are available as components in the Figma library. Note that these components do not exist in code, as graphs are typically created using various libraries, and are therefore not composed in the same way.
 
-### Chart elements component with slot
+### Chart component with slot
 
 ::: tip What is a slot?
 In Figma, a "slot" is a designated area within a component where you can insert other components or UI elements without detaching the component.

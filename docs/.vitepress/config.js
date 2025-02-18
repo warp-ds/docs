@@ -565,7 +565,7 @@ export default defineConfig({
                   { text: 'Text', link: '/foundations/data-visualization/tokens/text/' },
                 ]
               },
-              { text: 'Components', link: '/foundations/data-visualization/components/' },
+              { text: 'Chart Components', link: '/foundations/data-visualization/components/' },
               {  text: 'Interaction', link: '/foundations/data-visualization/interaction/' },
               { text: 'Success Criteria', collapsed: true,
                 items: [ 
