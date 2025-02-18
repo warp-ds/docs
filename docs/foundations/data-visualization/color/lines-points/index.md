@@ -5,7 +5,7 @@
 ## Lines
 
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/element-line.png){width=433px}
+![A line chart in which a blue line is annotated with 'line'](/foundations/dataviz/element-line.png){width=433px}
 :::
 
 - Use the `Line` colors for lines.
@@ -25,7 +25,7 @@
 If you go for the donut variant of points, use either `ChartBackground/Default` or a `Background Subtle` as the fill color. 
 
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/element-point.png){width=433px}
+![Line chart in which the stroke of a point is annotated with 'Line', the inside of a point is annotated with 'ChartBackground Default', the inside of another point annotated with 'Background Subtle'  ](/foundations/dataviz/element-point.png){width=433px}
 :::
 
 An advantage of using `Background Subtle` is that it becomes logical to use `Background Subtle-Highlight` when interacting with the points.

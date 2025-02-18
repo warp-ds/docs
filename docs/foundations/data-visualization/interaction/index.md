@@ -14,10 +14,10 @@ Guidelines for interaction states and pseudo-classes for graphs and charts.
 
 ### Hover and tap
 ::: image-block
-![Bar chart](/foundations/dataviz/interaction-hover.png){width=433px}
+![Bar chart with four bars, one has a darker color with a tooltip above](/foundations/dataviz/interaction-hover.png){width=433px}
 :::
 
-For graphs, users typically expect the same interactive behaviour for hover (using a pointing device) and tap (on a touch device). When hovering or tapping, they expect to get details about the data point.
+For graphs, users typically expect the same interactive behavior for hover (using a pointing device) and tap (on a touch device). When hovering or tapping, they expect to get details about the data point.
 
 Optionally, keep the tooltip open until another tooltip opens, or the pointing device has left the graph. This might be particularly useful if the data point target sizes are small.
 
@@ -36,7 +36,7 @@ The interactive area for hover and tap (the 'target') can be larger than the dat
 - Optionally, add a subtle background that fills the target area. We don't have a specific token for this for now, but for now can for example use `Background/Secondary-Subtle` with 50% opacity. See illustration below.
 
 ::: image-block
-![Bar chart](/foundations/dataviz/interaction-hotspot-bg.png){width=433px}
+![Bar chart with four bars, one has a darker color with a tooltip above. In addition, there is a subtle gray color behind the bar, filling the whole height of the chart](/foundations/dataviz/interaction-hotspot-bg.png){width=433px}
 :::
 
 **Lines and points:**
@@ -47,7 +47,7 @@ The interactive area for hover and tap (the 'target') can be larger than the dat
 ### Focus (keyboard navigation)
 
 ::: image-block
-![Bar chart](/foundations/dataviz/interaction-focus.png){width=433px}
+![Bar chart with four bars, one has a darker color with a tooltip above. In addition, there is a brighter blue border around the bar](/foundations/dataviz/interaction-focus.png){width=433px}
 :::
 
 All the information that can be reached using a mouse pointer should also be possible to reach using a keyboard. 

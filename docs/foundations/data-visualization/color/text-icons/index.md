@@ -10,7 +10,7 @@ However, the `Text` data colors can be relevant to use in two situations:
 - **Text labels**. Color can be used on labels, matching the color of the visual data element (such as a line or a bar) 
 - **Data values**. Color can be used on data values.
 
-![Area chart with intense blue color fill in light mode and dark mode](/foundations/dataviz/element-text.png)
+![Two bars with text labels, in indigo and pink, annotated with 'text labels'. Two number, in green and red, annotated with 'data values'](/foundations/dataviz/element-text.png)
 
 Only use color on text if it makes it easier to visually connect the text to the data marks, or interpret values. Otherwise, use the default text color. See Chart colors.   
 

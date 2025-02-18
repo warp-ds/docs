@@ -19,7 +19,7 @@ Chart colors are colors that we use to build non-data element in the chart, such
 All chart colors start with `Chart-`.
 
 ::: image-block
-![Preview of chart colors in light mode and dark mode](/foundations/dataviz/colourlist-chartcolours.png){width=620px}
+![Preview of chart colors in light mode and dark mode: ChartBackground, ChartLine and ChartText](/foundations/dataviz/colourlist-chartcolours.png){width=620px}
 :::
 
 
@@ -28,7 +28,7 @@ All chart colors start with `Chart-`.
 You don't necessarily need to include all chart elements in every graph. Less is more – consider what is needed in the particular use case.  
 
 ::: image-block
-![Preview of chart colors in light mode and dark mode](/foundations/dataviz/chart-colours-example.png){width=620px}
+![A chart with baseline, gridlines and y axis labels, another chart without those elements](/foundations/dataviz/chart-colours-example.png){width=620px}
 :::
 
 Things to consider:

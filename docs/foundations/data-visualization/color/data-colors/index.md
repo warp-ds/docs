@@ -37,7 +37,7 @@ By using the primary color across multiple graphs, our pages get a consistent an
 
 ### Secondary – for secondary information
 
-![List of colors with preview: background/primary, background/primary-subtle, line/primary, border/primary, text/primary and icon/primary](/foundations/dataviz/color-primary-and-secondary.png)
+![Example of blue and gray bars and a gray line in light mode and dark mode](/foundations/dataviz/color-primary-and-secondary.png)
 
 When you want to indicate that a data category is secondary, you may use the secondary color. The primary color is **gray**. 
 
@@ -54,16 +54,16 @@ In general the Secondary color should be used together with the Primary color, a
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Secondary` | ![blue boxes](/foundations/dataviz/col-preview/secondary-bg.png){width=80px} | Bars and areas | 
-| `Background/Secondary-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/secondary-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Secondary` | ![blue lines](/foundations/dataviz/col-preview/secondary-line.png){width=80px} | Lines and points | 
-| `Border/Secondary` | ![blue lines](/foundations/dataviz/col-preview/secondary-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Secondary` | ![blue text](/foundations/dataviz/col-preview/secondary-text.png){width=80px} | Text | 
-| `Icon/Secondary` |  ![blue icons](/foundations/dataviz/col-preview/secondary-icon.png){width=80px} | Icons | 
+| `Background/Secondary` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg.png){width=80px} | Bars and areas | 
+| `Background/Secondary-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Secondary` | ![gray lines](/foundations/dataviz/col-preview/secondary-line.png){width=80px} | Lines and points | 
+| `Border/Secondary` | ![gray lines](/foundations/dataviz/col-preview/secondary-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Secondary` | ![gray text](/foundations/dataviz/col-preview/secondary-text.png){width=80px} | Text | 
+| `Icon/Secondary` |  ![gray icons](/foundations/dataviz/col-preview/secondary-icon.png){width=80px} | Icons | 
 
 ### Category – to differentiate between categories
 
-![Screenshot from Figma](/foundations/dataviz/color-category.png)
+![8 stacked bars in light mode and dark mode with different colors: indigo, yellow, pink, green, red, teal, blue, gray](/foundations/dataviz/color-category.png)
 
 There are **8 category colors** to indicate different categories of data: indigo, yellow, pink, green, orange, teal, blue and gray.
 
@@ -77,12 +77,12 @@ The category colors are suited for “nominal data” – which means data that
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Category1` | ![blue boxes](/foundations/dataviz/col-preview/category1-bg.png){width=80px} | Bars and areas | 
-| `Background/Category1-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category1-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Category1` | ![blue lines](/foundations/dataviz/col-preview/category1-line.png){width=80px} | Lines and points | 
-| `Border/Category1` | ![blue lines](/foundations/dataviz/col-preview/category1-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Category1` | ![blue text](/foundations/dataviz/col-preview/category1-text.png){width=80px} | Text | 
-| `Icon/Category1` |  ![blue icons](/foundations/dataviz/col-preview/category1-icon.png){width=80px} | Icons | 
+| `Background/Category1` | ![indigo boxes](/foundations/dataviz/col-preview/category1-bg.png){width=80px} | Bars and areas | 
+| `Background/Category1-Subtle` | ![indigo boxes](/foundations/dataviz/col-preview/category1-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Category1` | ![indigo lines](/foundations/dataviz/col-preview/category1-line.png){width=80px} | Lines and points | 
+| `Border/Category1` | ![indigo lines](/foundations/dataviz/col-preview/category1-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category1` | ![indigo text](/foundations/dataviz/col-preview/category1-text.png){width=80px} | Text | 
+| `Icon/Category1` |  ![indigo icons](/foundations/dataviz/col-preview/category1-icon.png){width=80px} | Icons | 
 
 #### Category2: Yellow
 
@@ -92,12 +92,12 @@ The category colors are suited for “nominal data” – which means data that
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Category2` | ![blue boxes](/foundations/dataviz/col-preview/category2-bg.png){width=80px} | Bars and areas | 
-| `Background/Category2-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category2-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Category2` | ![blue lines](/foundations/dataviz/col-preview/category2-line.png){width=80px} | Lines and points | 
-| `Border/Category2` | ![blue lines](/foundations/dataviz/col-preview/category2-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Category2` | ![blue text](/foundations/dataviz/col-preview/category2-text.png){width=80px} | Text | 
-| `Icon/Category2` |  ![blue icons](/foundations/dataviz/col-preview/category2-icon.png){width=80px} | Icons | 
+| `Background/Category2` | ![yellow boxes](/foundations/dataviz/col-preview/category2-bg.png){width=80px} | Bars and areas | 
+| `Background/Category2-Subtle` | ![yellow boxes](/foundations/dataviz/col-preview/category2-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Category2` | ![yellow lines](/foundations/dataviz/col-preview/category2-line.png){width=80px} | Lines and points | 
+| `Border/Category2` | ![yellow lines](/foundations/dataviz/col-preview/category2-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category2` | ![yellow text](/foundations/dataviz/col-preview/category2-text.png){width=80px} | Text | 
+| `Icon/Category2` |  ![yellow icons](/foundations/dataviz/col-preview/category2-icon.png){width=80px} | Icons | 
 
 #### Category3: Pink
 
@@ -107,12 +107,12 @@ The category colors are suited for “nominal data” – which means data that
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Category3` | ![blue boxes](/foundations/dataviz/col-preview/category3-bg.png){width=80px} | Bars and areas | 
-| `Background/Category3-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category3-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Category3` | ![blue lines](/foundations/dataviz/col-preview/category3-line.png){width=80px} | Lines and points | 
-| `Border/Category3` | ![blue lines](/foundations/dataviz/col-preview/category3-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Category3` | ![blue text](/foundations/dataviz/col-preview/category3-text.png){width=80px} | Text | 
-| `Icon/Category3` |  ![blue icons](/foundations/dataviz/col-preview/category3-icon.png){width=80px} | Icons | 
+| `Background/Category3` | ![pink boxes](/foundations/dataviz/col-preview/category3-bg.png){width=80px} | Bars and areas | 
+| `Background/Category3-Subtle` | ![pink boxes](/foundations/dataviz/col-preview/category3-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Category3` | ![pink lines](/foundations/dataviz/col-preview/category3-line.png){width=80px} | Lines and points | 
+| `Border/Category3` | ![pink lines](/foundations/dataviz/col-preview/category3-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category3` | ![pink text](/foundations/dataviz/col-preview/category3-text.png){width=80px} | Text | 
+| `Icon/Category3` |  ![pink icons](/foundations/dataviz/col-preview/category3-icon.png){width=80px} | Icons | 
 
 #### Category4: Green
 
@@ -122,12 +122,12 @@ The category colors are suited for “nominal data” – which means data that
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Category4` | ![blue boxes](/foundations/dataviz/col-preview/category4-bg.png){width=80px} | Bars and areas | 
-| `Background/Category4-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category4-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Category4` | ![blue lines](/foundations/dataviz/col-preview/category4-line.png){width=80px} | Lines and points | 
-| `Border/Category4` | ![blue lines](/foundations/dataviz/col-preview/category4-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Category4` | ![blue text](/foundations/dataviz/col-preview/category4-text.png){width=80px} | Text | 
-| `Icon/Category4` |  ![blue icons](/foundations/dataviz/col-preview/category4-icon.png){width=80px} | Icons | 
+| `Background/Category4` | ![green boxes](/foundations/dataviz/col-preview/category4-bg.png){width=80px} | Bars and areas | 
+| `Background/Category4-Subtle` | ![green boxes](/foundations/dataviz/col-preview/category4-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Category4` | ![green lines](/foundations/dataviz/col-preview/category4-line.png){width=80px} | Lines and points | 
+| `Border/Category4` | ![green lines](/foundations/dataviz/col-preview/category4-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category4` | ![green text](/foundations/dataviz/col-preview/category4-text.png){width=80px} | Text | 
+| `Icon/Category4` |  ![green icons](/foundations/dataviz/col-preview/category4-icon.png){width=80px} | Icons | 
 
 #### Category5: Orange
 
@@ -137,12 +137,12 @@ The category colors are suited for “nominal data” – which means data that
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Category5` | ![blue boxes](/foundations/dataviz/col-preview/category5-bg.png){width=80px} | Bars and areas | 
-| `Background/Category5-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category5-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Category5` | ![blue lines](/foundations/dataviz/col-preview/category5-line.png){width=80px} | Lines and points | 
-| `Border/Category5` | ![blue lines](/foundations/dataviz/col-preview/category5-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Category5` | ![blue text](/foundations/dataviz/col-preview/category5-text.png){width=80px} | Text | 
-| `Icon/Category5` |  ![blue icons](/foundations/dataviz/col-preview/category5-icon.png){width=80px} | Icons | 
+| `Background/Category5` | ![orange boxes](/foundations/dataviz/col-preview/category5-bg.png){width=80px} | Bars and areas | 
+| `Background/Category5-Subtle` | ![orange boxes](/foundations/dataviz/col-preview/category5-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Category5` | ![orange lines](/foundations/dataviz/col-preview/category5-line.png){width=80px} | Lines and points | 
+| `Border/Category5` | ![orange lines](/foundations/dataviz/col-preview/category5-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category5` | ![orange text](/foundations/dataviz/col-preview/category5-text.png){width=80px} | Text | 
+| `Icon/Category5` |  ![orange icons](/foundations/dataviz/col-preview/category5-icon.png){width=80px} | Icons | 
 
 #### Category6: Teal
 
@@ -152,12 +152,12 @@ The category colors are suited for “nominal data” – which means data that
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Category6` | ![blue boxes](/foundations/dataviz/col-preview/category6-bg.png){width=80px} | Bars and areas | 
-| `Background/Category6-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category6-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Category6` | ![blue lines](/foundations/dataviz/col-preview/category6-line.png){width=80px} | Lines and points | 
-| `Border/Category6` | ![blue lines](/foundations/dataviz/col-preview/category6-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Category6` | ![blue text](/foundations/dataviz/col-preview/category6-text.png){width=80px} | Text | 
-| `Icon/Category6` |  ![blue icons](/foundations/dataviz/col-preview/category6-icon.png){width=80px} | Icons | 
+| `Background/Category6` | ![teal boxes](/foundations/dataviz/col-preview/category6-bg.png){width=80px} | Bars and areas | 
+| `Background/Category6-Subtle` | ![teal boxes](/foundations/dataviz/col-preview/category6-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Category6` | ![teal lines](/foundations/dataviz/col-preview/category6-line.png){width=80px} | Lines and points | 
+| `Border/Category6` | ![teal lines](/foundations/dataviz/col-preview/category6-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category6` | ![teal text](/foundations/dataviz/col-preview/category6-text.png){width=80px} | Text | 
+| `Icon/Category6` |  ![teal icons](/foundations/dataviz/col-preview/category6-icon.png){width=80px} | Icons | 
 
 #### Category7: Blue
 
@@ -182,17 +182,17 @@ The category colors are suited for “nominal data” – which means data that
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Category8` | ![blue boxes](/foundations/dataviz/col-preview/category8-bg.png){width=80px} | Bars and areas | 
-| `Background/Category8-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/category8-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Category8` | ![blue lines](/foundations/dataviz/col-preview/category8-line.png){width=80px} | Lines and points | 
-| `Border/Category8` | ![blue lines](/foundations/dataviz/col-preview/category8-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Category8` | ![blue text](/foundations/dataviz/col-preview/category8-text.png){width=80px} | Text | 
-| `Icon/Category8` |  ![blue icons](/foundations/dataviz/col-preview/category8-icon.png){width=80px} | Icons | 
+| `Background/Category8` | ![gray boxes](/foundations/dataviz/col-preview/category8-bg.png){width=80px} | Bars and areas | 
+| `Background/Category8-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/category8-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Category8` | ![gray lines](/foundations/dataviz/col-preview/category8-line.png){width=80px} | Lines and points | 
+| `Border/Category8` | ![gray lines](/foundations/dataviz/col-preview/category8-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Category8` | ![gray text](/foundations/dataviz/col-preview/category8-text.png){width=80px} | Text | 
+| `Icon/Category8` |  ![gray icons](/foundations/dataviz/col-preview/category8-icon.png){width=80px} | Icons | 
 
 ### Evaluation - to indicate something positive, neutral or negative
 
 ::: image-block
-![3 red bars below a baseline, 3 green bars above the baseline](/foundations/dataviz/color-evaluation.png){width=462px}
+![Icon and text with similar colors: blue arrow going up, gray arrow across, red arrow going down. Icons with color next to bars with same color: green smile, yellow flat mouth, red unhappy face](/foundations/dataviz/color-evaluation.png){width=462px}
 :::
 
 Use evaluation colors when you need the colors to indicate if the data is positive or negative for the intended user in a specific use case. The semantic options are:
@@ -221,12 +221,12 @@ What is positive or negative for the user depends on the context. Sometimes it i
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Positive` | ![blue boxes](/foundations/dataviz/col-preview/positive-bg.png){width=80px} | Bars and areas | 
-| `Background/Positive-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/positive-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Positive` | ![blue lines](/foundations/dataviz/col-preview/positive-line.png){width=80px} | Lines and points | 
-| `Border/Positive` | ![blue lines](/foundations/dataviz/col-preview/positive-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Positive` | ![blue text](/foundations/dataviz/col-preview/positive-text.png){width=80px} | Text | 
-| `Icon/Positive` |  ![blue icons](/foundations/dataviz/col-preview/positive-icon.png){width=80px} | Icons | 
+| `Background/Positive` | ![green boxes](/foundations/dataviz/col-preview/positive-bg.png){width=80px} | Bars and areas | 
+| `Background/Positive-Subtle` | ![green boxes](/foundations/dataviz/col-preview/positive-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Positive` | ![green lines](/foundations/dataviz/col-preview/positive-line.png){width=80px} | Lines and points | 
+| `Border/Positive` | ![green lines](/foundations/dataviz/col-preview/positive-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Positive` | ![green text](/foundations/dataviz/col-preview/positive-text.png){width=80px} | Text | 
+| `Icon/Positive` |  ![green icons](/foundations/dataviz/col-preview/positive-icon.png){width=80px} | Icons | 
 
 #### Warning: Yellow
 
@@ -236,12 +236,12 @@ What is positive or negative for the user depends on the context. Sometimes it i
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Warning` | ![blue boxes](/foundations/dataviz/col-preview/warning-bg.png){width=80px} | Bars and areas | 
-| `Background/Warning-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/warning-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Warning` | ![blue lines](/foundations/dataviz/col-preview/warning-line.png){width=80px} | Lines and points | 
-| `Border/Warning` | ![blue lines](/foundations/dataviz/col-preview/warning-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Warning` | ![blue text](/foundations/dataviz/col-preview/warning-text.png){width=80px} | Text | 
-| `Icon/Warning` |  ![blue icons](/foundations/dataviz/col-preview/warning-icon.png){width=80px} | Icons | 
+| `Background/Warning` | ![yellow boxes](/foundations/dataviz/col-preview/warning-bg.png){width=80px} | Bars and areas | 
+| `Background/Warning-Subtle` | ![yellow boxes](/foundations/dataviz/col-preview/warning-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Warning` | ![yellow lines](/foundations/dataviz/col-preview/warning-line.png){width=80px} | Lines and points | 
+| `Border/Warning` | ![yellow lines](/foundations/dataviz/col-preview/warning-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Warning` | ![yellow text](/foundations/dataviz/col-preview/warning-text.png){width=80px} | Text | 
+| `Icon/Warning` |  ![yellow icons](/foundations/dataviz/col-preview/warning-icon.png){width=80px} | Icons | 
 
 #### Negative: Red
 
@@ -251,12 +251,12 @@ What is positive or negative for the user depends on the context. Sometimes it i
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Negative` | ![blue boxes](/foundations/dataviz/col-preview/negative-bg.png){width=80px} | Bars and areas | 
-| `Background/Negative-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/negative-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Negative` | ![blue lines](/foundations/dataviz/col-preview/negative-line.png){width=80px} | Lines and points | 
-| `Border/Negative` | ![blue lines](/foundations/dataviz/col-preview/negative-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Negative` | ![blue text](/foundations/dataviz/col-preview/negative-text.png){width=80px} | Text | 
-| `Icon/Negative` |  ![blue icons](/foundations/dataviz/col-preview/negative-icon.png){width=80px} | Icons | 
+| `Background/Negative` | ![red boxes](/foundations/dataviz/col-preview/negative-bg.png){width=80px} | Bars and areas | 
+| `Background/Negative-Subtle` | ![red boxes](/foundations/dataviz/col-preview/negative-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Negative` | ![red lines](/foundations/dataviz/col-preview/negative-line.png){width=80px} | Lines and points | 
+| `Border/Negative` | ![red lines](/foundations/dataviz/col-preview/negative-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Negative` | ![red text](/foundations/dataviz/col-preview/negative-text.png){width=80px} | Text | 
+| `Icon/Negative` |  ![red icons](/foundations/dataviz/col-preview/negative-icon.png){width=80px} | Icons | 
 
 #### Neutral: Gray
 
@@ -266,12 +266,12 @@ What is positive or negative for the user depends on the context. Sometimes it i
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Neutral` | ![blue boxes](/foundations/dataviz/col-preview/neutral-bg.png){width=80px} | Bars and areas | 
-| `Background/Neutral-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/neutral-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
-| `Line/Neutral` | ![blue lines](/foundations/dataviz/col-preview/neutral-line.png){width=80px} | Lines and points | 
-| `Border/Neutral` | ![blue lines](/foundations/dataviz/col-preview/neutral-border.png){width=80px} | Border around `-Subtle` | 
-| `Text/Neutral` | ![blue text](/foundations/dataviz/col-preview/neutral-text.png){width=80px} | Text | 
-| `Icon/Neutral` |  ![blue icons](/foundations/dataviz/col-preview/neutral-icon.png){width=80px} | Icons | 
+| `Background/Neutral` | ![gray boxes](/foundations/dataviz/col-preview/neutral-bg.png){width=80px} | Bars and areas | 
+| `Background/Neutral-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/neutral-bg-subtle.png){width=80px} | Subtle color for bars and areas | 
+| `Line/Neutral` | ![gray lines](/foundations/dataviz/col-preview/neutral-line.png){width=80px} | Lines and points | 
+| `Border/Neutral` | ![gray lines](/foundations/dataviz/col-preview/neutral-border.png){width=80px} | Border around `-Subtle` | 
+| `Text/Neutral` | ![gray text](/foundations/dataviz/col-preview/neutral-text.png){width=80px} | Text | 
+| `Icon/Neutral` |  ![gray icons](/foundations/dataviz/col-preview/neutral-icon.png){width=80px} | Icons | 
 
 
 ## Color guidelines
@@ -279,10 +279,10 @@ What is positive or negative for the user depends on the context. Sometimes it i
 ### Don't use color alone to differentiate between categories
 
 <do-dont>
-  <do imgurl="/docs/foundations/dataviz/category-do.png" imgalt="..." >
+  <do imgurl="/docs/foundations/dataviz/category-do.png" imgalt="A blue circle next to 7 gray circles, all directly labelled" >
     Use other methods than color alone to distinguish between categories. Example: add text labels, group into fewer categories, use distinctive patterns or shapes, or use small multiples. 
   </do>
-  <do not imgurl="/docs/foundations/dataviz/category-dont.png" imgalt="...">
+  <do not imgurl="/docs/foundations/dataviz/category-dont.png" imgalt="8 circles in different colors, with legend below">
     Don’t use too many colors at once. Extensive use of color can make a graph and a page appear busy and chaotic, and be impossible to read for people with color deficiencies.  
   </do>
 </do-dont>

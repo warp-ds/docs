@@ -35,7 +35,7 @@ In Figma, a "slot" is a designated area within a component where you can insert 
 
 The sub-components listed above are combined in a `Chart elements` component with a slot that can be replaced with data elements such as bars or lines. There is one component with a horizontal baseline, and one for a vertical baseline.  
 
-![Two empty charts with a visual slot placeholder for data in the middle](/foundations/dataviz/chart-element-component-with-slot.png)
+![Two empty charts with a red placeholder box in the middle](/foundations/dataviz/chart-element-component-with-slot.png)
 
 You don't have to use this component when building a chart, but it makes your life easier as you get a lot for free.
 
@@ -45,7 +45,7 @@ When you use the `Chart elements` component or any of the sub-components you can
 
 For example, you can change the text in the labels, and adjust the padding on the `Ticks & Labels` component like so:
 
-![Adjusting padding using auto layout panel in Figma](/foundations/dataviz/sub-component-padding.gif)
+![Adjusting horizontal padding for x axis ticks and labels, using auto layout panel in Figma](/foundations/dataviz/sub-component-padding.gif)
 
 - Select the `X Ticks & labels` frame
 - Adjust the `Horizontal padding' value under `Auto layout` in the right hand panel in Figma.

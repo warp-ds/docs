@@ -35,7 +35,7 @@ Semantic tokens allow us to use colors in a consistent and meaningful way, makes
 Data visualizations can be made using a variety of shapes, and it is not necessary nor useful to define colors for all those shapes. We have defined 5 semantic token categories that should cater for most use cases: `line`, `background`, `border`, `text` and `icon`.
 
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/semantic-categories.png){width=617px}
+![Visual dataviz elements annotated with semantic token: line, border, background-subtle, background, icon and text](/foundations/dataviz/semantic-categories.png){width=617px}
 :::
 
 ### Mapping dataviz elements to semantic tokens
@@ -43,7 +43,7 @@ Data visualizations can be made using a variety of shapes, and it is not necessa
 Some visual elements need to use more than one color token. For example, a bar with a subtle background color needs both a `background` color and a `border` color. 
 
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/mapping-datavizelement-to-token.png){width=500px}
+![Visual dataviz elements (lines, points, bars, areas, patterns, text, icons) mapped to semantic tokens (line, background, border, text and icon). Multiple connections between the elements](/foundations/dataviz/mapping-datavizelement-to-token.png){width=500px}
 :::
 
 In the following pages you can read more about the two main categories of dataviz colors:

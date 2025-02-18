@@ -5,7 +5,7 @@
 ## Bars and columns
 
 ::: image-block
-![Bar chart showing a dark blue bar, next to another bar with subtle blue fill and a darker blue border](/foundations/dataviz/element-bar.png){width=434px}
+![Horizontal bar chart showing a dark blue bar, next to another bar with subtle blue fill and a darker blue border](/foundations/dataviz/element-bar.png){width=434px}
 :::
 
 When you are encoding data in bars and columns, you have two options:
@@ -23,7 +23,7 @@ When bars are placed on top of gridlines and other data elements, it becomes har
 Consider adding a border (or slightly larger bar behind the data bar) with the `ChartBackground/Default` color. As a result, a small gap appears between the elements, making it easier to differentiate between them.
 
 ::: image-block
-![Bar chart showing a dark blue bar, next to another bar with subtle blue fill and a darker blue border](/foundations/dataviz/element-bar-chart-bg.png){width=434px}
+![A blue bar with white outline placed on top of a blue line. The white outline is annotated with 'ChartBackground'](/foundations/dataviz/element-bar-chart-bg.png){width=434px}
 :::
 
 In Figma, this is implemented in the bar components.
@@ -77,7 +77,7 @@ Include a border, similar to using a subtle background.
 ## Patterns in bars and areas
 
 ::: image-block
-![Area chart with subtle blue color fill in light mode and dark mode](/foundations/dataviz/element-pattern.png){width=457px}
+![Four bars with different colors and patterns: indigo with diagonal lines going up, green with tractor pattern, yellow with dots, and pink with diagonal lines going down](/foundations/dataviz/element-pattern.png){width=457px}
 :::
 
 Patterns can make it easier to distinguish between categories, benefiting people with color deficiencies as well as those printing in gray scale.
@@ -102,7 +102,7 @@ Other methods you can use to distinguish between categories, reducing the need f
 For prediction area, use the gray Secondary border color (`border-secondary`) with diagonal lines. For the background, use `chartbackground`, or no color at all.
 
 ::: image-block
-![Area chart with subtle blue color fill in light mode and dark mode](/foundations/dataviz/element-pattern-prediction.png){width=457px}
+![Stacked bar chart with a wider box with a gray pattern behind each bar. Annotated with 'border'](/foundations/dataviz/element-pattern-prediction.png){width=457px}
 :::
 
 ## Color tokens
