@@ -1,4 +1,4 @@
-# Chart Colours
+# Chart Colours (dataviz)
 
 *For implementation, see [Tokens & CSS > Chart Colours](/foundations/data-visualization/tokens/chart/).*
 
@@ -50,6 +50,17 @@ The semantic colours to use for different chart elements:
 | Labels | `ChartText/Default` or `ChartText/Subtle` | 
 
 To achieve sufficient contrast, visualisations should always be placed on `ChartBackground`, which corresponds to the default background colour in WARP. 
+
+
+### ChartLine
+
+For lines, choose colour based on the importance of the line. 
+
+::: image-block
+![Bar graph in which the baseline uses the ChartLine/Default colour, the gridlines use the ChartLine/Subtle colour](/foundations/dataviz/chart-line-usage.png){width=433px}
+:::
+
+The baseline is often crucial to interpret the data values, especially in line charts and scatter plots. The gridlines are not that crucial. Therefore, the baseline should typically use `ChartLine/Default` colour, while the gridlines use the `ChartLine/Subtle` colour.
 
 ### ChartText
 

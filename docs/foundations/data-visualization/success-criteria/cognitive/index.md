@@ -1,4 +1,4 @@
-# Cognitive Accessibility
+# Cognitive Accessibility (dataviz)
 
 Our graphs should be easy to understand for everyone. Therefore, we use clear language and explain terminology, data, and interaction where necessary. Clear titles, descriptions, and labels can provide additional context to the data. Legends can explain categorisation, and in-line labelling and annotations can guide the user.
 

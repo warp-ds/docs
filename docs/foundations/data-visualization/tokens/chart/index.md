@@ -1,4 +1,4 @@
-# Chart Colours
+# Chart Colours (dataviz)
 
 Chart colours are used for non-data elements in a chart. For design guidelines, see [Colour Guidelines > Chart Colours](/foundations/data-visualization/color/chart-colors/)
 
@@ -7,7 +7,7 @@ Chart colours are used for non-data elements in a chart. For design guidelines, 
 :::
 
 
-## ChartBackground
+## ChartBackground (dataviz)
 
 Use as background for charts.
 
@@ -16,7 +16,7 @@ Use as background for charts.
 | `ChartBackground/Default` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #ffffff; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-chartbackground` | `dv-s-chartbg` | `dv-s-fill-chartbg` | `dv-s-stroke-chartbg` |
 
 
-## ChartLine
+## ChartLine (dataviz)
 
 Use for baseline and gridlines.
 
@@ -25,7 +25,7 @@ Use for baseline and gridlines.
 | `ChartLine/Default` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #84848f; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-chartline` | `dv-s-chartline` | `dv-s-fill-chartline` | `dv-s-stroke-chartline` |
 | `ChartLine/Subtle` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #cacad1; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-chartline-subtle` | `dv-s-chartline-subtle` | `dv-s-fill-chartline-subtle` | `dv-s-stroke-chartline-subtle` |
 
-## ChartText
+## ChartText (dataviz)
 
 Use for labels, axes names etc.
 

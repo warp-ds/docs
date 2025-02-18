@@ -26,7 +26,7 @@ The `-subtle` colours need a border to achieve good contrast against the backgro
 
 \* Yes, it is a bit strange to apply a `background` colour as `stroke`, but it is possible.
 
-## Primary DV Background
+## Primary Background (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
@@ -35,7 +35,7 @@ The `-subtle` colours need a border to achieve good contrast against the backgro
 | `Background/Primary-Subtle` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #b4defd; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-background-primary-subtle` | `dv-s-bg-primary-subtle` | `dv-s-fill-bg-primary-subtle` | `dv-s-stroke-bg-primary-subtle` |
 | `Background/Primary-Subtle-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #6eb9fe; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-background-primary-subtle-highlight` | `dv-s-bg-primary-subtle-highlight` | `dv-s-fill-bg-primary-subtle-highlight` | `dv-s-stroke-bg-primary-subtle-highlight` |
 
-## Secondary DV Background
+## Secondary Background (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :------: | --- | ---------- | -------- | ---------- | 
@@ -44,7 +44,7 @@ The `-subtle` colours need a border to achieve good contrast against the backgro
 | `Background/Secondary-Subtle` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #d6d9db; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-background-secondary-subtle` | `dv-s-bg-secondary-subtle` | `dv-s-fill-bg-secondary-subtle` | `dv-s-stroke-bg-secondary-subtle` |
 | `Background/Secondary-Subtle-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #b4b4b4; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-background-secondary-subtle-highlight` | `dv-s-bg-secondary-subtle-highlight` | `dv-s-fill-bg-secondary-subtle-highlight` | `dv-s-stroke-bg-secondary-subtle-highlight` |
 
-## Category DV Background
+## Category Background (dataviz)
 
 ### Category1: Indigo
 
@@ -116,7 +116,7 @@ The `-subtle` colours need a border to achieve good contrast against the backgro
 | `Background/Category8-Subtle` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #c3c6c9; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-background-category8-subtle` | `dv-s-bg-category8-subtle` | `dv-s-fill-bg-category8-subtle` | `dv-s-stroke-bg-category8-subtle` |
 | `Background/Category8-Subtle-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #a1a1a1; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-background-category8-subtle-highlight` | `dv-s-bg-category8-subtle-highlight` | `dv-s-fill-bg-category8-subtle-highlight` | `dv-s-stroke-bg-category8-subtle-highlight` |
 
-## Evaluation DV Background
+## Evaluation Background (dataviz)
 
 ### Negative: Red
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |

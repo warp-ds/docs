@@ -1,4 +1,4 @@
-# Figma Library
+# Figma Library (dataviz)
 
 Datviz colours and components are in a dedicated library that you need to add to your Figma file. We use the same dataviz colours across all brands. However, the library allows you to swap between dark mode and light mode. ✨
 

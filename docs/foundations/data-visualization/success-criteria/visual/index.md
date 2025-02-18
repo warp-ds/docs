@@ -1,4 +1,4 @@
-# Visual Accessibility
+# Visual Accessibility (dataviz)
 
 Visual elements in graphs should be possible to perceive and distinguish from each other for everyone who can see. Therefore, we need to be mindful of font-sizes, colour contrasts and colour combinations, animations and responsiveness.
 

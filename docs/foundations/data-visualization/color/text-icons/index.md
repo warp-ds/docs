@@ -1,4 +1,4 @@
-# Text & Icons
+# Text & Icons (dataviz)
 
 *For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) > [Text](/foundations/data-visualization/tokens/text/) or [Icon](/foundations/data-visualization/tokens/icon/).*
 
@@ -32,7 +32,7 @@ The `icon` colours are the same as the `text` colours, to make them work well to
 
 ## Colour tokens
 
-### Text colour tokens
+### Text colour tokens (dataviz)
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
@@ -51,7 +51,7 @@ The `icon` colours are the same as the `text` colours, to make them work well to
 | `Text/Negative` | ![red boxes](/foundations/dataviz/col-preview/positive-text.png){width=80px} | Red - representing something negative | 
 | `Text/Neutral` | ![gray boxes](/foundations/dataviz/col-preview/positive-text.png){width=80px} | Gray - representing something neutral | 
 
-### Icon colour tokens
+### Icon colour tokens (dataviz)
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 

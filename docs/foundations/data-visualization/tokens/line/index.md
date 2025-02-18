@@ -18,14 +18,14 @@ The dataviz `line` colours are used for lines and points. For design guidelines,
 | iOS | `line[Semantic colour]` | `linePrimary` | 
 
 
-## Primary DV Line
+## Primary Line (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
 | `Line/Primary` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #1087de; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-line-primary` | `dv-s-line-primary` | `dv-s-fill-line-primary` | `dv-s-stroke-line-primary` |
 | `Line/Primary-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #0e6cac; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-line-primary-highlight` | `dv-s-line-primary-highlight` | `dv-s-fill-line-primary-highlight` | `dv-s-stroke-line-primary-highlight` |
 
-## Secondary DV Line
+## Secondary Line (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
@@ -33,7 +33,7 @@ The dataviz `line` colours are used for lines and points. For design guidelines,
 | `Line/Secondary-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-line-secondary-highlight` | `dv-s-line-secondary-highlight` | `dv-s-fill-line-secondary-highlight` | `dv-s-stroke-line-secondary-highlight` |
 
 
-## Category DV Line
+## Category Line (dataviz)
 
 ### Category1: Indigo
 
@@ -90,7 +90,7 @@ The dataviz `line` colours are used for lines and points. For design guidelines,
 | `Line/Category8-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #65686d; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-line-category8-highlight` | `dv-s-line-category8-highlight` | `dv-s-fill-line-category8-highlight` | `dv-s-stroke-line-category8-highlight` |
 
 
-## Evaluation DV Line
+## Evaluation Line (dataviz)
 
 ### Negative: Red
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |

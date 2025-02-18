@@ -1,6 +1,12 @@
-# Bars & Areas
+# Bars & Areas (dataviz)
 
 *For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) > [Background](/foundations/data-visualization/tokens/background/) or [Border](/foundations/data-visualization/tokens/border/).*
+
+::: warning This is documentation for **dataviz**, not regular WARP.
+
+
+
+:::
 
 ## Bars and columns
 
@@ -107,7 +113,7 @@ For prediction area, use the gray Secondary border colour (`border-secondary`) w
 
 ## Colour tokens
 
-### Background
+### Background (dataviz)
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
@@ -127,7 +133,7 @@ For prediction area, use the gray Secondary border colour (`border-secondary`) w
 | `Background/Negative` | ![red boxes](/foundations/dataviz/col-preview/positive-bg.png){width=80px} | Red - representing something negative | 
 | `Background/Neutral` | ![gray boxes](/foundations/dataviz/col-preview/positive-bg.png){width=80px} | Gray - representing something neutral | 
 
-### Background-Subtle
+### Background-Subtle (dataviz)
 
 Needs a border to have enough contrast against the background.
 
@@ -149,7 +155,7 @@ Needs a border to have enough contrast against the background.
 | `Background/Neutral-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/positive-bg-subtle.png){width=80px} | Gray - representing something neutral | 
 
 
-### Border
+### Border (dataviz)
 
 Border around Background Subtle.
 

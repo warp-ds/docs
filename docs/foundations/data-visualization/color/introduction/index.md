@@ -1,4 +1,4 @@
-# Introduction to Colour Guidelines for Design
+# Colour Guidelines for Design (dataviz)
 
 *For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/).*
 

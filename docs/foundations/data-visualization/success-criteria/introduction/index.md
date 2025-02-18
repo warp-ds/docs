@@ -1,4 +1,4 @@
-# Introduction to Dataviz Success Sriteria
+# Introduction to Dataviz Success Criteria
 
 The following success criteria will help you create graphs that effectively communicate insights and are accessible for everyone. Some criteria are most relevant for designers, while others are more relevant for developers.
 

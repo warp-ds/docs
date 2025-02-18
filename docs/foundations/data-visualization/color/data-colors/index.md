@@ -1,4 +1,4 @@
-# Data Colours
+# Data Colours (dataviz)
 
 *For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/).*
 
@@ -6,14 +6,11 @@
 
 [[toc]]
 
-
-
-## Semantic data colours
+## Semantic data colours for dataviz
 
 For data colours, there are different semantic colours that should be used intentionally: Primary, Secondary, Category and Evaluation colours.
 
 In dataviz we use visual elements to encode data (sometimes referred to as ‘data marks’). 
-
 
 ### Primary – when you only need one colour
 

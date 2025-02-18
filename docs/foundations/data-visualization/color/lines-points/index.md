@@ -1,4 +1,4 @@
-# Lines & Points
+# Lines & Points (dataviz)
 
 *For implementation, see [Tokens & CSS > Line](/foundations/data-visualization/tokens/line/).*
 
@@ -38,7 +38,7 @@ For points, consider using different **point shapes** for each category. However
 
 ## Colour tokens
 
-### Line colours
+### Line colours (dataviz)
 
 Stroke colour for lines and points.
 
@@ -59,7 +59,7 @@ Stroke colour for lines and points.
 | `Line/Negative` | ![red lines](/foundations/dataviz/col-preview/positive-line.png){width=80px} | Red - lines representing something negative | 
 | `Line/Neutral` | ![gray lines](/foundations/dataviz/col-preview/positive-line.png){width=80px} | Gray - lines representing something neutral | 
 
-### Background colours
+### Background colours (dataviz)
 
 For use inside 'donut' points.
 

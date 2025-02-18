@@ -21,7 +21,7 @@ Since the `border` colours are used with a subtle background colour, the (see [b
 
 \* Yes, it is a bit strange to apply a `border` colour as `fill`, but it is possible.
 
-## Primary DV Border
+## Primary Border (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
@@ -30,14 +30,14 @@ Since the `border` colours are used with a subtle background colour, the (see [b
 
 \* Light mode and dark mode preview
 
-## Secondary DV Border
+## Secondary Border (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
 | `Border/Secondary` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #919499; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-border-secondary` | `dv-s-border-secondary` | `dv-s-fill-border-secondary` | `dv-s-stroke-border-secondary` |
 | `Border/Secondary-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-border-secondary-highlight` | `dv-s-border-secondary-highlight` | `dv-s-fill-border-secondary-highlight` | `dv-s-stroke-border-secondary-highlight` |
 
-## Category DV Border
+## Category Border (dataviz)
 
 ### Category1: Indigo
 
@@ -93,7 +93,7 @@ Since the `border` colours are used with a subtle background colour, the (see [b
 | `Border/Category8` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #919499; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-border-category8` | `dv-s-border-category8` | `dv-s-fill-border-category8` | `dv-s-stroke-border-category8` |
 | `Border/Category8-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #73767c; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-border-category8-highlight` | `dv-s-border-category8-highlight` | `dv-s-fill-border-category8-highlight` | `dv-s-stroke-border-category8-highlight` |
 
-## Evaluation DV Border
+## Evaluation Border (dataviz)
 
 ### Negative: Red
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |

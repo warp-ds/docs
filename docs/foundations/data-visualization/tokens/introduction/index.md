@@ -1,4 +1,4 @@
-# Introduction to Tokens & CSS for Dataviz Colours
+# Tokens & CSS for Dataviz Colours
 
 *For design guidelines, see [Colour Guidelines](/foundations/data-visualization/color/introduction/).*
 
@@ -157,13 +157,15 @@ See [Interaction](/foundations/data-visualization/interaction/) for more informa
 
 ## iOS
 
-The pattern for the variable name is: `[colour category][Semantic colour]`
+The pattern for the variable name is: 
+- `Warp.DatavizToken.[colour category][Semantic colour]` for SwiftUI `Color`
+- `Warp.DatavizUIToken.[colour category][Semantic colour]` for UIKit `UIColor`
 
 Examples:
-- `backgroundPrimary`
-- `borderCategory1`
-- `lineSecondary`
-- `lineSecondaryHighlight`
+- `Warp.DatavizToken.backgroundPrimary` / `Warp.DatavizUIToken.backgroundPrimary`
+- `Warp.DatavizToken.borderCategory1` / `Warp.DatavizUIToken.borderCategory1`
+- `Warp.DatavizToken.lineSecondary` / `Warp.DatavizUIToken.lineSecondary`
+- `Warp.DatavizToken.lineSecondaryHighlight` / `Warp.DatavizUIToken.lineSecondaryHighlight`
  
 
 ## Android

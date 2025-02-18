@@ -1,4 +1,4 @@
-# Keyboard Navigation
+# Keyboard Navigation (dataviz)
 
 Interactive charts should be easy to operate using a keyboard. Everything that can be done through pointer interaction (e.g. click or hover), should be achievable through keyboard interaction as well. 
 

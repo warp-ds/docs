@@ -19,14 +19,14 @@ For actual icons to use, see [Components > Icons](/components/icons/). For datav
 | SVG stroke class | `dv-s-stroke-icon-[semantic colour]` | `dv-s-stroke-icon-primary` | 
 | iOS | `icon[Semantic colour]` | `iconPrimary` | 
 
-## Primary DV Icon
+## Primary Icon (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
 | `Icon/Primary` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #007ac8; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-icon-primary` | `dv-s-icon-primary` | `dv-s-fill-icon-primary` | `dv-s-stroke-icon-primary` |
 | `Icon/Primary-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #165887; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-icon-primary-highlight` | `dv-s-icon-primary-highlight` | `dv-s-fill-icon-primary-highlight` | `dv-s-stroke-icon-primary-highlight` |
 
-## Secondary DV Icon
+## Secondary Icon (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
@@ -34,7 +34,7 @@ For actual icons to use, see [Components > Icons](/components/icons/). For datav
 | `Icon/Secondary-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-icon-secondary-highlight` | `dv-s-icon-secondary-highlight` | `dv-s-fill-icon-secondary-highlight` | `dv-s-stroke-icon-secondary-highlight` |
 
 
-## Category DV Icon
+## Category Icon (dataviz)
 
 ### Category1: Indigo
 
@@ -91,7 +91,7 @@ For actual icons to use, see [Components > Icons](/components/icons/). For datav
 | `Icon/Category8-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-icon-category8-highlight` | `dv-s-icon-category8-highlight` | `dv-s-fill-icon-category8-highlight` | `dv-s-stroke-icon-category8-highlight` |
 
 
-## Evaluation DV Icon
+## Evaluation Icon (dataviz)
 
 ### Negative: Red
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |

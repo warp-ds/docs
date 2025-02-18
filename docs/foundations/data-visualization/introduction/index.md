@@ -32,6 +32,7 @@ const pages = [{
 </script>
 
 <span style="color: white; background-color: #BE3830; padding: 2px 8px; margin: 8px 0px; border-radius: 4px; font-weight: bold;">Work in progress</span>
+
 # Introduction to Data Visualisation 
 
 ![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)

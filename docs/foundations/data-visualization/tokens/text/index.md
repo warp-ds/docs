@@ -17,14 +17,14 @@ The dataviz `text` colours are used for text representing data. For design guide
 | SVG stroke class* | `dv-s-stroke-text-[semantic colour]` | `dv-s-stroke-text-primary` | 
 | iOS | `text[Semantic colour]` | `textPrimary` | 
 
-## Primary DV Text
+## Primary Text (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
 | `Text/Primary` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #007ac8; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-text-primary` | `dv-s-text-primary` | `dv-s-fill-text-primary` | `dv-s-stroke-text-primary` |
 | `Text/Primary-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #165887; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-text-primary-highlight` | `dv-s-text-primary-highlight` | `dv-s-fill-text-primary-highlight` | `dv-s-stroke-text-primary-highlight` |
 
-## Secondary DV Text
+## Secondary Text (dataviz)
 
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
 | ----- | :----: | ------------ | ---------- | ------------- | ---------------- | 
@@ -32,7 +32,7 @@ The dataviz `text` colours are used for text representing data. For design guide
 | `Text/Secondary-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-text-secondary-highlight` | `dv-s-text-secondary-highlight` | `dv-s-fill-text-secondary-highlight` | `dv-s-stroke-text-secondary-highlight` |
 
 
-## Category DV Text
+## Category Text (dataviz)
 
 ### Category1: Indigo
 
@@ -89,7 +89,7 @@ The dataviz `text` colours are used for text representing data. For design guide
 | `Text/Category8-highlight` | <span style="display: inline-block; width: 32px; height: 32px; background-color: #535659; border: 1px solid #D4D9E3; border-radius: 4px;"></span> | `--w-dv-s-color-text-category8-highlight` | `dv-s-text-category8-highlight` | `dv-s-fill-text-category8-highlight` | `dv-s-stroke-text-category8-highlight` |
 
 
-## Evaluation DV Text
+## Evaluation Text (dataviz)
 
 ### Negative: Red
 | Figma | Colour | CSS variable | HTML class | SVG Fill class| SVG Stroke class |
