@@ -21,7 +21,7 @@ Guidance and onboarding to the WARP design system.
 ### 02. Documentation
 
 [Component overview](https://www.figma.com/design/nkiRpuVu6XRfvY96BA80H8/Component-overview?m=auto): component documentation. The content in here will be migrated from Figma to this page. <br><br>
-[DataViz Guidelines (Beta)](https://www.figma.com/design/nGpxtM37E56I832ZDR3lRt/DataViz-Guidelines-(Beta)?m=auto): guidelines for data visualisation.
+[DataViz Guidelines (Beta)](https://www.figma.com/design/nGpxtM37E56I832ZDR3lRt/DataViz-Guidelines-(Beta)?m=auto): guidelines for data visualization.
 
 ::: image-block
 ![Overview of the "Documentation" project in Figma for designers](/get-started/figma-warp-documentation.jpg)
@@ -31,7 +31,7 @@ Guidance and onboarding to the WARP design system.
 
 [WARP - Components](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?m=auto): contains all tokens and themable components used for Schibsted Marketplaces. <br><br>
 [WARP - Icons](https://www.figma.com/design/yEx16ew6S0Xgd579dN4hsM/WARP---Icons?m=auto): icon library containing all supported icons. <br><br>
-[WARP - DataViz (Beta)](https://www.figma.com/design/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz-(Beta)?m=auto): library with data visualisation colours and components. <br><br>
+[WARP - DataViz (Beta)](https://www.figma.com/design/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz-(Beta)?m=auto): library with data visualization colours and components. <br><br>
 [WARP - Design Tools](https://www.figma.com/design/pZ8kIMvs615cJfbIzatP03/WARP---Design-Tools?m=auto): standardised design elements that you can use in presentations, mockups, or to help organise things in your Figma files.
 
 ::: image-block

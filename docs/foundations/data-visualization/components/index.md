@@ -8,7 +8,7 @@
 
 ### Chart examples 
 
-In the [Dataviz library](https://www.figma.com/design/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz?m=auto&node-id=3024-46970&t=RQcDLpHUn8jFU242-1) in Figma you will find a range of graph examples that are built using the dataviz colour palette and the components in the library. The examples are published as components, and can therefore easily be added to your sketches.
+In the [Dataviz library](https://www.figma.com/design/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz?m=auto&node-id=3024-46970&t=RQcDLpHUn8jFU242-1) in Figma you will find a range of graph examples that are built using the dataviz color palette and the sub-components in the library. The examples are published as components, and can therefore easily be added to your sketches.
 
 ![21 random chart examples available in Figma, in light mode and dark mode](/foundations/dataviz/component-gallery.png)
 
@@ -23,7 +23,7 @@ A chart is made up of a range of elements that are are available as components i
 Sub-components include:
 - A `Grid` component with a `Gridline` and a `Baseline` components inside. Choose number of lines, orientation (Horizontal / Vertical), and show/hide baseline
 - A `Ticks & Labels` component. Choose number of ticks, and which side of the graph the ticks should be placed (below or left). For each tick the label and visual tick can be turned on or off individually. For example, you might want to have a label for every second tick
-- A `Legend` component with `Legend-item` components inside. Choose Chart type (Bar/area, Line, Point), Colours (Primary & Secondary, Category, Evaluation) and how many items to show.
+- A `Legend` component with `Legend-item` components inside. Choose Chart type (Bar/area, Line, Point), Colors (Primary & Secondary, Category, Evaluation) and how many items to show.
 
 These sup-components are available as components in the Figma library. Note that these components do not exist in code, as graphs are typically created using various libraries, and are therefore not composed in the same way.
 
@@ -45,14 +45,14 @@ When you use the `Chart elements` component or any of the sub-components you can
 
 For example, you can change the text in the labels, and adjust the padding on the `Ticks & Labels` component like so:
 
-![Adjusting padding using autolayout panel in Figma](/foundations/dataviz/sub-component-padding.gif)
+![Adjusting padding using auto layout panel in Figma](/foundations/dataviz/sub-component-padding.gif)
 
 - Select the `X Ticks & labels` frame
 - Adjust the `Horizontal padding' value under `Auto layout` in the right hand panel in Figma.
 
 ## Components in code
 
-There is currently no WARP component library for data visualisation. For web, the JavaScript library you use typically takes care of all the parts of a visualisation.
+There is currently no WARP component library for data visualization. For web, the JavaScript library you use typically takes care of all the parts of a visualization.
 
 ### Which JavaScript library should you use for charts?
 There are many JavaScript libraries available, such as [HighCharts](https://www.highcharts.com), [D3](https://d3js.org/), [visx](https://airbnb.io/visx/), [Recharts](https://recharts.org/) and [Apexcharts](https://apexcharts.com/). 

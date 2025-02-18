@@ -10,13 +10,13 @@ const pages = [{
   href: "../components/",
 },
 {
-  title: "Colour Guidelines",
-  description: "Guidelines for using the dataviz colours. Mostly for designers.",
+  title: "Color Guidelines",
+  description: "Guidelines for using the dataviz colors. Mostly for designers.",
   href: "../color/introduction/",
 },
 {
   title: "Tokens & CSS",
-  description: "Guidelines for implementing colours in code using tokens and CSS. Mostly for developers.",
+  description: "Guidelines for implementing colors in code using tokens and CSS. Mostly for developers.",
   href: "../tokens/introduction/",
 },
 {
@@ -26,14 +26,14 @@ const pages = [{
 },
 {
   title: "Success Criteria",
-  description: "Success criteria for creating accessible and useful data visualisations. For designers and developers.",
+  description: "Success criteria for creating accessible and useful data visualizations. For designers and developers.",
   href: "../success-criteria/introduction/",
 }]
 </script>
 
 <span style="color: white; background-color: #BE3830; padding: 2px 8px; margin: 8px 0px; border-radius: 4px; font-weight: bold;">Work in progress</span>
 
-# Introduction to Data Visualisation 
+# Introduction to Data Visualization 
 
 ![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)
 
@@ -58,7 +58,7 @@ const pages = [{
 <br>
 
 
-On this page you will find a general introduction to working with data visualisation – commonly referred to as ✨ **dataviz** ✨.
+On this page you will find a general introduction to working with data visualization – commonly referred to as ✨ **dataviz** ✨.
 
 **On this page:**
 
@@ -66,7 +66,7 @@ On this page you will find a general introduction to working with data visualisa
 
 ## Dataviz in WARP
 
-WARP offers a comprehensive **colour palette** for data visualisation, available both in Figma and code. See [Colour usage](/foundations/data-visualization/color/introduction/) for guidelines, and [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) for implementation in code.
+WARP offers a comprehensive **color palette** for data visualization, available both in Figma and code. See [Color usage](/foundations/data-visualization/color/introduction/) for guidelines, and [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) for implementation in code.
 
 There is no dedicated dataviz library in Vend, as different teams currently use a variety of libraries. However, there are some components available in Figma. See [Components](/foundations/data-visualization/components/).
 
@@ -74,25 +74,25 @@ These guidelines and resources primarily apply to graphs and charts, not maps.
 
 ## What do you need to think about?
 
-When you create visualisations you want to:
+When you create visualizations you want to:
 
 1. **Answer real questions**<br>
-   Visualisation is not a goal in itself, so don’t visualise data just because you can. Show information in the best way you can to make it useful and actionable for your users.
+   Visualization is not a goal in itself, so don’t visualize data just because you can. Show information in the best way you can to make it useful and actionable for your users.
 2. **Present data honestly**<br>
    Be truthful and transparent when presenting information in order to gain trust.
 3. **Choose clarity and understanding over wow**<br>
-   The purpose of our visualisations is to create insight. Beauty can be a bonus, but should not be your primary goal.
+   The purpose of our visualizations is to create insight. Beauty can be a bonus, but should not be your primary goal.
 4. **Make the information accessible for everyone**<br>
    Make the information available in multiple ways so that all users can benefit from it.
 
 These are high level principles we should strive for. In the section [Success criteria](/foundations/data-visualization/success-criteria/introduction/) there are more specific guidelines.
 
-## How do you define the goal of your visualisation?
+## How do you define the goal of your visualization?
 
-Before you make a visualisation it can be useful to define the goal of the visualisation. One way of doing so is to answer two core questions:
+Before you make a visualization it can be useful to define the goal of the visualization. One way of doing so is to answer two core questions:
 
-- Should your visualisation **explain** an insight, or allow people to **explore** on their own?
-- Should your visualisation enable people to **read** off the information in detail, or rather provide them an overall **feeling** of the data?
+- Should your visualization **explain** an insight, or allow people to **explore** on their own?
+- Should your visualization enable people to **read** off the information in detail, or rather provide them an overall **feeling** of the data?
 
 ::: image-block
 ![A scale ranging from Explain to Explore, and another scale ranging from Read to Feel](/foundations/dataviz/explain-explore-read-feel.png){width=400px}
@@ -100,20 +100,20 @@ Before you make a visualisation it can be useful to define the goal of the visua
 
 ### Explain vs Explore
 
-- **Explanatory**: your visualisation explains or communicates a specific story or insight to someone. In this case, you need to figure out what story to tell, and how to tell it
+- **Explanatory**: your visualization explains or communicates a specific story or insight to someone. In this case, you need to figure out what story to tell, and how to tell it
 - **Exploratory**: users should explore data freely and find their own insight, for example in an analytical dashboard. In this case, you need to figure out how they are going to do that, for example using filters and sorting.
 
 ### Read vs Feel
 
 - **Read**: the focus is on being able to read the data as efficiently and precise as possible. In this case, make sure to use the graph types and elements that allow for a precise reading. For example, it is hard to compare one angle with another, or the size of an area with another, while it is easier to compare the length of lines next to each other
-- **Feel**: the focus is on evoking a feeling or overall impression of the data. In this case, consider visual means that evoke associations and emotions and make the visualisation memorable.
+- **Feel**: the focus is on evoking a feeling or overall impression of the data. In this case, consider visual means that evoke associations and emotions and make the visualization memorable.
 
 ## Chart functions
 
 In order to find a good chart it is useful to figure out what you want to show about the data. In other words, what function the chart should serve.
 
 ::: image-block
-![Circles organised to show comparison, correlation, distribution, trend over time, parts to whole, and geolocation. ](/foundations/dataviz/chart-functions.png){width=500px}
+![Circles organized to show comparison, correlation, distribution, trend over time, parts to whole, and geolocation. ](/foundations/dataviz/chart-functions.png){width=500px}
 :::
 
 The most common functions are:
@@ -129,9 +129,9 @@ The most common functions are:
 For a full overview of different chart types you can use for different functions, have a look at the [DataViz Project](https://datavizproject.com/).
 :::
 
-## What is a good visualisation?
+## What is a good visualization?
 
-A good visualisation communicates insight in a clear and engaging way without the need of somebody to explain the insight to you. Don’t be afraid to add some text to make the visualisation clear. The best visualisations enable users to take action based on the insights they get from the visualisation.
+A good visualization communicates insight in a clear and engaging way without the need of somebody to explain the insight to you. Don’t be afraid to add some text to make the visualization clear. The best visualizations enable users to take action based on the insights they get from the visualization.
 
 Consider this example:
 ::: image-block
@@ -139,9 +139,9 @@ Consider this example:
 :::
 Image source: [REUTERS](https://www.reuters.com/graphics/ENVIRONMENT-PLASTIC/0100B275155/index.html)
 
-The visualisation above puts a number (that otherwise would be very abstract) into a context that makes it possible to understand. In addition, the visual form itself grabs your attention and makes the insight memorable. Text is used to explain the visuals.
+The visualization above puts a number (that otherwise would be very abstract) into a context that makes it possible to understand. In addition, the visual form itself grabs your attention and makes the insight memorable. Text is used to explain the visuals.
 
-It seems that the goal of this visualisation is to explain a specific message, rather than make you explore a dataset. In addition, the goal seems to be to make you feel something and get an overall understanding rather than enable you to read off exact values.
+It seems that the goal of this visualization is to explain a specific message, rather than make you explore a dataset. In addition, the goal seems to be to make you feel something and get an overall understanding rather than enable you to read off exact values.
 
 ::: image-block
 ![A scale where a dot is placed close to 'Explain' and far from 'Explore'. Another scale with a dot placed close to 'Feel' and far from 'Read' ](/foundations/dataviz/explain-feel.png){width=400px}

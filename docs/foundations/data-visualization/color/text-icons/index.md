@@ -4,40 +4,40 @@
 
 ## Text
 
-In general, use `ChartText` (black/gray/white) colour for numbers and labels. 
+In general, use `ChartText` (black/gray/white) color for numbers and labels. 
 
-However, the `Text` data colours can be relevant to use in two situations:
-- **Text labels**. Colour can be used on labels, matching the colour of the visual data element (such as a line or a bar) 
-- **Data values**. Colour can be used on data values.
+However, the `Text` data colors can be relevant to use in two situations:
+- **Text labels**. Color can be used on labels, matching the color of the visual data element (such as a line or a bar) 
+- **Data values**. Color can be used on data values.
 
-![Area chart with intense blue colour fill in light mode and dark mode](/foundations/dataviz/element-text.png)
+![Area chart with intense blue color fill in light mode and dark mode](/foundations/dataviz/element-text.png)
 
-Only use colour on text if it makes it easier to visually connect the text to the data marks, or interpret values. Otherwise, use the default text colour. See Chart colours.   
+Only use color on text if it makes it easier to visually connect the text to the data marks, or interpret values. Otherwise, use the default text color. See Chart colors.   
 
 Use `Body Strong` font style or larger with `Text` to ensure good contrast.
 
 ## Icons
 
-In general, use WARP colours on icons in the interface.
+In general, use WARP colors on icons in the interface.
 
-However, the dataviz `icon` colours can be relevant in two situations:
-- **Indicate trend**. Place an icon next to a value to help users understand if the value is trending up or down. Use Evaluation colours to reinforce the message of the icon.
-- **Label values**. Use an icon to label the data, possibly in combination with text labels. Using the same colour on the icon and the text can help users visually connect the label to the data.
+However, the dataviz `icon` colors can be relevant in two situations:
+- **Indicate trend**. Place an icon next to a value to help users understand if the value is trending up or down. Use Evaluation colors to reinforce the message of the icon.
+- **Label values**. Use an icon to label the data, possibly in combination with text labels. Using the same color on the icon and the text can help users visually connect the label to the data.
 
-Only use colour on icons if it makes it easier to visually connect the text to the data marks, or interpret values. Otherwise, use the default icon colour.
+Only use color on icons if it makes it easier to visually connect the text to the data marks, or interpret values. Otherwise, use the default icon color.
 
-The `icon` colours are the same as the `text` colours, to make them work well together and have good contrast against the background.
+The `icon` colors are the same as the `text` colors, to make them work well together and have good contrast against the background.
 
-![Left: blue icon with arrow pointing up, gray icon with arrow pointing right, red icon with arrow pointing down. Right: happy, neutral and sad face icons coloured green, yellow and red](/foundations/dataviz/element-icon.png)
+![Left: blue icon with arrow pointing up, gray icon with arrow pointing right, red icon with arrow pointing down. Right: happy, neutral and sad face icons colored green, yellow and red](/foundations/dataviz/element-icon.png)
 
-## Colour tokens
+## Color tokens
 
-### Text colour tokens (dataviz)
+### Text color tokens (dataviz)
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Text/Primary` | ![blue boxes](/foundations/dataviz/col-preview/primary-text.png){width=80px} | Blue – if you only need one colour | 
-| `Text/Secondary` | ![gray boxes](/foundations/dataviz/col-preview/secondary-text.png){width=80px} | Gray – for a secondary colour | 
+| `Text/Primary` | ![blue boxes](/foundations/dataviz/col-preview/primary-text.png){width=80px} | Blue – if you only need one color | 
+| `Text/Secondary` | ![gray boxes](/foundations/dataviz/col-preview/secondary-text.png){width=80px} | Gray – for a secondary color | 
 | `Text/Category1` | ![indigo boxes](/foundations/dataviz/col-preview/category1-text.png){width=80px} | Indigo - representing category 1 | 
 | `Text/Category2` | ![yellow boxes](/foundations/dataviz/col-preview/category2-text.png){width=80px} | Yellow - representing category 2 | 
 | `Text/Category3` | ![pink boxes](/foundations/dataviz/col-preview/category3-text.png){width=80px} | Pink - representing category 3 | 
@@ -51,12 +51,12 @@ The `icon` colours are the same as the `text` colours, to make them work well to
 | `Text/Negative` | ![red boxes](/foundations/dataviz/col-preview/positive-text.png){width=80px} | Red - representing something negative | 
 | `Text/Neutral` | ![gray boxes](/foundations/dataviz/col-preview/positive-text.png){width=80px} | Gray - representing something neutral | 
 
-### Icon colour tokens (dataviz)
+### Icon color tokens (dataviz)
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Icon/Primary` | ![blue boxes](/foundations/dataviz/col-preview/primary-icon.png){width=80px} | Blue – if you only need one colour | 
-| `Icon/Secondary` | ![gray boxes](/foundations/dataviz/col-preview/secondary-icon.png){width=80px} | Gray – for a secondary colour | 
+| `Icon/Primary` | ![blue boxes](/foundations/dataviz/col-preview/primary-icon.png){width=80px} | Blue – if you only need one color | 
+| `Icon/Secondary` | ![gray boxes](/foundations/dataviz/col-preview/secondary-icon.png){width=80px} | Gray – for a secondary color | 
 | `Icon/Category1` | ![indigo boxes](/foundations/dataviz/col-preview/category1-icon.png){width=80px} | Indigo - representing category 1 | 
 | `Icon/Category2` | ![yellow boxes](/foundations/dataviz/col-preview/category2-icon.png){width=80px} | Yellow - representing category 2 | 
 | `Icon/Category3` | ![pink boxes](/foundations/dataviz/col-preview/category3-icon.png){width=80px} | Pink - representing category 3 | 

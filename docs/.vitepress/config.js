@@ -536,17 +536,17 @@ export default defineConfig({
           { text: 'Accessibility', link: '/foundations/accessibility/' },
           { text: 'Brands', link: '/foundations/brands/' },
           {
-            text: 'Data visualisation <span style="color: white; background-color: #BE3830; padding: 2px 8px; margin: 0px 8px; border-radius: 4px; font-weight: bold;">WIP</span>',
+            text: 'Data visualization <span style="color: white; background-color: #BE3830; padding: 2px 8px; margin: 0px 8px; border-radius: 4px; font-weight: bold;">WIP</span>',
             collapsed: true,
             items: [
               { text: 'Introduction', link: '/foundations/data-visualization/introduction/' },
               { text: 'Figma Library',link: '/foundations/data-visualization/figma-library/' },
-              { text: 'Colour Guidelines',
+              { text: 'Color Guidelines',
                 collapsed: true,
                 items: [ 
                   { text: 'Introduction', link: '/foundations/data-visualization/color/introduction/' },
-                  { text: 'Chart Colours', link: '/foundations/data-visualization/color/chart-colors/' },
-                  { text: 'Data Colours', link: '/foundations/data-visualization/color/data-colors/' },
+                  { text: 'Chart Colors', link: '/foundations/data-visualization/color/chart-colors/' },
+                  { text: 'Data Colors', link: '/foundations/data-visualization/color/data-colors/' },
                   { text: 'Lines & Points', link: '/foundations/data-visualization/color/lines-points/' },
                   { text: 'Bars & Areas', link: '/foundations/data-visualization/color/bars-areas/' },
                   { text: 'Text & Icons', link: '/foundations/data-visualization/color/text-icons/' },
@@ -557,7 +557,7 @@ export default defineConfig({
                 collapsed: true,
                 items: [ 
                   { text: 'Introduction', link: '/foundations/data-visualization/tokens/introduction/' },
-                  { text: 'Chart Colours', link: '/foundations/data-visualization/tokens/chart/' },
+                  { text: 'Chart Colors', link: '/foundations/data-visualization/tokens/chart/' },
                   { text: 'Background', link: '/foundations/data-visualization/tokens/background/' },
                   { text: 'Border', link: '/foundations/data-visualization/tokens/border/' },
                   { text: 'Icon', link: '/foundations/data-visualization/tokens/icon/' },
