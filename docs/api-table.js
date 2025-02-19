@@ -2668,6 +2668,12 @@ export const android = {
         'If should show the close icon',
       ],
       [
+        'dismissPopoverOnClickOutside',
+        'Boolean',
+        'true',
+        'If should dismiss the callout when clicked outside it',
+      ],
+      [
         'anchorView', 
         '@Composable () -> Unit', 
         'null', 
@@ -2783,6 +2789,42 @@ export const android = {
       ],
     ],
   },
+  Toast: {
+    required: [
+    [
+      'state', 
+      'WarpToastState', 
+      '', 
+      'State of the toast used in hide/show logic and to set the text'
+    ]
+  ],
+    props: [  
+      [
+        'modifier', 
+        'Modifier',
+        'Modifier', 
+        'The modifier for the Toast.',
+      ],
+      [
+        'type', 
+        'WarpToastType.Success <br /> WarpToastType.Warning <br /> WarpToastType.Error', 
+        'WarpToastType.Success', 
+        'Style of the toast'
+      ],
+      [
+        'duration', 
+        'WarpToastDuration.SHORT <br /> WarpToastDuration.LONG <br /> WarpToastDuration.INFINITE', 
+        'WarpToastDuration.SHORT', 
+        'Duration the Toast is shown'
+      ],
+      [
+        'onDismiss', 
+        '() -> Unit',
+        '{}', 
+        'The function to be invoked when dismissed ',
+      ],
+    ]
+  }
 };
 
 export const iOS = {
