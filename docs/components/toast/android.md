@@ -31,7 +31,7 @@ object WarpToastDuration {
 
 ### Usage
 
-The toast can be used by creating it once and then shown by setting text using the WarpToastState. Duration can be adjusted aswell as the style. If needed it is possible to set a custom onDismiss function, but if not set it will show for the built in duration time untill disappears.
+The toast can be used by creating it once and then shown by setting text using the WarpToastState. Duration can be adjusted as well as the style. If needed it is possible to set a custom onDismiss function, but if not set it will show for the built in duration time until it disappears.
 
 
 ```kotlin example
@@ -40,32 +40,32 @@ val toastWarning = remember { WarpToastState() }
 val toastError = remember { WarpToastState() }
 
 WarpButton(modifier = Modifier.padding(bottom = dimensions.space2),
-        text = "Show Success toast",
-        onClick = {
-            toastSuccess.showToast("Toast success")
-        })
-    WarpButton(modifier = Modifier.padding(bottom = dimensions.space2),
-        text = "Show Warning toast",
-        onClick = {
-            toastWarning.showToast("Toast warning")
-        })
-    WarpButton(modifier = Modifier.padding(bottom = dimensions.space2),
-        text = "Show Negative toast",
-        onClick = {
-            toastError.showToast("Toast error")
-        })
-    WarpToast(
-        state = toastSuccess
+    text = "Show Success toast",
+    onClick = {
+        toastSuccess.showToast("Toast success")
+    })
+WarpButton(modifier = Modifier.padding(bottom = dimensions.space2),
+    text = "Show Warning toast",
+    onClick = {
+        toastWarning.showToast("Toast warning")
+    })
+WarpButton(modifier = Modifier.padding(bottom = dimensions.space2),
+    text = "Show Negative toast",
+    onClick = {
+        toastError.showToast("Toast error")
+    })
+WarpToast(
+    state = toastSuccess
     )
-    WarpToast(
-        state = toastWarning,
-        type = WarpToastType.Warning,
-        duration = WarpToastDuration.LONG
+WarpToast(
+    state = toastWarning,
+    type = WarpToastType.Warning,
+    duration = WarpToastDuration.LONG
     )
-    WarpToast(
-        state = toastError,
-        type = WarpToastType.Error,
-        duration = WarpToastDuration.INFINITE
+WarpToast(
+    state = toastError,
+    type = WarpToastType.Error,
+    duration = WarpToastDuration.INFINITE
     )
 ```
 
