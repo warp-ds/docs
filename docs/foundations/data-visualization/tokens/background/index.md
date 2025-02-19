@@ -22,7 +22,7 @@ The `-subtle` colors need a border to achieve good contrast against the backgrou
 | HTML class | `dv-s-bg-[semantic-color]` | `dv-s-bg-primary` | 
 | SVG fill class | `dv-s-fill-bg-[semantic-color]` | `dv-s-fill-bg-primary` | 
 | SVG stroke class* | `dv-s-stroke-bg-[semantic-color]` | `dv-s-stroke-bg-primary` | 
-| iOS | `background[semantic-color]` | `backgroundPrimary` | 
+| iOS | `background[SemanticColor]` | `backgroundPrimary` | 
 
 \* Yes, it is a bit strange to apply a `background` color as `stroke`, but it is possible.
 

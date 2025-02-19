@@ -158,8 +158,8 @@ See [Interaction](/foundations/data-visualization/interaction/) for more informa
 ## iOS
 
 The pattern for the variable name is: 
-- `Warp.DatavizToken.[color category][Semantic color]` for SwiftUI `Color`
-- `Warp.DatavizUIToken.[color category][Semantic color]` for UIKit `UIColor`
+- `Warp.DatavizToken.[colorCategory][SemanticColor]` for SwiftUI `Color`
+- `Warp.DatavizUIToken.[colorCategory][SemanticColor]` for UIKit `UIColor`
 
 Examples:
 - `Warp.DatavizToken.backgroundPrimary` / `Warp.DatavizUIToken.backgroundPrimary`

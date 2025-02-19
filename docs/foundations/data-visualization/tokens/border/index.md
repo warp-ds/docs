@@ -17,7 +17,7 @@ Since the `border` colors are used with a subtle background color, the (see [bac
 | HTML class | `dv-s-border-[semantic-color]` | `dv-s-border-primary` | 
 | SVG fill class* | `dv-s-fill-border-[semantic-color]` | `dv-s-fill-border-primary` | 
 | SVG stroke class | `dv-s-stroke-border-[semantic-color]` | `dv-s-stroke-border-primary` | 
-| iOS | `border[semantic-color]` | `borderPrimary` | 
+| iOS | `border[SemanticColor]` | `borderPrimary` | 
 
 \* Yes, it is a bit strange to apply a `border` color as `fill`, but it is possible.
 

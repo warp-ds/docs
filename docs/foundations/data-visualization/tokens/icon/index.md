@@ -17,7 +17,7 @@ For actual icons to use, see [Components > Icons](/components/icons/). For datav
 | HTML class | `dv-s-icon-[semantic-color]` | `dv-s-icon-primary` | 
 | SVG fill class | `dv-s-fill-icon-[semantic-color]` | `dv-s-fill-icon-primary` | 
 | SVG stroke class | `dv-s-stroke-icon-[semantic-color]` | `dv-s-stroke-icon-primary` | 
-| iOS | `icon[Semantic-color]` | `iconPrimary` | 
+| iOS | `icon[SemanticColor]` | `iconPrimary` | 
 
 ## Primary Icon (dataviz)
 
