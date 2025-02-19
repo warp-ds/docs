@@ -3,6 +3,7 @@
   import iOS from './ios.md';
   import data from './data.json';
   import { mapFrameworkStatuses } from '../utils.js';
+  import android from './android.md';
 </script>
 
 # Toast
@@ -32,5 +33,8 @@ For accessibility reasons, toasts should never contain interactive elements as i
   </template>
   <template #iOS>
     <iOS />
+  </template>
+  <template #android>
+    <android />
   </template>
 </tabs-content>
