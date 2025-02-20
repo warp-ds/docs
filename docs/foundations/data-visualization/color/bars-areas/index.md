@@ -1,18 +1,18 @@
-# Bars & Areas
+# Bars & Areas (dataviz)
 
 *For implementation, see [Tokens & CSS](/foundations/data-visualization/tokens/introduction/) > [Background](/foundations/data-visualization/tokens/background/) or [Border](/foundations/data-visualization/tokens/border/).*
 
 ## Bars and columns
 
 ::: image-block
-![Bar chart showing a dark blue bar, next to another bar with subtle blue fill and a darker blue border](/foundations/dataviz/element-bar.png){width=434px}
+![Horizontal bar chart showing a dark blue bar, next to another bar with subtle blue fill and a darker blue border](/foundations/dataviz/element-bar.png){width=434px}
 :::
 
 When you are encoding data in bars and columns, you have two options:
 - **Default Background**. Example: `background-primary` 
 - **Subtle Background**. Example: `background-primary-subtle` and `border-primary`   
 
-The subtle variant can be used alone or together with the default colour to indicate something of less importance. The subtle colours need a 3 px border around the bar to achieve good enough contrast against the background.
+The subtle variant can be used alone or together with the default color to indicate something of less importance. The subtle colors need a 3 px border around the bar to achieve good enough contrast against the background.
 
 You may also add a pattern inside the area when using the subtle background, see [Patterns in bars and areas](#patterns-in-bars-and-areas).
 
@@ -20,10 +20,10 @@ You may also add a pattern inside the area when using the subtle background, see
 
 When bars are placed on top of gridlines and other data elements, it becomes harder to differentiate the bar from the elements below. 
 
-Consider adding a border (or slightly larger bar behind the data bar) with the `ChartBackground/Default` colour. As a result, a small gap appears between the elements, making it easier to differentiate between them.
+Consider adding a border (or slightly larger bar behind the data bar) with the `ChartBackground/Default` color. As a result, a small gap appears between the elements, making it easier to differentiate between them.
 
 ::: image-block
-![Bar chart showing a dark blue bar, next to another bar with subtle blue fill and a darker blue border](/foundations/dataviz/element-bar-chart-bg.png){width=434px}
+![A blue bar with white outline placed on top of a blue line. The white outline is annotated with 'ChartBackground'](/foundations/dataviz/element-bar-chart-bg.png){width=434px}
 :::
 
 In Figma, this is implemented in the bar components.
@@ -31,7 +31,7 @@ In Figma, this is implemented in the bar components.
 ### Stacked bars and columns
 
 ::: tip Pro tip 💡
-If you are creating stacked bar charts, add white space between each colour to make it easier to identify each part.
+If you are creating stacked bar charts, add white space between each color to make it easier to identify each part.
 :::
 
 If you add white space between each bar segment, and there are several stacked bars next to each, the white space should not affect the total hight/width of the stacked bars. Instead, remove the same amount of height/width from each bar segment (for example one pixel per bar segment). In this way, the total height/width of each stacked bar can be compared with one another.
@@ -44,21 +44,21 @@ In Figma, this is implemented in the stacked bar components.
 
 ## Areas
 
-For areas, such as area charts, there are a few options for colour usage.
+For areas, such as area charts, there are a few options for color usage.
 
 ### 1. Default background
 
-![Area chart with intense blue colour fill in light mode and dark mode](/foundations/dataviz/element-area-default.png)
+![Area chart with intense blue color fill in light mode and dark mode](/foundations/dataviz/element-area-default.png)
 
-Use the default colour, for example `background-primary`.
+Use the default color, for example `background-primary`.
 
-If you are creating stacked area charts, consider adding white space between each colour to make it easier to identify each area.
+If you are creating stacked area charts, consider adding white space between each color to make it easier to identify each area.
 
 ### 2. Subtle background with border
 
-![Area chart with subtle blue colour fill in light mode and dark mode](/foundations/dataviz/element-area-subtle.png)
+![Area chart with subtle blue color fill in light mode and dark mode](/foundations/dataviz/element-area-subtle.png)
 
-Large areas of the default Background colour might become too intense. In that case, consider using the subtle background colour combined with border. Example: `background-primary-subtle` and `border-primary`.
+Large areas of the default Background color might become too intense. In that case, consider using the subtle background color combined with border. Example: `background-primary-subtle` and `border-primary`.
 
 The border is only necessary on the part of the area that shows the values (typically the top, as in the example above).
 
@@ -66,27 +66,27 @@ You may also add a pattern inside the area, see [Patterns in bars and areas](#pa
 
 ### 3. Gradient with border
 
-![Area chart with gradient fading gradually from subtle blue at the top to background colour at the bottom of the area, in light mode and dark mode](/foundations/dataviz/element-area-gradient.png)
+![Area chart with gradient fading gradually from subtle blue at the top to background color at the bottom of the area, in light mode and dark mode](/foundations/dataviz/element-area-gradient.png)
 
 To make the area less prominent, consider using a gradient fill. Technically, this can be solved in different ways:
-- Make a gradient between the subtle background colour and the chart background colour. Example: `background-primary-subtle` to `chartbackground`. 
-- Use opacity, and make the gradient between the same subtle background colour with 100 % and 0 % opacity.
+- Make a gradient between the subtle background color and the chart background color. Example: `background-primary-subtle` to `chartbackground`. 
+- Use opacity, and make the gradient between the same subtle background color with 100 % and 0 % opacity.
 
 Include a border, similar to using a subtle background. 
 
 ## Patterns in bars and areas
 
 ::: image-block
-![Area chart with subtle blue colour fill in light mode and dark mode](/foundations/dataviz/element-pattern.png){width=457px}
+![Four bars with different colors and patterns: indigo with diagonal lines going up, green with tractor pattern, yellow with dots, and pink with diagonal lines going down](/foundations/dataviz/element-pattern.png){width=457px}
 :::
 
-Patterns can make it easier to distinguish between categories, benefiting people with colour deficiencies as well as those printing in greyscale.
+Patterns can make it easier to distinguish between categories, benefiting people with color deficiencies as well as those printing in gray scale.
 
 In Figma, there is an option to apply patterns to bars. However, different dataviz libraries might have specific options for patterns, so it might be useful to consider the technical possibilities before choosing a pattern.
 
-For patterns in bars or areas, use `Background Subtle` (or no fill) combined with `Border` colours. As a result, the border of the bar/area will have the same colour as the pattern inside.
+For patterns in bars or areas, use `Background Subtle` (or no fill) combined with `Border` colors. As a result, the border of the bar/area will have the same color as the pattern inside.
 
-There is no particular mapping between dataviz colours and patterns, but be consistent if you apply patterns across graphs.
+There is no particular mapping between dataviz colors and patterns, but be consistent if you apply patterns across graphs.
 
 Note that extensive use of patterns can make the graph appear busy and chaotic, and thereby less accessible for many users. 
 
@@ -94,26 +94,26 @@ Other methods you can use to distinguish between categories, reducing the need f
 - **Text labels**: connect text labels to categories for easy identification
 - **Shapes or positions**: Use different shapes or positions for different data categories
 - **Fill and border**: combine solid fill for one category with subtle fill and border for another category
-- **Small multiples**: split data into several small graphs to avoid relying on colour coding
+- **Small multiples**: split data into several small graphs to avoid relying on color coding
 - **Filters**: implement filters and popover information for interactive data exploration
 - **Hover and focus states**: show patterns on hover or with keyboard focus.
 
 ### Prediction area
-For prediction area, use the gray Secondary border colour (`border-secondary`) with diagonal lines. For the background, use `chartbackground`, or no colour at all.
+For prediction area, use the gray Secondary border color (`border-secondary`) with diagonal lines. For the background, use `chartbackground`, or no color at all.
 
 ::: image-block
-![Area chart with subtle blue colour fill in light mode and dark mode](/foundations/dataviz/element-pattern-prediction.png){width=457px}
+![Stacked bar chart with a wider box with a gray pattern behind each bar. Annotated with 'border'](/foundations/dataviz/element-pattern-prediction.png){width=457px}
 :::
 
-## Colour tokens
+## Color tokens
 
-### Background
+### Background (dataviz)
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
 | `ChartBackground/Default` | ![white and black boxes](/foundations/dataviz/col-preview/chart-bg.png){width=80px} | White/Black background | 
-| `Background/Primary` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg.png){width=80px} | Blue – if you only need one colour | 
-| `Background/Secondary` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg.png){width=80px} | Gray – for a secondary colour | 
+| `Background/Primary` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg.png){width=80px} | Blue – if you only need one color | 
+| `Background/Secondary` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg.png){width=80px} | Gray – for a secondary color | 
 | `Background/Category1` | ![indigo boxes](/foundations/dataviz/col-preview/category1-bg.png){width=80px} | Indigo - representing category 1 | 
 | `Background/Category2` | ![yellow boxes](/foundations/dataviz/col-preview/category2-bg.png){width=80px} | Yellow - representing category 2 | 
 | `Background/Category3` | ![pink boxes](/foundations/dataviz/col-preview/category3-bg.png){width=80px} | Pink - representing category 3 | 
@@ -127,14 +127,14 @@ For prediction area, use the gray Secondary border colour (`border-secondary`) w
 | `Background/Negative` | ![red boxes](/foundations/dataviz/col-preview/positive-bg.png){width=80px} | Red - representing something negative | 
 | `Background/Neutral` | ![gray boxes](/foundations/dataviz/col-preview/positive-bg.png){width=80px} | Gray - representing something neutral | 
 
-### Background-Subtle
+### Background-Subtle (dataviz)
 
 Needs a border to have enough contrast against the background.
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
-| `Background/Primary-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg-subtle.png){width=80px} | Blue – if you only need one colour | 
-| `Background/Secondary-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg-subtle.png){width=80px} | Gray – for a secondary colour | 
+| `Background/Primary-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg-subtle.png){width=80px} | Blue – if you only need one color | 
+| `Background/Secondary-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg-subtle.png){width=80px} | Gray – for a secondary color | 
 | `Background/Category1-Subtle` | ![indigo boxes](/foundations/dataviz/col-preview/category1-bg-subtle.png){width=80px} | Indigo - representing category 1 | 
 | `Background/Category2-Subtle` | ![yellow boxes](/foundations/dataviz/col-preview/category2-bg-subtle.png){width=80px} | Yellow - representing category 2 | 
 | `Background/Category3-Subtle` | ![pink boxes](/foundations/dataviz/col-preview/category3-bg-subtle.png){width=80px} | Pink - representing category 3 | 
@@ -149,7 +149,7 @@ Needs a border to have enough contrast against the background.
 | `Background/Neutral-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/positive-bg-subtle.png){width=80px} | Gray - representing something neutral | 
 
 
-### Border
+### Border (dataviz)
 
 Border around Background Subtle.
 

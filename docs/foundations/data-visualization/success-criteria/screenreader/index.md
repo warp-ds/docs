@@ -1,4 +1,4 @@
-# Screen Reader
+# Screen Reader (dataviz)
 
 All data that is accessible for sighted users should also be accessible for those using screen readers. This can be achieved by either turning the chart into an image with alternative text, adding table alternatives, or adding additional screen reader information to the visual elements. In addition, screen reader users should get the same insights as sighted people.
 
@@ -40,7 +40,7 @@ If there are a lot of data points (more than 30), consider grouping the data int
 ## 4. The chart elements can be navigated using a screen reader
 ![Blue tech tag](/foundations/dataviz/tag-tech.svg)
 
-Data visualisations mainly consist of SVG shapes (`<rect>`, `<circle>`, etc) and `<text>` elements for labels.
+Data visualizations mainly consist of SVG shapes (`<rect>`, `<circle>`, etc) and `<text>` elements for labels.
 
 By default, assistive technology does pick up on the text elements, and reads them in the order they appear in the accessibility tree, but it can't announce anything about the different graphical elements that make a chart unless we add that functionality ourselves.
 

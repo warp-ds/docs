@@ -1,4 +1,4 @@
-# Keyboard Navigation
+# Keyboard Navigation (dataviz)
 
 Interactive charts should be easy to operate using a keyboard. Everything that can be done through pointer interaction (e.g. click or hover), should be achievable through keyboard interaction as well. 
 
@@ -58,7 +58,7 @@ If the interaction is explained somewhere else, it should be possible to reach t
 - `Space`/`Enter` should activate buttons or toggles.
 
 ## 6. Unconventional keyboard interaction is explained
-![Red design tagn and blue tech tag](/foundations/dataviz/tag-design-and-tech.svg)
+![Red design tag and blue tech tag](/foundations/dataviz/tag-design-and-tech.svg)
 
 If keyboard interaction is unconventional, make sure to include information about how to navigate the chart/page. This should be visible on the page, but can appear as the user is navigating using a keyboard. 
 <!-- Is it ok if it appears on interaction? --> 

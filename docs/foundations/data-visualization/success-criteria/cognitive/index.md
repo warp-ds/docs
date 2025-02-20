@@ -1,6 +1,6 @@
-# Cognitive Accessibility
+# Cognitive Accessibility (dataviz)
 
-Our graphs should be easy to understand for everyone. Therefore, we use clear language and explain terminology, data, and interaction where necessary. Clear titles, descriptions, and labels can provide additional context to the data. Legends can explain categorisation, and in-line labelling and annotations can guide the user.
+Our graphs should be easy to understand for everyone. Therefore, we use clear language and explain terminology, data, and interaction where necessary. Clear titles, descriptions, and labels can provide additional context to the data. Legends can explain categorization, and in-line labelling and annotations can guide the user.
 
 **Criteria for Cognitive Accessibility:**
 [[toc]]
@@ -25,10 +25,10 @@ If not articulated in the title, include information about the data or variables
 
 A data label is a text element that explains the data point or value you are examining. Where possible, labels should be in-line (close to the number or visual data element). If data labels are presented on hover, they should also be accessible via keyboard navigation and for screen readers.
 
-## 5. Explain colour coding
+## 5. Explain color coding
 ![Red design tag](/foundations/dataviz/tag-design.svg) 
 
-Ensure to explain colour-coded categories in the graph and use a legend if necessary.
+Ensure to explain color-coded categories in the graph and use a legend if necessary.
 
 Whenever feasible, avoid using a legend and [label data directly](https://depictdatastudio.com/accessibility-quick-wins-remove-legends-and-directly-label/). For legends to be effective, the user must be able to associate the legend with corresponding elements in the chart, which can be challenging for many.
 
@@ -58,7 +58,7 @@ Clarify what the axes represent, preferably using a text label next to the axes.
 You can assume that most people know how bar charts or line charts work. But you're using an unconventional or uncommon chart, ensure that the users receive an explanation of how to interpret it.
 
 ## 10. The data/chart is not misleading
-![Red design tagn and blue tech tag](/foundations/dataviz/tag-design-and-tech.svg)
+![Red design tag and blue tech tag](/foundations/dataviz/tag-design-and-tech.svg)
 
 Ensure that the data is collected, calculated, and filtered in a truthful way. For example, be aware of any gaps or biases in the dataset.
 

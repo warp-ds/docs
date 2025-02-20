@@ -1,46 +1,46 @@
-# Lines & Points
+# Lines & Points (dataviz)
 
 *For implementation, see [Tokens & CSS > Line](/foundations/data-visualization/tokens/line/).*
 
 ## Lines
 
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/element-line.png){width=433px}
+![A line chart in which a blue line is annotated with 'line'](/foundations/dataviz/element-line.png){width=433px}
 :::
 
-- Use the `Line` colours for lines.
+- Use the `Line` colors for lines.
 - Lines should have a width of minimum **3 px** to ensure sufficient contrast against the background
 - **Straight lines** are usually better than smooth curves, as curves can be misinterpreted as representing data values or trends that are not present in the data
-- Consider adding **dashed stroke** for lines when you include lines of different colours. Dashed lines appear less important than solid lines, and are therefore well suited for secondary information
+- Consider adding **dashed stroke** for lines when you include lines of different colors. Dashed lines appear less important than solid lines, and are therefore well suited for secondary information
 - Adding **points along lines** can help users understand where the actual data points are placed, and that the line is simply a interpolation between points.
 
 ## Points
 
-- Use the `Line` colours for points. Points are often combined with lines in a chart, and therefore we use the same colour for lines and points 
-- To use the Line colour on points in **Figma**, the points need to have a **stroke** (like a donut 🍩). If you don’t want a donut with space in the middle, make the stroke thicker
+- Use the `Line` colors for points. Points are often combined with lines in a chart, and therefore we use the same color for lines and points 
+- To use the Line color on points in **Figma**, the points need to have a **stroke** (like a donut 🍩). If you don’t want a donut with space in the middle, make the stroke thicker
 - Points (or lines around points) should have a width of minimum **3 px** to ensure sufficient contrast against the background.
 
 ### 'Donut' points 
 
-If you go for the donut variant of points, use either `ChartBackground/Default` or a `Background Subtle` as the fill colour. 
+If you go for the donut variant of points, use either `ChartBackground/Default` or a `Background Subtle` as the fill color. 
 
 ::: image-block
-![Screenshot from Figma](/foundations/dataviz/element-point.png){width=433px}
+![Line chart in which the stroke of a point is annotated with 'Line', the inside of a point is annotated with 'ChartBackground Default', the inside of another point annotated with 'Background Subtle'  ](/foundations/dataviz/element-point.png){width=433px}
 :::
 
 An advantage of using `Background Subtle` is that it becomes logical to use `Background Subtle-Highlight` when interacting with the points.
 
 ## Line dashes and point shapes
 
-**Line dashes** can make it easier to distinguish between categories, benefiting people with colour deficiencies as well as those printing in greyscale. For example, it makes sense to use a solid stroke style for the primary line using the Primary colour, and dashes for the secondary line using the secondary colour.
+**Line dashes** can make it easier to distinguish between categories, benefiting people with color deficiencies as well as those printing in gray scale. For example, it makes sense to use a solid stroke style for the primary line using the Primary color, and dashes for the secondary line using the secondary color.
 
 For points, consider using different **point shapes** for each category. However, using many different point shapes can make the graph appear disorienting and chaotic, and thereby work against its intended purpose. One acceptable solution is to **show point shapes on interaction**, like hover and focus. Different dataviz libraries might have specific options for point shapes, so it might be useful to consider the technical possibilities before choosing shapes.
 
-## Colour tokens
+## Color tokens
 
-### Line colours
+### Line colors (dataviz)
 
-Stroke colour for lines and points.
+Stroke color for lines and points.
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
@@ -59,15 +59,15 @@ Stroke colour for lines and points.
 | `Line/Negative` | ![red lines](/foundations/dataviz/col-preview/positive-line.png){width=80px} | Red - lines representing something negative | 
 | `Line/Neutral` | ![gray lines](/foundations/dataviz/col-preview/positive-line.png){width=80px} | Gray - lines representing something neutral | 
 
-### Background colours
+### Background colors (dataviz)
 
 For use inside 'donut' points.
 
 | Name | Light/Dark mode | Description | 
 | ---- | --------------- | ----------- | 
 | `ChartBackground/Default` | ![white and black boxes](/foundations/dataviz/col-preview/chart-bg.png){width=80px} | White/Black background | 
-| `Background/Primary-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg-subtle.png){width=80px} | Blue – if you only need one colour | 
-| `Background/Secondary-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg-subtle.png){width=80px} | Gray – for a secondary colour | 
+| `Background/Primary-Subtle` | ![blue boxes](/foundations/dataviz/col-preview/primary-bg-subtle.png){width=80px} | Blue – if you only need one color | 
+| `Background/Secondary-Subtle` | ![gray boxes](/foundations/dataviz/col-preview/secondary-bg-subtle.png){width=80px} | Gray – for a secondary color | 
 | `Background/Category1-Subtle` | ![indigo boxes](/foundations/dataviz/col-preview/category1-bg-subtle.png){width=80px} | Indigo - representing category 1 | 
 | `Background/Category2-Subtle` | ![yellow boxes](/foundations/dataviz/col-preview/category2-bg-subtle.png){width=80px} | Yellow - representing category 2 | 
 | `Background/Category3-Subtle` | ![pink boxes](/foundations/dataviz/col-preview/category3-bg-subtle.png){width=80px} | Pink - representing category 3 | 

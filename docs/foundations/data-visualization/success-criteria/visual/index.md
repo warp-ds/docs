@@ -1,18 +1,18 @@
-# Visual Accessibility
+# Visual Accessibility (dataviz)
 
-Visual elements in graphs should be possible to perceive and distinguish from each other for everyone who can see. Therefore, we need to be mindful of font-sizes, colour contrasts and colour combinations, animations and responsiveness.
+Visual elements in graphs should be possible to perceive and distinguish from each other for everyone who can see. Therefore, we need to be mindful of font-sizes, color contrasts and color combinations, animations and responsiveness.
 
 **Criteria for Visual Accessibility:**
 [[toc]]
 
-## 1. Don’t rely on colour alone to explain data
+## 1. Don’t rely on color alone to explain data
 ![Red design tag](/foundations/dataviz/tag-design.svg) 
 
-**Why:** People with colour vision deficiencies may not be able to perceive colour differences. In addition, charts or graphs can be printed in black and white or viewed on monochrome displays.
+**Why:** People with color vision deficiencies may not be able to perceive color differences. In addition, charts or graphs can be printed in black and white or viewed on monochrome displays.
 
-::: details How to use other means than colour alone
+::: details How to use other means than color alone
 
-### Use patterns or symbols in addition to colour
+### Use patterns or symbols in addition to color
 A drawback is that many patterns can make the graph look busy, making it harder to read for everyone. This will have to be assessed by designers on a case-to-case basis.
 
 *Examples will be provided later.*
@@ -21,11 +21,11 @@ A drawback is that many patterns can make the graph look busy, making it harder 
 ### Add in-line labelling
 Adding a text label to the different categories in-line in the graph means people can just read the text.
 
-### Include additional visual categorisation in the legend
+### Include additional visual categorization in the legend
 If icons, shapes or patterns are used, they should be included in the legend.
 :::
 
-## 2. Text has a colour contrast of 4.5:1 or 3:1 with the background
+## 2. Text has a color contrast of 4.5:1 or 3:1 with the background
 ![Red design tag](/foundations/dataviz/tag-design.svg)
 
 <!-- We should refer to the Warp font sizes when ready and checked -->
@@ -39,7 +39,7 @@ You can also enter the hex values in the [WebAIMs contrast checker](https://weba
 
 NB: remember that the actual text size for a given text style in Figma might not be the same across all NMP brands.
 
-## 3. Graphical elements have a minimum colour contrast of 3:1 with the background
+## 3. Graphical elements have a minimum color contrast of 3:1 with the background
 ![Red design tag](/foundations/dataviz/tag-design.svg)
 
 This applies to visual elements that are necessary to understand the information, and does not apply to decorative elements. 
@@ -48,7 +48,7 @@ Axis lines may have less contrast than 3:1 as long as they are not crucial for r
 
 In Figma, you can use the plugin [Contrast](https://www.figma.com/community/plugin/748533339900865323/Contrast) to check the contrast levels.
 
-## 4. Graphical elements have a minimum colour contrast of 3:1 with adjacent elements
+## 4. Graphical elements have a minimum color contrast of 3:1 with adjacent elements
 ![Red design tag](/foundations/dataviz/tag-design.svg)
 
 When shapes are placed close to each other it might be hard to differentiate between them. This typically happens in a pie chart, stacked bar chart, or when hovering. 
@@ -56,11 +56,11 @@ When shapes are placed close to each other it might be hard to differentiate bet
 ::: details Solutions and exceptions
 ### Possible solutions:
 - add at least 1px margin between elements to keep them distinguishable
-- use something other than colour, such as patterns or shapes, to distinguish between elements.
+- use something other than color, such as patterns or shapes, to distinguish between elements.
 
 ### Exceptions:
 - Lines that cross each other in a line chart. It is fine that they don't have a good contrast between each other. It is more important that the contrast against the background is good enough.
-- Charts that use sequential or diverging colour scales, for example choropleth maps or heat maps.
+- Charts that use sequential or diverging color scales, for example choropleth maps or heat maps.
 
 :::
 
@@ -72,7 +72,7 @@ As long as you stick to the font sizes in the design system (which you should), 
 ## 6. Insert at least 1px spacing between adjacent graphical elements
 ![Red design tag](/foundations/dataviz/tag-design.svg)
 
-If you put data elements with different colours next to each other the contrast can be so low that it is hard to differentiate between the elements. Adding white space between the elements can help. 
+If you put data elements with different colors next to each other the contrast can be so low that it is hard to differentiate between the elements. Adding white space between the elements can help. 
 
 This applies to areas and bars, not lines.
 
@@ -88,17 +88,17 @@ The more visual elements you add to a graph, the less attention the other elemen
 
 However, make sure that the encoding of all the data is explained to the users.
 
-## 8. The colour scheme is safe for colour blindness.
+## 8. The color scheme is safe for color blindness.
 ![Red design tag](/foundations/dataviz/tag-design.svg) 
 
-Documentation for the dataviz colours will provide information about this.
+Documentation for the dataviz colors will provide information about this.
 
-::: details How to check your colours
-For checking colour combinations manually, you can use [Viz Palette](https://projects.susielu.com/viz-palette).
+::: details How to check your colors
+For checking color combinations manually, you can use [Viz Palette](https://projects.susielu.com/viz-palette).
 
-1. Enter the hex codes for the colours you want to compare
-2. Check the different colour deficiencies by using the tabs at the top of the page
-3. Look at the Color report further down the page. Avoid colour combinations that result in a medium or large line between colours.
+1. Enter the hex codes for the colors you want to compare
+2. Check the different color deficiencies by using the tabs at the top of the page
+3. Look at the Color report further down the page. Avoid color combinations that result in a medium or large line between colors.
 
 :::
 
@@ -124,7 +124,7 @@ If the chart is not zoomable by default, media queries can be used to adjust css
 :::
 
 ## 11. Allow animations to be turned off, and follow the user's system/browser preferences
-![Red design tagn and blue tech tag](/foundations/dataviz/tag-design-and-tech.svg)
+![Red design tag and blue tech tag](/foundations/dataviz/tag-design-and-tech.svg)
 
 Animations can help users understand what is going on, and guide the users' attention. However, some users might experience distraction or nausea from animated content.
 

@@ -14,15 +14,15 @@ Guidelines for interaction states and pseudo-classes for graphs and charts.
 
 ### Hover and tap
 ::: image-block
-![Bar chart](/foundations/dataviz/interaction-hover.png){width=433px}
+![Bar chart with four bars, one has a darker color with a tooltip above](/foundations/dataviz/interaction-hover.png){width=433px}
 :::
 
-For graphs, users typically expect the same interactive behaviour for hover (using a pointing device) and tap (on a touch device). When hovering or tapping, they expect to get details about the data point.
+For graphs, users typically expect the same interactive behavior for hover (using a pointing device) and tap (on a touch device). When hovering or tapping, they expect to get details about the data point.
 
 Optionally, keep the tooltip open until another tooltip opens, or the pointing device has left the graph. This might be particularly useful if the data point target sizes are small.
 
 #### Styling for hover and tap
-Use [highlight colour](#highlight-colour) for the data mark, and provide information about the data mark in a [tooltip](#tooltip). You can also [dim other data marks](#dim-other-elements).
+Use [highlight color](#highlight-color) for the data mark, and provide information about the data mark in a [tooltip](#tooltip). You can also [dim other data marks](#dim-other-elements).
 
 For **lines**, consider using a thicker line on hover. For **points**, consider scaling up the points.
 
@@ -36,7 +36,7 @@ The interactive area for hover and tap (the 'target') can be larger than the dat
 - Optionally, add a subtle background that fills the target area. We don't have a specific token for this for now, but for now can for example use `Background/Secondary-Subtle` with 50% opacity. See illustration below.
 
 ::: image-block
-![Bar chart](/foundations/dataviz/interaction-hotspot-bg.png){width=433px}
+![Bar chart with four bars, one has a darker color with a tooltip above. In addition, there is a subtle gray color behind the bar, filling the whole height of the chart](/foundations/dataviz/interaction-hotspot-bg.png){width=433px}
 :::
 
 **Lines and points:**
@@ -47,7 +47,7 @@ The interactive area for hover and tap (the 'target') can be larger than the dat
 ### Focus (keyboard navigation)
 
 ::: image-block
-![Bar chart](/foundations/dataviz/interaction-focus.png){width=433px}
+![Bar chart with four bars, one has a darker color with a tooltip above. In addition, there is a brighter blue border around the bar](/foundations/dataviz/interaction-focus.png){width=433px}
 :::
 
 All the information that can be reached using a mouse pointer should also be possible to reach using a keyboard. 
@@ -62,7 +62,7 @@ For working examples of how this works, check out the graphs on [uutilsynet.no](
 
 #### Styling for 'Focus'
 
-For **bars**, **areas** and **points**, add a [focus outline](#keyboard-focus) around the data mark. There should be some space between the bar/point and the focus border. In addition, use [highlight colour](#highlight-colour) for the data mark, and provide information in a [tooltip](#tooltip). You can also [dim other data marks](#dim-other-elements).
+For **bars**, **areas** and **points**, add a [focus outline](#keyboard-focus) around the data mark. There should be some space between the bar/point and the focus border. In addition, use [highlight color](#highlight-color) for the data mark, and provide information in a [tooltip](#tooltip). You can also [dim other data marks](#dim-other-elements).
 
 For **lines**, adding a focus border for the whole line will become messy. In stead, add focus border around the point on the line that us currently in focus, and [dim any other lines](#dim-other-elements) in the graph.
 
@@ -73,25 +73,29 @@ Information about which components and tokens to use for interactive graphs and 
 ### Tooltip
 For tooltip, use the WARP [Tooltip](/components/tooltip/) component.
 
-### Highlight colour
-Use the `highlight` colour on hover, touch/tap and keyboard focus.
+### Highlight color
+Use the `highlight` color on hover, touch/tap and keyboard focus.
 
-All dataviz colours (except the chart colours) have a highlight version. These tokens have a name ending with `-highlight`. 
+All dataviz colors (except the chart colors) have a highlight version. These tokens have a name ending with `-highlight`. 
 
-See [this Figma prototype](https://www.figma.com/proto/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz-(Beta)?page-id=1%3A285&node-id=2532-18695&viewport=-2724%2C329%2C0.21&t=k48dzMq2bHNm9UVm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2532%3A18695) for an interactive preview of the highlight colours. 
+See [this Figma prototype](https://www.figma.com/proto/jKb3gWUebdHyRBsK0naqB6/WARP---DataViz-(Beta)?page-id=1%3A285&node-id=2532-18695&viewport=-2724%2C329%2C0.21&t=k48dzMq2bHNm9UVm-1&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=2532%3A18695) for an interactive preview of the highlight colors. 
 
 For implementation examples, see [Tokens & CSS > Introduction](/foundations/data-visualization/tokens/introduction/#hover-focus-and-active).
 
 ### Dim other elements
-In addition to using the highlight colour, consider **dimming the other elements** that are not highlighted. A good starting point is **80% opacity** when using hover and keyboard focus.
+In addition to using the highlight color, consider **dimming the other elements** that are not highlighted. A good starting point is **80% opacity** when using hover and keyboard focus.
 
 In bar charts, place hoverable areas immediately next to each other with no space in-between, to avoid a 'flickering effect' when moving the cursor across the bars. If you are not able to do so, you should probably not dim the other bars.
 
-For dimming colours using utility classes, ses [opacity modifier](https://warp-ds.github.io/docs/foundations/css-classes/background-color#opacity).
+For dimming colors using utility classes, ses [opacity modifier](https://warp-ds.github.io/docs/foundations/css-classes/background-color#opacity).
 
 ### Keyboard focus
-When using keyboard navigation, use a focus border around the active data element. There is no dedicated focus colour for dataviz – use the regular WARP tokens:
+When using keyboard navigation, use a focus border around the active data element. There is no dedicated focus color for dataviz – use the regular WARP tokens:
 
 `s-border-focus` or `border-color: var(--w-s-color-border-focus)`.
 
-See [CSS Border Colour](/foundations/css-classes/border-color).
+See [CSS Border Color](/foundations/css-classes/border-color).
+
+## Legend
+
+If the visualization includes a legend, consider making the legend interactive so that the user can turn a data series or category on or off. This can make the information in the chart more accessible, for example for people with color deficiencies.
