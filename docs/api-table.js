@@ -2824,7 +2824,62 @@ export const android = {
         'The function to be invoked when dismissed ',
       ],
     ]
-  }
+  },
+  Tooltip: {
+    required: [
+      [
+        'text', 
+        'String', 
+        '', 
+        'The text to be displayed in the tooltip'
+      ],
+      [
+        'state', 
+        'WarpTooltipState', 
+        '', 
+        'The state of the tooltip. If visible or not'
+      ]
+    ],
+    props: [
+      [
+        'modifier',
+        'Modifier',
+        'Modifier',
+        'Modifier for the tooltip',
+      ],
+      [
+        'edge',
+        'Edge.Top <br /> Edge.Bottom <br /> Edge.Leading <br /> Edge.Trailing',
+        'Edge.Top',
+        'Edge that determines the direction of the arrow',
+      ],
+      [
+        'horizontalOffset',
+        'Dp',
+        '0.dp',
+        'Horizontal offset for the tooltip',
+      ],
+      [
+        'verticalOffset',
+        'Dp',
+        '0.dp',
+        'Vertical offset for the tooltip',
+      ],
+      [
+        'inline',
+        'Boolean',
+        'false',
+        'Shows the tooltip as a standalone inline view',
+      ],
+      
+      [
+        'anchorView', 
+        '@Composable () -> Unit', 
+        'null', 
+        'The anchor which the tooltip points to'
+      ],
+    ]
+  },
 };
 
 export const iOS = {
