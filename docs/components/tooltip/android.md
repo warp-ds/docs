@@ -37,7 +37,7 @@ WarpTooltip(
 
 ### Usage
 
-Use the WarpTootlipState class to toggle between show & hide.
+Use the WarpTooltipState class to toggle between show & hide.
 Use the Edge class to choose the arrow direction.
 When using the inline Tooltip, no anchor is needed, you place the Tooltip as any Composable.
 
