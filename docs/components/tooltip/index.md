@@ -5,6 +5,8 @@
   import React from './react.md';
   import Vue from './vue.md';
   import { mapFrameworkStatuses } from '../utils.js';
+  import android from './android.md';
+ 
 </script>
 
 # Tooltip
@@ -40,4 +42,7 @@ Tooltips should be used sparingly and contain succinct, supplementary informatio
 <template #iOS>
     <iOS />
   </template>
+  <template #android>
+    <android />
+    </template>
 </tabs-content>

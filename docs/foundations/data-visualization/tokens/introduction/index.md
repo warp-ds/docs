@@ -170,5 +170,13 @@ Examples:
 
 ## Android
 
-TBD
+The pattern for the variable name is: 
+- `WarpTheme.colors.dataviz.[colorCategory][SemanticColor]` for Compose `Color`
+- `@color/warp_dataviz_[color_category]_[semantic_color]` for XML `color`
+
+Examples:           
+- `WarpTheme.colors.dataviz.background.category1Subtle` / `@color/warp_dataviz_background_category1_subtle`
+- `WarpTheme.colors.dataviz.line.category2` / `@color/warp_dataviz_line_category2`
+- `WarpTheme.colors.dataviz.line.secondary` / `@color/warp_dataviz_line_secondary`
+- `WarpTheme.colors.dataviz.chart.textSubtle` / `@color/warp_dataviz_charttext_subtle`
 
