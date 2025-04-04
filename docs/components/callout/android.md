@@ -15,6 +15,7 @@ fun WarpCallout(
     closable: Boolean = false,
     dismissPopoverOnClickOutside: Boolean = true,
     onDismiss: () -> Unit,
+    paddingOffset: Dp? = null,
     anchorView: @Composable (() -> Unit)? = null,
 )
 
@@ -66,7 +67,7 @@ To show/hide the callout you should pass a CalloutState and then toggle the bool
 
 When using the CalloutType.Popover, you can adjust margins by using horizontalOffset and/or verticalOffset, which are 0.dp by default.
 
-The callout accepts an anchor view that will be used to determine the position of the callout. If you use CalloutType.Popover it will automatically place itself pointing to the anchor view depending on the direction of the edge.
+The callout accepts an anchor view that will be used to determine the position of the callout. If you use CalloutType.Popover it will automatically place itself pointing to the anchor view depending on the direction of the edge. To correctly display the arrow when the callout cannot be centered, please provide paddingOffset for the parent layout.
 To add anchor content:
 ```kotlin example
 val state = remember { CalloutState(false) }
@@ -80,6 +81,7 @@ WarpCallout(
     verticalOffset = 8.dp
     size = CalloutSize.Default,
     closable = false,
+    paddingOffset = 8.dp,
     onDismiss = { state.isVisible = false },
 ) {
     WarpButton (
