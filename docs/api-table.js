@@ -2674,6 +2674,12 @@ export const android = {
         'If should dismiss the callout when clicked outside it',
       ],
       [
+        'paddingOffset',
+        'Dp',
+        'null',
+        'Padding offset in the parent layout to correctly calculate the arrow position in relation to the anchor',
+      ],
+      [
         'anchorView', 
         '@Composable () -> Unit', 
         'null', 
