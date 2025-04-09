@@ -2677,7 +2677,7 @@ export const android = {
         'paddingOffset',
         'Dp',
         'null',
-        'Padding offset in the parent layout to correcctly calculate the arrow position in relation to the anchor',
+        'Padding offset in the parent layout to correctly calculate the arrow position in relation to the anchor',
       ],
       [
         'anchorView', 
