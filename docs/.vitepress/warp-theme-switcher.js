@@ -7,10 +7,14 @@ export default {
       'Finn light': 'finn-no',
       'Tori light': 'tori-fi',
       'Blocket light': 'blocket-se',
+      'Neutral light': 'neutral-com',
+      'Vend light': 'vend-com',
       'DBA dark': 'dba-dk-dark',
       'Finn dark': 'finn-no-dark',
       'Tori dark': 'tori-fi-dark',
       'Blocket dark': 'blocket-se-dark',
+      'Neutral dark': 'neutral-com-dark',
+      'Vend dark': 'vend-com-dark',
     };
 
     const state = reactive({
