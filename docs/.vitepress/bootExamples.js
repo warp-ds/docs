@@ -25,6 +25,7 @@ import PopoverStatic from '../components/popover/StaticExample.vue';
 import PopoverFallbackPlacements from '../components/popover/FallbackPlacementsExample.vue';
 import Radio from '../components/radio/Example.vue';
 import RadioButtons from '../components/radiobuttons/Example.vue';
+import RangeSlider from '../components/rangeslider/Example.vue';
 import Select from '../components/select/Example.vue';
 import Slider from '../components/slider/Example.vue';
 import Spinner from '../components/spinner/Example.vue';
@@ -70,6 +71,7 @@ buildWc('popover-flip-example', PopoverFlip);
 buildWc('popover-static-example', PopoverStatic);
 buildWc('radio-example', Radio);
 buildWc('radiobuttons-example', RadioButtons);
+buildWc('rangeslider-example', RangeSlider)
 buildWc('select-example', Select);
 buildWc('slider-example', Slider);
 buildWc('spinner-example', Spinner);
