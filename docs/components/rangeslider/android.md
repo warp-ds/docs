@@ -84,8 +84,3 @@ Not supported.
 ### Parameters
 
 <api-table type=android component="RangeSlider" />
-
-
-```kotlin example
-
-```
