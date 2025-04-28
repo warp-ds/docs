@@ -2886,6 +2886,48 @@ export const android = {
       ],
     ]
   },
+  Link: {
+    required: [
+    [
+      'text', 
+      'String', 
+      '', 
+      'The text to be displayed'
+    ],
+  ],
+    props: [
+      [
+        'modifier',
+        'Modifier',
+        'Modifier',
+        'Sets the modifier for the link',
+      ],
+      [
+        'onClick', 
+        '() -> Unit',
+        '{}', 
+        'The function to be invoked when clicked ',
+      ],
+      [
+        'style',
+        'WarpTextStyle.Display <br />WarpTextStyle.Title1 <br />WarpTextStyle.Title2 <br />WarpTextStyle.Title3 <br />WarpTextStyle.Title4 <br />WarpTextStyle.Title5 <br />WarpTextStyle.Title6 <br />WarpTextStyle.Preamble <br />WarpTextStyle.Body <br />WarpTextStyle.BodyStrong <br />WarpTextStyle.Caption <br />WarpTextStyle.CaptionStrong <br />WarpTextStyle.Detail <br />WarpTextStyle.DetailStrong',
+        'WarpTextStyle.Body',
+        'Sets the appearance of the link - font and size',
+      ],
+      [
+        'icon', 
+        'WarpIconResource',
+        'null', 
+        'Icon displayed after the text.',
+      ],
+      [
+        'underline', 
+        'Boolean', 
+        'false', 
+        'If text should be underlined or not'
+      ],
+    ],
+  },
 };
 
 export const iOS = {
