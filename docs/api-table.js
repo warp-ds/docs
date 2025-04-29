@@ -2317,12 +2317,6 @@ export const android = {
         'Whether the close icon (X) should be displayed in the top right corner.'
       ],
       [
-        'closeIconContentDescription', 
-        'String', 
-        'null', 
-        'The text to be used by accessibility tools.'
-      ],
-      [
         'dismissOnClickOutside', 
         'Boolean', 
         'true', 
@@ -2465,6 +2459,12 @@ export const android = {
         'false',
         'Whether the switch is on or off'
       ],
+      [
+        'contentDescr',
+        'String',
+        'null',
+        'The a11y text for screenreaders'
+      ]
     ],
   },
   Radio: {
