@@ -2,8 +2,8 @@
 title: "@warp-ds/icons v2.6.0"
 date: 2025-04-09
 ---
-
-## New icons added, plus some maintenance!
+5 new icons, and some maintenance
+---
 
 We have added **5 new icons** :tada:, in 3 sizes (16, 24 and 32px)!
 

@@ -15,8 +15,7 @@ fun WarpModal(
     onPrimaryButtonClick: (() -> Unit)? = null,
     secondaryButtonText: String? = null,
     onSecondaryButtonClick: (() -> Unit)? = null,
-    showCloseIcon: Boolean = false,
-    closeIconContentDescription: String? = null
+    showCloseIcon: Boolean = false
 )
 ```
 
@@ -72,8 +71,7 @@ if(openModal) {
         title = "Hello warp!",
         body = "No buttons variant",  
         onDismiss = { openModal = false },
-        showCloseIcon = true,
-        closeIconContentDescription = "Close dialog"
+        showCloseIcon = true
     )
 }
 ```

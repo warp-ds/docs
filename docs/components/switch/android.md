@@ -7,6 +7,7 @@ fun WarpSwitch(
     checked: Boolean = false,
     onCheckedChange: ((Boolean) -> Unit) = { },
     enabled: Boolean = true,
+    contentDescr: String? = null
 )
 ```
 
