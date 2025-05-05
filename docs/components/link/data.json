@@ -1,0 +1,14 @@
+{
+  "title": "Link",
+  "description": "Pre-defined styles provide a font and size.",
+  "category": "Layout",
+  "placeholder": {
+    "label": "Link component"
+  },
+  "frameworks": [
+    {
+      "name": "Android",
+      "status": "released"
+    }
+  ]
+}

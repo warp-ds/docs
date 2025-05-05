@@ -15,6 +15,7 @@ import Card from '../components/card/Example.vue';
 import Checkbox from '../components/checkbox/Example.vue';
 import Expandable from '../components/expandable/Example.vue';
 import Icon from '../components/icons/Example.vue';
+import Link from '../components/link/Example.vue';
 import Modal from '../components/modal/Example.vue';
 import PageIndicator from '../components/pageindicator/Example.vue';
 import Pagination from '../components/pagination/Example.vue';
@@ -61,6 +62,7 @@ buildWc('card-example', Card);
 buildWc('checkbox-example', Checkbox);
 buildWc('expandable-example', Expandable);
 buildWc('icon-example', Icon);
+buildWc('link-example', Link)
 buildWc('modal-example', Modal);
 buildWc('pageindicator-example', PageIndicator);
 buildWc('pagination-example', Pagination);

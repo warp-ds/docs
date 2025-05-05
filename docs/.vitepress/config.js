@@ -617,6 +617,7 @@ export default defineConfig({
             { text: 'Combo box', link: '/components/combobox/' },
             { text: 'Expandable', link: '/components/expandable/' },
             { text: 'Icons', link: '/components/icons/' },
+            { text: 'Link', link: '/components/link/' },
             { text: 'Modal', link: '/components/modal/' },
             { text: 'PageIndicator', link: '/components/pageindicator/' },
             { text: 'Pagination', link: '/components/pagination/' },
