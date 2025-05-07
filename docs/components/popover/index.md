@@ -3,6 +3,7 @@
   import Elements from './elements.md';
   import React from './react.md';
   import Vue from './vue.md';
+  import Android from './android.md';
   
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
@@ -35,4 +36,7 @@
   <template #elements>
     <elements />
   </template>
+  <template #android>
+    <android />
+    </template>
 </tabs-content>
