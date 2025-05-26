@@ -19,7 +19,7 @@ fun WarpPopover(
 ```
 
 ## Visual options 
-The popover will be displayed as a popup and it's arrow will be pointing towards the center of the anchor view, the edge - direction in which the popover will be pointing - must be provided as a param. It is also possible to place the popover as you wish by setting the inline param to true.
+The popover will be displayed as a popup and its arrow will be pointing towards the center of the anchor view, the edge - direction in which the popover will be pointing - must be provided as a param. It is also possible to place the popover as you wish by setting the inline param to true.
 
 
 ```kotlin example
