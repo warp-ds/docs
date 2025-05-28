@@ -2115,6 +2115,12 @@ export const android = {
         'Max lines of text'
       ],
       [
+        'minLines', 
+        'Int', 
+        '1', 
+        'Min lines of text'
+      ],
+      [
         'textAlign', 
         'TextAlign', 
         'null', 
