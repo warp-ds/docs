@@ -13,7 +13,7 @@ Popover & focus modes
 
 #### WarpPopover component
 - Brand new component!
-Similar behaviour as WarpCallout and WarpTooltip
+Similar behaviour to WarpCallout and WarpTooltip
 
 ```kotlin
 val trailingState = remember { WarpPopoverState(false) }
@@ -21,8 +21,8 @@ val trailingState = remember { WarpPopoverState(false) }
 WarpPopover(
     modifier = Modifier.width(200.dp),
     state = trailingState,
-    title = "Trailing",
-    body = "Trailing Pop over body.",
+    title = "Title text",
+    body = "Popover body text.",
     edge = Edge.Leading,
     onDismiss = { trailingState.isVisible = false }
 ) {
@@ -33,13 +33,13 @@ WarpPopover(
 ```
 
 #### Focus modes
-- Focus mode has been added to a number of components:
+- Focus mode has been added to several components:
 - WarpButton
 - WarpRadio
 - WarpCheckbox
 
 
 ### Miscellaneous
-- Added help method to retrieve icon resource ID using the icon name
+- Added a helper method to retrieve an icon resource ID using the icon name
 - Added support for minLines attribute in WarpText component
 - Adjusted scaling of badge icons for consistent rendering
