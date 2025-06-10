@@ -3,6 +3,7 @@
   import Vue from './vue.md';
   import data from './data.json';
   import iOS from './ios.md';
+  import Android from './android.md';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
@@ -41,5 +42,8 @@ The slider accepts an `onChange` prop which is triggered whenever the value is c
   </template>
       <template #iOS>
     <iOS />
+  </template>
+  <template #android>
+    <android />
   </template>
 </tabs-content>
