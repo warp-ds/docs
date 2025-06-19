@@ -3141,7 +3141,7 @@ RangeSlider: {
         'onValueChangeFinished', 
         '(() -> Unit)',
         'null', 
-        'The function to be invoked when value selection is done ',
+        'The function to be invoked when value selection is done',
       ],
       [
         'rangeStartText',
@@ -3183,7 +3183,7 @@ RangeSlider: {
         'interactionSource', 
         'MutableInteractionSource',
         'MutableInteractionSource', 
-        'The interaction source to be used for the start thumb.',
+        'The interaction source to be used for the start thumb',
       ],
     ]
   },
