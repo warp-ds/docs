@@ -1,11 +1,11 @@
 <template>
-  <div class="component" ref="el" />
+  <div class="component" ref="el"/>
 </template>
 
 <script setup>
-import { createElement } from 'react'
-import { createRoot } from 'react-dom/client'
-import { ref, onMounted } from 'vue'
+import {createElement} from 'react'
+import {createRoot} from 'react-dom/client'
+import {onMounted, ref} from 'vue'
 import DatePicker from './DatePicker.jsx'
 
 const el = ref()

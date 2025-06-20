@@ -6,10 +6,13 @@ import { mapFrameworkStatuses } from '../utils.js';
 
 # Date Picker - BETA
 
-This component is still in a beta phase, and you might encounter bugs when using it. 
-If you encounter anything, please report it to the WARP team: [#smp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)
+This component is still in a beta phase, and you might encounter bugs when using it.
+If you encounter anything, please report it to the WARP team: [#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)
 
 {{ data.description }}
+
+<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+
 
 ## Example
 <ThemeSwitcher />

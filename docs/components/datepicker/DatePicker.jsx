@@ -1,6 +1,6 @@
 import React from 'react';
 import {DatePicker} from '@warp-ds/components/react/datepicker'
-import { isBefore, startOfDay } from 'date-fns';
+import {isBefore, startOfDay} from 'date-fns';
 
 
 export default function DatePickerExample() {
