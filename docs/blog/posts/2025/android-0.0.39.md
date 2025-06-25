@@ -3,7 +3,7 @@ title: 'WARP Android release v.0.0.39'
 date: 2025-03-11
 ---
 
-Toast component & new icons
+Tooltip component & dataviz tokens
 ---
 
 # Warp Android release 0.0.39 
