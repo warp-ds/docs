@@ -13,6 +13,7 @@ import CalloutStatic from '../components/callout/StaticExample.vue';
 import CalloutFallbackPlacements from '../components/callout/FallbackPlacementsExample.vue';
 import Card from '../components/card/Example.vue';
 import Checkbox from '../components/checkbox/Example.vue';
+import DatePicker from '../components/datepicker/Example.vue';
 import Expandable from '../components/expandable/Example.vue';
 import Icon from '../components/icons/Example.vue';
 import Link from '../components/link/Example.vue';
@@ -60,6 +61,7 @@ buildWc('callout-flip-example', CalloutFlip);
 buildWc('callout-static-example', CalloutStatic);
 buildWc('card-example', Card);
 buildWc('checkbox-example', Checkbox);
+buildWc('datepicker-example', DatePicker);
 buildWc('expandable-example', Expandable);
 buildWc('icon-example', Icon);
 buildWc('link-example', Link)
