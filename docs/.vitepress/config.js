@@ -615,7 +615,7 @@ export default defineConfig({
             { text: 'Card', link: '/components/card/' },
             { text: 'Checkbox', link: '/components/checkbox/' },
             { text: 'Combo box', link: '/components/combobox/' },
-            { text: 'Date Picker', link: '/components/datepicker/' },
+            { text: 'Date picker', link: '/components/datepicker/' },
             { text: 'Expandable', link: '/components/expandable/' },
             { text: 'Icons', link: '/components/icons/' },
             { text: 'Link', link: '/components/link/' },
