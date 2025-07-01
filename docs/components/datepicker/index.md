@@ -4,7 +4,7 @@ import data from './data.json';
 import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Date Picker - BETA
+# Date picker - BETA
 
 This component is still in a beta phase, and you might encounter bugs when using it.
 If you encounter anything, please report it to the WARP team: [#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)
