@@ -18,7 +18,7 @@ import { mapFrameworkStatuses } from '../utils.js';
 ## Anatomy
 
 ::: image-block
-![Example of a focused date input field with an open calendar below displaying January 2023 and the current selection is the 11th. The example is surrounded by four numbered highlights, pointing to the label, date input field, the optional calendar icon and the calendar popover](./overview-1.svg)
+![Example of a focused date input field with an open calendar below displaying January 2023 and the current selection is the 11th. The example is surrounded by four numbered highlights, pointing to the label, date input field, the optional calendar icon and the calendar popover](/components/datepicker/overview-1.svg)
 :::
 
 
