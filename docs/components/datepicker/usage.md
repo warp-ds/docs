@@ -13,7 +13,7 @@ The date format can be overwritten by users of this component. Read mechanic gui
 Internationalization, also referred to as globalization, refers to software adapting to different languages, regional peculiarities, and technical requirements of a target locale without additional code changes. This means that if the location is known, then formatting of a date or time can automatically change to the acceptable local format. You should always try to design for internationalization.
 
 ::: image-block
-![Example displaying two date input fields with “dd.mm.yyyy” inside. Both input fields has a highlight, emphasizing the difference between Norwegian formatting (using a dot to differentiate between day, month and year) and English formatting (using a slash to differentiate between day, month and year).](./usage-1.svg)
+![Example displaying two date input fields with “dd.mm.yyyy” inside. Both input fields has a highlight, emphasizing the difference between Norwegian formatting (using a dot to differentiate between day, month and year) and English formatting (using a slash to differentiate between day, month and year).](/components/datepicker/usage-1.svg)
 :::
 
 **1. Norwegain formating**: Uses a “.” to differentiate between day, month, and year
@@ -22,9 +22,9 @@ Internationalization, also referred to as globalization, refers to software adap
 
 ### Error states
 ::: image-block
-![Example showing date input field error states marked with a red border, red input text and an error message below the input. ](./usage-2.svg)
+![Example showing date input field error states marked with a red border, red input text and an error message below the input. ](/components/datepicker/usage-2.svg)
 :::
 
 ::: image-block
-![Example showing date input field error states marked with a red border and an error message below the input.](./usage-3.svg)
+![Example showing date input field error states marked with a red border and an error message below the input.](/components/datepicker/usage-3.svg)
 :::
