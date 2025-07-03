@@ -7,8 +7,7 @@
 * Our recommendation is to use the date picker in its default form (a raised popover), but if you need to create an inline version, please bare in mind that that has more UX requirements (eg, a confirmation button) that you need to fix yourself.
 
 ## Content guidelines
-The date format can be overwritten by users of this component. Read mechanic guidelines for more information about date formats: Date and time
-[Date and time](https://www.astro-contentguide.com/05b2d7be6/p/649b17-date-and-time)
+The date format can be overwritten by users of this component. Read mechanic guidelines for more information about date formats: [Date and time](https://www.astro-contentguide.com/05b2d7be6/p/649b17-date-and-time)
 
 ### Internationalization
 Internationalization, also referred to as globalization, refers to software adapting to different languages, regional peculiarities, and technical requirements of a target locale without additional code changes. This means that if the location is known, then formatting of a date or time can automatically change to the acceptable local format. You should always try to design for internationalization.
