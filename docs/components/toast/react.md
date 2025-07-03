@@ -1,8 +1,8 @@
 ### Import
 
 ::: tip Note:
-The React Toast component is imported from the new components repository (**@warp-ds/components**), <br />
-and is in **BETA** mode.
+This component is imported from the new components repository (**@warp-ds/components**),
+and is currently in **BETA** mode. If you encounter bugs or other issues, please report it to the WARP team: <br />[#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV).
 :::
 
 The Toast system consists of two parts.
