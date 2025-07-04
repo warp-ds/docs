@@ -3737,14 +3737,20 @@ export const iOS = {
         '',
         'The array of options that conform to `RadioOption`. This will provide `label` and optional `extraContent` of `Radio`.'
       ],
+    ],
+    props: [
+      [
+        'label',
+        'String?',
+        'nil',
+        'An optional text label for the `Radio` button.'
+      ],
       [
         'action',
         '@escaping () -> Void',
         '',
-        'A closure that is executed when the `radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup`'
+        'A optional closure that is executed when the `Radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup`'
       ],
-    ],
-    props: [
       [
         'title',
         'String?',
