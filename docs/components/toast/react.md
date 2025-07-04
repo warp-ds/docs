@@ -29,7 +29,7 @@ addWToast({
 
 ### Options
 
-## Duration
+#### Duration
 
 ```js
 addWToast({
@@ -39,7 +39,7 @@ addWToast({
 });
 ```
 
-## Dismiss button
+#### Dismiss button
 
 ::: warning WARNING! 
 The toast component is designed to automatically close by default, and it is recommended to avoid adding the manual dismiss button due to accessibility guidelines. If the toast absolutely must be dismissible, set the `dismissible` property to `true`.
