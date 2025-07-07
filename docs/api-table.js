@@ -790,6 +790,31 @@ export const react = {
       ['optional', 'boolean', '', 'Indicates that the textfield is not required.'],
     ],
   },
+  	Toast: {
+		required: [
+			["text", "string", "undefined", "The toast message."],
+			[
+				"variant",
+				"'positive' | 'warning' | 'negative'",
+				"undefined",
+				"Defines the type of toast.",
+			],
+		],
+		props: [
+			[
+				"duration",
+				"5000 | 10000 | 6000000",
+				"5000",
+				"Sets how long the toast stays visible in the user interface before it dismisses automatically (in milliseconds).",
+			],
+			[
+				"dismissible",
+				"boolean",
+				"false",
+				"Adds a close button. Not recommended from an accessibility perspective.",
+			],
+		],
+	},
   Toggle: {
     required: [],
     props: [
