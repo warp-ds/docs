@@ -1,5 +1,7 @@
 <script setup>
+import { ref, computed } from "vue";
 import "@warp-ds/components/icon";
+const searchTerm = ref("");
 const iconNames = [
   "ActiveAds",
   "Ads",
@@ -251,13 +253,33 @@ const iconNames = [
   "Woods",
   "YouTube",
 ];
+const filteredIcons = computed(() =>
+  iconNames.filter(name =>
+    name.toLowerCase().includes(searchTerm.value.toLowerCase())
+  )
+);
 </script>
 
 <template>
-  <div class="component space-y-16">
-    <div v-for="icon in iconNames" :key="icon">
-      <w-icon :name="icon" size="medium" locale="en" />
-      <span>{{ icon }}</span>
+  <div class="component space-y-16" style="background-color: var(--vp-sidebar-bg-color);">
+    <div class="m-8">
+  <input
+    v-model="searchTerm"
+    type="text"
+    placeholder="Search icons..."
+    class="border border-gray-300 rounded px-4 py-2 w-full max-w-md"
+  />
+</div>
+    <div class="grid gap-24 grid-cols-4 md:grid-cols-4 m-8">
+      <div v-for="icon in filteredIcons" :key="icon" class="flex flex-col items-center text-center">
+        <div style="display:flex;background-color: #fff;border-radius: 4px;width:100%;height: 56px;padding: 8px 16px;gap: 10px;align-self: stretch;justify-content: center;
+align-items: center;">
+          <w-icon :name="icon" size="medium" locale="en"  />
+        </div>
+        <span class="text-s mt-8" style="color:var(--vp-c-text-1);">{{ icon }}</span>
+      </div>
     </div>
   </div>
 </template>
+
+

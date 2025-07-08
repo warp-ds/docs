@@ -23,7 +23,7 @@ If custom sizing is required, designers must use Figma’s scaling tool to maint
 
 #### To scale an icon correctly in Figma:
 1. Select the icon.
-2. Press K to open the scaling tool.
+2. Press <kbd>K</kbd> to open the **scaling tool**.
 3. Change scale dimensions in the right side menu.
 
 This method ensures stroke width scales correctly with the icon’s size.

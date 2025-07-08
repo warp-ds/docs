@@ -17,7 +17,7 @@ If you encounter anything, please report it to the WARP team: [#warp-design-syst
 
 {{ data.description }}
 
-<tabs-content>
+<tabs-content variant="main">
   <template #Overview>
     <overview />
   </template>
