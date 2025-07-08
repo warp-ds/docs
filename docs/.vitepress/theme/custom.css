@@ -191,6 +191,7 @@ html.dark body {
   margin: 0 2px;
   font-size: 0.85em;
   font-family: var(--vp-font-family-mono, monospace);
+  font-weight: normal;
   line-height: 1.4;
   background-color: var(--vp-c-bg-alt, #f4f4f4);
   color: var(--vp-c-text-1, #1a1a1a);
