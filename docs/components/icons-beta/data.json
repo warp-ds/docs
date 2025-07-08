@@ -1,0 +1,21 @@
+{
+  "title": "Icons (beta)",
+  "description": "Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.",
+  "category": "Form",
+  "placeholder": {
+    "label": "Icons component"
+  },
+  "frameworks": [
+    {
+      "name": "React",
+      "status": "released"
+    },
+    {
+      "name": "Elements",
+      "status": "released"
+    },
+    {
+      "name": "Figma"
+    }
+  ]
+}

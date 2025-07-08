@@ -352,6 +352,13 @@ export const react = {
       ],
     ],
   },
+  Icon: {
+    required: [
+      ['name', 'string', '', 'The name of the icon to render'],
+      ['size', "'small' | 'medium' | 'large' | 'xypx' ", 'medium', 'The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`.'],
+      ['locale', 'string', '', 'The locale to use for the icon, e.g. "nb" for Norwegian Bokmål'],
+    ],
+  },
   Modal: {
     required: [
       ['children', 'Element<br />|Element[]', '', 'The modal contents'],
@@ -1570,6 +1577,13 @@ export const elements = {
       ['as', 'string', 'div', 'The DOM element to emit'],
       ['v-model', 'boolean', '', 'Controls the expansion/collapse'],
       ['chevron', 'boolean', 'true', 'Controls chevron visibility'],
+    ],
+  },
+  Icon: {
+    required: [
+      ['name', 'string', '', 'The name of the icon to render'],
+      ['size', "'small' | 'medium' | 'large' | 'xypx' ", 'medium', 'The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`.'],
+      ['locale', 'string', '', 'The locale to use for the icon, e.g. "nb" for Norwegian Bokmål'],
     ],
   },
   Modal: {
