@@ -4,7 +4,11 @@ import { ref } from 'vue';
 const props = defineProps({
   initialTab: String,
   tabs: Array,
-  isDisabled: Function
+  isDisabled: Function,
+  variant: {
+    type: String,
+    default: 'default'
+  }
 });
 const activeTab = ref(props.initialTab);
 const switchTab = (tab) => {
@@ -14,14 +18,14 @@ const switchTab = (tab) => {
 </script>
 
 <template>
-  <div class="tablist" role="tablist">
-    <button 
+  <div :class="['tablist', `tab--${props.variant}`]" role="tablist">
+    <button
       v-for="tab in tabs"
       :key="tab" role="tab"
       :id="`tab-${tab}`"
       :href="`#panel-${tab}`"
       :class="{
-        'tab': true,
+        tab: true,
         'tab-head--active': activeTab === tab,
         'tab-head--disabled': props.isDisabled(tab),
       }"
@@ -42,16 +46,15 @@ const switchTab = (tab) => {
 .tablist {
   display: flex;
   margin: 48px 0 0;
-  padding-left: 0px;
   list-style: none;
+  position: relative;
 }
 
 .tab {
-  cursor: pointer;
+  font-weight: bold;
   font-size: 16px;
-  font-weight: 500;
-  margin: 8px 4px 0 0;
-  padding-right: 18px;
+  cursor: pointer;
+  padding: 8px 16px;
   position: relative;
 }
 
@@ -61,15 +64,39 @@ const switchTab = (tab) => {
 }
 
 .tab[aria-selected="true"] {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
+  color: var(--vp-c-brand-1);
 }
 
 .tab-head--disabled {
-  font-weight: 400;
   opacity: .6;
   pointer-events: none;
+}
+.tablist.tab--main{
+  margin: 16px 0 0;
+  width:100%;
+  .tab {
+    border-bottom: 3px solid transparent;
+    padding: 8px 16px 5px;
+
+    &[aria-selected="true"] {
+      color: var(--vp-c-brand-1);
+      border-color: var(--vp-c-brand-1);
+    }
+
+    &.tab-head--disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+  }
+
+}
+.tablist.tab--main::before {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  height: 1px;
+  width: 100%;
+  border-bottom: 1px solid var(--vp-c-divider);
+  content: '';
 }
 </style>
