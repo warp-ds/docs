@@ -1,47 +1,66 @@
-As principle, users should be able to manually enter a date regardless of seeing or not the date picker component.
+## Principle
 
-## Keyboard navigation
+Users should be able to manually enter a date, whether or not they interact with the date picker component.
 
-### For input field:
+---
 
-#### 1st <kbd>Tab</kbd> key:
-Highlights day field (“dd”): Allows user to manually enter a value for day.
-<kbd>Arrow up</kbd>/<kbd>Arrow down</kbd> key increases or decreases value for day (01-31)
+## Keyboard Navigation
 
-#### 2nd <kbd>Tab</kbd> key:
-Highlights month field (“mm”). Allows user to manually enter a value for month.
-<kbd>Arrow up</kbd>/<kbd>Arrow down</kbd> key increases or decreases value for month (01-12)
+### For Input Field:
 
-#### 3rd <kbd>Tab</kbd> key:
-Highlights year field (“yyyy”). Allows user to manually enter a value for year.
-<kbd>Arrow up</kbd>/<kbd>Arrow down</kbd> key increases or decreases value for year (starting from current year)
+#### 1st <kbd>Tab</kbd> key
+Focus moves to the **day** field (“dd”), allowing the user to manually enter a day value.
 
-#### 4th <kbd>Tab</kbd> key:
-Focus moves to calendar icon.
-<kbd>Enter</kbd> key opens the calendar popover.
-2nd <kbd>Enter</kbd> key closes the calendar popover.
+Pressing <kbd aria-label="Arrow Up">↑</kbd> or <kbd aria-label="Arrow Down">↓</kbd> increments or decrements the day (01–31).
 
-#### 5th <kbd>tab</kbd> key:
-Moves focus to the next interactive element in the user interface.
+#### 2nd <kbd>Tab</kbd> key
+Focus moves to the **month** field (“mm”), allowing the user to manually enter a month value.
 
+Pressing <kbd aria-label="Arrow Up">↑</kbd> or <kbd aria-label="Arrow Down">↓</kbd> increments or decrements the month (01–12).
 
-### Once the calendar popover is open:
+#### 3rd <kbd>Tab</kbd> key
+Focus moves to the **year** field (“yyyy”), allowing the user to manually enter a year.
 
-#### 1st <kbd>Tab</kbd> key:
-Focus moves to the previous month button (left chevron).
-<kbd>Enter</kbd> key navigates to previous month.
+Pressing <kbd aria-label="Arrow Up">↑</kbd> or <kbd aria-label="Arrow Down">↓</kbd> increments or decrements the year (starting from the current year).
 
-#### 2nd <kbd>Tab</kbd> key:
-Focus moves to the next month button (right chevron).
-<kbd>Enter</kbd> key navigates to next month.
+#### 4th <kbd>Tab</kbd> key
+Focus moves to the calendar icon.
 
-#### 3rd <kbd>Tab</kbd> key:
-Focus moves to the current date in the calendar grid.
-<kbd>Arrow left</kbd>/<kbd>Arrow right</kbd>/<kbd>up</kbd>/<kbd>down</kbd> keys navigate between available dates.
-<kbd>Enter</kbd> key selects date in focus. Text field adopts date selected.
+Pressing <kbd>Enter</kbd> opens the calendar popover.
+Pressing <kbd>Enter</kbd> again closes it.
 
-#### 4th <kbd>Tab</kbd> key:
-Moves focus to the next interactive element in the user interface. Calendar popover closes.
+#### 5th <kbd>Tab</kbd> key
+Moves focus to the next interactive element in the interface.
 
-## Voiceover / Screenreader
-Not necessary to explain how to use/open/close the date picker on text field focus, as long it is easy/intuitive to use.
+---
+
+### Once the Calendar Popover is Open:
+
+#### 1st <kbd>Tab</kbd> key
+Focus moves to the **previous month** button <kbd aria-label="Less than key">&lt;</kbd>.
+
+Pressing <kbd>Enter</kbd> navigates to the previous month.
+
+#### 2nd <kbd>Tab</kbd> key
+Focus moves to the **next month** button <kbd aria-label="More than key">&gt;</kbd>.
+
+Pressing <kbd>Enter</kbd> navigates to the next month.
+
+#### 3rd <kbd>Tab</kbd> key
+Focus moves to the **current date** in the calendar grid.
+
+Use the arrow keys
+<kbd aria-label="Arrow Left">←</kbd> <kbd aria-label="Arrow Right">→</kbd> <kbd aria-label="Arrow Up">↑</kbd> <kbd aria-label="Arrow Down">↓</kbd>
+to navigate between available dates.
+
+Pressing <kbd>Enter</kbd> selects the focused date and updates the input field.
+
+#### 4th <kbd>Tab</kbd> key
+Moves focus to the next interactive element in the interface. The calendar popover closes.
+
+---
+
+## VoiceOver / Screen Reader
+
+It's not necessary to explain how to use, open, or close the date picker when the text field receives focus — as long as its behavior is intuitive and accessible.
+
