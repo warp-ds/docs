@@ -9,7 +9,7 @@ Our icon set is fully scalable, with stroke widths that increase proportionally 
 This proportional scaling maintains visual clarity and consistency across different UI contexts.
 
 ::: image-block
-![Example of the date picker calendar surrounded by four red highlights. The first points to the elevated background. The second points to the calendar month and year. The third points to the left chevron button, to switch month and the fourth points to the weekdays.](/components/icons-beta/specs-1.png)
+![Example of different sizes of icons.](/components/icon/specs-1.svg)
 :::
 
 
