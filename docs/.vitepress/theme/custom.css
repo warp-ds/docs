@@ -155,7 +155,7 @@ html.dark body {
 }
 /* make the border stand out a touch more */
 .vp-doc h2 {
-  border-top-width: 2px;
+  border-top-width: 0px;
 }
 /* wasn't enough breathing room here, add some more */
 .vp-doc h4 {
