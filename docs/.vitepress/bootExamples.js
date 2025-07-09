@@ -16,6 +16,8 @@ import Checkbox from '../components/checkbox/Example.vue';
 import DatePicker from '../components/datepicker/Example.vue';
 import Expandable from '../components/expandable/Example.vue';
 import Icon from '../components/icons/Example.vue';
+import IconBeta from '../components/icons-beta/Example.vue';
+import IconBetaCode from '../components/icons-beta/Code.vue';
 import Link from '../components/link/Example.vue';
 import Modal from '../components/modal/Example.vue';
 import PageIndicator from '../components/pageindicator/Example.vue';
@@ -64,6 +66,8 @@ buildWc('checkbox-example', Checkbox);
 buildWc('datepicker-example', DatePicker);
 buildWc('expandable-example', Expandable);
 buildWc('icon-example', Icon);
+buildWc('icon-beta-example', IconBeta);
+buildWc('icon-code-example', IconBetaCode);
 buildWc('link-example', Link)
 buildWc('modal-example', Modal);
 buildWc('pageindicator-example', PageIndicator);

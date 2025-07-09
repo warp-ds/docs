@@ -290,3 +290,12 @@ html.dark body {
 .VPHome {
   margin-bottom: 0px !important;
 }
+
+.beta-badge {
+    color: white;
+    background-color: #BE3830;
+    padding: 4px 8px;
+    margin: 0px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}

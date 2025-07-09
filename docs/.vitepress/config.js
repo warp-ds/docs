@@ -124,7 +124,7 @@ export default defineConfig({
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => /(-example|-color-table|example-container|poc-1-div)$/.test(tag),
+        isCustomElement: (tag) => /(-example|-color-table|example-container|poc-1-div|w-icon)$/.test(tag),
       },
     },
   },
@@ -616,9 +616,12 @@ export default defineConfig({
             { text: 'Card', link: '/components/card/' },
             { text: 'Checkbox', link: '/components/checkbox/' },
             { text: 'Combo box', link: '/components/combobox/' },
-            { text: 'Date picker', link: '/components/datepicker/' },
+            { text: 'Date picker <span class="beta-badge">Beta</span>', link: '/components/datepicker/' },
             { text: 'Expandable', link: '/components/expandable/' },
-            { text: 'Icons', link: '/components/icons/' },
+            { text: 'Icons <span class="beta-badge">Beta</span>', link: '/components/icons-beta/', items: [
+              { text: 'Icons (legacy)', link: '/components/icons/' },
+            ] },
+            
             { text: 'Link', link: '/components/link/' },
             { text: 'Modal', link: '/components/modal/' },
             { text: 'PageIndicator', link: '/components/pageindicator/' },
