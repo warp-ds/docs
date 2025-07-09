@@ -238,6 +238,7 @@ export default defineConfig({
           items: [
             { text: 'FAQ', link: '/help/faq/' },
             { text: 'Support', link: '/help/support/' },
+            { text: 'Doc authoring guide', link: '/help/authoring-guide/' },
             { text: 'Report bugs/errors', link: '/help/report-bugs/' },
           ]
         }
@@ -557,7 +558,7 @@ export default defineConfig({
               { text: 'Figma Library',link: '/foundations/data-visualization/figma-library/' },
               { text: 'Color Guidelines',
                 collapsed: true,
-                items: [ 
+                items: [
                   { text: 'Introduction', link: '/foundations/data-visualization/color/introduction/' },
                   { text: 'Chart Colors', link: '/foundations/data-visualization/color/chart-colors/' },
                   { text: 'Data Colors', link: '/foundations/data-visualization/color/data-colors/' },
@@ -569,7 +570,7 @@ export default defineConfig({
               {
                 text: 'Tokens & CSS',
                 collapsed: true,
-                items: [ 
+                items: [
                   { text: 'Introduction', link: '/foundations/data-visualization/tokens/introduction/' },
                   { text: 'Chart Colors', link: '/foundations/data-visualization/tokens/chart/' },
                   { text: 'Background', link: '/foundations/data-visualization/tokens/background/' },
@@ -582,7 +583,7 @@ export default defineConfig({
               { text: 'Chart Components', link: '/foundations/data-visualization/components/' },
               {  text: 'Interaction', link: '/foundations/data-visualization/interaction/' },
               { text: 'Success Criteria', collapsed: true,
-                items: [ 
+                items: [
                   { text: 'Introduction', link: '/foundations/data-visualization/success-criteria/introduction/' },
                   { text: 'Cognitive Accessibility', link: '/foundations/data-visualization/success-criteria/cognitive/' },
                   { text: 'Visual Accessibility', link: '/foundations/data-visualization/success-criteria/visual/' },
