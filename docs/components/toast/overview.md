@@ -11,11 +11,6 @@ A toast overlay is used to provide system status notifications, such as error, c
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
-## Example
-
-<ThemeSwitcher />
-<toast-example />
-
 ## Variants
 
 ### Positive
