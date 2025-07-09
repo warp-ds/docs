@@ -10,7 +10,7 @@
 
 {{ data.description }}
 
-<tabs-content>
+<tabs-content variant="main">
   <template #Overview>
     <overview />
   </template>
