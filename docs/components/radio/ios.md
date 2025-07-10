@@ -7,10 +7,10 @@
 ```swift example
 Warp.Radio(
     isSelected: Bool,
-    label: String,
+    label: String?,
     style: RadioStyle = .default,
     extraContent: AnyView? = nil,
-    action: @escaping () -> Void
+    action: @escaping () -> Void = {}
 )
 
 Warp.RadioGroup(
@@ -26,9 +26,7 @@ Warp.RadioGroup(
 
 ```swift example
 Warp.Radio(
-    isSelected: $isSelected,
-    label: "Title for this option",
-    action: {}
+    isSelected: $isSelected
 )
 
 Warp.RadioGroup(
@@ -72,9 +70,7 @@ By default all Warp components return a `SwiftUI View` but there is always a `UI
 
 ```swift example
 Warp.Radio(
-    isSelected: $isSelected,
-    label: "Title for this option",
-    action: {}
+    isSelected: $isSelected
 ).uiView
 ```
 
