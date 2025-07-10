@@ -381,6 +381,15 @@ export const react = {
       [ 'onLeftClick', '() => void', '', 'Handler that is called when the user clicks the default back button. Requires the `left` prop to be `true`.'],
     ],
   },
+  PageIndicator: {
+    required: [
+      ['pageCount', 'number', '', 'The total number of pages.'],
+      ['selectedPage', 'number', '', 'Currently selected page.'],
+    ],
+    props: [
+      ['style', 'CSSProperties', '', 'CSS styles to inline on the component container.']  
+    ],
+  },
   Pagination: {
     required: [
       ['createHref', '(page: number) => string', '', 'Function that returns the href for a given page'],

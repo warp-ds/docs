@@ -1,11 +1,15 @@
 {
   "title": "Page indicator",
-  "description": "Shows the number of pages in a series and indicates which page is currently on display.",
+  "description": "The page indicator shows the number of pages in a series and indicates which page is currently displayed.",
   "category": "Actions",
   "placeholder": {
     "label": "Page indicator component"
   },
   "frameworks": [
+    {
+      "name": "React",
+      "status": "released"
+    },
     {
       "name": "iOS",
       "status": "released"
