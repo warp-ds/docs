@@ -3,7 +3,7 @@ title: 'WARP Android release v.0.0.42'
 date: 2025-04-29
 ---
 
-Range Slider & compose update
+Link component & Vend theme
 ---
 
 # Warp Android release 0.0.42

@@ -1,0 +1,32 @@
+<script setup>
+import Overview from './overview.md';
+import Usage from './usage.md';
+import Styling from './styling.md';
+import Dev from './code.md';
+import Accessibility from './accessibility.md';
+import React from './react.md';
+import data from './data.json';
+import { mapFrameworkStatuses } from '../utils.js';
+</script>
+
+<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+
+## Example
+<ThemeSwitcher />
+<datepicker-example />
+
+## Anatomy
+
+::: image-block
+![Example of a focused date input field with an open calendar below displaying January 2023 and the current selection is the 11th. The example is surrounded by four numbered highlights, pointing to the label, date input field, the optional calendar icon and the calendar popover](/components/datepicker/overview-1.svg)
+:::
+
+
+**1. Label**: Indicates what information the field requires.
+
+**2. Date input field**: Selecting this field opens the date picker component. Users can also input dates into the field. Once a date is selected, the option will be shown in the text input. This example shows date formatted in “dd.mm.yyyy” but this is controlled by the user’s browser locale settings (operating system is also fallback).
+
+**3. Calendar icon (optional)**: Opens the calendar popover and helps indicate what information the field requires. Not an accessibility requirement but we recommend including it for ease of keyboard navigation.
+
+**4. Calendar popover**: Contains the list of all dates. Left and right buttons allowing to navigate the months, month and year header, calendar grid with weekdays and days of the month.
+

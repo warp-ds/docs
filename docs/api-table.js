@@ -256,6 +256,23 @@ export const react = {
       ['onBlur', '((value: string) => void) & FocusEventHandler<HTMLInputElement>', '', 'Called when the input loses focus with the current navigation value or input value'],
     ],
   },
+  DatePicker: {
+    required: [
+        ['label', 'string', '', 'Label shown on the input of the datepicker.'],
+        ['onChange', '(day: string) => void', '', 'Called with the date when the user makes a selection from the calendar or a changes the input.']
+    ],
+    props: [
+        ['value', 'string', '', 'The current selected date.'],
+        ['isDayDisabled', '(day: Date) => boolean', 'noop', 'Called with the day of an entry in the calendar to determine if the day is disabled.'],
+        ['locale', 'Locale', 'Norwegian locale', 'A date-fns locale object. This enables internationalization in the datepicker such as date formatting and which day a week starts on. See [date fns documentation](https://date-fns.org/).'],
+        ['phrases', 'Phrases', '', 'An object of translation strings used by the datepicker for accessibility.'],
+        ['displayFormat', 'string', '', 'A date-fns format string for the input. See [date fns documentation](https://date-fns.org/).'],
+        ['monthFormat', 'string', '', 'A date-fns format string for the month. See [date fns documentation](https://date-fns.org/).'],
+        ['weekDayFormat', 'string', '', 'A date-fns format string for the weekday. See [date fns documentation](https://date-fns.org/).'],
+        ['dayAriaLabelFormat', 'string', '', 'A date-fns format string for a day. Used for screen readers together with `phrases`. See [date fns documentation](https://date-fns.org/).']
+    ],
+    events: [],
+  },
   DeadToggle: {
     required: [],
     props: [
@@ -333,6 +350,13 @@ export const react = {
         '',
         'Event function to be called any time the component is expanded or closed. Function will be passed a boolean with a value of true if the component is now expanded or false if it is now closed.',
       ],
+    ],
+  },
+  Icon: {
+    required: [
+      ['name', 'string', '', 'The name of the icon to render'],
+      ['size', "'small' | 'medium' | 'large' | 'xypx' ", 'medium', 'The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`.'],
+      ['locale', 'string', '', 'The locale to use for the icon, e.g. "nb" for Norwegian Bokmål'],
     ],
   },
   Modal: {
@@ -782,6 +806,31 @@ export const react = {
       ['optional', 'boolean', '', 'Indicates that the textfield is not required.'],
     ],
   },
+  	Toast: {
+		required: [
+			["text", "string", "undefined", "The toast message."],
+			[
+				"variant",
+				"'positive' | 'warning' | 'negative'",
+				"undefined",
+				"Defines the type of toast.",
+			],
+		],
+		props: [
+			[
+				"duration",
+				"5000 | 10000 | 6000000",
+				"5000",
+				"Sets how long the toast stays visible in the user interface before it dismisses automatically (in milliseconds).",
+			],
+			[
+				"dismissible",
+				"boolean",
+				"false",
+				"Adds a close button. Not recommended from an accessibility perspective.",
+			],
+		],
+	},
   Toggle: {
     required: [],
     props: [
@@ -1102,8 +1151,8 @@ export const vue = {
       ],
       ['optional', 'string', '', 'Mark label to indicate that this input is optional.'],
       ['read-only', 'string', '', 'Whether the input can be selected but not changed by the user.'],
-      
-      
+
+
     ],
   },
   InputAttributes: {
@@ -1539,6 +1588,13 @@ export const elements = {
       ['chevron', 'boolean', 'true', 'Controls chevron visibility'],
     ],
   },
+  Icon: {
+    required: [
+      ['name', 'string', '', 'The name of the icon to render'],
+      ['size', "'small' | 'medium' | 'large' | 'xypx' ", 'medium', 'The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`.'],
+      ['locale', 'string', '', 'The locale to use for the icon, e.g. "nb" for Norwegian Bokmål'],
+    ],
+  },
   Modal: {
     required: [],
     props: [
@@ -1723,9 +1779,9 @@ export const android = {
   Button: {
     required: [
       [
-        'text', 
-        'String', 
-        '', 
+        'text',
+        'String',
+        '',
         'The text to be displayed on the button'
       ],
       [
@@ -1734,7 +1790,7 @@ export const android = {
         '',
         'Lambda to be invoked when clicked',
       ],
-      
+
     ],
     props: [
       [
@@ -1768,27 +1824,27 @@ export const android = {
         'Set the button to look like it is in progress, can be combined with other button types. Can be combined with any button type',
       ],
       [
-        'leadingIcon', 
-        'Int or @Composable () -> Unit', 
-        'null', 
+        'leadingIcon',
+        'Int or @Composable () -> Unit',
+        'null',
         'The id of the icon drawable resource or the WarpIcon component to be displayed in the button before the text'
       ],
       [
-        'leadingIconContentDescr', 
-        'String', 
-        'null', 
+        'leadingIconContentDescr',
+        'String',
+        'null',
         'The content description of the icon'
       ],
       [
-        'trailingIcon', 
-        'Int or @Composable () -> Unit', 
-        'null', 
+        'trailingIcon',
+        'Int or @Composable () -> Unit',
+        'null',
         'The id of the icon drawable resource or the WarpIcon component to be displayed in the button after the text'
       ],
       [
-        'trailingIconContentDescr', 
-        'String', 
-        'null', 
+        'trailingIconContentDescr',
+        'String',
+        'null',
         'The content description of the icon'
       ],
       [
@@ -1829,9 +1885,9 @@ export const android = {
         'Sets the modifier for the textfield',
       ],
       [
-        'label', 
-        'String', 
-        'null', 
+        'label',
+        'String',
+        'null',
         'The text to display as the label above the textfield'
       ],
       [
@@ -1847,9 +1903,9 @@ export const android = {
         'Sets the textfield in read-only mode',
       ],
       [
-        'optionalLabel', 
-        'String', 
-        'null', 
+        'optionalLabel',
+        'String',
+        'null',
         'The optional text to display next to the label above the textfield'
       ],
       [
@@ -1859,21 +1915,21 @@ export const android = {
         'Text hint that occupies the textfield when it is empty',
       ],
       [
-        'helpText', 
-        'String', 
-        'null', 
+        'helpText',
+        'String',
+        'null',
         'The text to display as the help text below the textfield'
       ],
       [
-        'prefixText', 
-        'String', 
-        'null', 
+        'prefixText',
+        'String',
+        'null',
         'The text to display infront of the value inside the textfield'
       ],
       [
-        'suffixText', 
-        'String', 
-        'null', 
+        'suffixText',
+        'String',
+        'null',
         'The text to display after the value inside the textfield'
       ],
       [
@@ -1895,45 +1951,45 @@ export const android = {
         'Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error',
       ],
       [
-        'visualTransformation', 
-        'VisualTransformation', 
-        'VisualTransformation.None', 
+        'visualTransformation',
+        'VisualTransformation',
+        'VisualTransformation.None',
         'Interface used for changing visual output of the input field '
       ],
       [
-        'keyboardOptions', 
-        'KeyboardOptions', 
-        'KeyboardOptions(capitalization = KeyboardCapitalization.Sentences)', 
+        'keyboardOptions',
+        'KeyboardOptions',
+        'KeyboardOptions(capitalization = KeyboardCapitalization.Sentences)',
         'The keyboard configuration options '
       ],
       [
-        'keyboardActions', 
-        'KeyboardActions', 
-        'KeyboardActions.Default', 
+        'keyboardActions',
+        'KeyboardActions',
+        'KeyboardActions.Default',
         'The KeyboardActions that specify actions that will be triggered in response to triggering IME action on the software keyboard'
       ],
       [
-        'singleLine', 
-        'Boolean', 
-        'true', 
+        'singleLine',
+        'Boolean',
+        'true',
         'Sets the textfield to a single line'
       ],
       [
-        'minLines', 
-        'Int', 
-        '1', 
+        'minLines',
+        'Int',
+        '1',
         'Sets the minimum amount of lines'
       ],
       [
-        'maxLines', 
-        'Int', 
-        'Int.MAX_VALUE', 
+        'maxLines',
+        'Int',
+        'Int.MAX_VALUE',
         'Sets the maximum amount of lines allowed'
       ],
       [
-        'interactionSource', 
-        'MutableInteractionSource', 
-        'MutableInteractionSource', 
+        'interactionSource',
+        'MutableInteractionSource',
+        'MutableInteractionSource',
         'MutableInteractionSource represents a stream of Interactions corresponding to events emitted by a component'
       ],
     ],
@@ -1941,9 +1997,9 @@ export const android = {
   Pill: {
     required: [
     [
-      'text', 
-      'String', 
-      '', 
+      'text',
+      'String',
+      '',
       'The text to be displayed on the pill'
     ],
     [
@@ -1968,21 +2024,21 @@ export const android = {
         'Sets the appearance of the pill',
       ],
       [
-        'selected', 
-        'boolean', 
-        'false', 
+        'selected',
+        'boolean',
+        'false',
         'Whether the pill appears in selected mode or not'
       ],
       [
-        'closable', 
-        'boolean', 
-        'false', 
+        'closable',
+        'boolean',
+        'false',
         'Whether the pill should be removable via a close button. Will override the custom icon'
       ],
       [
-        'icon', 
-        'WarpIconResource?', 
-        'null', 
+        'icon',
+        'WarpIconResource?',
+        'null',
         'The icon to be displayed in the pill after the text'
       ],
     ],
@@ -1990,9 +2046,9 @@ export const android = {
   Badge: {
     required: [
     [
-      'text', 
-      'String', 
-      '', 
+      'text',
+      'String',
+      '',
       'The text to be displayed on the badge'
     ],
   ],
@@ -2026,17 +2082,17 @@ export const android = {
   Alert: {
     required: [
     [
-      'body', 
-      'String', 
-      '', 
+      'body',
+      'String',
+      '',
       'The body text to be displayed in the alert'
     ],
   ],
     props: [
       [
-        'title', 
-        'String', 
-        'null', 
+        'title',
+        'String',
+        'null',
         'The title to be displayed in the alert'
       ],
       [
@@ -2052,39 +2108,39 @@ export const android = {
         'Sets the style and icon of the alert',
       ],
       [
-        'linkText', 
-        'String', 
-        'null', 
+        'linkText',
+        'String',
+        'null',
         'The link text to be displayed in the alert'
       ],
       [
-        'linkAction', 
-        '() -> Unit', 
-        'null', 
+        'linkAction',
+        '() -> Unit',
+        'null',
         'Lambda to be invoked when clicked'
       ],
       [
-        'secondaryButtonText', 
-        'String', 
-        'null', 
+        'secondaryButtonText',
+        'String',
+        'null',
         'The secondary button text to be displayed in the alert'
       ],
       [
-        'secondaryButtonAction', 
-        '() -> Unit', 
-        'null', 
+        'secondaryButtonAction',
+        '() -> Unit',
+        'null',
         'Lambda to be invoked when clicked'
       ],
       [
-        'quietButtonText', 
-        'String', 
-        'null', 
+        'quietButtonText',
+        'String',
+        'null',
         'The quiet button text to be displayed in the alert'
       ],
       [
-        'quietButtonAction', 
-        '() -> Unit', 
-        'null', 
+        'quietButtonAction',
+        '() -> Unit',
+        'null',
         'Lambda to be invoked when clicked'
       ],
     ],
@@ -2092,9 +2148,9 @@ export const android = {
   Text: {
     required: [
     [
-      'text', 
-      'String | AnnotatedString', 
-      '', 
+      'text',
+      'String | AnnotatedString',
+      '',
       'The text to be displayed'
     ],
   ],
@@ -2106,9 +2162,9 @@ export const android = {
         'Sets the modifier for the text',
       ],
       [
-        'color', 
-        'Color', 
-        'WarpTheme.colors.text.default', 
+        'color',
+        'Color',
+        'WarpTheme.colors.text.default',
         'The color of the text'
       ],
       [
@@ -2118,39 +2174,39 @@ export const android = {
         'Sets the appearance of the text - font and size',
       ],
       [
-        'maxLines', 
-        'Int', 
-        'Int.MAX_VALUE', 
+        'maxLines',
+        'Int',
+        'Int.MAX_VALUE',
         'Max lines of text'
       ],
       [
-        'minLines', 
-        'Int', 
-        '1', 
+        'minLines',
+        'Int',
+        '1',
         'Min lines of text'
       ],
       [
-        'textAlign', 
-        'TextAlign', 
-        'null', 
+        'textAlign',
+        'TextAlign',
+        'null',
         'TextAlign controls how text aligns in the space it appears'
       ],
       [
-        'overflow', 
-        'TextOverflow', 
-        'TextOverflow.Ellipsis', 
+        'overflow',
+        'TextOverflow',
+        'TextOverflow.Ellipsis',
         'How overflowing text should be handled'
       ],
       [
-        'softWrap', 
-        'Boolean', 
-        'true', 
+        'softWrap',
+        'Boolean',
+        'true',
         'If text should wrap or not'
       ],
       [
-        'textDecoration', 
-        'TextDecoration', 
-        'null', 
+        'textDecoration',
+        'TextDecoration',
+        'null',
         'Defines a horizontal line to be drawn on the text. Useful for displaying links'
       ],
     ],
@@ -2176,39 +2232,39 @@ export const android = {
         'Sets the icon for the box. Please always include contentDescription text for accessibility.',
       ],
       [
-        'heading', 
-        'String', 
-        'null', 
+        'heading',
+        'String',
+        'null',
         'The heading to be displayed in the box'
       ],
       [
-        'text', 
-        'String', 
-        'null', 
+        'text',
+        'String',
+        'null',
         'The body text to be displayed in the box'
       ],
       [
-        'link', 
-        'String', 
-        'null', 
+        'link',
+        'String',
+        'null',
         'The link text to be displayed in the box'
       ],
       [
-        'linkAction', 
-        '() -> Unit', 
-        'null', 
+        'linkAction',
+        '() -> Unit',
+        'null',
         'Lambda to be invoked when clicked on the link'
       ],
       [
-        'buttonText', 
-        'String', 
-        'null', 
+        'buttonText',
+        'String',
+        'null',
         'The button text to be displayed on the button in the box'
       ],
       [
-        'buttonAction', 
-        '() -> Unit', 
-        'null', 
+        'buttonAction',
+        '() -> Unit',
+        'null',
         'Lambda to be invoked when clicked on the button'
       ],
     ],
@@ -2216,9 +2272,9 @@ export const android = {
   StepIndicator: {
     required: [
     [
-      'steps', 
-      'Int', 
-      '', 
+      'steps',
+      'Int',
+      '',
       'The amount of steps in the indicator'
     ],
     [
@@ -2236,33 +2292,33 @@ export const android = {
         'Sets the modifier for the step indicator',
       ],
       [
-        'activeStep', 
-        'Int', 
-        '0', 
+        'activeStep',
+        'Int',
+        '0',
         'The active step in the step indicator'
       ],
       [
-        'onStepClicked', 
-        '(Int) -> Unit', 
-        'null', 
+        'onStepClicked',
+        '(Int) -> Unit',
+        'null',
         'Lambda for the step click action, returns the integer value of the step clicked'
       ],
       [
-        'stepContentDescription', 
-        '@Composable (Int) -> String', 
-        'null', 
+        'stepContentDescription',
+        '@Composable (Int) -> String',
+        'null',
         'The content description of the step. Used for accessibility purposes'
       ],
       [
-        'stepTitle', 
-        '(Int) -> String', 
-        'null', 
+        'stepTitle',
+        '(Int) -> String',
+        'null',
         'Lambda for the step title, returns the integer value of the step'
       ],
       [
-        'stepDescription', 
-        '(Int) -> String', 
-        'null', 
+        'stepDescription',
+        '(Int) -> String',
+        'null',
         'Lambda for the step description, returns the integer value of the step'
       ],
     ],
@@ -2270,21 +2326,21 @@ export const android = {
   Modal: {
     required: [
     [
-      'title', 
-      'String', 
-      '', 
+      'title',
+      'String',
+      '',
       'The title to be displayed in the modal'
     ],
     [
-      'body', 
-      'String', 
-      '', 
+      'body',
+      'String',
+      '',
       'The text to be displayed in the modal'
     ],
     [
-      'onDismiss', 
-      '() -> Unit', 
-      '', 
+      'onDismiss',
+      '() -> Unit',
+      '',
       'The lambda to be invoked when closing the modal'
     ],
   ],
@@ -2296,51 +2352,51 @@ export const android = {
         'Sets the modifier for the modal Card',
       ],
       [
-        'subtitle', 
-        'String', 
-        'null', 
+        'subtitle',
+        'String',
+        'null',
         'The subtitle to be displayed in the modal'
       ],
       [
-        'primaryButtonText', 
-        'String', 
-        'null', 
+        'primaryButtonText',
+        'String',
+        'null',
         'The text to be displayed on the positive button.'
       ],
       [
-        'onPrimaryButtonClick', 
-        '() -> Unit', 
-        'null', 
+        'onPrimaryButtonClick',
+        '() -> Unit',
+        'null',
         'The lambda to be invoked on the positive button click.'
       ],
       [
-        'secondaryButtonText', 
-        'String', 
-        'null', 
+        'secondaryButtonText',
+        'String',
+        'null',
         'The text to be displayed on the negative button.'
       ],
       [
-        'onSecondaryButtonClick', 
-        '() -> Unit', 
-        'null', 
+        'onSecondaryButtonClick',
+        '() -> Unit',
+        'null',
         'The lambda to be invoked on the positive button click.'
       ],
       [
-        'showCloseIcon', 
-        'Boolean', 
-        'false', 
+        'showCloseIcon',
+        'Boolean',
+        'false',
         'Whether the close icon (X) should be displayed in the top right corner.'
       ],
       [
-        'dismissOnClickOutside', 
-        'Boolean', 
-        'true', 
+        'dismissOnClickOutside',
+        'Boolean',
+        'true',
         'Whether the modal should be closed when clicking outside of its layout.'
       ],
       [
-        'dismissOnBackPress', 
-        'Boolean', 
-        'true', 
+        'dismissOnBackPress',
+        'Boolean',
+        'true',
         'Whether the modal should be closed when pressing back.'
       ],
     ],
@@ -2348,9 +2404,9 @@ export const android = {
   Checkbox: {
     required: [
     [
-      'text', 
-      'String', 
-      '', 
+      'text',
+      'String',
+      '',
       'The text to be displayed next to the checkbox'
     ],
   ],
@@ -2375,15 +2431,15 @@ export const android = {
         'Sets the appearance of the checkbox',
       ],
       [
-        'enabled', 
-        'boolean', 
-        'true', 
+        'enabled',
+        'boolean',
+        'true',
         'Whether the checkbox is enabled or not'
       ],
       [
-        'checked', 
-        'boolean', 
-        'false', 
+        'checked',
+        'boolean',
+        'false',
         'Whether the checkbox is checked or not'
       ],
     ],
@@ -2621,21 +2677,21 @@ export const android = {
   Callout: {
     required: [
       [
-        'title', 
-        'String', 
-        '', 
+        'title',
+        'String',
+        '',
         'The text to be displayed in the callout'
       ],
       [
-        'state', 
-        'CalloutState', 
-        '', 
+        'state',
+        'CalloutState',
+        '',
         'The state of the callout. If visible or not'
       ],
       [
-        'onDismiss', 
-        '() -> Unit', 
-        '', 
+        'onDismiss',
+        '() -> Unit',
+        '',
         'The lambda to be invoked when dismissed'
       ],
     ],
@@ -2695,9 +2751,9 @@ export const android = {
         'Padding offset in the parent layout to correctly calculate the arrow position in relation to the anchor',
       ],
       [
-        'anchorView', 
-        '@Composable () -> Unit', 
-        'null', 
+        'anchorView',
+        '@Composable () -> Unit',
+        'null',
         'The anchor which the callout points to'
       ],
     ]
@@ -2705,15 +2761,15 @@ export const android = {
   Expandable: {
     required: [
       [
-        'title', 
-        'String', 
-        '', 
+        'title',
+        'String',
+        '',
         'The title to be displayed in the expandable'
       ],
       [
-        'expandedContent', 
-        '@Composable () -> Unit', 
-        '', 
+        'expandedContent',
+        '@Composable () -> Unit',
+        '',
         'The content to be shown when expanded'
       ],
     ],
@@ -2741,29 +2797,29 @@ export const android = {
   TabRow: {
     required: [
     [
-      'tabs', 
-      '@Composable () -> Unit', 
-      '', 
+      'tabs',
+      '@Composable () -> Unit',
+      '',
       '`WarpTab` objects to display as selectable tabs.'
     ],
     [
-      'selectedTabIndex', 
+      'selectedTabIndex',
       'Int',
-      '', 
+      '',
       'Index of the currently selected tab.',
     ],
   ],
-    props: [  
+    props: [
       [
-        'modifier', 
+        'modifier',
         'Modifier',
-        'Modifier', 
+        'Modifier',
         'The modifier for the TabRow.',
       ],
       [
-        'scrollable', 
+        'scrollable',
         'Boolean',
-        'false', 
+        'false',
         'If set to true, tabs can be scrolled horizontally.',
       ],
     ],
@@ -2771,41 +2827,41 @@ export const android = {
   Tab: {
     required: [
     [
-      'text', 
-      'String', 
-      '', 
+      'text',
+      'String',
+      '',
       'Title of the tab'
     ],
     [
-      'selected', 
+      'selected',
       'Boolean',
-      '', 
+      '',
       'If the tab is selected or not',
     ],
   ],
-    props: [  
+    props: [
       [
-        'icon', 
+        'icon',
         'WarpIconResource',
-        'null', 
+        'null',
         'Icon displayed before the title.',
       ],
       [
-        'modifier', 
+        'modifier',
         'Modifier',
-        'Modifier', 
+        'Modifier',
         'The modifier for the Tab.',
       ],
       [
-        'onClick', 
+        'onClick',
         '() -> Unit',
-        '{}', 
+        '{}',
         'The function to be invoked when clicked ',
       ],
       [
-        'interactionSource', 
+        'interactionSource',
         'MutableInteractionSource',
-        'MutableInteractionSource', 
+        'MutableInteractionSource',
         'The interaction source to be used for the tab.',
       ],
     ],
@@ -2813,35 +2869,35 @@ export const android = {
   Toast: {
     required: [
     [
-      'state', 
-      'WarpToastState', 
-      '', 
+      'state',
+      'WarpToastState',
+      '',
       'State of the toast used in hide/show logic and to set the text'
     ]
   ],
-    props: [  
+    props: [
       [
-        'modifier', 
+        'modifier',
         'Modifier',
-        'Modifier', 
+        'Modifier',
         'The modifier for the Toast.',
       ],
       [
-        'type', 
-        'WarpToastType.Success <br /> WarpToastType.Warning <br /> WarpToastType.Error', 
-        'WarpToastType.Success', 
+        'type',
+        'WarpToastType.Success <br /> WarpToastType.Warning <br /> WarpToastType.Error',
+        'WarpToastType.Success',
         'Style of the toast'
       ],
       [
-        'duration', 
-        'WarpToastDuration.SHORT <br /> WarpToastDuration.LONG <br /> WarpToastDuration.INFINITE', 
-        'WarpToastDuration.SHORT', 
+        'duration',
+        'WarpToastDuration.SHORT <br /> WarpToastDuration.LONG <br /> WarpToastDuration.INFINITE',
+        'WarpToastDuration.SHORT',
         'Duration the Toast is shown'
       ],
       [
-        'onDismiss', 
+        'onDismiss',
         '() -> Unit',
-        '{}', 
+        '{}',
         'The function to be invoked when dismissed ',
       ],
     ]
@@ -2849,15 +2905,15 @@ export const android = {
   Tooltip: {
     required: [
       [
-        'text', 
-        'String', 
-        '', 
+        'text',
+        'String',
+        '',
         'The text to be displayed in the tooltip'
       ],
       [
-        'state', 
-        'WarpTooltipState', 
-        '', 
+        'state',
+        'WarpTooltipState',
+        '',
         'The state of the tooltip. If visible or not'
       ]
     ],
@@ -2893,9 +2949,9 @@ export const android = {
         'Shows the tooltip as a standalone inline view',
       ],
       [
-        'anchorView', 
-        '@Composable () -> Unit', 
-        'null', 
+        'anchorView',
+        '@Composable () -> Unit',
+        'null',
         'The anchor which the tooltip points to'
       ],
     ]
@@ -2904,9 +2960,9 @@ export const android = {
   Link: {
     required: [
     [
-      'text', 
-      'String', 
-      '', 
+      'text',
+      'String',
+      '',
       'The text to be displayed'
     ],
   ],
@@ -2918,9 +2974,9 @@ export const android = {
         'Sets the modifier for the link',
       ],
       [
-        'onClick', 
+        'onClick',
         '() -> Unit',
-        '{}', 
+        '{}',
         'The function to be invoked when clicked ',
       ],
       [
@@ -2930,15 +2986,15 @@ export const android = {
         'Sets the appearance of the link - font and size',
       ],
       [
-        'icon', 
+        'icon',
         'WarpIconResource',
-        'null', 
+        'null',
         'Icon displayed after the text.',
       ],
       [
-        'underline', 
-        'Boolean', 
-        'false', 
+        'underline',
+        'Boolean',
+        'false',
         'If text should be underlined or not'
       ],
     ]
@@ -2947,9 +3003,9 @@ export const android = {
 RangeSlider: {
     required: [
       [
-        'items', 
-        'List<Any>', 
-        '', 
+        'items',
+        'List<Any>',
+        '',
         'The list of values'
       ]
     ],
@@ -2979,21 +3035,21 @@ RangeSlider: {
         'The pre-selected end value',
       ],
       [
-        'onValueChangeFinished', 
+        'onValueChangeFinished',
         '() -> Unit',
-        '{}', 
+        '{}',
         'The function to be invoked when value selection is done ',
       ],
       [
-        'onLeftValueChanged', 
+        'onLeftValueChanged',
         '(Any) -> Unit',
-        '{}', 
+        '{}',
         'The function to be invoked when start value is selected',
       ],
       [
-        'onRightValueChanged', 
+        'onRightValueChanged',
         '(Any) -> Unit',
-        '{}', 
+        '{}',
         'The function to be invoked when end value is selected',
       ],
       [
@@ -3027,15 +3083,15 @@ RangeSlider: {
         'Whether to show range indicators below the slider',
       ],
       [
-        'startInteractionSource', 
+        'startInteractionSource',
         'MutableInteractionSource',
-        'MutableInteractionSource', 
+        'MutableInteractionSource',
         'The interaction source to be used for the start thumb.',
       ],
       [
-        'endInteractionSource', 
+        'endInteractionSource',
         'MutableInteractionSource',
-        'MutableInteractionSource', 
+        'MutableInteractionSource',
         'The interaction source to be used for the end thumb.',
       ],
     ]
@@ -3043,21 +3099,21 @@ RangeSlider: {
   Popover: {
     required: [
       [
-        'title', 
-        'String', 
-        '', 
+        'title',
+        'String',
+        '',
         'The text to be displayed in the popover'
       ],
       [
-        'body', 
-        'String', 
-        '', 
+        'body',
+        'String',
+        '',
         'The text to be displayed in the popover'
       ],
       [
-        'state', 
-        'WarpPopoverState', 
-        '', 
+        'state',
+        'WarpPopoverState',
+        '',
         'The state of the popover. If visible or not'
       ]
     ],
@@ -3099,15 +3155,15 @@ RangeSlider: {
         'If should dismiss the popover when clicked outside it',
       ],
       [
-        'onDismiss', 
-        '() -> Unit', 
-        '{}', 
+        'onDismiss',
+        '() -> Unit',
+        '{}',
         'The lambda to be invoked when dismissed'
       ],
       [
-        'anchorView', 
-        '@Composable () -> Unit', 
-        'null', 
+        'anchorView',
+        '@Composable () -> Unit',
+        'null',
         'The anchor which the popover points to'
       ],
     ]
@@ -3208,35 +3264,35 @@ export const iOS = {
       'The visual style of the alert, which dictates its colors, icons, and overall appearance.<br /> Use one of the predefined `AlertStyle` values: `.info`, `.warning`, `.critical`, or `.success`.',
     ],
     [
-      'title', 
-      'String', 
-      '', 
+      'title',
+      'String',
+      '',
       'The primary text displayed at the top of the alert, used to capture the user\'s attention.'
     ],
     [
-      'subtitle', 
-      'String', 
-      '', 
+      'subtitle',
+      'String',
+      '',
       'Additional information displayed below the title, used to provide further context to the alert.'
     ],
   ],
     props: [
       [
-        'link', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
+        'link',
+        '(title: String, action: () -> Void)?',
+        'nil',
         'An optional tuple containing the title and action for a clickable link that appears below the subtitle.'
       ],
       [
-        'primaryButton', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
+        'primaryButton',
+        '(title: String, action: () -> Void)?',
+        'nil',
         'An optional tuple containing the title and action for a primary button.'
       ],
       [
-        'secondaryButton', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
+        'secondaryButton',
+        '(title: String, action: () -> Void)?',
+        'nil',
         'An optional tuple containing the title and action for a secondary button.'
       ],
     ],
@@ -3244,9 +3300,9 @@ export const iOS = {
   Badge: {
     required: [
     [
-      'text', 
-      'String', 
-      '', 
+      'text',
+      'String',
+      '',
       'The text to display inside the badge.'
     ],
     [
@@ -3274,41 +3330,41 @@ export const iOS = {
   Box: {
     required: [
     [
-      'style', 
+      'style',
       'Warp.BoxStyle',
-      '', 
+      '',
       'Preferred style of box.<br /> Use one of the predefined `BoxStyle` values: `.neutral`, `.info`, `.bordered`'
     ],
     [
-      'title', 
-      'String?', 
-      '', 
+      'title',
+      'String?',
+      '',
       'Text that will be shown as box\'s heading.'
     ],
     [
-      'subtitle', 
+      'subtitle',
       'String',
-      '', 
+      '',
       'Text that will be shown after title in the middle of the box.'
     ],
   ],
     props: [
       [
-        'shouldShowToolTipImage', 
+        'shouldShowToolTipImage',
         'Bool',
-        'true', 
+        'true',
         'Flag indicating tooltip image should be shown.'
       ],
       [
-        'link', 
-        '(title: String, action: () -> Void)?', 
-        'nil', 
+        'link',
+        '(title: String, action: () -> Void)?',
+        'nil',
         'Tuple that will provide a title and an action for creating a link view below subtitle. <br />Passing `nil` will skip adding link view.'
       ],
       [
-        'button', 
-        'Warp.Button?', 
-        'nil', 
+        'button',
+        'Warp.Button?',
+        'nil',
         'A button view below link. <br />Passing `nil` will skip adding button view.'
       ],
     ],
@@ -3316,31 +3372,31 @@ export const iOS = {
   Broadcast: {
     required: [
     [
-      'text', 
+      'text',
       'String',
-      '', 
+      '',
       'Text that will be shown in the broadcast'
     ],
     [
-      'broadcastEdge', 
+      'broadcastEdge',
       'Warp.BroadcastEdge',
-      '', 
+      '',
       'Edge from where the broadcast is presented.<br />Use one of the predefined `BroadcastEdge` values: `.top`, or `.bottom`'
     ],
     [
-      'isPresented', 
-      'Binding Bool', 
-      '', 
+      'isPresented',
+      'Binding Bool',
+      '',
       'Binding to a boolean value that allows the broadcast to control dismissal'
     ],
   ],
     props: [
       [
-        'isDismissable', 
-        'Bool', 
-        'true', 
+        'isDismissable',
+        'Bool',
+        'true',
         'Determines if dismissable by the user or not. Will add a close button.'
-      ],  
+      ],
     ],
   },
   Button: {
@@ -3406,23 +3462,23 @@ export const iOS = {
   ButtonGroup: {
     required: [
     [
-      'buttons', 
-      'Binding<[(title: String, isSelected: Bool)]>', 
-      '', 
+      'buttons',
+      'Binding<[(title: String, isSelected: Bool)]>',
+      '',
       'A binding to an array of tuples representing each button\'s title and selection state.'
     ],
   ],
-    props: [  
+    props: [
       [
-        'singleSelect', 
+        'singleSelect',
         'Bool',
-        'false', 
+        'false',
         'Specifies the selection behavior. If `true`, only one button can be selected at a time. If `false`, multiple buttons can be selected.',
       ],
       [
-        'onSelectionChange', 
+        'onSelectionChange',
         '(([(String, Bool)]) -> Void)?',
-        'nil', 
+        'nil',
         'An optional closure that receives the updated button array whenever the selection changes.',
       ],
     ],
@@ -3430,47 +3486,47 @@ export const iOS = {
   ButtonPill: {
     required: [
     [
-      'type', 
-      'Warp.ButtonPillType', 
-      '', 
+      'type',
+      'Warp.ButtonPillType',
+      '',
       'The type of the button (`flat` or `overlay`).'
     ],
     [
-      'selected', 
-      'Binding Bool', 
-      '', 
+      'selected',
+      'Binding Bool',
+      '',
       'A binding to the selected state of the button.'
     ],
   ],
-    props: [  
+    props: [
     ],
   },
   Callout: {
     required: [
     [
-      'title', 
-      'String', 
-      '', 
+      'title',
+      'String',
+      '',
       'The text to be displayed'
     ],
   ],
-    props: [  
+    props: [
       [
-        'size', 
+        'size',
         'Warp.CalloutSize',
-        '.default', 
+        '.default',
         'The size of the Callout.<br />Use one of the predefined `CalloutSize` values: `.default`, or `.small`.'
       ],
       [
-        'type', 
+        'type',
         'Warp.CalloutType',
-        '.inline', 
+        '.inline',
         'The type of the Callout.<br />Use one of the predefined `CalloutType` values: `.inline`, or `.popover`.<br /> Popover accepts an optional onClose action, which will display a close button.'
       ],
       [
-        'arrowEdge', 
+        'arrowEdge',
         'Edge',
-        '.top', 
+        '.top',
         'The direction of the arrow.<br />Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing`'
       ],
     ],
@@ -3478,53 +3534,53 @@ export const iOS = {
   Checkbox: {
     required: [
     [
-      'options', 
-      'Binding<[Option]>', 
-      '', 
+      'options',
+      'Binding<[Option]>',
+      '',
       'The array of options that conform to `CheckboxOption`. This will provide `isSelected`, `label` and optional `extraContent` of `Checkbox`.'
     ],
     [
-      'action', 
-      '@escaping () -> Void', 
-      '', 
+      'action',
+      '@escaping () -> Void',
+      '',
       'A closure that is executed when the `checkbox` is tapped. This can be mapped into the `onSelection` on `CheckboxGroup`'
     ],
   ],
-    props: [  
+    props: [
       [
-        'title', 
+        'title',
         'String?',
-        'nil', 
+        'nil',
         'An optional title for the `CheckboxGroup`.'
       ],
       [
-        'helpText', 
+        'helpText',
         'String?',
-        'nil', 
+        'nil',
         'An optional help text displayed below the `CheckboxGroup`.'
       ],
       [
-        'style', 
+        'style',
         'Warp.CheckboxStyle',
-        '.default', 
+        '.default',
         'The style of the `CheckboxGroup` which will be passed to the style of each `Checkbox`.<br />Use one of the predefined `CheckboxStyle` values: `.default`, `.error`, or `.disabled`'
       ],
       [
-        'axis', 
+        'axis',
         'Axis.Set',
-        '.vertical', 
+        '.vertical',
         'Determines whether the list of checkboxes is aligned vertically or horizontally.<br />Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`.'
       ],
       [
-        'onSelection', 
+        'onSelection',
         '((Option, [Option]) -> Void)?',
-        'nil', 
+        'nil',
         'A closure that will be triggered when an option is selected, providing the latest selected option and the updated list of options.'
       ],
       [
-        'extraContent', 
+        'extraContent',
         'AnyView?',
-        'nil', 
+        'nil',
         'An optional view that will be displayed beside the label. This is only for `Checkbox` and can be passed from the `Options` in `CheckboxGroup`.'
       ],
     ],
@@ -3532,41 +3588,41 @@ export const iOS = {
   Expandable: {
     required: [
       [
-        'style', 
+        'style',
         'Warp.ExpandableStyle',
-        '', 
+        '',
         'The style of the `Expandable`. <br />Use one of the predefined `ExpandableStyle` values: `.default`, `.box`, or `.boxBleed`'
       ],
       [
-        'title', 
+        'title',
         'String',
-        '', 
+        '',
         'The title for the top sticky part of the `Expandable`'
       ],
     ],
-    props: [  
+    props: [
       [
-        'expandableView', 
+        'expandableView',
         'View',
-        '', 
+        '',
         'The view for the bottom hidden part of the `Expandable`. Either this or `subtitle` needs to be provided.'
       ],
       [
-        'subtitle', 
+        'subtitle',
         'String',
-        '', 
+        '',
         'The subtitle for the bottom hidden part of the `Expandable`. Either this or `expandableView` needs to be provided.'
       ],
       [
-        'isAnimated', 
+        'isAnimated',
         'Bool',
-        'true', 
+        'true',
         'Determines if the `Expandable` will expand and collapse with animation'
       ],
       [
-        'isExpanded', 
+        'isExpanded',
         'Bool',
-        'false', 
+        'false',
         'Controls the state of the `Expandable`'
       ],
     ],
@@ -3582,15 +3638,15 @@ export const iOS = {
   ],
     props: [
       [
-        'size', 
-        'Warp.IconSize', 
-        '.default', 
+        'size',
+        'Warp.IconSize',
+        '.default',
         'The size of the icon (`.small`, `.default`, `.large`, or `.custom`).'
       ],
       [
-        'color', 
+        'color',
         'Color',
-        'Warp.Token.icon', 
+        'Warp.Token.icon',
         'The color of the icon.'
       ],
     ],
@@ -3598,119 +3654,119 @@ export const iOS = {
   Modal: {
     required: [
     [
-      'title', 
+      'title',
       'String',
-      '', 
+      '',
       'The main title text to be displayed.'
     ],
     [
-      'bodyText', 
+      'bodyText',
       'String',
-      '', 
+      '',
       'The main body text content of the modal.'
     ],
     [
-      'isPresented', 
-      'Binding Bool', 
-      '', 
+      'isPresented',
+      'Binding Bool',
+      '',
       'A binding to control the visibility of the modal.'
     ],
   ],
     props: [
       [
-        'subtitle', 
-        'String?', 
-        'nil', 
+        'subtitle',
+        'String?',
+        'nil',
         'An optional subtitle text to provide additional context or information.'
       ],
       [
-        'primaryButton', 
+        'primaryButton',
         '(title: String, action: () -> Void)?',
-        'nil', 
+        'nil',
         'An optional provider for defining the primary button.'
       ],
       [
-        'secondaryButton', 
-        '(title: String, action: () -> Void)?',  
-        'nil', 
+        'secondaryButton',
+        '(title: String, action: () -> Void)?',
+        'nil',
         'An optional provider for defining the secondary button.'
       ],
       [
-        'hasCloseButton', 
-        'Bool', 
-        'false', 
+        'hasCloseButton',
+        'Bool',
+        'false',
         'A Boolean value indicating whether a close button should be shown.'
       ],
       [
-        'dismissOnClickOutside', 
-        'Bool', 
-        'true', 
+        'dismissOnClickOutside',
+        'Bool',
+        'true',
         'Determines whether the component should be dismissed when the user clicks outside of it.'
       ],
       [
-        'onDismiss', 
-        '(() -> Void)?', 
-        'nil', 
+        'onDismiss',
+        '(() -> Void)?',
+        'nil',
         'Action to be executed when the Modal is dismissed, either by pressing the Close button or by clicking outside the Modal.'
-      ]  
+      ]
     ],
   },
   PageIndicator: {
     required: [
     [
-      'pageCount', 
-      'Int', 
-      '', 
+      'pageCount',
+      'Int',
+      '',
       'The total number of pages.'
     ],
     [
-      'selectedPage', 
-      'Binding Int', 
-      '', 
+      'selectedPage',
+      'Binding Int',
+      '',
       'Binding to an integer representing the currently selected page.'
     ],
   ],
-    props: [  
+    props: [
     ],
   },
   Pill: {
     required: [
     [
       'text',
-      'String', 
+      'String',
       '',
       'The text to be displayed on the pill',
     ],
   ],
     props: [
       [
-        'icon', 
+        'icon',
         'Warp.Icon?',
-        'nil', 
+        'nil',
         'Pill icon. If you provide `onClose` then the Pill will have a close button instead of this icon.'
       ],
       [
-        'onTap', 
+        'onTap',
         '() -> Void',
-        '{}', 
+        '{}',
         'The action that will trigger on pill tap.'
       ],
       [
-        'onClose', 
+        'onClose',
         '(() -> Void)?',
-        'nil', 
+        'nil',
         'If added will show a close button and replace any provided icon, and the action will trigger on pill close.'
       ],
       [
-        'iconContentDescription', 
+        'iconContentDescription',
         'String?',
-        'nil', 
+        'nil',
         'The content description of the icon. Used for accessibility purposes. If not provided and we have `onClose` the default accessibility text is `Close` and for the `Warp.Icon` it is the accessibility of the icon.'
       ],
       [
-        'style', 
+        'style',
         'Warp.PillStyle ',
-        '.filter', 
+        '.filter',
         'The style of the pill (`.filter`, `.suggestion`)'
       ],
     ],
@@ -3718,59 +3774,59 @@ export const iOS = {
   Radio: {
     required: [
       [
-        'selectedOption', 
-        'Binding Option', 
-        '', 
+        'selectedOption',
+        'Binding Option',
+        '',
         'A binding to the currently selected option. This will provide `isSelected` of `Radio`.'
       ],
       [
-        'options', 
-        '[Option]', 
-        '', 
+        'options',
+        '[Option]',
+        '',
         'The array of options that conform to `RadioOption`. This will provide `label` and optional `extraContent` of `Radio`.'
       ],
       [
-        'action', 
-        '@escaping () -> Void', 
-        '', 
+        'action',
+        '@escaping () -> Void',
+        '',
         'A closure that is executed when the `radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup`'
       ],
     ],
-    props: [  
+    props: [
       [
-        'title', 
+        'title',
         'String?',
-        'nil', 
+        'nil',
         'An optional title for the `RadioGroup`.'
       ],
       [
-        'helpText', 
+        'helpText',
         'String?',
-        'nil', 
+        'nil',
         'An optional help text displayed below the `RadioGroup`.'
       ],
       [
-        'style', 
+        'style',
         'Warp.RadioStyle',
-        '.default', 
+        '.default',
         'The style of the `RadioGroup` which will be passed to the style of each `Radio`.<br />Use one of the predefined `RadioStyle` values: `.default`, `.error`, or `.disabled`'
       ],
       [
-        'axis', 
+        'axis',
         'Axis.Set',
-        '.vertical', 
+        '.vertical',
         'Determines whether the list of radios is aligned vertically or horizontally.<br />Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`.'
       ],
       [
-        'onSelection', 
+        'onSelection',
         '((Option, Option) -> Void)?',
-        'nil', 
+        'nil',
         'A closure that will be triggered when an option is selected, providing the old and newly selected options.'
       ],
       [
-        'extraContent', 
+        'extraContent',
         'AnyView?',
-        'nil', 
+        'nil',
         'An optional view that will be displayed beside the label. This is only for `Radio` and can be passed from the `Options` in `RadioGroup`.'
       ],
     ],
@@ -3778,29 +3834,29 @@ export const iOS = {
   Slider: {
     required: [
       [
-        'value', 
-        'Binding Double', 
-        '', 
+        'value',
+        'Binding Double',
+        '',
         'Binding value to update the slider value'
       ],
       [
-        'range', 
-        'ClosedRange Double', 
-        '', 
+        'range',
+        'ClosedRange Double',
+        '',
         'Defines the range for the slider'
       ],
     ],
     props: [
       [
-        'step', 
+        'step',
         'Double',
-        '1.0', 
+        '1.0',
         'Step value for the slider'
       ],
       [
-        'onEditingChanged', 
+        'onEditingChanged',
         '((Double) -> Void)?',
-        'nil', 
+        'nil',
         'Completion handler to return the value when handle is dropped'
       ],
     ],
@@ -3810,21 +3866,21 @@ export const iOS = {
   ],
     props: [
       [
-        'size', 
+        'size',
         'Warp.SpinnerSize',
-        '.default', 
+        '.default',
         'Size of the `Spinner`.<br />Use one of the predefined `SpinnerSize` values: `.small`, `.default`, `.large`, or `.custom`.'
       ],
       [
-        'duration', 
+        'duration',
         'CGFloat',
-        '1', 
+        '1',
         'Duration of Spinner animation'
       ],
       [
-        'lineWidth', 
-        'CGFloat', 
-        '3', 
+        'lineWidth',
+        'CGFloat',
+        '3',
         'The thickness of the `Spinner`'
       ],
     ],
@@ -3832,17 +3888,17 @@ export const iOS = {
   StepIndicator: {
     required: [
     [
-      'stepModel', 
+      'stepModel',
       'Warp.StepIndicatorModel',
-      '', 
+      '',
       'An array of `Warp.StepIndicatorItem` objects which contains `title`, `description` and `progress` of the steps, the first two are strings and `progress` can be `incomplete`, `inProgress`, or `complete` with default value as `incomplete`.'
     ]
   ],
-    props: [  
+    props: [
       [
-        'layoutOrientation', 
+        'layoutOrientation',
         'LayoutOrientation',
-        '.vertical', 
+        '.vertical',
         'The orientation of the step indicator. <br />Use one of the predefined `LayoutOrientation` values: `.vertical`, or `.horizontal`.'
       ]
     ],
@@ -3850,17 +3906,17 @@ export const iOS = {
   Switch: {
     required: [
     [
-      'isOn', 
-      'Binding Bool', 
-      '', 
+      'isOn',
+      'Binding Bool',
+      '',
       'Binding to a Boolean value indicating whether the switch is on or off.'
     ],
   ],
     props: [
       [
-        'state', 
+        'state',
         'Warp.SwitchState',
-        '.default', 
+        '.default',
         'The state of the switch. <br />Use one of the predefined `SwitchState` values: `.default`, or `.disabled`',
       ],
     ],
@@ -3868,41 +3924,41 @@ export const iOS = {
   Tabs: {
     required: [
     [
-      'tabs', 
-      '[Warp.TabItem]', 
-      '', 
+      'tabs',
+      '[Warp.TabItem]',
+      '',
       'An array of `Warp.TabItem` objects to display as selectable tabs.'
     ],
     [
-      'selectedIndex', 
+      'selectedIndex',
       'Binding Int',
-      '', 
+      '',
       'A binding to the index of the currently selected tab.',
     ],
   ],
-    props: [  
+    props: [
     ],
   },
   Text: {
     required: [
     [
-      'text', 
-      'String', 
-      '', 
+      'text',
+      'String',
+      '',
       'The text to be displayed'
     ],
     [
-      'style', 
+      'style',
       'Warp.TextStyle',
-      '', 
+      '',
       'Sets the appearance of the text - font and size. <br />Use one of the predefined `TextStyle` values: `.display`, `.title1`, `.title2`, `.title3`, `.title4`, `.title5`, `.title6`, `.preamble`, `.body`, `.bodyStrong`, `.caption`, `.captionStrong`, `.detail`, or `.detailStrong`',
     ],
   ],
-    props: [  
+    props: [
       [
-        'color', 
-        'Color', 
-        'Warp.Token.text', 
+        'color',
+        'Color',
+        'Warp.Token.text',
         'A solid color for the text.'
       ],
     ],
@@ -3910,53 +3966,53 @@ export const iOS = {
   TextArea: {
     required: [
       [
-        'text', 
-        'Binding String', 
-        '', 
+        'text',
+        'Binding String',
+        '',
         'Binding to the text content.'
       ],
     ],
     props: [
       [
-        'title', 
-        'String', 
-        'empty', 
+        'title',
+        'String',
+        'empty',
         'The main title text to display.'
       ],
       [
-        'additionalInformation', 
+        'additionalInformation',
         'String?',
-        'nil', 
+        'nil',
         'Optional text to display after the title.'
       ],
       [
-        'tooltipContent', 
+        'tooltipContent',
         'AnyView?',
-        'nil', 
+        'nil',
         'An optional view to display when the tooltip icon is tapped.'
       ],
       [
-        'placeholder', 
-        'String', 
-        'empty', 
+        'placeholder',
+        'String',
+        'empty',
         'Text to display when the text area is empty.'
       ],
       [
-        'style', 
+        'style',
         'Warp.TextAreaStyle',
-        '.default', 
+        '.default',
         'The style of the text area. <br />Use one of the predefined `TextAreaStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly`'
       ],
       [
-        'helpText', 
+        'helpText',
         'String?',
-        'nil', 
+        'nil',
         'Optional `String` to display below the text area.'
       ],
       [
-        'minHeight', 
+        'minHeight',
         'CGFloat',
-        '88', 
+        '88',
         'Minimum height for the text area.'
       ],
     ],
@@ -3964,71 +4020,71 @@ export const iOS = {
   TextField: {
     required: [
       [
-        'text', 
-        'Binding String', 
-        '', 
+        'text',
+        'Binding String',
+        '',
         'Binding to the text content.'
       ],
     ],
     props: [
       [
-        'title', 
-        'String', 
-        'empty', 
+        'title',
+        'String',
+        'empty',
         'The main title text to display.'
       ],
       [
-        'additionalInformation', 
+        'additionalInformation',
         'String?',
-        'nil', 
+        'nil',
         'Optional text to display after the title.'
       ],
       [
-        'tooltipContent', 
+        'tooltipContent',
         'AnyView?',
-        'nil', 
+        'nil',
         'An optional view to display when the tooltip icon is tapped.'
       ],
       [
-        'leftIcon', 
+        'leftIcon',
         'Warp.Icon?',
-        'nil', 
+        'nil',
         'An optional `Warp.Icon` displayed on the left side of the text field.'
       ],
       [
-        'prefix', 
+        'prefix',
         'String?',
-        'nil', 
+        'nil',
         'An optional string displayed before the text input.'
       ],
       [
-        'placeholder', 
-        'String', 
-        'empty', 
+        'placeholder',
+        'String',
+        'empty',
         'Text to display when the text field is empty.'
       ],
       [
-        'suffix', 
-        'String?', 
-        'nil', 
+        'suffix',
+        'String?',
+        'nil',
         'An optional string displayed after the text input.'
       ],
       [
-        'rightIcon', 
-        'Warp.Icon?', 
-        'nil', 
+        'rightIcon',
+        'Warp.Icon?',
+        'nil',
         'An optional `Warp.Icon` displayed on the right side of the text field.'
       ],
       [
-        'style', 
+        'style',
         'Warp.TextFieldStyle',
-        '.default', 
+        '.default',
         'The style of the text field. <br />Use one of the predefined `TextFieldStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly`'
       ],
       [
-        'helpText', 
+        'helpText',
         'String?',
-        'nil', 
+        'nil',
         'Optional `String` to display below the text field.'
       ],
     ],
@@ -4042,21 +4098,21 @@ export const iOS = {
       'Sets the style and icon of the `Toast`.  <br />Use one of the predefined `ToastStyle` values: `.error`, `.success`, or `.warning`',
     ],
     [
-      'title', 
-      'String', 
-      '', 
+      'title',
+      'String',
+      '',
       'The title to be displayed in the `Toast`'
     ],
     [
-      'toastEdge', 
+      'toastEdge',
       'Warp.ToastEdge',
-      '', 
+      '',
       'The position of the toast to be displayed. <br />Use one of the predefined `ToastEdge` values: `.top`, or `.bottom`'
     ],
     [
-      'isPresented', 
-      'Binding Bool', 
-      '', 
+      'isPresented',
+      'Binding Bool',
+      '',
       'The binding to control the visibility'
     ],
   ],
@@ -4066,19 +4122,19 @@ export const iOS = {
   Tooltip: {
     required: [
       [
-        'title', 
-        'String', 
-        '', 
+        'title',
+        'String',
+        '',
         'The text to be displayed'
       ],
     ],
     props: [
       [
-        'arrowEdge', 
+        'arrowEdge',
         'Edge',
-        '.top', 
+        '.top',
         'The direction of the arrow. <br />Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing`'
-      ],  
+      ],
     ],
   },
 };

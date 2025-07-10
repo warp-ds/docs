@@ -155,7 +155,7 @@ html.dark body {
 }
 /* make the border stand out a touch more */
 .vp-doc h2 {
-  border-top-width: 2px;
+  border-top-width: 0px;
 }
 /* wasn't enough breathing room here, add some more */
 .vp-doc h4 {
@@ -171,7 +171,7 @@ html.dark body {
 /* make lists great again */
 .vp-doc ul, .vp-doc ol {
   margin-top: 8px;
-  padding-left: 16px; 
+  padding-left: 16px;
 }
 
 /* Ensure tables behave like tables and take full width */
@@ -185,6 +185,22 @@ html.dark body {
   overflow-x: auto;
   width: 100%;  /* Ensure the container itself takes up the full width */
 }
+.vp-doc kbd {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 0 2px;
+  font-size: 0.85em;
+  font-family: var(--vp-font-family-mono, monospace);
+  font-weight: normal;
+  line-height: 1.4;
+  background-color: var(--vp-c-bg-alt, #f4f4f4);
+  color: var(--vp-c-text-1, #1a1a1a);
+  border: 1px solid var(--vp-c-border, #ccc);
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 var(--vp-c-border, #bbb);
+  white-space: nowrap;
+}
+
 
 .line-through {
   text-decoration-line: line-through;
@@ -273,4 +289,13 @@ html.dark body {
 
 .VPHome {
   margin-bottom: 0px !important;
+}
+
+.beta-badge {
+    color: white;
+    background-color: #BE3830;
+    padding: 4px 8px;
+    margin: 0px 8px;
+    border-radius: 4px;
+    font-weight: bold;
 }

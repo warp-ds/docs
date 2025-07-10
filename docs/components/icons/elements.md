@@ -2,7 +2,7 @@
 Import Elements icons individually to optimize your JS bundle size by adding only the icons you need:
 
 ```js
-import "@warp-ds/icons/elements/components/alert-16";
+import "@warp-ds/icons/elements/alert-16";
 ```
 
 Don't import icons directly from the `@warp-ds/icons/elements` package, since this will add every Warp icon, and bloat your bundle.
