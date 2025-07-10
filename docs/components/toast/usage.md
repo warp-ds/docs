@@ -15,8 +15,8 @@ A toast is used for global notifications of small importance that are not critic
 
 ### When not to use
 
-- **For immediate attention:** If the notification requires users’ attention right away, consider using an [Alert](/components/alert.md) or [Modal](/components/modal.md) instead.
-- **For long-term global information:** If the notification conveys information that is relevant to all users or a group of users over a longer period, consider using an [Alert](/components/alert.md) instead.
+- **For immediate attention:** If the notification requires users’ attention right away, consider using an [Alert](../alert/index.md) or [Modal](../modal/index.md) instead.
+- **For long-term global information:** If the notification conveys information that is relevant to all users or a group of users over a longer period, consider using an [Alert](../alert/index.md) instead.
 
 ## Placement
 
