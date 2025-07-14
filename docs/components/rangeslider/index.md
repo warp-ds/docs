@@ -1,4 +1,9 @@
 <script setup>
+  import Overview from './overview.md';
+  import Styling from './styling.md';
+  import Usage from './usage.md';
+  import Dev from './code.md';
+  import Accessibility from './accessibility.md';
   import data from './data.json';
   import Android from './android.md';
   import { mapFrameworkStatuses } from '../utils.js';
@@ -8,24 +13,23 @@
 
 {{ data.description }}
 
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
-
-## Examples
-<ThemeSwitcher />
-<rangeslider-example />
-
-## Usage
-
-
-<component-design-guidelines name="Warp - Components / Range Slider" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=377-23902&mode=design" />
-
+<tabs-content variant="main">
+  <template #Overview>
+    <overview />
+  </template>
+  <template #Usage>
+    <usage />
+  </template>
+  <template #Styling>
+    <styling />
+  </template>
+  <template #Code>
+    <dev />
+  </template>
+  <template #Accessibility>
+    <accessibility />
+  </template>
+</tabs-content>
 
 <component-questions />
 
-## Frameworks
-
-<tabs-content>
-  <template #android>
-    <android />
-  </template>
-</tabs-content>

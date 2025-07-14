@@ -436,6 +436,27 @@ export const react = {
       ['onDismiss', '() => void', '', 'Called when user clicks the close button or presses Escape when the button is in focus.'],
     ],
   },
+  RangeSlider: {
+    required: [
+      ['label', 'ReactNode', '', 'Label for the range slider'],
+      ['value', 'number', '', `The current values`],
+    ],
+    props: [
+      ['max', 'number', '100', 'The greatest value in the range of permitted values'],
+      ['min', 'number', '0', 'The lowest value in the range of permitted values'],
+      ['step', 'number', '1', 'Specifies the value granularity'],
+      ['showMarks', 'boolean', 'true', 'Whether to show marks on the slider'],
+      ['disabled', 'boolean', 'false', 'Whether the slider is disabled'],
+      ['className', 'string', '', 'Additional classes to include for the container'],
+      ['aria-label', '[string, string]', '', 'String value for aria-label'],
+      ['aria-labelledby', '[string, string]', '', 'Identifies the element that labels the slider'],
+      ['aria-valuetext', '[string, string]', '', 'Human readable text alternative for the value'],
+    ],
+    events: [
+      [ 'onChange', '(value: [number, number]) => void', '', 'Handler that is called when the value of the slider has settled.'],
+      [ 'onInput', '(value: [number, number]) => void', '', 'Handler that is called every time the value of the slider changes.'],
+    ]
+  },
   Select: {
     required: [],
     props: [

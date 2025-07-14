@@ -630,7 +630,7 @@ export default defineConfig({
             { text: 'Popover', link: '/components/popover/' },
             { text: 'Radio', link: '/components/radio/' },
             { text: 'Radio buttons', link: '/components/radiobuttons/' },
-            { text: 'Range slider', link: '/components/rangeslider/' },
+            { text: 'Range slider <span class="beta-badge">Beta</span>', link: '/components/rangeslider/' },
             { text: 'Select', link: '/components/select/' },
             { text: 'Slider', link: '/components/slider/' },
             { text: 'Spinner', link: '/components/spinner/' },
