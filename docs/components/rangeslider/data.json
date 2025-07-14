@@ -1,11 +1,15 @@
 {
   "title": "Range Slider",
-  "description": "Range sliders allow users to choose a range within given values.",
+  "description": "Range sliders allow users to adjust minimum and maximum numeric values within a given range.",
   "category": "Forms",
   "placeholder": {
     "label": "Range slider component"
   },
   "frameworks": [
+    {
+      "name": "React",
+      "status": "released"
+    },
     {
       "name": "Android",
       "status": "released"
