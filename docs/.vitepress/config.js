@@ -621,7 +621,6 @@ export default defineConfig({
             { text: 'Icons <span class="beta-badge">Beta</span>', link: '/components/icons-beta/', items: [
               { text: 'Icons (legacy)', link: '/components/icons/' },
             ] },
-            
             { text: 'Link', link: '/components/link/' },
             { text: 'Modal', link: '/components/modal/' },
             { text: 'PageIndicator', link: '/components/pageindicator/' },
@@ -632,7 +631,9 @@ export default defineConfig({
             { text: 'Radio buttons', link: '/components/radiobuttons/' },
             { text: 'Range slider <span class="beta-badge">Beta</span>', link: '/components/rangeslider/' },
             { text: 'Select', link: '/components/select/' },
-            { text: 'Slider', link: '/components/slider/' },
+            { text: 'Slider <span class="beta-badge">Beta</span>', link: '/components/slider-beta/', items: [
+              { text: 'Slider (legacy)', link: '/components/slider/' },
+            ] },
             { text: 'Spinner', link: '/components/spinner/' },
             { text: 'Steps', link: '/components/steps/' },
             { text: 'Switch', link: '/components/switch/' },
