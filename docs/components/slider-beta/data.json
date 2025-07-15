@@ -1,0 +1,17 @@
+{
+  "title": "Slider",
+  "description": "Sliders allow users to adjust a numeric value within a given range.",
+  "category": "Forms",
+  "placeholder": {
+    "label": "Slider component"
+  },
+  "frameworks": [
+    {
+      "name": "React",
+      "status": "released"
+    },
+    {
+      "name": "Figma"
+    }
+  ]
+}

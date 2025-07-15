@@ -32,6 +32,7 @@ import RadioButtons from '../components/radiobuttons/Example.vue';
 import RangeSlider from '../components/rangeslider/Example.vue';
 import Select from '../components/select/Example.vue';
 import Slider from '../components/slider/Example.vue';
+import SliderBeta from '../components/slider-beta/Example.vue';
 import Spinner from '../components/spinner/Example.vue';
 import Steps from '../components/steps/Example.vue';
 import Switch from '../components/switch/Example.vue';
@@ -82,6 +83,7 @@ buildWc('radiobuttons-example', RadioButtons);
 buildWc('rangeslider-example', RangeSlider)
 buildWc('select-example', Select);
 buildWc('slider-example', Slider);
+buildWc('slider-beta-example', SliderBeta);
 buildWc('spinner-example', Spinner);
 buildWc('steps-example', Steps);
 buildWc('switch-example', Switch);
