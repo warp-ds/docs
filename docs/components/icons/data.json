@@ -1,9 +1,9 @@
 {
-  "title": "Icons",
+  "title": "Icons (Beta)",
   "description": "Warp's icon set is designed to help users understand actions and information, and to draw attention to elements.",
   "category": "Actions",
   "placeholder": {
-    "label": "Icons component"
+    "label": "Icons (Beta) component"
   },
   "frameworks": [
     {

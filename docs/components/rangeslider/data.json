@@ -1,9 +1,9 @@
 {
-  "title": "Range Slider",
+  "title": "Range Slider (Beta)",
   "description": "Range sliders allow users to adjust minimum and maximum numeric values within a given range.",
   "category": "Forms",
   "placeholder": {
-    "label": "Range slider component"
+    "label": "Range slider (Beta) component"
   },
   "frameworks": [
     {
