@@ -3,7 +3,7 @@
 You can import the component like so:
 
 ```js
-import { PageIndicator } from "@warp-ds/components";
+import { PageIndicator } from "@warp-ds/components/react/pageindicator";
 ```
 
 ### Syntax

@@ -24,3 +24,5 @@
     <accessibility />
   </template>
 </tabs-content>
+
+<component-questions />

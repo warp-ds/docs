@@ -1,6 +1,6 @@
 {
   "title": "Page indicator",
-  "description": "The page indicator shows the number of pages in a series and indicates which page is currently displayed.",
+  "description": "A page indicator shows the total amount of pages (or images) and the current page using dots.",
   "category": "Actions",
   "placeholder": {
     "label": "Page indicator component"
