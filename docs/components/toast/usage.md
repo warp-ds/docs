@@ -27,33 +27,33 @@ We do not recommend placing toasts in any other part of the viewport.
 :::image-block
 
 <div class="mx-16 flex flex-cols">
-<div class="flex-row">
+  <div class="flex-row">
 
 ![Example of toast placement at the bottom of the page](/components/toast/toast-placement-1.svg)
 
 ![Text: Viewport width](/components/toast/toast-placement-2.svg)
 
-</div>
-<div class="ml-16">
+  </div>
+  <div class="ml-16">
 
 ![Text: Viewport height](/components/toast/toast-placement-3.svg)
 
-</div>
+  </div>
 </div>
 :::
 
 :::image-block
 
-<div class="flex justify-between items-start gap-4 w-full">
-<div class="w-1/2">
+<div>
+  <div class="flex justify-center">
 
 ![Text: Example of toast](/components/toast/toast-position-1.svg)
 
-</div>
-<div class="w-1/2 justify-items-end">
+  </div>
+  <div>
 
 ![Example of toast position on FINN.no](/components/toast/toast-position-2.svg)
 
   </div>
-  </div>
+</div>
 :::

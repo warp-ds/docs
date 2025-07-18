@@ -641,7 +641,7 @@ export default defineConfig({
             { text: 'Text', link: '/components/text/' },
             { text: 'Text area', link: '/components/textarea/' },
             { text: 'Text field', link: '/components/textfield/' },
-            { text: 'Toast', link: '/components/toast/' },
+            { text: 'Toast <span class="beta-badge">Beta</span>', link: '/components/toast/' },
             { text: 'Tooltip', link: '/components/tooltip/' },
             { text: 'Utilities', link: '/components/utilities/' },
           ],
