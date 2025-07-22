@@ -1,6 +1,6 @@
 ## Behavior
 
-- Toasts automatically disappear after a predefined timeout of 5000 ms, 10000 ms or infinite (6000000 ms), depending on the context or the length of the message.
+- Toasts automatically disappear after a predefined timeout of 5000 ms ("short"), 10000 ms ("long") or "infinite" (6000000 ms), depending on the context or the length of the message.
 - When appropriate, and if the message isn’t critical, the toast can also be dismissed manually using the close button.
 - Toasts have a minimum width of 328px, and a maximum width of 420px to maintain readability on wide viewports.
 
@@ -25,35 +25,11 @@ Toast notifications are positioned at the bottom centre of the screen, 16px abov
 We do not recommend placing toasts in any other part of the viewport.
 
 :::image-block
-
-<div class="mx-16 flex flex-cols">
-<div class="flex-row">
-
-![Example of toast placement at the bottom of the page](/components/toast/toast-placement-1.svg)
-
-![Text: Viewport width](/components/toast/toast-placement-2.svg)
-
-</div>
-<div class="ml-16">
-
-![Text: Viewport height](/components/toast/toast-placement-3.svg)
-
-</div>
-</div>
+![Example of toast placement at the bottom of the page on mobile](/components/toast/toast-placement-1.svg)
 :::
 
 :::image-block
-
-<div class="flex justify-between items-start gap-4 w-full">
-<div class="w-1/2">
-
 ![Text: Example of toast](/components/toast/toast-position-1.svg)
-
-</div>
-<div class="w-1/2 justify-items-end">
-
+<br />
 ![Example of toast position on FINN.no](/components/toast/toast-position-2.svg)
-
-  </div>
-  </div>
 :::
