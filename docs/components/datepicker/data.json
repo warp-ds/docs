@@ -1,9 +1,9 @@
 {
-  "title": "Date picker",
+  "title": "Date picker (Beta)",
   "description": "A date picker allows the user to select a specific calendar date.",
   "category": "Form",
   "placeholder": {
-    "label": "Date Picker component"
+    "label": "Date Picker (Beta) component"
   },
   "frameworks": [
     {
