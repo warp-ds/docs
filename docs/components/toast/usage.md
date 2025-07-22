@@ -25,35 +25,11 @@ Toast notifications are positioned at the bottom centre of the screen, 16px abov
 We do not recommend placing toasts in any other part of the viewport.
 
 :::image-block
-
-<div class="mx-16 flex flex-cols">
-  <div class="flex-row">
-
-![Example of toast placement at the bottom of the page](/components/toast/toast-placement-1.svg)
-
-![Text: Viewport width](/components/toast/toast-placement-2.svg)
-
-  </div>
-  <div class="ml-16">
-
-![Text: Viewport height](/components/toast/toast-placement-3.svg)
-
-  </div>
-</div>
+![Example of toast placement at the bottom of the page on mobile](/components/toast/toast-placement-1.svg)
 :::
 
 :::image-block
-
-<div>
-  <div class="flex justify-center">
-
 ![Text: Example of toast](/components/toast/toast-position-1.svg)
-
-  </div>
-  <div>
-
+<br />
 ![Example of toast position on FINN.no](/components/toast/toast-position-2.svg)
-
-  </div>
-</div>
 :::
