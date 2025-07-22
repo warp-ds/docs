@@ -9,6 +9,10 @@ import data from './data.json';
 import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
+The date picker consists of a text field and a popover calendar panel. It is designed to allow users to select a single date in a clean, accessible manner. The popover appears upon click/tap and closes on date selection or when the user clicks/taps outside the popover.
+
+Related components: [Text field](/components/textfield)
+
 ## Platform & Framework Support
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />

@@ -16,6 +16,8 @@
 | 4. Weekdays                    | **Color:** Semantic/Typography/Text/Default            |
 |                                | **Font-size:**  Semantic/Typography/Detail-Strong      |
 
+### Flat
+
 ::: image-block
 ![Example of the date picker calendar surrounded by four red highlights. The first points to the flat background. The second points to the calendar month and year. The third points to the left chevron button, to switch month and the fourth points to the weekdays.](/components/datepicker/styling-2.svg)
 :::
