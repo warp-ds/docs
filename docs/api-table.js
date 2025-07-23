@@ -4156,6 +4156,12 @@ export const iOS = {
     ],
   ],
     props: [
+      [
+        'duration',
+        'Warp.Toast.Duration.short <br /> Warp.Toast.Duration.long <br /> Warp.Toast.Duration.custom(interval:) ',
+        '.short',
+        'Duration the Toast is shown'
+      ],
     ],
   },
   Tooltip: {

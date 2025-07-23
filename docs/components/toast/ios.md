@@ -7,6 +7,7 @@ Warp.Toast(
     style: Warp.ToastStyle,
     title: String,
     toastEdge: Warp.ToastEdge,
+    duration: Duration = .short,
     isPresented: Binding<Bool>
 )
 ```
@@ -18,6 +19,7 @@ Warp.Toast(
     style: .success,
     title: "This is a toast",
     toastEdge: .top,
+    duration: .short,
     isPresented: .constant(true)
 )
 
@@ -25,6 +27,7 @@ Warp.Toast(
     style: .success,
     title: "This is a toast",
     toastEdge: .top,
+    duration: .short,
     isPresented: .constant(true)
 )
 ```
@@ -46,6 +49,23 @@ enum Warp.ToastStyle {
 enum Warp.ToastEdge {
     case top
     case bottom
+}
+```
+
+## Auto dismiss duration option - default: short
+
+```swift example
+enum Warp.Toast.Duration {
+    /// Short duration, typically used for quick feedback messages.
+    /// Default is 5 seconds.
+    case short
+    /// Long duration, typically used for more significant messages that require user attention.
+    /// Default is 10 seconds.
+    case long
+    /// Infinite duration, typically used for messages that require user interaction to dismiss.
+    case infinite
+    /// Custom duration time interval
+    case custom(interval: TimeInterval)
 }
 ```
 
