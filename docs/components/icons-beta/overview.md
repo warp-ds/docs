@@ -8,6 +8,8 @@ import data from './data.json';
 import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
+## Platform & Framework Support
+
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 Our updated icon library is based on the Phosphor icon set, offering a flexible, modern foundation with over 9.000 icons.

@@ -621,7 +621,6 @@ export default defineConfig({
             { text: 'Icons <span class="beta-badge">Beta</span>', link: '/components/icons-beta/', items: [
               { text: 'Icons (legacy)', link: '/components/icons/' },
             ] },
-            
             { text: 'Link', link: '/components/link/' },
             { text: 'Modal', link: '/components/modal/' },
             { text: 'Page Indicator <span class="beta-badge">Beta</span>', link: '/components/pageindicator/' },
@@ -630,9 +629,11 @@ export default defineConfig({
             { text: 'Popover', link: '/components/popover/' },
             { text: 'Radio', link: '/components/radio/' },
             { text: 'Radio buttons', link: '/components/radiobuttons/' },
-            { text: 'Range slider', link: '/components/rangeslider/' },
+            { text: 'Range slider <span class="beta-badge">Beta</span>', link: '/components/rangeslider/' },
             { text: 'Select', link: '/components/select/' },
-            { text: 'Slider', link: '/components/slider/' },
+            { text: 'Slider <span class="beta-badge">Beta</span>', link: '/components/slider-beta/', items: [
+              { text: 'Slider (legacy)', link: '/components/slider/' },
+            ] },
             { text: 'Spinner', link: '/components/spinner/' },
             { text: 'Steps', link: '/components/steps/' },
             { text: 'Switch', link: '/components/switch/' },
@@ -640,7 +641,7 @@ export default defineConfig({
             { text: 'Text', link: '/components/text/' },
             { text: 'Text area', link: '/components/textarea/' },
             { text: 'Text field', link: '/components/textfield/' },
-            { text: 'Toast', link: '/components/toast/' },
+            { text: 'Toast <span class="beta-badge">Beta</span>', link: '/components/toast/' },
             { text: 'Tooltip', link: '/components/tooltip/' },
             { text: 'Utilities', link: '/components/utilities/' },
           ],

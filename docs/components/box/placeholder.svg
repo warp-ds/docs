@@ -1,1 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="154" height="76" fill="none" viewBox="0 0 154 76"><rect width="154" height="76" fill="var(--vp-c-svg2, #131B2D )" rx="4"/><circle cx="24" cy="24" r="8" fill="var(--vp-c-svg1, #FFFBD5 )"/><rect width="94" height="4" x="44" y="16" fill="var(--vp-c-svg1, #FFFBD5 )" rx="2"/><rect width="94" height="4" x="44" y="28" fill="var(--vp-c-svg3, #9EACC9 )" rx="2"/><rect width="94" height="4" x="44" y="40" fill="var(--vp-c-svg3, #9EACC9 )" rx="2"/><rect width="34" height="8" x="44" y="52" fill="var(--vp-c-svg1, #FFFBD5 )" rx="2"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="154" height="76" fill="none" viewBox="0 0 154 76">
+  <rect width="154" height="76" fill="var(--vp-c-svg2, #131B2D )" rx="4"/>
+  <circle cx="24" cy="24" r="8" fill="var(--vp-c-svg1, #FFFBD5 )"/>
+  <rect width="94" height="4" x="44" y="16" fill="var(--vp-c-svg1, #FFFBD5 )" rx="2"/>
+  <rect width="94" height="4" x="44" y="28" fill="var(--vp-c-svg3, #9EACC9 )" rx="2"/>
+  <rect width="94" height="4" x="44" y="40" fill="var(--vp-c-svg3, #9EACC9 )" rx="2"/>
+  <rect width="34" height="8" x="44" y="52" fill="var(--vp-c-svg1, #FFFBD5 )" rx="2"/>
+</svg>
