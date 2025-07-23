@@ -22,8 +22,8 @@ importers:
         specifier: 10.11.0
         version: 10.11.0(vue@3.4.37)
       '@warp-ds/components':
-        specifier: 1.0.0-beta.0
-        version: 1.0.0-beta.0(@lingui/core@5.2.0)(@lit/react@1.0.7(@types/react@19.1.8))(lit@3.3.0)
+        specifier: 1.0.0-beta.1
+        version: 1.0.0-beta.1(@lingui/core@5.2.0)(@lit/react@1.0.7(@types/react@19.1.8))(lit@3.3.0)
       '@warp-ds/css':
         specifier: 2.1.1
         version: 2.1.1(@warp-ds/uno@2.1.0(unocss@0.65.4(postcss@8.5.2)(rollup@4.34.7)(vite@5.3.5(sass@1.77.8))(vue@3.4.37)))
@@ -1068,8 +1068,8 @@ packages:
   '@vueuse/shared@10.11.1':
     resolution: {integrity: sha512-LHpC8711VFZlDaYUXEBbFBCQ7GS3dVU9mjOhhMhXP6txTV4EhYQg/KGnQuvt/sPAtoUKq7VVUnL6mVtFoL42sA==}
 
-  '@warp-ds/components@1.0.0-beta.0':
-    resolution: {integrity: sha512-v6fzzyLLUYsB6ZEVwy/6mHqqEBdfeQ1/PhnJCrmPMQ8ufuGULA36teqS3m9CU2HmACk18MhVvi7rOY2nQvlsNw==}
+  '@warp-ds/components@1.0.0-beta.1':
+    resolution: {integrity: sha512-ThhxIPCYFSc+IggQsaqndbT/cjWtanDTPnqEU2pD/W7b/8Jd5lys4DreLWPZqhyT6vKlmn7HdDmyS/Tfno1eQA==}
     peerDependencies:
       '@lingui/core': 5.x
       '@lit/react': ^1.0.3
@@ -2698,7 +2698,7 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@warp-ds/components@1.0.0-beta.0(@lingui/core@5.2.0)(@lit/react@1.0.7(@types/react@19.1.8))(lit@3.3.0)':
+  '@warp-ds/components@1.0.0-beta.1(@lingui/core@5.2.0)(@lit/react@1.0.7(@types/react@19.1.8))(lit@3.3.0)':
     dependencies:
       '@lingui/core': 5.2.0
       '@lit/react': 1.0.7(@types/react@19.1.8)
