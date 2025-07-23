@@ -2,45 +2,73 @@
 
 You can import the component like so:
 ```js
-import { Slider } from '@warp-ds/react';
-```
-
-or import it individually to optimize your JS bundle size by adding only the components you need:
-```js
-import { Slider } from '@warp-ds/react/components/slider'
-
+import { RangeSlider } from '@warp-ds/components/react/slider';
 ```
 
 ### Examples
 
 #### Enabled
-```js
-function Example() {
-  const [value, setValue] = React.useState(2_500_000);
-
+```jsx
+export const RangedSimple = () => {
+  const [value, setValue] = useState<[number, number]>([0, 100]);
+  
   return (
     <div>
-      <output>{value}</output>
-      <Slider
-        onChange={(value) => setValue(value)}
-        value={value}
-        min={1000}
-        max={10_000_000}
-        step={1000}
-      />
+        <RangeSlider
+          label="Pris"
+          onChange={setValue}
+          min={0}
+          max={100}
+          step={5}
+          value={value}
+          aria-label={['Fra kr', 'Til kr']}
+          aria-valuetext={[`${value[0]} kr`, `${value[1]} kr`]}
+        />
+        <div className="w-slider__input">
+          <TextField label="Min" value={value[0].toString()} onChange={(e) => setValue([+e.target.value, value[1]])} />
+          <TextField label="Max" value={value[1].toString()} onChange={(e) => setValue([value[0], +e.target.value])} />
+        </div>
     </div>
   );
-}
+};
 ```
 
 #### Disabled
 
 ```jsx
-<div>
-  <Slider aria-label="Disabled slider" value={50} disabled />
-</div>
+export const DisabledRanged = () => {
+  const [value, setValue] = useState<[number, number]>([1000000, 10000000]);
+
+  return (
+    <div>
+        <RangeSlider
+          label="Pris"
+          disabled
+          onChange={setValue}
+          min={1000000}
+          max={10000000}
+          step={50000}
+          value={value}
+        />
+        <div className="w-slider__input">
+          <TextField
+            label="Min"
+            disabled
+            value={value[0].toString()}
+            onChange={(e) => setValue([+e.target.value, value[1]])}
+          />
+          <TextField
+            label="Max"
+            disabled
+            value={value[1].toString()}
+            onChange={(e) => setValue([value[0], +e.target.value])}
+          />
+        </div>
+    </div>
+  );
+};
 ```
 
 ### Props
 
-<api-table type="react" component="Slider" />
+<api-table type="react" component="RangeSlider" />

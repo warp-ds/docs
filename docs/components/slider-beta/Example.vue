@@ -6,12 +6,12 @@
 import {createElement} from 'react'
 import {createRoot} from 'react-dom/client'
 import {onMounted, ref} from 'vue'
-import RangeSlider from './RangeSlider.jsx'
+import RegularSlider from './RegularSlider.jsx'
 
 const el = ref()
 
 onMounted(() => {
   const root = createRoot(el.value)
-  root.render(createElement(RangeSlider, {}, null))
+  root.render(createElement(RegularSlider, {}, null))
 })
 </script>

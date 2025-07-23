@@ -445,6 +445,27 @@ export const react = {
       ['onDismiss', '() => void', '', 'Called when user clicks the close button or presses Escape when the button is in focus.'],
     ],
   },
+  RangeSlider: {
+    required: [
+      ['label', 'ReactNode', '', 'Label for the range slider'],
+      ['value', '[number, number]', '', `The current values`],
+    ],
+    props: [
+      ['max', 'number', '100', 'The greatest value in the range of permitted values'],
+      ['min', 'number', '0', 'The lowest value in the range of permitted values'],
+      ['step', 'number', '1', 'Specifies the value granularity'],
+      ['showMarks', 'boolean', 'true', 'Whether to show marks on the slider'],
+      ['disabled', 'boolean', 'false', 'Whether the slider is disabled'],
+      ['className', 'string', '', 'Additional classes to include for the container'],
+      ['aria-label', '[string, string]', '', 'String value for aria-label'],
+      ['aria-labelledby', '[string, string]', '', 'Identifies the element that labels the slider'],
+      ['aria-valuetext', '[string, string]', '', 'Human readable text alternative for the value'],
+    ],
+    events: [
+      [ 'onChange', '(value: [number, number]) => void', '', 'Handler that is called when the value of the slider has settled.'],
+      [ 'onInput', '(value: [number, number]) => void', '', 'Handler that is called every time the value of the slider changes.'],
+    ]
+  },
   Select: {
     required: [],
     props: [
@@ -526,6 +547,27 @@ export const react = {
     ],
     events: [
       [ 'onChange', '(value: number) => void', '', 'Handler that is called when the value of the slider changes'],
+    ]
+  },
+  SliderBeta: {
+    required: [
+      ['label', 'ReactNode', '', 'Label for the slider'],
+      ['value', 'number', '', `The current value`],
+    ],
+    props: [
+      ['max', 'number', '100', 'The greatest value in the range of permitted values'],
+      ['min', 'number', '0', 'The lowest value in the range of permitted values'],
+      ['step', 'number', '1', 'Specifies the value granularity'],
+      ['showMarks', 'boolean', 'true', 'Whether to show marks on the slider'],
+      ['disabled', 'boolean', 'false', 'Whether the slider is disabled'],
+      ['className', 'string', '', 'Additional classes to include for the container'],
+      ['aria-label', 'string', '', 'String value for aria-label'],
+      ['aria-labelledby', 'string', '', 'Identifies the element that labels the slider'],
+      ['aria-valuetext', 'string', '', 'Human readable text alternative for the value'],
+    ],
+    events: [
+      [ 'onChange', '(value: number) => void', '', 'Handler that is called when the value of the slider has settled.'],
+      [ 'onInput', '(value: number) => void', '', 'Handler that is called every time the value of the slider changes.'],
     ]
   },
   Step: {
@@ -3785,14 +3827,20 @@ export const iOS = {
         '',
         'The array of options that conform to `RadioOption`. This will provide `label` and optional `extraContent` of `Radio`.'
       ],
+    ],
+    props: [
+      [
+        'label',
+        'String?',
+        'nil',
+        'An optional text label for the `Radio` button.'
+      ],
       [
         'action',
         '@escaping () -> Void',
         '',
-        'A closure that is executed when the `radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup`'
+        'A optional closure that is executed when the `Radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup`'
       ],
-    ],
-    props: [
       [
         'title',
         'String?',
