@@ -1,11 +1,15 @@
 {
   "title": "Page indicator",
-  "description": "Shows the number of pages in a series and indicates which page is currently on display.",
+  "description": "A page indicator shows the total amount of pages (or images) and the current page using dots.",
   "category": "Actions",
   "placeholder": {
     "label": "Page indicator component"
   },
   "frameworks": [
+    {
+      "name": "React",
+      "status": "released"
+    },
     {
       "name": "iOS",
       "status": "released"

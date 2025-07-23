@@ -623,7 +623,7 @@ export default defineConfig({
             ] },
             { text: 'Link', link: '/components/link/' },
             { text: 'Modal', link: '/components/modal/' },
-            { text: 'PageIndicator', link: '/components/pageindicator/' },
+            { text: 'Page indicator <span class="beta-badge">Beta</span>', link: '/components/pageindicator/' },
             { text: 'Pagination', link: '/components/pagination/' },
             { text: 'Pill', link: '/components/pill/' },
             { text: 'Popover', link: '/components/popover/' },
