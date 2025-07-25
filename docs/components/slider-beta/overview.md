@@ -3,7 +3,6 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-## Platform & Framework Support
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 ## Overview

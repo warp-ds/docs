@@ -7,6 +7,11 @@ const props = defineProps({
     default: 'unsupported',
     validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
   },
+  reactBeta: {
+    type: String,
+    default: 'unsupported',
+    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
+  },
   vue: {
     type: String,
     default: 'unsupported',
@@ -31,6 +36,7 @@ const props = defineProps({
 
 const frameworkStatus = computed(() => [
   { name: 'React', status: props.react },
+  { name: 'React-beta', status: props.reactBeta },
   { name: 'Vue', status: props.vue },
   { name: 'Elements', status: props.elements },
   { name: 'Android', status: props.android },

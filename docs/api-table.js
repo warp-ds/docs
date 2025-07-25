@@ -180,6 +180,51 @@ export const react = {
       ],
     ],
   },
+  ButtonBeta: {
+    required: [
+      ['children', 'ReactNode', '', 'The contents of the Button'],
+    ],
+    props: [
+      ['className', 'string', '', 'Additional classes to include'],
+      ['style', 'CSSProperties', '', 'CSS styles to inline on the component'],
+      [
+        'type',
+        '"button"|"submit"|"reset"',
+        'button',
+        'Button type, only applied when href is not set.',
+      ],
+      [
+        'variant',
+        "'primary' | 'secondary' | 'negative' | 'utility' | 'overlay' | 'overlayInverted' |'quiet'| 'negativeQuiet' | 'utilityQuiet'| 'overlayQuiet' | 'overlayInvertedQuiet' | 'link'",
+        '',
+        'Set the correct variant on the button.',
+      ],
+      [
+        'size',
+        "'small' | 'default'",
+        'default',
+        'Set the button to be either small or default size.',
+      ],
+      [
+        'loading',
+        'boolean',
+        'false',
+        'Set the button to look like it is in progress, can be combined with other button types. Can be combined with any button type.',
+      ],
+      [
+        'fullWidth',
+        'boolean',
+        'false',
+        "Sets the button's width to its parent's width. Useful especially on mobile when button should take full width.",
+      ],
+      [
+        'hasIconOnly',
+        'boolean',
+        '',
+        "Facilitate a round button for icon.",
+      ],
+    ],
+  },
   Callout: {
     required: [
       ['targetEl', 'MutableRefObject<unknown>', '', 'The reference container to which the Attention component is positioned relative to. Required if `highlight` but optional if `callout`.'],

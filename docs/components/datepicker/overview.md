@@ -13,8 +13,6 @@ The date picker consists of a text field and a popover calendar panel. It is des
 
 Related components: [Text field](../textfield/index.md)
 
-## Platform & Framework Support
-
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 ## Example

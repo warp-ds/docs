@@ -609,7 +609,7 @@ export default defineConfig({
             { text: 'Box', link: '/components/box/' },
             { text: 'Breadcrumbs', link: '/components/breadcrumbs/' },
             { text: 'Broadcast', link: '/components/broadcast/' },
-            { text: 'Button', link: '/components/buttons/' },
+            { text: 'Button <span class="beta-badge">Beta</span>', link: '/components/buttons/' },
             { text: 'Button group', link: '/components/buttongroup/' },
             { text: 'Button pill', link: '/components/buttonpill/' },
             { text: 'Callout', link: '/components/callout/'},

@@ -2,6 +2,7 @@
   import Vue from './vue.md';
   import Elements from './elements.md';
   import React from './react.md';
+  import ReactBeta from './react-beta.md';
   import Android from './android.md';
   import iOS from './ios.md';
   import data from './data.json';
@@ -31,6 +32,9 @@ icon, an `aria-label` prop must be provided for accessibility.
 ## Frameworks
 
 <tabs-content>
+  <template #react-beta>
+    <ReactBeta />
+  </template>
   <template #react>
     <react />
   </template>
