@@ -621,7 +621,7 @@ export default defineConfig({
             { text: 'Icons <span class="beta-badge">Beta</span>', link: '/components/icons-beta/', items: [
               { text: 'Icons (legacy)', link: '/components/icons/' },
             ] },
-            { text: 'Link', link: '/components/link/' },
+            { text: 'Link  <span class="beta-badge">Beta</span>', link: '/components/link/' },
             { text: 'Modal', link: '/components/modal/' },
             { text: 'Page indicator <span class="beta-badge">Beta</span>', link: '/components/pageindicator/' },
             { text: 'Pagination', link: '/components/pagination/' },

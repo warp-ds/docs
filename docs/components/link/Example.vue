@@ -1,10 +1,17 @@
-<script setup>
-  import { wButton } from '@warp-ds/vue';
-  import IconShare16 from '@warp-ds/icons/vue/share-16';
-</script>
-
 <template>
-  <div class="component flex flex-wrap gap-16">
-  <w-button link>Link</w-button>
-  </div>
+  <div class="component" ref="el"/>
 </template>
+
+<script setup>
+import {createElement} from 'react'
+import {createRoot} from 'react-dom/client'
+import {onMounted, ref} from 'vue'
+import Link from './Link.jsx'
+
+const el = ref()
+
+onMounted(() => {
+  const root = createRoot(el.value)
+  root.render(createElement(Link, {}, null))
+})
+</script>

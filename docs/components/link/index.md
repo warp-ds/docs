@@ -1,5 +1,6 @@
 <script setup>
   import Android from './android.md';
+  import React from './react.md';
   import data from './data.json';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
@@ -22,6 +23,9 @@
 ## Frameworks
 
 <tabs-content>
+  <template #react>
+    <react />
+  </template>
   <template #android>
     <android />
   </template>

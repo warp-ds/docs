@@ -6,8 +6,9 @@
     "label": "Toast component"
   },
   "frameworks": [
-    {"name": "React", 
-      "status": "released (BETA)"
+    {
+      "name": "React-beta",
+      "status": "released"
     },
     {
       "name": "Elements",

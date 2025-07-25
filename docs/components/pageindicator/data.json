@@ -7,7 +7,7 @@
   },
   "frameworks": [
     {
-      "name": "React",
+      "name": "React-beta",
       "status": "released"
     },
     {

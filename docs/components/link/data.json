@@ -1,6 +1,6 @@
 {
   "title": "Link",
-  "description": "Pre-defined styles provide a font and size.",
+  "description": "Link component to use when creating links that look like buttons.",
   "category": "Layout",
   "placeholder": {
     "label": "Link component"
@@ -8,6 +8,10 @@
   "frameworks": [
     {
       "name": "Android",
+      "status": "released"
+    },
+    {
+      "name": "React-beta",
       "status": "released"
     }
   ]
