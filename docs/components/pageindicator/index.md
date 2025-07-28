@@ -4,10 +4,7 @@
   import Styling from './styling.md';
   import Dev from './code.md';
   import Accessibility from './accessibility.md';
-  import React from './react.md';
-  import iOS from './ios.md';
   import data from './data.json';
-  import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
 # Page indicator - BETA

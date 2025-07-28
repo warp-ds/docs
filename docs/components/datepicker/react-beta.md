@@ -1,9 +1,11 @@
 ### Import
 
+<warp-react-beta-note />
+
 You can import the component like so:
 
 ```js
-import {Datepicker} from '@warp-ds/components/react/datepicker';
+import { Datepicker } from '@warp-ds/components/react/datepicker';
 ```
 
 ### Props

@@ -1,5 +1,7 @@
 ### Import
 
+<warp-react-beta-note />
+
 You can import the component like so:
 ```js
 import { RangeSlider } from '@warp-ds/components/react/slider';

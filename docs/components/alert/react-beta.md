@@ -1,9 +1,6 @@
 ### Import
 
-::: tip Note:
-This component is imported from the new components repository (**@warp-ds/components**),
-and is currently in **BETA** mode. If you encounter bugs or other issues, please report it to the WARP team: <br />[#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV).
-:::
+<warp-react-beta-note />
 
 You can import the component like so:
 ```js

@@ -1,5 +1,5 @@
 <script setup>
-import React from './react.md';
+import ReactBeta from './react-beta.md';
 import iOS from './ios.md';
 import data from './data.json';
 </script>
@@ -7,8 +7,8 @@ import data from './data.json';
 ## Frameworks
 
 <tabs-content>
-  <template #react>
-   <react />
+  <template #react-beta>
+   <react-beta />
   </template>
   <template #iOS>
     <iOS />

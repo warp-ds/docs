@@ -2,6 +2,8 @@
 
 ### Import
 
+<warp-react-beta-note />
+
 You can import the component like so:
 
 ```js

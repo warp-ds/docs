@@ -19,6 +19,7 @@ import 'uno.css';
 import warpThemeSwitcher from "../warp-theme-switcher.js";
 import Card from "../Card.vue";
 import Cards from "../Cards.vue";
+import WarpReactBetaNote from '../WarpReactBetaNote.vue';
 
 export default {
   ...DefaultTheme,
@@ -43,5 +44,6 @@ export default {
     app.component('IconStarFull32', IconStarFull32);
     app.component('Cards', Cards);
     app.component('Card', Card);
+    app.component('WarpReactBetaNote', WarpReactBetaNote);
   },
 };
