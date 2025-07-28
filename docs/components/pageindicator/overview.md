@@ -1,5 +1,5 @@
 <script setup>
-  import React from './react.md';
+  import ReactBeta from './react-beta.md';
   import iOS from './ios.md';
   import data from './data.json';
   import { mapFrameworkStatuses } from '../utils.js';

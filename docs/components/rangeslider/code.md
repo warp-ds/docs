@@ -1,5 +1,5 @@
 <script setup>
-  import React from './react.md';
+  import ReactBeta from './react-beta.md';
   import Android from './android.md';
 </script>
 
@@ -10,8 +10,8 @@
 ## Frameworks
 
 <tabs-content>
-  <template #react>
-    <react />
+  <template #react-beta>
+    <react-beta />
   </template>
   <template #android>
     <android />

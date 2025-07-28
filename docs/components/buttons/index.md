@@ -33,7 +33,7 @@ icon, an `aria-label` prop must be provided for accessibility.
 
 <tabs-content>
   <template #react-beta>
-    <ReactBeta />
+    <react-beta />
   </template>
   <template #react>
     <react />

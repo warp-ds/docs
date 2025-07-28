@@ -1,6 +1,6 @@
 <script setup>
   import Android from './android.md';
-  import React from './react.md';
+  import ReactBeta from './react-beta.md';
   import data from './data.json';
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
@@ -23,8 +23,8 @@
 ## Frameworks
 
 <tabs-content>
-  <template #react>
-    <react />
+  <template #react-beta>
+    <react-beta />
   </template>
   <template #android>
     <android />

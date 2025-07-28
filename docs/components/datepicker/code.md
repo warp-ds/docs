@@ -1,5 +1,5 @@
 <script setup>
-import React from './react.md';
+import ReactBeta from './react-beta.md';
 import data from './data.json';
 import { mapFrameworkStatuses } from '../utils.js';
 </script>
@@ -7,7 +7,7 @@ import { mapFrameworkStatuses } from '../utils.js';
 ## Frameworks
 
 <tabs-content>
-  <template #react>
-    <react />
+  <template #react-beta>
+    <react-beta />
   </template>
 </tabs-content>
