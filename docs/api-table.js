@@ -19,7 +19,7 @@ export const react = {
         'type',
         "'negative' | 'positive' | 'warning' | 'info'",
         'undefined',
-        `Type of Alert`,
+        'Type of Alert',
       ],
     ],
     props: [
@@ -30,10 +30,43 @@ export const react = {
         'style',
         'string',
         'undefined',
-        `Additional CSS styles for the container`,
+        'Additional CSS styles for the container',
       ],
     ],
   },
+  AlertBeta: {
+    required: [
+      [
+        'type',
+        "'negative' | 'positive' | 'warning' | 'info'",
+        'undefined',
+        'Type of Alert',
+      ],
+      [
+        'children',
+        'React.ReactNode',
+        'undefined',
+        'Content to render inside the alert',
+      ],
+    ],
+    props: [
+      ['show', 'boolean', 'undefined', 'Controls when the alert shows'],
+      ['role', 'string', 'alert', 'ARIA live region "role" attribute value'],
+      ['className', 'string', 'undefined', 'Additional classes to include'],
+      [
+        'style',
+        'React.CSSProperties',
+        'undefined',
+        'Additional CSS styles for the container',
+      ],
+      [
+        'id',
+        'string',
+        'undefined',
+        'Used to uniquely identify the alert — for ARIA attributes or other DOM interactions',
+      ],
+    ],
+},
   Badge: {
     required: [],
     props: [
