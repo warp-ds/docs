@@ -604,7 +604,7 @@ export default defineConfig({
           text: 'Components',
           items: [
             { text: 'Component overview', link: '/components/' },
-            { text: 'Alert', link: '/components/alert/' },
+            { text: 'Alert <span class="beta-badge">Beta</span>', link: '/components/alert/' },
             { text: 'Badge', link: '/components/badge/' },
             { text: 'Box', link: '/components/box/' },
             { text: 'Breadcrumbs', link: '/components/breadcrumbs/' },
