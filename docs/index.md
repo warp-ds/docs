@@ -58,7 +58,7 @@ const cardData = {
 <div class="VPHero has-image VPHomeHero">
   <div class="container">
     <div class="main">
-      <h1 class="name"><span class="clip">The design system for Schibsted Marketplaces</span></h1>
+      <h1 class="name"><span class="clip">The design system for Vend</span></h1>
       <p class="tagline">Design, build and ship coherent experience with WARP</p>
       <div class="actions">
         <div class="action">
@@ -115,7 +115,6 @@ const cardData = {
       <span class="vpi-arrow-right link-text-icon"></span>
     </a>
   </div>
-
 
   <div class="banner-icon-column">
       <img src="/get-in-touch-icon.svg" alt="Get in touch icon" class="banner-icon"/>
