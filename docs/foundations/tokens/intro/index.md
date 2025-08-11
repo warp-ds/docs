@@ -1,27 +1,30 @@
 # Tokens
+
 Design tokens serve as the definitive source for naming and storing visual properties, such as such as colours, typography, spacing, and other style attributes.
 
 By defining design tokens, we establish a common language that can be easily translated and applied across different brands, ensuring a cohesive and harmonious user experience.
 
 ## Supported brands
+
 WARP is supporting multiple Schibsted Marketplace brands, we’re currently working on adding more brands and support for each brand.
 
-<!--- 
-TODO
-Add token support status on brands: https://nmp-jira.atlassian.net/browse/WARP-591
-(dtalakoubi404 - Sep 30 2024)
--->
+| Brand                                        | Figma   | Web     | iOS     | Android |
+| -------------------------------------------- | ------- | ------- | ------- | ------- |
+| FINN                                         | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| Tori                                         | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| DBA                                          | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| Blocket                                      | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| Bilbasen                                     | TBA ⌛  | TBA ⌛  | TBA ⌛  | TBA ⌛  |
+| Oikotie                                      | TBA ⌛  | TBA ⌛  | TBA ⌛  | TBA ⌛  |
+| Neutral <span class="beta-badge">Beta</span> | Live ✅ | Live ✅ | TBA ⌛  | Live ✅ |
+| Vend <span class="beta-badge">Beta</span>    | Live ✅ | Live ✅ | TBA ⌛  | Live ✅ |
 
-| Brand       | Figma       | Web         | iOS         | Android     |
-| ----------- | ----------- | ----------- | ----------- | ----------- |   
-| FINN        | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
-| Tori        | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
-| DBA         | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
-| Blocket     | Live ✅     | Live ✅     | Live ✅     | Live ✅     |
-| Bilbasen    | TBA ⌛      | TBA ⌛      | TBA ⌛      | TBA ⌛      |
-| Oikotie     | TBA ⌛      | TBA ⌛      | TBA ⌛      | TBA ⌛      |
+::: tip Note
+The Vend and Neutral themes are available in Warp and open for testing, but they’re still in beta—please do not use them in production for now. For more information, [read this communication](https://sch-chat.slack.com/archives/C05ET166B42/p1744625736206399).
+:::
 
 ## Semantic colour tokens
+
 Semantic tokens are not connected to any specific component and can be used to create custom designs that are still multi-brand friendly.
 
 If you are building a component that doesn’t exist in WARP you can still use semantic tokens and get support for dark mode and all other SMP brands for free.
