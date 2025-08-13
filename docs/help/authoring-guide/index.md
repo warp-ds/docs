@@ -1,4 +1,4 @@
-# 💾 Markdown Cheat Sheet for Warp Docs
+# Markdown Cheat Sheet for Warp Docs
 
 This guide is for designers, content editors, and anyone writing documentation in Warp's VitePress-based system. It shows what you can do in Markdown, with optional Vue components and styling extensions.
 
@@ -17,56 +17,93 @@ This guide is for designers, content editors, and anyone writing documentation i
 | Tables        |                                                     | Create simple data tables, SEE Example further down |
 | Blockquote    | `> This is a tip or note`                           | Use for callouts or tips                            |
 
+---
 
 ### Full Examples
 
 #### Headings
-
 ```md
-# Heading 1
-## Heading 2
-### Heading 3
+# Heading lvl 1
+## Heading lvl 2
+### Heading lvl3
 ```
 
-#### Lists
+---
+
+#### Bullet list
+- Apple
+- Banana
+- Cherry
 
 ```md
 - Apple
 - Banana
 - Cherry
+```
 
+#### Numbered list
+1. First step
+2. Second step
+3. Final step
+
+```md
 1. First step
 2. Second step
 3. Final step
 ```
 
+---
+
 #### Links
+[Visit Warp DS](https://warp-ds.dev)
 
 ```md
 [Visit Warp DS](https://warp-ds.dev)
 ```
 
+---
+
 #### Images
 
+![THE Warp](/images/la01.jpg)
+
 ```md
-![Warp Logo](https://warp-ds.dev/logo.png)
+![THE Warp](/images/la01.jpg)
 ```
 
+---
+
 #### Inline Code
+
+To declare a variable: `const x = 10;`
 
 ```md
 To declare a variable: `const x = 10;`
 ```
 
-#### Code Block
+---
 
+#### Code Block
+```js
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+```
 <pre><code>```js
 function greet(name) {
   return `Hello, ${name}!`;
 }
 ```</code></pre>
 
+---
+
 #### Tables
+
+| Feature | Status |
+|---------|--------|
+| Tabs    | ✅     |
+| Cards   | ✅     |
+| Alerts  | ❌     |
 
 ```md
 | Feature | Status |
@@ -76,7 +113,11 @@ function greet(name) {
 | Alerts  | ❌     |
 ```
 
+---
+
 #### Blockquote
+
+> Always write semantic markup.
 
 ```md
 > Always write semantic markup.
@@ -84,39 +125,91 @@ function greet(name) {
 
 ---
 
-#### 🔣 Custom Markdown Blocks
-These are VitePress-native containers, enabled by default:
+#### Custom Markdown Blocks
+Each container styles the block with matching color and icon. Use them for notes, cautions, warnings, and callouts.
 
-### ✅ ::: tip (green)
+##### ::: tip (blue)
 
 ::: tip
 Use consistent spacing in UI.
 :::
 
-### ⚠️ ::: warning (yellow)
+```md
+::: tip
+Use consistent spacing in UI.
+:::
+```
+
+##### ::: warning (yellow)
 
 ::: warning
 Avoid mixing multiple icon styles.
 :::
 
-### 🚫 ::: danger (red)
+```md
+::: warning
+Avoid mixing multiple icon styles.
+:::
+```
+
+##### ::: danger (red)
 
 ::: danger
 Never override token values directly.
 :::
 
-### ℹ️ ::: info (blue)
+```md
+::: danger
+Never override token values directly.
+:::
+```
 
-::: info
-You can contribute to the design system documentation.
+
+##### ::: image-block
+
+::: image-block
+![THE Warp](/images/la01.jpg)
 :::
 
-Each container styles the block with matching color and icon. Use them for notes, cautions, warnings, and callouts.
-
+```md
+::: image-block
+![THE Warp](/images/la01.jpg)
+:::
+```
 ___
 
-## 💠 Frontmatter Options
+### Keyboard Keys with `<kbd>`
+<kbd>Tab</kbd> key opens field
 
+<kbd aria-label="Arrow Down">↓</kbd>
+
+Hit the <kbd>W</kbd> Key to move forewards
+
+
+
+```md
+<kbd>Tab</kbd> key opens field
+<kbd aria-label="Arrow Down">↓</kbd>
+Hit the <kbd>W</kbd> Key to move forewards
+```
+
+| Key         | Syntax                                  |
+| ----------- | --------------------------------------- |
+| Enter       | `<kbd>Enter</kbd>`                      |
+| Arrow Up    | `<kbd aria-label="Arrow Up">↑</kbd>`    |
+| Arrow Down  | `<kbd aria-label="Arrow Down">↓</kbd>`  |
+| Arrow Left  | `<kbd aria-label="Arrow Left">←</kbd>`  |
+| Arrow Right | `<kbd aria-label="Arrow Right">→</kbd>` |
+
+> Always use `aria-label` for arrows and other cryptic letters to help screen readers
+
+---
+
+
+## (⌐■_■) Advanced features
+### Frontmatter Options
+
+This is the main configuration for each main page (typically a index.md in the structure). If you are making a new page from an excisting structure its probably easier to copy a already excisting page as a startingpoint.
 Add these at the top of any new `.md` file:
 
 ```yaml
@@ -131,14 +224,12 @@ outline: [2, 3]
 
 ---
 
-## 📦 Custom Components
-
 ### `<card>` and `<cards>`
 
 ```md
 <cards>
   <card>Text content</card>
-  <card imgurl="/img.jpg" imgalt="An image">With image</card>
+  <card imgurl="/images/la01.jpg" imgalt="An image">With image</card>
 </cards>
 ```
 
@@ -200,37 +291,7 @@ outline: [2, 3]
 
 ---
 
-## 🔣 Custom Markdown Blocks
 
-```md
-::: image-block
-  <img src="/img.jpg" alt="Decorative" />
-:::
-```
-
-* Renders a styled `<div class="styled-image-block">` block
-* Used for grouping or spotlighting content
-
----
-
-## ⌘️ Keyboard Keys with `<kbd>`
-
-```md
-<kbd>Tab</kbd> key opens field
-<kbd aria-label="Arrow Down">↓</kbd>
-```
-
-| Key         | Syntax                                  |
-| ----------- | --------------------------------------- |
-| Enter       | `<kbd>Enter</kbd>`                      |
-| Arrow Up    | `<kbd aria-label="Arrow Up">↑</kbd>`    |
-| Arrow Down  | `<kbd aria-label="Arrow Down">↓</kbd>`  |
-| Arrow Left  | `<kbd aria-label="Arrow Left">←</kbd>`  |
-| Arrow Right | `<kbd aria-label="Arrow Right">→</kbd>` |
-
-> Always use `aria-label` for arrows to help screen readers
-
----
 
 ## 🎨 Styling with UnoCSS
 
@@ -248,20 +309,6 @@ Warp Docs uses `@warp-ds/uno` and `@warp-ds/preset-docs`:
 * Component names and props are case-sensitive
 * Keep slot names simple: `#Overview`, `#Usage`, etc.
 * Ask a dev if a component isn’t rendering — it may need safelisting or registration
-
----
-
-## ✅ Summary Table
-
-| Feature           | Syntax / Component             | Notes                              |
-| ----------------- | ------------------------------ | ---------------------------------- |
-| Tabbed content    | `<tabs-content>` + named slots | Dynamic tab views                  |
-| Do/Don’t layout   | `<dodonts>`, `<do>`            | Side-by-side visual guidance       |
-| Status display    | `<ComponentStatus>`            | Platform availability by framework |
-| Cards             | `<card>`, `<cards>`            | Reusable UI content blocks         |
-| Keyboard keys     | `<kbd>`                        | Document key inputs                |
-| Custom containers | `::: image-block`              | Highlight visuals/content          |
-| Styling utilities | UnoCSS classes                 | Utility-first styling              |
 
 ---
 
