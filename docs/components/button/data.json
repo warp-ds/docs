@@ -1,5 +1,5 @@
 {
-  "title": "Buttons",
+  "title": "Button",
   "description": "Buttons initiate events or actions within a page, informing users of what to expect next.",
   "category": "Actions",
   "placeholder": {
@@ -7,8 +7,8 @@
   },
   "frameworks": [
     {
-      "name": "React-beta",
-      "status": "released"
+      "name": "React19",
+      "status": "beta"
     },{
       "name": "React",
       "status": "released"

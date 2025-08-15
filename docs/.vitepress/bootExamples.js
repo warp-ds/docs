@@ -4,7 +4,7 @@ import Alert from '../components/alert/Example.vue';
 import Badge from '../components/badge/Example.vue';
 import Box from '../components/box/Example.vue';
 import Breadcrumbs from '../components/breadcrumbs/Example.vue';
-import Button from '../components/buttons/Example.vue';
+import Button from '../components/button/Example.vue';
 import ButtonGroup from '../components/buttongroup/Example.vue';
 import ButtonPill from '../components/buttonpill/Example.vue';
 import Callout from '../components/callout/Example.vue';

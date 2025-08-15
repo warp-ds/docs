@@ -1208,7 +1208,7 @@ export default defineConfig({
             { text: 'Broadcast', link: '/components/broadcast/' },
             {
               text: 'Button',
-              link: '/components/buttons/',
+              link: '/components/button/',
             },
             {
               text: 'Button group',
