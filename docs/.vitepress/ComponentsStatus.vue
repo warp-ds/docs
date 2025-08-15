@@ -1,112 +1,130 @@
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
+import { useData } from 'vitepress'
+
+const { isDark } = useData()
+
+const palette = computed(() => isDark.value
+  ? {
+      label: '2f3136',
+      supported: '2e7d32',
+      developing: 'a46000',
+      planned: '0b5fad',
+      unsupported: '6e6e6e',
+      logo: 'ffffff'
+    }
+  : {
+      label: 'f2f3f5',
+      supported: '2e7d32',
+      developing: 'a46000',
+      planned: '0b5fad',
+      unsupported: '9e9e9e',
+      logo: '000000'
+    }
+)
+
+function normalizeStatus(s) {
+  const v = (s || '').toLowerCase()
+  if (v === 'released' || v === 'supported') return 'supported'
+  if (v === 'developing') return 'developing'
+  if (v === 'planned') return 'planned'
+  return 'unsupported'
+}
+
+function badgeUrl({ label, status, logo }) {
+  const norm = normalizeStatus(status)
+  const safeLabel = encodeURIComponent(label)
+  const safeStatus = encodeURIComponent(norm)
+  const p = palette.value
+  return `https://img.shields.io/badge/${safeLabel}-${safeStatus}-${p[norm]}?logo=${logo}&style=flat&labelColor=${p.label}&logoColor=${p.logo}`
+}
 
 const props = defineProps({
-  react: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  reactBeta: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  vue: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  elements: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  android: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  ios: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  }
-});
+  react:    { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  react19:  { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  vue:      { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  elements: { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  android:  { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  ios:      { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  align:    { type: String, default: 'auto' } // 'auto' | 'left' | 'center'
+})
 
-const frameworkStatus = computed(() => [
-  { name: 'React', status: props.react },
-  { name: 'React-beta', status: props.reactBeta },
-  { name: 'Vue', status: props.vue },
-  { name: 'Elements', status: props.elements },
-  { name: 'Android', status: props.android },
-  { name: 'iOS', status: props.ios }
-]);
+const items = computed(() => ([
+  { label: 'React',    logo: 'react',               status: props.react },
+  { label: 'React 19', logo: 'react',               status: props.react19 },
+  { label: 'Vue',      logo: 'vue.js',              status: props.vue },
+  { label: 'Elements', logo: 'webcomponentsdotorg', status: props.elements },
+  { label: 'Android',  logo: 'android',             status: props.android },
+  { label: 'iOS',      logo: 'apple',               status: props.ios }
+]).map(it => {
+  const norm = normalizeStatus(it.status)
+  return {
+    ...it,
+    aria: `${it.label}: ${norm}`,
+    url: badgeUrl({ label: it.label, status: norm, logo: it.logo })
+  }
+}))
+
+const justifyClass = computed(() => {
+  if (props.align === 'left') return 'fw-left'
+  if (props.align === 'center') return 'fw-center'
+  return 'fw-auto'
+})
 </script>
 
 <template>
-  <div class="component-status">
-    <div v-for="framework in frameworkStatus" :key="framework.name" class="framework">
-      <div :class="`circle circle--${framework.status}`"></div>
-      <div>
-        <h4 class="title">{{ framework.name }}</h4>
-        <span class="status">{{ framework.status }}</span>
-      </div>
-    </div>
+  <div class="fw-badges" :class="justifyClass" role="list" aria-label="Framework support status">
+    <!-- optional: wire href to anchors like #react, #vue, etc. -->
+    <a
+      v-for="it in items"
+      :key="it.label"
+      class="fw-link"
+      role="listitem"
+      :href="it.href || '#'"
+      :aria-label="it.aria"
+    >
+      <img
+        :src="it.url"
+        :alt="it.aria"
+        height="20"
+        class="fw-badge"
+        loading="lazy"
+        decoding="async"
+      />
+      <!-- Visually hidden text as extra redundancy -->
+      <span class="sr-only">{{ it.aria }}</span>
+    </a>
   </div>
 </template>
 
-<style lang="scss" scoped>
-.component-status {
+<style scoped>
+.fw-badges {
   display: flex;
-  flex-flow: row wrap;
-  margin-top: 24px;
-  column-gap: 24px;
-  row-gap: 24px;
-
-  @media (min-width: 990px) and (max-width: 1103px), (min-width: 1280px) and (max-width: 1365px) {
-    column-gap: 32px;
-  }
-  @media (min-width: 721px) and (max-width: 959px), (min-width: 1080px) and (max-width: 1279px), (min-width: 1366px) {
-    column-gap: 48px;
-  }
+  flex-wrap: wrap;
+  align-items: center;
+  margin: .5rem 0 1rem;
 }
-
-.framework {
-  display: flex;
+.fw-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px 6px 0;
+  border-radius: 6px;
+  outline: none;
 }
-
-.title {
-  margin: 0;
+.fw-link:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0,120,212,.35);
 }
-
-.circle {
-  border-radius: 50%;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-  margin-top: 6px;
-
-  &--released {
-    background-color: #67eeb8
-  }
-
-  &--planned {
-    background-color: #66e0ff
-  }
-
-  &--developing {
-    background-color:  #fae76b;
-  }
-
-  &--unsupported {
-    background-color: #f99
-  }
+.fw-auto { justify-content: center; }
+@media (min-width: 960px) {
+  .fw-auto { justify-content: flex-start; }
 }
-
-.status {
-  text-transform: capitalize;
-  font-size: 14px;
+.fw-left   { justify-content: flex-start; }
+.fw-center { justify-content: center; }
+.fw-badge { vertical-align: middle; height: 20px; }
+.sr-only {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden; clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
 }
 </style>
