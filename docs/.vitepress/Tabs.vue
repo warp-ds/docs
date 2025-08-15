@@ -54,7 +54,7 @@ const switchTab = (tab) => {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  padding: 8px 16px;
+  padding: 8px 32px 8px 0;
   position: relative;
 }
 

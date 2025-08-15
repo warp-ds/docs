@@ -1,23 +1,18 @@
 <script setup>
-  import Overview from './overview.md';
-  import Styling from './styling.md';
-  import Usage from './usage.md';
-  import Dev from './code.md';
-  import Accessibility from './accessibility.md';
-  import data from './data.json';
-  import { mapFrameworkStatuses } from '../utils.js';
+import Overview from './overview.md';
+import Usage from './usage.md';
+import Styling from './styling.md';
+import Dev from './code.md';
+import Accessibility from './accessibility.md';
+import data from './data.json';
+import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# {{ data.title }}
-{{ data.description }}
+# [Component Name]
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
-## Example
-
-<ThemeSwitcher />
-<slider-beta-example />
-
+{{ data.description }}
 
 <tabs-content variant="main">
   <template #Overview>
@@ -38,4 +33,3 @@
 </tabs-content>
 
 <component-questions />
-

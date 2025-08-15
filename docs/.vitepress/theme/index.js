@@ -1,4 +1,4 @@
-import { h } from 'vue'
+import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
 import ApiTable from '../ApiTable.vue';
 import TabsContent from '../TabsContent.vue';
@@ -16,24 +16,28 @@ import { IconStarFull32 } from '@warp-ds/icons/vue';
 import '../bootExamples.js';
 import './custom.css';
 import 'uno.css';
-import warpThemeSwitcher from "../warp-theme-switcher.js";
-import Card from "../Card.vue";
-import Cards from "../Cards.vue";
+import warpThemeSwitcher from '../warp-theme-switcher.js';
+import Card from '../Card.vue';
+import Cards from '../Cards.vue';
 import WarpReactBetaNote from '../WarpReactBetaNote.vue';
+import DynamicCodeTabs from '../DynamicComponentCodeTabs.vue';
 
 export default {
   ...DefaultTheme,
   Layout() {
-   return h(DefaultTheme.Layout, null, {
-    'layout-bottom': () => h(Footer),
-   })
+    return h(DefaultTheme.Layout, null, {
+      'layout-bottom': () => h(Footer),
+    });
   },
   async enhanceApp({ app }) {
     app.use(warpThemeSwitcher);
     app.component('ApiTable', ApiTable);
     app.component('ThemeSwitcher', ThemeSwitcher);
     app.component('TabsContent', TabsContent);
-    app.component('ComponentDesignGuidelines', ComponentDesignGuidelines);
+    app.component(
+      'ComponentDesignGuidelines',
+      ComponentDesignGuidelines
+    );
     app.component('ComponentQuestions', ComponentQuestions);
     app.component('ComponentsStatus', ComponentsStatus);
     app.component('Do', Do);
@@ -45,5 +49,6 @@ export default {
     app.component('Cards', Cards);
     app.component('Card', Card);
     app.component('WarpReactBetaNote', WarpReactBetaNote);
+    app.component('DynamicCodeTabs', DynamicCodeTabs);
   },
 };

@@ -10,10 +10,9 @@
 </script>
 
 # Button
+<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 {{ data.description }}
-
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 ## Example
 <ThemeSwitcher />
