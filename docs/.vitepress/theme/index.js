@@ -20,6 +20,7 @@ import warpThemeSwitcher from '../warp-theme-switcher.js';
 import Card from '../Card.vue';
 import Cards from '../Cards.vue';
 import WarpReactBetaNote from '../WarpReactBetaNote.vue';
+import FrameworkBadgesWarp from '../FrameworkBadgesWarp.vue';
 import DynamicCodeTabs from '../DynamicComponentCodeTabs.vue';
 
 export default {
@@ -49,6 +50,7 @@ export default {
     app.component('Cards', Cards);
     app.component('Card', Card);
     app.component('WarpReactBetaNote', WarpReactBetaNote);
+    app.component('WarpBadge', FrameworkBadgesWarp);
     app.component('DynamicCodeTabs', DynamicCodeTabs);
   },
 };
