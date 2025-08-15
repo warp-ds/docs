@@ -9,6 +9,7 @@ const palette = computed(() => isDark.value
       label: '2f3136',
       supported: '2e7d32',
       developing: 'a46000',
+      beta: 'a46000',
       planned: '0b5fad',
       unsupported: '6e6e6e',
       logo: 'ffffff'
@@ -17,6 +18,7 @@ const palette = computed(() => isDark.value
       label: 'f2f3f5',
       supported: '2e7d32',
       developing: 'a46000',
+      beta: 'a46000',
       planned: '0b5fad',
       unsupported: '9e9e9e',
       logo: '000000'
@@ -28,6 +30,7 @@ function normalizeStatus(s) {
   if (v === 'released' || v === 'supported') return 'supported'
   if (v === 'developing') return 'developing'
   if (v === 'planned') return 'planned'
+  if (v === 'beta') return 'beta'
   return 'unsupported'
 }
 
@@ -40,12 +43,12 @@ function badgeUrl({ label, status, logo }) {
 }
 
 const props = defineProps({
-  react:    { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
-  react19:  { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
-  vue:      { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
-  elements: { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
-  android:  { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
-  ios:      { type: String, default: 'unsupported', validator: v => ['released','supported','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  react:    { type: String, default: 'unsupported', validator: v => ['released','supported','developing','beta','planned','unsupported'].includes((v||'').toLowerCase()) },
+  react19:  { type: String, default: 'unsupported', validator: v => ['released','supported','developing','beta','planned','unsupported'].includes((v||'').toLowerCase()) },
+  vue:      { type: String, default: 'unsupported', validator: v => ['released','supported','developing','beta','planned','unsupported'].includes((v||'').toLowerCase()) },
+  elements: { type: String, default: 'unsupported', validator: v => ['released','supported','developing','beta','planned','unsupported'].includes((v||'').toLowerCase()) },
+  android:  { type: String, default: 'unsupported', validator: v => ['released','supported','developing','beta','planned','unsupported'].includes((v||'').toLowerCase()) },
+  ios:      { type: String, default: 'unsupported', validator: v => ['released','supported','developing','beta','planned','unsupported'].includes((v||'').toLowerCase()) },
   align:    { type: String, default: 'auto' } // 'auto' | 'left' | 'center'
 })
 
