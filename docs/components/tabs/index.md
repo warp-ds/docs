@@ -7,7 +7,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Tabs
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -28,8 +28,6 @@ The `name` attributes will be used to generate `id` attributes (prefixed with `w
 This is because aria-controls and aria-labelledby rely on id attributes, and they are required for the tabs to be ARIA compliant.
 :::
 
-<component-questions />
-
 ## Frameworks
 
 <tabs-content>
@@ -46,3 +44,5 @@ This is because aria-controls and aria-labelledby rely on id attributes, and the
     <android />
   </template>
 </tabs-content>
+
+<component-questions />

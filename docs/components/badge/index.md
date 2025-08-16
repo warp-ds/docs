@@ -8,8 +8,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Badge
-
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -21,8 +20,6 @@
 ## Usage
 
 <component-design-guidelines name="Warp - Components / Badge" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=249-11911&mode=design&t=CxdPkiD3C2rBtqKv-0" />
-
-<component-questions />
 
 ## Frameworks
 
@@ -43,3 +40,5 @@
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

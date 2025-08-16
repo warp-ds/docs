@@ -13,12 +13,6 @@
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
-## Example
-
-<ThemeSwitcher />
-<slider-beta-example />
-
-
 <tabs-content variant="main">
   <template #Overview>
     <overview />

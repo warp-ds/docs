@@ -8,20 +8,19 @@
   import android from './android.md';
 </script>
 
-# Expandable
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 ## Examples
+
 <ThemeSwitcher />
 <expandable-example />
 
 ## Usage
 
 <component-design-guidelines name="Warp - Components / Expandable (Accordion)" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=162-4360&mode=design" />
-
-<component-questions />
 
 ## Frameworks
 
@@ -42,3 +41,5 @@
     <android />
     </template>
 </tabs-content>
+
+<component-questions />

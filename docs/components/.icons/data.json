@@ -1,9 +1,9 @@
 {
-  "title": "Modal",
-  "description": "A modal is a focused dialog that temporarily blocks the interface to request a specific decision or input. Because it pauses the experience, use it sparingly for high-priority tasks.",
-  "category": "Overlays",
+  "title": "Icons",
+  "description": "Warp's icon set is designed to help users understand actions and information, and to draw attention to elements.",
+  "category": "Actions",
   "placeholder": {
-    "label": "Modal component"
+    "label": "Icons component"
   },
   "frameworks": [
     {

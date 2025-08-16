@@ -5,7 +5,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Radio buttons
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -13,10 +13,6 @@
 ## Example
 <ThemeSwitcher />
 <radiobuttons-example />
-
-## Usage
-
-<component-questions />
 
 ## Frameworks
 
@@ -28,3 +24,5 @@
     <vue />
   </template>
 </tabs-content>
+
+<component-questions />

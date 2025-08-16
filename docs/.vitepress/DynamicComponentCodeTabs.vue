@@ -74,7 +74,7 @@ const tabsOrder = computed(() => panels.value.map(p => p.slot))
     <template v-for="p in panels" :key="p.slot" #[p.slot]>
       <component v-if="p.hasContent" :is="p.component" />
       <div v-else>
-        <strong>Not supported (yet).</strong>
+        <h3>Not supported (yet).</h3>
         <p v-if="p.reason">{{ p.reason }}</p>
         <p v-if="isDev" style="opacity:.7;font-size:.85em">
           (dev) looked for: <code>{{ p._debugSuffix }}</code>

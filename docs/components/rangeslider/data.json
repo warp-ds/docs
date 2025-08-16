@@ -1,9 +1,9 @@
 {
-  "title": "Range Slider (Beta)",
+  "title": "Range Slider",
   "description": "Range sliders allow users to adjust minimum and maximum numeric values within a given range.",
   "category": "Forms",
   "placeholder": {
-    "label": "Range slider (Beta) component"
+    "label": "Range slider component"
   },
   "frameworks": [
     {
@@ -13,9 +13,6 @@
     {
       "name": "Android",
       "status": "released"
-    },
-    {
-      "name": "Figma"
     }
   ]
 }

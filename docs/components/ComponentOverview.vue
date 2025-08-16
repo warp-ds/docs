@@ -11,6 +11,19 @@ console.log('Available SVG components:', Object.keys(placeholderSvgs));
 // Import default placeholder SVG
 import defaultSvg from '../src/placeholder-default.svg';
 
+// --- NEW: hide dirs starting with "_" or "." ---
+const isHiddenDir = (dir) => dir.startsWith('_') || dir.startsWith('.');
+const visibleComponentPaths = Object.keys(components).filter((path) => {
+  // path is like "./button/data.json" -> dir = "button"
+  const parts = path.split('/');
+  const dir = parts[1] || '';
+  return !isHiddenDir(dir);
+});
+console.log('Hidden component dirs (ignored):',
+  Object.keys(components).filter(p => isHiddenDir((p.split('/')[1] || '')))
+);
+
+// Validate & normalize a component entry
 const validateComponentData = (data, folderPath) => {
   const svgPath = `${folderPath}/placeholder.svg`;
 
@@ -18,27 +31,31 @@ const validateComponentData = (data, folderPath) => {
   const svg = placeholderSvgs[svgPath] || defaultSvg;
 
   return {
-    title: data.title || 'Untitled Component',  // Default title if missing
-    description: data.description || 'No description available.',  // Default description if missing
-    category: data.category || 'Uncategorized',  // Default category if missing
-    frameworks: Array.isArray(data.frameworks) ? data.frameworks.map(fw => ({
-      name: fw.name || 'Unknown Framework',  // Default framework name if missing
-      status: fw.status || 'unknown'  // Default status if missing
-    })) : [],  // Default empty array if no frameworks provided
-    svgComponent: svg,  // Use the component's SVG or the default if missing
+    title: data.title || 'Untitled Component',
+    description: data.description || 'No description available.',
+    category: data.category || 'Uncategorized',
+    frameworks: Array.isArray(data.frameworks)
+      ? data.frameworks.map(fw => ({
+          name: fw.name || 'Unknown Framework',
+          status: fw.status || 'unknown'
+        }))
+      : [],
+    svgComponent: svg,
     placeholder: {
-      label: data.placeholder?.label || data.title || 'Component image missing'  // Fallback to title if no label or to text if that is also missing
+      label: data?.placeholder?.label || data.title || 'Component image missing'
     }
   };
 };
 
-// Map JSON data to include href and validate data
-const componentData = Object.keys(components).map(path => {
-  const folderPath = path.replace('/data.json', '');
+// Map JSON data to include href and validate data (USING ONLY VISIBLE PATHS)
+const componentData = visibleComponentPaths.map(path => {
+  const folderPath = path.replace('/data.json', ''); // e.g. "./button"
   const rawData = components[path].default;
 
   return {
-    ...validateComponentData(rawData, folderPath),  // Validate each component's data
+    ...validateComponentData(rawData, folderPath),
+    // keep your original href logic; if you want to drop the leading "./", use:
+    // href: `/docs/components/${folderPath.replace(/^\.\//, '')}`
     href: `/docs/components/${folderPath}`
   };
 });
@@ -58,16 +75,17 @@ const frameworkNames = computed(() => {
   return Array.from(names);
 });
 
-// Computed property to filter components based on query and selected frameworks
+// Computed: filter components by search + frameworks
 const filteredComponents = computed(() => {
   const lowerQuery = query.value.toLowerCase();
   const frameworks = selectedFrameworks.value;
 
   return componentData.filter(component => {
     const matchesQuery = component.title.toLowerCase().includes(lowerQuery);
-    const matchesFramework = frameworks.length === 0 ||
+    const matchesFramework =
+      frameworks.length === 0 ||
       frameworks.every(framework =>
-        component.frameworks.some(componentFramework => componentFramework.name === framework)
+        component.frameworks.some(cf => cf.name === framework)
       );
     return matchesQuery && matchesFramework;
   });
@@ -75,7 +93,6 @@ const filteredComponents = computed(() => {
 </script>
 
 <template>
-
   <ComponentOverviewFilter
     :availableFrameworks="frameworkNames"
     :modelValue="query"
@@ -84,8 +101,5 @@ const filteredComponents = computed(() => {
     @update:frameworks="selectedFrameworks = $event"
   />
 
-  <ComponentOverviewResult
-    :filteredComponents="filteredComponents"
-  />
-
+  <ComponentOverviewResult :filteredComponents="filteredComponents" />
 </template>

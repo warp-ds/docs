@@ -1198,18 +1198,12 @@ export default defineConfig({
               link: '/components/ComponentFrameworkCoverage',
             },
             { text: 'Empty template', link: '/components/template/' },
-            {
-              text: 'Alert',
-              link: '/components/alert/',
-            },
+            { text: 'Alert', link: '/components/alert/' },
             { text: 'Badge', link: '/components/badge/' },
             { text: 'Box', link: '/components/box/' },
             { text: 'Breadcrumbs', link: '/components/breadcrumbs/' },
             { text: 'Broadcast', link: '/components/broadcast/' },
-            {
-              text: 'Button',
-              link: '/components/button/',
-            },
+            { text: 'Button', link: '/components/button/' },
             {
               text: 'Button group',
               link: '/components/buttongroup/',
@@ -1219,25 +1213,10 @@ export default defineConfig({
             { text: 'Card', link: '/components/card/' },
             { text: 'Checkbox', link: '/components/checkbox/' },
             { text: 'Combo box', link: '/components/combobox/' },
-            {
-              text: 'Date picker',
-              link: '/components/datepicker/',
-            },
+            { text: 'Date picker', link: '/components/datepicker/' },
             { text: 'Expandable', link: '/components/expandable/' },
-            {
-              text: 'Icons',
-              link: '/components/icons-beta/',
-              items: [
-                {
-                  text: 'Icons (legacy)',
-                  link: '/components/icons/',
-                },
-              ],
-            },
-            {
-              text: 'Link ',
-              link: '/components/link/',
-            },
+            { text: 'Icons', link: '/components/icons/' },
+            { text: 'Link ', link: '/components/link/' },
             { text: 'Modal', link: '/components/modal/' },
             {
               text: 'Page indicator',
@@ -1256,16 +1235,7 @@ export default defineConfig({
               link: '/components/rangeslider/',
             },
             { text: 'Select', link: '/components/select/' },
-            {
-              text: 'Slider',
-              link: '/components/slider/',
-              items: [
-                {
-                  text: 'Slider (legacy)',
-                  link: '/components/slider_/',
-                },
-              ],
-            },
+            { text: 'Slider', link: '/components/slider/' },
             { text: 'Spinner', link: '/components/spinner/' },
             { text: 'Steps', link: '/components/steps/' },
             { text: 'Switch', link: '/components/switch/' },
@@ -1273,10 +1243,7 @@ export default defineConfig({
             { text: 'Text', link: '/components/text/' },
             { text: 'Text area', link: '/components/textarea/' },
             { text: 'Text field', link: '/components/textfield/' },
-            {
-              text: 'Toast',
-              link: '/components/toast/',
-            },
+            { text: 'Toast', link: '/components/toast/' },
             { text: 'Tooltip', link: '/components/tooltip/' },
             { text: 'Utilities', link: '/components/utilities/' },
           ],

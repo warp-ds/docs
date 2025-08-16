@@ -7,8 +7,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Checkbox
-
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -20,8 +19,6 @@
 ## Usage
 
 <component-design-guidelines name="Warp - Components / Checkbox" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components-2.0?m=auto&node-id=381-40975&t=LAzGLAB7cHRWfpOJ-1" />
-
-<component-questions />
 
 ## Frameworks
 
@@ -39,3 +36,5 @@
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

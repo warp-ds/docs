@@ -8,10 +8,8 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Modal
+# {{ data.title }}
 {{ data.description }}
-
-They are overlays that prevent users from interacting with the rest of the application until a specific action is taken. They can be disruptive because they require merchants to take an action before they can continue interacting with the rest of the site. It should be used thoughtfully and sparingly.
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
@@ -19,8 +17,10 @@ They are overlays that prevent users from interacting with the rest of the appli
 <ThemeSwitcher />
 <modal-example />
 
-## Usage
+## Overview
+A modal overlays the page and prevents interaction with the underlying UI until the user completes an action (for example, confirm, cancel, or provide required input). This interruption is useful for time-sensitive or high-impact decisions, but it can be disruptive if overused. When a modal is necessary, keep content concise, make the primary action clear, offer a safe dismiss option, and avoid stacking multiple modals.
 
+## Usage
 <component-design-guidelines name="Warp - Components / Modal" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=354-18223&mode=design" />
 
 ### Accessibility
