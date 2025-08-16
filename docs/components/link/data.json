@@ -1,6 +1,6 @@
 {
   "title": "Link",
-  "description": "Link component to use when creating links that look like buttons.",
+  "description": "Links are used to apply styles to hyperlink text.",
   "category": "Layout",
   "placeholder": {
     "label": "Link component"
@@ -13,6 +13,23 @@
     {
       "name": "React-beta",
       "status": "released"
+    },
+    {
+      "name": "Vue",
+      "status": "unsupported"
+    },
+    {
+      "name": "iOS",
+      "status": "planned"
+    },
+    {
+      "name": "Elements",
+      "status": "unsupported"
+    },
+    {
+      "name": "React",
+      "status": "unsupported"
     }
+
   ]
 }
