@@ -1,3 +1,8 @@
+## Example
+
+<ThemeSwitcher />
+<slider-beta-example />
+
 ## Overview
 
 A slider provides a visual indication of an adjustable value within a defined range (minimum and maximum values) by moving a handle along a horizontal track.

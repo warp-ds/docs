@@ -9,10 +9,10 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Button
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
-
+# {{ data.title }}
 {{ data.description }}
+
+<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 ## Example
 <ThemeSwitcher />
@@ -25,8 +25,6 @@
 ### Accessibility
 If the button doesn't have visible text content, such as when used with only an
 icon, an `aria-label` prop must be provided for accessibility.
-
-<component-questions />
 
 ## Frameworks
 
@@ -50,3 +48,5 @@ icon, an `aria-label` prop must be provided for accessibility.
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

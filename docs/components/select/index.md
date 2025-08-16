@@ -6,12 +6,13 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Select
+# {{ data.title }}
 {{ data.description }}
 
-Selects (sometimes known as "dropdowns" or "pickers") allow users to choose from a list of options in a limited space. The list of options can change based on the context.
-
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+
+## Overview
+Selects (sometimes known as "dropdowns" or "pickers") allow users to choose from a list of options in a limited space. The list of options can change based on the context.
 
 ## Example
 <ThemeSwitcher />
@@ -28,7 +29,6 @@ Select for accessibility. If the field is labeled by a separate element, an
 `aria-labelledby` prop should be provided using the id of the labeling element
 instead.
 
-<component-questions />
 
 ## Frameworks
 
@@ -43,3 +43,5 @@ instead.
     <elements />
   </template>
 </tabs-content>
+
+<component-questions />

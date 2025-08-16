@@ -8,21 +8,19 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Box
-
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 ## Example
+
 <ThemeSwitcher />
 <box-example />
 
 ## Usage
 
 <component-design-guidelines name="Warp - Components / Box" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=250-13356&mode=design" />
-
-<component-questions />
 
 ### Accessibility
 
@@ -51,3 +49,5 @@ Consider using more suitable roles for your specific Box, as described on
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

@@ -7,7 +7,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Switch
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -20,8 +20,6 @@
 
 <component-design-guidelines name="Warp - Components / Switch" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/
 WARP---Components-2.0?m=auto&node-id=7865-20984&t=381wrlkzoSir9LSh-1" />
-
-<component-questions />
 
 ## Frameworks
 
@@ -39,3 +37,5 @@ WARP---Components-2.0?m=auto&node-id=7865-20984&t=381wrlkzoSir9LSh-1" />
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

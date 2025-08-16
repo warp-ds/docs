@@ -1,9 +1,2 @@
-## Example
-
-<ThemeSwitcher />
-<slider-beta-example />
-
-## Frameworks
-<div>
+## Framework(s)
 <DynamicCodeTabs />
-</div>
