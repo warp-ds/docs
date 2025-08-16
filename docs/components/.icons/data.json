@@ -1,15 +1,12 @@
 {
-  "title": "Buttons",
-  "description": "Buttons initiate events or actions within a page, informing users of what to expect next.",
+  "title": "Icons",
+  "description": "Warp's icon set is designed to help users understand actions and information, and to draw attention to elements.",
   "category": "Actions",
   "placeholder": {
-    "label": "Button component"
+    "label": "Icons component"
   },
   "frameworks": [
     {
-      "name": "React-beta",
-      "status": "released"
-    },{
       "name": "React",
       "status": "released"
     },

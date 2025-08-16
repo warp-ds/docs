@@ -5,7 +5,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Link
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -18,8 +18,6 @@
 
 <component-design-guidelines name="Warp - Components / Link" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components-2.0?node-id=11099-1148&t=ZymxezFIu8VQzAW8-0" />
 
-<component-questions />
-
 ## Frameworks
 
 <tabs-content>
@@ -30,3 +28,5 @@
     <android />
   </template>
 </tabs-content>
+
+<component-questions />

@@ -9,9 +9,10 @@ import data from './data.json';
 import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Date picker - BETA
-
+# {{ data.title }}
 {{ data.description }}
+
+<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 <tabs-content variant="main">
   <template #Overview>

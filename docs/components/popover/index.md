@@ -4,12 +4,11 @@
   import React from './react.md';
   import Vue from './vue.md';
   import Android from './android.md';
-  
+
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Popover
-
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -22,7 +21,6 @@
 
 <component-design-guidelines name="Warp - Components / Popover" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38513&node-type=canvas&t=kRrtnWerTmpa3PeU-0" />
 
-<component-questions />
 
 ## Frameworks
 
@@ -40,3 +38,5 @@
     <android />
     </template>
 </tabs-content>
+
+<component-questions />

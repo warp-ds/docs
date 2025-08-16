@@ -7,8 +7,7 @@
   import data from './data.json';
 </script>
 
-# Page indicator - BETA
-
+# {{ data.title }}
 {{ data.description }}
 
 <tabs-content variant="main">

@@ -6,8 +6,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Card
-
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -19,8 +18,6 @@
 ## Usage
 
 <component-design-guidelines name="Warp - Components / Card" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=377-34742&mode=design" />
-
-<component-questions />
 
 ## Frameworks
 
@@ -35,3 +32,5 @@
     <elements />
   </template>
 </tabs-content>
+
+<component-questions />

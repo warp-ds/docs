@@ -7,8 +7,8 @@
   },
   "frameworks": [
     {
-      "name": "React-beta",
-      "status": "released"
+      "name": "React19",
+      "status": "beta"
     },
     {
       "name": "Elements",

@@ -12,10 +12,6 @@ These utility components are available to make some layout components interactiv
 
 <utilities-example />
 
-## Usage
-
-<component-questions />
-
 ## Frameworks
 
 <tabs-content>
@@ -23,3 +19,5 @@ These utility components are available to make some layout components interactiv
     <vue />
   </template>
 </tabs-content>
+
+<component-questions />

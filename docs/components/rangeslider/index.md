@@ -8,9 +8,10 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Range Slider
-
+# {{ data.title }}
 {{ data.description }}
+
+<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 <tabs-content variant="main">
   <template #Overview>

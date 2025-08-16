@@ -1,10 +1,6 @@
-<script setup>
-import Overview from './overview.md';
-import data from './data.json';
-import { mapFrameworkStatuses } from '../utils.js';
-</script>
-
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+## Examples
+<ThemeSwitcher />
+<rangeslider-example />
 
 ## Overview
 

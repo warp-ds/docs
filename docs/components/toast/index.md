@@ -6,9 +6,10 @@
   import data from './data.json';
 </script>
 
-# Toast
-
+# {{ data.title }}
 {{ data.description }}
+
+<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
 
 <tabs-content variant="main">
   <template #Overview>

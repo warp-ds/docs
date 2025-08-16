@@ -7,6 +7,10 @@
   },
   "frameworks": [
     {
+      "name": "React19",
+      "status": "beta"
+    },
+    {
       "name": "React",
       "status": "released"
     },
@@ -15,15 +19,16 @@
       "status": "released"
     },
     {
+      "name": "Elements",
+      "status": "unsupported"
+    },
+    {
       "name": "iOS",
       "status": "released"
     },
     {
       "name": "Android",
       "status": "released"
-    },
-    {
-      "name": "Figma"
     }
   ]
 }

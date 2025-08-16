@@ -5,8 +5,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Button group
-
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -21,7 +20,7 @@
 This component is only supported in Warp Vue at the moment.
 For a React equivalent that serves a similar purpose, use the `Toggle` in [RadioButtons](/components/radiobuttons/).
 
-<component-questions />
+
 
 ## Frameworks
 
@@ -33,3 +32,5 @@ For a React equivalent that serves a similar purpose, use the `Toggle` in [Radio
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

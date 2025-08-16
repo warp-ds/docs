@@ -8,12 +8,15 @@ import data from './data.json';
 import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+::: warning Older version
+In case there is issues upgrading to the new icon component, the [old icon setup](/components/.icons/) is still available for a while longer but is concidered deprecated.
+:::
 
-Our updated icon library is based on the Phosphor icon set, offering a flexible, modern foundation with over 9.000 icons.
+## Phosphor
 
-## Overview
-<icon-beta-example />
+Warp uses the [Phosphor icon set](https://phosphoricons.com) as its foundation and offers a curated subset. Phosphor is an open-source icon family with 9,000+ UI-focused icons, see the warp supported icons below.
+
+<icon-example />
 
 ## Need new icons?
 

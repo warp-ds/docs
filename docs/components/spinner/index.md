@@ -5,8 +5,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Spinner
-
+# {{ data.description }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -23,8 +22,6 @@ For the web implementation of a "spinner", see [CSS - Animation - Spinner](../..
 
 <component-design-guidelines name="Warp - Components / Spinner" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components-2.0?node-id=900-35603&t=jDaOykQhPf30zVST-0" />
 
-<component-questions />
-
 ## Frameworks
 
 <tabs-content>
@@ -35,3 +32,5 @@ For the web implementation of a "spinner", see [CSS - Animation - Spinner](../..
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

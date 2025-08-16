@@ -7,8 +7,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Radio
-
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -20,8 +19,6 @@
 ## Usage
 
 <component-design-guidelines name="Warp - Components / Radio Button" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=377-23900&mode=design" />
-
-<component-questions />
 
 ## Frameworks
 
@@ -39,3 +36,5 @@
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

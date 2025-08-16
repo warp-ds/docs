@@ -5,8 +5,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-
-# Broadcast
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -23,8 +22,6 @@ See the [toast component](/components/toast/) for examples, as `broadcast` utili
 
 <component-design-guidelines name="Warp - Components / Broadcast" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=253-14893&mode=design" />
 
-<component-questions />
-
 ## Frameworks
 
 <tabs-content>
@@ -35,3 +32,5 @@ See the [toast component](/components/toast/) for examples, as `broadcast` utili
     <iOS />
   </template>
 </tabs-content>
+
+<component-questions />

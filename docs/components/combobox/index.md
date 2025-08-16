@@ -4,7 +4,7 @@
   import { mapFrameworkStatuses } from '../utils.js';
 </script>
 
-# Combo box
+# {{ data.title }}
 {{ data.description }}
 
 <components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
@@ -18,9 +18,6 @@ You can, however, validate that the value comes from the list, that's up to your
 
 ![Combobox](/components/combobox.png)
 
-## Usage
-<component-questions />
-
 ## Frameworks
 
 <tabs-content>
@@ -28,3 +25,5 @@ You can, however, validate that the value comes from the list, that's up to your
     <react />
   </template>
 </tabs-content>
+
+<component-questions />

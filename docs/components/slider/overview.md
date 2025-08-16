@@ -1,9 +1,7 @@
-<script setup>
-  import data from './data.json';
-  import { mapFrameworkStatuses } from '../utils.js';
-</script>
+## Example
 
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+<ThemeSwitcher />
+<slider-beta-example />
 
 ## Overview
 
