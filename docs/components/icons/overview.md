@@ -1,13 +1,3 @@
-<script setup>
-import Overview from './overview.md';
-import Styling from './styling.md';
-import Dev from './code.md';
-import Accessibility from './accessibility.md';
-import ReactBeta from './react-beta.md';
-import data from './data.json';
-import { mapFrameworkStatuses } from '../utils.js';
-</script>
-
 ::: warning Older version
 In case there is issues upgrading to the new icon component, the [old icon setup](/components/.icons/) is still available for a while longer but is concidered deprecated.
 :::

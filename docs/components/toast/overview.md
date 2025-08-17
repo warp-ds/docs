@@ -1,14 +1,4 @@
-<script setup>
-  import data from './data.json';
-  import { mapFrameworkStatuses } from '../utils.js';
-</script>
-
-<br />
-<br />
 A toast overlay is used to provide system status notifications, such as error, completion, and loading progress messages. The icons and colours are available, which must be selectively used according to the component's attention level.
-<br />
-<br />
-
 
 ## Variants
 
