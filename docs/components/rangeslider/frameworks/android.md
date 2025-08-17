@@ -21,7 +21,7 @@ fun WarpRangeSlider(
     endInteractionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 )
 ```
-## General functionality
+### General functionality
 The range slider accepts a list of `Any` objects, meaning the values can be anything and will be displayed in the order they are sorted within the list.
 The selected value will be returned as a full object in the callback.
 Basic usage example:
@@ -48,7 +48,7 @@ WarpRangeSlider(
     resetAtEndText = "Max",
 )
 ```
-## Visual options
+### Visual options
 The slider can show tooltips with the currently selected value above the thumbs when dragging. It can also show indicators below the track showing the total possible range of values. 
 
 ```kotlin example

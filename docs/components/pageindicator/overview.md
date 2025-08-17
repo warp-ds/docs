@@ -1,13 +1,4 @@
-<script setup>
-  import ReactBeta from './react-beta.md';
-  import iOS from './ios.md';
-  import data from './data.json';
-  import { mapFrameworkStatuses } from '../utils.js';
-</script>
-
-Page indicators help users understand that there are more images, or pages, available to scroll through, that are currently hidden from view. 
-
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+Page indicators help users understand that there are more images, or pages, available to scroll through, that are currently hidden from view.
 
 ## Example
 

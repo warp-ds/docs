@@ -18,7 +18,7 @@ fun WarpSlider(
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }
 )
 ```
-## General functionality
+### General functionality
 The slider accepts a range of floats as values and returns the selected value in the onValueChange method.
 Basic usage example:
 
@@ -33,7 +33,7 @@ WarpSlider(
     )
 ```
 
-## Visual options
+### Visual options
 The slider can show a tooltip with the currently selected value above the thumb when dragging. You can pass a custom formatted text to be shown on the tooltip, but if not provided the values toString() method will be used. It can also show indicators below the track showing the total possible range of values. It's possible to pass a custom range starting and/or ending text. If nothing is passed, the values toString() method will be used.
 
 

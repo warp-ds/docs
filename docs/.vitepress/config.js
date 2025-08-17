@@ -6,6 +6,66 @@ import { classes as componentClasses } from '@warp-ds/css/component-classes/clas
 import { supported as supportedClasses } from '../supported.js';
 import markdownItContainer from 'markdown-it-container';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
+import { fileURLToPath } from 'node:url';
+import { dirname, resolve, join } from 'node:path';
+import fs from 'node:fs';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+/* ────────────────────────────────────────────────────────────────────────────
+   Auto-build Components sidebar
+   ──────────────────────────────────────────────────────────────────────────── */
+function getFrontmatterTitle(filePath) {
+  try {
+    const src = fs.readFileSync(filePath, 'utf8');
+    const fmBlock = src.match(/^---\s*[\r\n]+([\s\S]*?)\r?\n---/);
+    if (!fmBlock) return null;
+    const titleLine = fmBlock[1].match(/^\s*title:\s*(.+)\s*$/m);
+    if (!titleLine) return null;
+    let t = titleLine[1].trim();
+    if (
+      (t.startsWith('"') && t.endsWith('"')) ||
+      (t.startsWith("'") && t.endsWith("'"))
+    ) {
+      t = t.slice(1, -1);
+    }
+    return t;
+  } catch {
+    return null;
+  }
+}
+
+function titleFromSlug(slug) {
+  return slug
+    .replace(/[-_]+/g, ' ')
+    .replace(/\b\w/g, (s) => s.toUpperCase());
+}
+
+// Scans docs/components/*/index.md (skips folders starting with ".")
+function buildComponentSidebarItems(rootDir) {
+  const componentsDir = resolve(rootDir, 'components');
+  if (!fs.existsSync(componentsDir)) return [];
+
+  const entries = fs
+    .readdirSync(componentsDir, { withFileTypes: true })
+    .filter((e) => e.isDirectory() && !e.name.startsWith('.'));
+
+  const items = entries
+    .map((e) => {
+      const slug = e.name;
+      const indexMd = join(componentsDir, slug, 'index.md');
+      if (!fs.existsSync(indexMd)) return null;
+      const title =
+        getFrontmatterTitle(indexMd) || titleFromSlug(slug);
+      return { text: title, link: `/components/${slug}/` };
+    })
+    .filter(Boolean);
+
+  items.sort((a, b) => a.text.localeCompare(b.text));
+  return items;
+}
+
+/* ──────────────────────────────────────────────────────────────────────────── */
 
 const base = '/docs';
 
@@ -280,6 +340,12 @@ export default defineConfig({
       }),
       svgLoader(),
     ],
+    // ⬇️ alias for new design system components
+    resolve: {
+      alias: {
+        '@ds': resolve(__dirname, './theme/components'),
+      },
+    },
   },
   head: [
     [
@@ -1190,63 +1256,19 @@ export default defineConfig({
       ],
       '/components/': [
         {
-          text: 'Components',
+          text: 'Overview',
           items: [
             { text: 'Component overview', link: '/components/' },
             {
-              text: 'Framework coverage',
-              link: '/components/ComponentFrameworkCoverage',
+              text: 'Framework status',
+              link: '/components/DsFrameworkStatus',
             },
-            { text: 'Empty template', link: '/components/template/' },
-            { text: 'Alert', link: '/components/alert/' },
-            { text: 'Badge', link: '/components/badge/' },
-            { text: 'Box', link: '/components/box/' },
-            { text: 'Breadcrumbs', link: '/components/breadcrumbs/' },
-            { text: 'Broadcast', link: '/components/broadcast/' },
-            { text: 'Button', link: '/components/button/' },
-            {
-              text: 'Button group',
-              link: '/components/buttongroup/',
-            },
-            { text: 'Button pill', link: '/components/buttonpill/' },
-            { text: 'Callout', link: '/components/callout/' },
-            { text: 'Card', link: '/components/card/' },
-            { text: 'Checkbox', link: '/components/checkbox/' },
-            { text: 'Combo box', link: '/components/combobox/' },
-            { text: 'Date picker', link: '/components/datepicker/' },
-            { text: 'Expandable', link: '/components/expandable/' },
-            { text: 'Icons', link: '/components/icons/' },
-            { text: 'Link ', link: '/components/link/' },
-            { text: 'Modal', link: '/components/modal/' },
-            {
-              text: 'Page indicator',
-              link: '/components/pageindicator/',
-            },
-            { text: 'Pagination', link: '/components/pagination/' },
-            { text: 'Pill', link: '/components/pill/' },
-            { text: 'Popover', link: '/components/popover/' },
-            { text: 'Radio', link: '/components/radio/' },
-            {
-              text: 'Radio buttons',
-              link: '/components/radiobuttons/',
-            },
-            {
-              text: 'Range slider',
-              link: '/components/rangeslider/',
-            },
-            { text: 'Select', link: '/components/select/' },
-            { text: 'Slider', link: '/components/slider/' },
-            { text: 'Spinner', link: '/components/spinner/' },
-            { text: 'Steps', link: '/components/steps/' },
-            { text: 'Switch', link: '/components/switch/' },
-            { text: 'Tabs', link: '/components/tabs/' },
-            { text: 'Text', link: '/components/text/' },
-            { text: 'Text area', link: '/components/textarea/' },
-            { text: 'Text field', link: '/components/textfield/' },
-            { text: 'Toast', link: '/components/toast/' },
-            { text: 'Tooltip', link: '/components/tooltip/' },
-            { text: 'Utilities', link: '/components/utilities/' },
           ],
+        },
+
+        {
+          text: 'Components',
+          items: buildComponentSidebarItems(resolve(__dirname, '..')),
         },
       ],
     },
