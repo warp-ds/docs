@@ -1,11 +1,14 @@
 ---
-# Frontmatter reference (keep this comment block):
-# - title:        Human-readable component name (Sentence case).
+# - title:        Human-readable component name (Sentence case) used as a title everywhere the component is referenced..
+title: Slider
 # - description:  One short sentence that also works as SEO meta description.
-# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities).
-# - placeholder:  For the overview thumbnail/alt text.
-# - frameworks:   Add one entry per platform.
-#
+description: Sliders allow users to adjust a numeric value within a given range.
+# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities). Will be used as a category/filter in the overview.
+category: Forms
+# - placeholder:  For the overview thumbnail/alt text. Will use a wireframed component graphic (placeholder.svg) on component root if it excists.
+placeholder:
+  label: Slider component
+#  - frameworks:   Add one entry per platform.
 #   Legal framework names (case-sensitive):
 #     React | React 19 | Vue | Elements | Android | iOS | Figma
 #   Notes:
@@ -17,12 +20,6 @@
 #   Tips:
 #     • Use lowercase for status.
 #     • `reason` is optional, shown for unsupported/planned/etc.
-
-title: Slider
-description: Sliders allow users to adjust a numeric value within a given range.
-category: Forms
-placeholder:
-  label: Slider component
 frameworks:
 - name: React 19
   status: beta
