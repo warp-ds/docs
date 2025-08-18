@@ -28,36 +28,29 @@ frameworks:
   status: beta
 - name: Figma
 ---
-<script setup>
-import Overview from './overview.md';
-import Usage from './usage.md';
-import Styling from './styling.md';
-import Dev from './code.md';
-import Accessibility from './accessibility.md';
-import { mapFrameworkStatuses } from '../utils.js';
-</script>
 
 # {{ $frontmatter.title }}
 {{ $frontmatter.description }}
 
 <DsComponentStatus align="left" hide-unsupported />
 
-<tabs-content variant="main">
-  <template #Overview>
-    <overview />
-  </template>
-  <template #Usage>
-    <usage />
-  </template>
-  <template #Styling>
-    <styling />
-  </template>
-  <template #Code>
-    <dev />
-  </template>
-  <template #Accessibility>
-    <accessibility />
-  </template>
-</tabs-content>
+<!--
+DsMainTabs — how it works (for authors)
+
+• This page’s tab bar is generated automatically.
+• Create one Markdown file per tab in the SAME folder as this index.md.
+• Naming: tab_*.md  (examples: tab_overview.md, tab_usage.md, tab_styling.md, tab_code.md, tab_accessibility.md)
+• Default order (when unnamed/unnumbered): Overview → Usage → Styling → Code → Accessibility
+• To force a custom order, add a number after tab_:
+    tab_10-overview.md, tab_20-usage.md, tab_30-styling.md, tab_40-code.md, tab_50-accessibility.md
+• Tab label is taken from the tab file’s frontmatter `title:` if present; otherwise it’s derived from the filename.
+• Custom tabs are allowed (e.g. tab_experimental.md → “Experimental”).
+• No imports needed — the component discovers and renders these files automatically.
+• Heading levels: start content in tab files at `##` (H2). The page H1 comes from the main index.md title.
+• Code tab: name the file exactly `tab_code.md`.
+
+That’s it — add/edit/remove tab_*.md files and the UI updates on the next build/refresh.
+-->
+<DsMainTabs />
 
 <component-questions />
