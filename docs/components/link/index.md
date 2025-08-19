@@ -24,10 +24,12 @@ category: Layout
 placeholder:
   label: Link component
 frameworks:
-- name: Android
-  status: released
 - name: React 19
   status: beta
+- name: Android
+  status: released
+- name: iOS,
+  status: planned
 ---
 # {{ $frontmatter.title }}
 {{ $frontmatter.description }}

@@ -1,0 +1,35 @@
+{
+  "title": "Link",
+  "description": "Links are used to apply styles to hyperlink text.",
+  "category": "Layout",
+  "placeholder": {
+    "label": "Link component"
+  },
+  "frameworks": [
+    {
+      "name": "Android",
+      "status": "released"
+    },
+    {
+      "name": "React-beta",
+      "status": "released"
+    },
+    {
+      "name": "Vue",
+      "status": "unsupported"
+    },
+    {
+      "name": "iOS",
+      "status": "planned"
+    },
+    {
+      "name": "Elements",
+      "status": "unsupported"
+    },
+    {
+      "name": "React",
+      "status": "unsupported"
+    }
+
+  ]
+}
