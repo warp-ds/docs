@@ -1,5 +1,7 @@
-import { h } from 'vue'
+import { h } from 'vue';
 import DefaultTheme from 'vitepress/theme';
+
+// Legacy imports
 import ApiTable from '../ApiTable.vue';
 import TabsContent from '../TabsContent.vue';
 import ThemeSwitcher from '../ThemeSwitcher.vue';
@@ -16,24 +18,43 @@ import { IconStarFull32 } from '@warp-ds/icons/vue';
 import '../bootExamples.js';
 import './custom.css';
 import 'uno.css';
-import warpThemeSwitcher from "../warp-theme-switcher.js";
-import Card from "../Card.vue";
-import Cards from "../Cards.vue";
-import WarpReactBetaNote from '../WarpReactBetaNote.vue';
+import warpThemeSwitcher from '../warp-theme-switcher.js';
+import Card from '../Card.vue';
+import Cards from '../Cards.vue';
 
 export default {
-  ...DefaultTheme,
+  extends: DefaultTheme,
+
   Layout() {
-   return h(DefaultTheme.Layout, null, {
-    'layout-bottom': () => h(Footer),
-   })
+    return h(DefaultTheme.Layout, null, {
+      'layout-bottom': () => h(Footer),
+    });
   },
-  async enhanceApp({ app }) {
+
+  enhanceApp({ app }) {
+    // 1) auto-register NEW components prefixed with Ds in ./vitepress/theme/components/**
+    const modules = import.meta.glob('./components/**/*.vue', {
+      eager: true,
+    });
+    for (const [path, mod] of Object.entries(modules)) {
+      const file = path.split('/').pop();
+      const name = file.replace(/\.\w+$/, '');
+      if (!name.startsWith('Ds')) continue;
+      app.component(name, mod.default);
+    }
+
+    // 2) plugins
     app.use(warpThemeSwitcher);
+
+    // explicit globals (manual registrations).
+    // These run AFTER auto-reg so they win on name conflicts, loose goal is to get rid of these
     app.component('ApiTable', ApiTable);
     app.component('ThemeSwitcher', ThemeSwitcher);
     app.component('TabsContent', TabsContent);
-    app.component('ComponentDesignGuidelines', ComponentDesignGuidelines);
+    app.component(
+      'ComponentDesignGuidelines',
+      ComponentDesignGuidelines
+    );
     app.component('ComponentQuestions', ComponentQuestions);
     app.component('ComponentsStatus', ComponentsStatus);
     app.component('Do', Do);
@@ -44,6 +65,5 @@ export default {
     app.component('IconStarFull32', IconStarFull32);
     app.component('Cards', Cards);
     app.component('Card', Card);
-    app.component('WarpReactBetaNote', WarpReactBetaNote);
   },
 };

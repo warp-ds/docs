@@ -1,0 +1,33 @@
+{
+  "title": "[Component Name]",
+  "description": "[Component description]",
+  "placeholder": {
+    "label": "Empty component template"
+  },
+  "frameworks": [
+    {
+      "name": "React19",
+      "status": "supported"
+    },
+    {
+      "name": "React",
+      "status": "unsupported"
+    },
+    {
+      "name": "Vue",
+      "status": "planned"
+    },
+    {
+      "name": "Elements",
+      "status": "developing"
+    },
+    {
+      "name": "IOS",
+      "status": "unsupported"
+    },
+    {
+      "name": "Android",
+      "status": "unsupported"
+    }
+  ]
+}
