@@ -1,5 +1,5 @@
 ::: warning Older version
-In case there is issues upgrading to the new icon component, the [old icon setup](/components/.icons/) is still available for a while longer but is concidered deprecated.
+In case there is issues upgrading to the new icon component, the [old icon setup](/docs/components/.icons/) is still available for a while longer but is concidered deprecated.
 :::
 
 ## Phosphor
