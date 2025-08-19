@@ -1,7 +1,3 @@
-::: warning Older version
-In case there is issues upgrading to the new icon component, the [old icon setup](/components/.icons/) is still available for a while longer but is concidered deprecated.
-:::
-
 ## Phosphor
 
 Warp uses the [Phosphor icon set](https://phosphoricons.com) as its foundation and offers a curated subset. Phosphor is an open-source icon family with 9,000+ UI-focused icons, see the warp supported icons below.

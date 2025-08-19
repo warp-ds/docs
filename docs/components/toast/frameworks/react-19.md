@@ -40,7 +40,7 @@ addWToast({
 The toast component is designed to automatically close by default, and it is recommended to avoid adding the manual dismiss button due to accessibility guidelines. If the toast absolutely must be dismissible, set the `dismissible` property to `true`.
 :::
 
-**Read more** under [Accessibility](/components/toast/accessibility).
+**Read more** under [Accessibility](/components/toast/tab_accessibility).
 
 ```js
 addWToast({
