@@ -11,6 +11,7 @@ Warp.TextField(
     placeholder: String = "",
     suffix: String? = nil,
     rightIcon: Warp.Icon? = nil,
+    rightIconAction: @escaping () -> Void? = { nil },
     style: Warp.TextFieldStyle = .default,
     helpText: String? = nil
 )
