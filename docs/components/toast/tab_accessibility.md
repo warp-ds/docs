@@ -4,4 +4,4 @@ From an accessibility perspective, toasts should never contain interactive eleme
 
 Because of these limitations, we consider the use of toasts to be somewhat of an anti-pattern, and recommend exploring alternative approaches wherever possible. That said, you may still use toasts, as long as you avoid interactive elements like links or close buttons.
 
-<component-questions />
+
