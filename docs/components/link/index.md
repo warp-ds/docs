@@ -24,25 +24,36 @@ category: Layout
 placeholder:
   label: Link component
 frameworks:
-- name: Android
-  status: released
 - name: React 19
   status: beta
+- name: Android
+  status: released
+- name: iOS
+  status: planned
 ---
 # {{ $frontmatter.title }}
 {{ $frontmatter.description }}
 
 <DsComponentStatus align="left" hide-unsupported />
 
-## Example
-<ThemeSwitcher />
-<link-example />
+<!--
+DsMainTabs — how it works (for authors)
 
-## Usage
+• This page’s tab bar is generated automatically.
+• Create one Markdown file per tab in the SAME folder as this index.md.
+• Naming: tab_*.md  (examples: tab_overview.md, tab_usage.md, tab_styling.md, tab_code.md, tab_accessibility.md)
+• Default order (when unnamed/unnumbered): Overview → Usage → Styling → Code → Accessibility
+• To force a custom order, add a number after tab_:
+    tab_10-overview.md, tab_20-usage.md, tab_30-styling.md, tab_40-code.md, tab_50-accessibility.md
+• Tab label is taken from the tab file’s frontmatter `title:` if present; otherwise it’s derived from the filename.
+• Custom tabs are allowed (e.g. tab_experimental.md → “Experimental”).
+• No imports needed — the component discovers and renders these files automatically.
+• Heading levels: start content in tab files at `##` (H2). The page H1 comes from the main index.md title.
+• Code tab: name the file exactly `tab_code.md`.
 
-<component-design-guidelines name="Warp - Components / Link" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components-2.0?node-id=11099-1148&t=ZymxezFIu8VQzAW8-0" />
+That’s it — add/edit/remove tab_*.md files and the UI updates on the next build/refresh.
+-->
 
-## Framework(s)
-<DsCodeTabs />
+<DsMainTabs />
 
 <component-questions />
