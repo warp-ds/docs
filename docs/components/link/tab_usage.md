@@ -33,8 +33,6 @@ Use links when you want users to:
 
 ### States
 
-### States
-
 | **State**    | **Web**                                                                             | **Native**                                                                |
 | ------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | **Default**  | Default colour with optional underline based on use case.                           | No underline; styled with default color.                                  |
