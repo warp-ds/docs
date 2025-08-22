@@ -38,6 +38,25 @@
   --vp-c-svg10: #EBEEF6;
   --vp-c-svg11: #131B2D;
   --vp-c-svg12: #FFFFFF;
+
+  --ds-fw-chip-released-bg:    #2e7d32;
+  --ds-fw-chip-released-fg:    #ffffff;
+
+  --ds-fw-chip-beta-bg:        #a06a00; /* yellow/orange */
+  --ds-fw-chip-beta-fg:        #ffffff;
+
+  --ds-fw-chip-developing-bg:  #a46000;
+  --ds-fw-chip-developing-fg:  #ffffff;
+
+  --ds-fw-chip-planned-bg:     #0b5fad;
+  --ds-fw-chip-planned-fg:     #ffffff;
+
+  --ds-fw-chip-unsupported-bg: #777777;
+  --ds-fw-chip-unsupported-fg: #ffffff;
+
+  --ds-fw-chip-deprecated-bg: #be3830;
+  --ds-fw-chip-deprecated-fg: #fff;
+
 }
 
 /* Dark mode */
@@ -68,6 +87,25 @@ html.dark {
   --vp-c-svg10: #1B263E;
   --vp-c-svg11: #FFFFFF;
   --vp-c-svg12: #000000;
+
+  --ds-fw-chip-released-bg:    #2e7d32;
+  --ds-fw-chip-released-fg:    #ffffff;
+
+  --ds-fw-chip-beta-bg:        #b07d00; /* a touch brighter in dark */
+  --ds-fw-chip-beta-fg:        #ffffff;
+
+  --ds-fw-chip-developing-bg:  #a46000;
+  --ds-fw-chip-developing-fg:  #ffffff;
+
+  --ds-fw-chip-planned-bg:     #0b5fad;
+  --ds-fw-chip-planned-fg:     #ffffff;
+
+  --ds-fw-chip-unsupported-bg: #555555;
+  --ds-fw-chip-unsupported-fg: #ffffff;
+
+  --ds-fw-chip-deprecated-bg: #be3830;
+  --ds-fw-chip-deprecated-fg: #fff;
+
 }
 
 /* Map the custom doc content to the --vp tokens, or set them directly */
@@ -215,7 +253,11 @@ html.dark body {
 {
   color: var(--vp-c-brand-2);
 }
-
+.VPSidebar .VPSidebarGroup + .VPSidebarGroup {
+  border-top: 1px solid var(--vp-c-divider);
+  margin-top: .5rem;
+  padding-top: .5rem;
+}
 .styled-image-block {
     background-color: #f5f5f5; /* Light grey background */
     padding: 16px;

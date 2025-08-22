@@ -1,19 +1,46 @@
-<script setup>
-  import android from './android.md';
-  import data from './data.json';
-  import Elements from './elements.md';
-  import iOS from './ios.md';
-  import React from './react.md';
-  import Vue from './vue.md';
-  
-  import { mapFrameworkStatuses } from '../utils.js';
-</script>
+---
+# Frontmatter reference (keep this comment block):
+# - title:        Human-readable component name (Sentence case).
+# - description:  One short sentence that also works as SEO meta description.
+# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities).
+# - placeholder:  For the overview thumbnail/alt text.
+# - frameworks:   Add one entry per platform.
+#
+#   Legal framework names (case-sensitive):
+#     React | React 19 | Vue | Elements | Android | iOS | Figma
+#   Notes:
+#     • "Figma" is allowed for catalog completeness; it’s ignored by tabs/matrix.
+#     • Use “iOS” (capital i + OS).
+#
+#   Legal status values (lowercase):
+#     released | beta | developing | planned | deprecated | unsupported
+#   Tips:
+#     • Use lowercase for status.
+#     • `reason` is optional, shown for unsupported/planned/etc.
 
-# Callout
+title: Callout
+description: Callouts are snippets of information, drawing attention to important
+  content.
+category: Overlays
+placeholder:
+  label: Callout component
+frameworks:
+- name: React
+  status: released
+- name: Vue
+  status: released
+- name: Elements
+  status: released
+- name: iOS
+  status: released
+- name: Android
+  status: released
+- name: Figma
+---
+# {{ $frontmatter.title }}
+{{ $frontmatter.description }}
 
-{{ data.description }}
-
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+<DsComponentStatus align="left" hide-unsupported />
 
 ## Example
 <ThemeSwitcher />
@@ -23,24 +50,7 @@
 
 <component-design-guidelines name="Warp - Components / Callout" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components-2.0?node-id=381-42328&t=ypV9S2xFCv8kSzjB-0" />
 
+## Framework(s)
+<DsCodeTabs />
+
 <component-questions />
-
-## Frameworks
-
-<tabs-content>
-  <template #react>
-    <react />
-  </template>
-  <template #vue>
-    <vue />
-  </template>
-  <template #elements>
-    <elements />
-  </template>
-  <template #android>
-    <android />
-  </template>
-  <template #iOS>
-    <iOS />
-  </template>
-</tabs-content>

@@ -1,49 +1,62 @@
-<script setup>
-  import React from './react.md';
-  import Vue from './vue.md';
-  import data from './data.json';
-  import iOS from './ios.md';
-  import Android from './android.md';
-  import { mapFrameworkStatuses } from '../utils.js';
-</script>
+---
+# - title:        Human-readable component name (Sentence case) used as a title everywhere the component is referenced..
+title: Slider
+# - description:  One short sentence that also works as SEO meta description.
+description: Sliders allow users to adjust a numeric value within a given range.
+# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities). Will be used as a category/filter in the overview.
+category: Forms
+# - placeholder:  For the overview thumbnail/alt text. Will use a wireframed component graphic (placeholder.svg) on component root if it excists.
+placeholder:
+  label: Slider component
+#  - frameworks:   Add one entry per platform.
+#   Legal framework names (case-sensitive):
+#     React | React 19 | Vue | Elements | Android | iOS | Figma
+#   Notes:
+#     • "Figma" is allowed for catalog completeness; it’s ignored by tabs/matrix.
+#     • Use “iOS” (capital i + OS).
+#
+#   Legal status values (lowercase):
+#     released | beta | developing | planned | deprecated | unsupported
+#   Tips:
+#     • Use lowercase for status.
+#     • `reason` is optional, shown for unsupported/planned/etc.
+frameworks:
+- name: React 19
+  status: beta
+- name: React
+  status: released
+- name: Vue
+  status: released
+- name: Elements
+  status: unsupported
+- name: iOS
+  status: released
+- name: Android
+  status: released
+---
 
-# Slider
+# {{ $frontmatter.title }}
+{{ $frontmatter.description }}
 
-{{ data.description }}
+<DsComponentStatus align="left" hide-unsupported />
 
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+<!--
+DsMainTabs — how it works (for authors)
 
-## Examples
-<ThemeSwitcher />
-<slider-example />
+• This page’s tab bar is generated automatically.
+• Create one Markdown file per tab in the SAME folder as this index.md.
+• Naming: tab_*.md  (examples: tab_overview.md, tab_usage.md, tab_styling.md, tab_code.md, tab_accessibility.md)
+• Default order (when unnamed/unnumbered): Overview → Usage → Styling → Code → Accessibility
+• To force a custom order, add a number after tab_:
+    tab_10-overview.md, tab_20-usage.md, tab_30-styling.md, tab_40-code.md, tab_50-accessibility.md
+• Tab label is taken from the tab file’s frontmatter `title:` if present; otherwise it’s derived from the filename.
+• Custom tabs are allowed (e.g. tab_experimental.md → “Experimental”).
+• No imports needed — the component discovers and renders these files automatically.
+• Heading levels: start content in tab files at `##` (H2). The page H1 comes from the main index.md title.
+• Code tab: name the file exactly `tab_code.md`.
 
-## Usage
-
-<component-design-guidelines name="Warp - Components / Slider" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=377-23902&mode=design" />
-
-### Accessibility
-
-To be accessible, an `aria-label` prop should be provided to the slider. If the slider is labeled by a separate element, use the `labelledby` prop with the id of the labeling element instead.
-
-### Events
-
-The slider accepts an `onChange` prop which is triggered whenever the value is changed by the user. Note that this value updates as the user is dragging.
+That’s it — add/edit/remove tab_*.md files and the UI updates on the next build/refresh.
+-->
+<DsMainTabs />
 
 <component-questions />
-
-## Frameworks
-
-<tabs-content>
-  <template #react>
-   <react />
-  </template>
-  <template #vue>
-    <vue />
-  </template>
-      <template #iOS>
-    <iOS />
-  </template>
-  <template #android>
-    <android />
-  </template>
-</tabs-content>

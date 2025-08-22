@@ -4234,6 +4234,12 @@ export const iOS = {
         'An optional `Warp.Icon` displayed on the right side of the text field.'
       ],
       [
+        'rightIconAction',
+        '() -> Void?',
+        'nil',
+        'An optional action for right icon'
+      ],
+      [
         'style',
         'Warp.TextFieldStyle',
         '.default',

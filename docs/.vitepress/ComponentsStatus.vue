@@ -1,112 +1,69 @@
 <script setup>
-import { computed } from 'vue';
+import { computed } from 'vue'
 
 const props = defineProps({
-  react: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  reactBeta: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  vue: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  elements: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  android: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  },
-  ios: {
-    type: String,
-    default: 'unsupported',
-    validator: (value) => ['released', 'developing', 'planned', 'unsupported'].includes(value)
-  }
-});
+  react:    { type: String, default: 'unsupported', validator: v => ['released','beta','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  react19:  { type: String, default: 'unsupported', validator: v => ['released','beta','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  vue:      { type: String, default: 'unsupported', validator: v => ['released','beta','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  elements: { type: String, default: 'unsupported', validator: v => ['released','beta','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  android:  { type: String, default: 'unsupported', validator: v => ['released','beta','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  ios:      { type: String, default: 'unsupported', validator: v => ['released','beta','developing','planned','unsupported'].includes((v||'').toLowerCase()) },
+  align:    { type: String, default: 'auto' } // 'auto' | 'left' | 'center'
+})
 
-const frameworkStatus = computed(() => [
-  { name: 'React', status: props.react },
-  { name: 'React-beta', status: props.reactBeta },
-  { name: 'Vue', status: props.vue },
-  { name: 'Elements', status: props.elements },
-  { name: 'Android', status: props.android },
-  { name: 'iOS', status: props.ios }
-]);
+// Map frameworks to their icon keys
+function iconFor(framework) {
+  switch (framework) {
+    case 'React':
+    case 'React 19': return 'react'
+    case 'Vue':      return 'vue'
+    case 'Elements': return 'webcomponents'
+    case 'Android':  return 'android'
+    case 'iOS':      return 'apple'
+    default:         return ''
+  }
+}
+
+const items = computed(() => ([
+  { label: 'React',    status: props.react },
+  { label: 'React 19', status: props.react19 },
+  { label: 'Vue',      status: props.vue },
+  { label: 'Elements', status: props.elements },
+  { label: 'Android',  status: props.android },
+  { label: 'iOS',      status: props.ios }
+]))
+
+const justifyClass = computed(() => {
+  if (props.align === 'left') return 'fw-left'
+  if (props.align === 'center') return 'fw-center'
+  return 'fw-auto'
+})
 </script>
 
 <template>
-  <div class="component-status">
-    <div v-for="framework in frameworkStatus" :key="framework.name" class="framework">
-      <div :class="`circle circle--${framework.status}`"></div>
-      <div>
-        <h4 class="title">{{ framework.name }}</h4>
-        <span class="status">{{ framework.status }}</span>
-      </div>
-    </div>
+  <div class="fw-badges" :class="justifyClass" role="list" aria-label="Framework support status">
+    <WarpBadge
+      v-for="it in items"
+      :key="it.label"
+      :framework="it.label"
+      :icon="iconFor(it.label)"
+      :status="it.status"
+    />
   </div>
 </template>
 
-<style lang="scss" scoped>
-.component-status {
+<style scoped>
+.fw-badges {
   display: flex;
-  flex-flow: row wrap;
-  margin-top: 24px;
-  column-gap: 24px;
-  row-gap: 24px;
-
-  @media (min-width: 990px) and (max-width: 1103px), (min-width: 1280px) and (max-width: 1365px) {
-    column-gap: 32px;
-  }
-  @media (min-width: 721px) and (max-width: 959px), (min-width: 1080px) and (max-width: 1279px), (min-width: 1366px) {
-    column-gap: 48px;
-  }
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: .5rem 0 1rem;
 }
-
-.framework {
-  display: flex;
+.fw-auto { justify-content: center; }
+@media (min-width: 960px) {
+  .fw-auto { justify-content: flex-start; }
 }
-
-.title {
-  margin: 0;
-}
-
-.circle {
-  border-radius: 50%;
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin-right: 8px;
-  margin-top: 6px;
-
-  &--released {
-    background-color: #67eeb8
-  }
-
-  &--planned {
-    background-color: #66e0ff
-  }
-
-  &--developing {
-    background-color:  #fae76b;
-  }
-
-  &--unsupported {
-    background-color: #f99
-  }
-}
-
-.status {
-  text-transform: capitalize;
-  font-size: 14px;
-}
+.fw-left   { justify-content: flex-start; }
+.fw-center { justify-content: center; }
 </style>

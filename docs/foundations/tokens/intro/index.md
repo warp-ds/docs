@@ -6,22 +6,22 @@ By defining design tokens, we establish a common language that can be easily tra
 
 ## Supported brands
 
-WARP is supporting multiple Vend brands, we’re currently working on adding more brands and support for each brand.
+WARP is supporting multiple Schibsted Marketplace brands, we’re currently working on adding more brands and support for each brand.
 
-<!---
-TODO
-Add token support status on brands: https://nmp-jira.atlassian.net/browse/WARP-591
-(dtalakoubi404 - Sep 30 2024)
--->
+| Brand                                        | Figma   | Web     | iOS     | Android |
+| -------------------------------------------- | ------- | ------- | ------- | ------- |
+| FINN                                         | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| Tori                                         | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| DBA                                          | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| Blocket                                      | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
+| Bilbasen                                     | TBA ⌛  | TBA ⌛  | TBA ⌛  | TBA ⌛  |
+| Oikotie                                      | TBA ⌛  | TBA ⌛  | TBA ⌛  | TBA ⌛  |
+| Neutral <span class="beta-badge">Beta</span> | Live ✅ | Live ✅ | TBA ⌛  | Live ✅ |
+| Vend <span class="beta-badge">Beta</span>    | Live ✅ | Live ✅ | TBA ⌛  | Live ✅ |
 
-| Brand    | Figma   | Web     | iOS     | Android |
-| -------- | ------- | ------- | ------- | ------- |
-| FINN     | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
-| Tori     | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
-| DBA      | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
-| Blocket  | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
-| Bilbasen | TBA ⌛  | TBA ⌛  | TBA ⌛  | TBA ⌛  |
-| Oikotie  | TBA ⌛  | TBA ⌛  | TBA ⌛  | TBA ⌛  |
+::: tip Note
+The Vend and Neutral themes are available in Warp and open for testing, but they’re still in beta—please do not use them in production for now. For more information, [read this communication](https://sch-chat.slack.com/archives/C05ET166B42/p1744625736206399).
+:::
 
 ## Semantic colour tokens
 

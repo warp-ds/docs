@@ -1,26 +1,55 @@
-<script setup>
-  import Vue from './vue.md';
-  import React from './react.md';
-  import Elements from './elements.md';
-  import Android from './android.md';
-  import iOS from './ios.md';
-  import data from './data.json';
-  import { mapFrameworkStatuses } from '../utils.js';
-</script>
+---
+# Frontmatter reference (keep this comment block):
+# - title:        Human-readable component name (Sentence case).
+# - description:  One short sentence that also works as SEO meta description.
+# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities).
+# - placeholder:  For the overview thumbnail/alt text.
+# - frameworks:   Add one entry per platform.
+#
+#   Legal framework names (case-sensitive):
+#     React | React 19 | Vue | Elements | Android | iOS | Figma
+#   Notes:
+#     • "Figma" is allowed for catalog completeness; it’s ignored by tabs/matrix.
+#     • Use “iOS” (capital i + OS).
+#
+#   Legal status values (lowercase):
+#     released | beta | developing | planned | deprecated | unsupported
+#   Tips:
+#     • Use lowercase for status.
+#     • `reason` is optional, shown for unsupported/planned/etc.
 
-# Modal
-{{ data.description }}
+title: Modal
+description: A modal is a focused dialog that temporarily blocks the interface to
+  request a specific decision or input. Because it pauses the experience, use it sparingly
+  for high-priority tasks.
+category: Overlays
+placeholder:
+  label: Modal component
+frameworks:
+- name: React
+  status: released
+- name: Vue
+  status: released
+- name: Elements
+  status: released
+- name: Android
+  status: released
+- name: iOS
+  status: released
+---
+# {{ $frontmatter.title }}
+{{ $frontmatter.description }}
 
-They are overlays that prevent users from interacting with the rest of the application until a specific action is taken. They can be disruptive because they require merchants to take an action before they can continue interacting with the rest of the site. It should be used thoughtfully and sparingly.
-
-<components-status v-bind="mapFrameworkStatuses(data.frameworks)" />
+<DsComponentStatus align="left" hide-unsupported />
 
 ## Example
 <ThemeSwitcher />
 <modal-example />
 
-## Usage
+## Overview
+A modal overlays the page and prevents interaction with the underlying UI until the user completes an action (for example, confirm, cancel, or provide required input). This interruption is useful for time-sensitive or high-impact decisions, but it can be disruptive if overused. When a modal is necessary, keep content concise, make the primary action clear, offer a safe dismiss option, and avoid stacking multiple modals.
 
+## Usage
 <component-design-guidelines name="Warp - Components / Modal" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=354-18223&mode=design" />
 
 ### Accessibility
@@ -28,24 +57,7 @@ Modal needs either aria-label or aria-labelledby to be accessible to screen read
 
 All dialogs must have a title. Titles appear in bold at the top of the dialog and use a few words to convey the outcome of what will happen if a user continues with an action. Use the property title for this.
 
+## Framework(s)
+<DsCodeTabs />
+
 <component-questions />
-
-## Frameworks
-
-<tabs-content>
-  <template #react>
-    <react />
-  </template>
-  <template #vue>
-    <vue />
-  </template>
-  <template #elements>
-    <elements />
-  </template>
-    <template #android>
-    <android />
-  </template>
-    <template #iOS>
-    <iOS />
-  </template>
-</tabs-content>
