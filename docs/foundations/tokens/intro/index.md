@@ -27,7 +27,7 @@ The Vend and Neutral themes are available in Warp and open for testing, but they
 
 Semantic tokens are not connected to any specific component and can be used to create custom designs that are still multi-brand friendly.
 
-If you are building a component that doesn’t exist in WARP you can still use semantic tokens and get support for dark mode and all other SMP brands for free.
+If you are building a component that doesn’t exist in WARP you can still use semantic tokens and get support for dark mode and all other Vend brands for free.
 
 This is a visualization of all the semantic colour tokens existing in WARP, use it as a reference to see what’s available and the difference between brands.
 
