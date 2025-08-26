@@ -10,7 +10,7 @@ A toast overlay is used to provide system status notifications, such as error, c
     <img src="/components/toast/toast-positive.svg" alt="Positive toast" />
   </div>
 
-  <div>
+  <div class="py-16">
 
 The positive toast uses the green semantic colour and includes a checkmark icon (Success) to support clarity for those with colour vision deficiency. **It’s used to indicate a successful action or the completion of a task.**
 
@@ -24,7 +24,7 @@ The positive toast uses the green semantic colour and includes a checkmark icon 
     <img src="/components/toast/toast-warning.svg" alt="Warning toast" />
   </div>
 
-  <div>
+  <div class="py-16">
 
   The warning toast uses the orange semantic colour and features a triangular warning icon (Warning) to aid those with colour vision deficiency in recognising the message tone. **It should be used when the message needs to draw more attention than the other variants.**
 
@@ -38,7 +38,7 @@ The positive toast uses the green semantic colour and includes a checkmark icon 
     <img src="/components/toast/toast-negative.svg" alt="Negative toast" />
   </div>
 
-  <div>
+  <div class="py-16">
 
   The negative toast uses the red semantic colour and includes an error icon (Error) to help those with colour vision deficiency understand the message tone. **It’s used to indicate an error or failure.**
 

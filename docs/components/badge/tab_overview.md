@@ -17,7 +17,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-neutral.svg" alt="Neutral badge" />
   </div>
 
-  <div>The neutral badge shows subtle or non-urgent information. It's used for general statuses or relevant information that don't require immediate attention.
+  <div class="py-16">The neutral badge shows subtle or non-urgent information. It's used for general statuses or relevant information that don't require immediate attention.
   </div>
 </div>
 
@@ -28,7 +28,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-info.svg" alt="Info badge" />
   </div>
 
-  <div>The info badge shows normal and informative details or context. It's used to highlight key aspects or provide additional context.
+  <div class="py-16">The info badge shows normal and informative details or context. It's used to highlight key aspects or provide additional context.
   </div>
 </div>
 
@@ -39,7 +39,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-positive.svg" alt="Positive badge" />
   </div>
 
-  <div>The positive badge is used to indicate a successful action or the completion of a task. It uses the green semantic colour, universally associated with success or positive connotations.
+  <div class="py-16">The positive badge is used to indicate a successful action or the completion of a task. It uses the green semantic colour, universally associated with success or positive connotations.
   </div>
 </div>
 
@@ -50,7 +50,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-warning.svg" alt="Warning badge" />
   </div>
 
-  <div>The warning badge highlights cautionary or advisory information with the intention of drawing more attention than the other variants, but are not yet critical or destructive.
+  <div class="py-16">The warning badge highlights cautionary or advisory information with the intention of drawing more attention than the other variants, but are not yet critical or destructive.
   </div>
 </div>
 
@@ -61,7 +61,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-negative.svg" alt="Negative badge" />
   </div>
 
-  <div>The negative badge indicates critical or destructive information that requires immediate attention.
+  <div class="py-16">The negative badge indicates critical or destructive information that requires immediate attention.
   </div>
 </div>
 
@@ -72,7 +72,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-sponsored.svg" alt="Sponsored badge" />
   </div>
 
-  <div>The sponsored badge is used to indicate that a particular ad appears at the top of a list due to plaid placement by the seller. This variant is reserved exclusively for this use case and should not be used in any other context.
+  <div class="py-16">The sponsored badge is used to indicate that a particular ad appears at the top of a list due to plaid placement by the seller. This variant is reserved exclusively for this use case and should not be used in any other context.
   </div>
 </div>
 
@@ -83,7 +83,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-price.svg" alt="Price badge" />
   </div>
 
-  <div>The primary purpose of the price badge is to display prices across user journeys. However, this variant can also be used in cases where it needs to stand out prominently on the screen. It features a darker background, creating stronger contrast with the content behind it. While the variant is currently named “price,” its applications extend beyond pricing alone, so the description should reflect its broader use cases.
+  <div class="py-16">The primary purpose of the price badge is to display prices across user journeys. However, this variant can also be used in cases where it needs to stand out prominently on the screen. It features a darker background, creating stronger contrast with the content behind it. While the variant is currently named “price,” its applications extend beyond pricing alone, so the description should reflect its broader use cases.
   </div>
 </div>
 
@@ -94,7 +94,7 @@ Related components: [Pill](../pill/index.md)
     <img src="/components/badge/badge-variants-disabled.svg" alt="Disabled badge" />
   </div>
 
-  <div>The disabled badge indicates an inactive state. It should be used when a feature or item exists but is not currently active—for example, when a user has created a draft ad that hasn't been published or made publicly visible. This badge helps communicate that the item is present but not in effect, and no immediate action can be taken.
+  <div class="py-16">The disabled badge indicates an inactive state. It should be used when a feature or item exists but is not currently active—for example, when a user has created a draft ad that hasn't been published or made publicly visible. This badge helps communicate that the item is present but not in effect, and no immediate action can be taken.
   </div>
 </div>
 
