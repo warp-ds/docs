@@ -19,8 +19,7 @@
 #     • `reason` is optional, shown for unsupported/planned/etc.
 
 title: Badge
-description: Badge is used for showing a small amount of non-interactive color-categorized
-  metadata, like a status or count.
+description: Badges are used to highlight a relevant piece of information, like status or category.
 category: Layout
 placeholder:
   label: Badge component
@@ -42,16 +41,6 @@ frameworks:
 
 <DsComponentStatus align="left" hide-unsupported />
 
-## Example
-<ThemeSwitcher />
-<badge-example />
-
-## Usage
-
-<component-design-guidelines name="Warp - Components / Badge" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=249-11911&mode=design&t=CxdPkiD3C2rBtqKv-0" />
-
-## Framework(s)
-
-<DsCodeTabs />
+<DsMainTabs />
 
 <component-questions />
