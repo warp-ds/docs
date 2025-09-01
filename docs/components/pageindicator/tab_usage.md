@@ -1,15 +1,17 @@
-Page indicators are usually used in image carousels, and supported by carousel controls that give the user power to navigate through the carousel of images. 
+Page indicators are usually used in image carousels, and supported by carousel controls that give the user power to navigate through the carousel of images.
 
 **Use page indicators when:**
-- You have one or more images, or pages, you want to show, but don’t have space to show them all at once. 
+
+- You have one or more images, or pages, you want to show, but don’t have space to show them all at once.
 - When you want to clearly illustrate how many images, or pages, are available.
 
 **When using page indicators:**
-- The number of dots varies depending on the number of pages. 
+
+- The number of dots varies depending on the number of pages.
 - Although there is no maximum limit to the amount of dots you can use, don’t display too many.
 - The aim of page indicators is to give users’ a quick overview of how many pages, or images, there are to be viewed, so using more than 8 dots is too hard to count at a glance.
 
-## Behavior 
+## Behavior
 
 - Individual indicator dots have two states: active and inactive
 - Should only show one active dot at a time
@@ -18,5 +20,24 @@ Page indicators are usually used in image carousels, and supported by carousel c
 - Have varying number of dots depending on the number of pages.
 - Center a page control at the bottom of the view or window. To ensure people always know where to find a page control, centre it horizontally and position it near the bottom of the view.
 
-
 <component-design-guidelines name="Warp - Components / Page indicator" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/branch/5VhDenFoNQFag7sjurrkVQ/WARP---Components?node-id=24975-5642&t=QMfAx1S5Uvo3jkM3-0" />
+
+## Placement
+
+<div class="flex gap-20 w-full">
+  <div class="w-1/2">
+  You can place the page indicator inside or outside the content. We recommend you leave a margin of 16px when placing it outside the image and 12px when using it inside. You can adjust this margin if necessary.
+  <br />
+  <br />
+  The page indicator should always be horizontally centred within its parent container.
+  </div>
+  <span class="w-1/2 flex flex-col gap-20">
+    <img src="/components/pageindicator/placement-inside.svg" alt="Page indicator placed inside the content container with 12px right margin" />
+    <img src="/components/pageindicator/placement-outside.svg" alt="Page indicator placed outside the content container with 24px margin" />
+  </span>
+</div>
+
+## Resizing
+
+The width is automatically adjusted according to the numbers of dots.
+The height of the component is fixed and should not be changed.
