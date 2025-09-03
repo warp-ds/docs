@@ -6,7 +6,7 @@ By defining design tokens, we establish a common language that can be easily tra
 
 ## Supported brands
 
-WARP is supporting multiple Schibsted Marketplace brands, we’re currently working on adding more brands and support for each brand.
+WARP is supporting multiple Vend brands, we’re currently working on adding more brands and support for each brand.
 
 | Brand                                        | Figma   | Web     | iOS     | Android |
 | -------------------------------------------- | ------- | ------- | ------- | ------- |
