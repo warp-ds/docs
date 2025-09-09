@@ -2,6 +2,10 @@ A text area is used to capture extended user input, such as messages, item descr
 
 Related components: [Text field](../textfield/index.md).
 
+## Examples
+<ThemeSwitcher />
+<textarea-example />
+
 ## Variants
 
 ### Default
