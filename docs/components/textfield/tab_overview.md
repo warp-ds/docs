@@ -2,6 +2,10 @@ It supports a wide range of behaviours, labels, icons, prefixes/suffixes, toolti
 
 Related components: [Text area](../textarea/index.md), [Select](../select/index.md).
 
+## Examples
+<ThemeSwitcher />
+<textfield-example />
+
 ## Variants
 
 ### Default
