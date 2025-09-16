@@ -76,6 +76,10 @@ Similar to the inline picker, you can constrain the selectable dates:
 
 Note: The dialog picker will intercept all touch events on the view it's applied to.
 
+### Legacy support
+
+Not supported
+
 ### Parameters
 
 <api-table type=iOS component="DatePicker" />
