@@ -25,7 +25,7 @@ import { Box } from '@warp-ds/react/components/box'
 ```
 
 You can find the specific import statement to import each component on that
-component's documentation page. For example, here's the [button page](/components/button/)
+component's documentation page. For example, here's the [button page](/components/button/).
 
 
 ## TypeScript support

@@ -4,4 +4,4 @@ Guidance on reporting bugs and errors.
 ## Slack
 If you encounter a bug or an error, please reach out on Slack and we will look into it. 
 
-[#smp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)
+[#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)

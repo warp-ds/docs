@@ -125,7 +125,7 @@ const cardData = {
       <p class="banner-content">Need help or support? The best way to get in touch with the team is through Slack.</p>
       <div class="slack-section">
         <img src="/slack-icon.svg" alt="Slack icon" width="24px" class="slack-icon"/>
-        <a href="https://sch-chat.slack.com/archives/C04P0GYTHPV" target="_blank" class="banner-link">#smp-warp-design-system</a>
+        <a href="https://sch-chat.slack.com/archives/C04P0GYTHPV" target="_blank" class="banner-link">#warp-design-system</a>
       </div>
     </div>
   </div>
