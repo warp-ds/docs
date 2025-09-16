@@ -28,6 +28,8 @@ frameworks:
   status: beta
 - name: Android
   status: released
+- name: iOS
+  status: released
 - name: Figma
 ---
 
