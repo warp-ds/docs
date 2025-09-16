@@ -26,6 +26,8 @@ placeholder:
 frameworks:
 - name: React 19
   status: beta
+- name: Android
+  status: released
 - name: Figma
 ---
 
