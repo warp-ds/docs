@@ -3737,6 +3737,24 @@ export const iOS = {
       ],
     ],
   },
+  DatePicker: {
+    required: [
+      [
+        'date',
+        'Binding<Date>',
+        '',
+        'A binding to the currently selected date.'
+      ],
+    ],
+    props: [
+      [
+        'range',
+        'ClosedRange<Date>|PartialRangeFrom<Date>|PartialRangeThrough<Date>',
+        '',
+        'The range of selectable dates. If not provided, there is no date range restriction.'
+      ]
+    ]
+  },
   Expandable: {
     required: [
       [
