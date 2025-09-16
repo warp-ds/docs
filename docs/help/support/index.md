@@ -38,7 +38,7 @@ const members = [
     title: 'Lead Android Developer',
   },
   {
-    avatar: "https://ca.slack-edge.com/T0356Q2CJ-U0266UPB5RU-a07e97493e28-72",
+    avatar: "https://ca.slack-edge.com/T0356Q2CJ-U09374BCZJ5-a43970e6c724-512",
     name: 'Łukasz Śliwa',
     title: 'Lead iOS Developer',
   },

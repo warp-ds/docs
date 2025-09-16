@@ -14,7 +14,7 @@ Only the used utilities are shipped to your app, ensuring speed and efficiency i
 
 If you are migrating from Fabric to Warp, please visit the [Migration page](./migrate-from-fabric/).
 
-If you have any questions or need clarification, please don't hesitate to reach out to the Warp team on the [#smp-warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) channel on Slack!
+If you have any questions or need clarification, please don't hesitate to reach out to the Warp team on the [#warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) channel on Slack!
 
 ## 1. Integrate with UnoCSS and Warp
 

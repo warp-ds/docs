@@ -10,7 +10,7 @@ The Vend a11y team has a playbook where you'll find essential tips and tools to 
 [Accessibility Playbook](https://zeroheight.com/23ed9d143/p/504116-accessibility-playbook)
 
 **Slack support**<br>
-[#smp-accessibility](https://sch-chat.slack.com/archives/C06MRNFR8)
+[#vend-accessibility](https://sch-chat.slack.com/archives/C06MRNFR8)
 
 ## Figma Plugins
 
