@@ -3404,6 +3404,49 @@ RangeSlider: {
       ],
     ]
   },
+  Datepicker: {
+    required: [
+      [
+        'onDateSelected', 
+        '(Long) -> Unit',
+        '', 
+        'The function to be invoked when a date is selected',
+      ]
+    ],
+      props: [
+      [
+        'modifier',
+        'Modifier',
+        'Modifier',
+        'Modifier for the datepicker',
+      ],
+      [
+        'onDismiss',
+        '() -> Unit?',
+        'null',
+        'The function to be invoked when dismissed ',
+      ],
+      [
+        'preselectedDateMillis',
+        'Long?',
+        'null',
+        'When provided the preselected date is shown in the picker, if null then todays date is used',
+      ],
+      [
+        'type',
+        'WarpDatePickerType.DIALOG, WarpDatePickerType.INLINE',
+        'WarpDatePickerType.DIALOG',
+        'The type of picker to be used',
+      ],
+      [
+        'selectableDates',
+        'SelectableDates',
+        'DatePickerDefaults.AllDates',
+        'Determines which dates are eligible for selection',
+      ],
+      
+    ]
+  },
 };
 
 export const iOS = {
