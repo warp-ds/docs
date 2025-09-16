@@ -10,7 +10,7 @@ Astro is the UX writers guide to create effective, localised, and accessible con
 [Astro Portal](https://zeroheight.com/05b2d7be6/p/3162dd-astro-content-style-guide)
 
 **Slack support**<br>
-[#smp-uxwriting](https://sch-chat.slack.com/archives/C05A5JGK269)
+[#uxwriting](https://sch-chat.slack.com/archives/C05A5JGK269)
 
 ![Text spelling "Astro"](/foundations/astro.png)
 
@@ -28,9 +28,9 @@ Our typography have similar naming and use cases, but different font properties 
 
 | Brand    | Link                                                                                                                   |
 | -------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Bilbasen | [GT Walsheim Pro](https://drive.google.com/file/d/1rP4hJDm19MotFYGKFnhBygLu9fAzbyWB/view?usp=sharing)                  |
-| Blocket  | [Blocket Sans & Blocket Display](https://drive.google.com/drive/folders/1rymmBSeVOXei8NgXWTvRKZMrUsv-XQrY?usp=sharing) |
-| DBA      | [Proxima Nova](https://drive.google.com/file/d/11hU6LZcJXXuw03OtiSHwgiL8G5N4pvpx/view?usp=sharing)                     |
-| FINN     | [FINNType](https://drive.google.com/file/d/1i8GDCRkqrwX9pcYO2rxgLyYupA1cnAaH/view?usp=drive_link)                      |
-| Tori     | [Tori Sans Family](https://drive.google.com/file/d/1edpCXS6yaNqxFqr5MQ3sZPLgXhvBrGPY/view?usp=sharing)                 |
-| Oikotie  | [Roboto](https://drive.google.com/file/d/1ft2NRkbY-UYcoaq7AGSmUZnNl0TEGC4Q/view?usp=sharing)                           |
+| Bilbasen | [GT Walsheim Pro](https://drive.google.com/file/d/1bOA6RVTfXO5NBs-YRRUPIxr4KCGbh1y9/view?usp=drive_link)                  |
+| Blocket  | [Blocket Sans & Blocket Display](https://drive.google.com/drive/folders/1tELjrbHZImwaHGI7uTtLuSYJvLzl-giT?usp=drive_link) |
+| DBA      | [Proxima Nova](https://drive.google.com/file/d/1sdfQgzx5Av5hHl69iB6zYZE9CTOb56SI/view?usp=drive_link)                     |
+| FINN     | [FINNType](https://drive.google.com/file/d/1ReyX8Vac6hnXCbsAcV5jLRQ4p8FsPsev/view?usp=drive_link)                      |
+| Tori     | [Tori Sans Family](https://drive.google.com/file/d/1BkyYUR3sAoNrY2rvDC7hSandXp78_xtD/view?usp=drive_link)                 |
+| Oikotie  | [Roboto](https://drive.google.com/file/d/1-0_2_ZCPTRvCOy6QCbBafIVvVofMLI0i/view?usp=drive_link)                           |
