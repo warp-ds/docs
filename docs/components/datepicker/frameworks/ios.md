@@ -2,7 +2,15 @@
 
 A graphical calendar interface that can be embedded directly in your view hierarchy.
 
-#### Basic
+### Syntax
+
+```swift
+Warp.DatePicker(
+    date: Binding<Date>
+)
+```
+
+#### Basic usage
 
 ```swift
 Warp.DatePicker(date: $selectedDate)
@@ -27,7 +35,15 @@ Warp.DatePicker(date: $selectedDate, range: ...endDate)
 
 A compact date picker that can be attached to any view using a view modifier.
 
-#### Basic
+### Syntax
+
+```swift
+ .warpDatePicker(
+    date: Binding<Date>
+) -> some View
+```
+
+#### Basic usage
 
 This example shows how to attach a dialog date picker to Warp TextField using the `warpDatePicker` modifier + some formatting.
 
