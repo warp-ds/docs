@@ -3,7 +3,7 @@
 
 This page describes how to get started building an application with Warp components.
 
-If you have any questions or need clarification, please don't hesitate to reach out to the Warp team on the [#smp-warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) channel on Slack!
+If you have any questions or need clarification, please don't hesitate to reach out to the Warp team on the [#warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) channel on Slack!
 
 
 ## 1. Integrate Warp

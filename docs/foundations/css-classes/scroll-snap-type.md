@@ -4,7 +4,7 @@
 Utilities for controlling how strictly snap points are enforced in a snap container.
 
 ::: danger Unsupported
-This functionality is not yet supported! If you need this, reach out to us on [#smp-warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV).
+This functionality is not yet supported! If you need this, reach out to us on [#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV).
 :::
 
 ## Quick reference
