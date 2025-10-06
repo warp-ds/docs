@@ -27,6 +27,8 @@ frameworks:
   status: Beta
 - name: iOS
   status: Released
+- name: Android
+  status: released
 ---
 
 # {{ $frontmatter.title }}

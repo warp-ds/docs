@@ -3447,6 +3447,30 @@ RangeSlider: {
       
     ]
   },
+  PageIndicator: {
+    required: [
+      [
+        'pageCount', 
+        'Int',
+        '', 
+        'Number of dots to be displayed',
+      ]
+    ],
+      props: [
+      [
+        'modifier',
+        'Modifier',
+        'Modifier',
+        'Modifier for the page indicator',
+      ],
+      [
+        'currentPage', 
+        'Int',
+        '0', 
+        'Current dot to be selected',
+      ]
+    ]
+  },
 };
 
 export const iOS = {
