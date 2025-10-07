@@ -12,7 +12,7 @@ We've made several updates to the Warp Component Library in Figma to better alig
 
 ### Neutral mode updates
 - **Blue primitives updated:** Replaced the former Oikotie Blue with Blocket Blue.
-- **Token changes:** `Semantic/Colour/Background/Primary`, `Semantic/Colour/Background/Selected` and `Semantic/Color/Text/Link` tokens updated to Blue (previously Gray) to better support Backoffice systems.
+- **Token changes:** All primitives for the `Primary`, `Selected` and `Info` token categories (backgrounds, borders, and icon fills) have been updated from Gray to Blue to better support Backoffice systems.
 - **Figma library updates:** Neutral theme added to Typography overview, Component overview (light/dark), and as example variations across all component pages.
 
 ![Comparison of Warp components in the Neutral theme before and after the updates, illustrating new blue tokens.](/whats-new/2025/design-10-07-1.svg)
@@ -20,12 +20,12 @@ We've made several updates to the Warp Component Library in Figma to better alig
 
 ### Accessible border tokens
 - **New tokens added:** `Semantic/Color/Border/Strong` and `Semantic/Color/Border/Strong-Hover` to improve accessibility and ensure consistent contrast for interactive components.
-- **Updates to components:** Tokens applied to Default and Hover states of Checkbox, Radio, Text Area, Text Field, and Select.
+- **Updates to components:** Tokens applied to Default and Hover states of Checkbox, Radio, Text area, Text field, and Select.
 - **Important:** Buttons intentionally continue using `Semantic/Color/Border/Default` tokens (`Secondary` and `Utility` variants).
 
 ![Visual overview showing how the new border strong tokens appear in each brand theme, including variations for light and dark modes.](/whats-new/2025/design-10-07-2.svg)
 
-![Comparison of Warp components using the new border strong tokens versus the old ones, highlighting improved contrast and consistency across light and dark themes for Radio, Checkbox, Text Field, Text Area, and Select components.](/whats-new/2025/design-10-07-3.svg)
+![Comparison of Warp components using the new border strong tokens versus the old ones, highlighting improved contrast and consistency across light and dark themes for Radio, Checkbox, Text field, Text area, and Select components.](/whats-new/2025/design-10-07-3.svg)
 
 
 ### Text area
@@ -33,7 +33,7 @@ We've made several updates to the Warp Component Library in Figma to better alig
 **Component updates:**
 - General layer optimisation.
 - Changes to properties settings for proper behaviour and alignment with implementation.
-- Added Error Hover and Error Active states.
+- Added Error Hover state.
 - Renamed elements labeling for consistency with Text field and Select components. 
 - Applied `Semantic/Color/Border/Strong` tokens to Default and Hover states.
 
