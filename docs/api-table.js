@@ -4094,13 +4094,109 @@ export const iOS = {
         'step',
         'Double',
         '1.0',
-        'Step value for the slider'
+        'The increment by which the slider value should change.'
+      ],
+      [
+        'showTooltips',
+        'Bool',
+        'true',
+        'Whether to show tooltips above the thumbs.'
+      ],
+      [
+        'showRange',
+        'Bool',
+        'false',
+        'Whether to show min/max range indicators.'
+      ],
+      [
+        'enabled',
+        'Bool',
+        'true',
+        'Whether the slider is enabled or disabled.'
+      ],
+      [
+        'valueFormatter',
+        '(Double) -> String',
+        'nil',
+        'A closure that formats the displayed value. Defaults to a simple string conversion.'
       ],
       [
         'onEditingChanged',
         '((Double) -> Void)?',
         'nil',
-        'Completion handler to return the value when handle is dropped'
+        'A closure that is called when the slider\'s thumb is released, passing the final value as an argument.'
+      ],
+      [
+        'selectedItem',
+        'Binding<T> (where T: LosslessStringConvertible & Equatable)',
+        '—',
+        'For discrete sliders: a binding to the currently selected item from the list.'
+      ],
+      [
+        'items',
+        'Array<T> (where T: LosslessStringConvertible & Equatable)',
+        '—',
+        'For discrete sliders: an array of items to choose from.'
+      ],
+    ],
+  },
+  RangeSlider: {
+    required: [
+      [
+        'range',
+        'Binding<ClosedRange<Double>>',
+        '',
+        'A binding to the current selected range of the slider.'
+      ],
+      [
+        'bounds',
+        'ClosedRange<Double>',
+        '',
+        'The minimum and maximum values for the slider.'
+      ],
+    ],
+    props: [
+      [
+        'step',
+        'Double',
+        '1.0',
+        'The increment by which the slider value should change.'
+      ],
+      [
+        'showTooltips',
+        'Bool',
+        'true',
+        'Whether to show tooltips above the thumbs.'
+      ],
+      [
+        'showRange',
+        'Bool',
+        'false',
+        'Whether to show min/max range indicators.'
+      ],
+      [
+        'enabled',
+        'Bool',
+        'true',
+        'Whether the slider is enabled or disabled.'
+      ],
+      [
+        'selectedItems',
+        'Binding<[T]>',
+        '',
+        'For discrete sliders: a binding to the currently selected items from the list. T must conform to LosslessStringConvertible & Equatable.'
+      ],
+      [
+        'items',
+        'Array<T>',
+        '',
+        'For discrete sliders: an array of items to choose from. T must conform to LosslessStringConvertible & Equatable.'
+      ],
+      [
+        'valueFormat',
+        '(T) -> String',
+        'nil',
+        'For discrete sliders: a closure that formats the displayed value. Defaults to a simple string conversion.'
       ],
     ],
   },

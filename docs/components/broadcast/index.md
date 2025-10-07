@@ -28,7 +28,7 @@ frameworks:
 - name: Elements
   status: deprecated
 - name: iOS
-  status: released
+  status: deprecated
 ---
 # {{ $frontmatter.title }}
 {{ $frontmatter.description }}
