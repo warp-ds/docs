@@ -7,7 +7,7 @@ A toast overlay is used to provide system status notifications, such as error, c
 
 <div class="grid grid-cols-2 gap-24">
   <div class="py-16">
-    <img src="/components/toast/toast-positive.svg" alt="Positive toast" />
+    <img src="/components/toast/overview-variants-positive.svg" alt="Positive toast" />
   </div>
 
   <div class="py-16">
@@ -21,7 +21,7 @@ The positive toast uses the green semantic colour and includes a checkmark icon 
 
 <div class="grid grid-cols-2 gap-24">
   <div class="py-16">
-    <img src="/components/toast/toast-warning.svg" alt="Warning toast" />
+    <img src="/components/toast/overview-variants-warning.svg" alt="Warning toast" />
   </div>
 
   <div class="py-16">
@@ -35,7 +35,7 @@ The positive toast uses the green semantic colour and includes a checkmark icon 
 
 <div class="grid grid-cols-2 gap-24">
   <div class="py-16">
-    <img src="/components/toast/toast-negative.svg" alt="Negative toast" />
+    <img src="/components/toast/overview-variants-negative.svg" alt="Negative toast" />
   </div>
 
   <div class="py-16">
@@ -52,9 +52,6 @@ The positive toast uses the green semantic colour and includes a checkmark icon 
 :::
 
 1. Toast container
-
 2. Icon
-
 3. Text
-
 4. Close button (optional)

@@ -15,7 +15,7 @@
 ## Behaviour
 
 - Placeholder text is shown when the field is empty.
-- Icons and affixes (prefix/suffix) are non-interactive by default. Icons can optionally be used for actions related to the input content, e.g., clearing the field, toggling password visibility, opening the date picker, etc.
+- Icons and affixes (prefix/suffix) are non-interactive by default. Icons can optionally be used for actions related to the input content, e.g. clearing the field, toggling password visibility, opening the date picker, etc.
 - Icons must clearly indicate their function, in case of interaction, support keyboard navigation and screen reader, and should not interfere with typing or focus behaviour.
 - Error state overrides help text.
 - Optional tooltip appears on hover/focus of info icon.
@@ -32,7 +32,7 @@ All interactive elements of the text field, such as info tooltip or clear button
 
 - Use a input label to clearly describe the purpose of the input, don’t rely on placeholder alone.
 - Keep input label text short and concise.
-- Use Hint (placeholder) text to provide brief instructions for the expected input. Since placeholder disappear when users start typing, avoid adding critical information.
+- Use Placeholder text to provide brief instructions for the expected input. Since placeholder disappear when users start typing, avoid adding critical information.
 - Use the help text area for any examples or formatting hints, so that it's visible after the user enters text in the input area. Only use this where clarification is required, and try to avoid overuse.
 - Error text should be short, clear, and solution focused.
 
@@ -44,7 +44,7 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
-    <img src="/components/textfield/usage-state-default.svg" alt="Default text field with label, placeholder and help text" />
+    <img src="/components/textfield/usage-states-default.svg" alt="Default text field with label, placeholder and help text" />
   </div>
 
   <div>
@@ -56,7 +56,7 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
-    <img src="/components/textfield/usage-state-hover.svg" alt="Default text field with hover state" />
+    <img src="/components/textfield/usage-states-hover.svg" alt="Default text field with hover state" />
   </div>
 
   <div>
@@ -68,11 +68,11 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
-    <img src="/components/textfield/usage-state-active.svg" alt="Default text field with active state" />
+    <img src="/components/textfield/usage-states-active.svg" alt="Default text field with active state" />
   </div>
 
   <div>
-  Field is focused and ready for text input.
+  Field is focused and ready for user input.
   </div>
 </div>
 
@@ -80,23 +80,11 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
-    <img src="/components/textfield/usage-state-filled.svg" alt="Default text field with filled state" />
+    <img src="/components/textfield/usage-states-filled.svg" alt="Default text field with filled state" />
   </div>
 
   <div>
-  Field contains user input.
-  </div>
-</div>
-
-### Disabled
-
-<div class="grid grid-cols-2 gap-24 py-16">
-  <div>
-    <img src="/components/textfield/usage-state-disabled.svg" alt="Default text field with disabled state" />
-  </div>
-
-  <div>
-  Field cannot be interacted with, grayed out visually.
+  Field contains user’s input.
   </div>
 </div>
 
@@ -104,11 +92,23 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
-    <img src="/components/textfield/usage-state-error.svg" alt="Default text field with error state" />
+    <img src="/components/textfield/usage-states-error.svg" alt="Default text field with error state" />
   </div>
 
   <div>
-  Validation failed — shows red border and message below (help text).
+  Failed input validation. It shows red border and actionable message below (help text).
+  </div>
+</div>
+
+### Error hover
+
+<div class="grid grid-cols-2 gap-24 py-16">
+  <div>
+    <img src="/components/textfield/usage-states-error_hover.svg" alt="Default text field with active error state" />
+  </div>
+
+  <div>
+  Errored field border highlights on mouse hover.
   </div>
 </div>
 
@@ -116,7 +116,7 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
-    <img src="/components/textfield/usage-state-erroractive.svg" alt="Default text field with active error state" />
+    <img src="/components/textfield/usage-states-error_active.svg" alt="Default text field with active error state" />
   </div>
 
   <div>
@@ -124,14 +124,26 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   </div>
 </div>
 
-### Read Only
+### Disabled
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
-    <img src="/components/textfield/usage-state-readonly.svg" alt="Default text field with read-only state" />
+    <img src="/components/textfield/usage-states-disabled.svg" alt="Default text field with disabled state" />
   </div>
 
   <div>
-  Text is visible but not editable.
+  Field cannot be interacted with, grayed out out visually.
+  </div>
+</div>
+
+### Read-only
+
+<div class="grid grid-cols-2 gap-24 py-16">
+  <div>
+    <img src="/components/textfield/usage-states-read_only.svg" alt="Default text field with read-only state" />
+  </div>
+
+  <div>
+  Input is visible but not editable.
   </div>
 </div>

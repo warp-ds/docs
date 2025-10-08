@@ -4,14 +4,14 @@
 
 ## Overview
 
-A range slider provides a visual indication of adjustable minimum and maximum values within a defined range by moving two handles along a horizontal track.
+A Range slider provides a visual indication of adjustable minimum and maximum values within a defined range by moving two handles along a horizontal track.
 
-Sliders are available in two different variants: Single and Range slider (read docs below).
+Sliders are available in two different variants: [Single](/docs/components/slider/) and Range slider (read docs below).
 
 ## Anatomy
 
 ::: image-block
-![Example of a Range Slider](/components/rangeslider/overview-1.svg)
+![Example of a Range slider](/components/rangeslider/overview-anatomy.svg)
 :::
 
 **1. Label**: Describes what the slider controls or adjusts.
