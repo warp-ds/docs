@@ -178,6 +178,8 @@ export const borderColor = [
   's-border-inverted',
   's-border-focus', // Added in v2
   's-border-focused', // Removed in v2
+  's-border-strong',
+  's-border-strong-hover',
   's-border-primary',
   's-border-primary-hover',
   's-border-primary-active',
