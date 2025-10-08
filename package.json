@@ -11,7 +11,8 @@
     "lint:check": "pnpm biome lint .",
     "lint": "pnpm biome lint --write .",
     "serve": "vitepress serve docs",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
   },
   "type": "module",
   "license": "Apache-2.0",
@@ -30,6 +31,7 @@
     "camelcase": "8.0.0",
     "date-fns": "^4.1.0",
     "decamelize": "6.0.0",
+    "husky": "^9.1.7",
     "markdown-it": "14.1.0",
     "react": "19.2.0",
     "react-dom": "19.2.0",
