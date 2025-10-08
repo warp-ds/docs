@@ -1,29 +1,62 @@
-const getValueClasses = (classPrefixes, classValues) => classPrefixes.reduce(
-  (result, prefix) => [
-    ...result,
-    ...classValues.map((value) => `${prefix}-${value}`)
-  ],
-  []
-);
+const getValueClasses = (classPrefixes, classValues) =>
+  classPrefixes.reduce(
+    (result, prefix) => [
+      ...result,
+      ...classValues.map((value) => `${prefix}-${value}`),
+    ],
+    []
+  );
 
-const getDirectionalClasses = (baseClasses, replacePrefix, directions = ['l','r','t','b','x','y']) => {
+const getDirectionalClasses = (
+  baseClasses,
+  replacePrefix,
+  directions = ['l', 'r', 't', 'b', 'x', 'y']
+) => {
   const replaceRegexp = new RegExp(`^(${replacePrefix})`);
   return baseClasses.reduce(
     (result, baseClass) => [
       ...result,
-      ...directions.map((direction) => baseClass.replace(replaceRegexp, `$1${direction}-`))
+      ...directions.map((direction) =>
+        baseClass.replace(replaceRegexp, `$1${direction}-`)
+      ),
     ],
     []
-  )
-}
-;
+  );
+};
+const getWidthClasses = (classPrefixes) =>
+  getValueClasses(classPrefixes, [0, 1, 2, 4, 8]);
 
-const getWidthClasses = (classPrefixes) => getValueClasses(classPrefixes, [0,1,2,4,8]);
+const getSpacingClasses = (classPrefixes) =>
+  getValueClasses(classPrefixes, [
+    'auto',
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    20,
+    24,
+    28,
+    32,
+    40,
+    44,
+    48,
+    56,
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+  ]);
 
-const getSpacingClasses = (classPrefixes) => getValueClasses(classPrefixes, ['auto', 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]);
-
-const getRoundingClasses = (classPrefixes) => getValueClasses(classPrefixes, ['full',0,2,4,8,16]);
-
+const getRoundingClasses = (classPrefixes) =>
+  getValueClasses(classPrefixes, ['full', 0, 2, 4, 8, 16]);
 
 export const alignContent = [
   'content-start',
@@ -62,7 +95,7 @@ export const backdropBlur = [
   'backdrop-blur-l',
   'backdrop-blur-xl',
   'backdrop-blur-xxl',
-  'backdrop-blur-xxxl'
+  'backdrop-blur-xxxl',
 ];
 
 export const backgroundAttachment = [
@@ -165,11 +198,38 @@ export const backgroundRepeat = [
 
 export const backgroundSize = ['bg-auto', 'bg-cover', 'bg-contain'];
 
-export const backgroundImage = ['bg-none', 'bg-[url({url})]', 'bg-[url(var(--any-css-variable))]'];
+export const backgroundImage = [
+  'bg-none',
+  'bg-[url({url})]',
+  'bg-[url(var(--any-css-variable))]',
+];
 
 export const basis = getValueClasses(
-  [ 'basis' ],
-  ['1/2', '1/3', '2/3', '1/4', '3/4', '1/5', '2/5', '3/5', '4/5', '1/6', '5/6', 0, 1, 2, 4, 8, 10, 12, 16, 32, 48, 64]
+  ['basis'],
+  [
+    '1/2',
+    '1/3',
+    '2/3',
+    '1/4',
+    '3/4',
+    '1/5',
+    '2/5',
+    '3/5',
+    '4/5',
+    '1/6',
+    '5/6',
+    0,
+    1,
+    2,
+    4,
+    8,
+    10,
+    12,
+    16,
+    32,
+    48,
+    64,
+  ]
 );
 
 export const borderCollapse = ['border-collapse', 'border-separate'];
@@ -187,6 +247,8 @@ export const borderColor = [
   's-border-inverted',
   's-border-focus', // Added in v2
   's-border-focused', // Removed in v2
+  's-border-strong',
+  's-border-strong-hover',
   's-border-primary',
   's-border-primary-hover',
   's-border-primary-active',
@@ -224,7 +286,10 @@ export const borderColor = [
   's-border-info-subtle-active',
 ];
 
-export const directionalBorderColor = getDirectionalClasses(borderColor, 's-border-');
+export const directionalBorderColor = getDirectionalClasses(
+  borderColor,
+  's-border-'
+);
 
 export const borderWidth = getWidthClasses([
   'border',
@@ -233,7 +298,7 @@ export const borderWidth = getWidthClasses([
   'border-l',
   'border-r',
   'border-t',
-  'border-b'
+  'border-b',
 ]);
 
 export const borderRadius = [
@@ -250,12 +315,17 @@ export const borderRadius = [
 
 export const borderRadiusValues = getRoundingClasses(borderRadius);
 
-export const columns = getValueClasses(['columns'], [1,2,3,4,5,6,7,8,9,10,11,12]);
+export const columns = getValueClasses(
+  ['columns'],
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+);
 
-export const outlineColor = borderColor.map(c => c.replace('border', 'outline'))
+export const outlineColor = borderColor.map((c) =>
+  c.replace('border', 'outline')
+);
 
 export const outline = [
-  ...getValueClasses(['outline', 'outline-offset'], [0,1,2,4,8]),
+  ...getValueClasses(['outline', 'outline-offset'], [0, 1, 2, 4, 8]),
   'outline',
   'outline-dashed',
   'outline-dotted',
@@ -263,14 +333,17 @@ export const outline = [
   'outline-none',
 ];
 
-export const divideColor = borderColor.map(c => c.replace('border', 'divide'))
+export const divideColor = borderColor.map((c) =>
+  c.replace('border', 'divide')
+);
 
-export const divideWidth = getWidthClasses(['divide','divide-x','divide-y']);
+export const divideWidth = getWidthClasses([
+  'divide',
+  'divide-x',
+  'divide-y',
+]);
 
-export const divideReverse = [
-  'divide-x-reverse',
-  'divide-y-reverse'
-];
+export const divideReverse = ['divide-x-reverse', 'divide-y-reverse'];
 
 export const borderStyle = [
   'border-solid',
@@ -467,11 +540,7 @@ export const fontVariantNumeric = [
   'proportional-nums',
 ];
 
-export const gap = getSpacingClasses([
-  'gap',
-  'gap-x',
-  'gap-y',
-]);
+export const gap = getSpacingClasses(['gap', 'gap-x', 'gap-y']);
 
 export const gridAutoFlow = [
   'grid-flow-row',
@@ -495,16 +564,39 @@ export const gridAutoRows = [
   'auto-rows-fr',
 ];
 
-export const gridCols = getValueClasses(['grid-cols'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-export const gridColSpan = getValueClasses(['col-span'], [1,2,3,4,5,6,7,8,9,10,11,12,13]);
-export const gridColStart = getValueClasses(['col-start'], [1,2,3,4,5,6,7,8,9,10,11,12,13]);
-export const gridColEnd = getValueClasses(['col-end'], [1,2,3,4,5,6,7,8,9,10,11,12,13]);
+export const gridCols = getValueClasses(
+  ['grid-cols'],
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+);
+export const gridColSpan = getValueClasses(
+  ['col-span'],
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+);
+export const gridColStart = getValueClasses(
+  ['col-start'],
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+);
+export const gridColEnd = getValueClasses(
+  ['col-end'],
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+);
 
-export const gridRows = getValueClasses(['grid-rows'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-export const gridRowSpan = getValueClasses(['row-span'], [1,2,3,4,5,6,7]);
-export const gridRowStart = getValueClasses(['row-start'], [1,2,3,4,5,6,7]);
-export const gridRowEnd = getValueClasses(['row-end'], [1,2,3,4,5,6,7]);
-
+export const gridRows = getValueClasses(
+  ['grid-rows'],
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+);
+export const gridRowSpan = getValueClasses(
+  ['row-span'],
+  [1, 2, 3, 4, 5, 6, 7]
+);
+export const gridRowStart = getValueClasses(
+  ['row-start'],
+  [1, 2, 3, 4, 5, 6, 7]
+);
+export const gridRowEnd = getValueClasses(
+  ['row-end'],
+  [1, 2, 3, 4, 5, 6, 7]
+);
 
 export const iconColor = [
   's-icon',
@@ -569,10 +661,7 @@ export const lineHeight = [
   'leading-xxxl',
 ];
 
-export const listStylePosition = [
-  'list-inside',
-  'list-outside',
-];
+export const listStylePosition = ['list-inside', 'list-outside'];
 
 export const listStyleType = [
   'list-none',
@@ -592,7 +681,13 @@ export const margin = getSpacingClasses([
 ]);
 
 export const maxWidth = [
-  ...getValueClasses(['max-w'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['max-w'],
+    [
+      0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48,
+      56, 64, 80, 96, 112, 128, 144,
+    ]
+  ),
   'max-w-none',
   'max-w-full',
   'max-w-min',
@@ -602,7 +697,13 @@ export const maxWidth = [
 ];
 
 export const maxHeight = [
-  ...getValueClasses(['max-h'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['max-h'],
+    [
+      0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48,
+      56, 64, 80, 96, 112, 128, 144,
+    ]
+  ),
   'max-h-full',
   'max-h-screen',
   'max-h-min',
@@ -610,7 +711,13 @@ export const maxHeight = [
   'max-h-fit',
 ];
 export const minWidth = [
-  ...getValueClasses(['min-w'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['min-w'],
+    [
+      0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48,
+      56, 64, 80, 96, 112, 128, 144,
+    ]
+  ),
   'min-w-full',
   'min-w-min',
   'min-w-max',
@@ -618,7 +725,13 @@ export const minWidth = [
 ];
 
 export const minHeight = [
-  ...getValueClasses(['min-h'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['min-h'],
+    [
+      0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48,
+      56, 64, 80, 96, 112, 128, 144,
+    ]
+  ),
   'min-h-full',
   'min-h-min',
   'min-h-max',
@@ -672,7 +785,10 @@ export const opacity = [
 ];
 
 export const order = [
-  ...getValueClasses(['order'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
+  ...getValueClasses(
+    ['order'],
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  ),
   'order-none',
   'order-first',
   'order-last',
@@ -743,8 +859,47 @@ export const position = [
 ];
 
 export const positioning = getValueClasses(
-  [ 'top', 'right', 'bottom', 'left', '-top', '-right', '-bottom', '-left', 'inset', 'inset-x', 'inset-y' ],
-  ['a', '1/2', 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]
+  [
+    'top',
+    'right',
+    'bottom',
+    'left',
+    '-top',
+    '-right',
+    '-bottom',
+    '-left',
+    'inset',
+    'inset-x',
+    'inset-y',
+  ],
+  [
+    'a',
+    '1/2',
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    20,
+    24,
+    28,
+    32,
+    40,
+    44,
+    48,
+    56,
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+  ]
 );
 
 export const resize = [
@@ -755,11 +910,17 @@ export const resize = [
 ];
 
 export const rotate = [
-  ...getValueClasses(['rotate'], [0,30,45,90,135,180,225,270,315]),
+  ...getValueClasses(
+    ['rotate'],
+    [0, 30, 45, 90, 135, 180, 225, 270, 315]
+  ),
 ];
 
 export const scale = [
-  ...getValueClasses(['scale'], [10,20,25,50,75,100,125,150,175,200]),
+  ...getValueClasses(
+    ['scale'],
+    [10, 20, 25, 50, 75, 100, 125, 150, 175, 200]
+  ),
 ];
 
 export const screenReaders = ['sr-only', 'not-sr-only'];
@@ -785,18 +946,55 @@ export const scrollSnapType = [
 ];
 
 export const sizing = getValueClasses(
-  [ 'w', 'h', '-w', '-h' ],
-  ['auto', 'full', 'screen', 'min', 'max', '1/2', '1/3', '2/3', '1/4', '3/4', '1/5', '2/5', '3/5', '4/5', '1/6', '5/6', 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]
+  ['w', 'h', '-w', '-h'],
+  [
+    'auto',
+    'full',
+    'screen',
+    'min',
+    'max',
+    '1/2',
+    '1/3',
+    '2/3',
+    '1/4',
+    '3/4',
+    '1/5',
+    '2/5',
+    '3/5',
+    '4/5',
+    '1/6',
+    '5/6',
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    20,
+    24,
+    28,
+    32,
+    40,
+    44,
+    48,
+    56,
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+  ]
 );
 
 export const space = [
   'space-x-reverse',
   'space-y-reverse',
-  ...getSpacingClasses([
-    'space',
-    'space-x',
-    'space-y',
-  ])
+  ...getSpacingClasses(['space', 'space-x', 'space-y']),
 ];
 
 export const tableLayout = ['table-auto', 'table-fixed'];
@@ -872,10 +1070,19 @@ export const transformOrigin = [
 ];
 
 export const transitionDelay = [
-  ...getValueClasses(['delay'], [50,100,150,200,250,300,400,500,600,700,800,900,1000,1700]),
+  ...getValueClasses(
+    ['delay'],
+    [
+      50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000,
+      1700,
+    ]
+  ),
 ];
 export const transitionDuration = [
-  ...getValueClasses(['duration'], [50,100,150,200,250,300,400,500,600,700,800,900,1000]),
+  ...getValueClasses(
+    ['duration'],
+    [50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000]
+  ),
 ];
 
 export const transitionProperty = [
@@ -939,6 +1146,6 @@ export const wordBreak = [
 ];
 
 export const zIndex = getValueClasses(
-  [ 'z' ],
+  ['z'],
   ['auto', 0, 10, 20, 30, 40, 50]
 );
