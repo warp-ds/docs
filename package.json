@@ -4,14 +4,19 @@
   "description": "Documentation of the Warp Design System",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vitepress dev docs",
     "build": "vitepress build docs",
-    "serve": "vitepress serve docs"
+    "check": "pnpm biome check --write .",
+    "dev": "vitepress dev docs",
+    "format": "pnpm biome format --write .",
+    "lint:check": "pnpm biome lint .",
+    "lint": "pnpm biome lint --write .",
+    "serve": "vitepress serve docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@biomejs/biome": "2.2.5",
     "@itsy/okay": "0.0.4",
     "@unocss/core": "66.5.2",
     "@vueuse/core": "10.11.0",
