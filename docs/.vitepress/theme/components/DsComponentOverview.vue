@@ -1,28 +1,28 @@
 <script setup>
-import { ref, computed } from 'vue'
-import { withBase } from 'vitepress'
+import { withBase } from 'vitepress';
+import { computed, ref } from 'vue';
 
-const mdModules  = import.meta.glob('../../../components/*/index.md', { eager: true })
-const svgModules = import.meta.glob('../../../components/*/placeholder.svg', { eager: true, import: 'default' })
+const mdModules = import.meta.glob('../../../components/*/index.md', { eager: true });
+const svgModules = import.meta.glob('../../../components/*/placeholder.svg', { eager: true, import: 'default' });
 
 function fmOf(mod) {
-  if (!mod || typeof mod !== 'object') return null
-  return mod.frontmatter || mod.default?.frontmatter || mod.__pageData?.frontmatter || null
+  if (!mod || typeof mod !== 'object') return null;
+  return mod.frontmatter || mod.default?.frontmatter || mod.__pageData?.frontmatter || null;
 }
 function slugFromPath(p) {
-  const s = String(p).replace(/\\/g, '/')
-  return s.match(/\/components\/([^/]+)\/index\.md$/)?.[1] || s
+  const s = String(p).replace(/\\/g, '/');
+  return s.match(/\/components\/([^/]+)\/index\.md$/)?.[1] || s;
 }
 
 const placeholderBySlug = (() => {
-  const map = Object.create(null)
+  const map = Object.create(null);
   for (const [key, mod] of Object.entries(svgModules)) {
-    const s = String(key).replace(/\\/g, '/')
-    const slug = s.match(/\/components\/([^/]+)\/placeholder\.svg$/)?.[1]
-    if (slug) map[slug] = mod
+    const s = String(key).replace(/\\/g, '/');
+    const slug = s.match(/\/components\/([^/]+)\/placeholder\.svg$/)?.[1];
+    if (slug) map[slug] = mod;
   }
-  return map
-})()
+  return map;
+})();
 
 const NAME_ALIASES = new Map([
   ['react', 'React'],
@@ -33,76 +33,84 @@ const NAME_ALIASES = new Map([
   ['elements', 'Elements'],
   ['android', 'Android'],
   ['ios', 'iOS'],
-  ['figma', null]
-])
-const CANONICAL_LIST = ['React', 'React 19', 'Vue', 'Elements', 'Android', 'iOS']
-const CANONICAL = new Set(CANONICAL_LIST)
-const STATUS_OK = new Set(['released', 'beta', 'developing'])
+  ['figma', null],
+]);
+const CANONICAL_LIST = ['React', 'React 19', 'Vue', 'Elements', 'Android', 'iOS'];
+const CANONICAL = new Set(CANONICAL_LIST);
+const STATUS_OK = new Set(['released', 'beta', 'developing']);
 
 function toCanonical(name) {
-  const n = String(name || '').toLowerCase().trim()
-  return NAME_ALIASES.has(n) ? NAME_ALIASES.get(n) : null
+  const n = String(name || '')
+    .toLowerCase()
+    .trim();
+  return NAME_ALIASES.has(n) ? NAME_ALIASES.get(n) : null;
 }
 function normStatus(s) {
-  const v = String(s || '').toLowerCase().trim()
-  return STATUS_OK.has(v) ? v : 'unsupported'
+  const v = String(s || '')
+    .toLowerCase()
+    .trim();
+  return STATUS_OK.has(v) ? v : 'unsupported';
 }
 
 const allItems = Object.entries(mdModules)
   .map(([key, mod]) => {
-    const slug = slugFromPath(key)
-    if (slug.startsWith('_') || slug.startsWith('.')) return null
+    const slug = slugFromPath(key);
+    if (slug.startsWith('_') || slug.startsWith('.')) return null;
 
-    const fm = fmOf(mod) || {}
-    const raw = Array.isArray(fm.frameworks) ? fm.frameworks : []
+    const fm = fmOf(mod) || {};
+    const raw = Array.isArray(fm.frameworks) ? fm.frameworks : [];
     const frameworks = raw
-      .map(f => ({ name: toCanonical(f?.name), status: normStatus(f?.status) }))
-      .filter(f => f.name && CANONICAL.has(f.name) && STATUS_OK.has(f.status))
+      .map((f) => ({ name: toCanonical(f?.name), status: normStatus(f?.status) }))
+      .filter((f) => f.name && CANONICAL.has(f.name) && STATUS_OK.has(f.status));
 
-    if (frameworks.length === 0) return null
+    if (frameworks.length === 0) return null;
 
-    const title = fm.title || slug
-    const description = fm.description || ''
-    const category = fm.category || 'Uncategorized'
-    const svgComponent = placeholderBySlug[slug] || null
+    const title = fm.title || slug;
+    const description = fm.description || '';
+    const category = fm.category || 'Uncategorized';
+    const svgComponent = placeholderBySlug[slug] || null;
 
     return {
-      slug, title, description, category, frameworks, svgComponent,
+      slug,
+      title,
+      description,
+      category,
+      frameworks,
+      svgComponent,
       href: withBase(`/components/${slug}/`),
-      placeholder: { label: fm?.placeholder?.label || title }
-    }
+      placeholder: { label: fm?.placeholder?.label || title },
+    };
   })
   .filter(Boolean)
-  .sort((a, b) => a.title.localeCompare(b.title))
+  .sort((a, b) => a.title.localeCompare(b.title));
 
-const q = ref('')
-const picked = ref([]) // selected canonical names
+const q = ref('');
+const picked = ref([]); // selected canonical names
 
-const allFrameworks = computed(() => CANONICAL_LIST.slice())
+const allFrameworks = computed(() => CANONICAL_LIST.slice());
 
 const filtered = computed(() => {
-  const query = q.value.trim().toLowerCase()
-  const sel = picked.value.map(v => String(v).toLowerCase())
+  const query = q.value.trim().toLowerCase();
+  const sel = picked.value.map((v) => String(v).toLowerCase());
 
-  return allItems.filter(it => {
-    const textOk =
-      !query ||
-      it.title.toLowerCase().includes(query) ||
-      it.description.toLowerCase().includes(query)
+  return allItems.filter((it) => {
+    const textOk = !query || it.title.toLowerCase().includes(query) || it.description.toLowerCase().includes(query);
 
-    const fwNames = it.frameworks.map(f => f.name.toLowerCase())
-    const fwOk = sel.length === 0 || sel.some(s => fwNames.includes(s)) // OR
+    const fwNames = it.frameworks.map((f) => f.name.toLowerCase());
+    const fwOk = sel.length === 0 || sel.some((s) => fwNames.includes(s)); // OR
 
-    return textOk && fwOk
-  })
-})
+    return textOk && fwOk;
+  });
+});
 
 function toggleFramework(name) {
-  const i = picked.value.indexOf(name)
-  if (i >= 0) picked.value.splice(i, 1)
-  else picked.value.push(name)
+  const i = picked.value.indexOf(name);
+  if (i >= 0) picked.value.splice(i, 1);
+  else picked.value.push(name);
 }
-function showAll() { picked.value = [] }
+function showAll() {
+  picked.value = [];
+}
 </script>
 
 <template>

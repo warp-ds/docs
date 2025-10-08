@@ -1,5 +1,5 @@
 <script setup>
-import { wToggle, wButton } from '@warp-ds/vue';
+import { wButton, wToggle } from '@warp-ds/vue';
 import { ref } from 'vue';
 
 const isJustified = ref(false);
@@ -9,7 +9,7 @@ const multiToggleModel = ref('');
 const toggles = [
   { label: 'One', value: 1, 'data-test': 'toggle:1' },
   { label: 'Two', value: 2, 'data-test': 'toggle:2' },
-]
+];
 </script>
 
 <template>

@@ -1,9 +1,9 @@
 <script setup>
-  import { wBadge, wCard, wClickable, wDeadToggle } from '@warp-ds/vue';
-  import { ref } from 'vue';
+import { wBadge, wCard, wClickable, wDeadToggle } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-  const selected = ref(false);
-  const foo = ref('');
+const selected = ref(false);
+const foo = ref('');
 </script>
 
 <template>

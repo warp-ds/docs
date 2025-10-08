@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from 'vue'
-import { wAttention, wButton } from '@warp-ds/vue'
+import { wAttention, wButton } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-const popoverTarget = ref(null)
-const popoverShowing = ref(false)
+const popoverTarget = ref(null);
+const popoverShowing = ref(false);
 </script>
 
 <template>

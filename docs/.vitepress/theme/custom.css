@@ -18,94 +18,92 @@
   --vp-line-height-4: 28px;
 
   /* Light mode */
-  --vp-c-brand-1: #BE3830;
+  --vp-c-brand-1: #be3830;
   --vp-c-brand-2: #c63f36;
-  --vp-c-brand-3: #CF4840;
-  --vp-c-brand-soft: rgba(255,72,64,.14);
-  --vp-custom-block-tip-bg: rgba(var(--w-s-rgb-background-info), .10);
+  --vp-c-brand-3: #cf4840;
+  --vp-c-brand-soft: rgba(255, 72, 64, 0.14);
+  --vp-custom-block-tip-bg: rgba(var(--w-s-rgb-background-info), 0.1);
   --vp-c-text-1: #3c3c43;
-  --vp-c-text-1-inverted: #FFFBD5;
-  --vp-c-border: #C0C0D1;
-  --vp-c-bg: #FFFFFF;
-  --vp-c-bg-inverted: #131B2D;
+  --vp-c-text-1-inverted: #fffbd5;
+  --vp-c-border: #c0c0d1;
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-inverted: #131b2d;
   --vp-c-bg-soft: #f6f6f7;
   --vp-c-bg-soft-inverted: #182237;
   --vp-c-bg-alt: #f5f5f5;
   /* These are for svgs, to make them contrasty enough both in light and dark mode */
-  --vp-c-svg1: #FFFBD5;
-  --vp-c-svg2: #131B2D;
-  --vp-c-svg3: #9EACC9;
-  --vp-c-svg10: #EBEEF6;
-  --vp-c-svg11: #131B2D;
-  --vp-c-svg12: #FFFFFF;
+  --vp-c-svg1: #fffbd5;
+  --vp-c-svg2: #131b2d;
+  --vp-c-svg3: #9eacc9;
+  --vp-c-svg10: #ebeef6;
+  --vp-c-svg11: #131b2d;
+  --vp-c-svg12: #ffffff;
 
-  --ds-fw-chip-released-bg:    #2e7d32;
-  --ds-fw-chip-released-fg:    #ffffff;
+  --ds-fw-chip-released-bg: #2e7d32;
+  --ds-fw-chip-released-fg: #ffffff;
 
-  --ds-fw-chip-beta-bg:        #a06a00; /* yellow/orange */
-  --ds-fw-chip-beta-fg:        #ffffff;
+  --ds-fw-chip-beta-bg: #a06a00; /* yellow/orange */
+  --ds-fw-chip-beta-fg: #ffffff;
 
-  --ds-fw-chip-developing-bg:  #a46000;
-  --ds-fw-chip-developing-fg:  #ffffff;
+  --ds-fw-chip-developing-bg: #a46000;
+  --ds-fw-chip-developing-fg: #ffffff;
 
-  --ds-fw-chip-planned-bg:     #0b5fad;
-  --ds-fw-chip-planned-fg:     #ffffff;
+  --ds-fw-chip-planned-bg: #0b5fad;
+  --ds-fw-chip-planned-fg: #ffffff;
 
   --ds-fw-chip-unsupported-bg: #777777;
   --ds-fw-chip-unsupported-fg: #ffffff;
 
   --ds-fw-chip-deprecated-bg: #be3830;
   --ds-fw-chip-deprecated-fg: #fff;
-
 }
 
 /* Dark mode */
 html.dark {
-  --vp-c-brand-1: #F6D553;
-  --vp-c-brand-2: #F6D553;
-  --vp-c-brand-3: #F6D553;
+  --vp-c-brand-1: #f6d553;
+  --vp-c-brand-2: #f6d553;
+  --vp-c-brand-3: #f6d553;
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
-  --vp-home-hero-name-color: #F6D553;
-  --vp-c-text-1: #FFFBD5;
+  --vp-home-hero-name-color: #f6d553;
+  --vp-c-text-1: #fffbd5;
   --vp-c-text-1-inverted: #3c3c43;
   --vp-sidebar-bg-color: #182237;
-  --vp-c-bg: #131B2D;
-  --vp-c-bg-inverted: #FFFFFF;
+  --vp-c-bg: #131b2d;
+  --vp-c-bg-inverted: #ffffff;
   --vp-c-bg-soft: #182237;
   --vp-c-bg-soft-inverted: #f6f6f7;
   --vp-c-bg-alt: #0b0f1d;
-  --vp-nav-bg-color: #131B2D;
-  --vp-code-color: #EFC2BF;
+  --vp-nav-bg-color: #131b2d;
+  --vp-code-color: #efc2bf;
   --vp-c-tip-1: var(--vp-code-color);
   --vp-code-bg: #0b0f1d;
   --vp-custom-block-tip-code-bg: var(--vp-code-bg);
   --vp-code-block-bg: #0b0f1d;
-  --vp-c-border: #5C5C66;
-  --vp-c-svg1: #FFFBD5;
-  --vp-c-svg2: #9EACC9;
-  --vp-c-svg3: #D4D9E3;
-  --vp-c-svg10: #1B263E;
-  --vp-c-svg11: #FFFFFF;
+  --vp-c-border: #5c5c66;
+  --vp-c-svg1: #fffbd5;
+  --vp-c-svg2: #9eacc9;
+  --vp-c-svg3: #d4d9e3;
+  --vp-c-svg10: #1b263e;
+  --vp-c-svg11: #ffffff;
   --vp-c-svg12: #000000;
 
-  --ds-fw-chip-released-bg:    #2e7d32;
-  --ds-fw-chip-released-fg:    #ffffff;
+  --ds-fw-chip-released-bg: #2e7d32;
+  --ds-fw-chip-released-fg: #ffffff;
 
-  --ds-fw-chip-beta-bg:        #b07d00; /* a touch brighter in dark */
-  --ds-fw-chip-beta-fg:        #ffffff;
+  --ds-fw-chip-beta-bg: #b07d00; /* a touch brighter in dark */
+  --ds-fw-chip-beta-fg: #ffffff;
 
-  --ds-fw-chip-developing-bg:  #a46000;
-  --ds-fw-chip-developing-fg:  #ffffff;
+  --ds-fw-chip-developing-bg: #a46000;
+  --ds-fw-chip-developing-fg: #ffffff;
 
-  --ds-fw-chip-planned-bg:     #0b5fad;
-  --ds-fw-chip-planned-fg:     #ffffff;
+  --ds-fw-chip-planned-bg: #0b5fad;
+  --ds-fw-chip-planned-fg: #ffffff;
 
   --ds-fw-chip-unsupported-bg: #555555;
   --ds-fw-chip-unsupported-fg: #ffffff;
 
   --ds-fw-chip-deprecated-bg: #be3830;
   --ds-fw-chip-deprecated-fg: #fff;
-
 }
 
 /* Map the custom doc content to the --vp tokens, or set them directly */
@@ -127,36 +125,40 @@ html {
 }
 
 body {
-  --vp-font-family-base: Finntype, Inter, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
-    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --vp-font-family-base:
+    Finntype, Inter, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: auto;
 }
 
 html.dark body {
   background-color: var(--vp-c-bg);
   color: var(--vp-c-text-1);
-
 }
 
 .dark .VPNavBarTitle {
-  --vp-c-text-1: #F6D553;
+  --vp-c-text-1: #f6d553;
 }
 .dark .VPNavBarTitle .title {
-  border-bottom-color: transparent!important;
+  border-bottom-color: transparent !important;
 }
 .VPNavBar .container {
-  background-color: var(--vp-c-bg)
+  background-color: var(--vp-c-bg);
 }
-.VPNavBar .divider{
-  padding-left: 0!important;
+.VPNavBar .divider {
+  padding-left: 0 !important;
 }
 .dark .VPSidebar {
-  --vp-c-divider: #FFFBD525;
+  --vp-c-divider: #fffbd525;
 }
 
 .dark .VPHero .image-bg {
-  --vp-home-hero-image-background-image: linear-gradient(135deg, rgba(4,121,144, 0.25) 0%, rgba(138,105,156, 0.25) 100%);
+  --vp-home-hero-image-background-image: linear-gradient(
+    135deg,
+    rgba(4, 121, 144, 0.25) 0%,
+    rgba(138, 105, 156, 0.25) 100%
+  );
   --vp-home-hero-image-filter: blur(32px);
 }
 
@@ -176,12 +178,11 @@ html.dark body {
     display: none;
   }
 }
-@media (min-width: 768px) AND (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .VPNavBar .theme-switcher label {
     display: none;
   }
 }
-
 
 .vp-doc blockquote > p {
   font-size: 1.28rem !important;
@@ -207,21 +208,22 @@ html.dark body {
 }
 
 /* make lists great again */
-.vp-doc ul, .vp-doc ol {
+.vp-doc ul,
+.vp-doc ol {
   margin-top: 8px;
   padding-left: 16px;
 }
 
 /* Ensure tables behave like tables and take full width */
 .vp-doc table {
-  display: table;   /* Override any display: block */
-  min-width: 100%;  /* Ensure the table is at least 100% of its container */
+  display: table; /* Override any display: block */
+  min-width: 100%; /* Ensure the table is at least 100% of its container */
 }
 
 /* Wrap tables inside a container to handle horizontal overflow */
 .vp-doc .table-container {
   overflow-x: auto;
-  width: 100%;  /* Ensure the container itself takes up the full width */
+  width: 100%; /* Ensure the container itself takes up the full width */
 }
 .vp-doc kbd {
   display: inline-block;
@@ -239,36 +241,33 @@ html.dark body {
   white-space: nowrap;
 }
 
-
 .line-through {
   text-decoration-line: line-through;
 }
 
-.VPSidebarItem.has-active.collapsible > .item .caret
-{
+.VPSidebarItem.has-active.collapsible > .item .caret {
   color: var(--vp-c-text-1);
 }
 .VPSidebarItem.collapsible .item:hover *,
-.VPSidebarItem.has-active.collapsible > .item:hover .text
-{
+.VPSidebarItem.has-active.collapsible > .item:hover .text {
   color: var(--vp-c-brand-2);
 }
 .VPSidebar .VPSidebarGroup + .VPSidebarGroup {
   border-top: 1px solid var(--vp-c-divider);
-  margin-top: .5rem;
-  padding-top: .5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
 }
 .styled-image-block {
-    background-color: #f5f5f5; /* Light grey background */
-    padding: 16px;
-    margin: 16px 0;
-    border-radius: 8px;
-    width: 100%; /* Full width of parent */
-    position: relative; /* For absolute positioning of image */
-    overflow: hidden; /* To hide any overflow of the image */
-    display: flex;
-    align-items: center; /* Center image vertically */
-    justify-content: center; /* Center image horizontally */
+  background-color: #f5f5f5; /* Light grey background */
+  padding: 16px;
+  margin: 16px 0;
+  border-radius: 8px;
+  width: 100%; /* Full width of parent */
+  position: relative; /* For absolute positioning of image */
+  overflow: hidden; /* To hide any overflow of the image */
+  display: flex;
+  align-items: center; /* Center image vertically */
+  justify-content: center; /* Center image horizontally */
 }
 
 .styled-image-block img {
@@ -276,7 +275,6 @@ html.dark body {
   height: auto; /* Maintain image aspect ratio */
   object-fit: cover; /* Cover the container, preserving aspect ratio */
 }
-
 
 /* Plain html elements with general styling for the whole doc */
 /* Use on all standard buttons */
@@ -303,7 +301,7 @@ html.dark body {
   color: var(--vp-c-input-text);
   padding: 4px 8px;
   border-radius: 9999px;
-  min-width: 60px
+  min-width: 60px;
 }
 
 .doc-pill-active {
@@ -334,10 +332,10 @@ html.dark body {
 }
 
 .beta-badge {
-    color: white;
-    background-color: #BE3830;
-    padding: 4px 8px;
-    margin: 0px 8px;
-    border-radius: 4px;
-    font-weight: bold;
+  color: white;
+  background-color: #be3830;
+  padding: 4px 8px;
+  margin: 0px 8px;
+  border-radius: 4px;
+  font-weight: bold;
 }

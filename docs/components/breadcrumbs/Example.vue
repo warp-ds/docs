@@ -1,5 +1,5 @@
 <script setup>
-  import { wBreadcrumbs } from '@warp-ds/vue';
+import { wBreadcrumbs } from '@warp-ds/vue';
 </script>
 
 <template>

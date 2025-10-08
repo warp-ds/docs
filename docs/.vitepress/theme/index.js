@@ -1,26 +1,25 @@
-import { h } from 'vue';
+import { IconStarFull32 } from '@warp-ds/icons/vue';
 import DefaultTheme from 'vitepress/theme';
-
-// Legacy imports
-import ApiTable from '../ApiTable.vue';
-import TabsContent from '../TabsContent.vue';
-import ThemeSwitcher from '../ThemeSwitcher.vue';
+import { h } from 'vue';
 import ComponentDesignGuidelines from '../../components/ComponentDesignGuidelines.md';
 import ComponentQuestions from '../../components/ComponentQuestions.md';
+// Legacy imports
+import ApiTable from '../ApiTable.vue';
 import ComponentsStatus from '../ComponentsStatus.vue';
-import Footer from '../Footer.vue';
 import Do from '../Do.vue';
 import DoDont from '../DoDont.vue';
-import QrTable from '../qr-table.vue';
+import Footer from '../Footer.vue';
 import QrColorTable from '../qr-color-table.vue';
+import QrTable from '../qr-table.vue';
+import TabsContent from '../TabsContent.vue';
+import ThemeSwitcher from '../ThemeSwitcher.vue';
 import WidthController from '../WidthController.vue';
-import { IconStarFull32 } from '@warp-ds/icons/vue';
 import '../bootExamples.js';
 import './custom.css';
 import 'uno.css';
-import warpThemeSwitcher from '../warp-theme-switcher.js';
 import Card from '../Card.vue';
 import Cards from '../Cards.vue';
+import warpThemeSwitcher from '../warp-theme-switcher.js';
 
 export default {
   extends: DefaultTheme,
@@ -51,10 +50,7 @@ export default {
     app.component('ApiTable', ApiTable);
     app.component('ThemeSwitcher', ThemeSwitcher);
     app.component('TabsContent', TabsContent);
-    app.component(
-      'ComponentDesignGuidelines',
-      ComponentDesignGuidelines
-    );
+    app.component('ComponentDesignGuidelines', ComponentDesignGuidelines);
     app.component('ComponentQuestions', ComponentQuestions);
     app.component('ComponentsStatus', ComponentsStatus);
     app.component('Do', Do);

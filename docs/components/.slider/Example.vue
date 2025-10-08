@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from 'vue';
 import { wSlider } from '@warp-ds/vue';
+import { ref } from 'vue';
 
 const maximum = 10_000_000;
 const minimum = 1000;

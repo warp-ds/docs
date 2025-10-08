@@ -20,8 +20,9 @@
 </template>
 
 <script setup>
-  const baseUrl = import.meta.env.BASE_URL;
-  import WarpLogo from '../src/warp-logo.svg';
+const baseUrl = import.meta.env.BASE_URL;
+
+import WarpLogo from '../src/warp-logo.svg';
 </script>
 
 <style scoped>

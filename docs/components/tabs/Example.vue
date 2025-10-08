@@ -1,6 +1,6 @@
 <script setup>
+import { wTab, wTabPanel, wTabs } from '@warp-ds/vue';
 import { h, ref } from 'vue';
-import { wTab, wTabs, wTabPanel } from '@warp-ds/vue';
 
 const Stars = {
   name: 'stars-svg',

@@ -1,10 +1,10 @@
 <script setup>
+import { IconStarFull24 } from '@warp-ds/icons/vue';
 import { computed } from 'vue';
 import { data } from '../supported.data.js';
-import { IconStarFull24 } from '@warp-ds/icons/vue';
 
 const props = defineProps({
-  dataId: String
+  dataId: String,
 });
 const rows = computed(() => props.list ?? data[props.dataId]);
 const outlineClasses = 'outline outline-4 outline-offset-2 border bg-[--w-gray-200] my-6';
@@ -52,7 +52,7 @@ const getCellBgColor = (cls) => {
     return 's-bg-inverted s-text-inverted';
   }
   return 's-bg';
-}
+};
 </script>
 
 <template>

@@ -1,14 +1,14 @@
-import { defineConfig } from 'vitepress';
+import fs from 'node:fs';
+import { dirname, join, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { classes as componentClasses } from '@warp-ds/css/component-classes/classes';
 import { presetDocs } from '@warp-ds/preset-docs';
 import { presetWarp } from '@warp-ds/uno';
-import uno from 'unocss/vite';
-import { classes as componentClasses } from '@warp-ds/css/component-classes/classes';
-import { supported as supportedClasses } from '../supported.js';
 import markdownItContainer from 'markdown-it-container';
+import uno from 'unocss/vite';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
-import { fileURLToPath } from 'node:url';
-import { dirname, resolve, join } from 'node:path';
-import fs from 'node:fs';
+import { defineConfig } from 'vitepress';
+import { supported as supportedClasses } from '../supported.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -23,10 +23,7 @@ function getFrontmatterTitle(filePath) {
     const titleLine = fmBlock[1].match(/^\s*title:\s*(.+)\s*$/m);
     if (!titleLine) return null;
     let t = titleLine[1].trim();
-    if (
-      (t.startsWith('"') && t.endsWith('"')) ||
-      (t.startsWith("'") && t.endsWith("'"))
-    ) {
+    if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
       t = t.slice(1, -1);
     }
     return t;
@@ -36,9 +33,7 @@ function getFrontmatterTitle(filePath) {
 }
 
 function titleFromSlug(slug) {
-  return slug
-    .replace(/[-_]+/g, ' ')
-    .replace(/\b\w/g, (s) => s.toUpperCase());
+  return slug.replace(/[-_]+/g, ' ').replace(/\b\w/g, (s) => s.toUpperCase());
 }
 
 // Scans docs/components/*/index.md (skips folders starting with ".")
@@ -55,8 +50,7 @@ function buildComponentSidebarItems(rootDir) {
       const slug = e.name;
       const indexMd = join(componentsDir, slug, 'index.md');
       if (!fs.existsSync(indexMd)) return null;
-      const title =
-        getFrontmatterTitle(indexMd) || titleFromSlug(slug);
+      const title = getFrontmatterTitle(indexMd) || titleFromSlug(slug);
       return { text: title, link: `/components/${slug}/` };
     })
     .filter(Boolean);
@@ -69,29 +63,18 @@ function buildComponentSidebarItems(rootDir) {
 
 const base = '/docs';
 
-const pdColorClasses = [
-  'blue',
-  'cyan',
-  'fuchsia',
-  'indigo',
-  'pink',
-  'purple',
-  'sky',
-  'violet',
-].reduce(
+const pdColorClasses = ['blue', 'cyan', 'fuchsia', 'indigo', 'pink', 'purple', 'sky', 'violet'].reduce(
   (colorResult, color) => [
     ...colorResult,
     ...['bg', 'border'].reduce(
       (partResult, part) => [
         ...partResult,
-        [100, 200, 300, 400, 500, 600, 700, 800, 900].map(
-          (value) => `pd-${part}-${color}-${value}`
-        ),
+        [100, 200, 300, 400, 500, 600, 700, 800, 900].map((value) => `pd-${part}-${color}-${value}`),
       ],
-      []
+      [],
     ),
   ],
-  []
+  [],
 );
 
 // Classes of documentation-related elements used within Warp component examples
@@ -280,8 +263,7 @@ const docsClasses = [
 export default defineConfig({
   lang: 'en',
   title: 'Warp Design System',
-  description:
-    'Documentation for Warp Design System technical platform',
+  description: 'Documentation for Warp Design System technical platform',
   lastUpdated: false,
   cleanUrls: true,
   base: `${base}/`,
@@ -295,9 +277,8 @@ export default defineConfig({
         render: (tokens, idx) => {
           if (tokens[idx].nesting === 1) {
             return '<div class="styled-image-block">';
-          } else {
-            return '</div>';
           }
+          return '</div>';
         },
       });
     },
@@ -305,10 +286,7 @@ export default defineConfig({
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) =>
-          /(-example|-color-table|example-container|poc-1-div|w-icon)$/.test(
-            tag
-          ),
+        isCustomElement: (tag) => /(-example|-color-table|example-container|poc-1-div|w-icon)$/.test(tag),
       },
     },
   },
@@ -320,23 +298,15 @@ export default defineConfig({
         mode: 'shadow-dom',
         shortcuts: [
           {
-            'ex-font':
-              'pd-text-sm font-bold pd-font-mono pd-text-white',
-            'ex-font-dark':
-              'pd-text-sm font-bold pd-font-mono pd-text-slate-900',
-            'ex-box':
-              'ex-font p-24 rounded pd-shadow-xl flex items-center justify-center',
-            'ex-inner-box':
-              'p-24 rounded pd-shadow-xl mx-auto pd-bg-white pd-text-slate-500 max-w-[300]',
+            'ex-font': 'pd-text-sm font-bold pd-font-mono pd-text-white',
+            'ex-font-dark': 'pd-text-sm font-bold pd-font-mono pd-text-slate-900',
+            'ex-box': 'ex-font p-24 rounded pd-shadow-xl flex items-center justify-center',
+            'ex-inner-box': 'p-24 rounded pd-shadow-xl mx-auto pd-bg-white pd-text-slate-500 max-w-[300]',
             'ex-pic-no':
               'absolute top-10 left-10 h-32 w-32 text-center pd-bg-white rounded-full pd-text-slate-800 leading-[32]',
           },
         ],
-        safelist: [
-          ...componentClasses,
-          ...supportedClasses,
-          ...docsClasses,
-        ],
+        safelist: [...componentClasses, ...supportedClasses, ...docsClasses],
       }),
       svgLoader(),
     ],
@@ -414,9 +384,7 @@ export default defineConfig({
     search: { provider: 'local' },
     logo: '/warp-logo-small.svg',
     outline: 'deep',
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/warp-ds' },
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/warp-ds' }],
     nav: [
       { text: 'Get started', link: '/get-started/' },
       { text: 'Foundations', link: '/foundations/' },

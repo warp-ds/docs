@@ -1,9 +1,9 @@
 <script setup>
-  import { wTextarea } from '@warp-ds/vue/forms';
-  import { ref } from 'vue';
+import { wTextarea } from '@warp-ds/vue/forms';
+import { ref } from 'vue';
 
-  const model = ref('');
-  const readOnlyText = 'This is a readOnly textarea';
+const model = ref('');
+const readOnlyText = 'This is a readOnly textarea';
 </script>
 
 <template>

@@ -19,7 +19,7 @@ export const buildWc = (elementName, baseVueComponent, rootProperties) => {
         }
         connectedCallback() {
           const currentTheme = localStorage.getItem('warpTheme') || 'finn-no';
-          const tokens =  `<link rel="stylesheet" type="text/css" href="https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/${currentTheme}.css" />`;
+          const tokens = `<link rel="stylesheet" type="text/css" href="https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/${currentTheme}.css" />`;
           const shadowUnoStyle = `<style>
         @unocss-placeholder
 
@@ -203,7 +203,7 @@ export const buildWc = (elementName, baseVueComponent, rootProperties) => {
         get appEl() {
           return this.shadow.querySelector('#app');
         }
-      }
+      },
     );
   }
 };

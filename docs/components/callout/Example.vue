@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue'
-import { wAttention, wBox } from '@warp-ds/vue'
+import { wAttention, wBox } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-const popoverTypeTarget = ref(null)
+const popoverTypeTarget = ref(null);
 
-const inlineTypeShowing = ref(true)
-const popoverTypeShowing = ref(true)
+const inlineTypeShowing = ref(true);
+const popoverTypeShowing = ref(true);
 </script>
 
 <template>

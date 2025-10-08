@@ -1,12 +1,12 @@
 <script setup>
-  import { wSelect } from '@warp-ds/vue';
-  import { ref } from "vue";
+import { wSelect } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-  const selectModel1 = ref('');
-  const selectModel2 = ref('');
-  const selectModel3 = ref('');
-  const selectModel4 = ref('');
-  const selectModel5 = ref('');
+const selectModel1 = ref('');
+const selectModel2 = ref('');
+const selectModel3 = ref('');
+const selectModel4 = ref('');
+const selectModel5 = ref('');
 </script>
 
 <template>

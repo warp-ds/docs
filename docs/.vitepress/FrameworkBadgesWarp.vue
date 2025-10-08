@@ -1,89 +1,90 @@
 <script setup>
-import { computed, ref, watch, onMounted } from 'vue'
-import { useData } from 'vitepress'
+import { useData } from 'vitepress';
+import { computed, onMounted, ref, watch } from 'vue';
 
 const props = defineProps({
-  framework: { type: String, required: true },         // "React"
-  status:    { type: String, default: 'unsupported' }, // 'released'|'beta'|'developing'|'planned'|'unsupported'
-  icon:      { type: String, default: '' },            // 'react'|'vue'|'android'|'apple'|'webcomponents'
-  href:      { type: String, default: '' },            // optional link
-  size:      { type: String, default: 'md' },          // 'sm'|'md'
+  framework: { type: String, required: true }, // "React"
+  status: { type: String, default: 'unsupported' }, // 'released'|'beta'|'developing'|'planned'|'unsupported'
+  icon: { type: String, default: '' }, // 'react'|'vue'|'android'|'apple'|'webcomponents'
+  href: { type: String, default: '' }, // optional link
+  size: { type: String, default: 'md' }, // 'sm'|'md'
 
   /* optional color overrides (HEX) */
-  colorReleased:    { type: String, default: '' },
-  colorBeta:        { type: String, default: '' },
-  colorDeveloping:  { type: String, default: '' },
-  colorPlanned:     { type: String, default: '' },
+  colorReleased: { type: String, default: '' },
+  colorBeta: { type: String, default: '' },
+  colorDeveloping: { type: String, default: '' },
+  colorPlanned: { type: String, default: '' },
   colorUnsupported: { type: String, default: '' },
-  colorLabelLight:  { type: String, default: '' },     // neutral left bg (light)
-  colorLabelDark:   { type: String, default: '' },     // neutral left bg (dark)
+  colorLabelLight: { type: String, default: '' }, // neutral left bg (light)
+  colorLabelDark: { type: String, default: '' }, // neutral left bg (dark)
 
   /* border behavior: 'none' (Shields flat), 'neutral' (left bg), 'status' (right bg) */
-  border: { type: String, default: 'none' } // 'none' | 'neutral' | 'status'
-})
+  border: { type: String, default: 'none' }, // 'none' | 'neutral' | 'status'
+});
 
-const { isDark } = useData()
+const { isDark } = useData();
 
 function normalizeStatus(s) {
-  const v = String(s || '').toLowerCase().trim()
-  if (v === 'released')   return 'released'
-  if (v === 'beta')       return 'beta'
-  if (v === 'developing') return 'developing'
-  if (v === 'planned')    return 'planned'
-  return 'unsupported'
+  const v = String(s || '')
+    .toLowerCase()
+    .trim();
+  if (v === 'released') return 'released';
+  if (v === 'beta') return 'beta';
+  if (v === 'developing') return 'developing';
+  if (v === 'planned') return 'planned';
+  return 'unsupported';
 }
-const statusKey = computed(() => normalizeStatus(props.status))
+const statusKey = computed(() => normalizeStatus(props.status));
 
 /* theme-aware palette */
 const palette = computed(() => {
-  const labelLight = props.colorLabelLight || '#f2f3f5'
-  const labelDark  = props.colorLabelDark  || '#2f3136'
+  const labelLight = props.colorLabelLight || '#f2f3f5';
+  const labelDark = props.colorLabelDark || '#2f3136';
   const dark = {
-    labelBg: labelDark, labelFg: '#ffffff',
-    released:    props.colorReleased    || '#2e7d32',
-    beta:        props.colorBeta        || '#b07d00',
-    developing:  props.colorDeveloping  || '#a46000',
-    planned:     props.colorPlanned     || '#0b5fad',
+    labelBg: labelDark,
+    labelFg: '#ffffff',
+    released: props.colorReleased || '#2e7d32',
+    beta: props.colorBeta || '#b07d00',
+    developing: props.colorDeveloping || '#a46000',
+    planned: props.colorPlanned || '#0b5fad',
     unsupported: props.colorUnsupported || '#555555',
     statusFgDefault: '#ffffff',
-    statusFgOnGrey:  '#ffffff'
-  }
+    statusFgOnGrey: '#ffffff',
+  };
   const light = {
-    labelBg: labelLight, labelFg: '#111111',
-    released:    props.colorReleased    || '#2e7d32',
-    beta:        props.colorBeta        || '#a06a00',
-    developing:  props.colorDeveloping  || '#a46000',
-    planned:     props.colorPlanned     || '#0b5fad',
+    labelBg: labelLight,
+    labelFg: '#111111',
+    released: props.colorReleased || '#2e7d32',
+    beta: props.colorBeta || '#a06a00',
+    developing: props.colorDeveloping || '#a46000',
+    planned: props.colorPlanned || '#0b5fad',
     unsupported: props.colorUnsupported || '#c4c4c4',
     statusFgDefault: '#ffffff',
-    statusFgOnGrey:  '#111111'
-  }
-  return isDark.value ? dark : light
-})
+    statusFgOnGrey: '#111111',
+  };
+  return isDark.value ? dark : light;
+});
 
 const colors = computed(() => {
-  const p = palette.value
-  const s = statusKey.value
-  const statusBg = p[s]
-  const statusFg = (s === 'unsupported') ? p.statusFgOnGrey : p.statusFgDefault
-  const borderColor =
-    props.border === 'neutral' ? p.labelBg :
-    props.border === 'status'  ? statusBg  :
-    'transparent'
+  const p = palette.value;
+  const s = statusKey.value;
+  const statusBg = p[s];
+  const statusFg = s === 'unsupported' ? p.statusFgOnGrey : p.statusFgDefault;
+  const borderColor = props.border === 'neutral' ? p.labelBg : props.border === 'status' ? statusBg : 'transparent';
   return {
     labelBg: p.labelBg,
     labelFg: p.labelFg,
     statusBg,
     statusFg,
-    borderColor
-  }
-})
+    borderColor,
+  };
+});
 
 /* ---------------- Simple Icons fetch (client-only) ---------------- */
 const ICON_FILENAME_MAP = {
   react: 'react',
   'react 19': 'react',
-  'react19': 'react',
+  react19: 'react',
   'react-beta': 'react',
   vue: 'vuedotjs',
   'vue.js': 'vuedotjs',
@@ -93,53 +94,58 @@ const ICON_FILENAME_MAP = {
   ios: 'apple',
   webcomponents: 'webcomponentsdotorg',
   webcomponentsdotorg: 'webcomponentsdotorg',
-  elements: 'webcomponentsdotorg'
-}
+  elements: 'webcomponentsdotorg',
+};
 
 // simple in-memory cache { key: pathD }
-const iconCache = new Map()
+const iconCache = new Map();
 
 function keyToFilename(key) {
-  const k = String(key || '').toLowerCase().trim()
-  return ICON_FILENAME_MAP[k] || ''
+  const k = String(key || '')
+    .toLowerCase()
+    .trim();
+  return ICON_FILENAME_MAP[k] || '';
 }
 
 async function loadIconPath(key) {
-  const filename = keyToFilename(key)
-  if (!filename) return null
-  if (iconCache.has(filename)) return iconCache.get(filename)
+  const filename = keyToFilename(key);
+  if (!filename) return null;
+  if (iconCache.has(filename)) return iconCache.get(filename);
 
   try {
     // Fetch the SVG from jsDelivr (same shapes Shields uses)
     // Pin to a major to avoid surprise changes; bump if you need newer icons.
-    const url = `https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${filename}.svg`
-    const res = await fetch(url)
-    if (!res.ok) return null
-    const svg = await res.text()
+    const url = `https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${filename}.svg`;
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const svg = await res.text();
     // Extract first path's "d" attribute
-    const match = svg.match(/<path[^>]*d="([^"]+)"/i)
-    const d = match ? match[1] : null
-    if (d) iconCache.set(filename, d)
-    return d
+    const match = svg.match(/<path[^>]*d="([^"]+)"/i);
+    const d = match ? match[1] : null;
+    if (d) iconCache.set(filename, d);
+    return d;
   } catch {
-    return null
+    return null;
   }
 }
 
-const iconPath = ref(null)
+const iconPath = ref(null);
 
 async function refreshIcon() {
-  if (typeof window === 'undefined') { iconPath.value = null; return }
-  const key = props.icon || props.framework
-  iconPath.value = await loadIconPath(key)
+  if (typeof window === 'undefined') {
+    iconPath.value = null;
+    return;
+  }
+  const key = props.icon || props.framework;
+  iconPath.value = await loadIconPath(key);
 }
 
-onMounted(refreshIcon)
-watch(() => [props.icon, props.framework], refreshIcon)
-const hasIcon = computed(() => !!iconPath.value)
+onMounted(refreshIcon);
+watch(() => [props.icon, props.framework], refreshIcon);
+const hasIcon = computed(() => !!iconPath.value);
 
 /* a11y */
-const aria = computed(() => `${props.framework}: ${statusKey.value}`)
+const aria = computed(() => `${props.framework}: ${statusKey.value}`);
 </script>
 
 <template>

@@ -1,4 +1,4 @@
-import { createContentLoader } from 'vitepress'
+import { createContentLoader } from 'vitepress';
 
 export default createContentLoader('components/**/index.md', {
   transform(pages) {
@@ -6,13 +6,13 @@ export default createContentLoader('components/**/index.md', {
       .map((p) => ({
         url: p.url,
         title: p.frontmatter && p.frontmatter.title,
-        summary: (p.frontmatter && (p.frontmatter.summary ?? p.frontmatter.description)),
+        summary: p.frontmatter && (p.frontmatter.summary ?? p.frontmatter.description),
         description: p.frontmatter && p.frontmatter.description,
         category: p.frontmatter && p.frontmatter.category,
         placeholder: p.frontmatter && p.frontmatter.placeholder,
-        frameworks: p.frontmatter && p.frontmatter.frameworks
+        frameworks: p.frontmatter && p.frontmatter.frameworks,
       }))
       .filter((x) => !!x.title)
-      .sort((a, b) => a.title.localeCompare(b.title))
-  }
-})
+      .sort((a, b) => a.title.localeCompare(b.title));
+  },
+});

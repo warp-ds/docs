@@ -1,7 +1,7 @@
 <script setup>
-import {computed, reactive, ref} from 'vue';
-import { wButton, wSteps, wStep } from '@warp-ds/vue';
-import DemoControls from "../../.vitepress/Controls.vue";
+import { wButton, wStep, wSteps } from '@warp-ds/vue';
+import { computed, reactive, ref } from 'vue';
+import DemoControls from '../../.vitepress/Controls.vue';
 
 const steps = [
   { name: 'Step 1', desc: 'The first step' },
@@ -12,14 +12,14 @@ const steps = [
 const currentStep = ref(0);
 
 const stepControlButtonText = computed(() => {
-    switch(currentStep.value) {
-      case steps.length:
-        return 'Start over';
-      case (steps.length - 1):
-        return 'Finish'
-      default:
-        return 'Next step';
-    }
+  switch (currentStep.value) {
+    case steps.length:
+      return 'Start over';
+    case steps.length - 1:
+      return 'Finish';
+    default:
+      return 'Next step';
+  }
 });
 
 const nextStep = () => {
@@ -41,11 +41,11 @@ const radio = true;
 
 const alignmentState = reactive({ active: alignments.horizontal });
 const isActiveAlignment = useIsActive(alignmentState);
-const alignmentControls = Object.entries(alignments).map(([,name]) => ({ name, radio }));
+const alignmentControls = Object.entries(alignments).map(([, name]) => ({ name, radio }));
 
 const positionState = reactive({ active: positions.left });
 const isActivePosition = useIsActive(positionState);
-const positionControls = Object.entries(positions).map(([,name]) => ({ name, radio }));
+const positionControls = Object.entries(positions).map(([, name]) => ({ name, radio }));
 </script>
 
 <template>

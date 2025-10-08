@@ -3,16 +3,16 @@
 </template>
 
 <script setup>
-import { createElement } from 'react'
-import { createRoot } from 'react-dom/client'
-import { ref, onMounted } from 'vue'
-import Pagination from './Pagination'
+import { createElement } from 'react';
+import { createRoot } from 'react-dom/client';
+import { onMounted, ref } from 'vue';
+import Pagination from './Pagination';
 
-const el = ref()
+const el = ref();
 
 onMounted(() => {
-    const root = createRoot(el.value)
-    root.render(createElement(Pagination, {}, null))
-})
+  const root = createRoot(el.value);
+  root.render(createElement(Pagination, {}, null));
+});
 </script>
 

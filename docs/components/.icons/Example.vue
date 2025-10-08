@@ -1,9 +1,9 @@
 <script setup>
-import decamelize from "decamelize";
-import * as icons from "@warp-ds/icons/vue";
-import * as reactIcons from "@warp-ds/icons/react";
-import { wModal } from "@warp-ds/vue";
-import { computed, ref } from "vue";
+import * as reactIcons from '@warp-ds/icons/react';
+import * as icons from '@warp-ds/icons/vue';
+import { wModal } from '@warp-ds/vue';
+import decamelize from 'decamelize';
+import { computed, ref } from 'vue';
 
 // When an existing icon is deprecated, add { old: "IconOldName16", new: "IconNewName16" } to the deprecatedIcons list.
 // This will display a deprecation message with a suggested replacement.
@@ -14,7 +14,7 @@ const isDeprecated = (iconName) => deprecatedIcons.some((icon) => iconName === i
 const getDeprecationMessage = (iconName) => {
   const deprecatedIcon = deprecatedIcons.find((icon) => iconName === icon.old);
   if (deprecatedIcon) {
-    return 'DEPRECATED' + (deprecatedIcon.new ? ` - use ${deprecatedIcon.new } icon instead` : '');
+    return 'DEPRECATED' + (deprecatedIcon.new ? ` - use ${deprecatedIcon.new} icon instead` : '');
   }
 };
 
@@ -36,12 +36,9 @@ const getIconName = (icon) => icon.replace(/Icon|\d+/g, '');
 const setIconData = (icon, fullName) => {
   const reactIconName = Object.keys(reactIcons)
     .find((icon) => icon === fullName)
-    .replace("Icon", "");
+    .replace('Icon', '');
 
-  const outputString = decamelize(reactIconName, { separator: "-" }).replace(
-    /([a-zA-Z])(\d+)/,
-    "$1-$2"
-  );
+  const outputString = decamelize(reactIconName, { separator: '-' }).replace(/([a-zA-Z])(\d+)/, '$1-$2');
 
   modalData.value = {
     iconName: fullName,
@@ -59,11 +56,11 @@ const setIconData = (icon, fullName) => {
 const showIconModal = (icon, fullName) => {
   setIconData(icon, fullName);
   showModal.value = true;
-}
+};
 const dismissIconModal = () => {
   showModal.value = false;
   modalData.value = null;
-}
+};
 
 const copyCode = (code) => {
   try {
@@ -72,7 +69,7 @@ const copyCode = (code) => {
   } catch (err) {
     console.error('Failed to copy code: ', err);
   }
-}
+};
 
 const getIconExampleStatesClasses = (deprecated, dark) => ({
   'ex-deprecated': deprecated,
@@ -97,7 +94,7 @@ const modalIconExampleClasses = computed(() => {
   return [
     'min-h-56 flex items-center justify-center mx-auto mb-16 p-16 border rounded-4',
     getIconExampleStatesClasses(deprecated, dark),
-  ]
+  ];
 });
 </script>
 

@@ -1,16 +1,16 @@
 <script setup>
-import * as apiTable from '../api-table.js';
-import PropsTable from './PropsTable.vue';
-import OtherTable from './OtherTable.vue';
 import { computed } from 'vue';
+import * as apiTable from '../api-table.js';
+import OtherTable from './OtherTable.vue';
+import PropsTable from './PropsTable.vue';
 
 const props = defineProps({
   type: 'vue' | 'react' | 'elements',
   component: String,
   headerLevel: {
     type: Number,
-    default: 4
-  }
+    default: 4,
+  },
 });
 const data = computed(() => apiTable[props.type || 'react'][props.component]);
 </script>

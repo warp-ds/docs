@@ -1,8 +1,8 @@
 <script setup>
-  import { wSwitch, wField } from '@warp-ds/vue';
-  import { ref } from "vue";
+import { wField, wSwitch } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-  const toggle = ref(false);
+const toggle = ref(false);
 </script>
 
 <template>

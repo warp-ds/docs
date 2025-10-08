@@ -1,12 +1,12 @@
 <script setup>
-import { watch, ref } from 'vue';
 import { useDraggable } from '@vueuse/core';
+import { ref, watch } from 'vue';
 
 const props = defineProps({
   minWidth: {
     type: Number,
-    default: 240
-  }
+    default: 240,
+  },
 });
 
 const right = ref(0);
@@ -20,11 +20,11 @@ const { x } = useDraggable(handleEl);
 watch(x, () => {
   const wrapperRect = wrapperEl.value.getBoundingClientRect();
   const newRightValue = wrapperRect.right - x.value;
-  const newWidth = wrapperRect.width - newRightValue
+  const newWidth = wrapperRect.width - newRightValue;
   if (newWidth >= props.minWidth) {
-    right.value = (newRightValue < HANDLE_WIDTH) ? HANDLE_WIDTH : newRightValue;
+    right.value = newRightValue < HANDLE_WIDTH ? HANDLE_WIDTH : newRightValue;
   }
-})
+});
 
 watch(right, () => {
   const v = right.value - HANDLE_WIDTH;

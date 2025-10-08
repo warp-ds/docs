@@ -18,10 +18,7 @@ export default {
     };
 
     const state = reactive({
-      currentTheme:
-        (typeof window !== 'undefined' &&
-          localStorage.getItem('warpTheme')) ||
-        themes.Finn,
+      currentTheme: (typeof window !== 'undefined' && localStorage.getItem('warpTheme')) || themes.Finn,
     });
 
     const rewriteStylesheets = (theme) => {
@@ -32,14 +29,9 @@ export default {
           .map((el) => el.shadowRoot),
       ];
       roots.forEach((root) => {
-        const stylesheets = root.querySelectorAll(
-          'link[rel="stylesheet"][href*="/@warp-ds/css/"]'
-        );
+        const stylesheets = root.querySelectorAll('link[rel="stylesheet"][href*="/@warp-ds/css/"]');
         stylesheets.forEach((s) => {
-          s.setAttribute(
-            'href',
-            `https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/${theme}.css`
-          );
+          s.setAttribute('href', `https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/${theme}.css`);
         });
       });
     };

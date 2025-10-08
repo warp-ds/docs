@@ -1,16 +1,15 @@
 <script setup>
-  import { wToggle } from '@warp-ds/vue';
-  import { ref } from 'vue';
+import { wToggle } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-  const toggleModel = ref('')
-  const invalidToggleModel = ref('1')
-  const disabledToggleModel = ref('2')
+const toggleModel = ref('');
+const invalidToggleModel = ref('1');
+const disabledToggleModel = ref('2');
 
-  const toggles = [
-    { label: 'One', value: 1, 'data-test': 'toggle:1' },
-    { label: 'Two', value: 2, 'data-test': 'toggle:2' },
-  ]
-
+const toggles = [
+  { label: 'One', value: 1, 'data-test': 'toggle:1' },
+  { label: 'Two', value: 2, 'data-test': 'toggle:2' },
+];
 </script>
 
 <template>

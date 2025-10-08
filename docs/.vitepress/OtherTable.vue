@@ -4,7 +4,7 @@ import { processMarkdown } from './ApiTableUtil.js';
 defineProps({
   data: Array,
   headers: Array,
-  plainText: Boolean
+  plainText: Boolean,
 });
 </script>
 

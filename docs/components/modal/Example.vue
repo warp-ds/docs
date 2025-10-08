@@ -1,17 +1,16 @@
 <script setup>
-import { ref, computed, watch } from 'vue'
-import { wModal, wButton } from '@warp-ds/vue';
+import { wButton, wModal } from '@warp-ds/vue';
+import { computed, ref, watch } from 'vue';
 
-const showLeft = ref(false)
-const showModal = ref(false)
+const showLeft = ref(false);
+const showModal = ref(false);
 
-const heightToggle = ref(false)
+const heightToggle = ref(false);
 const demoStyles = computed(() => ({
   '--w-modal-min-height': heightToggle.value ? '100%' : '64%',
   '--w-modal-max-height': '72%',
-}))
-const changeHeight = () => heightToggle.value = !heightToggle.value
-
+}));
+const changeHeight = () => (heightToggle.value = !heightToggle.value);
 </script>
 
 <template>

@@ -1,13 +1,13 @@
 <script setup>
-import { ref } from 'vue'
-import { wAttention, wButton } from '@warp-ds/vue'
-import IconInfo16 from '@warp-ds/icons/vue/info-16'
+import IconInfo16 from '@warp-ds/icons/vue/info-16';
+import { wAttention, wButton } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-const popoverTarget = ref(null)
-const popoverIconTarget = ref(null)
+const popoverTarget = ref(null);
+const popoverIconTarget = ref(null);
 
-const popoverShowing = ref(false)
-const popoverIconTargetShowing = ref(false)
+const popoverShowing = ref(false);
+const popoverIconTargetShowing = ref(false);
 </script>
 
 <template>

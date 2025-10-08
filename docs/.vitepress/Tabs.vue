@@ -7,14 +7,13 @@ const props = defineProps({
   isDisabled: Function,
   variant: {
     type: String,
-    default: 'default'
-  }
+    default: 'default',
+  },
 });
 const activeTab = ref(props.initialTab);
 const switchTab = (tab) => {
   activeTab.value = tab;
 };
-
 </script>
 
 <template>

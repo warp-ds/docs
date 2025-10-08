@@ -1,26 +1,28 @@
 <script setup>
-import { computed, ref, watch, onMounted } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue';
 
 const props = defineProps({
-  framework: { type: String, required: true },         // "React"
-  status:    { type: String, default: 'unsupported' }, // released|beta|developing|planned|deprecated|unsupported
-  icon:      { type: String, default: '' },            // simple-icons key (react, vuedotjs, apple, android, webcomponentsdotorg)
-  href:      { type: String, default: '' },            // optional link
-  size:      { type: String, default: 'md' },          // 'sm' | 'md'
-  border:    { type: String, default: 'none' }         // 'none' | 'neutral' | 'status'
-})
+  framework: { type: String, required: true }, // "React"
+  status: { type: String, default: 'unsupported' }, // released|beta|developing|planned|deprecated|unsupported
+  icon: { type: String, default: '' }, // simple-icons key (react, vuedotjs, apple, android, webcomponentsdotorg)
+  href: { type: String, default: '' }, // optional link
+  size: { type: String, default: 'md' }, // 'sm' | 'md'
+  border: { type: String, default: 'none' }, // 'none' | 'neutral' | 'status'
+});
 
 function normalizeStatus(s) {
-  const v = String(s || '').toLowerCase().trim()
-  return ['released','beta','developing','planned','deprecated'].includes(v) ? v : 'unsupported'
+  const v = String(s || '')
+    .toLowerCase()
+    .trim();
+  return ['released', 'beta', 'developing', 'planned', 'deprecated'].includes(v) ? v : 'unsupported';
 }
-const statusKey = computed(() => normalizeStatus(props.status))
+const statusKey = computed(() => normalizeStatus(props.status));
 
 /* ---------------- Simple Icons fetch (tiny, cached) ---------------- */
 const ICON_FILENAME_MAP = {
   react: 'react',
   'react 19': 'react',
-  'react19': 'react',
+  react19: 'react',
   'react-beta': 'react',
   vue: 'vuedotjs',
   'vue.js': 'vuedotjs',
@@ -30,38 +32,42 @@ const ICON_FILENAME_MAP = {
   ios: 'apple',
   webcomponents: 'webcomponentsdotorg',
   webcomponentsdotorg: 'webcomponentsdotorg',
-  elements: 'webcomponentsdotorg'
-}
-const iconCache = new Map()
-const iconPath = ref(null)
+  elements: 'webcomponentsdotorg',
+};
+const iconCache = new Map();
+const iconPath = ref(null);
 
 function keyToFilename(key) {
-  const k = String(key || '').toLowerCase().trim()
-  return ICON_FILENAME_MAP[k] || ''
+  const k = String(key || '')
+    .toLowerCase()
+    .trim();
+  return ICON_FILENAME_MAP[k] || '';
 }
 async function loadIconPath(key) {
-  const filename = keyToFilename(key)
-  if (!filename) return null
-  if (iconCache.has(filename)) return iconCache.get(filename)
+  const filename = keyToFilename(key);
+  if (!filename) return null;
+  if (iconCache.has(filename)) return iconCache.get(filename);
   try {
-    const res = await fetch(`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${filename}.svg`)
-    if (!res.ok) return null
-    const svg = await res.text()
-    const match = svg.match(/<path[^>]*d="([^"]+)"/i)
-    const d = match ? match[1] : null
-    if (d) iconCache.set(filename, d)
-    return d
-  } catch { return null }
+    const res = await fetch(`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${filename}.svg`);
+    if (!res.ok) return null;
+    const svg = await res.text();
+    const match = svg.match(/<path[^>]*d="([^"]+)"/i);
+    const d = match ? match[1] : null;
+    if (d) iconCache.set(filename, d);
+    return d;
+  } catch {
+    return null;
+  }
 }
 async function refreshIcon() {
-  const key = props.icon || props.framework
-  iconPath.value = await loadIconPath(key)
+  const key = props.icon || props.framework;
+  iconPath.value = await loadIconPath(key);
 }
-onMounted(refreshIcon)
-watch(() => [props.icon, props.framework], refreshIcon)
+onMounted(refreshIcon);
+watch(() => [props.icon, props.framework], refreshIcon);
 
 /* a11y */
-const aria = computed(() => `${props.framework}: ${statusKey.value}`)
+const aria = computed(() => `${props.framework}: ${statusKey.value}`);
 </script>
 
 <template>

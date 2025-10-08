@@ -1,5 +1,5 @@
 <script setup>
-  import { wPill } from '@warp-ds/vue';
+import { wPill } from '@warp-ds/vue';
 </script>
 
 <template>

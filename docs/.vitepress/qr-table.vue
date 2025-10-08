@@ -1,13 +1,13 @@
 <script setup>
-import { computed } from 'vue'
-import { useData } from 'vitepress'
-import { data } from '../supported.data.js'
-import camelcase from 'camelcase'
+import camelcase from 'camelcase';
+import { useData } from 'vitepress';
+import { computed } from 'vue';
+import { data } from '../supported.data.js';
 
-const pageData = useData()
-const props = defineProps({ list: Array })
-const dataTitle = computed(() => camelcase(pageData.page.value.title.replace(/[^\w\s]/gi, '')))
-const rows = computed(() => props.list ?? data[dataTitle.value])
+const pageData = useData();
+const props = defineProps({ list: Array });
+const dataTitle = computed(() => camelcase(pageData.page.value.title.replace(/[^\w\s]/gi, '')));
+const rows = computed(() => props.list ?? data[dataTitle.value]);
 </script>
 
 <template>

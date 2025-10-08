@@ -13,9 +13,9 @@ const props = defineProps({
   /** Slack channel link in the Beta notice */
   slackHref: {
     type: String,
-    default: 'https://sch-chat.slack.com/archives/C04P0GYTHPV'
-  }
-})
+    default: 'https://sch-chat.slack.com/archives/C04P0GYTHPV',
+  },
+});
 </script>
 
 <template>

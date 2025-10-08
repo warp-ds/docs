@@ -1,6 +1,7 @@
 <script setup>
 import { wButtonGroup } from '@warp-ds/vue';
 import ControlItem from './ControlItem.vue';
+
 defineProps({ state: null, controls: Array, label: String });
 </script>
 

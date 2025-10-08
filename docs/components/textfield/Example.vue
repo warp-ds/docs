@@ -1,12 +1,12 @@
 <script setup>
-import { ref } from 'vue'
-import { wTextfield, wAffix } from '@warp-ds/vue/forms';
+import { wAffix, wTextfield } from '@warp-ds/vue/forms';
+import { ref } from 'vue';
 
 const inputModel = ref('');
 
 const handleClear = () => {
   inputModel.value = '';
-}
+};
 </script>
 
 <template>

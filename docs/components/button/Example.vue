@@ -1,6 +1,6 @@
 <script setup>
-  import { wButton } from '@warp-ds/vue';
-  import IconShare16 from '@warp-ds/icons/vue/share-16';
+import IconShare16 from '@warp-ds/icons/vue/share-16';
+import { wButton } from '@warp-ds/vue';
 </script>
 
 <template>

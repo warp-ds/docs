@@ -1,6 +1,6 @@
+import { formatCSS } from '@itsy/okay';
 import { createGenerator } from '@unocss/core';
 import { presetWarp } from '@warp-ds/uno';
-import { formatCSS } from '@itsy/okay';
 import * as classLists from './supported.list.js';
 
 const uno = await createGenerator({ presets: [presetWarp()] });

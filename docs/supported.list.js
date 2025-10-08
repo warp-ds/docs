@@ -1,29 +1,49 @@
-const getValueClasses = (classPrefixes, classValues) => classPrefixes.reduce(
-  (result, prefix) => [
-    ...result,
-    ...classValues.map((value) => `${prefix}-${value}`)
-  ],
-  []
-);
+const getValueClasses = (classPrefixes, classValues) =>
+  classPrefixes.reduce((result, prefix) => [...result, ...classValues.map((value) => `${prefix}-${value}`)], []);
 
-const getDirectionalClasses = (baseClasses, replacePrefix, directions = ['l','r','t','b','x','y']) => {
+const getDirectionalClasses = (baseClasses, replacePrefix, directions = ['l', 'r', 't', 'b', 'x', 'y']) => {
   const replaceRegexp = new RegExp(`^(${replacePrefix})`);
   return baseClasses.reduce(
     (result, baseClass) => [
       ...result,
-      ...directions.map((direction) => baseClass.replace(replaceRegexp, `$1${direction}-`))
+      ...directions.map((direction) => baseClass.replace(replaceRegexp, `$1${direction}-`)),
     ],
-    []
-  )
-}
-;
+    [],
+  );
+};
 
-const getWidthClasses = (classPrefixes) => getValueClasses(classPrefixes, [0,1,2,4,8]);
+const getWidthClasses = (classPrefixes) => getValueClasses(classPrefixes, [0, 1, 2, 4, 8]);
 
-const getSpacingClasses = (classPrefixes) => getValueClasses(classPrefixes, ['auto', 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]);
+const getSpacingClasses = (classPrefixes) =>
+  getValueClasses(classPrefixes, [
+    'auto',
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    20,
+    24,
+    28,
+    32,
+    40,
+    44,
+    48,
+    56,
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+  ]);
 
-const getRoundingClasses = (classPrefixes) => getValueClasses(classPrefixes, ['full',0,2,4,8,16]);
-
+const getRoundingClasses = (classPrefixes) => getValueClasses(classPrefixes, ['full', 0, 2, 4, 8, 16]);
 
 export const alignContent = [
   'content-start',
@@ -34,21 +54,9 @@ export const alignContent = [
   'content-evenly',
 ];
 
-export const alignItems = [
-  'items-baseline',
-  'items-stretch',
-  'items-start',
-  'items-center',
-  'items-end',
-];
+export const alignItems = ['items-baseline', 'items-stretch', 'items-start', 'items-center', 'items-end'];
 
-export const alignSelf = [
-  'self-auto',
-  'self-start',
-  'self-center',
-  'self-end',
-  'self-stretch',
-];
+export const alignSelf = ['self-auto', 'self-start', 'self-center', 'self-end', 'self-stretch'];
 
 export const animation = ['animate-inprogress', 'animate-spinner'];
 
@@ -62,21 +70,12 @@ export const backdropBlur = [
   'backdrop-blur-l',
   'backdrop-blur-xl',
   'backdrop-blur-xxl',
-  'backdrop-blur-xxxl'
+  'backdrop-blur-xxxl',
 ];
 
-export const backgroundAttachment = [
-  'bg-fixed',
-  'bg-local',
-  'bg-scroll',
-];
+export const backgroundAttachment = ['bg-fixed', 'bg-local', 'bg-scroll'];
 
-export const backgroundClip = [
-  'bg-clip-border',
-  'bg-clip-padding',
-  'bg-clip-content',
-  'bg-clip-text',
-];
+export const backgroundClip = ['bg-clip-border', 'bg-clip-padding', 'bg-clip-content', 'bg-clip-text'];
 
 export const backgroundColor = [
   'bg-inherit',
@@ -136,11 +135,7 @@ export const backgroundColor = [
   's-bg-notification',
 ];
 
-export const backgroundOrigin = [
-  'bg-origin-border',
-  'bg-origin-padding',
-  'bg-origin-content',
-];
+export const backgroundOrigin = ['bg-origin-border', 'bg-origin-padding', 'bg-origin-content'];
 
 export const backgroundPosition = [
   'bg-bottom',
@@ -168,8 +163,8 @@ export const backgroundSize = ['bg-auto', 'bg-cover', 'bg-contain'];
 export const backgroundImage = ['bg-none', 'bg-[url({url})]', 'bg-[url(var(--any-css-variable))]'];
 
 export const basis = getValueClasses(
-  [ 'basis' ],
-  ['1/2', '1/3', '2/3', '1/4', '3/4', '1/5', '2/5', '3/5', '4/5', '1/6', '5/6', 0, 1, 2, 4, 8, 10, 12, 16, 32, 48, 64]
+  ['basis'],
+  ['1/2', '1/3', '2/3', '1/4', '3/4', '1/5', '2/5', '3/5', '4/5', '1/6', '5/6', 0, 1, 2, 4, 8, 10, 12, 16, 32, 48, 64],
 );
 
 export const borderCollapse = ['border-collapse', 'border-separate'];
@@ -233,7 +228,7 @@ export const borderWidth = getWidthClasses([
   'border-l',
   'border-r',
   'border-t',
-  'border-b'
+  'border-b',
 ]);
 
 export const borderRadius = [
@@ -250,12 +245,12 @@ export const borderRadius = [
 
 export const borderRadiusValues = getRoundingClasses(borderRadius);
 
-export const columns = getValueClasses(['columns'], [1,2,3,4,5,6,7,8,9,10,11,12]);
+export const columns = getValueClasses(['columns'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
 
-export const outlineColor = borderColor.map(c => c.replace('border', 'outline'))
+export const outlineColor = borderColor.map((c) => c.replace('border', 'outline'));
 
 export const outline = [
-  ...getValueClasses(['outline', 'outline-offset'], [0,1,2,4,8]),
+  ...getValueClasses(['outline', 'outline-offset'], [0, 1, 2, 4, 8]),
   'outline',
   'outline-dashed',
   'outline-dotted',
@@ -263,14 +258,11 @@ export const outline = [
   'outline-none',
 ];
 
-export const divideColor = borderColor.map(c => c.replace('border', 'divide'))
+export const divideColor = borderColor.map((c) => c.replace('border', 'divide'));
 
-export const divideWidth = getWidthClasses(['divide','divide-x','divide-y']);
+export const divideWidth = getWidthClasses(['divide', 'divide-x', 'divide-y']);
 
-export const divideReverse = [
-  'divide-x-reverse',
-  'divide-y-reverse'
-];
+export const divideReverse = ['divide-x-reverse', 'divide-y-reverse'];
 
 export const borderStyle = [
   'border-solid',
@@ -285,19 +277,9 @@ export const borderStyle = [
   'border-outset',
 ];
 
-export const boxShadow = [
-  'shadow-s',
-  'shadow-m',
-  'shadow-l',
-  'shadow-xl',
-];
+export const boxShadow = ['shadow-s', 'shadow-m', 'shadow-l', 'shadow-xl'];
 
-export const dropShadow = [
-  'drop-shadow-s',
-  'drop-shadow-m',
-  'drop-shadow-l',
-  'drop-shadow-xl',
-];
+export const dropShadow = ['drop-shadow-s', 'drop-shadow-m', 'drop-shadow-l', 'drop-shadow-xl'];
 
 export const breakAfter = [
   'break-after-auto',
@@ -330,19 +312,9 @@ export const breakInside = [
 
 export const boxSizing = ['box-border', 'box-content'];
 
-export const clear = [
-  'clear-left',
-  'clear-right',
-  'clear-both',
-  'clear-none',
-];
+export const clear = ['clear-left', 'clear-right', 'clear-both', 'clear-none'];
 
-export const caretColor = [
-  'caret',
-  'caret-current',
-  'caret-inherit',
-  'caret-transparent',
-];
+export const caretColor = ['caret', 'caret-current', 'caret-inherit', 'caret-transparent'];
 
 export const cursor = [
   'cursor-auto',
@@ -407,29 +379,15 @@ export const display = [
   'list-item',
 ];
 
-export const flex = [
-  'flex-initial',
-  'flex-1',
-  'flex-auto',
-  'flex-none',
-];
+export const flex = ['flex-initial', 'flex-1', 'flex-auto', 'flex-none'];
 
-export const flexDirection = [
-  'flex-row',
-  'flex-row-reverse',
-  'flex-col',
-  'flex-col-reverse',
-];
+export const flexDirection = ['flex-row', 'flex-row-reverse', 'flex-col', 'flex-col-reverse'];
 
 export const flexGrow = ['grow', 'grow-0'];
 
 export const flexShrink = ['shrink', 'shrink-0'];
 
-export const flexWrap = [
-  'flex-nowrap',
-  'flex-wrap',
-  'flex-wrap-reverse',
-];
+export const flexWrap = ['flex-nowrap', 'flex-wrap', 'flex-wrap-reverse'];
 
 export const floats = ['float-right', 'float-left', 'float-none'];
 
@@ -467,11 +425,7 @@ export const fontVariantNumeric = [
   'proportional-nums',
 ];
 
-export const gap = getSpacingClasses([
-  'gap',
-  'gap-x',
-  'gap-y',
-]);
+export const gap = getSpacingClasses(['gap', 'gap-x', 'gap-y']);
 
 export const gridAutoFlow = [
   'grid-flow-row',
@@ -481,30 +435,19 @@ export const gridAutoFlow = [
   'grid-flow-col-dense',
 ];
 
-export const gridAutoColumns = [
-  'auto-cols-auto',
-  'auto-cols-min',
-  'auto-cols-max',
-  'auto-cols-fr',
-];
+export const gridAutoColumns = ['auto-cols-auto', 'auto-cols-min', 'auto-cols-max', 'auto-cols-fr'];
 
-export const gridAutoRows = [
-  'auto-rows-auto',
-  'auto-rows-min',
-  'auto-rows-max',
-  'auto-rows-fr',
-];
+export const gridAutoRows = ['auto-rows-auto', 'auto-rows-min', 'auto-rows-max', 'auto-rows-fr'];
 
 export const gridCols = getValueClasses(['grid-cols'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-export const gridColSpan = getValueClasses(['col-span'], [1,2,3,4,5,6,7,8,9,10,11,12,13]);
-export const gridColStart = getValueClasses(['col-start'], [1,2,3,4,5,6,7,8,9,10,11,12,13]);
-export const gridColEnd = getValueClasses(['col-end'], [1,2,3,4,5,6,7,8,9,10,11,12,13]);
+export const gridColSpan = getValueClasses(['col-span'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
+export const gridColStart = getValueClasses(['col-start'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
+export const gridColEnd = getValueClasses(['col-end'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
 
 export const gridRows = getValueClasses(['grid-rows'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]);
-export const gridRowSpan = getValueClasses(['row-span'], [1,2,3,4,5,6,7]);
-export const gridRowStart = getValueClasses(['row-start'], [1,2,3,4,5,6,7]);
-export const gridRowEnd = getValueClasses(['row-end'], [1,2,3,4,5,6,7]);
-
+export const gridRowSpan = getValueClasses(['row-span'], [1, 2, 3, 4, 5, 6, 7]);
+export const gridRowStart = getValueClasses(['row-start'], [1, 2, 3, 4, 5, 6, 7]);
+export const gridRowEnd = getValueClasses(['row-end'], [1, 2, 3, 4, 5, 6, 7]);
 
 export const iconColor = [
   's-icon',
@@ -569,30 +512,17 @@ export const lineHeight = [
   'leading-xxxl',
 ];
 
-export const listStylePosition = [
-  'list-inside',
-  'list-outside',
-];
+export const listStylePosition = ['list-inside', 'list-outside'];
 
-export const listStyleType = [
-  'list-none',
-  'list-disc',
-  'list-decimal',
-  'list-checked',
-];
+export const listStyleType = ['list-none', 'list-disc', 'list-decimal', 'list-checked'];
 
-export const margin = getSpacingClasses([
-  'm',
-  'ml',
-  'mr',
-  'mt',
-  'mb',
-  'mx',
-  'my',
-]);
+export const margin = getSpacingClasses(['m', 'ml', 'mr', 'mt', 'mb', 'mx', 'my']);
 
 export const maxWidth = [
-  ...getValueClasses(['max-w'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['max-w'],
+    [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144],
+  ),
   'max-w-none',
   'max-w-full',
   'max-w-min',
@@ -602,7 +532,10 @@ export const maxWidth = [
 ];
 
 export const maxHeight = [
-  ...getValueClasses(['max-h'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['max-h'],
+    [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144],
+  ),
   'max-h-full',
   'max-h-screen',
   'max-h-min',
@@ -610,7 +543,10 @@ export const maxHeight = [
   'max-h-fit',
 ];
 export const minWidth = [
-  ...getValueClasses(['min-w'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['min-w'],
+    [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144],
+  ),
   'min-w-full',
   'min-w-min',
   'min-w-max',
@@ -618,20 +554,17 @@ export const minWidth = [
 ];
 
 export const minHeight = [
-  ...getValueClasses(['min-h'], [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]),
+  ...getValueClasses(
+    ['min-h'],
+    [0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144],
+  ),
   'min-h-full',
   'min-h-min',
   'min-h-max',
   'min-h-fit',
 ];
 
-export const objectFit = [
-  'object-contain',
-  'object-cover',
-  'object-fill',
-  'object-none',
-  'object-scale-down',
-];
+export const objectFit = ['object-contain', 'object-cover', 'object-fill', 'object-none', 'object-scale-down'];
 
 export const objectPosition = [
   'object-bottom',
@@ -663,13 +596,7 @@ export const overflow = [
   'overflow-y-scroll',
 ];
 
-export const opacity = [
-  'opacity-0',
-  'opacity-25',
-  'opacity-50',
-  'opacity-75',
-  'opacity-100',
-];
+export const opacity = ['opacity-0', 'opacity-25', 'opacity-50', 'opacity-75', 'opacity-100'];
 
 export const order = [
   ...getValueClasses(['order'], [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]),
@@ -690,15 +617,7 @@ export const overscrollBehavior = [
   'overscroll-x-none',
 ];
 
-export const padding = getSpacingClasses([
-  'p',
-  'pl',
-  'pr',
-  'pt',
-  'pb',
-  'px',
-  'py',
-]);
+export const padding = getSpacingClasses(['p', 'pl', 'pr', 'pt', 'pb', 'px', 'py']);
 
 export const placeContent = [
   'place-content-center',
@@ -709,12 +628,7 @@ export const placeContent = [
   'place-content-evenly',
 ];
 
-export const placeItems = [
-  'place-items-start',
-  'place-items-end',
-  'place-items-center',
-  'place-items-stretch',
-];
+export const placeItems = ['place-items-start', 'place-items-end', 'place-items-center', 'place-items-stretch'];
 
 export const placeSelf = [
   'place-self-auto',
@@ -734,81 +648,80 @@ export const pointerEvents = [
   'pointer-events-unset',
 ];
 
-export const position = [
-  'static',
-  'fixed',
-  'absolute',
-  'relative',
-  'sticky',
-];
+export const position = ['static', 'fixed', 'absolute', 'relative', 'sticky'];
 
 export const positioning = getValueClasses(
-  [ 'top', 'right', 'bottom', 'left', '-top', '-right', '-bottom', '-left', 'inset', 'inset-x', 'inset-y' ],
-  ['a', '1/2', 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]
+  ['top', 'right', 'bottom', 'left', '-top', '-right', '-bottom', '-left', 'inset', 'inset-x', 'inset-y'],
+  ['a', '1/2', 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144],
 );
 
-export const resize = [
-  'resize-none',
-  'resize-y',
-  'resize-x',
-  'resize',
-];
+export const resize = ['resize-none', 'resize-y', 'resize-x', 'resize'];
 
-export const rotate = [
-  ...getValueClasses(['rotate'], [0,30,45,90,135,180,225,270,315]),
-];
+export const rotate = [...getValueClasses(['rotate'], [0, 30, 45, 90, 135, 180, 225, 270, 315])];
 
-export const scale = [
-  ...getValueClasses(['scale'], [10,20,25,50,75,100,125,150,175,200]),
-];
+export const scale = [...getValueClasses(['scale'], [10, 20, 25, 50, 75, 100, 125, 150, 175, 200])];
 
 export const screenReaders = ['sr-only', 'not-sr-only'];
 
 export const scrollBehavior = ['scroll-auto', 'scroll-smooth'];
 
-export const scrollSnapAlign = [
-  'snap-start',
-  'snap-end',
-  'snap-center',
-  'snap-align-none',
-];
+export const scrollSnapAlign = ['snap-start', 'snap-end', 'snap-center', 'snap-align-none'];
 
 export const scrollSnapStop = ['snap-normal', 'snap-always'];
 
-export const scrollSnapType = [
-  'snap-none',
-  'snap-x',
-  'snap-y',
-  'snap-both',
-  'snap-mandatory',
-  'snap-proximity',
-];
+export const scrollSnapType = ['snap-none', 'snap-x', 'snap-y', 'snap-both', 'snap-mandatory', 'snap-proximity'];
 
 export const sizing = getValueClasses(
-  [ 'w', 'h', '-w', '-h' ],
-  ['auto', 'full', 'screen', 'min', 'max', '1/2', '1/3', '2/3', '1/4', '3/4', '1/5', '2/5', '3/5', '4/5', '1/6', '5/6', 0, 1, 2, 4, 6, 8, 10, 12, 14, 16, 20, 24, 28, 32, 40, 44, 48, 56, 64, 80, 96, 112, 128, 144]
+  ['w', 'h', '-w', '-h'],
+  [
+    'auto',
+    'full',
+    'screen',
+    'min',
+    'max',
+    '1/2',
+    '1/3',
+    '2/3',
+    '1/4',
+    '3/4',
+    '1/5',
+    '2/5',
+    '3/5',
+    '4/5',
+    '1/6',
+    '5/6',
+    0,
+    1,
+    2,
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    20,
+    24,
+    28,
+    32,
+    40,
+    44,
+    48,
+    56,
+    64,
+    80,
+    96,
+    112,
+    128,
+    144,
+  ],
 );
 
-export const space = [
-  'space-x-reverse',
-  'space-y-reverse',
-  ...getSpacingClasses([
-    'space',
-    'space-x',
-    'space-y',
-  ])
-];
+export const space = ['space-x-reverse', 'space-y-reverse', ...getSpacingClasses(['space', 'space-x', 'space-y'])];
 
 export const tableLayout = ['table-auto', 'table-fixed'];
 
-export const textAlign = [
-  'text-left',
-  'text-center',
-  'text-right',
-  'text-justify',
-  'text-start',
-  'text-end',
-];
+export const textAlign = ['text-left', 'text-center', 'text-right', 'text-justify', 'text-start', 'text-end'];
 
 export const textColor = [
   'text-transparent',
@@ -827,24 +740,11 @@ export const textColor = [
   's-text-notification',
 ];
 
-export const textDecoration = [
-  'underline',
-  'line-through',
-  'no-underline',
-];
+export const textDecoration = ['underline', 'line-through', 'no-underline'];
 
-export const textTransform = [
-  'uppercase',
-  'lowercase',
-  'capitalize',
-  'normal-case',
-];
+export const textTransform = ['uppercase', 'lowercase', 'capitalize', 'normal-case'];
 
-export const textOverflow = [
-  'truncate',
-  'text-ellipsis',
-  'text-clip',
-];
+export const textOverflow = ['truncate', 'text-ellipsis', 'text-clip'];
 
 export const touchAction = [
   'touch-auto',
@@ -872,10 +772,10 @@ export const transformOrigin = [
 ];
 
 export const transitionDelay = [
-  ...getValueClasses(['delay'], [50,100,150,200,250,300,400,500,600,700,800,900,1000,1700]),
+  ...getValueClasses(['delay'], [50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000, 1700]),
 ];
 export const transitionDuration = [
-  ...getValueClasses(['duration'], [50,100,150,200,250,300,400,500,600,700,800,900,1000]),
+  ...getValueClasses(['duration'], [50, 100, 150, 200, 250, 300, 400, 500, 600, 700, 800, 900, 1000]),
 ];
 
 export const transitionProperty = [
@@ -888,19 +788,9 @@ export const transitionProperty = [
   'transition-transform',
 ];
 
-export const transitionTiming = [
-  'ease-linear',
-  'ease-in',
-  'ease-out',
-  'ease-in-out',
-];
+export const transitionTiming = ['ease-linear', 'ease-in', 'ease-out', 'ease-in-out'];
 
-export const userSelect = [
-  'select-none',
-  'select-text',
-  'select-all',
-  'select-auto',
-];
+export const userSelect = ['select-none', 'select-text', 'select-all', 'select-auto'];
 
 export const verticalAlign = [
   'align-baseline',
@@ -924,21 +814,8 @@ export const whitespace = [
   'whitespace-break-spaces',
 ];
 
-export const willChange = [
-  'will-change-auto',
-  'will-change-scroll',
-  'will-change-contents',
-  'will-change-transform',
-];
+export const willChange = ['will-change-auto', 'will-change-scroll', 'will-change-contents', 'will-change-transform'];
 
-export const wordBreak = [
-  'break-normal',
-  'break-words',
-  'break-all',
-  'break-keep',
-];
+export const wordBreak = ['break-normal', 'break-words', 'break-all', 'break-keep'];
 
-export const zIndex = getValueClasses(
-  [ 'z' ],
-  ['auto', 0, 10, 20, 30, 40, 50]
-);
+export const zIndex = getValueClasses(['z'], ['auto', 0, 10, 20, 30, 40, 50]);

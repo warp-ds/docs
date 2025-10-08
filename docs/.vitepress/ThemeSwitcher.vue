@@ -1,7 +1,7 @@
 <script setup>
 import { inject } from 'vue';
 
-const { current: currentTheme, themes: warpThemes, updateTheme  } = inject('warpThemeSwitcher');
+const { current: currentTheme, themes: warpThemes, updateTheme } = inject('warpThemeSwitcher');
 </script>
 
 <template>

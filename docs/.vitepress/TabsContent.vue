@@ -1,37 +1,34 @@
 <script setup>
-import { useSlots, computed } from 'vue'
-import Tabs from './Tabs.vue'
+import { computed, useSlots } from 'vue';
+import Tabs from './Tabs.vue';
 
 const props = defineProps({
-  tabsOrder: { type: Array, default: () => [] }
-})
+  tabsOrder: { type: Array, default: () => [] },
+});
 
-const slots = useSlots()
+const slots = useSlots();
 
 // Only treat real content slots as tabs
-const isHelperSlot = (n) =>
-  n === 'default' || n.startsWith('tab-head-') || n.startsWith('tab-panel-')
+const isHelperSlot = (n) => n === 'default' || n.startsWith('tab-head-') || n.startsWith('tab-panel-');
 
-const derived = computed(() => Object.keys(slots).filter(n => !isHelperSlot(n)))
-const tabs = computed(() =>
-  props.tabsOrder && props.tabsOrder.length ? props.tabsOrder : derived.value
-)
+const derived = computed(() => Object.keys(slots).filter((n) => !isHelperSlot(n)));
+const tabs = computed(() => (props.tabsOrder && props.tabsOrder.length ? props.tabsOrder : derived.value));
 
 const formatTabTitle = (tab) => {
-  if (tab === 'iOS') return tab
-  const c = tab.charAt(0).toUpperCase() + tab.slice(1)
-  return c.replaceAll('_', ' ')
-}
+  if (tab === 'iOS') return tab;
+  const c = tab.charAt(0).toUpperCase() + tab.slice(1);
+  return c.replaceAll('_', ' ');
+};
 
 const isDisabled = (tab) => {
-  const slotContent = slots[tab]?.()
-  return !slotContent || slotContent.length === 0
-}
+  const slotContent = slots[tab]?.();
+  return !slotContent || slotContent.length === 0;
+};
 
 const getInitialTab = () => {
-  for (const t of tabs.value) if (!isDisabled(t)) return t
-  return tabs.value[0]
-}
+  for (const t of tabs.value) if (!isDisabled(t)) return t;
+  return tabs.value[0];
+};
 </script>
 
 <template>

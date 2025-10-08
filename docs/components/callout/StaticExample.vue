@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from 'vue'
-import { wAttention, wButton } from '@warp-ds/vue'
+import { wAttention, wButton } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-const highlightTarget = ref(null)
-const highlightShowing = ref(false)
+const highlightTarget = ref(null);
+const highlightShowing = ref(false);
 </script>
 
 <template>

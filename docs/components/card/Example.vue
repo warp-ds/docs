@@ -1,12 +1,12 @@
 <script setup>
-  import { wCard, wDeadToggle, wClickable } from '@warp-ds/vue';
-  import { ref } from 'vue';
+import { wCard, wClickable, wDeadToggle } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-  const selected = ref(false)
-  const foo = ref('')
+const selected = ref(false);
+const foo = ref('');
 
-  const checkModel = ref(false)
-  const radioModel = ref('')
+const checkModel = ref(false);
+const radioModel = ref('');
 </script>
 
 <template>

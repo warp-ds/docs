@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from 'vue'
-import { wAttention, wButton } from '@warp-ds/vue'
+import { wAttention, wButton } from '@warp-ds/vue';
+import { ref } from 'vue';
 
-const tooltipTarget = ref(null)
-const tooltipShowing = ref(false)
+const tooltipTarget = ref(null);
+const tooltipShowing = ref(false);
 </script>
 
 <template>

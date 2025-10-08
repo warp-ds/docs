@@ -1,11 +1,12 @@
 <script setup>
-import { ref, reactive } from 'vue';
 import { wButtonGroup, wButtonGroupItem, wClickable } from '@warp-ds/vue';
+import { reactive, ref } from 'vue';
 
 const checkbox = true;
 const radio = true;
 const useIsActive = (state) => (name) => state.active === name;
-const buildCheckboxState = ({ controls, active }) => controls.reduce((acc, e) => (acc[e.name] = e.name === active, acc), {});
+const buildCheckboxState = ({ controls, active }) =>
+  controls.reduce((acc, e) => ((acc[e.name] = e.name === active), acc), {});
 
 const radioModel = ref('foo');
 const alert = () => window.alert('Hello Warp!');

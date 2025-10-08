@@ -2,12 +2,17 @@
 const props = defineProps({
   modelValue: { type: String, default: '' },
   placeholder: { type: String, default: 'Search…' },
-  ariaLabel: { type: String, default: 'Search' }
-})
-const emit = defineEmits(['update:modelValue','clear'])
+  ariaLabel: { type: String, default: 'Search' },
+});
+const emit = defineEmits(['update:modelValue', 'clear']);
 
-function onInput(e){ emit('update:modelValue', e.target.value) }
-function clear(){ emit('update:modelValue',''); emit('clear') }
+function onInput(e) {
+  emit('update:modelValue', e.target.value);
+}
+function clear() {
+  emit('update:modelValue', '');
+  emit('clear');
+}
 </script>
 
 <template>

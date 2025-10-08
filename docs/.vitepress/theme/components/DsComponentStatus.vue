@@ -1,58 +1,62 @@
 <script setup>
-import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData } from 'vitepress';
+import { computed } from 'vue';
 
 const props = defineProps({
-  align: { type: String, default: 'auto' },         // 'auto' | 'left' | 'center'
-  hideUnsupported: { type: Boolean, default: false } // also hides 'planned' below
-})
+  align: { type: String, default: 'auto' }, // 'auto' | 'left' | 'center'
+  hideUnsupported: { type: Boolean, default: false }, // also hides 'planned' below
+});
 
-const { frontmatter } = useData()
+const { frontmatter } = useData();
 
 /* Canonical mapping: key (stable), label (UI), icon (for DsBadge) */
 function canon(name) {
-  const n = String(name || '').toLowerCase().trim()
+  const n = String(name || '')
+    .toLowerCase()
+    .trim();
   if (n === 'react19' || n === 'react 19' || n === 'react-beta' || n === 'react beta') {
-    return { key: 'react19', label: 'React 19', icon: 'react' }
+    return { key: 'react19', label: 'React 19', icon: 'react' };
   }
-  if (n === 'react')      return { key: 'react',    label: 'React',    icon: 'react' }
-  if (n === 'vue')        return { key: 'vue',      label: 'Vue',      icon: 'vue' }
+  if (n === 'react') return { key: 'react', label: 'React', icon: 'react' };
+  if (n === 'vue') return { key: 'vue', label: 'Vue', icon: 'vue' };
   if (n === 'elements' || n === 'webcomponents') {
-    return { key: 'elements', label: 'Elements', icon: 'webcomponents' }
+    return { key: 'elements', label: 'Elements', icon: 'webcomponents' };
   }
-  if (n === 'android')    return { key: 'android',  label: 'Android',  icon: 'android' }
+  if (n === 'android') return { key: 'android', label: 'Android', icon: 'android' };
   if (n === 'ios' || n === 'apple') {
-    return { key: 'ios',     label: 'iOS',         icon: 'apple' }
+    return { key: 'ios', label: 'iOS', icon: 'apple' };
   }
-  return null
+  return null;
 }
 
-const ORDER = ['react','react19','vue','elements','android','ios']
-const ALLOWED = new Set(ORDER)
+const ORDER = ['react', 'react19', 'vue', 'elements', 'android', 'ios'];
+const ALLOWED = new Set(ORDER);
 
 function normStatus(s) {
-  const v = String(s || '').toLowerCase().trim()
-  return ['released','beta','developing','planned','deprecated','unsupported'].includes(v) ? v : 'unsupported'
+  const v = String(s || '')
+    .toLowerCase()
+    .trim();
+  return ['released', 'beta', 'developing', 'planned', 'deprecated', 'unsupported'].includes(v) ? v : 'unsupported';
 }
 
 const items = computed(() => {
-  const arr = Array.isArray(frontmatter.value?.frameworks) ? frontmatter.value.frameworks : []
-  const mapped = []
+  const arr = Array.isArray(frontmatter.value?.frameworks) ? frontmatter.value.frameworks : [];
+  const mapped = [];
   for (const f of arr) {
-    const c = canon(f?.name)
-    if (!c || !ALLOWED.has(c.key)) continue
-    const status = normStatus(f?.status)
-    if (props.hideUnsupported && (status === 'unsupported' || status === 'planned')) continue
-    mapped.push({ ...c, status })
+    const c = canon(f?.name);
+    if (!c || !ALLOWED.has(c.key)) continue;
+    const status = normStatus(f?.status);
+    if (props.hideUnsupported && (status === 'unsupported' || status === 'planned')) continue;
+    mapped.push({ ...c, status });
   }
-  return mapped.sort((a,b) => ORDER.indexOf(a.key) - ORDER.indexOf(b.key))
-})
+  return mapped.sort((a, b) => ORDER.indexOf(a.key) - ORDER.indexOf(b.key));
+});
 
 const justifyClass = computed(() => {
-  if (props.align === 'left') return 'fw-left'
-  if (props.align === 'center') return 'fw-center'
-  return 'fw-auto'
-})
+  if (props.align === 'left') return 'fw-left';
+  if (props.align === 'center') return 'fw-center';
+  return 'fw-auto';
+});
 </script>
 
 <template>
