@@ -10,7 +10,9 @@ const demoStyles = computed(() => ({
   '--w-modal-min-height': heightToggle.value ? '100%' : '64%',
   '--w-modal-max-height': '72%',
 }));
-const changeHeight = () => (heightToggle.value = !heightToggle.value);
+const changeHeight = () => {
+  heightToggle.value = !heightToggle.value;
+};
 </script>
 
 <template>

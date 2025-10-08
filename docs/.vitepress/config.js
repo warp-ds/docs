@@ -63,18 +63,10 @@ function buildComponentSidebarItems(rootDir) {
 
 const base = '/docs';
 
-const pdColorClasses = ['blue', 'cyan', 'fuchsia', 'indigo', 'pink', 'purple', 'sky', 'violet'].reduce(
-  (colorResult, color) => [
-    ...colorResult,
-    ...['bg', 'border'].reduce(
-      (partResult, part) => [
-        ...partResult,
-        [100, 200, 300, 400, 500, 600, 700, 800, 900].map((value) => `pd-${part}-${color}-${value}`),
-      ],
-      [],
-    ),
-  ],
-  [],
+const pdColorClasses = ['blue', 'cyan', 'fuchsia', 'indigo', 'pink', 'purple', 'sky', 'violet'].flatMap((color) =>
+  ['bg', 'border'].flatMap((part) =>
+    [100, 200, 300, 400, 500, 600, 700, 800, 900].map((value) => `pd-${part}-${color}-${value}`),
+  ),
 );
 
 // Classes of documentation-related elements used within Warp component examples

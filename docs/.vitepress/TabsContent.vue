@@ -12,7 +12,7 @@ const slots = useSlots();
 const isHelperSlot = (n) => n === 'default' || n.startsWith('tab-head-') || n.startsWith('tab-panel-');
 
 const derived = computed(() => Object.keys(slots).filter((n) => !isHelperSlot(n)));
-const tabs = computed(() => (props.tabsOrder && props.tabsOrder.length ? props.tabsOrder : derived.value));
+const tabs = computed(() => (props.tabsOrder?.length ? props.tabsOrder : derived.value));
 
 const formatTabTitle = (tab) => {
   if (tab === 'iOS') return tab;

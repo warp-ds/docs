@@ -1,14 +1,10 @@
 const getValueClasses = (classPrefixes, classValues) =>
-  classPrefixes.reduce((result, prefix) => [...result, ...classValues.map((value) => `${prefix}-${value}`)], []);
+  classPrefixes.flatMap((prefix) => classValues.map((value) => `${prefix}-${value}`));
 
 const getDirectionalClasses = (baseClasses, replacePrefix, directions = ['l', 'r', 't', 'b', 'x', 'y']) => {
   const replaceRegexp = new RegExp(`^(${replacePrefix})`);
-  return baseClasses.reduce(
-    (result, baseClass) => [
-      ...result,
-      ...directions.map((direction) => baseClass.replace(replaceRegexp, `$1${direction}-`)),
-    ],
-    [],
+  return baseClasses.flatMap((baseClass) =>
+    directions.map((direction) => baseClass.replace(replaceRegexp, `$1${direction}-`)),
   );
 };
 

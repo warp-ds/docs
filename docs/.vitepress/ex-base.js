@@ -14,7 +14,7 @@ export const buildWc = (elementName, baseVueComponent, rootProperties) => {
           this.unoExampleWrapper = document.createElement('div');
           this.unoExampleWrapper.classList = 'example-container';
         }
-        attributeChangedCallback(name, oldValue, newValue) {
+        attributeChangedCallback(_name, _oldValue, newValue) {
           this.unoExampleWrapper.classList = 'example-container ' + newValue;
         }
         connectedCallback() {

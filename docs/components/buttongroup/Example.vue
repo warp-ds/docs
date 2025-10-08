@@ -6,7 +6,10 @@ const checkbox = true;
 const radio = true;
 const useIsActive = (state) => (name) => state.active === name;
 const buildCheckboxState = ({ controls, active }) =>
-  controls.reduce((acc, e) => ((acc[e.name] = e.name === active), acc), {});
+  controls.reduce((acc, e) => {
+    acc[e.name] = e.name === active;
+    return acc;
+  }, {});
 
 const radioModel = ref('foo');
 const alert = () => window.alert('Hello Warp!');

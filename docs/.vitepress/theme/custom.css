@@ -184,10 +184,6 @@ html.dark body {
   }
 }
 
-.vp-doc blockquote > p {
-  font-size: 1.28rem !important;
-}
-
 /* weight was 500, finnfont doesnt ship 'medium', but might be fun to actually ship the right fonts here? */
 .VPNavBarMenuLink {
   font-weight: 700 !important;
@@ -205,6 +201,10 @@ html.dark body {
   line-height: 1.5;
   /* less space below for lists */
   margin-bottom: 8px;
+}
+
+.vp-doc blockquote > p {
+  font-size: 1.28rem !important;
 }
 
 /* make lists great again */
