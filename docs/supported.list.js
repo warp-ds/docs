@@ -131,6 +131,13 @@ export const backgroundColor = [
   's-bg-notification',
 ];
 
+export const surfaceColor = [
+  's-surface-sunken',
+  's-surface-elevated-100',
+  's-surface-elevated-200',
+  's-surface-elevated-300',
+];
+
 export const backgroundOrigin = ['bg-origin-border', 'bg-origin-padding', 'bg-origin-content'];
 
 export const backgroundPosition = [

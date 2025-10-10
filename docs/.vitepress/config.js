@@ -753,6 +753,16 @@ export default defineConfig({
                   ],
                 },
                 {
+                  text: 'Elevation',
+                  collapsed: true,
+                  items: [
+                    {
+                      text: 'surface',
+                      link: '/foundations/css-classes/surface',
+                    },
+                  ],
+                },
+                {
                   text: 'Spacing',
                   collapsed: true,
                   items: [
