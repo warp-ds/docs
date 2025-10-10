@@ -100,6 +100,11 @@ buildWc('example-container');
 buildWc('background-color-table', QrColorTable, {
   dataId: 'backgroundColor',
 });
+
+buildWc('surface-color-table', QrColorTable, {
+  dataId: 'surfaceColor',
+});
+
 buildWc('border-color-table', QrColorTable, {
   dataId: 'borderColor',
 });
