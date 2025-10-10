@@ -19,8 +19,7 @@
 #     • `reason` is optional, shown for unsupported/planned/etc.
 
 title: Select
-description: A dropdown component allows users to choose a single value from a list
-  of options in a limited space.
+description: A select is a form input component that lets users choose one option from a predefined list.
 category: Forms
 placeholder:
   label: Select component
@@ -37,25 +36,24 @@ frameworks:
 
 <DsComponentStatus align="left" hide-unsupported />
 
-## Overview
-Selects (sometimes known as "dropdowns" or "pickers") allow users to choose from a list of options in a limited space. The list of options can change based on the context.
 
-## Example
-<ThemeSwitcher />
-<select-example />
+<!--
+DsMainTabs — how it works (for authors)
 
-## Usage
+• This page’s tab bar is generated automatically.
+• Create one Markdown file per tab in the SAME folder as this index.md.
+• Naming: tab_*.md  (examples: tab_overview.md, tab_usage.md, tab_styling.md, tab_code.md, tab_accessibility.md)
+• Default order (when unnamed/unnumbered): Overview → Usage → Styling → Code → Accessibility
+• To force a custom order, add a number after tab_:
+    tab_10-overview.md, tab_20-usage.md, tab_30-styling.md, tab_40-code.md, tab_50-accessibility.md
+• Tab label is taken from the tab file’s frontmatter `title:` if present; otherwise it’s derived from the filename.
+• Custom tabs are allowed (e.g. tab_experimental.md → “Experimental”).
+• No imports needed — the component discovers and renders these files automatically.
+• Heading levels: start content in tab files at `##` (H2). The page H1 comes from the main index.md title.
+• Code tab: name the file exactly `tab_code.md`.
 
-<component-design-guidelines name="Warp - Components / Select" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=384-34748&mode=design" />
-
-### Accessibility
-
-If a visible label isn't specified, an `aria-label` should be provided to the
-Select for accessibility. If the field is labeled by a separate element, an
-`aria-labelledby` prop should be provided using the id of the labeling element
-instead.
-
-## Framework(s)
-<DsCodeTabs />
+That’s it — add/edit/remove tab_*.md files and the UI updates on the next build/refresh.
+-->
+<DsMainTabs />
 
 <component-questions />
