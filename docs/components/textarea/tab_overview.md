@@ -16,7 +16,7 @@ Related components: [Text field](../textfield/index.md).
   </div>
 
   <div>
-  Input with a label, hint (placeholder), and help text below. Useful for most cases, when clarity is important and the field needs context (label) and guidance (help text).
+  Input with a label, placeholder, and help text below. Useful for most cases, when clarity is important and the field needs context (Label) and guidance (Help text).
   </div>
 </div>
 
@@ -28,10 +28,21 @@ Related components: [Text field](../textfield/index.md).
   </div>
 
   <div>
-  Input with a label above the text area, no help text. Useful for compact layouts or when additional guidance isn’t required. Common in short or repeated forms (e.g. settings, profile forms).
+  Input with a label above the text area and no help text. Useful for compact layouts or when additional guidance isn’t required. Common in short or repeated forms (e.g. settings, profile forms).
   </div>
 </div>
 
+### Text area only 
+
+<div class="grid grid-cols-2 gap-24 py-16">
+  <div>
+    <img src="/components/textarea/overview-variants-text_area_only.svg" alt="Text area with label only" />
+  </div>
+
+  <div>
+  A bare input with only a placeholder inside, and no label or help text. Use with <b>extreme caution</b>. Best suited for one-off interactions.
+  </div>
+</div>
 
 ### Optional
 
@@ -53,8 +64,7 @@ Related components: [Text field](../textfield/index.md).
   </div>
 
   <div>
-  Input with an info icon that opens a tooltip. 
-  Useful when users may need additional context or guidance on how to fill out the field.
+  Input with an info icon that opens a tooltip. Useful when users may need additional context or guidance on how to fill out the area.
   </div>
 </div>
 

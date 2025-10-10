@@ -12,7 +12,7 @@ Sliders are available in two different variants: Single (read docs below) and Ra
 ## Anatomy
 
 ::: image-block
-![Example of a Slider](/components/slider/overview-1.svg)
+![Example of a Slider](/components/slider/overview-anatomy.svg)
 :::
 
 **1. Label**: Describes what the slider controls or adjusts.

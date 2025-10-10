@@ -46,7 +46,7 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   </div>
 
   <div>
-  Empty area with placeholder text.
+  Empty area with placeholder.
   </div>
 </div>
 
@@ -70,7 +70,7 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   </div>
 
   <div>
-  Area is focused and ready for text input.
+  Area is focused and ready for user input.
   </div>
 </div>
 
@@ -82,19 +82,7 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   </div>
 
   <div>
-  Text contains input.
-  </div>
-</div>
-
-### Disabled
-
-<div class="grid grid-cols-2 gap-24 py-16">
-  <div>
-    <img src="/components/textarea/usage-states-disabled.svg" alt="Default text area with disabled state" />
-  </div>
-
-  <div>
-  Area cannot be interacted with, grayed out visually.
+  Area contains user’s input.
   </div>
 </div>
 
@@ -106,7 +94,19 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   </div>
 
   <div>
-  Failed input validation.
+  Failed input validation. It shows red border and actionable message below (help text).
+  </div>
+</div>
+
+### Error hover
+
+<div class="grid grid-cols-2 gap-24 py-16">
+  <div>
+    <img src="/components/textarea/usage-states-error_hover.svg" alt="Default text area with active error state" />
+  </div>
+
+  <div>
+  Errored area border highlights on mouse hover.
   </div>
 </div>
 
@@ -122,7 +122,19 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   </div>
 </div>
 
-### Read Only
+### Disabled
+
+<div class="grid grid-cols-2 gap-24 py-16">
+  <div>
+    <img src="/components/textarea/usage-states-disabled.svg" alt="Default text area with disabled state" />
+  </div>
+
+  <div>
+  Area cannot be interacted with, grayed out out visually.
+  </div>
+</div>
+
+### Read-only
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div>
@@ -130,6 +142,6 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   </div>
 
   <div>
-  Text is visible but not editable.
+  Input is visible but not editable.
   </div>
 </div>

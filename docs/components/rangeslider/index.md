@@ -18,7 +18,7 @@
 #     • Use lowercase for status.
 #     • `reason` is optional, shown for unsupported/planned/etc.
 
-title: Range Slider
+title: Range slider
 description: Range sliders allow users to adjust minimum and maximum numeric values
   within a given range.
 category: Forms
@@ -58,4 +58,3 @@ That’s it — add/edit/remove tab_*.md files and the UI updates on the next bu
 <DsMainTabs />
 
 <component-questions />
-
