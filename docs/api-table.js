@@ -2619,6 +2619,14 @@ export const android = {
       ['currentPage', 'Int', '0', 'Current dot to be selected'],
     ],
   },
+  Divider: {
+    props: [
+      ['modifier', 'Modifier', 'Modifier', 'Modifier for the divider'],
+      ['orientation', 'Orientation.Horizontal <br /> Orientation.Vertical', 'Orientation.Horizontal', 'Orientation of the divider'],
+      ['dashed', 'Boolean', 'false', 'Style of the divider, solid if false'],
+
+    ],
+  },
 };
 
 export const iOS = {
