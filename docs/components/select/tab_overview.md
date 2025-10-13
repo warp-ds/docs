@@ -6,7 +6,7 @@
 
 A select supports various states (hover, active, filled, disabled, error) and enhances clarity with optional labels, help texts, and icons. It can be used in forms, filters, settings, and anywhere a single-choice dropdown is needed.
 
-Related components: [Text area](/components/textarea), [Text field](/components/textfield).
+Related components: [Text area](../textarea/index.md), [Text field](../textfield/index.md).
 
 ## Variants 
 

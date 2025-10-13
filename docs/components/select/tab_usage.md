@@ -8,8 +8,8 @@
 
 ### When not to use
 
-- **If users need to enter custom values:** use [Text area](/components/textarea) component.
-- **If users need to select multiple values:** use [Checkbox](/components/checkbox) component.
+- **If users need to enter custom values:** use [Text area](../textarea/index.md) component.
+- **If users need to select multiple values:** use [Checkbox](../checkbox/index.md) component.
 
 
 ## Behavior
