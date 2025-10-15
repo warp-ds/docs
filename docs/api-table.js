@@ -42,7 +42,7 @@ export const react = {
     required: [],
     props: [
       ['as', 'string', 'div', 'The DOM element to emit'],
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price'", "'neutral'", ''],
+      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'", "'neutral'", ''],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -1101,7 +1101,7 @@ export const vue = {
     required: [],
     props: [
       ['as', 'string', 'div', 'The DOM element to emit'],
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price'", "'neutral'", ''],
+      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'", "'neutral'", ''],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -1634,7 +1634,7 @@ export const elements = {
   Badge: {
     required: [],
     props: [
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price'", "'neutral'", ''],
+      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'", "'neutral'", ''],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
