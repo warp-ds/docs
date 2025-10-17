@@ -3031,6 +3031,29 @@ export const iOS = {
       ],
     ],
   },
+  Select: {
+    required: [
+      [
+        'selectedOption',
+        'Binding<Warp.Select.SelectorOption?>',
+        '',
+        'Binding to the currently selected option.'
+      ],
+      [
+        'options',
+        '[Warp.Select.SelectorOption]',
+        '',
+        'Array of options to display in the select dropdown. Should not be empty.'
+      ],
+  ],
+    props: [
+      ['placeholder', 'String', '""', 'Placeholder text shown when no option is selected.'],
+      ['title', 'String', '""', 'Label text displayed above the select field.'],
+      ['additionalInformation', 'String?', 'nil', 'Optional additional information displayed next to the label.'],
+      ['style', 'Warp.TextFieldStyle', '.default', 'Visual style of the select field (default, disabled, readOnly, error).'],
+      ['helpText', 'String?', 'nil', 'Optional help text displayed below the select field.'],
+    ],
+  },
   Slider: {
     required: [
       ['value', 'Binding Double', '', 'Binding value to update the slider value'],
