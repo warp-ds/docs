@@ -42,7 +42,12 @@ export const react = {
     required: [],
     props: [
       ['as', 'string', 'div', 'The DOM element to emit'],
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'", "'neutral'", ''],
+      [
+        'variant',
+        "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'",
+        "'neutral'",
+        '',
+      ],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -1101,7 +1106,12 @@ export const vue = {
     required: [],
     props: [
       ['as', 'string', 'div', 'The DOM element to emit'],
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'", "'neutral'", ''],
+      [
+        'variant',
+        "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'",
+        "'neutral'",
+        '',
+      ],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -1634,7 +1644,12 @@ export const elements = {
   Badge: {
     required: [],
     props: [
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'", "'neutral'", ''],
+      [
+        'variant',
+        "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'",
+        "'neutral'",
+        '',
+      ],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -2622,9 +2637,13 @@ export const android = {
   Divider: {
     props: [
       ['modifier', 'Modifier', 'Modifier', 'Modifier for the divider'],
-      ['orientation', 'Orientation.Horizontal <br /> Orientation.Vertical', 'Orientation.Horizontal', 'Orientation of the divider'],
+      [
+        'orientation',
+        'Orientation.Horizontal <br /> Orientation.Vertical',
+        'Orientation.Horizontal',
+        'Orientation of the divider',
+      ],
       ['dashed', 'Boolean', 'false', 'Style of the divider, solid if false'],
-
     ],
   },
 };
@@ -2871,12 +2890,7 @@ export const iOS = {
         '"horizontal"',
         'The orientation of the divider, either horizontal or vertical.',
       ],
-      [
-        'style',
-        '"solid" | "dashed"',
-        '"solid"',
-        'The line style of the divider, either solid or dashed.',
-      ],
+      ['style', '"solid" | "dashed"', '"solid"', 'The line style of the divider, either solid or dashed.'],
     ],
   },
   Expandable: {
