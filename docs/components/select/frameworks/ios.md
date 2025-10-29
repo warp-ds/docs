@@ -7,6 +7,7 @@ Warp.Select(
     placeholder: String = "",
     title: String = "",
     additionalInformation: String? = nil,
+    tooltipInfoAction: (() -> Void)? = nil,
     style: Warp.TextFieldStyle = .default,
     helpText: String? = nil
 )
@@ -21,6 +22,7 @@ Warp.Select(
     placeholder: "Select an option",
     title: "Select Option",
     additionalInformation: "Additional info",
+    tooltipInfoAction: { /* Show popover with additional detail */ },
     style: .default,
     helpText: "This field is required."
 )
