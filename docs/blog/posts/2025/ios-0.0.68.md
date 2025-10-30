@@ -3,7 +3,7 @@ title: 'WARP iOS release v.0.0.68'
 date: 2025-10-30
 ---
 
-Selector component & Icon updates
+Select component & Icon updates
 ---
 
 # Warp iOS release 0.0.68
