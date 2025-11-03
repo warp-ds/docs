@@ -42,7 +42,12 @@ export const react = {
     required: [],
     props: [
       ['as', 'string', 'div', 'The DOM element to emit'],
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price'", "'neutral'", ''],
+      [
+        'variant',
+        "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'",
+        "'neutral'",
+        '',
+      ],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -1101,7 +1106,12 @@ export const vue = {
     required: [],
     props: [
       ['as', 'string', 'div', 'The DOM element to emit'],
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price'", "'neutral'", ''],
+      [
+        'variant',
+        "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'",
+        "'neutral'",
+        '',
+      ],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -1634,7 +1644,12 @@ export const elements = {
   Badge: {
     required: [],
     props: [
-      ['variant', "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price'", "'neutral'", ''],
+      [
+        'variant',
+        "'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'",
+        "'neutral'",
+        '',
+      ],
       [
         'position',
         "'top-left', 'top-right', 'bottom-right', 'bottom-left'",
@@ -2622,9 +2637,13 @@ export const android = {
   Divider: {
     props: [
       ['modifier', 'Modifier', 'Modifier', 'Modifier for the divider'],
-      ['orientation', 'Orientation.Horizontal <br /> Orientation.Vertical', 'Orientation.Horizontal', 'Orientation of the divider'],
+      [
+        'orientation',
+        'Orientation.Horizontal <br /> Orientation.Vertical',
+        'Orientation.Horizontal',
+        'Orientation of the divider',
+      ],
       ['dashed', 'Boolean', 'false', 'Style of the divider, solid if false'],
-
     ],
   },
   Select: {
@@ -2887,12 +2906,7 @@ export const iOS = {
         '"horizontal"',
         'The orientation of the divider, either horizontal or vertical.',
       ],
-      [
-        'style',
-        '"solid" | "dashed"',
-        '"solid"',
-        'The line style of the divider, either solid or dashed.',
-      ],
+      ['style', '"solid" | "dashed"', '"solid"', 'The line style of the divider, either solid or dashed.'],
     ],
   },
   Expandable: {
@@ -3045,6 +3059,29 @@ export const iOS = {
         'nil',
         'An optional view that will be displayed beside the label. This is only for `Radio` and can be passed from the `Options` in `RadioGroup`.',
       ],
+    ],
+  },
+  Select: {
+    required: [
+      [
+        'selectedOption',
+        'Binding<Warp.Select.SelectorOption?>',
+        '',
+        'Binding to the currently selected option.'
+      ],
+      [
+        'options',
+        '[Warp.Select.SelectorOption]',
+        '',
+        'Array of options to display in the select dropdown. Should not be empty.'
+      ],
+  ],
+    props: [
+      ['placeholder', 'String', '""', 'Placeholder text shown when no option is selected.'],
+      ['title', 'String', '""', 'Label text displayed above the select field.'],
+      ['additionalInformation', 'String?', 'nil', 'Optional additional information displayed next to the label.'],
+      ['style', 'Warp.TextFieldStyle', '.default', 'Visual style of the select field (default, disabled, readOnly, error).'],
+      ['helpText', 'String?', 'nil', 'Optional help text displayed below the select field.'],
     ],
   },
   Slider: {

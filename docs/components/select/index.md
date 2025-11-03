@@ -32,6 +32,8 @@ frameworks:
   status: released
 - name: Android
   status: released
+- name: iOS
+  status: released
 ---
 # {{ $frontmatter.title }}
 {{ $frontmatter.description }}
