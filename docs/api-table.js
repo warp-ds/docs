@@ -2654,6 +2654,7 @@ export const android = {
     props: [
       ['modifier', 'Modifier', 'Modifier', 'Modifier for the select component'],
       ['label', 'String', 'null', 'The text to display as the label above the select component'],
+      ['optionalLabel', 'String', 'null', 'The text to display next to the label above the select component'],
       ['enabled', 'Boolean', 'true', 'Sets the select component in disabled mode when false'],
       ['readOnly', 'Boolean', 'false', 'Sets the select component in read-only mode'],
       ['placeholderText', 'String', 'null', 'Text hint that occupies the select component when it is empty'],
