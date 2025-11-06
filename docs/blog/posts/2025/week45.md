@@ -71,3 +71,11 @@ and add this to your document:
   </body>
 </html>
 ```
+
+### Hydration errors in the console?
+
+If your app uses Lit SSR and you are currently importing any Warp Elements in your codebase, you may spot a hydration mismatch error in the browser console. This happens because the version of @warp-ds/elements has gotten out of sync with the latest version thats on Eik.
+Our testing has led us to believe that this is non critical and is not causing any direct issues. In other words, its just a warning.
+
+To fix this, you can try updating @warp-ds/elements to the latest version for a quick fix. However, we are transitioning Warp Elements to client side only and will be
+asking teams to NOT import Warp Elements components server side. Simply use the tag. eg. <w-button> on the server and then ensure you are importing the Warp Elements script client side only. See the section on updating above.
