@@ -1,9 +1,3 @@
-### Import
-
-```js
-import '@warp-ds/elements/components/modal'
-```
-
 ### With a titlebar
 
 ```js

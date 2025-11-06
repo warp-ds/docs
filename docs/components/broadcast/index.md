@@ -25,8 +25,6 @@ category: Layout
 placeholder:
   label: Broadcast component
 frameworks:
-- name: Elements
-  status: deprecated
 - name: iOS
   status: deprecated
 ---

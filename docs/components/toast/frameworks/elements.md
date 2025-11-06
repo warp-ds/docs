@@ -6,16 +6,6 @@ Toast is a bit different from other packages in Warp Elements. You need to impor
 
 Import functions for working with toasts:
 
-Be sure to import the component first as the toast APIs depends on it. 
-
-You can do it by importing the toast component: 
-
-```js
-import '@warp-ds/elements/components/toast';
-```
-
-Once you have imported the component, import the toast API package like so:
-
 ```js
 import { toast, removeToast, updateToast } from '@warp-ds/elements/toast';
 ```
