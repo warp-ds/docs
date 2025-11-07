@@ -12,7 +12,7 @@ If you are using `@borealis/layout-express` or `@borealis/layout-fastify` in you
 
 ### Internationalisation
 
-Since warp components are internationalised, you need to ensure that you set the HTML document lang with a two-letter-code, eg: `<html lang="en">`.
+Since warp components are internationalised, ensure that you set the HTML document lang with a two-letter-code, eg: `<html lang="en">`.
 
 If you are using `@borealis/layout-express` or `@borealis/layout-fastify` in your app this will already be done for you.
 
@@ -62,7 +62,7 @@ Once installed, components can be freely used in your application. Do not import
 
 ## Best Practice
 
-To avoid issues like CLS (cumulative layout shift) and FOUCE (flash of unstyled custom elements), its important that Warp Elements is loaded before the page is rendered. For this reason, elements should not be bundled into the rest of your client side application and code and should be loaded in the document head, as early as possible (see installation above). When this is done correctly, elements will be loaded and ready about the same time as the rest of the page styles and wont cause delays in page load times. However, due to the way browsers work, a page render will occur without the components and an immediate re-render will occur with the components. This causes things to jump around on the page which in turn impacts lighthouse and other performance scores. Warp elements ships with a tool to prevent the initial render without components and only do the second, with components, render. This tool is called Warp Cloak and its usage is described below.
+To avoid issues like CLS (cumulative layout shift) and FOUCE (flash of unstyled custom elements), it's important that Warp Elements are loaded before the page is rendered. For this reason, elements should not be bundled into the rest of your client side application code --  they should be loaded in the document head, as early as possible (see installation above). When this is done correctly, elements will load and be ready by about the same time as the rest of the page styles and wont cause delays in page load times. However, due to the way browsers work, a page render will occur without the components and an immediate re-render will occur with the components. This causes things to jump around on the page which in turn impacts lighthouse and other performance scores. Warp elements ships with a tool to prevent the initial render without components and only do the second, with components, render. This tool is called Warp Cloak and its usage is described below.
 
 ### The Warp cloaking device
 
