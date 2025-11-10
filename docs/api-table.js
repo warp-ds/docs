@@ -2659,8 +2659,8 @@ export const android = {
       ['readOnly', 'Boolean', 'false', 'Sets the select component in read-only mode'],
       ['placeholderText', 'String', 'null', 'Text hint that occupies the select component when it is empty'],
       ['helpText', 'String', 'null', 'The text to display as the help text below the select component'],
-      ['isError','Boolean','false','Renders the select component in an invalid state'],
-      ['items', 'List<String>?', 'null', 'The list of strings displayed in the select component menu']
+      ['isError', 'Boolean', 'false', 'Renders the select component in an invalid state'],
+      ['items', 'List<String>?', 'null', 'The list of strings displayed in the select component menu'],
     ],
   },
 };
@@ -3064,24 +3064,24 @@ export const iOS = {
   },
   Select: {
     required: [
-      [
-        'selectedOption',
-        'Binding<Warp.Select.SelectorOption?>',
-        '',
-        'Binding to the currently selected option.'
-      ],
+      ['selectedOption', 'Binding<Warp.Select.SelectorOption?>', '', 'Binding to the currently selected option.'],
       [
         'options',
         '[Warp.Select.SelectorOption]',
         '',
-        'Array of options to display in the select dropdown. Should not be empty.'
+        'Array of options to display in the select dropdown. Should not be empty.',
       ],
-  ],
+    ],
     props: [
       ['placeholder', 'String', '""', 'Placeholder text shown when no option is selected.'],
       ['title', 'String', '""', 'Label text displayed above the select field.'],
       ['additionalInformation', 'String?', 'nil', 'Optional additional information displayed next to the label.'],
-      ['style', 'Warp.TextFieldStyle', '.default', 'Visual style of the select field (default, disabled, readOnly, error).'],
+      [
+        'style',
+        'Warp.TextFieldStyle',
+        '.default',
+        'Visual style of the select field (default, disabled, readOnly, error).',
+      ],
       ['helpText', 'String?', 'nil', 'Optional help text displayed below the select field.'],
     ],
   },

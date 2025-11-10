@@ -1,10 +1,3 @@
-### Import
-
-```js
-import '@warp-ds/elements/components/box';
-
-```
-
 ### Syntax
 
 ```js

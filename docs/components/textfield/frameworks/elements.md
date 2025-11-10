@@ -1,11 +1,3 @@
-### Import
-
-```js
-import '@warp-ds/elements/components/textfield';
-import '@warp-ds/elements/components/affix';
-
-```
-
 ### Syntax
 
 ```html
