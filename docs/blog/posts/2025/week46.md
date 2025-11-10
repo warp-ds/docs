@@ -7,7 +7,7 @@ Form association and performance improvements
 
 ---
 
-# Week 45
+# Week 46
 
 ## @warp-ds/elements@2.2.0 [Changelog](https://github.com/warp-ds/elements/compare/v2.1.1...v2.2.0)
 
@@ -15,7 +15,7 @@ Form association and performance improvements
 
 **Form association:** Form component values now submit with containing form submission 
 
-When using Warp elements form elements such as `w-textfield` inside a <form> tag, submitting the form will now pick up the element's value.
+When using Warp elements form elements such as `w-textfield` inside a `<form>` tag, submitting the form will now pick up the element's value.
 Additionally, w-button can be used to submit a form, just by setting type="submit" or reset a form just by setting type="reset".
 
 ```html
@@ -42,7 +42,7 @@ We are now shipping the Warp Cloak CSS class which can be used to avoid layout s
 
 **Types/intellisense:** Improved TS types and intellisense for developer experience
 
-How we generate types has had a rework and its now possible to get good intellisense support regardless of whether you use Warp Elements with a library such as React or just by themselves in a plain HTML page. [See instructions for setup here.](/docs/get-started/developers/web/#setup)
+How we generate types has had a rework and its now possible to get good intellisense support regardless of whether you use Warp Elements with a library such as React or just by themselves in a plain HTML page. [See instructions for setup here.](/get-started/developers/web/#setup)
 
 ### Updating
 
@@ -78,4 +78,4 @@ If your app uses Lit SSR and you are currently importing any Warp Elements in yo
 Our testing has led us to believe that this is non critical and is not causing any direct issues. In other words, its just a warning.
 
 To fix this, you can try updating @warp-ds/elements to the latest version for a quick fix. However, we are transitioning Warp Elements to client side only and will be
-asking teams to NOT import Warp Elements components server side. Simply use the tag. eg. <w-button> on the server and then ensure you are importing the Warp Elements script client side only. See the section on updating above.
+asking teams to NOT import Warp Elements components server side. Simply use the tag. eg. `<w-button>` on the server and then ensure you are importing the Warp Elements script client side only. See the section on updating above.
