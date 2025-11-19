@@ -2201,6 +2201,12 @@ export const android = {
         'null',
         'Defines a horizontal line to be drawn on the text. Useful for displaying links',
       ],
+      [
+        'onTextLayout',
+        '(TextLayoutResult) -> Unit',
+        '{}',
+        'Callback providing paragraph info, text size, baselines, and more'
+      ],
     ],
   },
   Box: {
