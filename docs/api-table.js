@@ -2663,6 +2663,16 @@ export const android = {
       ['items', 'List<String>?', 'null', 'The list of strings displayed in the select component menu'],
     ],
   },
+  Logo: {
+    required: [
+      ['brand', 'String', '', 'The string name of the brand'],
+      ['brand', 'Brand.Autovex <br /> Brand.Bilbasen <br /> Brand.Blocket <br /> Brand.DBA <br /> Brand.Finn <br /> Brand.FinnTagline <br /> Brand.Nettbil <br /> Brand.Oikotie <br /> Brand.Qasa <br /> Brand.Tori <br /> Brand.Vend <br /> Brand.VendPro <br /> ', '', 'The enum class of the brand'],
+    ],
+    props: [
+      ['modifier', 'Modifier', 'Modifier', 'Modifier for the select component'],
+      ['small', 'Boolean', 'false', 'Shows the icon version if true'],
+    ]
+  }
 };
 
 export const iOS = {
