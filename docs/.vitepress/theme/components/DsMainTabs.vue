@@ -83,7 +83,7 @@ const tabsOrder = computed(() => tabs.value.map((t) => t.slot));
 </script>
 
 <template>
-  <tabs-content variant="main" :tabs-order="tabsOrder" v-if="tabs.length">
+  <tabs-content variant="main" :tabs-order="tabsOrder" v-if="tabs.length" storage-key="ds-main-tabs">
     <!-- Panels -->
     <template v-for="t in tabs" :key="t.slot" #[t.slot]>
       <component :is="t.component" />

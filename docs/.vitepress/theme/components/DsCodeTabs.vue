@@ -91,7 +91,7 @@ const tabsOrder = computed(() => sortedPanels.value.map((p) => p.slot));
 </script>
 
 <template>
-  <tabs-content v-if="sortedPanels.length" :tabs-order="tabsOrder">
+  <tabs-content v-if="sortedPanels.length" :tabs-order="tabsOrder" storage-key="ds-code-tabs">
     <!-- Panels -->
     <template v-for="p in sortedPanels" :key="p.slot" #[p.slot]>
       <!-- Beta notice at top of tab body when content exists -->
