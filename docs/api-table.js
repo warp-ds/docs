@@ -3260,6 +3260,11 @@ export const iOS = {
       ['helpText', 'String?', 'nil', 'Optional `String` to display below the text field.'],
     ],
   },
+  Logo: {
+    required: [
+      ['LogoSize', 'Warp.BrandLogo.LogoSize', 'default/small', 'Size of the logo to be displayed'],
+    ]
+  },
   Toast: {
     required: [
       [
