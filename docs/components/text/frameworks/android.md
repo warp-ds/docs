@@ -9,10 +9,12 @@ fun WarpText(
     color: Color = colors.text.default,
     style: WarpTextStyle = WarpTextStyle.Body,
     maxLines: Int = Int.MAX_VALUE,
+    minLines: Int = 1,
     textAlign: TextAlign? = null,
     overflow: TextOverflow = TextOverflow.Ellipsis,
     softWrap: Boolean = true,
     textDecoration: TextDecoration? = null,
+    onTextLayout: (result: TextLayoutResult) -> Unit = {}
 )
 ```
 
