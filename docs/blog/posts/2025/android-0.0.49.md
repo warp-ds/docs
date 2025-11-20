@@ -75,4 +75,4 @@ WarpLogo(brand = Brand.Bilbasen, small = true)
 
  - WarpText: Added onTextLayout callback
  - Removed Remppatori & Mittanbud icons
- - WarpButton fofocusable modifier fix
+ - WarpButton focusable modifier fix
