@@ -5,6 +5,7 @@ const props = defineProps({
   initialTab: String,
   tabs: Array,
   isDisabled: Function,
+  storageKey: String,
   variant: {
     type: String,
     default: 'default',
@@ -13,6 +14,7 @@ const props = defineProps({
 const activeTab = ref(props.initialTab);
 const switchTab = (tab) => {
   activeTab.value = tab;
+  localStorage.setItem(props.storageKey, tab);
 };
 </script>
 

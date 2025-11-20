@@ -4,6 +4,7 @@ import Tabs from './Tabs.vue';
 
 const props = defineProps({
   tabsOrder: { type: Array, default: () => [] },
+  storageKey: { type: String },
 });
 
 const slots = useSlots();
@@ -26,13 +27,15 @@ const isDisabled = (tab) => {
 };
 
 const getInitialTab = () => {
+  const storedTab = localStorage.getItem(props.storageKey);
+  if (storedTab && !isDisabled(storedTab)) return storedTab;
   for (const t of tabs.value) if (!isDisabled(t)) return t;
   return tabs.value[0];
 };
 </script>
 
 <template>
-  <Tabs :tabs="tabs" :initialTab="getInitialTab()" :isDisabled="isDisabled">
+  <Tabs :tabs="tabs" :initialTab="getInitialTab()" :isDisabled="isDisabled" :storage-key="storageKey">
     <!-- Per-tab head: parent can override with #tab-head-<name> -->
     <template v-for="tab in tabs" #[`tab-head-${tab}`]>
       <slot :name="`tab-head-${tab}`">

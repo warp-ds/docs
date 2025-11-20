@@ -72,7 +72,7 @@ const tabsOrder = computed(() => panels.value.map((p) => p.slot));
 
 <template>
   <!-- Render ONLY your existing tabs component to avoid layout shifts -->
-  <tabs-content v-if="data" :tabs-order="tabsOrder">
+  <tabs-content v-if="data" :tabs-order="tabsOrder" storage-key="dynamic-component-code-tabs">
     <!-- Panels -->
     <template v-for="p in panels" :key="p.slot" #[p.slot]>
       <component v-if="p.hasContent" :is="p.component" />
