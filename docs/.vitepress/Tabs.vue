@@ -14,12 +14,14 @@ const props = defineProps({
 const activeTab = ref(props.initialTab);
 const switchTab = (tab) => {
   activeTab.value = tab;
-  localStorage.setItem(props.storageKey, tab);
-  const params = new URLSearchParams(window.location.search);
-  params.set(props.storageKey, tab);
-  const url = new URL(window.location);
-  url.search = params.toString();
-  history.pushState(null, null, url.toString());
+  if (typeof window !== 'undefined') {
+    const params = new URLSearchParams(window.location.search);
+    params.set(props.storageKey, tab);
+    const url = new URL(window.location);
+    url.search = params.toString();
+    history.pushState(null, null, url.toString());
+    window.localStorage.setItem(props.storageKey, tab);
+  }
 };
 </script>
 

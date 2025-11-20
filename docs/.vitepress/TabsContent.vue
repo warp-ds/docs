@@ -27,10 +27,12 @@ const isDisabled = (tab) => {
 };
 
 const getInitialTab = () => {
-  const storedTab = localStorage.getItem(props.storageKey);
-  const urlTab = new URLSearchParams(window.location.search).get(props.storageKey);
-  if (urlTab && !isDisabled(urlTab)) return urlTab;
-  if (storedTab && !isDisabled(storedTab)) return storedTab;
+  if (typeof window !== 'undefined') {
+    const urlTab = new URLSearchParams(window.location.search).get(props.storageKey);
+    if (urlTab && !isDisabled(urlTab)) return urlTab;
+    const storedTab = localStorage.getItem(props.storageKey);
+    if (storedTab && !isDisabled(storedTab)) return storedTab;
+  }
   for (const t of tabs.value) if (!isDisabled(t)) return t;
   return tabs.value[0];
 };
