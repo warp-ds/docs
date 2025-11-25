@@ -70,7 +70,7 @@ If a Warp component includes an illustration placeholder, you can replace it usi
 <br>
 <iframe width="688" height="400"
   src="https://www.youtube.com/embed/KwGIfqLbMo8"
-  title="Warp - Keep illustration's correct aspect ratio"
+  title="Warp - Use Instance swap on Warp components"
   frameborder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen>
