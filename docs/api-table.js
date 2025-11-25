@@ -2205,7 +2205,7 @@ export const android = {
         'onTextLayout',
         '(TextLayoutResult) -> Unit',
         '{}',
-        'Callback providing paragraph info, text size, baselines, and more'
+        'Callback providing paragraph info, text size, baselines, and more',
       ],
     ],
   },

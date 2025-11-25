@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 const props = defineProps({
   initialTab: String,
@@ -12,6 +12,13 @@ const props = defineProps({
   },
 });
 const activeTab = ref(props.initialTab);
+watch(
+  () => props.initialTab,
+  (next) => {
+    if (next == null || next === activeTab.value) return;
+    activeTab.value = next;
+  },
+);
 const switchTab = (tab) => {
   activeTab.value = tab;
   if (typeof window !== 'undefined') {
