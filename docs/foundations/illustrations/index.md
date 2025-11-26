@@ -31,10 +31,10 @@ Here's a step-by-step guide on using illustrations:
 3. In the Manage libraries view, enable the illustration libraries you need to use.
 4. The libraries and their illustrations will now appear in your Assets panel.
 
-<div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+<div style="display: flex; justify-content: center;">
   <iframe 
     src="https://www.youtube.com/embed/O3CZ8NxYVS0"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    style="aspect-ratio: 16 / 9; width: 100%;"
     title="Warp - Add library to working file"
     frameborder="0"
     allowfullscreen>
@@ -50,10 +50,10 @@ Brand illustrations won't always match the component placeholder's aspect ratio.
 3. Select the frame and **Create component** (Mac: ⌥⌘K / Win: Ctrl+Alt+K).
 4. Select the component and use **Instance swap** to replace the placeholder with your adjusted illustration.
 
-<div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+<div style="display: flex; justify-content: center;">
   <iframe 
     src="https://www.youtube.com/embed/JUpMin6Axgg"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    style="aspect-ratio: 16 / 9; width: 100%;"
     title="Warp - Keep illustration's correct aspect ratio"
     frameborder="0"
     allowfullscreen>
@@ -72,10 +72,10 @@ If a Warp component includes an illustration placeholder, you can replace it usi
 [Read more about the instance swap feature in Figma](https://help.figma.com/hc/en-us/articles/360039150413-Swap-components-and-instances).
 
 <br>
-<div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+<div style="display: flex; justify-content: center;">
   <iframe 
     src="https://www.youtube.com/embed/KwGIfqLbMo8"
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    style="aspect-ratio: 16 / 9; width: 100%;"
     title="Warp - Use Instance swap on Warp components"
     frameborder="0"
     allowfullscreen>
