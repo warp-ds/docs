@@ -1,14 +1,12 @@
 <script setup>
 import { withBase } from 'vitepress';
 import { computed, ref } from 'vue';
+import { CANONICAL_LABEL_LIST, getFrameworkLabel, isStatusAvailable, normalizeStatus } from './utils/frameworks.js';
+import { extractFrontmatter } from './utils/frontmatter.js';
 
 const mdModules = import.meta.glob('../../../components/*/index.md', { eager: true });
 const svgModules = import.meta.glob('../../../components/*/placeholder.svg', { eager: true, import: 'default' });
 
-function fmOf(mod) {
-  if (!mod || typeof mod !== 'object') return null;
-  return mod.frontmatter || mod.default?.frontmatter || mod.__pageData?.frontmatter || null;
-}
 function slugFromPath(p) {
   const s = String(p).replace(/\\/g, '/');
   return s.match(/\/components\/([^/]+)\/index\.md$/)?.[1] || s;
@@ -24,44 +22,18 @@ const placeholderBySlug = (() => {
   return map;
 })();
 
-const NAME_ALIASES = new Map([
-  ['react', 'React'],
-  ['react 19', 'React 19'],
-  ['react19', 'React 19'],
-  ['react-beta', 'React 19'],
-  ['vue', 'Vue'],
-  ['elements', 'Elements'],
-  ['android', 'Android'],
-  ['ios', 'iOS'],
-  ['figma', null],
-]);
-const CANONICAL_LIST = ['React', 'React 19', 'Vue', 'Elements', 'Android', 'iOS'];
-const CANONICAL = new Set(CANONICAL_LIST);
-const STATUS_OK = new Set(['released', 'beta', 'developing']);
-
-function toCanonical(name) {
-  const n = String(name || '')
-    .toLowerCase()
-    .trim();
-  return NAME_ALIASES.has(n) ? NAME_ALIASES.get(n) : null;
-}
-function normStatus(s) {
-  const v = String(s || '')
-    .toLowerCase()
-    .trim();
-  return STATUS_OK.has(v) ? v : 'unsupported';
-}
+const CANONICAL = new Set(CANONICAL_LABEL_LIST);
 
 const allItems = Object.entries(mdModules)
   .map(([key, mod]) => {
     const slug = slugFromPath(key);
     if (slug.startsWith('_') || slug.startsWith('.')) return null;
 
-    const fm = fmOf(mod) || {};
+    const fm = extractFrontmatter(mod) || {};
     const raw = Array.isArray(fm.frameworks) ? fm.frameworks : [];
     const frameworks = raw
-      .map((f) => ({ name: toCanonical(f?.name), status: normStatus(f?.status) }))
-      .filter((f) => f.name && CANONICAL.has(f.name) && STATUS_OK.has(f.status));
+      .map((f) => ({ name: getFrameworkLabel(f?.name), status: normalizeStatus(f?.status) }))
+      .filter((f) => f.name && CANONICAL.has(f.name) && isStatusAvailable(f.status));
 
     if (frameworks.length === 0) return null;
 
@@ -87,7 +59,7 @@ const allItems = Object.entries(mdModules)
 const q = ref('');
 const picked = ref([]); // selected canonical names
 
-const allFrameworks = computed(() => CANONICAL_LIST.slice());
+const allFrameworks = computed(() => CANONICAL_LABEL_LIST.slice());
 
 const filtered = computed(() => {
   const query = q.value.trim().toLowerCase();

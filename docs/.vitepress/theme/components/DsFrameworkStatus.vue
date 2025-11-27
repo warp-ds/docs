@@ -1,64 +1,33 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+import { CANONICAL_LABEL_LIST, getFrameworkLabel, normalizeStatus, SIMPLE_ICON_KEYS } from './utils/frameworks.js';
+import { extractFrontmatter } from './utils/frontmatter.js';
+import { fetchIconPath } from './utils/icons.js';
 
-// Read component pages relative to this file:
-// .vitepress/theme/components/DsFrameworkStatus.vue → ../../../components/*/index.md
+// Read component pages relative to this file
 const modules = import.meta.glob('../../../components/*/index.md', { eager: true });
 
-function getFrontmatter(mod) {
-  if (!mod || typeof mod !== 'object') return null;
-  if (mod.frontmatter && typeof mod.frontmatter === 'object') return mod.frontmatter;
-  if (mod.default && typeof mod.default === 'object') {
-    if (mod.default.frontmatter) return mod.default.frontmatter;
-    if (mod.default.__pageData?.frontmatter) return mod.default.__pageData.frontmatter;
-  }
-  if (mod.__pageData?.frontmatter) return mod.__pageData.frontmatter;
-  return null;
-}
+const CANONICAL = CANONICAL_LABEL_LIST;
 
-const NAME_MAP = {
-  'react-beta': 'React 19',
-  react19: 'React 19',
-  'react 19': 'React 19',
-  react: 'React',
-  vue: 'Vue',
-  elements: 'Elements',
-  android: 'Android',
-  ios: 'iOS',
-};
-const CANONICAL = ['React', 'React 19', 'Vue', 'Elements', 'Android', 'iOS'];
-
-const normStatus = (s) => {
-  const v = String(s || '')
-    .toLowerCase()
-    .trim();
-  return ['released', 'beta', 'developing', 'planned', 'deprecated'].includes(v) ? v : v ? 'unsupported' : '';
-};
-const normName = (raw) =>
-  NAME_MAP[
-    String(raw || '')
-      .toLowerCase()
-      .trim()
-  ] || raw;
-const slugFromKey = (k) => {
+function slugFromKey(k) {
   const m = String(k)
     .replace(/\\/g, '/')
     .match(/\/components\/([^/]+)\/index\.md$/);
   return m ? m[1] : k;
-};
+}
 
 // Build rows from frontmatter
 const rows = Object.entries(modules)
   .map(([key, mod]) => {
-    const fm = getFrontmatter(mod);
+    const fm = extractFrontmatter(mod);
     if (!fm || !Array.isArray(fm.frameworks) || fm.frameworks.length === 0) return null;
     const slug = slugFromKey(key);
     const title = fm.title || slug;
     const statuses = Object.create(null);
     for (const fw of fm.frameworks) {
-      const name = normName(fw?.name);
-      if (!CANONICAL.includes(name)) continue;
-      statuses[name] = normStatus(fw?.status);
+      const name = getFrameworkLabel(fw?.name);
+      if (!name || !CANONICAL.includes(name)) continue;
+      statuses[name] = normalizeStatus(fw?.status, { allowEmpty: true }) || '';
     }
     for (const c of CANONICAL) if (!(c in statuses)) statuses[c] = '';
     return { title, slug, statuses };
@@ -70,34 +39,24 @@ const counts = {};
 for (const c of CANONICAL) counts[c] = rows.filter((r) => r.statuses[c] === 'released').length;
 const headers = CANONICAL.map((c) => ({ key: c }));
 
-const SIMPLE_ICON_KEY = {
+// Map labels to icon keys
+const LABEL_TO_ICON_KEY = {
   React: 'react',
-  'React 19': 'react',
-  Vue: 'vuedotjs',
-  Elements: 'webcomponentsdotorg',
+  'React 19': 'react19',
+  Vue: 'vue',
+  Elements: 'elements',
   Android: 'android',
-  iOS: 'apple',
+  iOS: 'ios',
 };
-const iconPaths = ref({}); // { 'React': 'M...Z', ... }
 
-async function fetchIconPath(siKey) {
-  if (!siKey) return null;
-  try {
-    const url = `https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${siKey}.svg`;
-    const res = await fetch(url);
-    if (!res.ok) return null;
-    const svg = await res.text();
-    const m = svg.match(/<path[^>]*d="([^"]+)"/i);
-    return m ? m[1] : null;
-  } catch {
-    return null;
-  }
-}
+const iconPaths = ref({});
+
 async function loadHeaderIcons() {
   for (const h of headers) {
-    const si = SIMPLE_ICON_KEY[h.key];
-    if (!si) continue;
-    const d = await fetchIconPath(si);
+    const iconKey = LABEL_TO_ICON_KEY[h.key];
+    const siKey = iconKey ? SIMPLE_ICON_KEYS[iconKey] : null;
+    if (!siKey) continue;
+    const d = await fetchIconPath(siKey);
     if (d) iconPaths.value[h.key] = d;
   }
 }

@@ -1,6 +1,7 @@
 <script setup>
 import { useData } from 'vitepress';
 import { computed } from 'vue';
+import { ALLOWED_FRAMEWORK_KEYS, canonicalizeFramework, FRAMEWORK_ORDER, normalizeStatus } from './utils/frameworks.js';
 
 const props = defineProps({
   align: { type: String, default: 'auto' }, // 'auto' | 'left' | 'center'
@@ -9,47 +10,17 @@ const props = defineProps({
 
 const { frontmatter } = useData();
 
-/* Canonical mapping: key (stable), label (UI), icon (for DsBadge) */
-function canon(name) {
-  const n = String(name || '')
-    .toLowerCase()
-    .trim();
-  if (n === 'react19' || n === 'react 19' || n === 'react-beta' || n === 'react beta') {
-    return { key: 'react19', label: 'React 19', icon: 'react' };
-  }
-  if (n === 'react') return { key: 'react', label: 'React', icon: 'react' };
-  if (n === 'vue') return { key: 'vue', label: 'Vue', icon: 'vue' };
-  if (n === 'elements' || n === 'webcomponents') {
-    return { key: 'elements', label: 'Elements', icon: 'webcomponents' };
-  }
-  if (n === 'android') return { key: 'android', label: 'Android', icon: 'android' };
-  if (n === 'ios' || n === 'apple') {
-    return { key: 'ios', label: 'iOS', icon: 'apple' };
-  }
-  return null;
-}
-
-const ORDER = ['react', 'react19', 'vue', 'elements', 'android', 'ios'];
-const ALLOWED = new Set(ORDER);
-
-function normStatus(s) {
-  const v = String(s || '')
-    .toLowerCase()
-    .trim();
-  return ['released', 'beta', 'developing', 'planned', 'deprecated', 'unsupported'].includes(v) ? v : 'unsupported';
-}
-
 const items = computed(() => {
   const arr = Array.isArray(frontmatter.value?.frameworks) ? frontmatter.value.frameworks : [];
   const mapped = [];
   for (const f of arr) {
-    const c = canon(f?.name);
-    if (!c || !ALLOWED.has(c.key)) continue;
-    const status = normStatus(f?.status);
+    const c = canonicalizeFramework(f?.name);
+    if (!c || !ALLOWED_FRAMEWORK_KEYS.has(c.key)) continue;
+    const status = normalizeStatus(f?.status);
     if (props.hideUnsupported && (status === 'unsupported' || status === 'planned')) continue;
     mapped.push({ ...c, status });
   }
-  return mapped.sort((a, b) => ORDER.indexOf(a.key) - ORDER.indexOf(b.key));
+  return mapped.sort((a, b) => FRAMEWORK_ORDER.indexOf(a.key) - FRAMEWORK_ORDER.indexOf(b.key));
 });
 
 const justifyClass = computed(() => {

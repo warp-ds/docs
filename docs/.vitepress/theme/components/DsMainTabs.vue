@@ -1,6 +1,7 @@
 <script setup>
 import { useData } from 'vitepress';
 import { computed } from 'vue';
+import { getFileName, normalizePath } from './utils/frameworks.js';
 
 const { page } = useData();
 
@@ -22,9 +23,7 @@ const DEFAULT_ORDER = new Map([
 ]);
 
 const titleCase = (s) => s.replace(/\w\S*/g, (t) => t[0].toUpperCase() + t.slice(1));
-const normPath = (k) => String(k).replace(/\\/g, '/');
-const inThisDir = (k, dir) => normPath(k).startsWith(dir);
-const fileName = (k) => normPath(k).split('/').pop() || '';
+const inThisDir = (k, dir) => normalizePath(k).startsWith(dir);
 
 function parseName(fn) {
   // "tab_20-usage.md" -> { order: 20, stem: "usage" }
@@ -53,7 +52,7 @@ const tabs = computed(() => {
   const items = Object.keys(tabMap)
     .filter((k) => inThisDir(k, dir))
     .map((k) => {
-      const fname = fileName(k);
+      const fname = getFileName(k);
       const { order, stem } = parseName(fname);
       const norm = stem.toLowerCase();
 

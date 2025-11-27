@@ -20,6 +20,14 @@ import 'uno.css';
 import Card from '../Card.vue';
 import Cards from '../Cards.vue';
 import warpThemeSwitcher from '../warp-theme-switcher.js';
+import DsBadge from './components/DsBadge.vue';
+import DsBetaNotice from './components/DsBetaNotice.vue';
+import DsCodeTabs from './components/DsCodeTabs.vue';
+import DsComponentOverview from './components/DsComponentOverview.vue';
+import DsComponentStatus from './components/DsComponentStatus.vue';
+import DsFrameworkStatus from './components/DsFrameworkStatus.vue';
+import DsMainTabs from './components/DsMainTabs.vue';
+import DsSearchInput from './components/DsSearchInput.vue';
 
 export default {
   extends: DefaultTheme,
@@ -31,22 +39,19 @@ export default {
   },
 
   enhanceApp({ app }) {
-    // 1) auto-register NEW components prefixed with Ds in ./vitepress/theme/components/**
-    const modules = import.meta.glob('./components/**/*.vue', {
-      eager: true,
-    });
-    for (const [path, mod] of Object.entries(modules)) {
-      const file = path.split('/').pop();
-      const name = file.replace(/\.\w+$/, '');
-      if (!name.startsWith('Ds')) continue;
-      app.component(name, mod.default);
-    }
-
-    // 2) plugins
+    // plugins
     app.use(warpThemeSwitcher);
 
-    // explicit globals (manual registrations).
-    // These run AFTER auto-reg so they win on name conflicts, loose goal is to get rid of these
+    // Ds-prefixed components (explicitly registered)
+    app.component('DsBadge', DsBadge);
+    app.component('DsBetaNotice', DsBetaNotice);
+    app.component('DsCodeTabs', DsCodeTabs);
+    app.component('DsComponentOverview', DsComponentOverview);
+    app.component('DsComponentStatus', DsComponentStatus);
+    app.component('DsFrameworkStatus', DsFrameworkStatus);
+    app.component('DsMainTabs', DsMainTabs);
+    app.component('DsSearchInput', DsSearchInput);
+
     app.component('ApiTable', ApiTable);
     app.component('ThemeSwitcher', ThemeSwitcher);
     app.component('TabsContent', TabsContent);
