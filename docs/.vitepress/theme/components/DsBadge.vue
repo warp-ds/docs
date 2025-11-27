@@ -1,5 +1,7 @@
 <script setup>
 import { computed, onMounted, ref, watch } from 'vue';
+import { normalizeStatus } from './utils/frameworks.js';
+import { fetchIconPath } from './utils/icons.js';
 
 const props = defineProps({
   framework: { type: String, required: true }, // "React"
@@ -10,58 +12,14 @@ const props = defineProps({
   border: { type: String, default: 'none' }, // 'none' | 'neutral' | 'status'
 });
 
-function normalizeStatus(s) {
-  const v = String(s || '')
-    .toLowerCase()
-    .trim();
-  return ['released', 'beta', 'developing', 'planned', 'deprecated'].includes(v) ? v : 'unsupported';
-}
 const statusKey = computed(() => normalizeStatus(props.status));
 
-/* ---------------- Simple Icons fetch (tiny, cached) ---------------- */
-const ICON_FILENAME_MAP = {
-  react: 'react',
-  'react 19': 'react',
-  react19: 'react',
-  'react-beta': 'react',
-  vue: 'vuedotjs',
-  'vue.js': 'vuedotjs',
-  vuedotjs: 'vuedotjs',
-  android: 'android',
-  apple: 'apple',
-  ios: 'apple',
-  webcomponents: 'webcomponentsdotorg',
-  webcomponentsdotorg: 'webcomponentsdotorg',
-  elements: 'webcomponentsdotorg',
-};
-const iconCache = new Map();
+/* Icon loading */
 const iconPath = ref(null);
 
-function keyToFilename(key) {
-  const k = String(key || '')
-    .toLowerCase()
-    .trim();
-  return ICON_FILENAME_MAP[k] || '';
-}
-async function loadIconPath(key) {
-  const filename = keyToFilename(key);
-  if (!filename) return null;
-  if (iconCache.has(filename)) return iconCache.get(filename);
-  try {
-    const res = await fetch(`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${filename}.svg`);
-    if (!res.ok) return null;
-    const svg = await res.text();
-    const match = svg.match(/<path[^>]*d="([^"]+)"/i);
-    const d = match ? match[1] : null;
-    if (d) iconCache.set(filename, d);
-    return d;
-  } catch {
-    return null;
-  }
-}
 async function refreshIcon() {
   const key = props.icon || props.framework;
-  iconPath.value = await loadIconPath(key);
+  iconPath.value = await fetchIconPath(key);
 }
 onMounted(refreshIcon);
 watch(() => [props.icon, props.framework], refreshIcon);
