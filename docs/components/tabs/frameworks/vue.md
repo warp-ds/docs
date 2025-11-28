@@ -3,10 +3,8 @@
 > Use in entire app
 
 ```js
-import { Tabs, Tab, TabContent } from '@warp-ds/vue';
+import { Tabs } from '@warp-ds/vue';
 app.use(Tabs);
-app.use(Tab);
-app.use(TabContent);
 ```
 
 > Use in one component and special imports
