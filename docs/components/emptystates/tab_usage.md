@@ -74,7 +74,7 @@ Empty states can include icons or illustrations to help communicate the message.
 ### Illustrations
 
 - Use imagery thoughtfully. Metaphors or objects may not translate across all cultures or languages.
-Illustrations are currently not provided by Warp, but can be added by product teams using their own assets. See available branded illustration libraries here.
+Illustrations are currently not provided by Warp, but can be added by product teams using their own assets. [See available branded illustration libraries here](https://warp-ds.github.io/docs/foundations/illustrations/#branded-illustration-libraries-in-figma).
 - Use illustrations at the default size of <code>200×200px</code>.
 - Don't use other illustration sizes or distort proportions.
 
@@ -84,9 +84,9 @@ Illustrations are currently not provided by Warp, but can be added by product te
 
 ### Vend tagline
 
-The “Part of Vend” tagline can be used in Empty states to remind users that Vend is the platform behind their local brand. It helps reinforce trust and awareness that the experience is part of a larger Vend ecosystem.
+The “Part of Vend” tagline can be used in empty states to remind users that Vend is the platform behind their local brand. It helps reinforce trust and awareness that the experience is part of a larger Vend ecosystem.
 
-Use the tagline in Empty states where the message refers to a functionality or service delivered by Vend (e.g., login, or account setup).
+Use the tagline in empty states where the message refers to a functionality or service delivered by Vend (e.g., login, or account setup).
 
 [See the Vend Endorsement guidelines](https://app.pickit.com/#/documents/collection/6800c6610614a4f90e543d36?filter=e30%3D) for more information.
 
@@ -103,20 +103,20 @@ Use the tagline in Empty states where the message refers to a functionality or s
 [Visit Astro for guidance and best practices](https://www.astro-contentguide.com/05b2d7be6/p/5027af-empty-states) to ensure clear and consistent messages in empty states.
 
 ## Custom state
-If none of the existing variants fit your use case, create a custom version using the Custom empty/error state template.
+If none of the existing variants fit your use case, create a custom version using the Custom state template.
 
-Use the available properties in the component (see Anatomy) and follow the Content guidelines to keep tone, structure, and messaging consistent with the system.
+Use the available properties in the component ([see Anatomy](https://warp-ds.github.io/docs/components/emptystates/?ds-main-tabs=Overview#anatomy)) and follow the [Content guidelines](#content-guidelines) to keep tone, structure, and messaging consistent with the system.
 
 When creating a custom empty state:
 - Keep layout and spacing aligned with existing variants.
 - Use system tokens for colour, typography, and iconography.
 
-These foundations should work out of the box but, if you need further guidance, reach out to the Warp team.
+These foundations should work out of the box but, if you need further guidance, reach out to the Warp team on Slack ([#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)).
 
 ## Behavior
-The only required element in the Empty state component is the title, which uses the T3 heading token. All other elements are optional and should be included based on the use case.
+The only required element in the Empty state component is the title, which uses the <code>T3</code> heading token. All other elements are optional and should be included based on the use case.
 
-The component has a 420px max width to ensure the message remains readable and doesn't stretch too wide on larger screens.
+The component has a <code>420px</code> max width to ensure the message remains readable and doesn't stretch too wide on larger screens.
 
 ### Loading behaviour
 A loading state may briefly appear before the empty state is shown. When loading completes, the content fades in to replace the progress indicator.
@@ -133,7 +133,7 @@ Consider adding an action button or relevant links to guide and help users proce
 
 When interacting with a button to reload data, show a loading spinner after the user taps on the button. This indicates that the system is processing the request.
 
-- If reload succeeds, replace the Empty state with the intended content.
+- If reload succeeds, replace the empty state with the intended content.
 - If it fails, replace the spinner with a button so the user can retry the action.
 
 <div class="width: 100%;">
@@ -152,13 +152,15 @@ Always display the empty state close to where the missing content would normally
     <img src="/patterns/emptystates/placement-main_element-app.svg" alt="Example showing an empty state centered in the main content area of an app screen prompting the user to login, with navigation elements still visible for continued browsing." />
 </div>
 
-Example showing an empty state centered in the main content area of an app screen prompting the user to login, with navigation elements still visible for continued browsing.
+<span style="color: var(--vp-c-text-2);">Example showing an empty state centered in the main content area of an app screen prompting the user to login, with navigation elements still visible for continued browsing.</span>
+<br><br>
 
 <div class="width: 100%;">
     <img src="/patterns/emptystates/placement-main_element-web_desktop.svg" alt="Example showing an empty state centered in the main content area of the search results page on desktop web, with navigation elements and filters still visible for continued browsing." />
 </div>
 
-Example showing an empty state centered in the main content area of the search results page on desktop web, with navigation elements and filters still visible for continued browsing.
+<span style="color: var(--vp-c-text-2);">Example showing an empty state centered in the main content area of the search results page on desktop web, with navigation elements and filters still visible for continued browsing.</span>
+<br><br>
 
 ### In-container:
 When used within a container, such as a modal or a section, the empty state should align with the layout and hierarchy of that container. Keep spacing consistent with surrounding content.
@@ -167,4 +169,4 @@ When used within a container, such as a modal or a section, the empty state shou
     <img src="/patterns/emptystates/placement-modal.svg" alt="Example showing an empty state displayed within a modal, aligned with the container layout." />
 </div>
 
-Example showing an empty state displayed within a modal, aligned with the container layout.
+<span style="color: var(--vp-c-text-2);">Example showing an empty state displayed within a modal, aligned with the container layout.</span>
