@@ -1,8 +1,7 @@
 Empty states are moments in the user experience when we don't have specific info or data to display to the user. They're also an opportunity to guide the user by explaining what to do next, preventing confusion.
 
-## Example
-<ThemeSwitcher />
-<emptystates-example />
+#### Common alternative names
+State, no-data state, empty view, zero-data state, no results, first-use state, missing state, loading
 
 ## Anatomy
 
@@ -19,9 +18,9 @@ Empty states are moments in the user experience when we don't have specific info
 
 4. **Primary action (optional)**: The primary call to action referenced in the description copy above.
 
-5. **Secondary action (optional)**: f there is a secondary action, such as referencing documentation for further reading or an alternative destination, include it as a less visually emphasised button (Button Quiet).
+5. **Secondary action (optional)**: If there is a secondary action, such as referencing documentation for further reading or an alternative destination, include it as a less visually emphasised button (Button Quiet).
 
-6.  **Tagline (optional)**: Endorses Vend and helps build brand awareness at key user journey's touch points. [See the Vend Endorsement guidelines](https://app.pickit.com/#/documents/collection/6800c6610614a4f90e543d36?filter=e30%3D) for guidance.
+6.  **Tagline (optional)**: Endorses Vend and helps build brand awareness at key user journey's touch points. [See the Vend Endorsement guidelines](https://app.pickit.com/#/documents/collection/6800c6610614a4f90e543d36?filter=e30%3D) for more information.
 
 ## Variants
 
