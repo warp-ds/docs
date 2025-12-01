@@ -1,2 +1,2 @@
 ## Text scaling
-Icon and illustration sizes shouldn't increase with text scaling.
+Icons and illustrations should remain their default size and not scale when users adjust text size in their device's accessibility settings.
