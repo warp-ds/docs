@@ -1,43 +1,20 @@
 <script setup>
 import { useData } from 'vitepress';
 import { computed } from 'vue';
+import { ALLOWED_FRAMEWORK_KEYS, canonicalizeFramework, FRAMEWORK_ORDER, normalizeStatus } from './utils/frameworks.js';
 
 const { page, frontmatter } = useData();
 const isDev = !!import.meta.env.DEV;
 
 const currentDir = computed(() => page.value.relativePath.replace(/[^/]+$/, ''));
 
-// Canonical mapping → { key, label, file }
-function canon(name) {
-  const n = String(name || '')
-    .toLowerCase()
-    .trim();
-  if (n === 'react 19' || n === 'react19' || n === 'react-beta')
-    return { key: 'react19', label: 'React 19', file: 'react-19' };
-  if (n === 'react') return { key: 'react', label: 'React', file: 'react' };
-  if (n === 'vue') return { key: 'vue', label: 'Vue', file: 'vue' };
-  if (n === 'elements' || n === 'webcomponents') return { key: 'elements', label: 'Elements', file: 'elements' };
-  if (n === 'android') return { key: 'android', label: 'Android', file: 'android' };
-  if (n === 'ios' || n === 'apple') return { key: 'ios', label: 'iOS', file: 'ios' };
-  return null;
-}
-const ALLOWED_KEYS = new Set(['react', 'react19', 'vue', 'elements', 'android', 'ios']);
-const CANONICAL_ORDER = ['react19', 'react', 'vue', 'elements', 'android', 'ios'];
-
-const normalizeStatus = (s) => {
-  const v = String(s || '')
-    .toLowerCase()
-    .trim();
-  return ['released', 'beta', 'developing', 'planned', 'deprecated'].includes(v) ? v : 'unsupported';
-};
-
 // Frontmatter → canonical list (dedup by key)
 const fmFrameworks = computed(() => {
   const arr = Array.isArray(frontmatter.value?.frameworks) ? frontmatter.value.frameworks : [];
   const byKey = new Map();
   for (const f of arr) {
-    const c = canon(f?.name);
-    if (!c || !ALLOWED_KEYS.has(c.key)) continue;
+    const c = canonicalizeFramework(f?.name);
+    if (!c || !ALLOWED_FRAMEWORK_KEYS.has(c.key)) continue;
     if (byKey.has(c.key)) continue; // keep first occurrence
     byKey.set(c.key, {
       key: c.key,
@@ -79,7 +56,7 @@ const panels = computed(() =>
 );
 
 const sortedPanels = computed(() => {
-  const orderIndex = new Map(CANONICAL_ORDER.map((k, i) => [k, i]));
+  const orderIndex = new Map(FRAMEWORK_ORDER.map((k, i) => [k, i]));
   return panels.value.slice().sort((a, b) => {
     const ai = orderIndex.has(a.slot) ? orderIndex.get(a.slot) : 999;
     const bi = orderIndex.has(b.slot) ? orderIndex.get(b.slot) : 999;
