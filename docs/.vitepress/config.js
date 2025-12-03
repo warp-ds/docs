@@ -57,6 +57,7 @@ function buildSectionSidebarItems(rootDir, section) {
     .filter(Boolean);
 
   items.sort((a, b) => a.text.localeCompare(b.text));
+  console.log(items);
   return items;
 }
 
