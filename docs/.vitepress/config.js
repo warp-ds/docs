@@ -56,6 +56,7 @@ function buildComponentSidebarItems(rootDir) {
     .filter(Boolean);
 
   items.sort((a, b) => a.text.localeCompare(b.text));
+  console.log(items);
   return items;
 }
 
@@ -1238,7 +1239,125 @@ export default defineConfig({
 
         {
           text: 'Components',
-          items: buildComponentSidebarItems(resolve(__dirname, '..')),
+          items: [
+            { text: 'Alert', link: '/components/alert/' },
+            {
+              text: 'Badge',
+              collapsed: true,
+              link: '/components/badge/',
+              items: [
+                { text: 'Usage', link: '/components/badge/usage' },
+                { text: 'Styling', link: '/components/badge/styling' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/badge/frameworks/react' },
+                    { text: 'Vue', link: '/components/badge/frameworks/vue' },
+                    { text: 'Elements', link: '/components/badge/frameworks/elements' },
+                    { text: 'Android', link: '/components/badge/frameworks/android' },
+                    { text: 'iOS', link: '/components/badge/frameworks/ios' },
+                    { text: 'Web', link: '/components/badge/frameworks/web' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/badge/accessibility' },
+              ],
+            },
+            { text: 'Box', link: '/components/box/' },
+            {
+              text: 'Breadcrumbs',
+              collapsed: true,
+              link: '/components/breadcrumbs/',
+              items: [
+                { text: 'Usage', link: '/components/breadcrumbs/usage' },
+                { text: 'Styling', link: '/components/breadcrumbs/styling' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/breadcrumbs/frameworks/react' },
+                    { text: 'Vue', link: '/components/breadcrumbs/frameworks/vue' },
+                    { text: 'Elements', link: '/components/breadcrumbs/frameworks/elements' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/breadcrumbs/accessibility' },
+              ],
+            },
+            { text: 'Broadcast', link: '/components/broadcast/' },
+            {
+              text: 'Button',
+              collapsed: true,
+              link: '/components/button/',
+              items: [
+                { text: 'Usage', link: '/components/button/usage' },
+                { text: 'Variants', link: '/components/button/variants' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/button/frameworks/react' },
+                    { text: 'React 19', link: '/components/button/frameworks/react-19' },
+                    { text: 'Vue', link: '/components/button/frameworks/vue' },
+                    { text: 'Elements', link: '/components/button/frameworks/elements' },
+                    { text: 'Android', link: '/components/button/frameworks/android' },
+                    { text: 'iOS', link: '/components/button/frameworks/ios' },
+                    { text: 'Web', link: '/components/button/frameworks/web' },
+                  ],
+                },
+              ],
+            },
+            { text: 'Button group', link: '/components/buttongroup/' },
+            { text: 'Button pill', link: '/components/buttonpill/' },
+            { text: 'Callout', link: '/components/callout/' },
+            { text: 'Card', link: '/components/card/' },
+            { text: 'Checkbox', link: '/components/checkbox/' },
+            { text: 'Combo box', link: '/components/combobox/' },
+            { text: 'Date picker', link: '/components/datepicker/' },
+            { text: 'Divider', link: '/components/divider/' },
+            { text: 'Expandable', link: '/components/expandable/' },
+            { text: 'Icons', link: '/components/icons/' },
+            { text: 'Link', link: '/components/link/' },
+            {
+              text: 'Modal',
+              collapsed: true,
+              link: '/components/modal/',
+              items: [
+                { text: 'Usage', link: '/components/modal/usage' },
+                { text: 'Accessibility', link: '/components/modal/accessibility' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/modal/frameworks/react' },
+                    { text: 'Vue', link: '/components/modal/frameworks/vue' },
+                    { text: 'Elements', link: '/components/modal/frameworks/elements' },
+                    { text: 'Android', link: '/components/modal/frameworks/android' },
+                    { text: 'iOS', link: '/components/modal/frameworks/ios' },
+                    { text: 'Figma', link: '/components/modal/frameworks/figma' },
+                  ],
+                },
+              ],
+            },
+            { text: 'Page indicator', link: '/components/pageindicator/' },
+            { text: 'Pagination', link: '/components/pagination/' },
+            { text: 'Pill', link: '/components/pill/' },
+            { text: 'Popover', link: '/components/popover/' },
+            { text: 'Radio', link: '/components/radio/' },
+            { text: 'Radio buttons', link: '/components/radiobuttons/' },
+            { text: 'Range slider', link: '/components/rangeslider/' },
+            { text: 'Select', link: '/components/select/' },
+            { text: 'Slider', link: '/components/slider/' },
+            { text: 'Spinner', link: '/components/spinner/' },
+            { text: 'Steps', link: '/components/steps/' },
+            { text: 'Switch', link: '/components/switch/' },
+            { text: 'Tabs', link: '/components/tabs/' },
+            { text: 'Text', link: '/components/text/' },
+            { text: 'Text area', link: '/components/textarea/' },
+            { text: 'Text field', link: '/components/textfield/' },
+            { text: 'Toast', link: '/components/toast/' },
+            { text: 'Tooltip', link: '/components/tooltip/' },
+            { text: 'Utilities', link: '/components/utilities/' },
+          ],
         },
       ],
     },
