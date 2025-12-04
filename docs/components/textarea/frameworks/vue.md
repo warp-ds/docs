@@ -36,7 +36,16 @@ All typical HTML5 attributes are valid props for textarea.
 
 Below are some additional props documented.
 
-<api-table type=vue component="Field"/>
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | string |  | The content to display as the label |
+| hint | string |  | The string can contain HTML. |
+| invalid | boolean |  | Renders the field in an invalid state. Often paired with `hint` to provide feedback about the error. |
+| label-level | number |  | Usable on toggles, will make the emitted legend element into a heading for accessibility. |
+| optional | string |  | Mark label to indicate that this input is optional. |
+| read-only | string |  | Whether the input can be selected but not changed by the user. |
 
 ### Validation
 
@@ -50,13 +59,22 @@ Every form element accepts a prop `rules` which takes an array of functions. The
 
 The function has one argument, the current value of the form element — and can either return `true` or an object with attributes described below
 
-<api-table type=vue component="InputAttributes"/>
+| attribute | type | notes |
+| --- | --- | --- |
+| valid | boolean |  |
+| hint | string |  |
+| always | boolean |  |
 
 #### Collecting Validation with wForm
 
 The `wForm` component registers element descendants at any level, and provides the aggregate validation status.
 
-<api-table type=vue component="InputValidation"/>
+| prop | type | default | notes |
+| --- | --- | --- | --- |
+| v-model | boolean |  | True when all descendants are valid |
+| v-model:completed | boolean |  | True when all descendants are completed - passing their required rule |
+| should-validate | boolean |  | Can be used to instruct all descendants to immediately validate. Note that this will not update if the should-validate logic is updated elsewhere. |
+| as | string | form | The DOM element to emit for the wrapper |
 
 #### Programmatic validation
 

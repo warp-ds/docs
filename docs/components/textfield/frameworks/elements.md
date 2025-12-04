@@ -10,7 +10,25 @@
 ```
 
 ### Textfield Attributes
-<api-table type=elements component="TextField" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `"number" \|"text" \|"search" \|"email" \|"password" \|"url" \|"tel"` |  | The type of input to render. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdeftype). |
+| disabled | boolean |  | Whether the input is disabled. |
+| invalid | boolean |  | Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error. |
+| help-text | string |  | The content to display as the help text. |
+| label | string |  | The content to display as the label. |
+| max | number |  | Standard `input` max attribute, to be used with `type="number"`. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefmaxlength). |
+| min | number |  | Standard `input` min attribute, to be used with `type="number"`. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefminlength). |
+| max-Length | number |  | The maximum number of characters supported by the input. See MDN. |
+| min-Length | number |  | The minimum number of characters supported by the input. See MDN. |
+| name | string |  | The name of the input element, used when submitting an HTML form. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname). |
+| pattern | string |  | Regex pattern that the value of the input must match to be valid. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefpattern). |
+| placeholder | string |  | Text hint that occupies the text input when it is empty. |
+| readOnly | boolean |  | Whether the input can be selected but not changed by the user. |
+| required | boolean |  | Whether user input is required on the input before form submission. |
+| value | string |  | The current value (controlled). |
 
 ### Validation
 Text fields can communicate to the user whether the current value is invalid. Implement your
@@ -82,7 +100,14 @@ You must specify which slot to set the affix into (either prefix or suffix).
   <w-affix slot="suffix" search aria-label="Search"></w-affix>
 </w-textfield>
 ```
-<api-table type=elements component="Affix" />
+#### Affix props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string |  | Defines a string value that labels the affix element |
+| clear | boolean |  | Displays a clear icon |
+| search | boolean |  | Displays a search icon |
+| label | string |  | Displays a string |
 
 ### Read only
 The read-only boolean attribute makes the w-textfield's text content immutable. Unlike

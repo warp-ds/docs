@@ -34,4 +34,14 @@ Warp.Switch(isOn: $isOn).uiView
 
 ### Parameters
 
-<api-table type=iOS component="Switch" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| isOn | Binding Bool |  | Binding to a Boolean value indicating whether the switch is on or off. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| state | Warp.SwitchState | .default | The state of the switch.  Use one of the predefined `SwitchState` values: `.default`, or `.disabled` |

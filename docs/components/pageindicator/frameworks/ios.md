@@ -24,4 +24,9 @@ Warp.PageIndicator(pageCount: 5).uiView
 
 ### Parameters
 
-<api-table type=iOS component="PageIndicator" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| pageCount | Int |  | The total number of pages. |
+| selectedPage | Binding Int |  | Binding to an integer representing the currently selected page. |

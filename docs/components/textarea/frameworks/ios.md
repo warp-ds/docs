@@ -50,4 +50,20 @@ Warp.TextArea(
 
 ### Parameters
 
-<api-table type=iOS component="TextArea" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | Binding String |  | Binding to the text content. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String | empty | The main title text to display. |
+| additionalInformation | String? | nil | Optional text to display after the title. |
+| tooltipContent | AnyView? | nil | An optional view to display when the tooltip icon is tapped. |
+| placeholder | String | empty | Text to display when the text area is empty. |
+| style | Warp.TextAreaStyle | .default | The style of the text area.  Use one of the predefined `TextAreaStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly` |
+| helpText | String? | nil | Optional `String` to display below the text area. |
+| minHeight | CGFloat | 88 | Minimum height for the text area. |

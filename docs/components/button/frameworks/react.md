@@ -103,4 +103,23 @@ The fullWidth prop sets the button's width to its parent's width.
 
 ### Props
 
-<api-table type=react component="Button" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| className | string |  | Additional classes to include |
+| style | CSSProperties |  | CSS styles to inline on the component |
+| type | `"button"\|"submit"\|"reset"` | button | Button type, only applied when href is not set. |
+| primary | boolean | false | Set the button to be a primary, call to action button. Can be combined with `small`. |
+| secondary | boolean | false | Set the button to be a secondary button. Can be combined with `quiet` and `small`. |
+| negative | boolean | false | Set the button to be a negative, destructive style button. Can be combined with `quiet` and `small`. |
+| utility | boolean | false | Set the button to be a utility style button. Can be combined with `small` and `quiet`. |
+| quiet | boolean | false | Quieten down the button, can be combined with other button types. |
+| small | boolean | false | Set the button to be a small size, can be combined with other button types. |
+| link | boolean | false | Set the button to look like a link. Can be combined with `small`. Should not be combined with `href` |
+| ~~pill~~ | boolean | false | Set the button to look like a pill style button. @deprecated use `utility` together with `quiet` instead. |
+| loading | boolean | false | Set the button to look like it is in progress, can be combined with other button types. Can be combined with any button type. |
+| href | string |  | Set the href for the location where clicking the button will take you to. Uses an a tag instead of a button tag for the underlying implementation. Should not be combined with `link` |
+| target | string |  | Anchor target, see [The Anchor element / MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). |
+| rel | string |  | The relationship of the linked URL. |
+| fullWidth | boolean |  | Sets the button's width to its parent's width. Useful especially on mobile when button should take full width. |

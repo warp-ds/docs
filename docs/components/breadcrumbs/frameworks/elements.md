@@ -14,4 +14,8 @@
 
 ### Props
 
-<api-table type="elements" component="Breadcrumbs" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string | Her er du | Defines a string value that labels the current element. |

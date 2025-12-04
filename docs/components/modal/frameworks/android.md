@@ -82,4 +82,24 @@ if(openModal) {
 
 ### Parameters
 
-<api-table type=android component="Modal" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String |  | The title to be displayed in the modal |
+| body | String |  | The text to be displayed in the modal |
+| onDismiss | `() -> Unit` |  | The lambda to be invoked when closing the modal |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the modal Card |
+| subtitle | String | null | The subtitle to be displayed in the modal |
+| primaryButtonText | String | null | The text to be displayed on the positive button. |
+| onPrimaryButtonClick | `() -> Unit` | null | The lambda to be invoked on the positive button click. |
+| secondaryButtonText | String | null | The text to be displayed on the negative button. |
+| onSecondaryButtonClick | `() -> Unit` | null | The lambda to be invoked on the positive button click. |
+| showCloseIcon | Boolean | false | Whether the close icon (X) should be displayed in the top right corner. |
+| dismissOnClickOutside | Boolean | true | Whether the modal should be closed when clicking outside of its layout. |
+| dismissOnBackPress | Boolean | true | Whether the modal should be closed when pressing back. |

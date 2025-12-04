@@ -56,4 +56,17 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Expandable" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String |  | The title to be displayed in the expandable |
+| expandedContent | `@Composable () -> Unit` |  | The content to be shown when expanded |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the expandable |
+| initiallyExpanded | Boolean | false | If should show expanded content |
+| type | WarpExpandableType.Default   WarpExpandableType.Box | WarpExpandableType.Default | Style of the expandable |

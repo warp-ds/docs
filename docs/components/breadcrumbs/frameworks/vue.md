@@ -36,4 +36,8 @@ import { wBreadcrumbs } from '@warp-ds/vue/breadcrumbs';
 
 ### Props
 
-<api-table type="vue" component="Breadcrumbs" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string | Her er du | Defines a string value that labels the current element. |

@@ -28,5 +28,11 @@ Use icon name from above list
 
 ### Props
 
-<api-table type=react component="Icon" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | string |  | The name of the icon to render |
+| size | `'small' \| 'medium' \| 'large' \| 'xypx'` | medium | The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`. |
+| locale | string |  | The locale to use for the icon, e.g. "nb" for Norwegian Bokmål |
 

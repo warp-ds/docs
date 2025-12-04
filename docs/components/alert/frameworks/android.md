@@ -81,4 +81,22 @@ fun setQuietButtonOnClickListener(onClick: OnClickListener?)
 
 ### Parameters
 
-<api-table type=android component="Alert" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| body | String |  | The body text to be displayed in the alert |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String | null | The title to be displayed in the alert |
+| modifier | Modifier | Modifier | Sets the modifier for the alert |
+| type | WarpAlertType.Info  WarpAlertType.Positive  WarpAlertType.Critical  WarpBadgeStyle.Warning | WarpAlertType.Info | Sets the style and icon of the alert |
+| linkText | String | null | The link text to be displayed in the alert |
+| linkAction | `() -> Unit` | null | Lambda to be invoked when clicked |
+| secondaryButtonText | String | null | The secondary button text to be displayed in the alert |
+| secondaryButtonAction | `() -> Unit` | null | Lambda to be invoked when clicked |
+| quietButtonText | String | null | The quiet button text to be displayed in the alert |
+| quietButtonAction | `() -> Unit` | null | Lambda to be invoked when clicked |

@@ -196,4 +196,33 @@ To support layouts still written in xml the WarpTextField can be used as a custo
 ```
 ### Parameters
 
-<api-table type=android component="TextField" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| value | String |  | The text displayed currently in the textfield |
+| onValueChange | `(String) -> Unit` |  | Lambda to be invoked when input value changes |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the textfield |
+| label | String | null | The text to display as the label above the textfield |
+| enabled | Boolean | true | Sets the textfield in disabled mode |
+| readOnly | Boolean | false | Sets the textfield in read-only mode |
+| optionalLabel | String | null | The optional text to display next to the label above the textfield |
+| placeholderText | String | null | Text hint that occupies the textfield when it is empty |
+| helpText | String | null | The text to display as the help text below the textfield |
+| prefixText | String | null | The text to display infront of the value inside the textfield |
+| suffixText | String | null | The text to display after the value inside the textfield |
+| leadingIcon | `@Composable () -> Unit?` | null | Sets the composable in front of the input value |
+| trailingIcon | `@Composable () -> Unit?` | null | Sets the composable behind the input value |
+| isError | Boolean | false | Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error |
+| visualTransformation | VisualTransformation | VisualTransformation.None | Interface used for changing visual output of the input field |
+| keyboardOptions | KeyboardOptions | KeyboardOptions(capitalization = KeyboardCapitalization.Sentences) | The keyboard configuration options |
+| keyboardActions | KeyboardActions | KeyboardActions.Default | The KeyboardActions that specify actions that will be triggered in response to triggering IME action on the software keyboard |
+| singleLine | Boolean | true | Sets the textfield to a single line |
+| minLines | Int | 1 | Sets the minimum amount of lines |
+| maxLines | Int | Int.MAX_VALUE | Sets the maximum amount of lines allowed |
+| interactionSource | MutableInteractionSource | MutableInteractionSource | MutableInteractionSource represents a stream of Interactions corresponding to events emitted by a component |

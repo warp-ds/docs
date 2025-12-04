@@ -88,4 +88,21 @@ Warp.Button(title: "Save") { /* Your action goes here */ }.uiView
 
 ### Parameters
 
-<api-table type=iOS component="Button" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String |  | The text to be displayed on the button |
+| action | `@escaping () -> Void` |  | Action to be invoked when tapped |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| leadingIcon | Warp.Icon? | nil | Sets the button icon leading the title |
+| trailingIcon | Warp.Icon? | nil | Sets the button icon trailing the title |
+| type | Warp.ButtonType | .primary | Controls the appearance of the button. Use one of the predefined `ButtonType` values: `.primary`, `.secondary`, `.quiet`, `.critical`, `.criticalQuiet`, `.utility`, `.utilityQuiet`, or `.utilityOverlay` |
+| size | Warp.ButtonSize | .big | Sets the size of button. Use one of the predefined `ButtonSize` values: `.big`, or `.small` |
+| isEnabled | Bool | true | Indicating that interactions are enabled. |
+| fullWidth | Bool | false | Change the width behaviour of the button |
+| isLoading | Bool | false | Indicating whether the button is loading. |

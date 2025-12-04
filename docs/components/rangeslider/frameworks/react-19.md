@@ -75,4 +75,30 @@ export const DisabledRanged = () => {
 
 ### Props
 
-<api-table type="react" component="RangeSlider" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | ReactNode |  | Label for the range slider |
+| value | [number, number] |  | The current values |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| max | number | 100 | The greatest value in the range of permitted values |
+| min | number | 0 | The lowest value in the range of permitted values |
+| step | number | 1 | Specifies the value granularity |
+| showMarks | boolean | true | Whether to show marks on the slider |
+| disabled | boolean | false | Whether the slider is disabled |
+| className | string |  | Additional classes to include for the container |
+| aria-label | [string, string] |  | String value for aria-label |
+| aria-labelledby | [string, string] |  | Identifies the element that labels the slider |
+| aria-valuetext | [string, string] |  | Human readable text alternative for the value |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onChange | (value: [number, number]) => void |
+| onInput | (value: [number, number]) => void |

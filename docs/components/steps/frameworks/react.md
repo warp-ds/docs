@@ -95,8 +95,31 @@ function Example() {
 
 #### Steps
 
-<api-table type="react" component="Steps" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | Element[] |  | Two or more Step components |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| horizontal | boolean | false | Direction of steps |
+| right | boolean | false | Align steps to the right |
+| className | string |  | Additional CSS class for the container |
 
 #### Step
 
-<api-table type="react" component="Step" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | Element \| Element[] |  | Contents of Step component |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| active | boolean | false | Step is active |
+| completed | boolean | false | Step is completed |

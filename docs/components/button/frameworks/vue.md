@@ -33,4 +33,22 @@ import { wButton } from '@warp-ds/vue/button';
 
 ### Props
 
-<api-table type=vue component="Button" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | string |  | Interchangeable with the default slot for labelling |
+| href | string |  | When set, an anchor tag will be used instead of a button. Should not be combined with variant `link` |
+| type | string | button | Controls the button's type, unused when `href` is present |
+| fullWidth | boolean |  | Sets the button's width to its parent's width. Useful especially on mobile when button should take full width. |
+
+#### Variants
+
+| Variant | Modifiers | Notes |
+| --- | --- | --- |
+| primary | quiet, small, loading |  |
+| secondary | quiet, small, loading |  |
+| negative | quiet, small, loading |  |
+| link | small |  |
+| utility | small, loading, quiet |  |
+| ~~pill~~ |  | @deprecated use `utility` together with `quiet` instead. |

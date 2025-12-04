@@ -84,4 +84,14 @@ Warp.StepIndicator(layoutOrientation: .horizontal, stepModel: stepModel).uiView
 
 ### Parameters
 
-<api-table type=iOS component="StepIndicator" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| stepModel | Warp.StepIndicatorModel |  | An array of `Warp.StepIndicatorItem` objects which contains `title`, `description` and `progress` of the steps, the first two are strings and `progress` can be `incomplete`, `inProgress`, or `complete` with default value as `incomplete`. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| layoutOrientation | LayoutOrientation | .vertical | The orientation of the step indicator.  Use one of the predefined `LayoutOrientation` values: `.vertical`, or `.horizontal`. |

@@ -98,4 +98,19 @@ To support layouts still written in xml the WarpPill can be used as a custom vie
 
 ### Parameters
 
-<api-table type=android component="Pill" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | The text to be displayed on the pill |
+| onClick | `() -> Unit` |  | Lambda to be invoked when clicked |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the pill |
+| style | WarpPillStyle.Filter  WarpPillStyle.Suggestion | WarpPillStyle.Filter | Sets the appearance of the pill |
+| selected | boolean | false | Whether the pill appears in selected mode or not |
+| closable | boolean | false | Whether the pill should be removable via a close button. Will override the custom icon |
+| icon | WarpIconResource? | null | The icon to be displayed in the pill after the text |

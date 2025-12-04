@@ -44,4 +44,15 @@ Basic usage for the page indicator. Should ideally be used together with a pager
 
 ### Parameters
 
-<api-table type=android component="PageIndicator" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| pageCount | Int |  | Number of dots to be displayed |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the page indicator |
+| currentPage | Int | 0 | Current dot to be selected |

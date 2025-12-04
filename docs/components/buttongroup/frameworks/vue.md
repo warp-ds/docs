@@ -44,8 +44,30 @@ import { wButtonGroup, wButtonGroupItem } from '@warp-ds/vue/button-group';
 
 #### ButtonGroup props
 
-<api-table type="vue" component="ButtonGroup" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| outlined | boolean |  | Outlines the button-group |
+| raised | boolean |  | Adds shadow to the button-group |
+| vertical | boolean |  | Changes the orientation to vertical |
+
+#### Slots
+
+| Name | Description |
+| --- | --- |
+| default | where all the buttons go |
 
 #### ButtonGroupItem props
 
-<api-table type="vue" component="ButtonGroupItem" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| selected | boolean |  | Used to give the item a selected appearance - e.g. when used with toggles |
+
+#### Slots
+
+| Name | Description |
+| --- | --- |
+| default | button content |

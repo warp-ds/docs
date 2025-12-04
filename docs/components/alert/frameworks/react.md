@@ -46,4 +46,17 @@ attribute on
 
 ### Props
 
-<api-table type=react component="Alert" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `'negative' \| 'positive' \| 'warning' \| 'info'` | undefined | Type of Alert |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| show | boolean | undefined | Controls when the alert shows |
+| role | string | alert | ARIA live region "role" attribute value |
+| className | string | undefined | Additional classes to include |
+| style | string | undefined | Additional CSS styles for the container |

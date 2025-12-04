@@ -81,4 +81,15 @@ Warp.Logo(for: .finn(.small)).uiView
 
 ### Parameters
 
-<api-table type=iOS component="IconView" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| icon | Warp.Icon |  | The `Warp.Icon` to display. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| size | Warp.IconSize | .default | The size of the icon (`.small`, `.default`, `.large`, or `.custom`). |
+| color | Color | Warp.Token.icon | The color of the icon. |

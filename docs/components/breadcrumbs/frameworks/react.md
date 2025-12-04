@@ -27,6 +27,12 @@ import { Breadcrumbs } from '@warp-ds/react/components/breadcrumbs';
 
 ### Props
 
-<api-table type="react" component="Breadcrumbs" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string | Her er du | Defines a string value that labels the affix element. |
+| className | string |  | Additional classes to include |
+| style | CSSProperties |  | CSS styles to inline on the component |
 
 

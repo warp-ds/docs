@@ -33,4 +33,15 @@ attribute on
 
 ### Props
 
-<api-table type=elements component="Alert" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| variant | `'negative' \| 'positive' \| 'warning' \| 'info'` | undefined | Variant of the alert |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| show | boolean | false | Controls when the alert shows |
+| role | string | alert | ARIA live region "role" attribute value |

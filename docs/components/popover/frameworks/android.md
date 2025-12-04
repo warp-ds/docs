@@ -70,4 +70,23 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Popover" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String |  | The text to be displayed in the popover |
+| body | String |  | The text to be displayed in the popover |
+| state | WarpPopoverState |  | The state of the popover. If visible or not |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the popover |
+| edge | Edge.Top   Edge.Bottom   Edge.Leading   Edge.Trailing | Edge.Top | Edge that determines the direction of the arrow |
+| horizontalOffset | Dp | 0.dp | Horizontal offset for the popover |
+| verticalOffset | Dp | 0.dp | Vertical offset for the popover |
+| inline | Boolean | false | Shows the popover as a standalone inline view |
+| dismissPopoverOnClickOutside | Boolean | true | If should dismiss the popover when clicked outside it |
+| onDismiss | `() -> Unit` | {} | The lambda to be invoked when dismissed |
+| anchorView | `@Composable () -> Unit` | null | The anchor which the popover points to |

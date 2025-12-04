@@ -118,4 +118,16 @@ There will always be users who don't understand why an element is disabled, or u
 
 ### Props
 
-<api-table type=elements component="Button" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `"button"\|"submit"\|"reset"` | button | Button type, only applied when href is not set. |
+| variant | `"primary" \| "secondary" \| "negative" \| "utility" \| "link" \| "~~pill~~"` | secondary | Variant of button. `pill` has been @deprecated.  Use `utility` together with `quiet` instead. |
+| quiet | boolean | false |  |
+| small | boolean | false |  |
+| loading | boolean | false |  |
+| href | string |  | Set the href for the location where clicking the button will take you to. Uses an a tag instead of a button tag for the underlying implementation. Should not be combined with variant `link` |
+| target | string |  | Anchor target, see [The Anchor element / MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). |
+| rel | string |  | The relationship of the linked URL. |
+| fullWidth | boolean |  | Sets the button's width to its parent's width. Useful especially on mobile when button should take full width. |

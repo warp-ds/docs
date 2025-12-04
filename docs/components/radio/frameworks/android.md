@@ -91,9 +91,43 @@ fun setOnClickListener(onClick: OnClickListener?)
 
 ### Parameters Radio
 
-<api-table type=android component="Radio" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | String |  | The text to be displayed next to the radio |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the radio |
+| selected | boolean | false | Whether the radio is selected or not |
+| isError | boolean | false | Shows the radio in error state if true |
+| enabled | boolean | true | Whether the radio is enabled or not |
+| extraText | String? | null | The optional text to be displayed next to the label |
+| slot | `@Composable (() -> Uni)?` | null | The composable that will be displayed next to the label or extraText if provided |
+| onClick | `() -> Unit` | null | The lambda to be invoked when clicked. |
+| interactionSource | MutableInteractionSource | MutableInteractionSource | MutableInteractionSource represents a stream of Interactions corresponding to events emitted by a component |
 
 ### Parameters Radio Group
 
-<api-table type=android component="RadioGroup" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| options | List |  | The list of texts to be displayed next to the radio buttons |
+| onOptionSelected | `(String) -> Unit` |  | The lambda to be invoked when clicked on a radio. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the radio group |
+| orientation | Orientation.Vertical   Orientation.Horizontal | Orientation.Vertical | Sets the orientation for the radio group. Class is found in the androidx.compose.foundation.gestures package |
+| title | String | null | The title to be displayed on top of the radio group |
+| selectedOption | String | null | The selected option in the radio group |
+| helpText | String | null | The text displayed below the radio group |
+| enabled | boolean | true | Whether the radio group is enabled or not |
+| isError | boolean | false | Shows the radio group in error state if true |
 

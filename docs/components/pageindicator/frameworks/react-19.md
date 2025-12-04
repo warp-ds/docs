@@ -28,4 +28,15 @@ You can apply custom styling to align the component and add padding as needed:
 
 ### Props
 
-<api-table type="react" component="PageIndicator" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| pageCount | number |  | The total number of pages. |
+| selectedPage | number |  | Currently selected page. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| style | CSSProperties |  | CSS styles to inline on the component container. |

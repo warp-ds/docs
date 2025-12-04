@@ -45,4 +45,15 @@ Warp.Text("This is a text", style: .body).uiView
 
 ### Parameters
 
-<api-table type=iOS component="Text" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | The text to be displayed |
+| style | Warp.TextStyle |  | Sets the appearance of the text - font and size.  Use one of the predefined `TextStyle` values: `.display`, `.title1`, `.title2`, `.title3`, `.title4`, `.title5`, `.title6`, `.preamble`, `.body`, `.bodyStrong`, `.caption`, `.captionStrong`, `.detail`, or `.detailStrong` |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| color | Color | Warp.Token.text | A solid color for the text. |

@@ -22,7 +22,26 @@ import { Toggle } from '@warp-ds/react/components/toggle'
 
 ### Props
 
-<api-table type=react component="Toggle" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `"radio" \|"checkbox" \|"radio-button"` |  | The type of Toggle |
+| title | string |  | The option(s) title |
+| invalid | boolean |  | Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error. |
+| helpText | string |  | Help text beneath options |
+| options | ToggleEntry[] |  | An array of options to render |
+| selected | ToggleEntry[] |  | An array of options to be selected / checked (controlled) |
+| defaultSelected | ToggleEntry[] |  | An array of options to be selected / checked on mount (uncontrolled) |
+| label | string |  | If you only need to render a single option, use this prop instead |
+| noVisibleLabel | boolean |  | Whether label should be invisible |
+| checked | boolean |  | Whether the single option should be checked (controlled) |
+| defaultChecked | boolean |  | Whether the single option should be checked on mount (uncontrolled) |
+| indeterminate | boolean |  | Whether a single option is indeterminate, or "partially checked." The checkbox will appear with a small dash instead of a tick to indicate that the option is not exactly checked or unchecked. |
+| optional | boolean |  | Whether the toggle is optional Appends (optional) to the end of the title for indication |
+| className | string |  | Custom classes applied to the wrapping container |
+| equalWidth | boolean |  | Will make each option equal width, only applied when "radio-button" type is set |
+| small | boolean |  | Whether the elements should be small, only applied when "radio-button" type is set |
 
 ```ts example
 type ToggleEntry = {
