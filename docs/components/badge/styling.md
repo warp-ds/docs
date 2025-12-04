@@ -1,3 +1,5 @@
+# Badge
+
 ## Layout and spacing
 
 Even though the badge is implemented as a slot (container), the spacing between its elements should always follow the specifications defined below. Respecting these measurements ensures consistent alignment, readability, and visual balance across all use cases.

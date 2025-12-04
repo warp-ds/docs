@@ -1,3 +1,6 @@
+# Steps
+
+## iOS
 
 ### Syntax
 A step indicator displays a user’s progress through a set of steps, guiding toward the completion of a specified process.

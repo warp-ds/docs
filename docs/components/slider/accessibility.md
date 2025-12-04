@@ -1,3 +1,5 @@
+# Slider
+
 ## Accessibility
 
 The slider component has been designed with accessibility in mind, providing range selection functionality that is fully keyboard accessible and screen reader compatible.

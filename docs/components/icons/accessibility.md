@@ -1,4 +1,6 @@
-### Alt texts
+# Icons
+
+## Alt texts
 
 To support screen readers and improve accessibility, all icons include meaningful and concise alt text. We’ve refined our alt text descriptions to focus on what the icon visually depicts, rather than abstract or technical labels.
 

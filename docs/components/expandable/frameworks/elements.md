@@ -1,3 +1,7 @@
+# Expandable
+
+## Elements
+
 ### Visual options
 
 #### Default

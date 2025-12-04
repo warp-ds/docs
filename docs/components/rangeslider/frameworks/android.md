@@ -1,3 +1,7 @@
+# Range slider
+
+## Android
+
 ### Syntax
 
 ```kotlin example

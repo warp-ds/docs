@@ -1,4 +1,6 @@
-## Accessibility guidelines
+# Link
+
+## Accessibility
 
 For accessibility guidelines related to code, refer to the Code section.
 

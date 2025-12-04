@@ -1,4 +1,8 @@
-## Guidelines
+# Badge
+
+## Usage
+
+### Guidelines
 
 - Badges are used to display small but yet important pieces of information in list views, cards, or dashboards.
 - They should contain clear, easy-to-understand, and descriptive text, paired with intentional colour choices that reinforce their meaning.

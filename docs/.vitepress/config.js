@@ -1240,7 +1240,21 @@ export default defineConfig({
         {
           text: 'Components',
           items: [
-            { text: 'Alert', link: '/components/alert/' },
+            {
+              text: 'Alert', collapsed: true, link: '/components/alert/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/alert/frameworks/react' },
+                    { text: 'Vue', link: '/components/alert/frameworks/vue' },
+                    { text: 'Elements', link: '/components/alert/frameworks/elements' },
+                    { text: 'Android', link: '/components/alert/frameworks/android' },
+                    { text: 'iOS', link: '/components/alert/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
             {
               text: 'Badge',
               collapsed: true,
@@ -1257,13 +1271,26 @@ export default defineConfig({
                     { text: 'Elements', link: '/components/badge/frameworks/elements' },
                     { text: 'Android', link: '/components/badge/frameworks/android' },
                     { text: 'iOS', link: '/components/badge/frameworks/ios' },
-                    { text: 'Web', link: '/components/badge/frameworks/web' },
                   ],
                 },
                 { text: 'Accessibility', link: '/components/badge/accessibility' },
               ],
             },
-            { text: 'Box', link: '/components/box/' },
+            {
+              text: 'Box', collapsed: true, link: '/components/box/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/box/frameworks/react' },
+                    { text: 'Vue', link: '/components/box/frameworks/vue' },
+                    { text: 'Elements', link: '/components/box/frameworks/elements' },
+                    { text: 'Android', link: '/components/box/frameworks/android' },
+                    { text: 'iOS', link: '/components/box/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
             {
               text: 'Breadcrumbs',
               collapsed: true,
@@ -1290,7 +1317,6 @@ export default defineConfig({
               link: '/components/button/',
               items: [
                 { text: 'Usage', link: '/components/button/usage' },
-                { text: 'Variants', link: '/components/button/variants' },
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1301,22 +1327,158 @@ export default defineConfig({
                     { text: 'Elements', link: '/components/button/frameworks/elements' },
                     { text: 'Android', link: '/components/button/frameworks/android' },
                     { text: 'iOS', link: '/components/button/frameworks/ios' },
-                    { text: 'Web', link: '/components/button/frameworks/web' },
                   ],
                 },
               ],
             },
-            { text: 'Button group', link: '/components/buttongroup/' },
-            { text: 'Button pill', link: '/components/buttonpill/' },
-            { text: 'Callout', link: '/components/callout/' },
-            { text: 'Card', link: '/components/card/' },
-            { text: 'Checkbox', link: '/components/checkbox/' },
-            { text: 'Combo box', link: '/components/combobox/' },
-            { text: 'Date picker', link: '/components/datepicker/' },
-            { text: 'Divider', link: '/components/divider/' },
-            { text: 'Expandable', link: '/components/expandable/' },
-            { text: 'Icons', link: '/components/icons/' },
-            { text: 'Link', link: '/components/link/' },
+            {
+              text: 'Button group', collapsed: true, link: '/components/buttongroup/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Vue', link: '/components/buttongroup/frameworks/vue' },
+                    { text: 'iOS', link: '/components/buttongroup/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Button pill', collapsed: true, link: '/components/buttonpill/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'iOS', link: '/components/buttonpill/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Callout', collapsed: true, link: '/components/callout/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/callout/frameworks/android' },
+                    { text: 'Elements', link: '/components/callout/frameworks/elements' },
+                    { text: 'iOS', link: '/components/callout/frameworks/ios' },
+                    { text: 'React', link: '/components/callout/frameworks/react' },
+                    { text: 'Vue', link: '/components/callout/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Card', collapsed: true, link: '/components/card/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Elements', link: '/components/card/frameworks/elements' },
+                    { text: 'React', link: '/components/card/frameworks/react' },
+                    { text: 'Vue', link: '/components/card/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Checkbox', collapsed: true, link: '/components/checkbox/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/checkbox/frameworks/android' },
+                    { text: 'iOS', link: '/components/checkbox/frameworks/ios' },
+                    { text: 'React', link: '/components/checkbox/frameworks/react' },
+                    { text: 'Vue', link: '/components/checkbox/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Combo box', collapsed: true, link: '/components/combobox/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/combobox/frameworks/react' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Date picker', collapsed: true, link: '/components/datepicker/', items: [
+                { text: 'Usage', link: '/components/datepicker/usage' },
+                { text: 'Styling', link: '/components/datepicker/styling' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android ', link: '/components/datepicker/frameworks/android' },
+                    { text: 'iOS ', link: '/components/datepicker/frameworks/ios' },
+                    { text: 'React-19', link: '/components/datepicker/frameworks/react-19' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/datepicker/accessibility' },
+              ],
+            },
+            {
+              text: 'Divider', collapsed: true, link: '/components/divider/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android ', link: '/components/divider/frameworks/android' },
+                    { text: 'iOS ', link: '/components/divider/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Expandable', collapsed: true, link: '/components/expandable/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android ', link: '/components/expandable/frameworks/android' },
+                    { text: 'Elements ', link: '/components/expandable/frameworks/elements' },
+                    { text: 'iOS ', link: '/components/expandable/frameworks/ios' },
+                    { text: 'React ', link: '/components/expandable/frameworks/react' },
+                    { text: 'Vue ', link: '/components/expandable/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Icons', collapsed: true, link: '/components/icons/', items: [
+                { text: 'Styling', link: '/components/icons/styling' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Elements ', link: '/components/icons/frameworks/elements' },
+                    { text: 'React-19', link: '/components/icons/frameworks/react-19' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/icons/accessibility' },
+              ],
+            },
+            {
+              text: 'Link', collapsed: true, link: '/components/link/', items: [
+                { text: 'Usage', link: '/components/link/usage' },
+                { text: 'Styling', link: '/components/link/styling' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android ', link: '/components/link/frameworks/android' },
+                    { text: 'React-19', link: '/components/link/frameworks/react-19' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/link/accessibility' },
+              ],
+            },
             {
               text: 'Modal',
               collapsed: true,
@@ -1338,24 +1500,251 @@ export default defineConfig({
                 },
               ],
             },
-            { text: 'Page indicator', link: '/components/pageindicator/' },
-            { text: 'Pagination', link: '/components/pagination/' },
-            { text: 'Pill', link: '/components/pill/' },
-            { text: 'Popover', link: '/components/popover/' },
-            { text: 'Radio', link: '/components/radio/' },
-            { text: 'Radio buttons', link: '/components/radiobuttons/' },
-            { text: 'Range slider', link: '/components/rangeslider/' },
-            { text: 'Select', link: '/components/select/' },
-            { text: 'Slider', link: '/components/slider/' },
-            { text: 'Spinner', link: '/components/spinner/' },
-            { text: 'Steps', link: '/components/steps/' },
-            { text: 'Switch', link: '/components/switch/' },
-            { text: 'Tabs', link: '/components/tabs/' },
+            {
+              text: 'Page indicator', collapsed: true, link: '/components/pageindicator/', items: [
+                { text: 'Usage', link: '/components/pageindicator/usage' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/pageindicator/frameworks/android' },
+                    { text: 'iOS', link: '/components/pageindicator/frameworks/ios' },
+                    { text: 'React 19', link: '/components/pageindicator/frameworks/react-19' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/pageindicator/accessibility' },
+              ],
+            },
+            {
+              text: 'Pagination', collapsed: true, link: '/components/pagination/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/pagination/frameworks/react' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Pill', collapsed: true, link: '/components/pill/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/pill/frameworks/android' },
+                    { text: 'Elements', link: '/components/pill/frameworks/elements' },
+                    { text: 'iOS', link: '/components/pill/frameworks/ios' },
+                    { text: 'React', link: '/components/pill/frameworks/react' },
+                    { text: 'Vue', link: '/components/pill/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Popover', collapsed: true, link: '/components/popover/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/popover/frameworks/android' },
+                    { text: 'Elements', link: '/components/popover/frameworks/elements' },
+                    { text: 'React', link: '/components/popover/frameworks/react' },
+                    { text: 'Vue', link: '/components/popover/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Radio', collapsed: true, link: '/components/radio/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/radio/frameworks/android' },
+                    { text: 'iOS', link: '/components/radio/frameworks/ios' },
+                    { text: 'React', link: '/components/radio/frameworks/react' },
+                    { text: 'Vue', link: '/components/radio/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Radio buttons', collapsed: true, link: '/components/radiobuttons/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/radiobuttons/frameworks/react' },
+                    { text: 'Vue', link: '/components/radiobuttons/frameworks/vue' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Range slider', collapsed: true, link: '/components/rangeslider/', items: [
+                { text: 'Usage', link: '/components/rangeslider/usage' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/rangeslider/frameworks/android' },
+                    { text: 'iOS', link: '/components/rangeslider/frameworks/ios' },
+                    { text: 'React 19', link: '/components/rangeslider/frameworks/react-19' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/rangeslider/accessibility' },
+              ],
+            },
+            {
+              text: 'Select', collapsed: true, link: '/components/select/', items: [
+                { text: 'Usage', link: '/components/select/usage' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/select/frameworks/android' },
+                    { text: 'iOS', link: '/components/select/frameworks/ios' },
+                    { text: 'Vue', link: '/components/select/frameworks/vue' },
+                    { text: 'React', link: '/components/select/frameworks/react' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/select/accessibility' },
+              ],
+            },
+            {
+              text: 'Slider', collapsed: true, link: '/components/slider/', items: [
+                { text: 'Usage', link: '/components/slider/usage' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/slider/frameworks/android' },
+                    { text: 'iOS', link: '/components/slider/frameworks/ios' },
+                    { text: 'Vue', link: '/components/slider/frameworks/vue' },
+                    { text: 'React', link: '/components/slider/frameworks/react' },
+                    { text: 'React-19', link: '/components/slider/frameworks/react-19' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/slider/accessibility' },
+              ],
+            },
+            {
+              text: 'Spinner', collapsed: true, link: '/components/spinner/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'Android', link: '/components/spinner/frameworks/android' },
+                    { text: 'iOS', link: '/components/spinner/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Steps', collapsed: true, link: '/components/steps/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/steps/frameworks/react' },
+                    { text: 'Vue', link: '/components/steps/frameworks/vue' },
+                    { text: 'Android', link: '/components/steps/frameworks/android' },
+                    { text: 'iOS', link: '/components/steps/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Switch', collapsed: true, link: '/components/switch/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/switch/frameworks/react' },
+                    { text: 'Vue', link: '/components/switch/frameworks/vue' },
+                    { text: 'Android', link: '/components/switch/frameworks/android' },
+                    { text: 'iOS', link: '/components/switch/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Tabs', collapsed: true, link: '/components/tabs/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/tabs/frameworks/react' },
+                    { text: 'Vue', link: '/components/tabs/frameworks/vue' },
+                    { text: 'Android', link: '/components/tabs/frameworks/android' },
+                    { text: 'iOS', link: '/components/tabs/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
             { text: 'Text', link: '/components/text/' },
-            { text: 'Text area', link: '/components/textarea/' },
-            { text: 'Text field', link: '/components/textfield/' },
-            { text: 'Toast', link: '/components/toast/' },
-            { text: 'Tooltip', link: '/components/tooltip/' },
+            {
+              text: 'Text area', link: '/components/textarea/', items: [
+                { text: 'Usage', link: '/components/textarea/usage' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/textarea/frameworks/react' },
+                    { text: 'Vue', link: '/components/textarea/frameworks/vue' },
+                    { text: 'iOS', link: '/components/textarea/frameworks/ios' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/textarea/accessibility' },
+              ],
+            },
+            {
+              text: 'Text field', collapsed: true, link: '/components/textfield/', items: [
+                { text: 'Usage', link: '/components/textfield/usage' },
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/textfield/frameworks/react' },
+                    { text: 'Vue', link: '/components/textfield/frameworks/vue' },
+                    { text: 'Elements', link: '/components/textfield/frameworks/elements' },
+                    { text: 'Android', link: '/components/textfield/frameworks/android' },
+                    { text: 'iOS', link: '/components/textfield/frameworks/ios' },
+                  ],
+                },
+                { text: 'Accessibility', link: '/components/textfield/accessibility' },
+              ],
+            },
+            {
+              text: 'Toast', collapsed: true, link: '/components/toast/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React-19', link: '/components/toast/frameworks/react-19' },
+                    { text: 'Elements', link: '/components/toast/frameworks/elements' },
+                    { text: 'Android', link: '/components/toast/frameworks/android' },
+                    { text: 'iOS', link: '/components/toast/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Tooltip', collapsed: true, link: '/components/tooltip/', items: [
+                {
+                  text: 'Frameworks',
+                  collapsed: true,
+                  items: [
+                    { text: 'React', link: '/components/tooltip/frameworks/react' },
+                    { text: 'Vue', link: '/components/tooltip/frameworks/vue' },
+                    { text: 'Elements', link: '/components/tooltip/frameworks/elements' },
+                    { text: 'Android', link: '/components/tooltip/frameworks/android' },
+                    { text: 'iOS', link: '/components/tooltip/frameworks/ios' },
+                  ],
+                },
+              ],
+            },
             { text: 'Utilities', link: '/components/utilities/' },
           ],
         },
