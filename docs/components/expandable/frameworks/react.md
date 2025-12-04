@@ -96,4 +96,29 @@ function Example() {
 
 ### Props
 
-<api-table type="react" component="Expandable" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | string |  | The title for the expandable |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| className | string |  | Additional classes to include |
+| style | CSSProperties |  | CSS styles to inline on the component |
+| expanded | boolean | false | The state of the component, either true for expanded or false for closed |
+| bleed | boolean |  | Will make the expandable full-width on sm-size |
+| box | boolean |  | Will make the expandable a Box |
+| buttonClass | string |  | Additional CSS classes to include on the button part of the component |
+| contentClass | string |  | Additional CSS classes to include on the content part of the component |
+| animated | boolean |  | Will animate the expansion/collapse |
+| chevron | boolean | true | Controls chevron visibility |
+| headingLevel | HeadingLevel |  | Wrap the toggle button in a heading element with the specified level. If headingLevel is not specified, the button will not be wrapped by a heading element |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onChange | (state: boolean) => void |

@@ -27,7 +27,26 @@ import { Select } from '@warp-ds/react/components/select';
 
 ### Props
 
-<api-table type=react component="Select" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | string |  | The element's unique identifier. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id). |
+| name | string |  | The name of the input element, used when submitting an HTML form. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname). |
+| defaultValue | string & (string\|number\|readonly string[]) |  | The default value (uncontrolled). |
+| value | string |  | The current value (controlled). |
+| label | ReactNode |  | The content to display as the label. |
+| optional | boolean |  | Mark label to indicate that this select is optional. |
+| hint | ReactNode |  | The content to display as the hint. |
+| always | boolean |  | Whether to always show hint. |
+| invalid | boolean |  | Renders the field in an invalid state. Often paired together with `hint` to provide feedback about the error. |
+| disabled | boolean |  | Whether the input is disabled. |
+| readOnly | boolean |  | Whether the input can be selected but not changed by the user. |
+| required | boolean |  | Whether user input is required on the input before form submission. |
+| children | ReactNode |  | The `option` elements to populate the select with. |
+| className | string |  | Additional classes to include. |
+| style | CSSProperties |  | Additional CSS styles for the container. |
+| autoFocus | boolean |  | Whether the element should receive focus on render. |
 
 #### Value
 

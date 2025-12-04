@@ -38,4 +38,14 @@ Warp.Tooltip(title: "This is a Tooltip").uiView
 
 ### Parameters
 
-<api-table type=iOS component="Tooltip" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String |  | The text to be displayed |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| arrowEdge | Edge | .top | The direction of the arrow.  Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing` |

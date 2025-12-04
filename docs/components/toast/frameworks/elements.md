@@ -77,4 +77,11 @@ const id = toast('message goes here'); updateToast({ id, text: 'change the messa
 
 ### Props
 
-<api-table type="elements" component="Toast" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `'success' \| 'warning' \| 'error'` | 'success' | Type of toast |
+| text | string | undefined | The toast message. Only needed when updating text on existing toast |
+| duration | number | 5000 | Duration of toast in milliseconds. For accessibility reasons, toasts should never be interactive and therefore need to auto remove. If you must disable auto remove, set duration to Number.POSITIVE_INFINITY. |
+| canclose | boolean | false | Adds a close button. WARNING! For accessibility reasons, toasts should not be interactive and canclose should always be false. If the toast absolutely must be dismissible, set this to true. |

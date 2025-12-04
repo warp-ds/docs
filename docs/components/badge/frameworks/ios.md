@@ -66,4 +66,16 @@ Warp.Badge(
 
 ### Parameters
 
-<api-table type=iOS component="Badge" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | The text to display inside the badge. |
+| variant | Warp.BadgeVariant |  | The style of the badge.  Use one of the predefined `BadgeVariant` values: `.info`, `.success`, `.warning`, `.negative`, `.disabled`, `.sponsored`, `.neutral`, or `.price` |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| icon | Warp.Icon? | nil | The optional icon to display inside the badge. |
+| position | Warp.BadgePosition | .default | The corner position for the badge.  Use one of the predefined `BadgePosition` values: `.default`, `.topLeft`, `.topRight`, `.bottomLeft`, or `.bottomRight` |

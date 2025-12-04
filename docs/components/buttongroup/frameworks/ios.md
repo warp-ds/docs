@@ -34,4 +34,15 @@ Warp.ButtonGroup(buttons: $buttons, singleSelect: true) { updatedButtons in
 
 ### Parameters
 
-<api-table type=iOS component="ButtonGroup" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| buttons | Binding |  | A binding to an array of tuples representing each button's title and selection state. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| singleSelect | Bool | false | Specifies the selection behavior. If `true`, only one button can be selected at a time. If `false`, multiple buttons can be selected. |
+| onSelectionChange | `(([(String, Bool)]) -> Void)?` | nil | An optional closure that receives the updated button array whenever the selection changes. |

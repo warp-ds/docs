@@ -81,4 +81,18 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Datepicker" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| onDateSelected | `(Long) -> Unit` |  | The function to be invoked when a date is selected |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the datepicker |
+| onDismiss | `() -> Unit?` | null | The function to be invoked when dismissed |
+| preselectedDateMillis | Long? | null | When provided the preselected date is shown in the picker, if null then todays date is used |
+| type | WarpDatePickerType.DIALOG, WarpDatePickerType.INLINE | WarpDatePickerType.DIALOG | The type of picker to be used |
+| selectableDates | SelectableDates | DatePickerDefaults.AllDates | Determines which dates are eligible for selection |

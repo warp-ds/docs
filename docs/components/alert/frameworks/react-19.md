@@ -40,4 +40,19 @@ attribute on
 
 ### Props
 
-<api-table type=react component="AlertBeta" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `'negative' \| 'positive' \| 'warning' \| 'info'` | undefined | Type of Alert |
+| children | React.ReactNode | undefined | Content to render inside the alert |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| show | boolean | undefined | Controls when the alert shows |
+| role | string | alert | ARIA live region "role" attribute value |
+| className | string | undefined | Additional classes to include |
+| style | React.CSSProperties | undefined | Additional CSS styles for the container |
+| id | string | undefined | Used to uniquely identify the alert — for ARIA attributes or other DOM interactions |

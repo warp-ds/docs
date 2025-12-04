@@ -86,4 +86,17 @@ Warp.Toast(
 
 ### Parameters
 
-<api-table type=iOS component="Toast" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| style | Warp.ToastStyle |  | Sets the style and icon of the `Toast`.   Use one of the predefined `ToastStyle` values: `.error`, `.success`, or `.warning` |
+| title | String |  | The title to be displayed in the `Toast` |
+| toastEdge | Warp.ToastEdge |  | The position of the toast to be displayed.  Use one of the predefined `ToastEdge` values: `.top`, or `.bottom` |
+| isPresented | Binding Bool |  | The binding to control the visibility |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| duration | Warp.Toast.Duration.short   Warp.Toast.Duration.long   Warp.Toast.Duration.custom(interval:) | .short | Duration the Toast is shown |

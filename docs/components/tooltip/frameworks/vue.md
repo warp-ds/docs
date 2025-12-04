@@ -116,4 +116,30 @@ Read more: [MDN aria-details](https://developer.mozilla.org/en-US/docs/Web/Acces
 
 ### Props
 
-<api-table type="vue" component="Tooltip" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| v-model | boolean |  | Whether Attention component should be visible |
+| target-el | string |  | Selector of element that the Attention component is rendered relatively to. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| placement | `'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end'` | 'bottom' | Placement according to the target element. The arrow will point to the opposite side of this position. |
+| tooltip | boolean | false | Whether Attention component is rendered as a tooltip |
+| role | string | tooltip | Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`). Default role is set to `tooltip`. |
+| aria-label | string |  | Allows the user to override the default aria-label attribute for the Attention component |
+| no-arrow | boolean | false | Render Attention component without arrow |
+| distance | number | 8 | Distance from which to offset the Attention component from the targetEl vertically |
+| skidding | number | 0 | Distance from which to offset the Attention component along its targetEl horizontally |
+| flip | boolean | false | Whether Attention element should flip its placement in order to keep it in view |
+| cross-axis | boolean | false | Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true. |
+| fallback-placements | array | undefined | Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| @dismiss |  |

@@ -43,4 +43,9 @@ Supported in xml layouts
 
 ### Parameters
 
-<api-table type=android component="Spinner" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the spinner |
+| size | WarpSpinnerSize.Small  WarpSpinnerSize.Default  WarpSpinnerSize.Large | WarpSpinnerSize.Default | Size of the spinner |

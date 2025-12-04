@@ -91,10 +91,35 @@ const selectedTab = ref('one');
 ```
 
 ### Props - Tabs
-<api-table type="vue" component="Tabs" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| v-model | string |  | Name of the active tab (set by the Tab component via the setActive handler) |
 
 ### Props - Tab
-<api-table type="vue" component="Tab" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | string |  | Tab name identifier. This value will be omitted as the argument to the Tabs setActive handler |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | string |  | Interchangeable with the `label slot` for labelling |
+
+#### Slots
+
+| Name | Description |
+| --- | --- |
+| default | Default slot - mainly used for icons |
+| label | Label for the tab (renders below default slot) |
 
 ### Props - TabPanel
-<api-table type="vue" component="TabPanel" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | string |  | Tab name identifier - This value should be the same as the `name` prop of the corresponding Tab component. |

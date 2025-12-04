@@ -48,4 +48,16 @@ Warp.Callout(title: "This is a Callout").uiView
 
 ### Parameters
 
-<api-table type=iOS component="Callout" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String |  | The text to be displayed |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| size | Warp.CalloutSize | .default | The size of the Callout. Use one of the predefined `CalloutSize` values: `.default`, or `.small`. |
+| type | Warp.CalloutType | .inline | The type of the Callout. Use one of the predefined `CalloutType` values: `.inline`, or `.popover`.  Popover accepts an optional onClose action, which will display a close button. |
+| arrowEdge | Edge | .top | The direction of the arrow. Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing` |

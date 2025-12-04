@@ -35,4 +35,9 @@ Warp.Divider().uiView
 
 ### Parameters
 
-<api-table type=iOS component="Divider" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| orientation | `"horizontal" \| "vertical"` | "horizontal" | The orientation of the divider, either horizontal or vertical. |
+| style | `"solid" \| "dashed"` | "solid" | The line style of the divider, either solid or dashed. |

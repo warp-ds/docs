@@ -17,11 +17,33 @@ import { Card } from '@warp-ds/react/components/card'
 
 ### Props
 
-<api-table type=react component="Card" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | Element \|Element[] |  | The contents of the Card |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| className | string |  | Add your own custom styles to the container element |
+| as | string \|Component | div | The wrapping container element |
+| selected | boolean |  | If the card is selected |
+| flat | boolean |  | Removes box shadow around card |
 
 ### DeadToggle props
 
-<api-table type=react component="DeadToggle" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| radio | boolean |  | Passes radio type to the underlying toggle |
+| checkbox | boolean |  | Passes checkbox type to the underlying toggle |
+| value | string |  | Value for the input |
+| checked | boolean |  | Whether the toggle is checked |
+| className | string |  | Additional classnames to the toggle wrapper |
+| labelClassName | string |  | Additional classnames to the toggle label |
 
 ### Code
 
