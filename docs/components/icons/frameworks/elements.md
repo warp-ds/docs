@@ -1,3 +1,7 @@
+# Icons
+
+## Elements
+
 <icon-code-example />
 
 ### Import

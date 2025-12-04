@@ -1,3 +1,7 @@
+# Spinner
+
+## iOS
+
 ### Syntax
 
 ```swift

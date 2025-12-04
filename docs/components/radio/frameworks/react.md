@@ -1,3 +1,7 @@
+# Radio
+
+## React
+
 ### Import
 
 The toggle component allows you to render radios. All you have to do is specify `type="radio"` for the Toggle and let the component handle the rest. Toggle is built to handle both single and multiple options.

@@ -1,3 +1,5 @@
+# Breadcrumbs
+
 ## Styling
 ::: image-block
 ![Example showing an annotated example of a breadcrumbs component. There are three annotations: 1. highlighting the page name, 2. Highlighting the separator,  and 3. highlighting the current page.](/components/breadcrumbs/breadcrumbs-anatomy.svg)

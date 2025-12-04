@@ -1,3 +1,7 @@
+# Pill
+
+## Elements
+
 ### Syntax
 
 #### Filter Pill

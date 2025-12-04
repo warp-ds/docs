@@ -1,3 +1,7 @@
+# Pill
+
+## React
+
 ### Import
 
 You can import the component like so:

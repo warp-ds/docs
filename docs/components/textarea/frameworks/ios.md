@@ -1,3 +1,7 @@
+# Text area
+
+## iOS
+
 ### Syntax
 
 ```swift
