@@ -1,3 +1,7 @@
+# Badge
+
+## Elements
+
 ### Syntax
 
 ```html

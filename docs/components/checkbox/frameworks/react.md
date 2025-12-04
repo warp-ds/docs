@@ -1,3 +1,7 @@
+# Checkbox
+
+## React
+
 ### Import
 
 The toggle component allows you to render checkboxes. All you have to do is specify `type="checkbox"` for the Toggle and let the component handle the rest. Toggle is built to handle both single and multiple options.

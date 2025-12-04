@@ -1,60 +1,41 @@
----
-# Frontmatter reference (keep this comment block):
-# - title:        Human-readable component name (Sentence case).
-# - description:  One short sentence that also works as SEO meta description.
-# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities).
-# - placeholder:  For the overview thumbnail/alt text.
-# - frameworks:   Add one entry per platform.
-#
-#   Legal framework names (case-sensitive):
-#     React | React 19 | Vue | Elements | Android | iOS | Figma
-#   Notes:
-#     • "Figma" is allowed for catalog completeness; it’s ignored by tabs/matrix.
-#     • Use “iOS” (capital i + OS).
-#
-#   Legal status values (lowercase):
-#     released | beta | developing | planned | deprecated | unsupported
-#   Tips:
-#     • Use lowercase for status.
-#     • `reason` is optional, shown for unsupported/planned/etc.
-
-title: Range slider
-description: Range sliders allow users to adjust minimum and maximum numeric values
-  within a given range.
-category: Forms
-placeholder:
-  label: Range slider component
-frameworks:
-- name: React 19
-  status: beta
-- name: Android
-  status: released
-- name: iOS
-  status: released
----
-
-# {{ $frontmatter.title }}
-{{ $frontmatter.description }}
+# Range slider
+Range sliders allow users to adjust minimum and maximum numeric values within a given range.
 
 <DsComponentStatus align="left" hide-unsupported />
 
-<!--
-DsMainTabs — how it works (for authors)
+## Examples
+<ThemeSwitcher />
+<rangeslider-example />
 
-• This page’s tab bar is generated automatically.
-• Create one Markdown file per tab in the SAME folder as this index.md.
-• Naming: tab_*.md  (examples: tab_overview.md, tab_usage.md, tab_styling.md, tab_code.md, tab_accessibility.md)
-• Default order (when unnamed/unnumbered): Overview → Usage → Styling → Code → Accessibility
-• To force a custom order, add a number after tab_:
-    tab_10-overview.md, tab_20-usage.md, tab_30-styling.md, tab_40-code.md, tab_50-accessibility.md
-• Tab label is taken from the tab file’s frontmatter `title:` if present; otherwise it’s derived from the filename.
-• Custom tabs are allowed (e.g. tab_experimental.md → “Experimental”).
-• No imports needed — the component discovers and renders these files automatically.
-• Heading levels: start content in tab files at `##` (H2). The page H1 comes from the main index.md title.
-• Code tab: name the file exactly `tab_code.md`.
+## Overview
 
-That’s it — add/edit/remove tab_*.md files and the UI updates on the next build/refresh.
--->
-<DsMainTabs />
+A Range slider provides a visual indication of adjustable minimum and maximum values within a defined range by moving two handles along a horizontal track.
+
+Sliders are available in two different variants: [Single](/components/slider/) and Range slider (read docs below).
+
+## Anatomy
+
+::: image-block
+![Example of a Range slider](/components/rangeslider/overview-anatomy.svg)
+:::
+
+**1. Label**: Describes what the slider controls or adjusts.
+
+**2. Handles**: Two movable elements used to select a minimum and maximum value within the range.
+
+**3. Fill/Active track**: Visualises the selected portion between the two handles.
+
+**4. Tooltip**: Displays the current value while dragging a handle, providing immediate feedback.
+
+**5. Track**: Represents the full range of selectable values.
+
+**6. Minimum value**: Indicates the lowest selectable value and visually defines the start of the range.
+
+**7. Maximum value**: Indicates the highest selectable value and visually defines the end of the range.
+
+**8. Minimum value number input**: Allows manual entry of the selected minimum value.
+
+**9. Maximum value number input**: Allows manual entry of the selected maximum value.
+
 
 <component-questions />

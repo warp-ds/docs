@@ -1,4 +1,6 @@
-### Scalability
+# Icons
+
+## Scalability
 
 Our icon set is fully scalable, with stroke widths that increase proportionally with size. This ensures a clean, balanced appearance at all resolutions:
 

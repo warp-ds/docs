@@ -1,62 +1,31 @@
----
-# Frontmatter reference (keep this comment block):
-# - title:        Human-readable component name (Sentence case).
-# - description:  One short sentence that also works as SEO meta description.
-# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities).
-# - placeholder:  For the overview thumbnail/alt text.
-# - frameworks:   Add one entry per platform.
-#
-#   Legal framework names (case-sensitive):
-#     React | React 19 | Vue | Elements | Android | iOS | Figma
-#   Notes:
-#     • "Figma" is allowed for catalog completeness; it’s ignored by tabs/matrix.
-#     • Use “iOS” (capital i + OS).
-#
-#   Legal status values (lowercase):
-#     released | beta | developing | planned | deprecated | unsupported
-#   Tips:
-#     • Use lowercase for status.
-#     • `reason` is optional, shown for unsupported/planned/etc.
-
-title: Date picker
-description: A date picker allows the user to select a specific calendar date.
-category: Form
-placeholder:
-  label: Date Picker component
-frameworks:
-- name: React 19
-  status: beta
-- name: Android
-  status: released
-- name: iOS
-  status: released
-- name: Figma
-- name: Elements
-  status: released
----
-
-# {{ $frontmatter.title }}
-{{ $frontmatter.description }}
+# Date picker
+A date picker allows the user to select a specific calendar date.
 
 <DsComponentStatus align="left" hide-unsupported />
 
-<!--
-DsMainTabs — how it works (for authors)
+The date picker consists of a text field and a popover calendar panel. It is designed to allow users to select a single date in a clean, accessible manner. The popover appears upon click/tap and closes on date selection or when the user clicks/taps outside the popover.
 
-• This page’s tab bar is generated automatically.
-• Create one Markdown file per tab in the SAME folder as this index.md.
-• Naming: tab_*.md  (examples: tab_overview.md, tab_usage.md, tab_styling.md, tab_code.md, tab_accessibility.md)
-• Default order (when unnamed/unnumbered): Overview → Usage → Styling → Code → Accessibility
-• To force a custom order, add a number after tab_:
-    tab_10-overview.md, tab_20-usage.md, tab_30-styling.md, tab_40-code.md, tab_50-accessibility.md
-• Tab label is taken from the tab file’s frontmatter `title:` if present; otherwise it’s derived from the filename.
-• Custom tabs are allowed (e.g. tab_experimental.md → “Experimental”).
-• No imports needed — the component discovers and renders these files automatically.
-• Heading levels: start content in tab files at `##` (H2). The page H1 comes from the main index.md title.
-• Code tab: name the file exactly `tab_code.md`.
+Related components: [Text field](../textfield/index.md)
 
-That’s it — add/edit/remove tab_*.md files and the UI updates on the next build/refresh.
--->
-<DsMainTabs />
+## Example
+<ThemeSwitcher />
+<datepicker-example />
+
+## Anatomy
+
+::: image-block
+![Example of a focused date input field with an open calendar below displaying January 2023 and the current selection is the 11th. The example is surrounded by four numbered highlights, pointing to the label, date input field, the optional calendar icon and the calendar popover](/components/datepicker/overview-anatomy.svg)
+:::
+
+
+**1. Label**: Indicates what information the field requires.
+
+**2. Date input field**: Selecting this field opens the date picker component. Users can also input dates into the field. Once a date is selected, the option will be shown in the text input. This example shows date formatted in `dd.mm.yyyy` but this is controlled by the user's browser locale settings (operating system is also fallback).
+
+**3. Calendar icon (optional)**: Opens the calendar popover and helps indicate what information the field requires. Not an accessibility requirement but we recommend including it for ease of keyboard navigation.
+
+**4. Calendar popover**: Contains the list of all dates. Left and right buttons allowing to navigate the months, month and year header, calendar grid with weekdays and days of the month.
+
+
 
 <component-questions />

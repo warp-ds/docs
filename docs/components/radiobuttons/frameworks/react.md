@@ -1,3 +1,7 @@
+# Radio buttons
+
+## React
+
 ### Import
 
 The toggle component allows you to render radio buttons in a group. All you have to do is specify `type="radio-button"` for the Toggle and let the component handle the rest. Toggle is built to handle both single and multiple options.

@@ -1,61 +1,54 @@
----
-# Frontmatter reference (keep this comment block):
-# - title:        Human-readable component name (Sentence case).
-# - description:  One short sentence that also works as SEO meta description.
-# - category:     Consistent taxonomy (e.g. Actions | Feedback | Forms | Navigation | Data display | Layout | Utilities).
-# - placeholder:  For the overview thumbnail/alt text.
-# - frameworks:   Add one entry per platform.
-#
-#   Legal framework names (case-sensitive):
-#     React | React 19 | Vue | Elements | Android | iOS | Figma
-#   Notes:
-#     • "Figma" is allowed for catalog completeness; it’s ignored by tabs/matrix.
-#     • Use “iOS” (capital i + OS).
-#
-#   Legal status values (lowercase):
-#     released | beta | developing | planned | deprecated | unsupported
-#   Tips:
-#     • Use lowercase for status.
-#     • `reason` is optional, shown for unsupported/planned/etc.
-
-title: Link
-description: Link component to use when creating links that look like buttons.
-category: Layout
-placeholder:
-  label: Link component
-frameworks:
-- name: React 19
-  status: beta
-- name: Android
-  status: released
-- name: iOS
-  status: planned
-- name: Elements
-  status: released
----
-# {{ $frontmatter.title }}
-{{ $frontmatter.description }}
+# Link
+Link component to use when creating links that look like buttons.
 
 <DsComponentStatus align="left" hide-unsupported />
 
-<!--
-DsMainTabs — how it works (for authors)
-
-• This page’s tab bar is generated automatically.
-• Create one Markdown file per tab in the SAME folder as this index.md.
-• Naming: tab_*.md  (examples: tab_overview.md, tab_usage.md, tab_styling.md, tab_code.md, tab_accessibility.md)
-• Default order (when unnamed/unnumbered): Overview → Usage → Styling → Code → Accessibility
-• To force a custom order, add a number after tab_:
-    tab_10-overview.md, tab_20-usage.md, tab_30-styling.md, tab_40-code.md, tab_50-accessibility.md
-• Tab label is taken from the tab file’s frontmatter `title:` if present; otherwise it’s derived from the filename.
-• Custom tabs are allowed (e.g. tab_experimental.md → “Experimental”).
-• No imports needed — the component discovers and renders these files automatically.
-• Heading levels: start content in tab files at `##` (H2). The page H1 comes from the main index.md title.
-• Code tab: name the file exactly `tab_code.md`.
-
-That’s it — add/edit/remove tab_*.md files and the UI updates on the next build/refresh.
--->
-
 <DsMainTabs />
+
+A link is interactive text that serves as a lightweight navigational element. It directs users to another location, such as a different website, a specific section on the same page, or an external resource.
+
+See the component in Figma: [Warp - Components / Link](https://www.figma.com/design/pLorEdyAMCZXoxkaCSgREO/Warp-Portal---Documentation?node-id=2436-1497&m=dev)
+
+Related components: [Button](https://www.figma.com/design/pLorEdyAMCZXoxkaCSgREO/Warp-Portal---Documentation?node-id=2392-6379&m=dev)
+
+## Example
+<ThemeSwitcher />
+<link-example />
+
+## Variants
+
+### Text link
+
+<div class="grid grid-cols-2 gap-24">
+  <div class="py-16">
+    <img src="/components/link/link-text-styled.svg" alt="Text link example" />
+  </div>
+  <div class="py-16">
+  This is the default and recommended link variant. It renders as hyperlinked text and can be used either as a standalone element or inline within a block of text.
+  </div>
+</div>
+
+### Button styled
+
+<div class="grid grid-cols-2 gap-24">
+  <div class="py-16">
+    <img src="/components/link/link-button-styled.svg" alt="Button styled link example" />
+  </div>
+
+  <div class="py-16">
+  Alternative variant in which the link is visually styled as a button (web only). This variant is not recommended, but it is still available in Warp for legacy support.
+  </div>
+</div>
+
+## Anatomy
+
+::: image-block
+![A visual diagram of a text link with two labeled parts. The link reads "This is a link" and has a trailing external link icon. Label 1 points to the underlined blue hyperlink text, while Label 2 points to the trailing icon. Below the diagram, a legend explains: Hyperlinked text/text link: Communicates what is being linked to. Trailing icon: Visual indicator that reinforces the purpose of the text link (optional).](/components/link/link-anatomy.svg)
+:::
+
+1. <b>Hyperlinked text/text link:</b> Communicates what is being linked to.
+2. <b>Trailing icon:</b> Visual indicator that reinforces the purpose of the text link (optional).
+
+
 
 <component-questions />

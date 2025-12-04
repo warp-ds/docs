@@ -1,3 +1,7 @@
+# Range slider
+
+## iOS
+
 ### Syntax
 
 #### Using range

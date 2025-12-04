@@ -1,3 +1,5 @@
+# Date picker
+
 ## Principle
 
 Users should be able to manually enter a date, whether or not they interact with the date picker component.

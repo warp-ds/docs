@@ -1,3 +1,7 @@
+# Page indicator
+
+## Usage
+
 Page indicators are usually used in image carousels, and supported by carousel controls that give the user power to navigate through the carousel of images.
 
 **Use page indicators when:**

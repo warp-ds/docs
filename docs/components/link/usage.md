@@ -1,3 +1,5 @@
+# Link
+
 ## Best practices / usage guidelines
 
 - Always underline inline links to help users easily identify the interactive portion of the text.
