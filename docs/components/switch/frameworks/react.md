@@ -36,4 +36,23 @@ It is recommended to display a message to the user, for example a modal or toast
 
 ### Props
 
-<api-table type="react" component="Switch" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| value | boolean |  | The value of the switch. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | string | false | The unique identifier. |
+| aria-label | string | false | Defines a string value that labels the current element. Must be set if aria-labelledby is not defined. |
+| aria-labelledby | string |  | Identifies the element (or elements) that labels the current element. Must be set if aria-label is not defined. |
+| disabled | boolean | false | Whether the switch is disabled. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onClick | () => void |

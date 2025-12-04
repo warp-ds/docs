@@ -66,4 +66,21 @@ Warp.RangeSlider(
 ).uiView
 ```
 
-<api-table type=iOS component="RangeSlider" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| range | `Binding>` |  | A binding to the current selected range of the slider. |
+| bounds | ClosedRange |  | The minimum and maximum values for the slider. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| step | Double | 1.0 | The increment by which the slider value should change. |
+| showTooltips | Bool | true | Whether to show tooltips above the thumbs. |
+| showRange | Bool | false | Whether to show min/max range indicators. |
+| enabled | Bool | true | Whether the slider is enabled or disabled. |
+| selectedItems | Binding |  | For discrete sliders: a binding to the currently selected items from the list. T must conform to LosslessStringConvertible & Equatable. |
+| items | Array |  | For discrete sliders: an array of items to choose from. T must conform to LosslessStringConvertible & Equatable. |
+| valueFormat | `(T) -> String` | nil | For discrete sliders: a closure that formats the displayed value. Defaults to a simple string conversion. |

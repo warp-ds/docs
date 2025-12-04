@@ -50,4 +50,16 @@ Warp.Broadcast(
 
 ### Parameters
 
-<api-table type=iOS component="Broadcast" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | Text that will be shown in the broadcast |
+| broadcastEdge | Warp.BroadcastEdge |  | Edge from where the broadcast is presented. Use one of the predefined `BroadcastEdge` values: `.top`, or `.bottom` |
+| isPresented | Binding Bool |  | Binding to a boolean value that allows the broadcast to control dismissal |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| isDismissable | Bool | true | Determines if dismissable by the user or not. Will add a close button. |

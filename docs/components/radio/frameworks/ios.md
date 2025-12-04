@@ -78,4 +78,22 @@ Warp.Radio(
 
 ### Parameters
 
-<api-table type=iOS component="Radio" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| selectedOption | Binding Option |  | A binding to the currently selected option. This will provide `isSelected` of `Radio`. |
+| options | [Option] |  | The array of options that conform to `RadioOption`. This will provide `label` and optional `extraContent` of `Radio`. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | String? | nil | An optional text label for the `Radio` button. |
+| action | `@escaping () -> Void` |  | A optional closure that is executed when the `Radio` is tapped. This can be mapped into the `onSelection` on `RadioGroup` |
+| title | String? | nil | An optional title for the `RadioGroup`. |
+| helpText | String? | nil | An optional help text displayed below the `RadioGroup`. |
+| style | Warp.RadioStyle | .default | The style of the `RadioGroup` which will be passed to the style of each `Radio`. Use one of the predefined `RadioStyle` values: `.default`, `.error`, or `.disabled` |
+| axis | Axis.Set | .vertical | Determines whether the list of radios is aligned vertically or horizontally. Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`. |
+| onSelection | `((Option, Option) -> Void)?` | nil | A closure that will be triggered when an option is selected, providing the old and newly selected options. |
+| extraContent | AnyView? | nil | An optional view that will be displayed beside the label. This is only for `Radio` and can be passed from the `Options` in `RadioGroup`. |

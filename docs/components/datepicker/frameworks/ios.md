@@ -86,4 +86,14 @@ Not supported
 
 ### Parameters
 
-<api-table type=iOS component="DatePicker" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| date | Binding |  | A binding to the currently selected date. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| range | ClosedRange\|PartialRangeFrom\|PartialRangeThrough |  | The range of selectable dates. If not provided, there is no date range restriction. |

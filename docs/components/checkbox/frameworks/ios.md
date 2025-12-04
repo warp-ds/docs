@@ -89,4 +89,20 @@ Warp.Checkbox(
 
 ### Parameters
 
-<api-table type=iOS component="Checkbox" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| options | Binding |  | The array of options that conform to `CheckboxOption`. This will provide `isSelected`, `label` and optional `extraContent` of `Checkbox`. |
+| action | `@escaping () -> Void` |  | A closure that is executed when the `checkbox` is tapped. This can be mapped into the `onSelection` on `CheckboxGroup` |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String? | nil | An optional title for the `CheckboxGroup`. |
+| helpText | String? | nil | An optional help text displayed below the `CheckboxGroup`. |
+| style | Warp.CheckboxStyle | .default | The style of the `CheckboxGroup` which will be passed to the style of each `Checkbox`. Use one of the predefined `CheckboxStyle` values: `.default`, `.error`, or `.disabled` |
+| axis | Axis.Set | .vertical | Determines whether the list of checkboxes is aligned vertically or horizontally. Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`. |
+| onSelection | `((Option, [Option]) -> Void)?` | nil | A closure that will be triggered when an option is selected, providing the latest selected option and the updated list of options. |
+| extraContent | AnyView? | nil | An optional view that will be displayed beside the label. This is only for `Checkbox` and can be passed from the `Options` in `CheckboxGroup`. |

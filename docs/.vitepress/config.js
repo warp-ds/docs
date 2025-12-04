@@ -1241,7 +1241,10 @@ export default defineConfig({
           text: 'Components',
           items: [
             {
-              text: 'Alert', collapsed: true, link: '/components/alert/', items: [
+              text: 'Alert',
+              collapsed: true,
+              link: '/components/alert/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1277,7 +1280,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Box', collapsed: true, link: '/components/box/', items: [
+              text: 'Box',
+              collapsed: true,
+              link: '/components/box/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1332,7 +1338,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Button group', collapsed: true, link: '/components/buttongroup/', items: [
+              text: 'Button group',
+              collapsed: true,
+              link: '/components/buttongroup/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1344,18 +1353,22 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Button pill', collapsed: true, link: '/components/buttonpill/', items: [
+              text: 'Button pill',
+              collapsed: true,
+              link: '/components/buttonpill/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
-                  items: [
-                    { text: 'iOS', link: '/components/buttonpill/frameworks/ios' },
-                  ],
+                  items: [{ text: 'iOS', link: '/components/buttonpill/frameworks/ios' }],
                 },
               ],
             },
             {
-              text: 'Callout', collapsed: true, link: '/components/callout/', items: [
+              text: 'Callout',
+              collapsed: true,
+              link: '/components/callout/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1370,7 +1383,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Card', collapsed: true, link: '/components/card/', items: [
+              text: 'Card',
+              collapsed: true,
+              link: '/components/card/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1383,7 +1399,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Checkbox', collapsed: true, link: '/components/checkbox/', items: [
+              text: 'Checkbox',
+              collapsed: true,
+              link: '/components/checkbox/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1397,18 +1416,22 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Combo box', collapsed: true, link: '/components/combobox/', items: [
+              text: 'Combo box',
+              collapsed: true,
+              link: '/components/combobox/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
-                  items: [
-                    { text: 'React', link: '/components/combobox/frameworks/react' },
-                  ],
+                  items: [{ text: 'React', link: '/components/combobox/frameworks/react' }],
                 },
               ],
             },
             {
-              text: 'Date picker', collapsed: true, link: '/components/datepicker/', items: [
+              text: 'Date picker',
+              collapsed: true,
+              link: '/components/datepicker/',
+              items: [
                 { text: 'Usage', link: '/components/datepicker/usage' },
                 { text: 'Styling', link: '/components/datepicker/styling' },
                 {
@@ -1424,7 +1447,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Divider', collapsed: true, link: '/components/divider/', items: [
+              text: 'Divider',
+              collapsed: true,
+              link: '/components/divider/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1436,7 +1462,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Expandable', collapsed: true, link: '/components/expandable/', items: [
+              text: 'Expandable',
+              collapsed: true,
+              link: '/components/expandable/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1451,7 +1480,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Icons', collapsed: true, link: '/components/icons/', items: [
+              text: 'Icons',
+              collapsed: true,
+              link: '/components/icons/',
+              items: [
                 { text: 'Styling', link: '/components/icons/styling' },
                 {
                   text: 'Frameworks',
@@ -1465,7 +1497,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Link', collapsed: true, link: '/components/link/', items: [
+              text: 'Link',
+              collapsed: true,
+              link: '/components/link/',
+              items: [
                 { text: 'Usage', link: '/components/link/usage' },
                 { text: 'Styling', link: '/components/link/styling' },
                 {
@@ -1501,7 +1536,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Page indicator', collapsed: true, link: '/components/pageindicator/', items: [
+              text: 'Page indicator',
+              collapsed: true,
+              link: '/components/pageindicator/',
+              items: [
                 { text: 'Usage', link: '/components/pageindicator/usage' },
                 {
                   text: 'Frameworks',
@@ -1516,18 +1554,22 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Pagination', collapsed: true, link: '/components/pagination/', items: [
+              text: 'Pagination',
+              collapsed: true,
+              link: '/components/pagination/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
-                  items: [
-                    { text: 'React', link: '/components/pagination/frameworks/react' },
-                  ],
+                  items: [{ text: 'React', link: '/components/pagination/frameworks/react' }],
                 },
               ],
             },
             {
-              text: 'Pill', collapsed: true, link: '/components/pill/', items: [
+              text: 'Pill',
+              collapsed: true,
+              link: '/components/pill/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1542,7 +1584,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Popover', collapsed: true, link: '/components/popover/', items: [
+              text: 'Popover',
+              collapsed: true,
+              link: '/components/popover/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1556,7 +1601,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Radio', collapsed: true, link: '/components/radio/', items: [
+              text: 'Radio',
+              collapsed: true,
+              link: '/components/radio/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1570,7 +1618,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Radio buttons', collapsed: true, link: '/components/radiobuttons/', items: [
+              text: 'Radio buttons',
+              collapsed: true,
+              link: '/components/radiobuttons/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1582,7 +1633,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Range slider', collapsed: true, link: '/components/rangeslider/', items: [
+              text: 'Range slider',
+              collapsed: true,
+              link: '/components/rangeslider/',
+              items: [
                 { text: 'Usage', link: '/components/rangeslider/usage' },
                 {
                   text: 'Frameworks',
@@ -1597,7 +1651,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Select', collapsed: true, link: '/components/select/', items: [
+              text: 'Select',
+              collapsed: true,
+              link: '/components/select/',
+              items: [
                 { text: 'Usage', link: '/components/select/usage' },
                 {
                   text: 'Frameworks',
@@ -1613,7 +1670,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Slider', collapsed: true, link: '/components/slider/', items: [
+              text: 'Slider',
+              collapsed: true,
+              link: '/components/slider/',
+              items: [
                 { text: 'Usage', link: '/components/slider/usage' },
                 {
                   text: 'Frameworks',
@@ -1630,7 +1690,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Spinner', collapsed: true, link: '/components/spinner/', items: [
+              text: 'Spinner',
+              collapsed: true,
+              link: '/components/spinner/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1642,7 +1705,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Steps', collapsed: true, link: '/components/steps/', items: [
+              text: 'Steps',
+              collapsed: true,
+              link: '/components/steps/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1656,7 +1722,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Switch', collapsed: true, link: '/components/switch/', items: [
+              text: 'Switch',
+              collapsed: true,
+              link: '/components/switch/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1670,7 +1739,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Tabs', collapsed: true, link: '/components/tabs/', items: [
+              text: 'Tabs',
+              collapsed: true,
+              link: '/components/tabs/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1685,7 +1757,9 @@ export default defineConfig({
             },
             { text: 'Text', link: '/components/text/' },
             {
-              text: 'Text area', link: '/components/textarea/', items: [
+              text: 'Text area',
+              link: '/components/textarea/',
+              items: [
                 { text: 'Usage', link: '/components/textarea/usage' },
                 {
                   text: 'Frameworks',
@@ -1700,7 +1774,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Text field', collapsed: true, link: '/components/textfield/', items: [
+              text: 'Text field',
+              collapsed: true,
+              link: '/components/textfield/',
+              items: [
                 { text: 'Usage', link: '/components/textfield/usage' },
                 {
                   text: 'Frameworks',
@@ -1717,7 +1794,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Toast', collapsed: true, link: '/components/toast/', items: [
+              text: 'Toast',
+              collapsed: true,
+              link: '/components/toast/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,
@@ -1731,7 +1811,10 @@ export default defineConfig({
               ],
             },
             {
-              text: 'Tooltip', collapsed: true, link: '/components/tooltip/', items: [
+              text: 'Tooltip',
+              collapsed: true,
+              link: '/components/tooltip/',
+              items: [
                 {
                   text: 'Frameworks',
                   collapsed: true,

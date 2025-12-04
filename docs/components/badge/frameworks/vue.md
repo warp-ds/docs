@@ -34,4 +34,10 @@ import { wBadge } from '@warp-ds/vue/badge';
 
 ### Props
 
-<api-table type=vue component="Badge" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| as | string | div | The DOM element to emit |
+| variant | `'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'` | 'neutral' |  |
+| position | `'top-left', 'top-right', 'bottom-right', 'bottom-left'` | undefined | Used for absolute positioning of the badge within a container |

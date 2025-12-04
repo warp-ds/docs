@@ -63,4 +63,17 @@ To support layouts still written in xml the WarpBadge can be used as a custom vi
 
 ### Parameters
 
-<api-table type=android component="Badge" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | The text to be displayed on the badge |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the badge |
+| style | WarpBadgeStyle.Neutral  WarpBadgeStyle.Info  WarpBadgeStyle.Success  WarpBadgeStyle.Warning  WarpBadgeStyle.Error  WarpBadgeStyle.Disabled  WarpBadgeStyle.Sponsored  WarpBadgeStyle.Price | WarpBadgeStyle.Neutral | Sets the appearance of the badge |
+| alignmentStyle | WarpBadgeAlignment.None  WarpBadgeAlignment.TopStart  WarpBadgeAlignment.TopEnd  WarpBadgeAlignment.BottomStart  WarpBadgeAlignment.BottomEnd | WarpBadgeAlignment.None | Sets the alignment style for the badge |
+| icon | WarpIconResource? | null | Sets the icon for the badge |

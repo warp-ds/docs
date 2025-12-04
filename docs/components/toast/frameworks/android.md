@@ -80,4 +80,17 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Toast" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| state | WarpToastState |  | State of the toast used in hide/show logic and to set the text |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | The modifier for the Toast. |
+| type | WarpToastType.Success   WarpToastType.Warning   WarpToastType.Error | WarpToastType.Success | Style of the toast |
+| duration | WarpToastDuration.SHORT   WarpToastDuration.LONG   WarpToastDuration.INFINITE | WarpToastDuration.SHORT | Duration the Toast is shown |
+| onDismiss | `() -> Unit` | {} | The function to be invoked when dismissed |
