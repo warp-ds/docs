@@ -15,4 +15,4 @@ An overview with links to our brand guidelines.
 | DBA      | [Designmanual.pdf](https://drive.google.com/file/d/1ygj11zB2Uo58zpT6Qn-6drcTEANWz6m6/view)      |
 | FINN     | [Designmanual.pdf](https://drive.google.com/file/d/1m_BsGlk4niikg94PbW4wxZvYnwDQNnXQ/view)      |
 | Oikotie  | Does not exist                                                                                  |
-| Tori     | [Brand guidesliens.pdf](https://drive.google.com/file/d/1KyTfCbFIBkwvOQSk_1gEf9WPPhD0NYnx/view) |
+| Tori     | [Brand guidelines.pdf](https://drive.google.com/file/d/1KyTfCbFIBkwvOQSk_1gEf9WPPhD0NYnx/view) |
