@@ -88,7 +88,6 @@ NoSearchResultsStateView(
 Used in identity verification flows showing a verification icon, localized text, and a customizable button including the electronic ID provider name.
 
 ```swift
-
 VerifyIdentityStateView(
     eidProvider: "BankID",
     verifyAction: {
@@ -116,3 +115,6 @@ The illustration uses the provided `imageContentDescription` as its accessibilit
 
 Certain variants (i.e. `LoginStateView`) adapts the displayed endorsement logo according to the current Warp theme (`finn`, `blocket`, `tori`, `dba`, `vend`, `neutral`), ensuring consistent brand representation.
 
+### Parameters
+
+<api-table type=iOS component="EmptyStates" />
