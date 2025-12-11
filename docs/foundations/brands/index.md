@@ -11,8 +11,8 @@ An overview with links to our brand guidelines.
 | Brand    | Link                                                                                            |
 | -------- | ----------------------------------------------------------------------------------------------- |
 | Bilbasen | Does not exist                                                                                  |
-| Blocket  | [Designmanual.pdf](https://drive.google.com/file/d/1eSLUXIK3mapZaipWgy5oicOD0Mq1P2Sw/view)      |
-| DBA      | [Designmanual.pdf](https://drive.google.com/file/d/1qLoyCEaSZ4bBUOd5IGrbDpUHBKlb81cD/view)      |
-| FINN     | [Designmanual.pdf](https://drive.google.com/file/d/1MdBcQfseDJTOeSINDP8hmCiDGMNNSY0P/view)      |
+| Blocket  | [Designmanual.pdf](https://drive.google.com/file/d/18oyHpkCmbUsrCxecP4cUz37_SrgnYbfD/view)      |
+| DBA      | [Designmanual.pdf](https://drive.google.com/file/d/1ygj11zB2Uo58zpT6Qn-6drcTEANWz6m6/view)      |
+| FINN     | [Designmanual.pdf](https://drive.google.com/file/d/1m_BsGlk4niikg94PbW4wxZvYnwDQNnXQ/view)      |
 | Oikotie  | Does not exist                                                                                  |
-| Tori     | [Brand guidesliens.pdf](https://drive.google.com/file/d/1uwoVGWAbl2-xf7ioMHM_HuA5CTr85l4B/view) |
+| Tori     | [Brand guidelines.pdf](https://drive.google.com/file/d/1KyTfCbFIBkwvOQSk_1gEf9WPPhD0NYnx/view) |
