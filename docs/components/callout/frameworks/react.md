@@ -136,7 +136,7 @@ Read more: [MDN aria-details](https://developer.mozilla.org/en-US/docs/Web/Acces
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | isShowing | boolean | false | Whether Attention component is shown. |
-| placement | `'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end'` | 'bottom' | Placement according to the target element. The arrow will point to the opposite side of this position |
+| placement | 'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end' | 'bottom' | Placement according to the target element. The arrow will point to the opposite side of this position |
 | children | Element \| Element[] |  | Elements inside of the Attention component |
 | className | string |  | Extend the Attention component container styling |
 | callout | boolean | false | Whether Attention component is rendered as a callout, displayed inline within content. |

@@ -2,6 +2,8 @@
 
 ## iOS
 
+![Example of a callout in iOS](callout-ios.png)
+
 ### Syntax
 
 ```swift example

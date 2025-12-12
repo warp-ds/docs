@@ -1,6 +1,3 @@
-import fs from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { classes as componentClasses } from '@warp-ds/css/component-classes/classes';
 import { presetDocs } from '@warp-ds/preset-docs';
 import { presetWarp } from '@warp-ds/uno';
@@ -9,58 +6,6 @@ import uno from 'unocss/vite';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
 import { defineConfig } from 'vitepress';
 import { supported as supportedClasses } from '../supported.js';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-/* ────────────────────────────────────────────────────────────────────────────
-   Auto-build Components sidebar
-   ──────────────────────────────────────────────────────────────────────────── */
-function getFrontmatterTitle(filePath) {
-  try {
-    const src = fs.readFileSync(filePath, 'utf8');
-    const fmBlock = src.match(/^---\s*[\r\n]+([\s\S]*?)\r?\n---/);
-    if (!fmBlock) return null;
-    const titleLine = fmBlock[1].match(/^\s*title:\s*(.+)\s*$/m);
-    if (!titleLine) return null;
-    let t = titleLine[1].trim();
-    if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
-      t = t.slice(1, -1);
-    }
-    return t;
-  } catch {
-    return null;
-  }
-}
-
-function titleFromSlug(slug) {
-  return slug.replace(/[-_]+/g, ' ').replace(/\b\w/g, (s) => s.toUpperCase());
-}
-
-// Scans docs/components/*/index.md (skips folders starting with ".")
-function buildComponentSidebarItems(rootDir) {
-  const componentsDir = resolve(rootDir, 'components');
-  if (!fs.existsSync(componentsDir)) return [];
-
-  const entries = fs
-    .readdirSync(componentsDir, { withFileTypes: true })
-    .filter((e) => e.isDirectory() && !e.name.startsWith('.'));
-
-  const items = entries
-    .map((e) => {
-      const slug = e.name;
-      const indexMd = join(componentsDir, slug, 'index.md');
-      if (!fs.existsSync(indexMd)) return null;
-      const title = getFrontmatterTitle(indexMd) || titleFromSlug(slug);
-      return { text: title, link: `/components/${slug}/` };
-    })
-    .filter(Boolean);
-
-  items.sort((a, b) => a.text.localeCompare(b.text));
-  console.log(items);
-  return items;
-}
-
-/* ──────────────────────────────────────────────────────────────────────────── */
 
 const base = '/docs';
 
@@ -303,12 +248,6 @@ export default defineConfig({
       }),
       svgLoader(),
     ],
-    // ⬇️ alias for new design system components
-    resolve: {
-      alias: {
-        '@ds': resolve(__dirname, './theme/components'),
-      },
-    },
   },
   head: [
     [
@@ -366,6 +305,20 @@ export default defineConfig({
       {
         rel: 'stylesheet',
         href: 'https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/finn-no.css',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://assets.finn.no/pkg/@warp-ds/elements/2.3.0-next.20/styles.css',
+      },
+    ],
+    [
+      'script',
+      {
+        type: 'module',
+        src: 'https://assets.finn.no/pkg/@warp-ds/elements/2.3.0-next.20/index.js',
       },
     ],
   ],
@@ -1251,7 +1204,7 @@ export default defineConfig({
                   items: [
                     { text: 'React', link: '/components/alert/frameworks/react' },
                     { text: 'Vue', link: '/components/alert/frameworks/vue' },
-                    { text: 'Elements', link: '/components/alert/frameworks/elements' },
+                    { text: 'Web', link: '/components/alert/frameworks/elements' },
                     { text: 'Android', link: '/components/alert/frameworks/android' },
                     { text: 'iOS', link: '/components/alert/frameworks/ios' },
                   ],
@@ -1265,13 +1218,14 @@ export default defineConfig({
               items: [
                 { text: 'Usage', link: '/components/badge/usage' },
                 { text: 'Styling', link: '/components/badge/styling' },
+                { text: 'Overview', link: '/components/badge/overview' },
                 {
                   text: 'Frameworks',
                   collapsed: true,
                   items: [
                     { text: 'React', link: '/components/badge/frameworks/react' },
                     { text: 'Vue', link: '/components/badge/frameworks/vue' },
-                    { text: 'Elements', link: '/components/badge/frameworks/elements' },
+                    { text: 'Web', link: '/components/badge/frameworks/elements' },
                     { text: 'Android', link: '/components/badge/frameworks/android' },
                     { text: 'iOS', link: '/components/badge/frameworks/ios' },
                   ],
@@ -1290,7 +1244,7 @@ export default defineConfig({
                   items: [
                     { text: 'React', link: '/components/box/frameworks/react' },
                     { text: 'Vue', link: '/components/box/frameworks/vue' },
-                    { text: 'Elements', link: '/components/box/frameworks/elements' },
+                    { text: 'Web', link: '/components/box/frameworks/elements' },
                     { text: 'Android', link: '/components/box/frameworks/android' },
                     { text: 'iOS', link: '/components/box/frameworks/ios' },
                   ],
@@ -1310,7 +1264,7 @@ export default defineConfig({
                   items: [
                     { text: 'React', link: '/components/breadcrumbs/frameworks/react' },
                     { text: 'Vue', link: '/components/breadcrumbs/frameworks/vue' },
-                    { text: 'Elements', link: '/components/breadcrumbs/frameworks/elements' },
+                    { text: 'Web', link: '/components/breadcrumbs/frameworks/elements' },
                   ],
                 },
                 { text: 'Accessibility', link: '/components/breadcrumbs/accessibility' },
@@ -1330,7 +1284,7 @@ export default defineConfig({
                     { text: 'React', link: '/components/button/frameworks/react' },
                     { text: 'React 19', link: '/components/button/frameworks/react-19' },
                     { text: 'Vue', link: '/components/button/frameworks/vue' },
-                    { text: 'Elements', link: '/components/button/frameworks/elements' },
+                    { text: 'Web', link: '/components/button/frameworks/elements' },
                     { text: 'Android', link: '/components/button/frameworks/android' },
                     { text: 'iOS', link: '/components/button/frameworks/ios' },
                   ],
@@ -1374,7 +1328,7 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'Android', link: '/components/callout/frameworks/android' },
-                    { text: 'Elements', link: '/components/callout/frameworks/elements' },
+                    { text: 'Web', link: '/components/callout/frameworks/elements' },
                     { text: 'iOS', link: '/components/callout/frameworks/ios' },
                     { text: 'React', link: '/components/callout/frameworks/react' },
                     { text: 'Vue', link: '/components/callout/frameworks/vue' },
@@ -1391,7 +1345,7 @@ export default defineConfig({
                   text: 'Frameworks',
                   collapsed: true,
                   items: [
-                    { text: 'Elements', link: '/components/card/frameworks/elements' },
+                    { text: 'Web', link: '/components/card/frameworks/elements' },
                     { text: 'React', link: '/components/card/frameworks/react' },
                     { text: 'Vue', link: '/components/card/frameworks/vue' },
                   ],
@@ -1411,6 +1365,7 @@ export default defineConfig({
                     { text: 'iOS', link: '/components/checkbox/frameworks/ios' },
                     { text: 'React', link: '/components/checkbox/frameworks/react' },
                     { text: 'Vue', link: '/components/checkbox/frameworks/vue' },
+                    { text: 'Web (New)', link: '/components/checkbox/frameworks/web' },
                   ],
                 },
               ],
@@ -1527,7 +1482,7 @@ export default defineConfig({
                   items: [
                     { text: 'React', link: '/components/modal/frameworks/react' },
                     { text: 'Vue', link: '/components/modal/frameworks/vue' },
-                    { text: 'Elements', link: '/components/modal/frameworks/elements' },
+                    { text: 'Web', link: '/components/modal/frameworks/elements' },
                     { text: 'Android', link: '/components/modal/frameworks/android' },
                     { text: 'iOS', link: '/components/modal/frameworks/ios' },
                     { text: 'Figma', link: '/components/modal/frameworks/figma' },
@@ -1575,7 +1530,7 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'Android', link: '/components/pill/frameworks/android' },
-                    { text: 'Elements', link: '/components/pill/frameworks/elements' },
+                    { text: 'Web', link: '/components/pill/frameworks/elements' },
                     { text: 'iOS', link: '/components/pill/frameworks/ios' },
                     { text: 'React', link: '/components/pill/frameworks/react' },
                     { text: 'Vue', link: '/components/pill/frameworks/vue' },
@@ -1593,7 +1548,7 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'Android', link: '/components/popover/frameworks/android' },
-                    { text: 'Elements', link: '/components/popover/frameworks/elements' },
+                    { text: 'Web', link: '/components/popover/frameworks/elements' },
                     { text: 'React', link: '/components/popover/frameworks/react' },
                     { text: 'Vue', link: '/components/popover/frameworks/vue' },
                   ],
@@ -1785,7 +1740,7 @@ export default defineConfig({
                   items: [
                     { text: 'React', link: '/components/textfield/frameworks/react' },
                     { text: 'Vue', link: '/components/textfield/frameworks/vue' },
-                    { text: 'Elements', link: '/components/textfield/frameworks/elements' },
+                    { text: 'Web', link: '/components/textfield/frameworks/elements' },
                     { text: 'Android', link: '/components/textfield/frameworks/android' },
                     { text: 'iOS', link: '/components/textfield/frameworks/ios' },
                   ],
@@ -1803,7 +1758,7 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'React-19', link: '/components/toast/frameworks/react-19' },
-                    { text: 'Elements', link: '/components/toast/frameworks/elements' },
+                    { text: 'Web', link: '/components/toast/frameworks/elements' },
                     { text: 'Android', link: '/components/toast/frameworks/android' },
                     { text: 'iOS', link: '/components/toast/frameworks/ios' },
                   ],
@@ -1821,7 +1776,7 @@ export default defineConfig({
                   items: [
                     { text: 'React', link: '/components/tooltip/frameworks/react' },
                     { text: 'Vue', link: '/components/tooltip/frameworks/vue' },
-                    { text: 'Elements', link: '/components/tooltip/frameworks/elements' },
+                    { text: 'Web', link: '/components/tooltip/frameworks/elements' },
                     { text: 'Android', link: '/components/tooltip/frameworks/android' },
                     { text: 'iOS', link: '/components/tooltip/frameworks/ios' },
                   ],

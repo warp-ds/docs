@@ -7,6 +7,8 @@ import { extractFrontmatter } from './utils/frontmatter.js';
 const mdModules = import.meta.glob('../../../components/*/index.md', { eager: true });
 const svgModules = import.meta.glob('../../../components/*/placeholder.svg', { eager: true, import: 'default' });
 
+console.log('Loaded component markdown modules:', mdModules);
+
 function slugFromPath(p) {
   const s = String(p).replace(/\\/g, '/');
   return s.match(/\/components\/([^/]+)\/index\.md$/)?.[1] || s;

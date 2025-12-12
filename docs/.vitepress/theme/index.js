@@ -15,12 +15,14 @@ import TabsContent from '../TabsContent.vue';
 import ThemeSwitcher from '../ThemeSwitcher.vue';
 import WidthController from '../WidthController.vue';
 import '../bootExamples.js';
+import '../StyleIsolate.js'; // Web component for style isolation
 import './custom.css';
 import 'uno.css';
+import FrameworkTabs from '../../components/FrameworkTabs.vue';
+import Badge from '../Badge.vue';
 import Card from '../Card.vue';
 import Cards from '../Cards.vue';
 import warpThemeSwitcher from '../warp-theme-switcher.js';
-import DsBadge from './components/DsBadge.vue';
 import DsBetaNotice from './components/DsBetaNotice.vue';
 import DsCodeTabs from './components/DsCodeTabs.vue';
 import DsComponentOverview from './components/DsComponentOverview.vue';
@@ -43,11 +45,11 @@ export default {
     app.use(warpThemeSwitcher);
 
     // Ds-prefixed components (explicitly registered)
-    app.component('DsBadge', DsBadge);
+    //app.component('DsBadge', DsBadge);
     app.component('DsBetaNotice', DsBetaNotice);
     app.component('DsCodeTabs', DsCodeTabs);
     app.component('DsComponentOverview', DsComponentOverview);
-    app.component('DsComponentStatus', DsComponentStatus);
+    //app.component('DsComponentStatus', DsComponentStatus);
     app.component('DsFrameworkStatus', DsFrameworkStatus);
     app.component('DsMainTabs', DsMainTabs);
     app.component('DsSearchInput', DsSearchInput);
@@ -66,5 +68,7 @@ export default {
     app.component('IconStarFull32', IconStarFull32);
     app.component('Cards', Cards);
     app.component('Card', Card);
+    app.component('FrameworkTabs', FrameworkTabs);
+    app.component('WarpBadge', Badge);
   },
 };
