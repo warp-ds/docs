@@ -339,3 +339,10 @@ html.dark body {
   border-radius: 4px;
   font-weight: bold;
 }
+.component {
+  padding: 16px;
+  border: 2px solid var(--vp-c-gray-1);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: var(--w-s-color-background);
+}

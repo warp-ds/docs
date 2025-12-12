@@ -2,6 +2,17 @@
 
 ## Android
 
+<FrameworkTabs 
+  :tabs="[
+    { name: 'Elements', url: './elements' },
+    { name: 'Vue', url: './vue' },
+    { name: 'React', url: './react' },
+    { name: 'Android', url: './android' },
+    { name: 'iOS', url: './ios' }
+  ]" 
+  activeTab="Android" 
+/>
+
 ### Syntax
 
 ```kotlin example

@@ -2,6 +2,17 @@
 
 ## React
 
+<FrameworkTabs 
+  :tabs="[
+    { name: 'Elements', url: './elements' },
+    { name: 'Vue', url: './vue' },
+    { name: 'React', url: './react' },
+    { name: 'Android', url: './android' },
+    { name: 'iOS', url: './ios' }
+  ]" 
+  activeTab="React" 
+/>
+
 ### Import
 
 You can import the component like so:

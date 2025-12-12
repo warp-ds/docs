@@ -93,7 +93,7 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| placement | `'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end'` | 'bottom' | Placement according to the target element. Arrow would be on the opposite side of this position |
+| placement | 'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end' | 'bottom' | Placement according to the target element. Arrow would be on the opposite side of this position |
 | show | boolean | false | Whether Attention element should be visible |
 | callout | boolean | false | Whether Attention element is rendered as a callout, displayed inline within content. |
 | highlight | boolean | false | Whether Attention element is rendered as a highlight, elevated above content with shadow. |
