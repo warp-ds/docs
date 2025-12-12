@@ -1,6 +1,7 @@
 # Callout
 
 ## Android
+![callout on android](callout-android.png)
 
 ### Syntax
 
