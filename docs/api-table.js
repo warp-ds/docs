@@ -2669,6 +2669,30 @@ export const android = {
       ['items', 'List<String>?', 'null', 'The list of strings displayed in the select component menu'],
     ],
   },
+  State: {
+    props: [
+      ['modifier', 'Modifier', 'Modifier', 'Modifier for the state component'],
+      [
+        'type',
+        'WarpStateType.NoSearchResults <br /> WarpStateType.LoadFailed <br /> WarpStateType.Offline <br /> WarpStateType.Login <br /> WarpStateType.Verify <br /> WarpStateType.Loading',
+        'null',
+        'Pre-defined type of the state',
+      ],
+      ['painter', 'Painter', 'null', 'Painter for the illustration of the state component'],
+      ['icon', 'WarpIconResource', 'null', 'Icon for the state component'],
+      ['tintColor', 'Color', 'null', 'Icon color for the state component'],
+      ['imageSize', 'Dp', 'null', 'Image size'],
+      ['imageContentDescription', 'String', 'null', 'Content description of the illustration'],
+      ['title', 'String', 'null', 'Title to be displayed in the state'],
+      ['description', 'String', 'null', 'Description text to be displayed in the state'],
+      ['primaryButtonText', 'String', 'null', 'Text to be displayed on the primary button'],
+      ['onPrimaryButtonClicked', '() -> Unit', 'null', 'Action when primary button is clicked'],
+      ['quietButtonText', 'String', 'null', 'Text to be displayed on the quiet button'],
+      ['onQuietButtonClicked', '() -> Unit', 'null', 'Action when quiet button is clicked'],
+      ['showLogo', 'Boolean', 'false', 'Toggle to show the Vend Logo'],
+      
+    ],
+  }
 };
 
 export const iOS = {
