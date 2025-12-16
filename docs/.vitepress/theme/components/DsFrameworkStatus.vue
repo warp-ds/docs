@@ -121,6 +121,7 @@ async function loadHeaderIcons() {
 onMounted(loadHeaderIcons);
 </script>
 
+
 <template>
   <div class="matrix-wrap" v-if="rows.length">
     <table class="matrix">
