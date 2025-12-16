@@ -1226,7 +1226,7 @@ export default defineConfig({
           ],
         },
       ],
-            '/components/': [
+      '/components/': [
         {
           text: 'Overview',
           items: [
