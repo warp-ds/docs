@@ -2690,9 +2690,8 @@ export const android = {
       ['quietButtonText', 'String', 'null', 'Text to be displayed on the quiet button'],
       ['onQuietButtonClicked', '() -> Unit', 'null', 'Action when quiet button is clicked'],
       ['showLogo', 'Boolean', 'false', 'Toggle to show the Vend Logo'],
-      
     ],
-  }
+  },
 };
 
 export const iOS = {
