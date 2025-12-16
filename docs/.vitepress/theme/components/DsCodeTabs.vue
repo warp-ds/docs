@@ -28,7 +28,11 @@ const fmFrameworks = computed(() => {
 });
 
 // Pre-compiled per-framework markdown files
-const mdMap = import.meta.glob('/components/**/frameworks/*.md', { eager: true, import: 'default' });
+const mdMap = {
+  ...import.meta.glob('/components/**/frameworks/*.md', { eager: true, import: 'default' }),
+  ...import.meta.glob('/patterns/**/frameworks/*.md', { eager: true, import: 'default' }),
+};
+
 function findMdBySuffix(suffix) {
   for (const k of Object.keys(mdMap)) {
     const norm = k.replace(/\\/g, '/');
