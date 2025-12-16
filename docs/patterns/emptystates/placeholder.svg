@@ -1,0 +1,10 @@
+<svg width="102" height="85" viewBox="0 0 102 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="101.274" height="84.9397" rx="4" fill="var(--vp-c-svg2, #131B2D )" />
+<rect x="13.0676" y="31.0357" width="75.139" height="3.26691" rx="1.63346" fill="var(--vp-c-svg3, #9EACC9 )"/>
+<rect x="13.0676" y="37.5695" width="75.139" height="3.26691" rx="1.63346" fill="var(--vp-c-svg3, #9EACC9 )"/>
+<rect x="13.0676" y="44.1033" width="75.139" height="3.26691" rx="1.63346" fill="var(--vp-c-svg3, #9EACC9 )"/>
+<rect x="34.3026" y="56.3542" width="32.6691" height="6.53383" rx="3.26691" fill="var(--vp-c-svg1, #FFFBD5 )"/>
+<rect x="34.3026" y="66.155" width="32.6691" height="6.53383" rx="3.26691" fill="var(--vp-c-svg3, #9EACC9 )"/>
+<circle cx="50.2115" cy="18.4342" r="7.875" stroke="var(--vp-c-svg3, #9EACC9 )" stroke-width="2.25"/>
+<path d="M42.3365 18.4342C42.3365 14.0849 45.8623 10.5592 50.2115 10.5592" stroke="var(--vp-c-svg1, #FFFBD5 )" stroke-width="2.25" stroke-linecap="round"/>
+</svg>

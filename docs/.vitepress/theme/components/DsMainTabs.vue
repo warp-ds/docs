@@ -9,9 +9,20 @@ const { page } = useData();
 const currentDir = computed(() => page.value.relativePath.replace(/[^/]+$/, ''));
 const dirAbs = computed(() => `/${currentDir.value}`);
 
-/* Load *this component's* tab files */
-const tabMap = import.meta.glob('/components/**/tab_*.md', { eager: true, import: 'default' });
-const tabData = import.meta.glob('/components/**/tab_*.md', { eager: true, import: '__pageData' });
+
+/* Load *this page's* tab files (components + patterns) */
+const tabMap = {
+  ...import.meta.glob('/components/**/tab_*.md', { eager: true, import: 'default' }),
+  ...import.meta.glob('/patterns/**/tab_*.md', { eager: true, import: 'default' }),
+};
+
+const tabData = {
+  ...import.meta.glob('/components/**/tab_*.md', { eager: true, import: '__pageData' }),
+  ...import.meta.glob('/patterns/**/tab_*.md', { eager: true, import: '__pageData' }),
+};
+
+
+
 
 /* Default order if no numeric prefix is provided */
 const DEFAULT_ORDER = new Map([

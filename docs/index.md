@@ -9,8 +9,9 @@ import IconsCard from './src/icons-card.svg';
 import ColorsCard from './src/colors-card.svg';
 import TokensCard from './src/tokens-card.svg';
 import heroSVG from './src/warp-hero.svg';
-import FoundationsSVG from './src/foundations-card.svg';
-import CompSVG from './src/comp-card.svg';
+import FoundationsSVG from './src/foundations.svg';
+import CompSVG from './src/components.svg';
+import PatternsSVG from './src/patterns.svg';
 const cardData = {
   CardType1: [
     {
@@ -47,9 +48,15 @@ const cardData = {
     },
     {
       title: 'Components',
-      description: 'UI controls and utilities to help you build great experiences.',
+      description: 'Guidelines and recommendations for solving recurring user tasks..',
       href: 'components',
       image: { component: CompSVG, alt: 'Icon representing components.' },
+    },
+    {
+      title: 'Patterns',
+      description: 'UI controls and utilities to help you build great experiences.',
+      href: 'patterns',
+      image: { component: PatternsSVG, alt: 'Icon representing components.' },
     },
   ],
 };
@@ -58,7 +65,7 @@ const cardData = {
 <div class="VPHero has-image VPHomeHero">
   <div class="container">
     <div class="main">
-      <h1 class="name"><span class="clip">The design system for Vend</span></h1>
+      <h1 class="name"><span class="clip">Vend’s Design System</span></h1>
       <p class="tagline">Design, build and ship coherent experience with WARP</p>
       <div class="actions">
         <div class="action">
@@ -75,15 +82,13 @@ const cardData = {
 </div>
 
 <!-- Cards for CardType2 -->
-<cards class="cards cols2to1">
+<cards class="cards cols3to1">
   <card v-for="card in cardData.CardType2" :key="card.title" class="card type2">
     <div>
+      <component :is="card.image.component" :aria-label="card.image.alt" style="height:86px;width:86px;margin:0 auto 20px;" />
       <h2 class="card-title vp-font-size-2">{{ card.title }}</h2>
       <p class="card-description">{{ card.description }}</p>
       <a :href="card.href" class="card-link">Explore {{ card.title.toLowerCase() }} <span class="vpi-arrow-right link-text-icon"></span></a>
-    </div>
-    <div class="card-image">
-      <component :is="card.image.component" :aria-label="card.image.alt" />
     </div>
   </card>
 </cards>
@@ -150,6 +155,11 @@ const cardData = {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (min-width: 960px) {
+  .cards.cols3to1{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 /* Title setups, these should probably live in custom.css if we wanna reuse these */
  .vp-font-size-1 {
   font-size: var(--vp-font-size-1);
@@ -187,7 +197,7 @@ const cardData = {
   align-items: center;
   min-height: 280px;
   gap: 20px;
-  padding: 20px 60px;
+  padding: 40px;
 }
 
 .card-title {

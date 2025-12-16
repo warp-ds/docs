@@ -1,23 +1,49 @@
 <script setup>
-import { withBase } from 'vitepress';
+import { withBase, useData } from 'vitepress';
 import { computed, ref } from 'vue';
 import { CANONICAL_LABEL_LIST, getFrameworkLabel, isStatusAvailable, normalizeStatus } from './utils/frameworks.js';
 import { extractFrontmatter } from './utils/frontmatter.js';
 
-const mdModules = import.meta.glob('../../../components/*/index.md', { eager: true });
-const svgModules = import.meta.glob('../../../components/*/placeholder.svg', { eager: true, import: 'default' });
+const { page } = useData();
 
-function slugFromPath(p) {
+const currentSection = computed(() => {
+  const rel = page.value.relativePath || '';
+  if (rel.startsWith('patterns/')) return 'patterns';
+  return 'components';
+});
+
+const kindLabel = computed(() =>
+  currentSection.value === 'patterns' ? 'patterns' : 'components',
+);
+
+const mdModules = {
+  ...import.meta.glob('../../../components/*/index.md', { eager: true }),
+  ...import.meta.glob('../../../patterns/*/index.md', { eager: true }),
+};
+
+const svgModules = {
+  ...import.meta.glob('../../../components/*/placeholder.svg', { eager: true, import: 'default' }),
+  ...import.meta.glob('../../../patterns/*/placeholder.svg', { eager: true, import: 'default' }),
+};
+
+function parseSectionAndSlugFromIndex(p) {
   const s = String(p).replace(/\\/g, '/');
-  return s.match(/\/components\/([^/]+)\/index\.md$/)?.[1] || s;
+  const m = s.match(/\/(components|patterns)\/([^/]+)\/index\.md$/);
+  return m ? { section: m[1], slug: m[2] } : { section: null, slug: s };
 }
 
-const placeholderBySlug = (() => {
+function parseSectionAndSlugFromSvg(p) {
+  const s = String(p).replace(/\\/g, '/');
+  const m = s.match(/\/(components|patterns)\/([^/]+)\/placeholder\.svg$/);
+  return m ? { section: m[1], slug: m[2] } : { section: null, slug: s };
+}
+
+const placeholderByKey = (() => {
   const map = Object.create(null);
   for (const [key, mod] of Object.entries(svgModules)) {
-    const s = String(key).replace(/\\/g, '/');
-    const slug = s.match(/\/components\/([^/]+)\/placeholder\.svg$/)?.[1];
-    if (slug) map[slug] = mod;
+    const { section, slug } = parseSectionAndSlugFromSvg(key);
+    if (!section || !slug) continue;
+    map[`${section}/${slug}`] = mod;
   }
   return map;
 })();
@@ -26,7 +52,8 @@ const CANONICAL = new Set(CANONICAL_LABEL_LIST);
 
 const allItems = Object.entries(mdModules)
   .map(([key, mod]) => {
-    const slug = slugFromPath(key);
+    const { section, slug } = parseSectionAndSlugFromIndex(key);
+    if (!section || !slug) return null; // not components/patterns
     if (slug.startsWith('_') || slug.startsWith('.')) return null;
 
     const fm = extractFrontmatter(mod) || {};
@@ -40,16 +67,17 @@ const allItems = Object.entries(mdModules)
     const title = fm.title || slug;
     const description = fm.description || '';
     const category = fm.category || 'Uncategorized';
-    const svgComponent = placeholderBySlug[slug] || null;
+    const svgComponent = placeholderByKey[`${section}/${slug}`] || null;
 
     return {
+      section,
       slug,
       title,
       description,
       category,
       frameworks,
       svgComponent,
-      href: withBase(`/components/${slug}/`),
+      href: withBase(`/${section}/${slug}/`),
       placeholder: { label: fm?.placeholder?.label || title },
     };
   })
@@ -64,9 +92,15 @@ const allFrameworks = computed(() => CANONICAL_LABEL_LIST.slice());
 const filtered = computed(() => {
   const query = q.value.trim().toLowerCase();
   const sel = picked.value.map((v) => String(v).toLowerCase());
+  const section = currentSection.value;
 
   return allItems.filter((it) => {
-    const textOk = !query || it.title.toLowerCase().includes(query) || it.description.toLowerCase().includes(query);
+    if (it.section !== section) return false; // only show items for this section
+
+    const textOk =
+      !query ||
+      it.title.toLowerCase().includes(query) ||
+      it.description.toLowerCase().includes(query);
 
     const fwNames = it.frameworks.map((f) => f.name.toLowerCase());
     const fwOk = sel.length === 0 || sel.some((s) => fwNames.includes(s)); // OR

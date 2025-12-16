@@ -1,42 +1,99 @@
 <script setup>
-import { onMounted, ref } from 'vue';
-import { CANONICAL_LABEL_LIST, getFrameworkLabel, normalizeStatus, SIMPLE_ICON_KEYS } from './utils/frameworks.js';
+import { withBase, useData } from 'vitepress';
+import { computed, onMounted, ref } from 'vue';
+import {
+  CANONICAL_LABEL_LIST,
+  getFrameworkLabel,
+  normalizeStatus,
+  SIMPLE_ICON_KEYS,
+} from './utils/frameworks.js';
 import { extractFrontmatter } from './utils/frontmatter.js';
 import { fetchIconPath } from './utils/icons.js';
 
-// Read component pages relative to this file
-const modules = import.meta.glob('../../../components/*/index.md', { eager: true });
+/* ────────────────────────────────────────────────────────────
+   Where are we? /components/... or /patterns/...
+   ──────────────────────────────────────────────────────────── */
+const { page } = useData();
+
+const currentSection = computed(() => {
+  const rel = page.value.relativePath || '';
+  if (rel.startsWith('patterns/')) return 'patterns';
+  return 'components';
+});
+
+const kindLabel = computed(() =>
+  currentSection.value === 'patterns' ? 'pattern' : 'component',
+);
+
+/* ────────────────────────────────────────────────────────────
+   Read pages from components + patterns
+   ──────────────────────────────────────────────────────────── */
+// .vitepress/theme/components/DsFrameworkStatus.vue → ../../../(components|patterns)/*/index.md
+const modules = {
+  ...import.meta.glob('../../../components/*/index.md', { eager: true }),
+  ...import.meta.glob('../../../patterns/*/index.md', { eager: true }),
+};
 
 const CANONICAL = CANONICAL_LABEL_LIST;
 
-function slugFromKey(k) {
-  const m = String(k)
+function parseSectionAndSlug(key) {
+  const m = String(key)
     .replace(/\\/g, '/')
-    .match(/\/components\/([^/]+)\/index\.md$/);
-  return m ? m[1] : k;
+    .match(/\/(components|patterns)\/([^/]+)\/index\.md$/);
+  if (!m) return { section: null, slug: null };
+  return { section: m[1], slug: m[2] };
 }
 
-// Build rows from frontmatter
-const rows = Object.entries(modules)
+/* ────────────────────────────────────────────────────────────
+   Build all rows (components + patterns)
+   ──────────────────────────────────────────────────────────── */
+const allRows = Object.entries(modules)
   .map(([key, mod]) => {
+    const { section, slug } = parseSectionAndSlug(key);
+    if (!section || !slug) return null;
+
     const fm = extractFrontmatter(mod);
     if (!fm || !Array.isArray(fm.frameworks) || fm.frameworks.length === 0) return null;
-    const slug = slugFromKey(key);
+
     const title = fm.title || slug;
     const statuses = Object.create(null);
+
     for (const fw of fm.frameworks) {
       const name = getFrameworkLabel(fw?.name);
       if (!name || !CANONICAL.includes(name)) continue;
-      statuses[name] = normalizeStatus(fw?.status, { allowEmpty: true }) || '';
+      statuses[name] =
+        normalizeStatus(fw?.status, { allowEmpty: true }) || '';
     }
+
+    // ensure all canonical frameworks exist
     for (const c of CANONICAL) if (!(c in statuses)) statuses[c] = '';
-    return { title, slug, statuses };
+
+    return {
+      section,
+      title,
+      slug,
+      statuses,
+      href: withBase(`/${section}/${slug}/`),
+    };
   })
   .filter(Boolean)
   .sort((a, b) => a.title.localeCompare(b.title));
 
-const counts = {};
-for (const c of CANONICAL) counts[c] = rows.filter((r) => r.statuses[c] === 'released').length;
+/* ────────────────────────────────────────────────────────────
+   Filter rows + counts for *current* section
+   ──────────────────────────────────────────────────────────── */
+const rows = computed(() =>
+  allRows.filter((r) => r.section === currentSection.value),
+);
+
+const counts = computed(() => {
+  const out = {};
+  for (const c of CANONICAL) {
+    out[c] = rows.value.filter((r) => r.statuses[c] === 'released').length;
+  }
+  return out;
+});
+
 const headers = CANONICAL.map((c) => ({ key: c }));
 
 // Map labels to icon keys
@@ -60,6 +117,7 @@ async function loadHeaderIcons() {
     if (d) iconPaths.value[h.key] = d;
   }
 }
+
 onMounted(loadHeaderIcons);
 </script>
 
@@ -68,7 +126,9 @@ onMounted(loadHeaderIcons);
     <table class="matrix">
       <thead>
         <tr>
-          <th class="sticky left">Component</th>
+          <th class="sticky left">
+            {{ kindLabel === 'pattern' ? 'Pattern' : 'Component' }}
+          </th>
           <th v-for="h in headers" :key="h.key" class="sticky">
             <span class="fw-head">
               <span class="fw-label">
@@ -87,7 +147,7 @@ onMounted(loadHeaderIcons);
       <tbody>
         <tr v-for="row in rows" :key="row.slug">
           <th class="left">
-            <a :href="`/docs/components/${row.slug}/`">{{ row.title }}</a>
+            <a :href="row.href">{{ row.title }}</a>
           </th>
           <td v-for="h in headers" :key="h.key" class="cell">
             <span v-if="row.statuses[h.key] === ''" class="na" aria-label="No data">—</span>
@@ -101,7 +161,7 @@ onMounted(loadHeaderIcons);
   </div>
 
   <div v-else class="matrix-empty">
-    <em>No components with <code>frameworks:</code> in frontmatter yet.</em>
+    <em>No {{ kindLabel }}s with <code>frameworks:</code> in frontmatter yet.</em>
   </div>
 </template>
 

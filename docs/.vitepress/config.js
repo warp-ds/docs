@@ -37,21 +37,22 @@ function titleFromSlug(slug) {
 }
 
 // Scans docs/components/*/index.md (skips folders starting with ".")
-function buildComponentSidebarItems(rootDir) {
-  const componentsDir = resolve(rootDir, 'components');
-  if (!fs.existsSync(componentsDir)) return [];
+function buildSectionSidebarItems(rootDir, section) {
+  // section is 'components' or 'patterns'
+  const sectionDir = resolve(rootDir, section);
+  if (!fs.existsSync(sectionDir)) return [];
 
   const entries = fs
-    .readdirSync(componentsDir, { withFileTypes: true })
+    .readdirSync(sectionDir, { withFileTypes: true })
     .filter((e) => e.isDirectory() && !e.name.startsWith('.'));
 
   const items = entries
     .map((e) => {
       const slug = e.name;
-      const indexMd = join(componentsDir, slug, 'index.md');
+      const indexMd = join(sectionDir, slug, 'index.md');
       if (!fs.existsSync(indexMd)) return null;
       const title = getFrontmatterTitle(indexMd) || titleFromSlug(slug);
-      return { text: title, link: `/components/${slug}/` };
+      return { text: title, link: `/${section}/${slug}/` };
     })
     .filter(Boolean);
 
@@ -255,7 +256,7 @@ const docsClasses = [
 export default defineConfig({
   lang: 'en',
   title: 'Warp Design System',
-  description: 'Documentation for Warp Design System technical platform',
+  description: 'Documentation for Warp Design System',
   lastUpdated: false,
   cleanUrls: true,
   base: `${base}/`,
@@ -381,6 +382,7 @@ export default defineConfig({
       { text: 'Get started', link: '/get-started/' },
       { text: 'Foundations', link: '/foundations/' },
       { text: 'Components', link: '/components/' },
+      { text: 'Patterns', link: '/patterns/' },
       {
         text: "What's new",
         link: '/blog/',
@@ -1224,7 +1226,7 @@ export default defineConfig({
           ],
         },
       ],
-      '/components/': [
+            '/components/': [
         {
           text: 'Overview',
           items: [
@@ -1235,10 +1237,25 @@ export default defineConfig({
             },
           ],
         },
-
         {
           text: 'Components',
-          items: buildComponentSidebarItems(resolve(__dirname, '..')),
+          items: buildSectionSidebarItems(resolve(__dirname, '..'), 'components'),
+        },
+      ],
+      '/patterns/': [
+        {
+          text: 'Overview',
+          items: [
+            { text: 'Patterns overview', link: '/patterns/' },
+            {
+              text: 'Framework status',
+              link: '/patterns/DsFrameworkStatus', // fixed typo + path
+            },
+          ],
+        },
+        {
+          text: 'Patterns',
+          items: buildSectionSidebarItems(resolve(__dirname, '..'), 'patterns'),
         },
       ],
     },
