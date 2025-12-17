@@ -3,79 +3,79 @@
 
 ```kotlin example
 @Composable
-fun WarpDatePicker(
+fun WarpState(
     modifier: Modifier = Modifier,
-    onDateSelected: (Long) -> Unit,
-    onDismiss: (() -> Unit)? = null,
-    preselectedDateMillis: Long? = null,
-    type: WarpDatePickerType = WarpDatePickerType.DIALOG,
-    selectableDates: SelectableDates = DatePickerDefaults.AllDates
+    type: WarpStateType? = null,
+    painter: Painter? = null,
+    icon: WarpIconResource? = null,
+    tintColor: Color? = null,
+    imageSize: Dp? = null,
+    imageContentDescription: String? = null,
+    title: String? = null,
+    description: String? = null,
+    primaryButtonText: String? = null,
+    onPrimaryButtonClicked: () -> Unit = {},
+    quietButtonText: String? = null,
+    onQuietButtonClicked: () -> Unit = {},
+    showLogo: Boolean = false
 )
 ```
 
-### Visual options
-Can be shown as a dialog or inline.
+### Visual options & Usage
+There are pre-defined types of WarpState that can be used out-of-the-box. If no type is provided all the fields will be null and you can customize freely.
+Supports illustrations by using the painter property.
 
 ```kotlin example
-enum class WarpDatePickerType {
-    DIALOG,
-    INLINE
+enum class WarpStateType {
+    NoSearchResults,
+    LoadFailed,
+    Loading,
+    Login,
+    Offline,
+    Verify
 }
-```
 
-### Usage
-
-Basic usage for the datepicker - onDateSelected callback will return the chosen date in milliseconds.
-
-```kotlin example
-var dateinMillis by remember { mutableStateOf(System.currentTimeMillis()) }
-
-WarpDatePicker(
-    type = WarpDatePickerType.INLINE,
-    onDateSelected = {
-        dateinMillis = it
-    }
+WarpState(
+    type = WarpStateType.NoSearchResults,
+    onPrimaryButtonClicked = { }
 )
+
+WarpState(
+    type = WarpStateType.Login,
+    onPrimaryButtonClicked = { },
+    onQuietButtonClicked = { }
+)
+
+//Custom state with icon
+WarpState(
+    modifier = Modifier.fillMaxSize(),
+    title = "Custom title",
+    description = "Custom text and custom content.",
+    icon = icons.shovel,
+    primaryButtonText = "Primary action",
+    onPrimaryButtonClicked = { },
+    quietButtonText = "Secondary action",
+    onQuietButtonClicked = { }
+)
+
+//Custom state with illustration
+WarpState(
+    modifier = Modifier.fillMaxSize(),
+    title = "Custom state",
+    description = "Custom text and custom content.",
+    painter = painterResource(R.drawable.warp_placeholder),
+    imageContentDescription = "Placeholder illustration",
+    primaryButtonText = "Okay",
+    onPrimaryButtonClicked = { },
+    quietButtonText = "Retry",
+    onQuietButtonClicked = { }
+        )
 ```
 
-### Dialog
-
-If another component should trigger the datepicker then WarpDatePickerType.DIALOG should be used. In this example, a WarpTextField is used as the trigger. 
-When there is a need to block some dates, use the selectableDates param. In this example only future dates are allowed.
-
-```kotlin example
-val futureDates = object : SelectableDates {
-    override fun isSelectableDate(utcTimeMillis: Long): Boolean {
-        return utcTimeMillis > System.currentTimeMillis()
-    }
-}
-
-var showDialog by remember { mutableStateOf(false) }
-WarpTextField(
-    modifier = Modifier.padding(horizontal = dimensions.space2),
-    value= dateString ?: "",
-    placeholderText = "Select date",
-    onValueChange = { formatter.formatDate(dateinMillis, Locale.getDefault()) },
-    trailingIcon = { WarpIcon(modifier = Modifier.clickable { showDialog = true }, icon = icons.calendar) }
-    )
-if (showDialog) {
-    WarpDatePicker(
-    type = WarpDatePickerType.DIALOG,
-    preselectedDateMillis = dateinMillis,
-    onDateSelected = {
-        dateinMillis = it
-        dateString = formatter.formatDate(dateinMillis, Locale.getDefault())
-        showDialog = false
-        },
-    onDismiss = { showDialog = !showDialog },
-    selectableDates = futureDates
-    )
-}
-```
 
 ### Legacy support
 Not supported
 
 ### Parameters
 
-<api-table type=android component="Datepicker" />
+<api-table type=android component="State" />
