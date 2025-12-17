@@ -1,5 +1,5 @@
 <script setup>
-import { withBase, useData } from 'vitepress';
+import { useData, withBase } from 'vitepress';
 import { computed, ref } from 'vue';
 import { CANONICAL_LABEL_LIST, getFrameworkLabel, isStatusAvailable, normalizeStatus } from './utils/frameworks.js';
 import { extractFrontmatter } from './utils/frontmatter.js';
@@ -12,9 +12,7 @@ const currentSection = computed(() => {
   return 'components';
 });
 
-const kindLabel = computed(() =>
-  currentSection.value === 'patterns' ? 'patterns' : 'components',
-);
+const kindLabel = computed(() => (currentSection.value === 'patterns' ? 'patterns' : 'components'));
 
 const mdModules = {
   ...import.meta.glob('../../../components/*/index.md', { eager: true }),
@@ -97,10 +95,7 @@ const filtered = computed(() => {
   return allItems.filter((it) => {
     if (it.section !== section) return false; // only show items for this section
 
-    const textOk =
-      !query ||
-      it.title.toLowerCase().includes(query) ||
-      it.description.toLowerCase().includes(query);
+    const textOk = !query || it.title.toLowerCase().includes(query) || it.description.toLowerCase().includes(query);
 
     const fwNames = it.frameworks.map((f) => f.name.toLowerCase());
     const fwOk = sel.length === 0 || sel.some((s) => fwNames.includes(s)); // OR
