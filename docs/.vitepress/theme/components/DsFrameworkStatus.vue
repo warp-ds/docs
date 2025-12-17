@@ -1,12 +1,7 @@
 <script setup>
-import { withBase, useData } from 'vitepress';
+import { useData, withBase } from 'vitepress';
 import { computed, onMounted, ref } from 'vue';
-import {
-  CANONICAL_LABEL_LIST,
-  getFrameworkLabel,
-  normalizeStatus,
-  SIMPLE_ICON_KEYS,
-} from './utils/frameworks.js';
+import { CANONICAL_LABEL_LIST, getFrameworkLabel, normalizeStatus, SIMPLE_ICON_KEYS } from './utils/frameworks.js';
 import { extractFrontmatter } from './utils/frontmatter.js';
 import { fetchIconPath } from './utils/icons.js';
 
@@ -21,9 +16,7 @@ const currentSection = computed(() => {
   return 'components';
 });
 
-const kindLabel = computed(() =>
-  currentSection.value === 'patterns' ? 'pattern' : 'component',
-);
+const kindLabel = computed(() => (currentSection.value === 'patterns' ? 'pattern' : 'component'));
 
 /* ────────────────────────────────────────────────────────────
    Read pages from components + patterns
@@ -61,8 +54,7 @@ const allRows = Object.entries(modules)
     for (const fw of fm.frameworks) {
       const name = getFrameworkLabel(fw?.name);
       if (!name || !CANONICAL.includes(name)) continue;
-      statuses[name] =
-        normalizeStatus(fw?.status, { allowEmpty: true }) || '';
+      statuses[name] = normalizeStatus(fw?.status, { allowEmpty: true }) || '';
     }
 
     // ensure all canonical frameworks exist
@@ -82,9 +74,7 @@ const allRows = Object.entries(modules)
 /* ────────────────────────────────────────────────────────────
    Filter rows + counts for *current* section
    ──────────────────────────────────────────────────────────── */
-const rows = computed(() =>
-  allRows.filter((r) => r.section === currentSection.value),
-);
+const rows = computed(() => allRows.filter((r) => r.section === currentSection.value));
 
 const counts = computed(() => {
   const out = {};
