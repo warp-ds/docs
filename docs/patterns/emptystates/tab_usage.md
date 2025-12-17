@@ -8,8 +8,8 @@ Empty states can occur for different reasons. This component includes variants f
 - Error states
 
 **Don't use for**
-- Global system messaging (e.g., system maintenance coming up). Use the [Alert](../components/alert/index.md) instead.
-- Feedback messaging (e.g., address saved to favourites). Use the [Toast](../components/toast/index.md) instead.
+- Global system messaging (e.g., system maintenance coming up). Use the [Alert](/components/alert/index.md) instead.
+- Feedback messaging (e.g., address saved to favourites). Use the [Toast](/components/toast/index.md) instead.
 
 ## Types of empty states
 
