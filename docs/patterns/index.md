@@ -4,6 +4,6 @@ editLink: false
 ---
 
 # Patterns overview
-Explore All WARP Patterns Across Figma, Elements, iOS, and Android.
+Patterns are guidelines for solving interactions and recurring user tasks. They help create recognition and familiarity in the user experience.
 
 <DsComponentOverview />
