@@ -56,7 +56,7 @@ const cardData = {
       title: 'Patterns',
       description: 'Guidelines and recommendations for solving recurring user tasks.',
       href: 'patterns',
-      image: { component: PatternsSVG, alt: 'Icon representing components.' },
+      image: { component: PatternsSVG, alt: 'Icon representing patterns.' },
     },
   ],
 };
