@@ -44,19 +44,19 @@ const cardData = {
       title: 'Foundations',
       description: 'Guidelines for colour, typography, icons, illustrations, and more.',
       href: 'foundations',
-      image: { component: FoundationsSVG, alt: 'Icon representing foundations.' },
+      image: { component: FoundationsSVG, alt: 'Illustration representing design system foundations (atoms).' },
     },
     {
       title: 'Components',
       description: 'Elements that can be combined to build great experiences.',
       href: 'components',
-      image: { component: CompSVG, alt: 'Icon representing components.' },
+      image: { component: CompSVG, alt: 'Illustration representing design system components (UI elements).' },
     },
     {
       title: 'Patterns',
       description: 'Guidelines and recommendations for solving recurring user tasks.',
       href: 'patterns',
-      image: { component: PatternsSVG, alt: 'Icon representing patterns.' },
+      image: { component: PatternsSVG, alt: 'Illustration representing design system patterns' },
     },
   ],
 };
