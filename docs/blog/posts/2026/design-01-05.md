@@ -6,9 +6,9 @@ Warp Figma Component Library updates
 
 ---
 
-**Happy New Year!** 🎉
+## **Happy New Year!** 🎉
 
-We're starting off 2026 with several updates to our Warp Components Figma library:
+We're starting off 2026 with several updates to our **Warp Components Figma library**:
 
 ### Library navigation improvements
 
@@ -17,6 +17,8 @@ We've added new "Patterns" and "Vend Assets" dividers added to the Figma page li
 ![Screenshot showing the Figma page list in the Warp Components library file.](/whats-new/2026/design-01-05-1.svg)
 
 ### New Empty states pattern released
+
+[❖ Patterns / Empty states](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=33202-7397)
 
 Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
 
@@ -52,6 +54,8 @@ From Pthaloblue-200 to **Pthaloblue-100**:
 
 ### New Vend tagline component
 
+[❖ Vend assets / Vend tagline](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=33437-2494)
+
 The tagline component endorses Vend and helps build brand awareness at key user journey's touch points.
 
 Available variants:
@@ -63,6 +67,8 @@ Available variants:
 ![Side-by-side comparison of the Vend tagline component showing language and orientation variants in both light and dark mode.](/whats-new/2026/design-01-05-4.svg)
 
 ### New Vend data controller banner component
+
+[❖ Vend assets / Data controller banner](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=33672-2841)
 
 This banner informs users that Vend is the data controller responsible for processing the data collected on our websites. **Note: This is a web-only asset.**
 
