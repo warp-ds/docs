@@ -191,6 +191,7 @@ html.dark body {
 /* make the border stand out a touch more */
 .vp-doc h2 {
   border-top-width: 0px;
+  margin: 24px 0 16px;
 }
 /* wasn't enough breathing room here, add some more */
 .vp-doc h4 {
