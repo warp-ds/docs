@@ -1203,18 +1203,14 @@ export default defineConfig({
             {
               text: 'Alert',
               collapsed: true,
-              link: '/components/alert/',
               items: [
                 {
+                  text: 'Overview',
+                  link: '/components/alert/index',
+                },
+                {
                   text: 'Frameworks',
-                  collapsed: true,
-                  items: [
-                    { text: 'React', link: '/components/alert/frameworks/react' },
-                    { text: 'Vue', link: '/components/alert/frameworks/vue' },
-                    { text: 'Web', link: '/components/alert/frameworks/elements' },
-                    { text: 'Android', link: '/components/alert/frameworks/android' },
-                    { text: 'iOS', link: '/components/alert/frameworks/ios' },
-                  ],
+                  link: '/components/alert/frameworks/android',
                 },
               ],
             },
