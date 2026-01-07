@@ -1782,6 +1782,28 @@ export const elements = {
       ['flat', 'boolean', '', 'Removes box shadow around card'],
     ],
   },
+  DatePicker: {
+    required: [
+      ['label', 'string', '', 'Label shown on the input of the datepicker.'],
+    ],
+    props: [
+      ['value', 'string', '', 'The selected date as a string'],
+      ['name', 'string', '', 'Sets the form field name when used inside a `<form>`.'],
+      ['lang', 'string', '', 'Controls the locale used by the calendar.'],
+      ['header-format', 'string', '', 'Controls the format shown in the calendar header (month + year).'],
+      ['weekday-format', 'string', '', 'Controls the weekday labels shown above the grid.'],
+      ['day-format', 'string', '', 'Controls the date format used for screen readers when announcing a day cell (aria-label).'],
+      [
+        'isDayDisabled',
+        '(day: Date) => boolean',
+        '',
+        'Lets you disable specific dates in the calendar UI. Property only.',
+      ],
+    ],
+    events: [
+      ['@change', 'Fired when the selected date is committed, either by typing in the input and then shifting focus away from the input field or by selecting a date from the calendar.', ''],
+    ],
+  },
   Expandable: {
     required: [],
     props: [
