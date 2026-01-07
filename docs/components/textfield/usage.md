@@ -13,8 +13,8 @@ A text field is a single-line input component used for entering and editing text
 
 ### When not to use
 
-- **Multi-line input is needed**: use [Text area](../textarea/index.md) component.
-- **Selecting from fixed options**: use [Select](../select/index.md) component.
+- **Multi-line input is needed**: use [Text area](../textarea/overview.md) component.
+- **Selecting from fixed options**: use [Select](../select/overview.md) component.
 - **The content is fixed or system-generated**: use a Read-only state.
 
 ## Behaviour

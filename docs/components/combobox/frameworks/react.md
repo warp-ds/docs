@@ -273,7 +273,7 @@ function Example() {
 ```
 
 *Note* that when using the Affix component without a `label` you should specify an `aria-label`.
-See props at the bottom of this page. See [TextField](/components/textfield/) for more details on Affix.
+See props at the bottom of this page. See [TextField](/components/textfield/overview.md) for more details on Affix.
 
 #### Affix props
 

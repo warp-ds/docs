@@ -71,7 +71,7 @@ For **lines**, adding a focus border for the whole line will become messy. In st
 Information about which components and tokens to use for interactive graphs and charts. 
 
 ### Tooltip
-For tooltip, use the WARP [Tooltip](/components/tooltip/) component.
+For tooltip, use the WARP [Tooltip](/components/tooltip/overview.md) component.
 
 ### Highlight color
 Use the `highlight` color on hover, touch/tap and keyboard focus.

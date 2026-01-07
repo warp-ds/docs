@@ -129,7 +129,7 @@ You should follow these semantics, but styling is up to you.
 
 ### Toggles inside of Cards
 
-Using Toggles([Radios](/components/radio/) or [Checkboxes](/components/checkbox/)) inside of cards has the limitation of only being able to pass forward a label. If you wish to further enhance the look and feel of these you must use the DeadToggle helper component, which we cover a bit further down.
+Using Toggles([Radios](/components/radio/overview.md) or [Checkboxes](/components/checkbox/overview.md)) inside of cards has the limitation of only being able to pass forward a label. If you wish to further enhance the look and feel of these you must use the DeadToggle helper component, which we cover a bit further down.
 
 ```jsx example
 function Example() {

@@ -16,8 +16,8 @@ Toasts are brief user feedback messages that overlay content.
 A toast is used for global notifications of small importance that are not critical and do not need to interrupt the user’s flow. It can be triggered by either a system event or user interaction.
 
 ### When not to use
-- **For immediate attention:** If the notification requires users’ attention right away, consider using an [Alert](../alert/index.md) or [Modal](../modal/index.md) instead.
-- **For long-term global information:** If the notification conveys information that is relevant to all users or a group of users over a longer period, consider using an [Alert](../alert/index.md) instead.
+- **For immediate attention:** If the notification requires users’ attention right away, consider using an [Alert](../alert/overview.md) or [Modal](../modal/overview.md) instead.
+- **For long-term global information:** If the notification conveys information that is relevant to all users or a group of users over a longer period, consider using an [Alert](../alert/overview.md) instead.
 
 ## Placement
 Toast notifications are positioned at the bottom centre of the screen, 16px above the viewport edge. They overlay the content without shifting the layout and remain visible even while scrolling.

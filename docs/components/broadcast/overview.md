@@ -10,6 +10,6 @@ Uses toast apis under the hood.
 
 ## Example
 
-See the [toast component](/components/toast/) for examples, as `broadcast` utilizes it to display messages.
+See the [toast component](/components/toast/overview.md) for examples, as `broadcast` utilizes it to display messages.
 
 <component-questions />
