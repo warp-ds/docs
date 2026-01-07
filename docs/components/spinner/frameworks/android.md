@@ -1,6 +1,9 @@
-# Spinner
+# Spinner - Frameworks
+A spinner informs users about the loading of content.
 
 ## Android
+
+<!-- Insert framework tabs here !-->
 
 ### Syntax
 

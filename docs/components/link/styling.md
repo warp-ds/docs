@@ -1,4 +1,5 @@
-# Link
+# Link - Styling
+Link component to use when creating links that look like buttons.
 
 ## Layout and spacing
 
@@ -44,3 +45,4 @@ There are four sizes available for links: preamble, body, caption and detail. Si
 | Caption Link      | Semantic/Typography/Caption        | 14px          | 18px            | 16px          | <img src="/components/link/caption-link.svg" />   |
 | Detail Link       | Semantic/Typography/Detail         | 12px          | 16px            | –             | <img src="/components/link/detail-link.svg" />        |
 
+<component-questions />

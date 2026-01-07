@@ -1,6 +1,15 @@
-# Divider
+# Divider - Frameworks
+A divider creates separation of content.
 
 ## iOS
+
+<FrameworkTabs 
+  :tabs="[
+    { name: 'Android', url: './android' },
+    { name: 'iOS', url: './ios' }
+  ]" 
+  activeTab="iOS" 
+/>
 
 ### Syntax
 

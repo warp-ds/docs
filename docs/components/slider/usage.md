@@ -1,6 +1,5 @@
-# Slider
-
-## Usage
+# Slider - Usage
+Sliders allow users to adjust a numeric value within a given range.
 
 ### Guidelines
 
@@ -51,3 +50,5 @@ Avoid placing them in crowded areas or too far from their context, as this can m
 ::: image-block
 ![Examples from FINN and Blocket.](/components/rangeslider/usage-placement.svg)
 :::
+
+<component-questions />

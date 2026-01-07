@@ -1,4 +1,4 @@
-# Badge
+# Badge - Overview
 
 Badges are small, contextual elements used to display concise, informative labels. They highlight relevant information such as statuses, categories, counts, roles, or activity indicators, helping users quickly identify and differentiate items at a glance.
 
@@ -114,3 +114,5 @@ Related components: [Pill](../pill/index.md)
 **3. Label:** Communicates what is being highlighted.
 
 <br>
+
+<component-questions />

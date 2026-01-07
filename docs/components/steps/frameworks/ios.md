@@ -1,6 +1,9 @@
-# Steps
+# Steps - Frameworks
+The steps component is built to handle user journeys, showing progress.
 
 ## iOS
+
+<!-- Insert framework tabs here !-->
 
 ### Syntax
 A step indicator displays a user’s progress through a set of steps, guiding toward the completion of a specified process.

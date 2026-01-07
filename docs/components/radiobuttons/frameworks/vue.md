@@ -1,6 +1,15 @@
-# Radio buttons
+# Radio buttons - Frameworks
+Radio buttons allow users to select a single option from a button group.
 
 ## Vue
+
+<FrameworkTabs 
+  :tabs="[
+    { name: 'Vue', url: './vue' },
+    { name: 'React', url: './react' },
+  ]" 
+  activeTab="Vue" 
+/>
 
 ### Import
 

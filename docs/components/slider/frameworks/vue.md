@@ -1,6 +1,9 @@
-# Slider
+# Slider - Frameworks
+Sliders allow users to adjust a numeric value within a given range.
 
 ## Vue
+
+<!-- Insert framework tabs here !-->
 
 ### Import
 

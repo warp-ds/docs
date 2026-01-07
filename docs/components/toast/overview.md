@@ -1,3 +1,7 @@
+# Toast - Overview
+Toasts are brief user feedback messages that overlay content.
+
+## General
 A toast overlay is used to provide system status notifications, such as error, completion, and loading progress messages. The icons and colours are available, which must be selectively used according to the component's attention level.
 
 ## Variants
@@ -55,3 +59,5 @@ The positive toast uses the green semantic colour and includes a checkmark icon 
 2. Icon
 3. Text
 4. Close button (optional)
+
+<component-questions />

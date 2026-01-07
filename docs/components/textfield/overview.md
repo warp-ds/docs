@@ -1,3 +1,7 @@
+# Text field - Overview
+A text field is a single-line input component used for entering and editing textual data.
+
+## General
 It supports a wide range of behaviours, labels, icons, prefixes/suffixes, tooltips, and error handling to support various use cases and accessibility needs. Text fields are a fundamental element of forms and search experiences across the product ecosystem.
 
 Related components: [Text area](../textarea/index.md), [Select](../select/index.md).
@@ -110,3 +114,5 @@ Related components: [Text area](../textarea/index.md), [Select](../select/index.
 8. Suffix (optional)
 9. Prefix (optional)
 10. Help text (optional)
+
+<component-questions />

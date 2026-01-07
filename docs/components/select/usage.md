@@ -1,6 +1,5 @@
-# Select
-
-## Usage
+# Select - Usage
+A select is a form input component that lets users choose one option from a predefined list.
 
 ## Guidelines
 
@@ -137,3 +136,5 @@ All interactive elements inside the Select, such as the dropdown icon, optional 
   Content is visible but not selectable.
   </div>
 </div>
+
+<component-questions />

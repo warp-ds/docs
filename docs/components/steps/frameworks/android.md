@@ -1,6 +1,9 @@
-# Steps
+# Steps - Frameworks
+The steps component is built to handle user journeys, showing progress.
 
 ## Android
+
+<!-- Insert framework tabs here !-->
 
 ### Syntax
 Vertical and Horizontal versions are separate implementations in Compose so choose accordingly:

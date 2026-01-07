@@ -1,6 +1,9 @@
-# Steps
+# Steps - Frameworks
+The steps component is built to handle user journeys, showing progress.
 
 ## Vue
+
+<!-- Insert framework tabs here !-->
 
 ### Import
 

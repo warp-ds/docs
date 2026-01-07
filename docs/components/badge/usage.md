@@ -1,19 +1,23 @@
-# Badge
+# Badge - Usage
 
-## Usage
+Badges are small, contextual elements used to display concise, informative labels. They highlight relevant information such as statuses, categories, counts, roles, or activity indicators, helping users quickly identify and differentiate items at a glance.
 
-### Guidelines
+Visually styled and colour-coded to indicate contextual metadata.
+
+Related components: [Pill](../pill/index.md)
+
+## Guidelines
 
 - Badges are used to display small but yet important pieces of information in list views, cards, or dashboards.
 - They should contain clear, easy-to-understand, and descriptive text, paired with intentional colour choices that reinforce their meaning.
 - Use badges in a consistent way across your product to help users become familiar with their meaning.
 - Use badges consistently across your product to help users quickly recognise and understand their purpose.
 
-### When to use
+## When to use
 
 - Use badges to highlight statuses, categories, or important updates.
 
-### When not to use
+## When not to use
 
 - Don't use badges for large amounts of text, such as long descriptions, or critical information that users must engage with directly.
 - Avoid using multiple badges in one place, which can clutter the UI and overwhelm users.

@@ -1,6 +1,5 @@
-# Slider
-
-## Accessibility
+# Slider - Accessibility
+Sliders allow users to adjust a numeric value within a given range.
 
 The slider component has been designed with accessibility in mind, providing range selection functionality that is fully keyboard accessible and screen reader compatible.
 
@@ -24,3 +23,5 @@ The slider must be operable with screen reader, which means that:
 - Identify what type of slider it is (single slider).
 - Users should be able to interact with it via keyboard navigation.
 - Clearly communicate the purpose of each element within the slider.
+
+<component-questions />

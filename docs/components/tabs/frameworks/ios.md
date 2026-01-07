@@ -1,6 +1,9 @@
-# Tabs
+# Tabs - Frameworks
+Tabs are used to group content, allowing users to navigate views without.
 
 ## iOS
+
+<!-- Insert framework tabs here !-->
 
 ### Syntax
 

@@ -1,4 +1,5 @@
-# Range slider
+# Range slider - Usage
+Range sliders allow users to adjust minimum and maximum numeric values within a given range.
 
 ## Guidelines
 
@@ -54,3 +55,5 @@ Avoid placing them in crowded areas or too far from their context, as this can m
 ::: image-block
 ![Examples from FINN and Blocket.](/components/rangeslider/usage-placement.svg)
 :::
+
+<component-questions />
