@@ -4,7 +4,6 @@ import { basename } from 'node:path';
 // Special case display names
 const specialNames = {
   ios: 'iOS',
-  macos: 'macOS',
 };
 
 /**

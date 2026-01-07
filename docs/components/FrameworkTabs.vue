@@ -2,12 +2,12 @@
   <nav ref="tabsRef" class="framework-tabs" role="tablist" aria-label="Framework selection">
     <a
       v-for="tab in tabs"
-      :key="tab.url"
-      :href="tab.url"
+      :key="tab.file"
+      :href="'./' + tab.file"
       class="framework-tab"
-      :class="{ active: isActive(tab.name) }"
+      :class="{ active: tab.file === currentFramework }"
       role="tab"
-      :aria-selected="isActive(tab.name)"
+      :aria-selected="tab.file === currentFramework"
     >
       {{ tab.name }}
     </a>
@@ -15,84 +15,67 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue';
+import { useRoute } from 'vitepress';
+import { computed, onMounted, ref } from 'vue';
+import manifest from '../.vitepress/frameworks-manifest.json';
 
 export default {
-  props: {
-    /**
-     * Array of tab objects with `name` and `url` properties
-     * Example: [{ name: 'Vue', url: './vue' }, { name: 'React', url: './react' }]
-     */
-    tabs: {
-      type: Array,
-      required: true,
-      validator: (tabs) => tabs.every((tab) => tab.name && tab.url),
-    },
-    /**
-     * Optional: The name of the currently active tab.
-     * If not provided, it will be auto-detected from the first H2 heading on the page.
-     */
-    activeTab: {
-      type: String,
-      default: '',
-    },
-    /**
-     * Whether to hide the H2 heading that the active tab was detected from.
-     * Useful when you want VitePress search to work but don't want duplicate headings.
-     */
-    hideHeading: {
-      type: Boolean,
-      default: true,
-    },
-  },
-  setup(props) {
-    const detectedTab = ref('');
+  setup() {
+    const route = useRoute();
     const tabsRef = ref(null);
 
+    // Parse route to get component name and current framework
+    // Route path looks like: /components/alert/frameworks/vue
+    const pathSegments = computed(() => {
+      const path = route.path.replace(/\.html$/, '');
+      return path.split('/').filter(Boolean);
+    });
+
+    const componentName = computed(() => {
+      // Path: components/alert/frameworks/vue -> alert is at index 1
+      const idx = pathSegments.value.indexOf('components');
+      if (idx !== -1 && pathSegments.value[idx + 1]) {
+        return pathSegments.value[idx + 1];
+      }
+      return null;
+    });
+
+    const currentFramework = computed(() => {
+      // Last segment is the framework
+      return pathSegments.value[pathSegments.value.length - 1] || null;
+    });
+
+    const tabs = computed(() => {
+      if (!componentName.value) return [];
+      return manifest[componentName.value] || [];
+    });
+
     onMounted(() => {
-      // Find the H2 element that is immediately before this component
+      // Hide the preceding H2 heading (keeps it in DOM for VitePress search)
       const tabsEl = tabsRef.value;
       if (!tabsEl) return;
 
-      // Walk backwards through siblings to find the preceding H2
       let sibling = tabsEl.previousElementSibling;
-      let h2 = null;
-
       while (sibling) {
         if (sibling.tagName === 'H2') {
-          h2 = sibling;
+          sibling.style.position = 'absolute';
+          sibling.style.width = '1px';
+          sibling.style.height = '1px';
+          sibling.style.padding = '0';
+          sibling.style.margin = '-1px';
+          sibling.style.overflow = 'hidden';
+          sibling.style.clip = 'rect(0, 0, 0, 0)';
+          sibling.style.whiteSpace = 'nowrap';
+          sibling.style.border = '0';
           break;
         }
         sibling = sibling.previousElementSibling;
       }
-
-      if (h2) {
-        if (!props.activeTab) {
-          detectedTab.value = h2.textContent?.trim() || '';
-        }
-        // Hide the H2 if requested (keeps it in DOM for VitePress search)
-        if (props.hideHeading) {
-          h2.style.position = 'absolute';
-          h2.style.width = '1px';
-          h2.style.height = '1px';
-          h2.style.padding = '0';
-          h2.style.margin = '-1px';
-          h2.style.overflow = 'hidden';
-          h2.style.clip = 'rect(0, 0, 0, 0)';
-          h2.style.whiteSpace = 'nowrap';
-          h2.style.border = '0';
-        }
-      }
     });
 
-    const isActive = (tabName) => {
-      const active = props.activeTab || detectedTab.value;
-      return tabName.toLowerCase() === active.toLowerCase();
-    };
-
     return {
-      detectedTab,
-      isActive,
+      tabs,
+      currentFramework,
       tabsRef,
     };
   },
