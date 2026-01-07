@@ -1,6 +1,5 @@
-# Modal
-
-## Usage
+# Modal - Usage
+A modal is a focused dialog that temporarily blocks the interface to request a specific decision or input. Because it pauses the experience, use it sparingly for high-priority tasks.
 
 ## What are modals?
 Modals is a pattern where we display a view on top of the current page. The most common use of modals is where users' full attention is required for a specific task.
@@ -66,3 +65,5 @@ Consider displaying an alert if users have unsaved information in the modal. Exp
 
 ### Support ‘drag down’ gesture
 Our modals always supports “drag down”. This makes it easier for left handed users to close the modals, without having to stretch their thumb for the top right close button.
+
+<component-questions />

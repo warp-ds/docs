@@ -1,4 +1,5 @@
-# Icons
+# Icons - Styling
+Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 ## Scalability
 
@@ -29,3 +30,5 @@ If custom sizing is required, designers must use Figma’s scaling tool to maint
 3. Change scale dimensions in the right side menu.
 
 This method ensures stroke width scales correctly with the icon’s size.
+
+<component-questions />

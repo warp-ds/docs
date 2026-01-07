@@ -1,6 +1,9 @@
-# Text field
+# Text field - Frameworks
+A text field is a single-line input component used for entering and editing textual data.
 
 ## Vue
+
+<!-- Insert framework tabs here !-->
 
 ### Import
 

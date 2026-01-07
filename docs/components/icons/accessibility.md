@@ -1,4 +1,5 @@
-# Icons
+# Icons - Accessibility
+Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 ## Alt texts
 
@@ -11,3 +12,5 @@ For example: Instead of using "AgricultureMachine", the alt text is now simply "
 :::
 
 This approach ensures that users relying on assistive technologies can easily understand the visual content and its purpose.
+
+<component-questions />

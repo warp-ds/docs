@@ -1,6 +1,16 @@
-# Card
+# Card - Frameworks
+Card is an interactive layout component to display information.
 
 ## Elements
+
+<FrameworkTabs 
+  :tabs="[
+    { name: 'Elements', url: './elements' },
+    { name: 'Vue', url: './vue' },
+    { name: 'React', url: './react' },
+  ]" 
+  activeTab="Elements" 
+/>
 
 ### Syntax
 

@@ -1,6 +1,9 @@
-# Text area
+# Text area - Overview
+A text area allows users to input extended text content that covers multiple lines.
 
 ## Vue
+
+<!-- Insert framework tabs here !-->
 
 ### Import
 

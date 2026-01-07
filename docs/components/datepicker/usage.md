@@ -1,4 +1,5 @@
-# Date picker
+# Date picker - Usage
+A date picker allows the user to select a specific calendar date.
 
 ## Behavior
 * The date picker popover is bound to a text field. The field is split into three editable segments: date, month, year.

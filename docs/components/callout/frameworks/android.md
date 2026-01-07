@@ -1,6 +1,19 @@
-# Callout
+# Callout - Frameworks
+Callouts are snippets of information, drawing attention to important content.
 
 ## Android
+
+<FrameworkTabs 
+  :tabs="[
+    { name: 'Elements', url: './elements' },
+    { name: 'Vue', url: './vue' },
+    { name: 'React', url: './react' },
+    { name: 'Android', url: './android' },
+    { name: 'iOS', url: './ios' }
+  ]" 
+  activeTab="Android" 
+/>
+
 ![callout on android](callout-android.png)
 
 ### Syntax

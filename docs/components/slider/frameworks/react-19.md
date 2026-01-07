@@ -1,6 +1,9 @@
-# Slider
+# Slider - Frameworks
+Sliders allow users to adjust a numeric value within a given range.
 
-## React-19
+## React 19
+
+<!-- Insert framework tabs here !-->
 
 ### Import
 

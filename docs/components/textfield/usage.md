@@ -1,3 +1,6 @@
+# Text field - Usage
+A text field is a single-line input component used for entering and editing textual data.
+
 ## Guidelines
 
 ### When to use
@@ -147,3 +150,5 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   Input is visible but not editable.
   </div>
 </div>
+
+<component-questions />

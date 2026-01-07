@@ -1,6 +1,9 @@
-# Switch
+# Switch - Usage
+The Switch component allows users to toggle between two states.
 
 ## Vue
+
+<!-- Insert framework tabs here !-->
 
 ### Import
 

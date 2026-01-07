@@ -1,4 +1,5 @@
-# Link
+# Link - Usage
+Link component to use when creating links that look like buttons.
 
 ## Best practices / usage guidelines
 
@@ -87,3 +88,5 @@ Inline links usually sit within a sentence or paragraph, while standalone links 
 
 ### Content guidelines
 “Hyperlinks are the magical portals of the internet that teleport you from one website to another with a simple click.” [Read more about hyperlinks and writing best practices.](https://www.astro-contentguide.com/05b2d7be6/p/370a5d-hyperlinks)
+
+<component-questions />

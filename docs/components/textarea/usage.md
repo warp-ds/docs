@@ -1,4 +1,5 @@
-# Text area
+# Text area - Usage
+A text area allows users to input extended text content that covers multiple lines.
 
 ## Guidelines
 
@@ -147,3 +148,5 @@ Visit our Language Specialists [Text input](https://www.astro-contentguide.com/0
   Input is visible but not editable.
   </div>
 </div>
+
+<component-questions />

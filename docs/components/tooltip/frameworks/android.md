@@ -1,6 +1,9 @@
-# Tooltip
+# Tooltip - Frameworks
+A tooltip is a message box that is displayed when a user hovers over or gives focus to a UI element.
 
 ## Android
+
+<!-- Insert framework tabs here !-->
 
 ### Syntax
 

@@ -1,6 +1,9 @@
-# Tabs
+# Tabs - Frameworks
+Tabs are used to group content, allowing users to navigate views without.
 
 ## React
+
+<!-- Insert framework tabs here !-->
 
 ### Import
 

@@ -1,3 +1,6 @@
+# Slider - Overview
+Sliders allow users to adjust a numeric value within a given range.
+
 ## Example
 
 <ThemeSwitcher />
@@ -30,3 +33,5 @@ Sliders are available in two different variants: Single (read docs below) and Ra
 **7. Maximum value**: Indicates the highest selectable value and visually defines the end of the range.
 
 **8. Number input**: Allows a value to be entered manually within the slider’s range.
+
+<component-questions />

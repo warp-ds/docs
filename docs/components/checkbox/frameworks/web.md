@@ -1,6 +1,18 @@
-# Checkbox
+# Checkbox - Frameworks
+Checkboxes allow users to select one or more options from a number of choices.
 
 ## Web
+
+<FrameworkTabs 
+  :tabs="[
+    { name: 'Vue', url: './vue' },
+    { name: 'React', url: './react' },
+    { name: 'Android', url: './android' },
+    { name: 'iOS', url: './ios' },
+    { name: 'Web', url: './web' }
+  ]" 
+  activeTab="Web" 
+/>
 
 <ThemeSwitcher />
 

@@ -1,6 +1,14 @@
-# Button Pill
+# Button Pill - Frameworks
+Button pill allows users to toggle an element to their favourites.
 
 ## iOS
+
+<FrameworkTabs 
+  :tabs="[
+    { name: 'iOS', url: './ios' }
+  ]" 
+  activeTab="iOS" 
+/>
 
 ### Syntax
 

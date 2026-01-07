@@ -1,6 +1,9 @@
-# Spinner
+# Spinner - Frameworks
+A spinner informs users about the loading of content.
 
 ## iOS
+
+<!-- Insert framework tabs here !-->
 
 ### Syntax
 

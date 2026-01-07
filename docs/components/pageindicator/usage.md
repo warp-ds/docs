@@ -1,6 +1,7 @@
-# Page indicator
+# Page indicator - Usage
+A page indicator shows the total amount of pages (or images) and the current page using dots.
 
-## Usage
+## General
 
 Page indicators are usually used in image carousels, and supported by carousel controls that give the user power to navigate through the carousel of images.
 
@@ -45,3 +46,5 @@ Page indicators are usually used in image carousels, and supported by carousel c
 
 The width is automatically adjusted according to the numbers of dots.
 The height of the component is fixed and should not be changed.
+
+<component-questions />
