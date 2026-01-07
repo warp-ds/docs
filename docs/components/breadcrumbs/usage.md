@@ -1,6 +1,8 @@
 # Breadcrumbs - Usage
 Breadcrumbs show users their current location relative to the information architecture and enable them to quickly move up to a parent level or previous step. 
 
+<ComponentsStatus />
+
 ## Usage guidelines
 Breadcrumbs are effective in products that have a large amount of content organised in a hierarchy of more than two levels. They use little space but still provide context for the user’s place in the navigation hierarchy. 
 

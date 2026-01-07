@@ -1,6 +1,8 @@
 # Slider - Overview
 Sliders allow users to adjust a numeric value within a given range.
 
+<ComponentsStatus />
+
 ## Example
 
 <ThemeSwitcher />

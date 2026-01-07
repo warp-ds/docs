@@ -5,6 +5,8 @@ The slider component has been designed with accessibility in mind, providing ran
 
 The number input value and slider position should always be in sync. An update to either causes the other to update.
 
+<ComponentsStatus />
+
 ### Mouse
 
 - Dragging the handles adjusts the selectable value.

@@ -1,6 +1,8 @@
 # Slider - Usage
 Sliders allow users to adjust a numeric value within a given range.
 
+<ComponentsStatus />
+
 ### Guidelines
 
 - Sliders are best suited for cases where people need to quickly set a value within a known range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.

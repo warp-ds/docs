@@ -6,6 +6,8 @@ Visually styled and colour-coded to indicate contextual metadata.
 
 Related components: [Pill](../pill/index.md)
 
+<ComponentsStatus />
+
 ## Example
 <ThemeSwitcher />
 <badge-example />

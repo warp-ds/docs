@@ -1,9 +1,11 @@
 # Text - Overview
 Pre-defined styles provide a font and size.
 
+<ComponentsStatus />
+
 ## Android
 
-<!-- Insert framework tabs here !-->
+<FrameworkTabs />
 
 ### Syntax
 

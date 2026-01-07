@@ -1,9 +1,11 @@
 # Text area - Overview
 A text area allows users to input extended text content that covers multiple lines.
 
+<ComponentsStatus />
+
 ## React
 
-<!-- Insert framework tabs here !-->
+<FrameworkTabs />
 
 ### Import
 

@@ -582,5 +582,11 @@
       "name": "Vue",
       "file": "vue"
     }
+  ],
+  "utilities": [
+    {
+      "name": "Vue",
+      "file": "vue"
+    }
   ]
 }

@@ -1,17 +1,11 @@
 # Radio - Frameworks
 Radios allow users to select a single option from a list.
 
+<ComponentsStatus />
+
 ## iOS
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Vue', url: './vue' },
-    { name: 'React', url: './react' },
-    { name: 'Android', url: './android' },
-    { name: 'iOS', url: './ios' }
-  ]" 
-  activeTab="iOS" 
-/>
+<FrameworkTabs />
 
 ### Syntax
 

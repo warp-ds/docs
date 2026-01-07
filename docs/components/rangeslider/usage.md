@@ -1,6 +1,8 @@
 # Range slider - Usage
 Range sliders allow users to adjust minimum and maximum numeric values within a given range.
 
+<ComponentsStatus />
+
 ## Guidelines
 
 - Sliders are best suited for cases where people need to quickly set a value within a known range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.

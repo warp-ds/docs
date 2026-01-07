@@ -1,6 +1,8 @@
 # Icons - Accessibility
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
+<ComponentsStatus />
+
 ## Alt texts
 
 To support screen readers and improve accessibility, all icons include meaningful and concise alt text. We’ve refined our alt text descriptions to focus on what the icon visually depicts, rather than abstract or technical labels.

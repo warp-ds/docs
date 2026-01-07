@@ -1,6 +1,8 @@
 # Icons - Styling
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
+<ComponentsStatus />
+
 ## Scalability
 
 Our icon set is fully scalable, with stroke widths that increase proportionally with size. This ensures a clean, balanced appearance at all resolutions:

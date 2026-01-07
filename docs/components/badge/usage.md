@@ -6,6 +6,8 @@ Visually styled and colour-coded to indicate contextual metadata.
 
 Related components: [Pill](../pill/index.md)
 
+<ComponentsStatus />
+
 ## Guidelines
 
 - Badges are used to display small but yet important pieces of information in list views, cards, or dashboards.

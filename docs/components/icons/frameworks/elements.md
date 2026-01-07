@@ -1,15 +1,11 @@
 # Icons - Frameworks
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
+<ComponentsStatus />
+
 ## Elements
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Elements', url: './elements' },
-    { name: 'React 19', url: './react-19' },
-  ]" 
-  activeTab="Elements" 
-/>
+<FrameworkTabs />
 
 <icon-code-example />
 

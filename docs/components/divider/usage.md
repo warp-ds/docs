@@ -1,6 +1,8 @@
 # Divider - Usage
 A divider creates separation of content.
 
+<ComponentsStatus />
+
 ## General
 A subtle line used to separate content horizontally, or vertically, into sections, making page content more comprehensive.
 

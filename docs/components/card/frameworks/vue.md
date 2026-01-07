@@ -1,16 +1,11 @@
 # Card - Frameworks
 Card is an interactive layout component to display information.
 
+<ComponentsStatus />
+
 ## Vue
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Elements', url: './elements' },
-    { name: 'Vue', url: './vue' },
-    { name: 'React', url: './react' },
-  ]" 
-  activeTab="Vue" 
-/>
+<FrameworkTabs />
 
 ### Import
 

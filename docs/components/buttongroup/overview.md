@@ -1,6 +1,8 @@
 # Button group - Overview
 Button group is a grouping concept for buttons.
 
+<ComponentsStatus />
+
 ## Example
 
 <ThemeSwitcher />

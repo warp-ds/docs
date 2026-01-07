@@ -1,6 +1,8 @@
 # Tabs - Accessibility
 Tabs are used to group content, allowing users to navigate views without.
 
+<ComponentsStatus />
+
 ## General
 Focus management and ARIA attributes are handled automatically.
 

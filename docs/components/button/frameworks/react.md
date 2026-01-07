@@ -1,19 +1,11 @@
 # Button - Frameworks
 Buttons initiate events or actions within a page, informing users of what to expect next.
 
+<ComponentsStatus />
+
 ## React
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Elements', url: './elements' },
-    { name: 'Vue', url: './vue' },
-    { name: 'React', url: './react' },
-    { name: 'React 19', url: './react-19' },
-    { name: 'Android', url: './android' },
-    { name: 'iOS', url: './ios' }
-  ]" 
-  activeTab="React" 
-/>
+<FrameworkTabs />
 
 ### Import
 

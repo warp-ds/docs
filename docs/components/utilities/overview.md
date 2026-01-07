@@ -1,11 +1,7 @@
 # Utilities - overview
 These utility components are available to make some layout components interactive.
 
-<script setup>
-  import Vue from './frameworks/vue.md';
-</script>
-
-<components-status vue='released' />
+<ComponentsStatus />
 
 ## Example
 

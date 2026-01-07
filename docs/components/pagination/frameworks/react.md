@@ -1,14 +1,11 @@
 # Pagination - Frameworks
 Pagination is used to split up long datasets into multiple 'pages'.
 
+<ComponentsStatus />
+
 ## React
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'React', url: './react' },
-  ]" 
-  activeTab="React" 
-/>
+<FrameworkTabs />
 
 ### Import
 

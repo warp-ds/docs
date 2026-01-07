@@ -1,6 +1,8 @@
 # Range slider - Overview
 Range sliders allow users to adjust minimum and maximum numeric values within a given range.
 
+<ComponentsStatus />
+
 ## Examples
 <ThemeSwitcher />
 <rangeslider-example />
