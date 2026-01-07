@@ -22,7 +22,7 @@ const allItems = Object.keys(manifest).map((it) => {
     description: it + ' component description.',
     frameworks: manifest[it],
     svgComponent: placeholderBySlug[it],
-    href: withBase(`/components/${it}/`),
+    href: withBase(`/components/${it}/overview`),
     placeholder: { label: it },
   };
 });
