@@ -24,7 +24,7 @@ Use links when you want users to:
 
 ### When not to use
 
-- Do not use links for actions that will change data or manipulate how it is displayed, change a state, or trigger an action. Instead, use [Buttons](../button/index.md) to guide users to specific actions.
+- Do not use links for actions that will change data or manipulate how it is displayed, change a state, or trigger an action. Instead, use [Buttons](../button/overview.md) to guide users to specific actions.
 - Do not use disabled links.
 - Do not use links without destination.
 

@@ -11,7 +11,7 @@ A text area allows users to input extended text content that covers multiple lin
 
 ### When not to use
 
-- **For short input**: Use [Text field](../textfield/index.md) instead.
+- **For short input**: Use [Text field](../textfield/overview.md) instead.
 
 ### Behaviour
 
