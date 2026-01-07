@@ -1,3 +1,5 @@
+# Empty states
+
 Empty states are moments in the user experience when we don't have specific info or data to display to the user. They're also an opportunity to guide the user by explaining what to do next, preventing confusion.
 
 #### Common alternative names
