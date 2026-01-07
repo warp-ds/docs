@@ -117,4 +117,22 @@ Certain variants (i.e. `LoginStateView`) adapts the displayed endorsement logo a
 
 ### Parameters
 
-<api-table type=iOS component="EmptyStates" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | string |  | Main title text displayed in the state view. |
+
+#### EmptyStates props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| image | StateImage? | nil | Optional state image — either a Warp icon or a custom illustration. If omitted, no image is displayed. |
+| imageWidth | number? | nil | Optional width override for the image (overrides default icon size/illustration width; use sparingly). |
+| imageHeight | number? | nil | Optional height override for the image (overrides default illustration height; use sparingly). |
+| tintColor | Color? | nil | Optional tint color applied to the illustration where supported. |
+| imageContentDescription | string? | nil | Accessibility label for the illustration — provide when the image conveys important information. |
+| description | string? | nil | Optional descriptive text shown below the title; supports multiline content. |
+| actionButton | StateButton? | nil | Optional primary action configuration (title and handler) for the main CTA. |
+| quietButton | StateButton? | nil | Optional secondary (quiet) action configuration for less-prominent actions. |
+| showLogo | boolean | false | Whether to display the brand endorsement logo beneath the state view. |
