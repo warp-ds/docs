@@ -1,20 +1,11 @@
 # Callout - Frameworks
 Callouts are snippets of information, drawing attention to important content.
 
+<ComponentsStatus />
+
 ## iOS
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Elements', url: './elements' },
-    { name: 'Vue', url: './vue' },
-    { name: 'React', url: './react' },
-    { name: 'Android', url: './android' },
-    { name: 'iOS', url: './ios' }
-  ]" 
-  activeTab="iOS" 
-/>
-
-![Example of a callout in iOS](callout-ios.png)
+<FrameworkTabs />
 
 ### Syntax
 

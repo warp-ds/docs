@@ -1,16 +1,11 @@
 # Page indicator - Frameworks
 A page indicator shows the total amount of pages (or images) and the current page using dots.
 
+<ComponentsStatus />
+
 ## Android
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'React 19', url: './react-19' },
-    { name: 'Android', url: './android' },
-    { name: 'iOS', url: './ios' },
-  ]" 
-  activeTab="Android" 
-/>
+<FrameworkTabs />
 
 ### Syntax
 

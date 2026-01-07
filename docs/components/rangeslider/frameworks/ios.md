@@ -1,16 +1,11 @@
 # Range slider - Frameworks
 Range sliders allow users to adjust minimum and maximum numeric values within a given range.
 
+<ComponentsStatus />
+
 ## iOS
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'React 19', url: './react-19' },
-    { name: 'iOS', url: './ios' },
-    { name: 'Android', url: './android' },
-  ]" 
-  activeTab="iOS" 
-/>
+<FrameworkTabs />
 
 ### Syntax
 

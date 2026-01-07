@@ -1,18 +1,11 @@
 # Pill - Frameworks
 Pill is a type of button that is often used as a filter, but can also be used as a rounded button for overlays, etc.
 
+<ComponentsStatus />
+
 ## Elements
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Elements', url: './elements' },
-    { name: 'Vue', url: './vue' },
-    { name: 'React', url: './react' },
-    { name: 'Android', url: './android' },
-    { name: 'iOS', url: './ios' }
-  ]" 
-  activeTab="Elements" 
-/>
+<FrameworkTabs />
 
 ### Syntax
 

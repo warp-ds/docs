@@ -1,6 +1,8 @@
 # Text area - Accessibility
 A text area allows users to input extended text content that covers multiple lines.
 
+<ComponentsStatus />
+
 ## General
 If a visible label isn't specified, an **aria-label** must be provided to the text field for accessibility. If the field is labeled by a separate element, an **aria-labelledby** prop must be provided using the id of the labeling element instead.
 

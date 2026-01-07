@@ -3,6 +3,8 @@ Link component to use when creating links that look like buttons.
 
 For accessibility guidelines related to code, refer to the Code section.
 
+<ComponentsStatus />
+
 ### Mouse navigation
 
 - Cursor change and underline on hover on web.

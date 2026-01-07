@@ -1,6 +1,8 @@
 # Toast - Usage
 Toasts are brief user feedback messages that overlay content.
 
+<ComponentsStatus />
+
 ## Behavior
 - Toasts automatically disappear after a predefined timeout of 5000 ms ("short"), 10000 ms ("long") or "infinite" (6000000 ms), depending on the context or the length of the message.
 - When appropriate, and if the message isn’t critical, the toast can also be dismissed manually using the close button.

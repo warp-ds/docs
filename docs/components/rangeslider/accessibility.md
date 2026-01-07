@@ -1,6 +1,8 @@
 # Range slider - Accessibility
 Range sliders allow users to adjust minimum and maximum numeric values within a given range.
 
+<ComponentsStatus />
+
 ## General
 The slider component has been designed with accessibility in mind, providing range selection functionality that is fully keyboard accessible and screen reader compatible. 
 

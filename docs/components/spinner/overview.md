@@ -1,7 +1,7 @@
 # Spinner - Overview
 A spinner informs users about the loading of content.
 
-<DsComponentStatus align="left" hide-unsupported />
+<ComponentsStatus />
 
 ::: warning Native only
 For the web implementation of a "spinner", see [CSS - Animation - Spinner](../../foundations/css-classes/animation#spinner).

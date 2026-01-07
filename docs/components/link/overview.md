@@ -1,6 +1,8 @@
 # Link - Overview
 Link component to use when creating links that look like buttons.
 
+<ComponentsStatus />
+
 ## General
 A link is interactive text that serves as a lightweight navigational element. It directs users to another location, such as a different website, a specific section on the same page, or an external resource.
 

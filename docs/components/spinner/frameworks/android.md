@@ -1,9 +1,11 @@
 # Spinner - Frameworks
 A spinner informs users about the loading of content.
 
+<ComponentsStatus />
+
 ## Android
 
-<!-- Insert framework tabs here !-->
+<FrameworkTabs />
 
 ### Syntax
 

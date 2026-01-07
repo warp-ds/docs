@@ -1,9 +1,11 @@
 # Select - Frameworks
 A select is a form input component that lets users choose one option from a predefined list.
 
+<ComponentsStatus />
+
 ## Vue
 
-<!-- Insert framework tabs here !-->
+<FrameworkTabs />
 
 ### Import
 

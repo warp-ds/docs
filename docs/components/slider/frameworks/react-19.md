@@ -1,9 +1,11 @@
 # Slider - Frameworks
 Sliders allow users to adjust a numeric value within a given range.
 
+<ComponentsStatus />
+
 ## React 19
 
-<!-- Insert framework tabs here !-->
+<FrameworkTabs />
 
 ### Import
 

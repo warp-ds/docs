@@ -1,9 +1,11 @@
 # Text - Overview
 Pre-defined styles provide a font and size.
 
+<ComponentsStatus />
+
 ## iOS
 
-<!-- Insert framework tabs here !-->
+<FrameworkTabs />
 
 ### Syntax
 

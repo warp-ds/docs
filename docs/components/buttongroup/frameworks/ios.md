@@ -1,15 +1,11 @@
 # Button group - Frameworks
 Button group is a grouping concept for buttons.
 
+<ComponentsStatus />
+
 ## iOS
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Vue', url: './vue' },
-    { name: 'iOS', url: './ios' }
-  ]" 
-  activeTab="iOS" 
-/>
+<FrameworkTabs />
 
 ### Syntax
 

@@ -6,18 +6,11 @@ Visually styled and colour-coded to indicate contextual metadata.
 
 Related components: [Pill](../pill/index.md)
 
+<ComponentsStatus />
+
 ## iOS
 
-<FrameworkTabs 
-  :tabs="[
-    { name: 'Elements', url: './elements' },
-    { name: 'Vue', url: './vue' },
-    { name: 'React', url: './react' },
-    { name: 'Android', url: './android' },
-    { name: 'iOS', url: './ios' }
-  ]" 
-  activeTab="iOS" 
-/>
+<FrameworkTabs />
 
 ### Syntax
 

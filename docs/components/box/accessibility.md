@@ -1,6 +1,8 @@
 # Box - Accessibility
 Box is a layout component used for separating content areas on a page.
 
+<ComponentsStatus />
+
 ## General
 Use the ARIA `role` attribute to provide semantic meaning to a Box element.
 If no role property is supplied, it will default to `role="region"`.

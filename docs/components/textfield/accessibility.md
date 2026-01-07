@@ -1,6 +1,8 @@
 # Text field - Accessibility
 A text field is a single-line input component used for entering and editing textual data.
 
+<ComponentsStatus />
+
 ## General
 If a visible label isn't specified, an **aria-label** must be provided to the text field for accessibility. If the field is labeled by a separate element, an **aria-labelledby** prop must be provided using the id of the labeling element instead.
 

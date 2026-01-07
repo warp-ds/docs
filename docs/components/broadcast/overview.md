@@ -1,6 +1,8 @@
 # Broadcast - Overview
 Broadcast automatically fetches broadcast messages for the current (or a given) url.
 
+<ComponentsStatus />
+
 ## General
 Uses toast apis under the hood.
 
