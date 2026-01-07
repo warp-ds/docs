@@ -1,23 +1,36 @@
 <script setup>
+import { computed } from 'vue';
+
 const props = defineProps({
   framework: String,
   status: String,
 });
+
+const ICON_FILENAME_MAP = {
+  react: 'react',
+  'react 19': 'react',
+  vue: 'vuedotjs',
+  android: 'android',
+  ios: 'apple',
+  elements: 'webcomponentsdotorg',
+};
+
+const iconName = computed(() => ICON_FILENAME_MAP[props.framework.toLowerCase()] || '');
 </script>
 
 <template>
-  <component
+  <span
     class="ds-badge"
     :class="[
       `ds-badge--sm`,
       `ds-badge--${status.toLocaleLowerCase()}`,
-      { 'ds-badge--border': border !== 'none',
-        'ds-badge--border-neutral': border === 'neutral',
-        'ds-badge--border-status':  border === 'status' }
     ]"
   >
-    <!-- Left segment: label (neutral) -->
+    <!-- Left segment: label (neutral) -->  
     <span class="ds-badge__segment ds-badge__segment--label">
+      <span class="ds-badge__icon" role="img" aria-hidden="true">
+      <svg :data-src="`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${iconName}.svg`" fill="currentColor"></svg>
+    </span>
       <span class="ds-badge__framework">{{ framework }}</span>
     </span>
 
@@ -27,7 +40,7 @@ const props = defineProps({
     <span class="ds-badge__segment ds-badge__segment--status">
       <span class="ds-badge__status">{{ status }}</span>
     </span>
-  </component>
+  </span>
 </template>
 
 <style scoped>
@@ -41,7 +54,6 @@ const props = defineProps({
   font-weight: 600;
   white-space: nowrap;
   border: none;
-  padding: 8px;
 }
 
 /* Optional border */

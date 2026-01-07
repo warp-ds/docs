@@ -321,6 +321,13 @@ export default defineConfig({
         src: 'https://assets.finn.no/pkg/@warp-ds/elements/2.3.0-next.20/index.js',
       },
     ],
+    [
+      'script',
+      {
+        type: 'module',
+        src: 'https://unpkg.com/external-svg-loader@1.0.0/svg-loader.min.js',
+      },
+    ],
   ],
   themeConfig: {
     lastUpdated: true, // Add this to show the last updated timestamp
