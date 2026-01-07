@@ -1534,9 +1534,9 @@ export default defineConfig({
               text: 'Tooltip',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/toast/overview' },
-                { text: 'Usage', link: '/components/toast/usage' },
-                { text: 'Frameworks', link: '/components/toast/frameworks/android' },
+                { text: 'Overview', link: '/components/tooltip/overview' },
+                { text: 'Usage', link: '/components/tooltip/usage' },
+                { text: 'Frameworks', link: '/components/tooltip/frameworks/android' },
               ],
             },
             {
