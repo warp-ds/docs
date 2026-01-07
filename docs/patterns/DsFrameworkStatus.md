@@ -5,4 +5,6 @@ outline: false
 
 # Framework coverage
 
-<DsFrameworkStatus />
+| Component      | React     | React 19    | Vue      | Elements     | Android     | iOS        |
+|----------------|-----------|-------------|----------|--------------|-------------|------------|
+| Empty states   | —         | —           | —        | —            | released    | released   |

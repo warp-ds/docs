@@ -1,4 +1,8 @@
-# Empty states
+# Empty states - Overview
+
+Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
+
+<!--- Insert badge here -->
 
 Empty states are moments in the user experience when we don't have specific info or data to display to the user. They're also an opportunity to guide the user by explaining what to do next, preventing confusion.
 
@@ -105,3 +109,5 @@ Use to indicate that the system is loading data for the screen or section the us
 <div class="width: 100%;">
     <img src="/patterns/emptystates/use_cases-loading.svg" alt="Example of the 'Loading' empty state for when the system is retrieving data before showing it to the user." />
 </div>
+
+<component-questions />
