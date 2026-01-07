@@ -1199,14 +1199,7 @@ export default defineConfig({
         },
         {
           text: 'Components',
-          items: buildSectionSidebarItems(resolve(__dirname, '..'), 'components'),
-        },
-      ],
-      '/patterns/': [
-        {
-          text: 'Overview',
           items: [
-            { text: 'Patterns overview', link: '/patterns/' },
             {
               text: 'Alert',
               collapsed: true,
@@ -1556,9 +1549,32 @@ export default defineConfig({
             },
           ],
         },
+      ],
+      '/patterns/': [
+        {
+          text: 'Overview',
+          items: [
+            { text: 'Patterns overview', link: '/patterns/' },
+            {
+              text: 'Framework status',
+              link: '/patterns/DsFrameworkStatus', // fixed typo + path
+            },
+          ],
+        },
         {
           text: 'Patterns',
-          items: buildSectionSidebarItems(resolve(__dirname, '..'), 'patterns'),
+          items: [
+            {
+              text: 'Empty states',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/patterns/emptystates/overview' },
+                { text: 'Usage', link: '/patterns/emptystates/usage' },
+                { text: 'Frameworks', link: '/patterns/emptystates/frameworks/android' },
+                { text: 'Accessibility', link: '/patterns/emptystates/accessibility' },
+              ],
+            },
+          ],
         },
       ],
     },
