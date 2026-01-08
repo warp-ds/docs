@@ -11,7 +11,7 @@ WarpRangeSlider component
 
 ## 2026-01-08
 
-#### WarpRangeSlider component
+### WarpRangeSlider component
 
 Added `startIndex` and `endIndex` properties. When provided and changed, the slider position updates to this index. Used for two-way binding with external inputs (e.g., text fields). Parent should compute snap-to-nearest logic.
 
