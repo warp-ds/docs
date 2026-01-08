@@ -31,6 +31,8 @@ frameworks:
 - name: iOS
   status: released
 - name: Figma
+- name: Elements
+  status: released
 ---
 
 # {{ $frontmatter.title }}
