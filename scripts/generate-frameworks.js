@@ -20,47 +20,67 @@ function toDisplayName(filename) {
     .join(' ');
 }
 
-// Find all framework markdown files
-const frameworkFiles = globSync('docs/components/*/frameworks/*.md', {
-  ignore: ['docs/components/.template/**'],
-});
+/**
+ * Scan a directory for framework files and build a manifest section
+ * @param {string} globPattern - Glob pattern to match framework files
+ * @param {string[]} ignore - Patterns to ignore
+ * @param {number} nameIndex - Index of the item name in the path parts
+ * @returns {Object} Sorted manifest section
+ */
+function scanFrameworks(globPattern, ignore, nameIndex) {
+  const files = globSync(globPattern, { ignore });
+  const section = {};
 
-// Group by component
-const manifest = {};
+  for (const file of files) {
+    const parts = file.split('/');
+    const itemName = parts[nameIndex];
+    const frameworkFile = basename(file, '.md');
 
-for (const file of frameworkFiles) {
-  // Extract component name from path like 'docs/components/alert/frameworks/vue.md'
-  const parts = file.split('/');
-  const componentName = parts[2]; // 'alert'
-  const frameworkFile = basename(file, '.md'); // 'vue'
+    if (!section[itemName]) {
+      section[itemName] = [];
+    }
 
-  if (!manifest[componentName]) {
-    manifest[componentName] = [];
+    section[itemName].push({
+      name: toDisplayName(frameworkFile),
+      file: frameworkFile,
+    });
   }
 
-  manifest[componentName].push({
-    name: toDisplayName(frameworkFile),
-    file: frameworkFile,
-  });
+  // Sort each item's frameworks alphabetically by filename
+  for (const item of Object.keys(section)) {
+    section[item].sort((a, b) => a.file.localeCompare(b.file));
+  }
+
+  // Sort items alphabetically
+  return Object.keys(section)
+    .sort()
+    .reduce((acc, key) => {
+      acc[key] = section[key];
+      return acc;
+    }, {});
 }
 
-// Sort each component's frameworks alphabetically by filename
-for (const component of Object.keys(manifest)) {
-  manifest[component].sort((a, b) => a.file.localeCompare(b.file));
-}
+// Scan components and patterns
+const components = scanFrameworks(
+  'docs/components/*/frameworks/*.md',
+  ['docs/components/.template/**'],
+  2, // 'docs/components/alert/frameworks/vue.md' -> index 2 is 'alert'
+);
 
-// Sort components alphabetically
-const sortedManifest = Object.keys(manifest)
-  .sort()
-  .reduce((acc, key) => {
-    acc[key] = manifest[key];
-    return acc;
-  }, {});
+const patterns = scanFrameworks(
+  'docs/patterns/*/frameworks/*.md',
+  [],
+  2, // 'docs/patterns/emptystates/frameworks/ios.md' -> index 2 is 'emptystates'
+);
+
+const manifest = { components, patterns };
 
 // Write manifest
 try {
-  writeFileSync('docs/.vitepress/frameworks-manifest.json', JSON.stringify(sortedManifest, null, 2) + '\n');
-  console.log(`Generated manifest with ${Object.keys(sortedManifest).length} components`);
+  writeFileSync('docs/.vitepress/frameworks-manifest.json', JSON.stringify(manifest, null, 2) + '\n');
+  console.log(
+    `Generated manifest with ${Object.keys(components).length} components and ${Object.keys(patterns).length} patterns`,
+  );
 } catch (error) {
   console.error(`Failed to write frameworks manifest: ${error.message}`);
   process.exit(1);

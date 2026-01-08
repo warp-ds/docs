@@ -3,33 +3,52 @@ import { withBase } from 'vitepress';
 import { computed, ref } from 'vue';
 import manifest from './frameworks-manifest.json';
 
-const svgModules = import.meta.glob('../components/*/placeholder.svg', { eager: true, import: 'default' });
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'components',
+    validator: (value) => ['components', 'patterns'].includes(value),
+  },
+});
 
-const placeholderBySlug = (() => {
+// Import SVGs from both directories
+const componentSvgModules = import.meta.glob('../components/*/placeholder.svg', { eager: true, import: 'default' });
+const patternSvgModules = import.meta.glob('../patterns/*/placeholder.svg', { eager: true, import: 'default' });
+
+const placeholderBySlug = computed(() => {
   const map = Object.create(null);
-  for (const [key, mod] of Object.entries(svgModules)) {
+  const modules = props.type === 'components' ? componentSvgModules : patternSvgModules;
+  const regex =
+    props.type === 'components' ? /\/components\/([^/]+)\/placeholder\.svg$/ : /\/patterns\/([^/]+)\/placeholder\.svg$/;
+
+  for (const [key, mod] of Object.entries(modules)) {
     const s = String(key).replace(/\\/g, '/');
-    const slug = s.match(/\/components\/([^/]+)\/placeholder\.svg$/)?.[1];
+    const slug = s.match(regex)?.[1];
     if (slug) map[slug] = mod;
   }
   return map;
-})();
-
-const allItems = Object.keys(manifest).map((it) => {
-  return {
-    slug: it,
-    title: it[0].toUpperCase() + it.slice(1),
-    description: it + ' component description.',
-    frameworks: manifest[it],
-    svgComponent: placeholderBySlug[it],
-    href: withBase(`/components/${it}/overview`),
-    placeholder: { label: it },
-  };
 });
+
+// Get the section of the manifest based on type prop
+const manifestSection = computed(() => manifest[props.type] || {});
+
+const allItems = computed(() =>
+  Object.keys(manifestSection.value).map((it) => {
+    return {
+      slug: it,
+      title: it[0].toUpperCase() + it.slice(1),
+      description: `${it} ${props.type === 'components' ? 'component' : 'pattern'} description.`,
+      frameworks: manifestSection.value[it],
+      svgComponent: placeholderBySlug.value[it],
+      href: withBase(`/${props.type}/${it}/overview`),
+      placeholder: { label: it },
+    };
+  }),
+);
 
 const allFrameworks = computed(() => {
   const set = new Set();
-  for (const fwList of Object.values(manifest)) {
+  for (const fwList of Object.values(manifestSection.value)) {
     for (const fw of fwList) {
       set.add(fw.name);
     }
@@ -44,10 +63,10 @@ const filtered = computed(() => {
   const query = q.value.trim().toLowerCase();
   const sel = picked.value.map((v) => String(v).toLowerCase());
 
-  return allItems.filter((it) => {
+  return allItems.value.filter((it) => {
     const textOk = !query || it.title.toLowerCase().includes(query);
 
-    const fwNames = manifest[it.slug].map((f) => f.name.toLowerCase());
+    const fwNames = manifestSection.value[it.slug].map((f) => f.name.toLowerCase());
     const fwOk = sel.length === 0 || sel.some((s) => fwNames.includes(s)); // OR
 
     return textOk && fwOk;
@@ -126,7 +145,7 @@ function showAll() {
     </cards>
 
     <div v-if="filtered.length === 0" class="empty">
-      <em>No components match your filter.</em>
+      <em>No {{ type === 'components' ? 'components' : 'patterns' }} match your filter.</em>
     </div>
   </div>
 </template>

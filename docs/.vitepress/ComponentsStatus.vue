@@ -5,16 +5,26 @@ import manifest from './frameworks-manifest.json';
 
 const route = useRoute();
 
-// Parse route to get component name and current framework
-// Route path looks like: /components/alert/frameworks/vue
+// Parse route to get item name
+// Route path looks like: /components/alert/frameworks/vue or /patterns/emptystates/frameworks/ios
 const pathSegments = computed(() => {
   const path = route.path.replace(/\.html$/, '');
   return path.split('/').filter(Boolean);
 });
 
-const componentName = computed(() => {
+// Detect whether we're in components or patterns section
+const section = computed(() => {
+  if (pathSegments.value.includes('patterns')) return 'patterns';
+  if (pathSegments.value.includes('components')) return 'components';
+  return null;
+});
+
+const itemName = computed(() => {
   // Path: components/alert/frameworks/vue -> alert is at index 1
-  const idx = pathSegments.value.indexOf('components');
+  // Path: patterns/emptystates/frameworks/ios -> emptystates is at index 1
+  const sectionKey = section.value;
+  if (!sectionKey) return null;
+  const idx = pathSegments.value.indexOf(sectionKey);
   if (idx !== -1 && pathSegments.value[idx + 1]) {
     return pathSegments.value[idx + 1];
   }
@@ -22,8 +32,8 @@ const componentName = computed(() => {
 });
 
 const badges = computed(() => {
-  if (!componentName.value) return [];
-  return manifest[componentName.value] || [];
+  if (!section.value || !itemName.value) return [];
+  return manifest[section.value]?.[itemName.value] || [];
 });
 </script>
 
