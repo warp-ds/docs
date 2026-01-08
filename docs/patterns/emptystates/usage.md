@@ -2,7 +2,7 @@
 
 Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
 
-<!--- Insert badge here -->
+<ComponentsStatus />
 
 ## Guidelines
 Empty states are moments in the experience where there's no data or content to show — a chance to communicate with users that shouldn't be treated as an afterthought. They should clarify what the space is for, why it's empty, and what the user can do next. When designed thoughtfully, empty states become an essential part of a smooth experience, providing just enough context and guidance to help users stay productive.

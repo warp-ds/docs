@@ -1,7 +1,7 @@
 pnpm check
 
-# Regenerate frameworks manifest if any framework files changed
-if git diff --cached --name-only | grep -q "docs/components/.*/frameworks/.*\.md$"; then
+# Regenerate frameworks manifest if any framework files changed (components or patterns)
+if git diff --cached --name-only | grep -qE "docs/(components|patterns)/.*/frameworks/.*\.md$"; then
   echo "Framework files changed, regenerating manifest..."
   pnpm generate-frameworks
   git add docs/.vitepress/frameworks-manifest.json

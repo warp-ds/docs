@@ -2,11 +2,11 @@
 
 Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
 
-<!--- Insert badge here -->
+<ComponentsStatus />
 
 ## iOS
 
-<!--- Insert tabs here -->
+<FrameworkTabs />
 
 `StateView` is a flexible SwiftUI generic view component to display visual representations of various UI states. It supports an icon or illustration, optional title and description text, primary and secondary action buttons, and an optional brand logo endorsement. Designed for Warp, it is highly customizable and accessible.
 

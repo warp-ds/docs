@@ -2,11 +2,11 @@
 
 Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
 
-<!--- Insert badge here -->
+<ComponentsStatus />
 
 ## Android
 
-<!--- Insert tabs here -->
+<FrameworkTabs />
 
 ### Syntax
 
