@@ -2071,7 +2071,7 @@ export const elements = {
         '',
         'Relationship of the linked URL. If `target="_blank"` and `rel` is not provided, the component uses `noopener`.',
       ],
-      ['full-width', 'boolean', 'false', "Makes the link take up the full width of its parent."],
+      ['full-width', 'boolean', 'false', 'Makes the link take up the full width of its parent.'],
     ],
     slots: [['default', 'Link text / content.']],
   },
