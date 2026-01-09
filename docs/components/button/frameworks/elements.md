@@ -4,6 +4,23 @@
 <w-button variant="primary">Primary button</w-button>
 ```
 
+### Usage Notes
+
+Do:
+* Use the `<w-button>` component when you need a button that looks like a button.
+
+Do Not:
+* Use the `<w-button>` component when you need a link that looks like a button. In that case, simply use the native `<w-link>`tag.
+* Use the `<w-button>` component when you need a link that looks like a link. In that case, simply use the native `<a>`tag.
+
+The following table illustrates use cases and which element to use for the purpose.
+
+| use      | if desired behaviour is | and desired styling is |
+| -------- | ----------------------- | ---------------------- |
+| w-link   | link                    | button                 |
+| w-button | button                  | button                 |
+| a        | link                    | link                   |
+
 ### Variants
 
 #### Primary
@@ -43,7 +60,11 @@ The `utility` variant combined with `quiet` replaces the deprecated `pill` varia
 </w-button>
 ```
 
-#### Link
+#### Link (deprecated)
+
+Do not use button variant link, it will be removed in later iterations.
+* If you need a link that looks like a button, use `<w-link>`.
+* If you need a link that looks like a link, use `<a>`.
 
 ```html
 <w-button variant="link">Link button</w-button>

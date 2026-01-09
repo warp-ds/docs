@@ -1,3 +1,20 @@
+### Usage Notes
+
+Do:
+* Use the `<w-link>` component when you need a link that looks like a button.
+
+Do Not:
+* Use the `<w-link>` component when you need a link that looks like a link. In that case, simply use the native `<a>`tag.
+* Use the `<w-link>` component when you need a button that looks like a button. In that case, simply use the native `<w-button>`tag.
+
+The following table illustrates use cases and which element to use for the purpose.
+
+| use      | if desired behaviour is | and desired styling is |
+| -------- | ----------------------- | ---------------------- |
+| w-link   | link                    | button                 |
+| w-button | button                  | button                 |
+| a        | link                    | link                   |
+
 ### Example
 
 ```html
@@ -30,9 +47,11 @@ Supported values (validated at runtime):
 - `negativeQuiet`
 - `utility`
 - `utilityQuiet`
-- `pill`
-- `link`
 - `quiet`
+- `overlay`
+- `overlayInverted`
+- `overlayQuiet`
+- `overlayInvertedQuiet`
 
 If you provide an unsupported value, the component throws an error when it connects.
 
@@ -42,9 +61,11 @@ If you provide an unsupported value, the component throws an error when it conne
 <w-link variant="negative" href="https://example.com">Negative</w-link>
 <w-link variant="utility" href="https://example.com">Utility</w-link>
 <w-link variant="utilityQuiet" href="https://example.com">Utility</w-link>
-<w-link variant="pill" href="https://example.com">Pill</w-link>
-<w-link variant="link" href="https://example.com">Link</w-link>
-<w-link variant="quiet" href="https://example.com">Link</w-link>
+<w-link variant="quiet" href="https://example.com">Quiet</w-link>
+<w-link variant="overlay" href="https://example.com">Overlay</w-link>
+<w-link variant="overlayInverted" href="https://example.com">Overlay Inverted</w-link>
+<w-link variant="overlayQuiet" href="https://example.com">Overlay Quiet</w-link>
+<w-link variant="overlayInvertedQuiet" href="https://example.com">Overlay Inverted Quiet</w-link>
 ```
 
 #### Small (`small`)
@@ -117,16 +138,6 @@ You can listen to native events on the rendered anchor element (for example `cli
 <w-link variant="secondary" href="https://example.com">Secondary</w-link>
 <w-link variant="negative" href="https://example.com">Negative</w-link>
 <w-link variant="utility" href="https://example.com">Utility</w-link>
-```
-
-#### Inline link variant
-
-```html example
-<p>
-  This is an
-  <w-link variant="link" href="https://example.com">inline link</w-link>
-  inside a paragraph.
-</p>
 ```
 
 #### Full width
