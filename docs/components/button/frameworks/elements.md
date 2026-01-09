@@ -6,12 +6,12 @@
 
 ### Usage Notes
 
-Do:
+**Do:**
 * Use the `<w-button>` component when you need a button that looks like a button.
 
-Do Not:
-* Use the `<w-button>` component when you need a link that looks like a button. In that case, simply use the native `<w-link>`tag.
-* Use the `<w-button>` component when you need a link that looks like a link. In that case, simply use the native `<a>`tag.
+**Do Not:**
+* Use the `<w-button>` component when you need a link that looks like a button. In that case, use the native `<w-link>`tag.
+* Use the `<w-button>` component when you need a link that looks like a link. In that case, use the native `<a>`tag.
 
 The following table illustrates use cases and which element to use for the purpose.
 

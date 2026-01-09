@@ -2057,7 +2057,7 @@ export const elements = {
       ['autofocus', 'boolean', 'false', 'Focus the link after it is rendered.'],
       [
         'variant',
-        "'primary' | 'secondary' | 'negative' | 'negativeQuiet' | 'utility' | 'utilityQuiet' | 'overlay' | 'quiet' | 'overlayInverted' | 'overlayQuiet' | 'overlayInvertedQuiet' | 'link'",
+        "'primary' | 'secondary' | 'negative' | 'negativeQuiet' | 'utility' | 'utilityQuiet' | 'overlay' | 'quiet' | 'overlayInverted' | 'overlayQuiet' | 'overlayInvertedQuiet'",
         "'secondary'",
         'Visual style for the link/button. Throws an error if an unsupported value is provided.',
       ],
