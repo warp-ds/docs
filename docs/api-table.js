@@ -2051,6 +2051,30 @@ export const elements = {
       ['@close', '', '', 'Triggered when user clicks the close button or presses Escape when the button is in focus.'],
     ],
   },
+  Link: {
+    required: [],
+    props: [
+      ['autofocus', 'boolean', 'false', 'Focus the link after it is rendered.'],
+      [
+        'variant',
+        "'primary' | 'secondary' | 'negative' | 'negativeQuiet' | 'utility' | 'utilityQuiet' | 'overlay' | 'quiet' | 'overlayInverted' | 'overlayQuiet' | 'overlayInvertedQuiet'",
+        "'secondary'",
+        'Visual style for the link/button. Throws an error if an unsupported value is provided.',
+      ],
+      ['small', 'boolean', 'false', 'Render a smaller version.'],
+      ['href', 'string', '', 'The URL the link points to.'],
+      ['disabled', 'boolean', 'false', 'Disables interaction and applies disabled styling.'],
+      ['target', 'string', '', 'Where to display the linked URL (e.g. `_blank`).'],
+      [
+        'rel',
+        'string',
+        '',
+        'Relationship of the linked URL. If `target="_blank"` and `rel` is not provided, the component uses `noopener`.',
+      ],
+      ['full-width', 'boolean', 'false', 'Makes the link take up the full width of its parent.'],
+    ],
+    slots: [['default', 'Link text / content.']],
+  },
 };
 
 export const android = {
