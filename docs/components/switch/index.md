@@ -26,6 +26,8 @@ placeholder:
 frameworks:
 - name: React
   status: released
+- name: Elements
+  status: released
 - name: Vue
   status: released
 - name: Android
