@@ -1808,8 +1808,6 @@ export const elements = {
       ['disabled', 'boolean', 'false', 'Whether the element is disabled'],
       ['required', 'boolean', 'false', 'Whether the element is required'],
       ['optional', 'boolean', 'false', 'Whether to show optional text'],
-      ['class-name', 'string', '', 'Additional container styling'],
-      ['list-class-name', 'string', '', 'Additional list styling'],
       ['name', 'string', '', 'Name attribute for form submission'],
     ],
     events: [
