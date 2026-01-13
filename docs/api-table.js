@@ -1782,6 +1782,48 @@ export const elements = {
       ['flat', 'boolean', '', 'Removes box shadow around card'],
     ],
   },
+  Combobox: {
+    required: [],
+    props: [
+      [
+        'options',
+        'array',
+        '[]',
+        'The available options to select from. Each option is an object: `{ value: string; label?: string; key?: string }`.',
+      ],
+      ['label', 'string', '', 'Label above input'],
+      ['placeholder', 'string', '', 'Input placeholder'],
+      ['value', 'string', "''", 'The input value (controlled).'],
+      ['open-on-focus', 'boolean', 'false', 'Whether the options list opens when focus is on the text field'],
+      ['select-on-blur', 'boolean', 'true', 'Select active option on blur'],
+      [
+        'match-text-segments',
+        'boolean',
+        'false',
+        'Whether matching text segments in the options should be highlighted',
+      ],
+      ['disable-static-filtering', 'boolean', 'false', 'Disable client-side static filtering'],
+      ['invalid', 'boolean', 'false', 'Renders the input field in an invalid state'],
+      ['help-text', 'string', '', 'The content to display as the help text'],
+      ['disabled', 'boolean', 'false', 'Whether the element is disabled'],
+      ['required', 'boolean', 'false', 'Whether the element is required'],
+      ['optional', 'boolean', 'false', 'Whether to show optional text'],
+      ['class-name', 'string', '', 'Additional container styling'],
+      ['list-class-name', 'string', '', 'Additional list styling'],
+      ['name', 'string', '', 'Name attribute for form submission'],
+    ],
+    events: [
+      ['change', 'CustomEvent', '', 'Dispatched when the input value changes. `event.detail = { value: string }`.'],
+      ['select', 'CustomEvent', '', 'Dispatched when an option is selected. `event.detail = { value: string }`.'],
+      ['focus', 'CustomEvent', '', 'Dispatched when the input receives focus (only when `open-on-focus` is true).'],
+      [
+        'blur',
+        'CustomEvent',
+        '',
+        'Dispatched when the input loses focus. `event.detail = { value: string }` (the current input value).',
+      ],
+    ],
+  },
   DatePicker: {
     required: [['label', 'string', '', 'Label shown on the input of the datepicker.']],
     props: [
