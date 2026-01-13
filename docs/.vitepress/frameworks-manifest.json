@@ -202,6 +202,10 @@
         "file": "android"
       },
       {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
         "name": "iOS",
         "file": "ios"
       },
@@ -256,6 +260,10 @@
       {
         "name": "Android",
         "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
       },
       {
         "name": "React 19",
