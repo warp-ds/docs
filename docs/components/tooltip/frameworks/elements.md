@@ -81,7 +81,7 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| placement | `'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end'` | 'bottom' | Placement according to the target element. Arrow would be on the opposite side of this position |
+| placement | 'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end' | 'bottom' | Placement according to the target element. Arrow would be on the opposite side of this position |
 | show | boolean | false | Whether Attention element should be visible |
 | tooltip | boolean | false | Whether Attention component is rendered as a tooltip |
 | no-arrow | boolean | false | Render Attention element without an arrow |
@@ -95,4 +95,4 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 
 | Name | Description |
 | --- | --- |
-| @close |  |
+| @close | Triggered when user clicks the close button or presses Escape when the button is in focus. |

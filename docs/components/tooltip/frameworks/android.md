@@ -83,8 +83,8 @@ Not supported
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | modifier | Modifier | Modifier | Modifier for the tooltip |
-| edge | Edge.Top   Edge.Bottom   Edge.Leading   Edge.Trailing | Edge.Top | Edge that determines the direction of the arrow |
+| edge | Edge.Top, Edge.Bottom, Edge.Leading, Edge.Trailing | Edge.Top | Edge that determines the direction of the arrow |
 | horizontalOffset | Dp | 0.dp | Horizontal offset for the tooltip |
 | verticalOffset | Dp | 0.dp | Vertical offset for the tooltip |
 | inline | Boolean | false | Shows the tooltip as a standalone inline view |
-| anchorView | `@Composable () -> Unit` | null | The anchor which the tooltip points to |
+| anchorView | @Composable () -> Unit | null | The anchor which the tooltip points to |

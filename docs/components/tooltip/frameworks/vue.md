@@ -132,7 +132,7 @@ Read more: [MDN aria-details](https://developer.mozilla.org/en-US/docs/Web/Acces
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| placement | `'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end'` | 'bottom' | Placement according to the target element. The arrow will point to the opposite side of this position. |
+| placement | 'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end' | 'bottom' | Placement according to the target element. The arrow will point to the opposite side of this position. |
 | tooltip | boolean | false | Whether Attention component is rendered as a tooltip |
 | role | string | tooltip | Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`). Default role is set to `tooltip`. |
 | aria-label | string |  | Allows the user to override the default aria-label attribute for the Attention component |
@@ -147,4 +147,4 @@ Read more: [MDN aria-details](https://developer.mozilla.org/en-US/docs/Web/Acces
 
 | Name | Description |
 | --- | --- |
-| @dismiss |  |
+| @dismiss | Triggered when user clicks the close button or presses Escape when the button is in focus. |
