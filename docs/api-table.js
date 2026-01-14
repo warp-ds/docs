@@ -1809,7 +1809,12 @@ export const elements = {
       ['required', 'boolean', 'false', 'Whether the element is required'],
       ['optional', 'boolean', 'false', 'Whether to show optional text'],
       ['name', 'string', '', 'Name attribute for form submission'],
-      ['autocomplete', 'string', 'off', 'Autocomplete attribute for the input element. Gives a hint to the browser for autofill purposes.'],
+      [
+        'autocomplete',
+        'string',
+        'off',
+        'Autocomplete attribute for the input element. Gives a hint to the browser for autofill purposes.',
+      ],
     ],
     events: [
       ['change', 'CustomEvent', '', 'Dispatched when the input value changes. `event.detail = { value: string }`.'],
@@ -2032,7 +2037,12 @@ export const elements = {
       ['readOnly', 'boolean', '', 'Whether the input can be selected but not changed by the user.'],
       ['required', 'boolean', '', 'Whether user input is required on the input before form submission.'],
       ['value', 'string', '', 'The current value (controlled).'],
-      ['autocomplete', 'string', '', 'Autocomplete attribute for the input element. Gives a hint to the browser for autofill purposes.'],
+      [
+        'autocomplete',
+        'string',
+        '',
+        'Autocomplete attribute for the input element. Gives a hint to the browser for autofill purposes.',
+      ],
     ],
   },
   Toast: {
