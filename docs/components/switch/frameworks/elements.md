@@ -1,3 +1,14 @@
+# Switch - Usage
+The Switch component allows users to toggle between two states.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
+<ThemeSwitcher />
+
 ### Usage Notes
 
 `<w-switch>` is a form-associated toggle component.
@@ -7,6 +18,11 @@
 - When used in a form, the control submits `value` only when `checked` is `true` (otherwise it submits nothing).
 
 ### Example
+
+<style-isolate>
+  <w-switch id="demo-switch" name="marketing" value="yes"></w-switch>
+</style-isolate>
+
 
 ```html
 <w-switch id="demo-switch" name="marketing" value="yes"></w-switch>
@@ -22,13 +38,33 @@
 
 ### Props
 
-<api-table type=elements component="Switch" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | string |  | Name used when submitting an HTML form. |
+| value | string |  | Value submitted when the switch is checked. |
+| checked | boolean | false | Whether the switch is on (checked). |
+| disabled | boolean | false | Whether the switch is disabled. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| change | (event: CustomEvent) => void |
 
 #### Name (`name`)
 
 Name used when submitting an HTML form.
 
 Default: `''`
+
+<style-isolate>
+<form>
+  <w-switch name="notifications" value="on"></w-switch>
+  <button type="submit">Submit</button>
+</form>
+</style-isolate>
 
 ```html example
 <form>
