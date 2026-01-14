@@ -1,3 +1,12 @@
+# Date picker - Frameworks
+A date picker allows the user to select a specific calendar date.
+
+<ComponentsStatus />
+
+## iOS
+
+<FrameworkTabs />
+
 ### Inline DatePicker
 
 A graphical calendar interface that can be embedded directly in your view hierarchy.
@@ -82,4 +91,14 @@ Not supported
 
 ### Parameters
 
-<api-table type=iOS component="DatePicker" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| date | Binding |  | A binding to the currently selected date. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| range | ClosedRange\|PartialRangeFrom\|PartialRangeThrough |  | The range of selectable dates. If not provided, there is no date range restriction. |

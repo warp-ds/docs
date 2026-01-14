@@ -1,3 +1,12 @@
+# Icons - Frameworks
+Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 <icon-code-example />
 
 ### Import
@@ -24,5 +33,11 @@ Use icon name from above list
 
 ### Props
 
-<api-table type=elements component="Icon" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | string |  | The name of the icon to render |
+| size | `'small' \| 'medium' \| 'large' \| 'xypx'` | medium | The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`. |
+| locale | string |  | The locale to use for the icon, e.g. "nb" for Norwegian Bokmål |
 

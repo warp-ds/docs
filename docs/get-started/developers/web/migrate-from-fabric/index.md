@@ -29,7 +29,7 @@ If it is necessary to include both libraries, it is recommended to encapsulate o
 
 ### Icons
 Warp now supports icons, and it is no longer necessary to continue importing the icons from Fabric.
-See further information and icons usage on our [icons page](/components/icons/).
+See further information and icons usage on our [icons page](/components/icons/overview.md).
 
 ### Colours
 Warp utilises a system of coloring border, text, background and icons using semantic colour tokens.

@@ -1,3 +1,11 @@
+# Callout - Frameworks
+Callouts are snippets of information, drawing attention to important content.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -143,4 +151,25 @@ app:calloutHorizontalOffset="0" />
 
 ### Parameters
 
-<api-table type=android component="Callout" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String |  | The text to be displayed in the callout |
+| state | CalloutState |  | The state of the callout. If visible or not |
+| onDismiss | `() -> Unit` |  | The lambda to be invoked when dismissed |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| size | CalloutSize.Default   CalloutSize.Small | CalloutSize.Default | Size of the callout |
+| type | CalloutSize.Popover   CalloutSize.Inline | CalloutSize.Popover | Type of the callout |
+| inlineModifier | Modifier | Modifier | Modifier only used for the Inline callout type |
+| horizontalOffset | Dp | 0.dp | Horizontal offset used only for the Popover type callout |
+| verticalOffset | Dp | 0.dp | Vertical offset used only for the Popover type callout |
+| edge | Edge.Top   Edge.Bottom   Edge.Leading   Edge.Trailing | Edge.Top | Edge that determines the direction of the arrow |
+| closable | Boolean | false | If should show the close icon |
+| dismissPopoverOnClickOutside | Boolean | true | If should dismiss the callout when clicked outside it |
+| paddingOffset | Dp | null | Padding offset in the parent layout to correctly calculate the arrow position in relation to the anchor |
+| anchorView | `@Composable () -> Unit` | null | The anchor which the callout points to |

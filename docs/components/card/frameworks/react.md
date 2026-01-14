@@ -1,3 +1,12 @@
+# Card - Frameworks
+Card is an interactive layout component to display information.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -13,11 +22,33 @@ import { Card } from '@warp-ds/react/components/card'
 
 ### Props
 
-<api-table type=react component="Card" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | Element \|Element[] |  | The contents of the Card |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| className | string |  | Add your own custom styles to the container element |
+| as | string \|Component | div | The wrapping container element |
+| selected | boolean |  | If the card is selected |
+| flat | boolean |  | Removes box shadow around card |
 
 ### DeadToggle props
 
-<api-table type=react component="DeadToggle" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| radio | boolean |  | Passes radio type to the underlying toggle |
+| checkbox | boolean |  | Passes checkbox type to the underlying toggle |
+| value | string |  | Value for the input |
+| checked | boolean |  | Whether the toggle is checked |
+| className | string |  | Additional classnames to the toggle wrapper |
+| labelClassName | string |  | Additional classnames to the toggle label |
 
 ### Code
 
@@ -98,7 +129,7 @@ You should follow these semantics, but styling is up to you.
 
 ### Toggles inside of Cards
 
-Using Toggles([Radios](/components/radio/) or [Checkboxes](/components/checkbox/)) inside of cards has the limitation of only being able to pass forward a label. If you wish to further enhance the look and feel of these you must use the DeadToggle helper component, which we cover a bit further down.
+Using Toggles([Radios](/components/radio/overview.md) or [Checkboxes](/components/checkbox/overview.md)) inside of cards has the limitation of only being able to pass forward a label. If you wish to further enhance the look and feel of these you must use the DeadToggle helper component, which we cover a bit further down.
 
 ```jsx example
 function Example() {

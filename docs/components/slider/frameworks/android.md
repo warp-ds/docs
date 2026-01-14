@@ -1,3 +1,12 @@
+# Slider - Frameworks
+Sliders allow users to adjust a numeric value within a given range.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```kotlin example
@@ -58,4 +67,25 @@ Not supported.
 
 ### Parameters
 
-<api-table type=android component="Slider" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| onValueChange | `(Float) -> Unit` |  | The function to be invoked when a value is selected |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the slider |
+| value | Float | 0f | The pre-selected value |
+| valueRange | ClosedFloatingPointRange | 0f..1f | The value range |
+| enabled | Boolean | true | Disables the slider if false |
+| onValueChangeFinished | `(() -> Unit)` | null | The function to be invoked when value selection is done |
+| rangeStartText | String? | null, but if showRange is true, it will be the first value of the range using its toString() method | The string displayed as starting value |
+| rangeEndText | String? | null, but if showRange is true, it will be the last value of the range using its toString() method | The string displayed as end value |
+| formattedTooltipText | String? | null, but if showTooltip is true, it will be the current value of the slider using its toString() method | The string displayed in the tooltip |
+| showTooltip | Boolean | true | Whether to show the tooltip with the current value when dragging |
+| showRange | Boolean | false | Whether to show range indicators below the slider |
+| steps | @IntRange(from = 0) | 0 | Amount of steps that the slider can snap to |
+| interactionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the start thumb |

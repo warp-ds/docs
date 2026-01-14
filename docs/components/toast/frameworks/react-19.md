@@ -1,3 +1,12 @@
+# Toast - Frameworks
+Toasts are brief user feedback messages that overlay content.
+
+<ComponentsStatus />
+
+## React 19
+
+<FrameworkTabs />
+
 ### Import
 
 The Toast system consists of two parts.
@@ -40,7 +49,7 @@ addWToast({
 The toast component is designed to automatically close by default, and it is recommended to avoid adding the manual dismiss button due to accessibility guidelines. If the toast absolutely must be dismissible, set the `dismissible` property to `true`.
 :::
 
-**Read more** under [Accessibility](/components/toast/tab_accessibility).
+**Read more** under [Accessibility](/components/toast/accessibility).
 
 ```js
 addWToast({
@@ -52,4 +61,16 @@ addWToast({
 
 ### Props
 
-<api-table type="react" component="Toast" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | string | undefined | The toast message. |
+| variant | `'positive' \| 'warning' \| 'negative'` | undefined | Defines the type of toast. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| duration | 5000 \| 10000 \| 6000000 | 5000 | Sets how long the toast stays visible in the user interface before it dismisses automatically (in milliseconds). |
+| dismissible | boolean | false | Adds a close button. Not recommended from an accessibility perspective. |

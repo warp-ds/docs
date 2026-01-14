@@ -1,3 +1,11 @@
+# Checkbox - Frameworks
+Checkboxes allow users to select one or more options from a number of choices.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -137,8 +145,39 @@ fun setOnCheckedChangeListener(onCheckedChangeListener: ((Boolean) -> Unit))
 ### Parameters
 ### Checkbox
 
-<api-table type=android component="Checkbox" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | The text to be displayed next to the checkbox |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the checkbox |
+| onCheckedChange | `(Boolean) -> Unit` |  | Lambda to be invoked when checked or unchecked |
+| style | WarpCheckboxStyle.Neutral  WarpCheckboxStyle.Disabled  WarpCheckboxStyle.Neutral | WarpCheckboxStyle.Neutral | Sets the appearance of the checkbox |
+| enabled | boolean | true | Whether the checkbox is enabled or not |
+| checked | boolean | false | Whether the checkbox is checked or not |
 
 ### CheckboxGroup
 
-<api-table type=android component="CheckboxGroup" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| options | List |  | The list of texts to be displayed next to the checkboxes |
+| onOptionsSelected | `(MutableList) -> Unit` |  | The lambda to be invoked when clicked on a checkbox. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the checkbox group |
+| orientation | Orientation.Vertical   Orientation.Horizontal | Orientation.Vertical | Sets the orientation for the checkbox group. Class is found in the androidx.compose.foundation.gestures package |
+| title | String | null | The title to be displayed on top of the checkbox group |
+| selectedOptions | List | null | The selected options in the checkbox group |
+| helpText | String | null | The text displayed below the checkbox group |
+| enabled | boolean | true | Whether the checkbox group is enabled or not |
+| isError | boolean | false | Shows the checkbox group in error state if true |

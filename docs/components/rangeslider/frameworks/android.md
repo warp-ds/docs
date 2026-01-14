@@ -1,3 +1,12 @@
+# Range slider - Frameworks
+Range sliders allow users to adjust minimum and maximum numeric values within a given range.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```kotlin example
@@ -83,4 +92,27 @@ Not supported.
 
 ### Parameters
 
-<api-table type=android component="RangeSlider" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| items | List |  | The list of values |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the range slider |
+| enabled | Boolean | true | Disables the slider if false |
+| initialStartItem | Any? | null | The pre-selected start value |
+| initialEndItem | Any? | null | The pre-selected end value |
+| onValueChangeFinished | `() -> Unit` | {} | The function to be invoked when value selection is done |
+| onLeftValueChanged | `(Any) -> Unit` | {} | The function to be invoked when start value is selected |
+| onRightValueChanged | `(Any) -> Unit` | {} | The function to be invoked when end value is selected |
+| resetAtStartText | String? | null | The string displayed as reset start value |
+| resetAtEndText | String? | null | The string displayed as reset end value |
+| blockDrag | Boolean | false | Whether to block the drag gesture |
+| showTooltips | Boolean | true | Whether to show tooltips with current value when dragging |
+| showRange | Boolean | false | Whether to show range indicators below the slider |
+| startInteractionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the start thumb. |
+| endInteractionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the end thumb. |

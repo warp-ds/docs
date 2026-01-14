@@ -1,3 +1,12 @@
+# Select - Frameworks
+A select is a form input component that lets users choose one option from a predefined list.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```js
@@ -61,7 +70,19 @@ error.
 </w-select>
 ```
 
-<api-table type=elements component="Select" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| auto-focus | boolean | false | Whether the element should receive focus on render. |
+| invalid | boolean | false | Renders the field in an invalid state. Often paired together with `hint` to provide feedback about the error. |
+| always | boolean |  | Whether to always show hint. |
+| hint | string |  | The content to display as the hint. |
+| label | string |  | The content to display as the label. |
+| name | string |  | The name of the select element, used when submitting an HTML form. |
+| optional | boolean |  | Mark label to indicate that this input is optional. |
+| disabled | boolean |  | Whether the input is disabled. |
+| read-only | boolean |  | Whether the input can be selected but not changed by the user. |
 
 ### Event handling
 The w-select component triggers the custom `change` event, on the element level, when the dropdown select element changes value.

@@ -1,34 +1,18 @@
 <script setup>
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 
 const props = defineProps({
   initialTab: String,
   tabs: Array,
   isDisabled: Function,
-  storageKey: String,
   variant: {
     type: String,
     default: 'default',
   },
 });
 const activeTab = ref(props.initialTab);
-watch(
-  () => props.initialTab,
-  (next) => {
-    if (next == null || next === activeTab.value) return;
-    activeTab.value = next;
-  },
-);
 const switchTab = (tab) => {
   activeTab.value = tab;
-  if (typeof window !== 'undefined') {
-    const params = new URLSearchParams(window.location.search);
-    params.set(props.storageKey, tab);
-    const url = new URL(window.location);
-    url.search = params.toString();
-    history.pushState(null, null, url.toString());
-    window.localStorage.setItem(props.storageKey, tab);
-  }
 };
 </script>
 

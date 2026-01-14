@@ -1,6 +1,6 @@
  <script setup>
-  import Hero from '../components/Hero.vue'
-  import ArticleCard from '../components/ArticleCard.vue'
+  import Hero from './Hero.vue'
+  import ArticleCard from './ArticleCard.vue'
 
   import { data } from './posts.data.js'
 </script>

@@ -1,4 +1,11 @@
+# Page indicator - Frameworks
+A page indicator shows the total amount of pages (or images) and the current page using dots.
 
+<ComponentsStatus />
+
+## iOS
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -22,4 +29,9 @@ Warp.PageIndicator(pageCount: 5).uiView
 
 ### Parameters
 
-<api-table type=iOS component="PageIndicator" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| pageCount | Int |  | The total number of pages. |
+| selectedPage | Binding Int |  | Binding to an integer representing the currently selected page. |

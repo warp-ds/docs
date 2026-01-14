@@ -1,3 +1,12 @@
+# Radio - Frameworks
+Radios allow users to select a single option from a list.
+
+<ComponentsStatus />
+
+## Vue
+
+<FrameworkTabs />
+
 ### Import
 
 > Use in entire app
@@ -32,7 +41,19 @@ import { wToggle } from '@warp-ds/vue/toggle';
 
 The props documented below have defaults set or are unique to this component, all typical HTML5 attributes are valid props. See Field for additional props.
 
-<api-table type=vue component="Toggle"/>
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| radio | boolean |  |  |
+| checkbox | boolean |  |  |
+| radio-button | boolean |  |  |
+| toggles | array |  | An array of objects. Each object must at least have a value and label attribute. Any other attributes will be transferred directly to the individual toggle |
+| invalid | boolean |  | Whether elements should be styled as invalid |
+| disabled | boolean |  | Whether elements should be styled as disabled |
+| indeterminate | boolean |  | Whether a single option is indeterminate, or "partially checked." The checkbox will appear with a small dash instead of a tick to indicate that the option is not exactly checked or unchecked. |
+| equal-width | boolean |  | Will make each option equal width, only applied when radio-button is set |
+| small | boolean |  | Whether the elements should be small, only applied when radio-button is set |
 
 ### Validation
 #### Validating Elements
@@ -44,12 +65,21 @@ Every form element accepts a prop rules which takes an array of functions. These
 
 The function has one argument, the current value of the form element — and can either return true or an object with attributes described below
 
-<api-table type=vue component="InputAttributes"/>
+| attribute | type | notes |
+| --- | --- | --- |
+| valid | boolean |  |
+| hint | string |  |
+| always | boolean |  |
 
 #### Collecting Validation from wForm
 The wForm component registers element descendants at any level, and provides the aggregate validation status.
 
-<api-table type=vue component="InputValidation"/>
+| prop | type | default | notes |
+| --- | --- | --- | --- |
+| v-model | boolean |  | True when all descendants are valid |
+| v-model:completed | boolean |  | True when all descendants are completed - passing their required rule |
+| should-validate | boolean |  | Can be used to instruct all descendants to immediately validate. Note that this will not update if the should-validate logic is updated elsewhere. |
+| as | string | form | The DOM element to emit for the wrapper |
 
 #### Programmatic validation
 The wField component can provide access to programmatic validation beyond what wForm's props can. For information on which methods are available, see the documentation on Field.

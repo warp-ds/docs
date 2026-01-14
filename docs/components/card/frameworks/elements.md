@@ -1,3 +1,12 @@
+# Card - Frameworks
+Card is an interactive layout component to display information.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```html
@@ -8,7 +17,13 @@
 
 ### Props
 
-<api-table type=elements component="Card" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| selected | boolean |  | If the card is selected |
+| clickable | boolean |  | Applies styling to indicate click-ability |
+| flat | boolean |  | Removes box shadow around card |
 
 #### Selected
 

@@ -1,3 +1,11 @@
+# Steps - Frameworks
+The steps component is built to handle user journeys, showing progress.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 Vertical and Horizontal versions are separate implementations in Compose so choose accordingly:
@@ -118,4 +126,20 @@ var stepContent: @Composable ((Int) -> Unit)?
 
 ### Parameters
 
-<api-table type=android component="StepIndicator" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| steps | Int |  | The amount of steps in the indicator |
+| stepContent | `@Composable (Int) -> Unit` |  | The custom content between the steps. Vertical orientation only |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the step indicator |
+| activeStep | Int | 0 | The active step in the step indicator |
+| onStepClicked | `(Int) -> Unit` | null | Lambda for the step click action, returns the integer value of the step clicked |
+| stepContentDescription | `@Composable (Int) -> String` | null | The content description of the step. Used for accessibility purposes |
+| stepTitle | `(Int) -> String` | null | Lambda for the step title, returns the integer value of the step |
+| stepDescription | `(Int) -> String` | null | Lambda for the step description, returns the integer value of the step |

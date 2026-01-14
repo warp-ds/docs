@@ -1,3 +1,12 @@
+# Switch - Usage
+The Switch component allows users to toggle between two states.
+
+<ComponentsStatus />
+
+## Vue
+
+<FrameworkTabs />
+
 ### Import
 
 > Use in entire app
@@ -28,4 +37,15 @@ import { wSwitch } from '@warp-ds/vue/switch';
 
 ### Props
 
-<api-table type=vue component="Switch" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| v-model | boolean | false | The value of the switch. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | string | false | The unique identifier. |
+| disabled | boolean | false | Whether the switch is disabled. |
