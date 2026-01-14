@@ -1262,17 +1262,17 @@ export default defineConfig({
               text: 'Button group',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/buttongroup/overview' },
-                { text: 'Frameworks', link: '/components/buttongroup/frameworks/ios' },
+                { text: 'Overview', link: '/components/button-group/overview' },
+                { text: 'Frameworks', link: '/components/button-group/frameworks/ios' },
               ],
             },
             {
               text: 'Button pill',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/buttonpill/overview' },
-                { text: 'Usage', link: '/components/buttonpill/usage' },
-                { text: 'Frameworks', link: '/components/buttonpill/frameworks/ios' },
+                { text: 'Overview', link: '/components/button-pill/overview' },
+                { text: 'Usage', link: '/components/button-pill/usage' },
+                { text: 'Frameworks', link: '/components/button-pill/frameworks/ios' },
               ],
             },
             {
@@ -1306,19 +1306,19 @@ export default defineConfig({
               text: 'Combo box',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/combobox/overview' },
-                { text: 'Frameworks', link: '/components/combobox/frameworks/react' },
+                { text: 'Overview', link: '/components/combo-box/overview' },
+                { text: 'Frameworks', link: '/components/combo-box/frameworks/react' },
               ],
             },
             {
               text: 'Date picker',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/datepicker/overview' },
-                { text: 'Usage', link: '/components/datepicker/usage' },
-                { text: 'Styling', link: '/components/datepicker/styling' },
-                { text: 'Frameworks', link: '/components/datepicker/frameworks/android' },
-                { text: 'Accessibility', link: '/components/datepicker/accessibility' },
+                { text: 'Overview', link: '/components/date-picker/overview' },
+                { text: 'Usage', link: '/components/date-picker/usage' },
+                { text: 'Styling', link: '/components/date-picker/styling' },
+                { text: 'Frameworks', link: '/components/date-picker/frameworks/android' },
+                { text: 'Accessibility', link: '/components/date-picker/accessibility' },
               ],
             },
             {
@@ -1374,10 +1374,10 @@ export default defineConfig({
               text: 'Page indicator',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/pageindicator/overview' },
-                { text: 'Usage', link: '/components/pageindicator/usage' },
-                { text: 'Frameworks', link: '/components/pageindicator/frameworks/android' },
-                { text: 'Accessibility', link: '/components/pageindicator/accessibility' },
+                { text: 'Overview', link: '/components/page-indicator/overview' },
+                { text: 'Usage', link: '/components/page-indicator/usage' },
+                { text: 'Frameworks', link: '/components/page-indicator/frameworks/android' },
+                { text: 'Accessibility', link: '/components/page-indicator/accessibility' },
               ],
             },
             {
@@ -1420,18 +1420,18 @@ export default defineConfig({
               text: 'Radio buttons',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/radiobuttons/overview' },
-                { text: 'Frameworks', link: '/components/radiobuttons/frameworks/react' },
+                { text: 'Overview', link: '/components/radio-buttons/overview' },
+                { text: 'Frameworks', link: '/components/radio-buttons/frameworks/react' },
               ],
             },
             {
               text: 'Range slider',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/rangeslider/overview' },
-                { text: 'Usage', link: '/components/rangeslider/usage' },
-                { text: 'Frameworks', link: '/components/rangeslider/frameworks/android' },
-                { text: 'Accessibility', link: '/components/rangeslider/accessibility' },
+                { text: 'Overview', link: '/components/range-slider/overview' },
+                { text: 'Usage', link: '/components/range-slider/usage' },
+                { text: 'Frameworks', link: '/components/range-slider/frameworks/android' },
+                { text: 'Accessibility', link: '/components/range-slider/accessibility' },
               ],
             },
             {
@@ -1504,20 +1504,20 @@ export default defineConfig({
               text: 'Text area',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/textarea/overview' },
-                { text: 'Usage', link: '/components/textarea/usage' },
-                { text: 'Frameworks', link: '/components/textarea/frameworks/ios' },
-                { text: 'Accessibility', link: '/components/textarea/accessibility' },
+                { text: 'Overview', link: '/components/text-area/overview' },
+                { text: 'Usage', link: '/components/text-area/usage' },
+                { text: 'Frameworks', link: '/components/text-area/frameworks/ios' },
+                { text: 'Accessibility', link: '/components/text-area/accessibility' },
               ],
             },
             {
               text: 'Text field',
               collapsed: true,
               items: [
-                { text: 'Overview', link: '/components/textfield/overview' },
-                { text: 'Usage', link: '/components/textfield/usage' },
-                { text: 'Frameworks', link: '/components/textfield/frameworks/android' },
-                { text: 'Accessibility', link: '/components/textfield/accessibility' },
+                { text: 'Overview', link: '/components/text-field/overview' },
+                { text: 'Usage', link: '/components/text-field/usage' },
+                { text: 'Frameworks', link: '/components/text-field/frameworks/android' },
+                { text: 'Accessibility', link: '/components/text-field/accessibility' },
               ],
             },
             {
