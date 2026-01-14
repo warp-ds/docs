@@ -36,7 +36,34 @@
 
 ### Props
 
-<api-table type=elements component="Combobox" />
+#### Optional Props
+
+| Name                     | Type    | Default | Description                                                                                                        |
+| ------------------------ | ------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| options                  | array   | []      | The available options to select from. Each option is an object: `{ value: string; label?: string; key?: string }`. |
+| label                    | string  |         | Label above input                                                                                                  |
+| placeholder              | string  |         | Input placeholder                                                                                                  |
+| value                    | string  | ''      | The input value (controlled).                                                                                      |
+| open-on-focus            | boolean | false   | Whether the options list opens when focus is on the text field                                                     |
+| select-on-blur           | boolean | true    | Select active option on blur                                                                                       |
+| match-text-segments      | boolean | false   | Whether matching text segments in the options should be highlighted                                                |
+| disable-static-filtering | boolean | false   | Disable client-side static filtering                                                                               |
+| invalid                  | boolean | false   | Renders the input field in an invalid state                                                                        |
+| help-text                | string  |         | The content to display as the help text                                                                            |
+| disabled                 | boolean | false   | Whether the element is disabled                                                                                    |
+| required                 | boolean | false   | Whether the element is required                                                                                    |
+| optional                 | boolean | false   | Whether to show optional text                                                                                      |
+| name                     | string  |         | Name attribute for form submission                                                                                 |
+| autocomplete             | string  | off     | Autocomplete attribute for the input element. Gives a hint to the browser for autofill purposes.                   |
+
+#### Events
+
+| Name   | Description |
+| ------ | ----------- |
+| change | CustomEvent |
+| select | CustomEvent |
+| focus  | CustomEvent |
+| blur   | CustomEvent |
 
 #### Options (`options`)
 
