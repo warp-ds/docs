@@ -128,3 +128,5 @@ const selectedTab = ref('one');
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | name | string |  | Tab name identifier - This value should be the same as the `name` prop of the corresponding Tab component. |
+
+<component-questions />

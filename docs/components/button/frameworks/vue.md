@@ -57,3 +57,5 @@ import { wButton } from '@warp-ds/vue/button';
 | link | small |  |
 | utility | small, loading, quiet |  |
 | ~~pill~~ |  | @deprecated use `utility` together with `quiet` instead. |
+
+<component-questions />

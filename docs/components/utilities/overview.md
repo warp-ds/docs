@@ -1,4 +1,4 @@
-# Utilities - overview
+# Utilities - Overview
 These utility components are available to make some layout components interactive.
 
 <ComponentsStatus />
@@ -6,13 +6,5 @@ These utility components are available to make some layout components interactiv
 ## Example
 
 <utilities-example />
-
-## Frameworks
-
-<tabs-content>
-  <template #vue>
-    <vue />
-  </template>
-</tabs-content>
 
 <component-questions />

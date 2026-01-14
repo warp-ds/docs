@@ -77,3 +77,5 @@ import { wPill } from '@warp-ds/vue/pill';
 | Name | Description |
 | --- | --- |
 | close | the close button is pressed |
+
+<component-questions />

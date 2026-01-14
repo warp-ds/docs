@@ -100,3 +100,5 @@ Warp.StepIndicator(layoutOrientation: .horizontal, stepModel: stepModel).uiView
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | layoutOrientation | LayoutOrientation | .vertical | The orientation of the step indicator.  Use one of the predefined `LayoutOrientation` values: `.vertical`, or `.horizontal`. |
+
+<component-questions />

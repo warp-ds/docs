@@ -76,3 +76,5 @@ import { wButtonGroup, wButtonGroupItem } from '@warp-ds/vue/button-group';
 | Name | Description |
 | --- | --- |
 | default | button content |
+
+<component-questions />

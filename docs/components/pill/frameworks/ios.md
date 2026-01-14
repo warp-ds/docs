@@ -65,3 +65,5 @@ Warp.Pill(
 | onClose | `(() -> Void)?` | nil | If added will show a close button and replace any provided icon, and the action will trigger on pill close. |
 | iconContentDescription | String? | nil | The content description of the icon. Used for accessibility purposes. If not provided and we have `onClose` the default accessibility text is `Close` and for the `Warp.Icon` it is the accessibility of the icon. |
 | style | Warp.PillStyle | .filter | The style of the pill (`.filter`, `.suggestion`) |
+
+<component-questions />

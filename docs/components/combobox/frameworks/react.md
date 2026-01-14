@@ -348,3 +348,5 @@ function Example() {
   );
 }
 ```
+
+<component-questions />

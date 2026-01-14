@@ -105,3 +105,5 @@ export const DisabledRegular = () => {
 | --- | --- |
 | onChange | (value: number) => void |
 | onInput | (value: number) => void |
+
+<component-questions />

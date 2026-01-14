@@ -61,3 +61,5 @@ It is recommended to display a message to the user, for example a modal or toast
 | Name | Description |
 | --- | --- |
 | onClick | () => void |
+
+<component-questions />

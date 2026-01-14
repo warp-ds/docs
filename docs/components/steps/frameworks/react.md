@@ -128,3 +128,5 @@ function Example() {
 | --- | --- | --- | --- |
 | active | boolean | false | Step is active |
 | completed | boolean | false | Step is completed |
+
+<component-questions />

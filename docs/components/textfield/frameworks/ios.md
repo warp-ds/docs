@@ -58,7 +58,7 @@ Warp.TextField(
 | --- | --- | --- | --- |
 | text | Binding String |  | Binding to the text content. |
 
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -73,3 +73,5 @@ Warp.TextField(
 | rightIconAction | `() -> Void?` | nil | An optional action for right icon |
 | style | Warp.TextFieldStyle | .default | The style of the text field.  Use one of the predefined `TextFieldStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly` |
 | helpText | String? | nil | Optional `String` to display below the text field. |
+
+<component-questions />

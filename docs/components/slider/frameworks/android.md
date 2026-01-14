@@ -89,3 +89,5 @@ Not supported.
 | showRange | Boolean | false | Whether to show range indicators below the slider |
 | steps | @IntRange(from = 0) | 0 | Amount of steps that the slider can snap to |
 | interactionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the start thumb |
+
+<component-questions />

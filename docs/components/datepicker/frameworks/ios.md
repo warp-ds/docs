@@ -102,3 +102,5 @@ Not supported
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | range | ClosedRange\|PartialRangeFrom\|PartialRangeThrough |  | The range of selectable dates. If not provided, there is no date range restriction. |
+
+<component-questions />

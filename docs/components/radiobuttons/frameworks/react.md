@@ -156,3 +156,5 @@ function Example() {
   );
 }
 ```
+
+<component-questions />

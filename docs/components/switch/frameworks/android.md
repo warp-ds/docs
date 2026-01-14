@@ -69,3 +69,5 @@ fun setOnCheckedChangeListener(onCheckedChangeListener: ((Boolean) -> Unit))
 | enabled | boolean | true | Whether the switch is enabled or not |
 | checked | boolean | false | Whether the switch is on or off |
 | contentDescr | String | null | The a11y text for screenreaders |
+
+<component-questions />

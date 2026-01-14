@@ -41,3 +41,5 @@ import { Badge } from '@warp-ds/react/components/badge';
 | children | Element \| Element[] \| string |  | Content of the Badge component |
 | className | string |  | Additional CSS classes to apply to the component |
 | style | CSSProperties |  | CSS styles to inline on the component |
+
+<component-questions />

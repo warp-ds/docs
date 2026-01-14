@@ -43,3 +43,5 @@ Not supported
 | modifier | Modifier | Modifier | Modifier for the divider |
 | orientation | Orientation.Horizontal   Orientation.Vertical | Orientation.Horizontal | Orientation of the divider |
 | dashed | Boolean | false | Style of the divider, solid if false |
+
+<component-questions />

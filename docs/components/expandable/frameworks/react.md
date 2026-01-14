@@ -127,3 +127,5 @@ function Example() {
 | Name | Description |
 | --- | --- |
 | onChange | (state: boolean) => void |
+
+<component-questions />

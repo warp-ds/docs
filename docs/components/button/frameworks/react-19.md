@@ -119,3 +119,5 @@ The fullWidth prop sets the button's width to its parent's width.
 | loading | boolean | false | Set the button to look like it is in progress, can be combined with other button types. Can be combined with any button type. |
 | fullWidth | boolean | false | Sets the button's width to its parent's width. Useful especially on mobile when button should take full width. |
 | hasIconOnly | boolean |  | Facilitate a round button for icon. |
+
+<component-questions />

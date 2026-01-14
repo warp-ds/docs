@@ -182,3 +182,5 @@ When the calendar is open and a day cell is focused:
 - Roving tabindex is used: the “navigation date” day has `tabindex="0"`, other day cells have `tabindex="-1"`.
 - `aria-label` on day cells uses `day-format` for screen reader announcement.
 - The toggle button’s `aria-label` changes based on whether there’s a selected date (“Choose date” / “Change date, {currentDate}”).
+
+<component-questions />

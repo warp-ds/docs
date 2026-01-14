@@ -107,3 +107,5 @@ export const DisabledRanged = () => {
 | --- | --- |
 | onChange | (value: [number, number]) => void |
 | onInput | (value: [number, number]) => void |
+
+<component-questions />

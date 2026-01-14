@@ -129,3 +129,5 @@ The fullWidth prop sets the links width to its parent's width.
 | href | string |  | Set the href for the location where clicking the link will take you to. |
 | target | string |  | Anchor target, see [The Anchor element / MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). |
 | rel | string |  | The relationship of the linked URL. |
+
+<component-questions />

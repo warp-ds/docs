@@ -217,3 +217,5 @@ To support layouts still written in xml the WarpButton can be used as a custom v
 | trailingIconContentDescr | String | null | The content description of the icon |
 | small | Boolean | false | Set to show a smaller slimmed version of the button |
 | iconModifier | Modifier | Modifier | Sets the modifier for the icon |
+
+<component-questions />

@@ -230,3 +230,5 @@ function Example() {
   );
 }
 ```
+
+<component-questions />

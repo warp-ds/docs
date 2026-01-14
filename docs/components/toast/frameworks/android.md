@@ -90,7 +90,7 @@ Not supported
 | --- | --- | --- | --- |
 | state | WarpToastState |  | State of the toast used in hide/show logic and to set the text |
 
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -98,3 +98,5 @@ Not supported
 | type | WarpToastType.Success   WarpToastType.Warning   WarpToastType.Error | WarpToastType.Success | Style of the toast |
 | duration | WarpToastDuration.SHORT   WarpToastDuration.LONG   WarpToastDuration.INFINITE | WarpToastDuration.SHORT | Duration the Toast is shown |
 | onDismiss | `() -> Unit` | {} | The function to be invoked when dismissed |
+
+<component-questions />

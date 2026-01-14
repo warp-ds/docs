@@ -110,3 +110,5 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 | Name | Description |
 | --- | --- |
 | @close |  |
+
+<component-questions />

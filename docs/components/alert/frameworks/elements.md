@@ -112,3 +112,5 @@ attribute on
 | --- | --- | --- | --- |
 | show | boolean | false | Controls when the alert shows |
 | role | string | alert | ARIA live region "role" attribute value |
+
+<component-questions />

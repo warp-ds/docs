@@ -54,3 +54,5 @@ Supported in xml layouts
 | --- | --- | --- | --- |
 | modifier | Modifier | Modifier | Sets the modifier for the spinner |
 | size | WarpSpinnerSize.Small  WarpSpinnerSize.Default  WarpSpinnerSize.Large | WarpSpinnerSize.Default | Size of the spinner |
+
+<component-questions />

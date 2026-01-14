@@ -101,3 +101,5 @@ selectElement.addEventListener('change', e => handleChange(e))
 ```
 
 In Svelte, the element can be accessed using query selection or using bind (see [bind:this](https://svelte.dev/docs/svelte/bind#bind:this)).
+
+<component-questions />

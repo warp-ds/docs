@@ -26,3 +26,5 @@ Box is a layout component used for separating content areas on a page.
 | info | boolean | false | Will style the box with colors for indicating that it has informative content |
 | neutral | boolean | false | Will style the box in a neutral fashion |
 | role | string | region | Sets the ARIA `role` attribute to provide semantic meaning. To remove the default role attribute, supply an empty role (`role=""`). |
+
+<component-questions />

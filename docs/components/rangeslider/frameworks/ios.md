@@ -89,3 +89,5 @@ Warp.RangeSlider(
 | selectedItems | Binding |  | For discrete sliders: a binding to the currently selected items from the list. T must conform to LosslessStringConvertible & Equatable. |
 | items | Array |  | For discrete sliders: an array of items to choose from. T must conform to LosslessStringConvertible & Equatable. |
 | valueFormat | `(T) -> String` | nil | For discrete sliders: a closure that formats the displayed value. Defaults to a simple string conversion. |
+
+<component-questions />

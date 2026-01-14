@@ -61,3 +61,5 @@ attribute on
 | className | string | undefined | Additional classes to include |
 | style | React.CSSProperties | undefined | Additional CSS styles for the container |
 | id | string | undefined | Used to uniquely identify the alert — for ARIA attributes or other DOM interactions |
+
+<component-questions />

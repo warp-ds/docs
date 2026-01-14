@@ -108,3 +108,5 @@ if(openModal) {
 | showCloseIcon | Boolean | false | Whether the close icon (X) should be displayed in the top right corner. |
 | dismissOnClickOutside | Boolean | true | Whether the modal should be closed when clicking outside of its layout. |
 | dismissOnBackPress | Boolean | true | Whether the modal should be closed when pressing back. |
+
+<component-questions />

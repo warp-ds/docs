@@ -56,3 +56,5 @@ Pill is a type of button that is often used as a filter, but can also be used as
 | --- | --- |
 | w-pill-click | Event to be called when the pill is clicked. |
 | w-pill-close | Event to be called when the close button is clicked. |
+
+<component-questions />

@@ -75,3 +75,5 @@ Not supported
 | modifier | Modifier | Modifier | Sets the modifier for the expandable |
 | initiallyExpanded | Boolean | false | If should show expanded content |
 | type | WarpExpandableType.Default   WarpExpandableType.Box | WarpExpandableType.Default | Style of the expandable |
+
+<component-questions />

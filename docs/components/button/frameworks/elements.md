@@ -136,3 +136,5 @@ There will always be users who don't understand why an element is disabled, or u
 | target | string |  | Anchor target, see [The Anchor element / MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). |
 | rel | string |  | The relationship of the linked URL. |
 | fullWidth | boolean |  | Sets the button's width to its parent's width. Useful especially on mobile when button should take full width. |
+
+<component-questions />

@@ -140,3 +140,5 @@ Not supported.
 | showRange | Boolean | false | Whether to show range indicators below the slider |
 | startInteractionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the start thumb. |
 | endInteractionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the end thumb. |
+
+<component-questions />

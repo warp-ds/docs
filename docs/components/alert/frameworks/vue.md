@@ -50,3 +50,5 @@ import { wAlert } from '@warp-ds/vue/alert';
 | positive | boolean | undefined | Creates a positive alert |
 | warning | boolean | undefined | Creates a warning alert |
 | info | boolean | undefined | Creates an info alert |
+
+<component-questions />

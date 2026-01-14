@@ -178,3 +178,5 @@ It is important that all children of Tabs are Tab components.
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | hidden | boolean |  | Show/hide panel manually (in server-side rendering). |
+
+<component-questions />

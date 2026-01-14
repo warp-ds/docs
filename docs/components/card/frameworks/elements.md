@@ -161,3 +161,5 @@ Full code example:
   </div>
 </w-card>
 ```
+
+<component-questions />

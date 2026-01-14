@@ -102,3 +102,5 @@ Warp.Radio(
 | axis | Axis.Set | .vertical | Determines whether the list of radios is aligned vertically or horizontally. Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`. |
 | onSelection | `((Option, Option) -> Void)?` | nil | A closure that will be triggered when an option is selected, providing the old and newly selected options. |
 | extraContent | AnyView? | nil | An optional view that will be displayed beside the label. This is only for `Radio` and can be passed from the `Options` in `RadioGroup`. |
+
+<component-questions />

@@ -73,3 +73,5 @@ Warp.Modal(
 | hasCloseButton | Bool | false | A Boolean value indicating whether a close button should be shown. |
 | dismissOnClickOutside | Bool | true | Determines whether the component should be dismissed when the user clicks outside of it. |
 | onDismiss | `(() -> Void)?` | nil | Action to be executed when the Modal is dismissed, either by pressing the Close button or by clicking outside the Modal. |
+
+<component-questions />

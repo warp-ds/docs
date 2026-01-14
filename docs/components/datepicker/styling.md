@@ -13,3 +13,5 @@ Text field and picker popover padding and size measurements.
 ::: image-block
 ![Example of the date picker calendar with a red highlight, displaying a 4 px gap between the row of weekdays and first row of dates.](/components/datepicker/style-layout_sizing_2.svg)
 :::
+
+<component-questions />

@@ -87,3 +87,5 @@ Warp.Alert(
 | link | `(title: String, action: () -> Void)?` | nil | An optional tuple containing the title and action for a clickable link that appears below the subtitle. |
 | primaryButton | `(title: String, action: () -> Void)?` | nil | An optional tuple containing the title and action for a primary button. |
 | secondaryButton | `(title: String, action: () -> Void)?` | nil | An optional tuple containing the title and action for a secondary button. |
+
+<component-questions />

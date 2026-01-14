@@ -90,3 +90,4 @@ WarpTabRow(
 | onClick | `() -> Unit` | {} | The function to be invoked when clicked |
 | interactionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the tab. |
 
+<component-questions />

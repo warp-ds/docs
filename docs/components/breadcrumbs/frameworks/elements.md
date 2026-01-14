@@ -24,3 +24,5 @@ Breadcrumbs show users their current location relative to the information archit
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | aria-label | string | Her er du | Defines a string value that labels the current element. |
+
+<component-questions />

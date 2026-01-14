@@ -1,4 +1,4 @@
-# Text area - Overview
+# Text area - Frameworks
 A text area allows users to input extended text content that covers multiple lines.
 
 <ComponentsStatus />
@@ -162,3 +162,5 @@ The `maximumRows` prop sets the maximum number of text rows the TextArea should 
   defaultValue={'Lorem\nipsum\ndolor\nsit\namet'}
 />
 ```
+
+<component-questions />

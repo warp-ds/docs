@@ -14,7 +14,7 @@ A text field is a single-line input component used for entering and editing text
 ```
 
 ### Textfield Attributes
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -124,3 +124,5 @@ docs for more information.
   <w-textfield label="Email" read-only></w-textfield>
 </div>
 ```
+
+<component-questions />

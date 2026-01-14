@@ -119,3 +119,5 @@ To support layouts still written in xml the WarpPill can be used as a custom vie
 | selected | boolean | false | Whether the pill appears in selected mode or not |
 | closable | boolean | false | Whether the pill should be removable via a close button. Will override the custom icon |
 | icon | WarpIconResource? | null | The icon to be displayed in the pill after the text |
+
+<component-questions />

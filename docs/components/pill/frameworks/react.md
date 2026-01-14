@@ -72,3 +72,5 @@ import { Pill } from '@warp-ds/react/components/pill';
 | --- | --- |
 | onClick | Action to be called when the pill is clicked. |
 | onClose | Action to be called when the close button is clicked. |
+
+<component-questions />

@@ -87,3 +87,5 @@ Badges are used to highlight a relevant piece of information, like status or cat
 | --- | --- | --- | --- |
 | variant | `'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'` | 'neutral' |  |
 | position | `'top-left', 'top-right', 'bottom-right', 'bottom-left'` | undefined | Used for absolute positioning of the badge within a container |
+
+<component-questions />

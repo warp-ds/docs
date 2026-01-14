@@ -176,3 +176,5 @@ When used within a container, such as a modal or a section, the empty state shou
 </div>
 
 <span style="color: var(--vp-c-text-2);">Example showing an empty state displayed within a modal, aligned with the container layout.</span>
+
+<component-questions />

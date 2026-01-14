@@ -83,3 +83,5 @@ Warp.Slider(
 | onEditingChanged | `((Double) -> Void)?` | nil | A closure that is called when the slider's thumb is released, passing the final value as an argument. |
 | selectedItem | Binding (where T: LosslessStringConvertible & Equatable) | — | For discrete sliders: a binding to the currently selected item from the list. |
 | items | Array (where T: LosslessStringConvertible & Equatable) | — | For discrete sliders: an array of items to choose from. |
+
+<component-questions />

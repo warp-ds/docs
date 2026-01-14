@@ -181,3 +181,5 @@ fun setOnCheckedChangeListener(onCheckedChangeListener: ((Boolean) -> Unit))
 | helpText | String | null | The text displayed below the checkbox group |
 | enabled | boolean | true | Whether the checkbox group is enabled or not |
 | isError | boolean | false | Shows the checkbox group in error state if true |
+
+<component-questions />

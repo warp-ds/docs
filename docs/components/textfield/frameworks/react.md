@@ -28,7 +28,7 @@ import { TextField } from '@warp-ds/react/components/textfield';
 
 ### Props
 
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -213,3 +213,5 @@ The readOnly boolean prop makes the TextField's text content immutable. Unlike d
   <TextField label="E-post" readOnly />
 </div>
 ```
+
+<component-questions />

@@ -61,3 +61,5 @@ Basic usage for the page indicator. Should ideally be used together with a pager
 | --- | --- | --- | --- |
 | modifier | Modifier | Modifier | Modifier for the page indicator |
 | currentPage | Int | 0 | Current dot to be selected |
+
+<component-questions />

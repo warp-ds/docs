@@ -51,3 +51,5 @@ Warp.Tabs(
 | --- | --- | --- | --- |
 | tabs | [Warp.TabItem] |  | An array of `Warp.TabItem` objects to display as selectable tabs. |
 | selectedIndex | Binding Int |  | A binding to the index of the currently selected tab. |
+
+<component-questions />

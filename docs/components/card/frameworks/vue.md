@@ -37,3 +37,5 @@ import { wCard } from '@warp-ds/vue/card'
 | selected | boolean |  | If the card is selected |
 | flat | boolean |  | Removes box shadow around card |
 | as | string | div | The DOM element to emit |
+
+<component-questions />

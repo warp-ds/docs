@@ -41,3 +41,4 @@ Use icon name from above list
 | size | `'small' \| 'medium' \| 'large' \| 'xypx'` | medium | The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`. |
 | locale | string |  | The locale to use for the icon, e.g. "nb" for Norwegian Bokmål |
 
+<component-questions />

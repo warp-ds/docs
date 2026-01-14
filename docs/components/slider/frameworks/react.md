@@ -76,3 +76,5 @@ function Example() {
 | Name | Description |
 | --- | --- |
 | onChange | (value: number) => void |
+
+<component-questions />

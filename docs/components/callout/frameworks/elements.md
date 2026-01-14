@@ -114,3 +114,5 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 | Name | Description |
 | --- | --- |
 | @close | Triggered when user clicks the close button or presses Escape when the button is in focus. |
+
+<component-questions />

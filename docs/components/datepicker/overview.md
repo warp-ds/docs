@@ -28,6 +28,4 @@ Related components: [Text field](../textfield/overview.md)
 
 **4. Calendar popover**: Contains the list of all dates. Left and right buttons allowing to navigate the months, month and year header, calendar grid with weekdays and days of the month.
 
-
-
 <component-questions />

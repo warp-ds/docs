@@ -129,3 +129,5 @@ fun setButtonOnClickListener(onClick: OnClickListener?)
 | linkAction | `() -> Unit` | null | Lambda to be invoked when clicked on the link |
 | buttonText | String | null | The button text to be displayed on the button in the box |
 | buttonAction | `() -> Unit` | null | Lambda to be invoked when clicked on the button |
+
+<component-questions />

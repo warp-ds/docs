@@ -18,3 +18,5 @@ Even though the badge is implemented as a slot (container), the spacing between 
 - Padding-right: ``s8px``
 - Padding-bottom: ``4px``
 - Gap: ``4px``
+
+<component-questions />

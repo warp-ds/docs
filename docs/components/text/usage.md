@@ -1,4 +1,4 @@
-# Text - Overview
+# Text - Usage
 Pre-defined styles provide a font and size.
 
 <ComponentsStatus />

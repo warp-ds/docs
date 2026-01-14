@@ -79,3 +79,5 @@ Warp.Box(
 | shouldShowToolTipImage | Bool | true | Flag indicating tooltip image should be shown. |
 | link | `(title: String, action: () -> Void)?` | nil | Tuple that will provide a title and an action for creating a link view below subtitle.  Passing `nil` will skip adding link view. |
 | button | Warp.Button? | nil | A button view below link.  Passing `nil` will skip adding button view. |
+
+<component-questions />

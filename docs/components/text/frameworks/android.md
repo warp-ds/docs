@@ -1,4 +1,4 @@
-# Text - Overview
+# Text - Frameworks
 Pre-defined styles provide a font and size.
 
 <ComponentsStatus />
@@ -112,3 +112,5 @@ fun setOnClickListener(onCLick: OnClickListener?)
 | softWrap | Boolean | true | If text should wrap or not |
 | textDecoration | TextDecoration | null | Defines a horizontal line to be drawn on the text. Useful for displaying links |
 | onTextLayout | `(TextLayoutResult) -> Unit` | {} | Callback providing paragraph info, text size, baselines, and more |
+
+<component-questions />

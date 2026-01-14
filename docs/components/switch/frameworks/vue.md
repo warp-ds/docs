@@ -49,3 +49,5 @@ import { wSwitch } from '@warp-ds/vue/switch';
 | --- | --- | --- | --- |
 | id | string | false | The unique identifier. |
 | disabled | boolean | false | Whether the switch is disabled. |
+
+<component-questions />

@@ -50,3 +50,5 @@ Warp.Switch(isOn: $isOn).uiView
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | state | Warp.SwitchState | .default | The state of the switch.  Use one of the predefined `SwitchState` values: `.default`, or `.disabled` |
+
+<component-questions />

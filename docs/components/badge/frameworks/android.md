@@ -83,3 +83,5 @@ To support layouts still written in xml the WarpBadge can be used as a custom vi
 | style | WarpBadgeStyle.Neutral  WarpBadgeStyle.Info  WarpBadgeStyle.Success  WarpBadgeStyle.Warning  WarpBadgeStyle.Error  WarpBadgeStyle.Disabled  WarpBadgeStyle.Sponsored  WarpBadgeStyle.Price | WarpBadgeStyle.Neutral | Sets the appearance of the badge |
 | alignmentStyle | WarpBadgeAlignment.None  WarpBadgeAlignment.TopStart  WarpBadgeAlignment.TopEnd  WarpBadgeAlignment.BottomStart  WarpBadgeAlignment.BottomEnd | WarpBadgeAlignment.None | Sets the alignment style for the badge |
 | icon | WarpIconResource? | null | Sets the icon for the badge |
+
+<component-questions />

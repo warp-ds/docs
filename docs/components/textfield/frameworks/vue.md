@@ -39,7 +39,7 @@ import { wTextfield } from '@warp-ds/vue/forms';
 
 The props documented below have defaults set or are unique to this component, all typical HTML5 attributes are valid props.
 
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -158,7 +158,7 @@ The required prop can accept a function that will be used as the required-rule.
 <w-field>
 ```
 
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -168,3 +168,5 @@ The required prop can accept a function that will be used as the required-rule.
 | label-level | number |  | Usable on toggles, will make the emitted legend element into a heading for accessibility. |
 | optional | string |  | Mark label to indicate that this input is optional. |
 | read-only | string |  | Whether the input can be selected but not changed by the user. |
+
+<component-questions />

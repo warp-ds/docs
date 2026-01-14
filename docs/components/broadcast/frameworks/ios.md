@@ -72,3 +72,5 @@ Warp.Broadcast(
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | isDismissable | Bool | true | Determines if dismissable by the user or not. Will add a close button. |
+
+<component-questions />

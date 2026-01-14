@@ -53,3 +53,5 @@ Warp.ButtonPill(
 | --- | --- | --- | --- |
 | type | Warp.ButtonPillType |  | The type of the button (`flat` or `overlay`). |
 | selected | Binding Bool |  | A binding to the selected state of the button. |
+
+<component-questions />

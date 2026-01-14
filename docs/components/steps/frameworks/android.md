@@ -143,3 +143,5 @@ var stepContent: @Composable ((Int) -> Unit)?
 | stepContentDescription | `@Composable (Int) -> String` | null | The content description of the step. Used for accessibility purposes |
 | stepTitle | `(Int) -> String` | null | Lambda for the step title, returns the integer value of the step |
 | stepDescription | `(Int) -> String` | null | Lambda for the step description, returns the integer value of the step |
+
+<component-questions />

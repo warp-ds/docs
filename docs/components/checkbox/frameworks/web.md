@@ -64,4 +64,4 @@ Checkboxes allow users to select one or more options from a number of choices.
 | name | string | "" | The name of the checkbox, submitted as a name/value pair with form data. |
 | value | string | null | The value of the checkbox, submitted as a name/value pair with form data. |
 
-
+<component-questions />

@@ -46,3 +46,5 @@ import { wBreadcrumbs } from '@warp-ds/vue/breadcrumbs';
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | aria-label | string | Her er du | Defines a string value that labels the current element. |
+
+<component-questions />

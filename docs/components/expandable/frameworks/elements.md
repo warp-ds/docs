@@ -65,3 +65,5 @@ This can be used if more control over styling is needed than the `title` prop al
 | as | string | div | The DOM element to emit |
 | v-model | boolean |  | Controls the expansion/collapse |
 | chevron | boolean | true | Controls chevron visibility |
+
+<component-questions />

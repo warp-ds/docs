@@ -144,3 +144,5 @@ function Example() {
   );
 }
 ```
+
+<component-questions />

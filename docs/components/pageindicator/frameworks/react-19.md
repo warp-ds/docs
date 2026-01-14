@@ -45,3 +45,5 @@ You can apply custom styling to align the component and add padding as needed:
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | style | CSSProperties |  | CSS styles to inline on the component container. |
+
+<component-questions />

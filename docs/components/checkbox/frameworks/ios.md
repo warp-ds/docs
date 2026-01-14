@@ -111,3 +111,5 @@ Warp.Checkbox(
 | axis | Axis.Set | .vertical | Determines whether the list of checkboxes is aligned vertically or horizontally. Use one of the predefined `Axis` values: `.horizontal`, or `.vertical`. |
 | onSelection | `((Option, [Option]) -> Void)?` | nil | A closure that will be triggered when an option is selected, providing the latest selected option and the updated list of options. |
 | extraContent | AnyView? | nil | An optional view that will be displayed beside the label. This is only for `Checkbox` and can be passed from the `Options` in `CheckboxGroup`. |
+
+<component-questions />

@@ -138,3 +138,5 @@ Using disabled is considered an anti-pattern and is therefore not supported.
 There will always be users who don't understand why an element is disabled, or
 users who can't even see that it is disabled because of poor lighting conditions
 or other reasons. Please consider more informative alternatives.
+
+<component-questions />

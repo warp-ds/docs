@@ -1,4 +1,4 @@
-# Text - Overview
+# Text - Frameworks
 Pre-defined styles provide a font and size.
 
 <ComponentsStatus />
@@ -64,3 +64,5 @@ Warp.Text("This is a text", style: .body).uiView
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | color | Color | Warp.Token.text | A solid color for the text. |
+
+<component-questions />

@@ -71,3 +71,5 @@ import { wSlider } from '@warp-ds/vue/slider'
 | step | number |  | Specifies the value granularity |
 | label | string |  | String value for aria-label |
 | labelled-by | string |  | Identifies the element that labels the slider |
+
+<component-questions />

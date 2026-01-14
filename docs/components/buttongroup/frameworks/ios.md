@@ -51,3 +51,5 @@ Warp.ButtonGroup(buttons: $buttons, singleSelect: true) { updatedButtons in
 | --- | --- | --- | --- |
 | singleSelect | Bool | false | Specifies the selection behavior. If `true`, only one button can be selected at a time. If `false`, multiple buttons can be selected. |
 | onSelectionChange | `(([(String, Bool)]) -> Void)?` | nil | An optional closure that receives the updated button array whenever the selection changes. |
+
+<component-questions />

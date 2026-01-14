@@ -88,3 +88,5 @@ Not supported
 | style | WarpTextStyle.Display  WarpTextStyle.Title1  WarpTextStyle.Title2  WarpTextStyle.Title3  WarpTextStyle.Title4  WarpTextStyle.Title5  WarpTextStyle.Title6  WarpTextStyle.Preamble  WarpTextStyle.Body  WarpTextStyle.BodyStrong  WarpTextStyle.Caption  WarpTextStyle.CaptionStrong  WarpTextStyle.Detail  WarpTextStyle.DetailStrong | WarpTextStyle.Body | Sets the appearance of the link - font and size |
 | icon | WarpIconResource | null | Icon displayed after the text. |
 | underline | Boolean | false | If text should be underlined or not |
+
+<component-questions />

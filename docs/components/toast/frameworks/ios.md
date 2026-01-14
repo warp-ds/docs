@@ -100,8 +100,10 @@ Warp.Toast(
 | toastEdge | Warp.ToastEdge |  | The position of the toast to be displayed.  Use one of the predefined `ToastEdge` values: `.top`, or `.bottom` |
 | isPresented | Binding Bool |  | The binding to control the visibility |
 
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | duration | Warp.Toast.Duration.short   Warp.Toast.Duration.long   Warp.Toast.Duration.custom(interval:) | .short | Duration the Toast is shown |
+
+<component-questions />

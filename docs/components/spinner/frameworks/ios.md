@@ -49,3 +49,5 @@ Warp.Spinner(size: .large).uiView
 | size | Warp.SpinnerSize | .default | Size of the `Spinner`. Use one of the predefined `SpinnerSize` values: `.small`, `.default`, `.large`, or `.custom`. |
 | duration | CGFloat | 1 | Duration of Spinner animation |
 | lineWidth | CGFloat | 3 | The thickness of the `Spinner` |
+
+<component-questions />

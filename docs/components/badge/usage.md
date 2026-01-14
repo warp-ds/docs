@@ -45,3 +45,5 @@ Although possible, avoid placing more than one badge per container.
 - Avoid using multiple words.
 
 <br>
+
+<component-questions />

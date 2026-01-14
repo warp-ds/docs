@@ -53,3 +53,5 @@ function PaginationExample() {
     />;
 }
 ```
+
+<component-questions />

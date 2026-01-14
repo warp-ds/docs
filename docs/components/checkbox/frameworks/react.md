@@ -278,3 +278,5 @@ function Example() {
   );
 }
 ```
+
+<component-questions />

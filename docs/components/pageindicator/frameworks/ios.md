@@ -35,3 +35,5 @@ Warp.PageIndicator(pageCount: 5).uiView
 | --- | --- | --- | --- |
 | pageCount | Int |  | The total number of pages. |
 | selectedPage | Binding Int |  | Binding to an integer representing the currently selected page. |
+
+<component-questions />

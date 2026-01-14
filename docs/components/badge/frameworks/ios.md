@@ -85,3 +85,5 @@ Warp.Badge(
 | --- | --- | --- | --- |
 | icon | Warp.Icon? | nil | The optional icon to display inside the badge. |
 | position | Warp.BadgePosition | .default | The corner position for the badge.  Use one of the predefined `BadgePosition` values: `.default`, `.topLeft`, `.topRight`, `.bottomLeft`, or `.bottomRight` |
+
+<component-questions />

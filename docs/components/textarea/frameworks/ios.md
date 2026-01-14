@@ -1,4 +1,4 @@
-# Text area - Overview
+# Text area - Frameworks
 A text area allows users to input extended text content that covers multiple lines.
 
 <ComponentsStatus />
@@ -72,3 +72,5 @@ Warp.TextArea(
 | style | Warp.TextAreaStyle | .default | The style of the text area.  Use one of the predefined `TextAreaStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly` |
 | helpText | String? | nil | Optional `String` to display below the text area. |
 | minHeight | CGFloat | 88 | Minimum height for the text area. |
+
+<component-questions />

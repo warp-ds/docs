@@ -87,3 +87,5 @@ A modal is a focused dialog that temporarily blocks the interface to request a s
 | --- | --- | --- | --- |
 | back | boolean | false | Whether the modal header should have a back button |
 | no-close | boolean | false | Whether the modal header should have a close button |
+
+<component-questions />

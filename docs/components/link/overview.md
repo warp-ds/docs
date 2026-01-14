@@ -48,5 +48,4 @@ Related components: [Button](https://www.figma.com/design/pLorEdyAMCZXoxkaCSgREO
 1. <b>Hyperlinked text/text link:</b> Communicates what is being linked to.
 2. <b>Trailing icon:</b> Visual indicator that reinforces the purpose of the text link (optional).
 
-
 <component-questions />

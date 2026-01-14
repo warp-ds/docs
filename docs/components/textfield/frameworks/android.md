@@ -208,7 +208,7 @@ To support layouts still written in xml the WarpTextField can be used as a custo
 | value | String |  | The text displayed currently in the textfield |
 | onValueChange | `(String) -> Unit` |  | Lambda to be invoked when input value changes |
 
-#### Optional Props
+#### Optional props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -231,3 +231,5 @@ To support layouts still written in xml the WarpTextField can be used as a custo
 | minLines | Int | 1 | Sets the minimum amount of lines |
 | maxLines | Int | Int.MAX_VALUE | Sets the maximum amount of lines allowed |
 | interactionSource | MutableInteractionSource | MutableInteractionSource | MutableInteractionSource represents a stream of Interactions corresponding to events emitted by a component |
+
+<component-questions />

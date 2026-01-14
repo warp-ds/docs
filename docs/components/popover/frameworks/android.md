@@ -95,3 +95,5 @@ Not supported
 | dismissPopoverOnClickOutside | Boolean | true | If should dismiss the popover when clicked outside it |
 | onDismiss | `() -> Unit` | {} | The lambda to be invoked when dismissed |
 | anchorView | `@Composable () -> Unit` | null | The anchor which the popover points to |
+
+<component-questions />
