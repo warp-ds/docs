@@ -1,3 +1,12 @@
+# Combo box - Frameworks
+A combo box combines a dropdown list with an editable text input, allowing users to either select an option or type their own.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Usage Notes
 
 `<w-combobox>` is a text input with a selectable list of options.
@@ -8,6 +17,10 @@
 - Keyboard navigation is supported (ArrowUp/ArrowDown, Home/End, PageUp/PageDown). `Enter` selects the active option.
 
 ### Example
+
+<style-isolate>
+  <w-combobox></w-combobox>
+</style-isolate>
 
 ```html
 <w-combobox id="demo-combobox"></w-combobox>
@@ -65,6 +78,8 @@
 | focus  | CustomEvent |
 | blur   | CustomEvent |
 
+Each event object (except focus) includes a `detail.value` property which contains the selected value as a `string`.
+
 #### Options (`options`)
 
 The available options to select from.
@@ -99,6 +114,10 @@ Type: `string`
 
 Default: `undefined`
 
+<style-isolate>
+  <w-combobox label="Fruit"></w-combobox>
+</style-isolate>
+
 ```html example
 <w-combobox label="Fruit"></w-combobox>
 ```
@@ -110,6 +129,10 @@ Input placeholder.
 Type: `string`
 
 Default: `undefined`
+
+<style-isolate>
+  <w-combobox placeholder="Search…"></w-combobox>
+</style-isolate>
 
 ```html example
 <w-combobox placeholder="Search…"></w-combobox>
@@ -190,6 +213,10 @@ Type: `boolean`
 
 Default: `false`
 
+<style-isolate>
+  <w-combobox invalid></w-combobox>
+</style-isolate>
+
 ```html example
 <w-combobox invalid></w-combobox>
 ```
@@ -202,6 +229,10 @@ Type: `string`
 
 Default: `undefined`
 
+<style-isolate>
+  <w-combobox help-text="Choose a city"></w-combobox>
+</style-isolate>
+
 ```html example
 <w-combobox help-text="Choose a city"></w-combobox>
 ```
@@ -213,6 +244,10 @@ Whether the element is disabled.
 Type: `boolean`
 
 Default: `false`
+
+<style-isolate>
+  <w-combobox disabled></w-combobox>
+</style-isolate>
 
 ```html example
 <w-combobox disabled></w-combobox>
