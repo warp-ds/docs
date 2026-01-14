@@ -1,3 +1,12 @@
+# Text field - Frameworks
+A text field is a single-line input component used for entering and editing textual data.
+
+<ComponentsStatus />
+
+## iOS
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```swift
@@ -43,4 +52,24 @@ Warp.TextField(
 
 ### Params
 
-<api-table type=iOS component="TextField" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | Binding String |  | Binding to the text content. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | String | empty | The main title text to display. |
+| additionalInformation | String? | nil | Optional text to display after the title. |
+| tooltipContent | AnyView? | nil | An optional view to display when the tooltip icon is tapped. |
+| leftIcon | Warp.Icon? | nil | An optional `Warp.Icon` displayed on the left side of the text field. |
+| prefix | String? | nil | An optional string displayed before the text input. |
+| placeholder | String | empty | Text to display when the text field is empty. |
+| suffix | String? | nil | An optional string displayed after the text input. |
+| rightIcon | Warp.Icon? | nil | An optional `Warp.Icon` displayed on the right side of the text field. |
+| rightIconAction | `() -> Void?` | nil | An optional action for right icon |
+| style | Warp.TextFieldStyle | .default | The style of the text field.  Use one of the predefined `TextFieldStyle` values: `.default`, `.disabled`, `.error`, or `.readOnly` |
+| helpText | String? | nil | Optional `String` to display below the text field. |

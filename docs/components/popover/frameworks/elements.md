@@ -1,3 +1,12 @@
+# Popover - Frameworks
+A Popover is a message box that is displayed floating over page content after pressing a trigger element, like an info-icon.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 ### Visual options
 
 #### Default
@@ -75,4 +84,29 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 
 ### Props
 
-<api-table type="elements" component="Popover" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| target-selector | string |  | Selector of element that the Attention component is rendered relatively to |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| placement | `'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end'` | 'bottom' | Placement according to the target element. Arrow would be on the opposite side of this position |
+| show | boolean | false | Whether Attention element should be visible |
+| popover | boolean | false | Whether Attention element is rendered as a popover |
+| no-arrow | boolean | false | Render Attention element without an arrow |
+| can-close | boolean | false | Render Attention element with a close button |
+| distance | number | 8 | Distance from which to offset the Attention component from the targetEl vertically |
+| skidding | number | 0 | Distance from which to offset the Attention component along its targetEl horizontally. |
+| flip | boolean | false | Whether Attention element should flip its placement in order to keep it in view |
+| cross-axis | boolean | false | Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true. |
+| fallback-placements | array | undefined | Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| @close |  |

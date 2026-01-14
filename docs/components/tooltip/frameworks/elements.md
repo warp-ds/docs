@@ -1,3 +1,12 @@
+# Tooltip - Frameworks
+A tooltip is a message box that is displayed when a user hovers over or gives focus to a UI element.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 ### Visual option
 
 ```js
@@ -62,4 +71,28 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
 
 ### Props
 
-<api-table type="elements" component="Tooltip" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| target-selector | string |  | Selector of element that the Attention component is rendered relatively to |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| placement | 'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end' | 'bottom' | Placement according to the target element. Arrow would be on the opposite side of this position |
+| show | boolean | false | Whether Attention element should be visible |
+| tooltip | boolean | false | Whether Attention component is rendered as a tooltip |
+| no-arrow | boolean | false | Render Attention element without an arrow |
+| distance | number | 8 | Distance from which to offset the Attention component from the targetEl vertically |
+| skidding | number | 0 | Distance from which to offset the Attention component along its targetEl horizontally. |
+| flip | boolean | false | Whether Attention element should flip its placement in order to keep it in view |
+| cross-axis | boolean | false | Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true. |
+| fallback-placements | array | undefined | Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| @close | Triggered when user clicks the close button or presses Escape when the button is in focus. |

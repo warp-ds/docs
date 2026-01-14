@@ -1,3 +1,12 @@
+# Expandable - Frameworks
+Expandable is a layout component used for creating content that can be expanded and collapsed.
+
+<ComponentsStatus />
+
+## Vue
+
+<FrameworkTabs />
+
 ### Import
 
 > Use in entire app
@@ -69,4 +78,28 @@ The wExpandTransition component can wrap one or more wWillExpand components.
 
 ### Props
 
-<api-table type="vue" component="Expandable" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| v-model | boolean | false | If not provided, the component will use an internal value that starts the expandable 'closed' |
+| as | string | div | The DOM element to emit |
+| box | boolean |  | Will make the expandable a Box |
+| bleed | boolean |  | Will make the expandable full-width on sm-size |
+| buttonClass | string |  | Additional CSS classes to include on the button part of the component |
+| contentClass | string |  | Additional CSS classes to include on the content part of the component |
+| chevron | boolean | true | Controls chevron visibility |
+
+#### Slots
+
+| Name | Description |
+| --- | --- |
+| title | string |
+| default | string |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| expand | boolean |
+| collapse | boolean |

@@ -14,7 +14,7 @@ Semantic tokens are not connected to any specific component and can be used to c
 
 You find the semantic tokens in the right sidebar and they practically work like a normal Figma style.
 
-You can find an overview of our semantic tokens here: [foundations > tokens > overview](../../../foundations/tokens/overview/index.md)
+You can find an overview of our semantic tokens here: [foundations > tokens > overview](../../../foundations/tokens/overview/)
 
 ![Figma interface showing multiple backgorund options and "Primary-Subtle" is highligted](/get-started/access-the-semantic-tokens.png)
 

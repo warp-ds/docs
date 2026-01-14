@@ -1,3 +1,11 @@
+# Tabs - Frameworks
+Tabs are used to group content, allowing users to navigate views without.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -53,6 +61,32 @@ WarpTabRow(
 
 ### Parameters
 
-<api-table type=android component="TabRow" />
-<api-table type=android component="Tab" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| tabs | `@Composable () -> Unit` |  | `WarpTab` objects to display as selectable tabs. |
+| selectedTabIndex | Int |  | Index of the currently selected tab. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | The modifier for the TabRow. |
+| scrollable | Boolean | false | If set to true, tabs can be scrolled horizontally. |
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | Title of the tab |
+| selected | Boolean |  | If the tab is selected or not |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| icon | WarpIconResource | null | Icon displayed before the title. |
+| modifier | Modifier | Modifier | The modifier for the Tab. |
+| onClick | `() -> Unit` | {} | The function to be invoked when clicked |
+| interactionSource | MutableInteractionSource | MutableInteractionSource | The interaction source to be used for the tab. |
 

@@ -1,3 +1,12 @@
+# Breadcrumbs - Frameworks
+Breadcrumbs show users their current location relative to the information architecture and enable them to quickly move up to a parent level or previous step. 
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```html
@@ -10,4 +19,8 @@
 
 ### Props
 
-<api-table type="elements" component="Breadcrumbs" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string | Her er du | Defines a string value that labels the current element. |

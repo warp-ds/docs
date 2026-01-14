@@ -1,3 +1,12 @@
+# Breadcrumbs - Frameworks
+Breadcrumbs show users their current location relative to the information architecture and enable them to quickly move up to a parent level or previous step. 
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -23,6 +32,12 @@ import { Breadcrumbs } from '@warp-ds/react/components/breadcrumbs';
 
 ### Props
 
-<api-table type="react" component="Breadcrumbs" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string | Her er du | Defines a string value that labels the affix element. |
+| className | string |  | Additional classes to include |
+| style | CSSProperties |  | CSS styles to inline on the component |
 
 

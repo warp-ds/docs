@@ -1,3 +1,11 @@
+# Switch - Usage
+The Switch component allows users to toggle between two states.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -52,4 +60,12 @@ fun setOnCheckedChangeListener(onCheckedChangeListener: ((Boolean) -> Unit))
 
 ### Parameters
 
-<api-table type=android component="Switch" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the switch |
+| onCheckedChange | `(Boolean) -> Unit` |  | Lambda to be invoked when checked or unchecked |
+| enabled | boolean | true | Whether the switch is enabled or not |
+| checked | boolean | false | Whether the switch is on or off |
+| contentDescr | String | null | The a11y text for screenreaders |

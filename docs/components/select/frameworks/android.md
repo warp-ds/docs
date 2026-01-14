@@ -1,3 +1,12 @@
+# Select - Frameworks
+A select is a form input component that lets users choose one option from a predefined list.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```kotlin
@@ -59,4 +68,23 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Select" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| value | String |  | The text displayed currently in the select component |
+| onValueChange | `(String) -> Unit` |  | Lambda to be invoked when input value changes |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the select component |
+| label | String | null | The text to display as the label above the select component |
+| optionalLabel | String | null | The text to display next to the label above the select component |
+| enabled | Boolean | true | Sets the select component in disabled mode when false |
+| readOnly | Boolean | false | Sets the select component in read-only mode |
+| placeholderText | String | null | Text hint that occupies the select component when it is empty |
+| helpText | String | null | The text to display as the help text below the select component |
+| isError | Boolean | false | Renders the select component in an invalid state |
+| items | List? | null | The list of strings displayed in the select component menu |

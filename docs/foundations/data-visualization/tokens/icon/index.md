@@ -2,7 +2,7 @@
 
 The dataviz `icon` colors are used on icons representing data values or trends. For design guidelines, see [Color Guidelines > Text & Icons](/foundations/data-visualization/color/text-icons/)
 
-For actual icons to use, see [Components > Icons](/components/icons/). For dataviz, the most relevant icons are probably `TrendUp`, `TrendFlat`, `TrendDown`.
+For actual icons to use, see [Components > Icons](/components/icons/overview.md). For dataviz, the most relevant icons are probably `TrendUp`, `TrendFlat`, `TrendDown`.
 
 ::: details Visual overview
 ![Preview of Primary, Secondary, Category and Evaluation colors for light mode and dark mode](/foundations/dataviz/token-overview-icon.png)

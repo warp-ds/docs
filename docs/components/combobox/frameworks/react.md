@@ -1,3 +1,12 @@
+# Combo box - Frameworks
+A combo box combines a dropdown list with an editable text input, allowing users to either select an option or type their own.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -13,7 +22,42 @@ import { Combobox } from '@warp-ds/react/components/combobox'
 
 ### Props
 
-<api-table type=react component="Combobox" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| options | ComboboxOption[] |  | The available options to select from |
+| value | string |  | The TextField input value |
+| onChange | `(value: string) => void` |  | Called when the value of the input changes |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| id | string |  | Unique identifier for the input field |
+| label | string |  | Label above input |
+| placeholder | string |  | Input placeholder |
+| openOnFocus | boolean | false | Whether the popover opens when focus is on the text field |
+| selectOnBlur | boolean | true | Select active option on blur |
+| matchTextSegments | boolean | false | Whether the matching text segments in the options should be highlighted. Customise the styling by using CSS selectors to override `[data-combobox-text-match]`. This uses the default matching algorithm. Use the `highlightValueMatch` to pass your own matching function. |
+| disableStaticFiltering | boolean | false | Disable client-side static filtering |
+| highlightValueMatch | `(optionValue: string, inputValue: string) => ReactNode` |  | Pass your own function for highlight matching |
+| invalid | boolean |  | Renders the input field in an invalid state. Often paired together with `helpText` to provide feedback about the error |
+| helpText | ReactNode |  | The content to display as the help text |
+| className | string |  | Additional container styling |
+| listClassName | string |  | Additional list styling |
+| aria-label | number |  | Defines a string value that labels the current element. Must be set if `aria-labelledby` is not defined. Defines a string value that labels the current element. @see aria-labelledby. |
+| aria-labelledby | string |  | Identifies the element (or elements) that labels the current element. Must be set if `aria-label` is not defined. Identifies the element (or elements) that labels the current element. |
+| children | ReactNode |  | For Affix use |
+| optional | boolean |  | Mark label to indicate that this combobox is optional. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onSelect | ((value: string) => void) & ReactEventHandler |
+| onFocus | (() => void) & FocusEventHandler |
+| onBlur | ((value: string) => void) & FocusEventHandler |
 
 ```tsx
 export type ComboboxOption = {
@@ -229,9 +273,24 @@ function Example() {
 ```
 
 *Note* that when using the Affix component without a `label` you should specify an `aria-label`.
-See props at the bottom of this page. See [TextField](/components/textfield/) for more details on Affix.
+See props at the bottom of this page. See [TextField](/components/textfield/overview.md) for more details on Affix.
 
-<api-table type=react component="Affix" />
+#### Affix props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string |  | Defines a string value that labels the affix element |
+| prefix | boolean |  | Affix added at the beginning of input |
+| suffix | boolean |  | Affix added at the end of input |
+| clear | boolean |  | Displays a clear icon |
+| search | boolean |  | Displays a search icon |
+| label | string |  | Displays a string |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onClick | () => void |
 
 ### Clearing input on select
 

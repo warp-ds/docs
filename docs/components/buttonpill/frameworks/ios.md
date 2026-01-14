@@ -1,4 +1,11 @@
+# Button Pill - Frameworks
+Button pill allows users to toggle an element to their favourites.
 
+<ComponentsStatus />
+
+## iOS
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -40,4 +47,9 @@ Warp.ButtonPill(
 
 ### Parameters
 
-<api-table type=iOS component="ButtonPill" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | Warp.ButtonPillType |  | The type of the button (`flat` or `overlay`). |
+| selected | Binding Bool |  | A binding to the selected state of the button. |

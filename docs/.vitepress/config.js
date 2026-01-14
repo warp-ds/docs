@@ -1,6 +1,3 @@
-import fs from 'node:fs';
-import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { classes as componentClasses } from '@warp-ds/css/component-classes/classes';
 import { presetDocs } from '@warp-ds/preset-docs';
 import { presetWarp } from '@warp-ds/uno';
@@ -9,58 +6,6 @@ import uno from 'unocss/vite';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
 import { defineConfig } from 'vitepress';
 import { supported as supportedClasses } from '../supported.js';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-
-/* ────────────────────────────────────────────────────────────────────────────
-   Auto-build Components sidebar
-   ──────────────────────────────────────────────────────────────────────────── */
-function getFrontmatterTitle(filePath) {
-  try {
-    const src = fs.readFileSync(filePath, 'utf8');
-    const fmBlock = src.match(/^---\s*[\r\n]+([\s\S]*?)\r?\n---/);
-    if (!fmBlock) return null;
-    const titleLine = fmBlock[1].match(/^\s*title:\s*(.+)\s*$/m);
-    if (!titleLine) return null;
-    let t = titleLine[1].trim();
-    if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
-      t = t.slice(1, -1);
-    }
-    return t;
-  } catch {
-    return null;
-  }
-}
-
-function titleFromSlug(slug) {
-  return slug.replace(/[-_]+/g, ' ').replace(/\b\w/g, (s) => s.toUpperCase());
-}
-
-// Scans docs/components/*/index.md (skips folders starting with ".")
-function buildSectionSidebarItems(rootDir, section) {
-  // section is 'components' or 'patterns'
-  const sectionDir = resolve(rootDir, section);
-  if (!fs.existsSync(sectionDir)) return [];
-
-  const entries = fs
-    .readdirSync(sectionDir, { withFileTypes: true })
-    .filter((e) => e.isDirectory() && !e.name.startsWith('.'));
-
-  const items = entries
-    .map((e) => {
-      const slug = e.name;
-      const indexMd = join(sectionDir, slug, 'index.md');
-      if (!fs.existsSync(indexMd)) return null;
-      const title = getFrontmatterTitle(indexMd) || titleFromSlug(slug);
-      return { text: title, link: `/${section}/${slug}/` };
-    })
-    .filter(Boolean);
-
-  items.sort((a, b) => a.text.localeCompare(b.text));
-  return items;
-}
-
-/* ──────────────────────────────────────────────────────────────────────────── */
 
 const base = '/docs';
 
@@ -303,12 +248,6 @@ export default defineConfig({
       }),
       svgLoader(),
     ],
-    // ⬇️ alias for new design system components
-    resolve: {
-      alias: {
-        '@ds': resolve(__dirname, './theme/components'),
-      },
-    },
   },
   head: [
     [
@@ -366,6 +305,27 @@ export default defineConfig({
       {
         rel: 'stylesheet',
         href: 'https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/finn-no.css',
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'stylesheet',
+        href: 'https://assets.finn.no/pkg/@warp-ds/elements/2.3.0-next.20/styles.css',
+      },
+    ],
+    [
+      'script',
+      {
+        type: 'module',
+        src: 'https://assets.finn.no/pkg/@warp-ds/elements/2.3.0-next.20/index.js',
+      },
+    ],
+    [
+      'script',
+      {
+        type: 'module',
+        src: 'https://unpkg.com/external-svg-loader@1.0.0/svg-loader.min.js',
       },
     ],
   ],
@@ -1239,7 +1199,355 @@ export default defineConfig({
         },
         {
           text: 'Components',
-          items: buildSectionSidebarItems(resolve(__dirname, '..'), 'components'),
+          items: [
+            {
+              text: 'Alert',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/alert/overview' },
+                { text: 'Frameworks', link: '/components/alert/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Badge',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/badge/overview' },
+                { text: 'Usage', link: '/components/badge/usage' },
+                { text: 'Styling', link: '/components/badge/styling' },
+                { text: 'Frameworks', link: '/components/badge/frameworks/android' },
+                { text: 'Accessibility', link: '/components/badge/accessibility' },
+              ],
+            },
+            {
+              text: 'Box',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/box/overview' },
+                { text: 'Frameworks', link: '/components/box/frameworks/android' },
+                { text: 'Accessibility', link: '/components/box/accessibility' },
+              ],
+            },
+            {
+              text: 'Breadcrumbs',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/breadcrumbs/overview' },
+                { text: 'Usage', link: '/components/breadcrumbs/usage' },
+                { text: 'Styling', link: '/components/breadcrumbs/styling' },
+                { text: 'Frameworks', link: '/components/breadcrumbs/frameworks/elements' },
+                { text: 'Accessibility', link: '/components/breadcrumbs/accessibility' },
+              ],
+            },
+            {
+              text: 'Broadcast',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/broadcast/overview' },
+                { text: 'Usage', link: '/components/broadcast/usage' },
+                { text: 'Frameworks', link: '/components/broadcast/frameworks/ios' },
+              ],
+            },
+            {
+              text: 'Button',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/button/overview' },
+                { text: 'Usage', link: '/components/button/usage' },
+                { text: 'Frameworks', link: '/components/button/frameworks/android' },
+                { text: 'Accessibility', link: '/components/button/accessibility' },
+              ],
+            },
+            {
+              text: 'Button group',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/buttongroup/overview' },
+                { text: 'Frameworks', link: '/components/buttongroup/frameworks/ios' },
+              ],
+            },
+            {
+              text: 'Button pill',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/buttonpill/overview' },
+                { text: 'Usage', link: '/components/buttonpill/usage' },
+                { text: 'Frameworks', link: '/components/buttonpill/frameworks/ios' },
+              ],
+            },
+            {
+              text: 'Callout',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/callout/overview' },
+                { text: 'Usage', link: '/components/callout/usage' },
+                { text: 'Frameworks', link: '/components/callout/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Card',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/card/overview' },
+                { text: 'Usage', link: '/components/card/usage' },
+                { text: 'Frameworks', link: '/components/card/frameworks/elements' },
+              ],
+            },
+            {
+              text: 'Checkbox',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/checkbox/overview' },
+                { text: 'Usage', link: '/components/checkbox/usage' },
+                { text: 'Frameworks', link: '/components/checkbox/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Combo box',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/combobox/overview' },
+                { text: 'Frameworks', link: '/components/combobox/frameworks/react' },
+              ],
+            },
+            {
+              text: 'Date picker',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/datepicker/overview' },
+                { text: 'Usage', link: '/components/datepicker/usage' },
+                { text: 'Styling', link: '/components/datepicker/styling' },
+                { text: 'Frameworks', link: '/components/datepicker/frameworks/android' },
+                { text: 'Accessibility', link: '/components/datepicker/accessibility' },
+              ],
+            },
+            {
+              text: 'Divider',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/divider/overview' },
+                { text: 'Usage', link: '/components/divider/usage' },
+                { text: 'Frameworks', link: '/components/divider/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Expandable',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/expandable/overview' },
+                { text: 'Usage', link: '/components/expandable/usage' },
+                { text: 'Frameworks', link: '/components/expandable/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Icons',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/icons/overview' },
+                { text: 'Styling', link: '/components/icons/styling' },
+                { text: 'Frameworks', link: '/components/icons/frameworks/elements' },
+                { text: 'Accessibility', link: '/components/icons/accessibility' },
+              ],
+            },
+            {
+              text: 'Link',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/link/overview' },
+                { text: 'Usage', link: '/components/link/usage' },
+                { text: 'Styling', link: '/components/link/styling' },
+                { text: 'Frameworks', link: '/components/link/frameworks/android' },
+                { text: 'Accessibility', link: '/components/link/accessibility' },
+              ],
+            },
+            {
+              text: 'Modal',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/modal/overview' },
+                { text: 'Usage', link: '/components/modal/usage' },
+                { text: 'Frameworks', link: '/components/modal/frameworks/android' },
+                { text: 'Accessibility', link: '/components/modal/accessibility' },
+              ],
+            },
+            {
+              text: 'Page indicator',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/pageindicator/overview' },
+                { text: 'Usage', link: '/components/pageindicator/usage' },
+                { text: 'Frameworks', link: '/components/pageindicator/frameworks/android' },
+                { text: 'Accessibility', link: '/components/pageindicator/accessibility' },
+              ],
+            },
+            {
+              text: 'Pagination',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/pagination/overview' },
+                { text: 'Frameworks', link: '/components/pagination/frameworks/react' },
+                { text: 'Accessibility', link: '/components/pagination/accessibility' },
+              ],
+            },
+            {
+              text: 'Pill',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/pill/overview' },
+                { text: 'Usage', link: '/components/pill/usage' },
+                { text: 'Frameworks', link: '/components/pill/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Popover',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/popover/overview' },
+                { text: 'Usage', link: '/components/popover/usage' },
+                { text: 'Frameworks', link: '/components/popover/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Radio',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/radio/overview' },
+                { text: 'Usage', link: '/components/radio/usage' },
+                { text: 'Frameworks', link: '/components/radio/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Radio buttons',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/radiobuttons/overview' },
+                { text: 'Frameworks', link: '/components/radiobuttons/frameworks/react' },
+              ],
+            },
+            {
+              text: 'Range slider',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/rangeslider/overview' },
+                { text: 'Usage', link: '/components/rangeslider/usage' },
+                { text: 'Frameworks', link: '/components/rangeslider/frameworks/android' },
+                { text: 'Accessibility', link: '/components/rangeslider/accessibility' },
+              ],
+            },
+            {
+              text: 'Select',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/select/overview' },
+                { text: 'Usage', link: '/components/select/usage' },
+                { text: 'Frameworks', link: '/components/select/frameworks/android' },
+                { text: 'Accessibility', link: '/components/select/accessibility' },
+              ],
+            },
+            {
+              text: 'Slider',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/slider/overview' },
+                { text: 'Usage', link: '/components/slider/usage' },
+                { text: 'Frameworks', link: '/components/slider/frameworks/android' },
+                { text: 'Accessibility', link: '/components/slider/accessibility' },
+              ],
+            },
+            {
+              text: 'Spinner',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/spinner/overview' },
+                { text: 'Usage', link: '/components/spinner/usage' },
+                { text: 'Frameworks', link: '/components/spinner/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Steps',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/steps/overview' },
+                { text: 'Usage', link: '/components/steps/usage' },
+                { text: 'Frameworks', link: '/components/steps/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Switch',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/switch/overview' },
+                { text: 'Usage', link: '/components/switch/usage' },
+                { text: 'Frameworks', link: '/components/switch/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Tabs',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/tabs/overview' },
+                { text: 'Usage', link: '/components/tabs/usage' },
+                { text: 'Frameworks', link: '/components/tabs/frameworks/android' },
+                { text: 'Accessibility', link: '/components/tabs/accessibility' },
+              ],
+            },
+            {
+              text: 'Text',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/text/overview' },
+                { text: 'Usage', link: '/components/text/usage' },
+                { text: 'Frameworks', link: '/components/text/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Text area',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/textarea/overview' },
+                { text: 'Usage', link: '/components/textarea/usage' },
+                { text: 'Frameworks', link: '/components/textarea/frameworks/ios' },
+                { text: 'Accessibility', link: '/components/textarea/accessibility' },
+              ],
+            },
+            {
+              text: 'Text field',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/textfield/overview' },
+                { text: 'Usage', link: '/components/textfield/usage' },
+                { text: 'Frameworks', link: '/components/textfield/frameworks/android' },
+                { text: 'Accessibility', link: '/components/textfield/accessibility' },
+              ],
+            },
+            {
+              text: 'Toast',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/toast/overview' },
+                { text: 'Usage', link: '/components/toast/usage' },
+                { text: 'Frameworks', link: '/components/toast/frameworks/android' },
+                { text: 'Accessibility', link: '/components/toast/accessibility' },
+              ],
+            },
+            {
+              text: 'Tooltip',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/tooltip/overview' },
+                { text: 'Usage', link: '/components/tooltip/usage' },
+                { text: 'Frameworks', link: '/components/tooltip/frameworks/android' },
+              ],
+            },
+            {
+              text: 'Utilities',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/components/utilities/overview' },
+                { text: 'Frameworks', link: '/components/utilities/frameworks/vue' },
+              ],
+            },
+          ],
         },
       ],
       '/patterns/': [
@@ -1255,7 +1563,18 @@ export default defineConfig({
         },
         {
           text: 'Patterns',
-          items: buildSectionSidebarItems(resolve(__dirname, '..'), 'patterns'),
+          items: [
+            {
+              text: 'Empty states',
+              collapsed: true,
+              items: [
+                { text: 'Overview', link: '/patterns/emptystates/overview' },
+                { text: 'Usage', link: '/patterns/emptystates/usage' },
+                { text: 'Frameworks', link: '/patterns/emptystates/frameworks/android' },
+                { text: 'Accessibility', link: '/patterns/emptystates/accessibility' },
+              ],
+            },
+          ],
         },
       ],
     },

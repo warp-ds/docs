@@ -1,3 +1,12 @@
+# Callout - Frameworks
+Callouts are snippets of information, drawing attention to important content.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -121,4 +130,34 @@ Read more: [MDN aria-details](https://developer.mozilla.org/en-US/docs/Web/Acces
 
 ### Props
 
-<api-table type="react" component="Callout" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| targetEl | MutableRefObject |  | The reference container to which the Attention component is positioned relative to. Required if `highlight` but optional if `callout`. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| isShowing | boolean | false | Whether Attention component is shown. |
+| placement | 'top-start' \| 'top' \| 'top-end' \| 'bottom-start' \| 'bottom' \| 'bottom-end' \| 'left-start' \| 'left' \| 'left-end' \| 'right-start' \| 'right' \| 'right-end' | 'bottom' | Placement according to the target element. The arrow will point to the opposite side of this position |
+| children | Element \| Element[] |  | Elements inside of the Attention component |
+| className | string |  | Extend the Attention component container styling |
+| callout | boolean | false | Whether Attention component is rendered as a callout, displayed inline within content. |
+| highlight | boolean | false | Whether Attention component is rendered as a highlight, elevated above content with shadow. |
+| role | string | img | Allows the user to remove the default ARIA role attribute for the Attention component, by supplying an empty role (`role=""`). Default role is set to `img`. |
+| aria-label | string |  | Allows the user to override the default aria-label attribute for the Attention component |
+| noArrow | boolean | false | Render Attention component without arrow |
+| canClose | boolean | false | Whether a close button is shown |
+| distance | number | 8 | Distance from which to offset the Attention component from the targetEl vertically |
+| skidding | number | 0 | Distance from which to offset the Attention component along its targetEl horizontally. |
+| flip | boolean | false | Whether Attention element should flip its placement in order to keep it in view |
+| crossAxis | boolean | false | Whether Attention element should ignore cross axis overflow when flip is enabled. Can only be used when `flip` is set to true. |
+| fallbackPlacements | array | undefined | Choose which preferred placements the Attention element should flip to. Can only be used when `flip` is set to true. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onDismiss | () => void |

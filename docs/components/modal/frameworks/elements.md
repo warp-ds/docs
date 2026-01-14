@@ -1,3 +1,12 @@
+# Modal - Frameworks
+A modal is a focused dialog that temporarily blocks the interface to request a specific decision or input. Because it pauses the experience, use it sparingly for high-priority tasks.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 ### With a titlebar
 
 ```js
@@ -57,8 +66,24 @@
 ```
 
 ### Modal Props
-<api-table type=elements component="Modal" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| show | boolean | false | Controls if the modal should show or hide |
+| ignore-backdrop-clicks | boolean | false | Ignores clicks to the backdrop when true |
 
 
 ### Modal header props
-<api-table type=elements component="ModalHeader" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | string |  | A short but descriptive title for the modal |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| back | boolean | false | Whether the modal header should have a back button |
+| no-close | boolean | false | Whether the modal header should have a close button |

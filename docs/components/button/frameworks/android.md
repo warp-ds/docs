@@ -1,4 +1,11 @@
+# Button - Frameworks
+Buttons initiate events or actions within a page, informing users of what to expect next.
 
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -188,4 +195,25 @@ To support layouts still written in xml the WarpButton can be used as a custom v
 
 ### Parameters
 
-<api-table type=android component="Button" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | The text to be displayed on the button |
+| onClick | `() -> Unit` |  | Lambda to be invoked when clicked |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| style | WarpButtonStyle.Primary  WarpButtonStyle.Secondary  WarpButtonStyle.Quiet  WarpButtonStyle.Negative  WarpButtonStyle.NegativeQuiet  WarpButtonStyle.Utility  WarpButtonStyle.UtilityQuiet  WarpButtonStyle.UtilityOverlay | WarpButtonStyle.Primary | Controls the appearance of the button |
+| enabled | Boolean | true | Sets the button in disabled mode |
+| modifier | Modifier | Modifier | Sets the modifier for the button |
+| maxLines | Integer | 1 | Limits the lines of the text on the button |
+| loading | Boolean | false | Set the button to look like it is in progress, can be combined with other button types. Can be combined with any button type |
+| leadingIcon | `Int or @Composable () -> Unit` | null | The id of the icon drawable resource or the WarpIcon component to be displayed in the button before the text |
+| leadingIconContentDescr | String | null | The content description of the icon |
+| trailingIcon | `Int or @Composable () -> Unit` | null | The id of the icon drawable resource or the WarpIcon component to be displayed in the button after the text |
+| trailingIconContentDescr | String | null | The content description of the icon |
+| small | Boolean | false | Set to show a smaller slimmed version of the button |
+| iconModifier | Modifier | Modifier | Sets the modifier for the icon |

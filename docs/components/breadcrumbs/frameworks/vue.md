@@ -1,3 +1,12 @@
+# Breadcrumbs - Frameworks
+Breadcrumbs show users their current location relative to the information architecture and enable them to quickly move up to a parent level or previous step. 
+
+<ComponentsStatus />
+
+## Vue
+
+<FrameworkTabs />
+
 ### Import
 
 > Use in entire app
@@ -32,4 +41,8 @@ import { wBreadcrumbs } from '@warp-ds/vue/breadcrumbs';
 
 ### Props
 
-<api-table type="vue" component="Breadcrumbs" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string | Her er du | Defines a string value that labels the current element. |

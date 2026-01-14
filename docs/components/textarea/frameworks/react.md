@@ -1,3 +1,12 @@
+# Text area - Overview
+A text area allows users to input extended text content that covers multiple lines.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -19,7 +28,32 @@ import { TextArea } from '@warp-ds/react/components/textarea';
 
 ### Props
 
-<api-table type=react component="TextArea" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| autoFocus | boolean |  | Whether the element should receive focus on render. |
+| className | string |  | Additional classes to include. |
+| style | CSSProperties |  | Additional CSS styles for the container. |
+| defaultValue | string & (string\|number\|readonly string[]) |  | The default value (uncontrolled). |
+| disabled | boolean |  | Whether the input is disabled. |
+| ~~error~~ | boolean |  | Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error. @deprecated use `invalid` instead. |
+| invalid | boolean |  | Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error. |
+| helpText | ReactNode |  | The content to display as the help text. |
+| id | string |  | The element's unique identifier. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id). |
+| label | ReactNode |  | The content to display as the label. |
+| max | string\|number |  | Standard `input` max attribute, to be used with `type="number"`. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefmaxlength). |
+| min | string\|number |  | Standard `input` min attribute, to be used with `type="number"`. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefminlength). |
+| maxLength | number |  | The maximum number of characters supported by the input. See MDN. |
+| minLength | number |  | The minimum number of characters supported by the input. See MDN. |
+| name | string |  | The name of the input element, used when submitting an HTML form. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname). |
+| pattern | string |  | Regex pattern that the value of the input must match to be valid. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefpattern). |
+| placeholder | string |  | Text hint that occupies the text input when it is empty. |
+| readOnly | boolean |  | Whether the input can be selected but not changed by the user. |
+| required | boolean |  | Whether user input is required on the input before form submission. |
+| children | ReactNode |  | For affix use. |
+| value | string |  | The current value (controlled). |
+| optional | boolean |  | Indicates that the textarea is not required. |
 
 #### Value
 

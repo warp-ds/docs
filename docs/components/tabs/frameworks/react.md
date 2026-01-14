@@ -1,3 +1,12 @@
+# Tabs - Frameworks
+Tabs are used to group content, allowing users to navigate views without.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -112,10 +121,60 @@ It is important that all children of Tabs are Tab components.
 :::
 
 ### Props - Tabs
-<api-table type="react" component="Tabs" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | Element[] |  | The Tabs within the container |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| active | string |  | Used to set the name of the Tab that should be active on mount. Defaults to the first tab if not present and isActive is not set on any Tab |
+| className | string |  | Additional CSS class for the container |
+| style | any |  | Additional CSS styles for the container |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onChange | (name: string) => void |
 
 ### Props - Tab
-<api-table type="react" component="Tab" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| name | string |  | Tab name identifier. This value will be omitted as the argument to the Tabs onChange handler |
+| label | any |  | The label of the tab item |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| isActive | boolean |  | Used to set which tab should be active on mount. Defaults to the first tab if not present |
+| over | boolean | false | Set the over prop to true if you need to move icons to above the tab label |
+| className | string |  | Additional CSS class for the container |
+| style | any |  | Additional CSS styles for the Tab |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| setActive | (name: string) |
+| onChange | (name: string) => void |
 
 ### Props - TabPanel
-<api-table type="react" component="TabPanel" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | ReactNode |  | The content of the tab panel. |
+| name | string |  | Tab name identifier - This value should be the same as the `name` prop of the corresponding Tab component. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| hidden | boolean |  | Show/hide panel manually (in server-side rendering). |

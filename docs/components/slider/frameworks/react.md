@@ -1,3 +1,13 @@
+# Slider - Frameworks
+Sliders allow users to adjust a numeric value within a given range.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
+
 ### Import
 
 You can import the component like so:
@@ -43,4 +53,26 @@ function Example() {
 
 ### Props
 
-<api-table type="react" component="Slider" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| step | number |  | Specifies the value granularity |
+| value | number |  | The current value |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| max | number | 100 | The greatest value in the range of permitted values |
+| min | number |  | The lowest value in the range of permitted values |
+| disabled | boolean |  | Whether the slider is disabled |
+| aria-label | number |  | String value for aria-label |
+| aria-labelledby | string |  | Identifies the element that labels the slider |
+| aria-valuetext | string |  | Human readable text alternative for the value |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onChange | (value: number) => void |

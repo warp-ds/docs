@@ -1,3 +1,13 @@
+# Badge - Frameworks
+
+Badges are used to highlight a relevant piece of information, like status or category.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -21,4 +31,13 @@ import { Badge } from '@warp-ds/react/components/badge';
 
 ### Props
 
-<api-table type="react" component="Badge" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| as | string | div | The DOM element to emit |
+| variant | `'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'` | 'neutral' |  |
+| position | `'top-left', 'top-right', 'bottom-right', 'bottom-left'` | undefined | Used for absolute positioning of the badge within a container |
+| children | Element \| Element[] \| string |  | Content of the Badge component |
+| className | string |  | Additional CSS classes to apply to the component |
+| style | CSSProperties |  | CSS styles to inline on the component |
