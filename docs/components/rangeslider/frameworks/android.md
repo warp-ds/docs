@@ -57,6 +57,28 @@ WarpRangeSlider(
     resetAtEndText = "Max",
 )
 ```
+### Two way binding options
+The slider supports two-way bindings, meaning when `startIndex` or `endIndex` is provided and changed with external inputs (e.g., text fields), the slider thumb positions will be updated. Parent should compute snap-to-nearest logic.
+
+```kotlin example
+val radiusSteps = listOf(
+    "100 m", 
+    "300 m", 
+    "700 m", 
+    "1 km"
+)
+
+// Mutable indices for range slider display
+var radiusStartIndex by remember { mutableIntStateOf(0) }
+var radiusEndIndex by remember { mutableIntStateOf(radiusSteps.lastIndex) }
+
+WarpRangeSlider(
+    items = radiusSteps,
+    startIndex = radiusStartIndex,
+    endIndex = radiusEndIndex,
+    showRange = true
+)
+```
 ### Visual options
 The slider can show tooltips with the currently selected value above the thumbs when dragging. It can also show indicators below the track showing the total possible range of values. 
 
@@ -106,6 +128,8 @@ Not supported.
 | enabled | Boolean | true | Disables the slider if false |
 | initialStartItem | Any? | null | The pre-selected start value |
 | initialEndItem | Any? | null | The pre-selected end value |
+| startIndex | Int? | null | The position the start thumb will update to |
+| endIndex | Int? | null | The position the end thumb will update to |
 | onValueChangeFinished | `() -> Unit` | {} | The function to be invoked when value selection is done |
 | onLeftValueChanged | `(Any) -> Unit` | {} | The function to be invoked when start value is selected |
 | onRightValueChanged | `(Any) -> Unit` | {} | The function to be invoked when end value is selected |
