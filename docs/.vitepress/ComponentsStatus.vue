@@ -1,83 +1,49 @@
 <script setup>
+import { useRoute } from 'vitepress';
 import { computed } from 'vue';
+import manifest from './frameworks-manifest.json';
 
-const props = defineProps({
-  react: {
-    type: String,
-    default: 'unsupported',
-    validator: (v) => ['released', 'beta', 'developing', 'planned', 'unsupported'].includes((v || '').toLowerCase()),
-  },
-  react19: {
-    type: String,
-    default: 'unsupported',
-    validator: (v) => ['released', 'beta', 'developing', 'planned', 'unsupported'].includes((v || '').toLowerCase()),
-  },
-  vue: {
-    type: String,
-    default: 'unsupported',
-    validator: (v) => ['released', 'beta', 'developing', 'planned', 'unsupported'].includes((v || '').toLowerCase()),
-  },
-  elements: {
-    type: String,
-    default: 'unsupported',
-    validator: (v) => ['released', 'beta', 'developing', 'planned', 'unsupported'].includes((v || '').toLowerCase()),
-  },
-  android: {
-    type: String,
-    default: 'unsupported',
-    validator: (v) => ['released', 'beta', 'developing', 'planned', 'unsupported'].includes((v || '').toLowerCase()),
-  },
-  ios: {
-    type: String,
-    default: 'unsupported',
-    validator: (v) => ['released', 'beta', 'developing', 'planned', 'unsupported'].includes((v || '').toLowerCase()),
-  },
-  align: { type: String, default: 'auto' }, // 'auto' | 'left' | 'center'
+const route = useRoute();
+
+// Parse route to get item name
+// Route path looks like: /components/alert/frameworks/vue or /patterns/emptystates/frameworks/ios
+const pathSegments = computed(() => {
+  const path = route.path.replace(/\.html$/, '');
+  return path.split('/').filter(Boolean);
 });
 
-// Map frameworks to their icon keys
-function iconFor(framework) {
-  switch (framework) {
-    case 'React':
-    case 'React 19':
-      return 'react';
-    case 'Vue':
-      return 'vue';
-    case 'Elements':
-      return 'webcomponents';
-    case 'Android':
-      return 'android';
-    case 'iOS':
-      return 'apple';
-    default:
-      return '';
+// Detect whether we're in components or patterns section
+const section = computed(() => {
+  if (pathSegments.value.includes('patterns')) return 'patterns';
+  if (pathSegments.value.includes('components')) return 'components';
+  return null;
+});
+
+const itemName = computed(() => {
+  // Path: components/alert/frameworks/vue -> alert is at index 1
+  // Path: patterns/emptystates/frameworks/ios -> emptystates is at index 1
+  const sectionKey = section.value;
+  if (!sectionKey) return null;
+  const idx = pathSegments.value.indexOf(sectionKey);
+  if (idx !== -1 && pathSegments.value[idx + 1]) {
+    return pathSegments.value[idx + 1];
   }
-}
+  return null;
+});
 
-const items = computed(() => [
-  { label: 'React', status: props.react },
-  { label: 'React 19', status: props.react19 },
-  { label: 'Vue', status: props.vue },
-  { label: 'Elements', status: props.elements },
-  { label: 'Android', status: props.android },
-  { label: 'iOS', status: props.ios },
-]);
-
-const justifyClass = computed(() => {
-  if (props.align === 'left') return 'fw-left';
-  if (props.align === 'center') return 'fw-center';
-  return 'fw-auto';
+const badges = computed(() => {
+  if (!section.value || !itemName.value) return [];
+  return manifest[section.value]?.[itemName.value] || [];
 });
 </script>
 
 <template>
-  <div class="fw-badges" :class="justifyClass" role="list" aria-label="Framework support status">
+  <div class="fw-badges fw-left" :class="justifyClass" role="list" aria-label="Framework support status">
     <WarpBadge
-      v-for="it in items"
-      :key="it.label"
-      :framework="it.label"
-      :icon="iconFor(it.label)"
-      :status="it.status"
+      v-for="badge in badges"
+      :key="badge.label"
+      :framework="badge.name"
+      status="released"
     />
   </div>
 </template>

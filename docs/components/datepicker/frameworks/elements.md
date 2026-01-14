@@ -1,3 +1,13 @@
+# Date picker - Frameworks
+A date picker allows the user to select a specific calendar date.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
+
 ### Example
 
 ```html
@@ -6,7 +16,29 @@
 
 ### Props
 
-<api-table type=elements component="DatePicker" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | string |  | Label shown on the input of the datepicker. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| value | string |  | The selected date as a string |
+| name | string |  | Sets the form field name when used inside a ``. |
+| lang | string |  | Controls the locale used by the calendar. |
+| header-format | string |  | Controls the format shown in the calendar header (month + year). |
+| weekday-format | string |  | Controls the weekday labels shown above the grid. |
+| day-format | string |  | Controls the date format used for screen readers when announcing a day cell (aria-label). |
+| isDayDisabled | `(day: Date) => boolean` |  | Lets you disable specific dates in the calendar UI. Property only. |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| @change | Fired when the selected date is committed, either by typing in the input and then shifting focus away from the input field or by selecting a date from the calendar. |
 
 #### Label (`label`)
 

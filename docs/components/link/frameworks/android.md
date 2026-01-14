@@ -1,3 +1,11 @@
+# Link - Frameworks
+Link component to use when creating links that look like buttons.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -65,4 +73,18 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Link" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| text | String |  | The text to be displayed |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Sets the modifier for the link |
+| onClick | `() -> Unit` | {} | The function to be invoked when clicked |
+| style | WarpTextStyle.Display  WarpTextStyle.Title1  WarpTextStyle.Title2  WarpTextStyle.Title3  WarpTextStyle.Title4  WarpTextStyle.Title5  WarpTextStyle.Title6  WarpTextStyle.Preamble  WarpTextStyle.Body  WarpTextStyle.BodyStrong  WarpTextStyle.Caption  WarpTextStyle.CaptionStrong  WarpTextStyle.Detail  WarpTextStyle.DetailStrong | WarpTextStyle.Body | Sets the appearance of the link - font and size |
+| icon | WarpIconResource | null | Icon displayed after the text. |
+| underline | Boolean | false | If text should be underlined or not |

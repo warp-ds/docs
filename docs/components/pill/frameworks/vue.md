@@ -1,3 +1,12 @@
+# Pill - Frameworks
+Pill is a type of button that is often used as a filter, but can also be used as a rounded button for overlays, etc.
+
+<ComponentsStatus />
+
+## Vue
+
+<FrameworkTabs />
+
 ### Import
 > Use in entire app
 
@@ -53,4 +62,18 @@ import { wPill } from '@warp-ds/vue/pill';
 
 ### Props
 
-<api-table type=vue component="Pill" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| label | string | undefined | The text content of the pill. |
+| can-close | boolean | false | Whether the pill should be removable via a close button. |
+| suggestion | boolean | false | Whether the pill should be rendered as a suggestion. |
+| open-SR-label | string | "Open filter" | Label read by screen readers when targeting the pill |
+| close-SR-label | string | "Remove filter {label}" | Label read by screen readers when targeting the close button |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| close | the close button is pressed |

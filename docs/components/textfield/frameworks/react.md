@@ -1,3 +1,12 @@
+# Text field - Frameworks
+A text field is a single-line input component used for entering and editing textual data.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -19,7 +28,33 @@ import { TextField } from '@warp-ds/react/components/textfield';
 
 ### Props
 
-<api-table type=react component="TextField" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| type | `"number" \|"text" \|"search" \|"email" \|"password" \|"url" \|"tel"` |  | The type of input to render. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdeftype). |
+| autoFocus | boolean |  | Whether the element should receive focus on render. |
+| className | string |  | Additional classes to include. |
+| style | CSSProperties |  | Additional CSS styles for the container. |
+| defaultValue | string & (string\|number\|readonly string[]) |  | The default value (uncontrolled). |
+| disabled | boolean |  | Whether the input is disabled. |
+| ~~error~~ | boolean |  | Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error. @deprecated use `invalid` instead. |
+| invalid | boolean |  | Renders the field in an invalid state. Often paired together with `helpText` to provide feedback about the error. |
+| helpText | ReactNode |  | The content to display as the help text. |
+| id | string |  | The element's unique identifier. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id). |
+| label | ReactNode |  | The content to display as the label. |
+| max | string\|number |  | Standard `input` max attribute, to be used with `type="number"`. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefmaxlength). |
+| min | string\|number |  | Standard `input` min attribute, to be used with `type="number"`. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefminlength). |
+| maxLength | number |  | The maximum number of characters supported by the input. See MDN. |
+| minLength | number |  | The minimum number of characters supported by the input. See MDN. |
+| name | string |  | The name of the input element, used when submitting an HTML form. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefname). |
+| pattern | string |  | Regex pattern that the value of the input must match to be valid. See [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefpattern). |
+| placeholder | string |  | Text hint that occupies the text input when it is empty. |
+| readOnly | boolean |  | Whether the input can be selected but not changed by the user. |
+| required | boolean |  | Whether user input is required on the input before form submission. |
+| children | ReactNode |  | For affix use. |
+| value | string |  | The current value (controlled). |
+| optional | boolean |  | Indicates that the textfield is not required. |
 
 #### Value
 
@@ -150,7 +185,22 @@ You can also use both a prefix and suffix
 
 You cannot set the `type` of the Affix. `type` of the button rendered as `Affix` will be `submit` if you pass `search` as a prop, `reset` if you pass `clear` and `undefined` in other cases.
 
-<api-table type=react component="Affix" />
+#### Affix props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| aria-label | string |  | Defines a string value that labels the affix element |
+| prefix | boolean |  | Affix added at the beginning of input |
+| suffix | boolean |  | Affix added at the end of input |
+| clear | boolean |  | Displays a clear icon |
+| search | boolean |  | Displays a search icon |
+| label | string |  | Displays a string |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onClick | () => void |
 
 #### Read only
 

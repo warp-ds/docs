@@ -1,3 +1,12 @@
+# Steps - Frameworks
+The steps component is built to handle user journeys, showing progress.
+
+<ComponentsStatus />
+
+## Vue
+
+<FrameworkTabs />
+
 ### Import
 
 > Use in entire app
@@ -75,8 +84,18 @@ const nextStep = () => {
 
 #### Steps
 
-<api-table type="vue" component="Steps" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| horizontal | boolean | false | Direction of steps |
+| right | boolean | false | Align steps to the right |
 
 #### Step
 
-<api-table type="vue" component="Step" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| active | boolean | false | Step is active |
+| completed | boolean | false | Step is completed |

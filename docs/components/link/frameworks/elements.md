@@ -1,3 +1,12 @@
+# Link - Frameworks
+Link component to use when creating links that look like buttons.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
 ### Usage Notes
 
 **Do:**
@@ -25,7 +34,24 @@ The following table illustrates use cases and which element to use for the purpo
 
 ### Props
 
-<api-table type=elements component="Link" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| autofocus | boolean | false | Focus the link after it is rendered. |
+| variant | `'primary' \| 'secondary' \| 'negative' \| 'negativeQuiet' \| 'utility' \| 'utilityQuiet' \| 'overlay' \| 'quiet' \| 'overlayInverted' \| 'overlayQuiet' \| 'overlayInvertedQuiet'` | 'secondary' | Visual style for the link/button. Throws an error if an unsupported value is provided. |
+| small | boolean | false | Render a smaller version. |
+| href | string |  | The URL the link points to. |
+| disabled | boolean | false | Disables interaction and applies disabled styling. |
+| target | string |  | Where to display the linked URL (e.g. `_blank`). |
+| rel | string |  | Relationship of the linked URL. If `target="_blank"` and `rel` is not provided, the component uses `noopener`. |
+| full-width | boolean | false | Makes the link take up the full width of its parent. |
+
+#### Slots
+
+| Name | Description |
+| --- | --- |
+| default | Link text / content. |
 
 #### Href (`href`)
 

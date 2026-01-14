@@ -1,3 +1,12 @@
+# Empty states - Frameworks
+
+Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
 
 ### Syntax
 
@@ -78,4 +87,21 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="State" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the state component |
+| type | WarpStateType.NoSearchResults   WarpStateType.LoadFailed   WarpStateType.Offline   WarpStateType.Login   WarpStateType.Verify   WarpStateType.Loading | null | Pre-defined type of the state |
+| painter | Painter | null | Painter for the illustration of the state component |
+| icon | WarpIconResource | null | Icon for the state component |
+| tintColor | Color | null | Icon color for the state component |
+| imageSize | Dp | null | Image size |
+| imageContentDescription | String | null | Content description of the illustration |
+| title | String | null | Title to be displayed in the state |
+| description | String | null | Description text to be displayed in the state |
+| primaryButtonText | String | null | Text to be displayed on the primary button |
+| onPrimaryButtonClicked | `() -> Unit` | null | Action when primary button is clicked |
+| quietButtonText | String | null | Text to be displayed on the quiet button |
+| onQuietButtonClicked | `() -> Unit` | null | Action when quiet button is clicked |
+| showLogo | Boolean | false | Toggle to show the Vend Logo |

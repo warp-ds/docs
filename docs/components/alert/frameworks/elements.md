@@ -1,8 +1,69 @@
-### Syntax
+# Alert - Frameworks
+Alerts show high-signal messages meant to be noticed and prompting users.
+
+<ComponentsStatus />
+
+## Elements
+
+<FrameworkTabs />
+
+<ThemeSwitcher />
+
+### Variants
+
+#### Info
+
+<style-isolate>
+<w-alert variant="info" show>
+  <p>This is "info" variant of the alert element</p>
+</w-alert>
+</style-isolate>
 
 ```html
 <w-alert variant="info" show>
   <p>This is "info" variant of the alert element</p>
+</w-alert>
+```
+
+#### Warning
+
+<style-isolate>
+<w-alert variant="warning" role="alert" show="">
+  <p>This is an alert message</p>
+</w-alert>
+</style-isolate>
+
+```html
+<w-alert variant="warning" role="alert" show="">
+  <p>This is an alert message</p>
+</w-alert>
+```
+
+#### Negative
+
+<style-isolate>
+<w-alert variant="negative" role="alert" show="">
+  <p>This is an alert message</p>
+</w-alert>
+</style-isolate>
+
+```html
+<w-alert variant="negative" role="alert" show="">
+  <p>This is an alert message</p>
+</w-alert>
+```
+
+#### Positive
+
+<style-isolate>
+<w-alert variant="positive" role="alert" show="">
+  <p>This is an alert message</p>
+</w-alert>
+</style-isolate>
+
+```html
+<w-alert variant="positive" role="alert" show="">
+  <p>This is an alert message</p>
 </w-alert>
 ```
 
@@ -18,6 +79,15 @@ attribute on
 
 #### Alert with "alert" role on a descendant element
 
+<style-isolate>
+  <w-alert variant="info" show role="">
+    <h3 role="alert" class="t5">
+      This is "info" variant of the alert element
+    </h3>
+    <p>With an additional description</p>
+  </w-alert>
+</style-isolate>
+
 ```html
 <w-alert variant="info" show role="">
   <h3 role="alert" class="t5">
@@ -27,6 +97,18 @@ attribute on
 </w-alert>
 ```
 
+
 ### Props
 
-<api-table type=elements component="Alert" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| variant | `'negative' \| 'positive' \| 'warning' \| 'info'` | undefined | Variant of the alert |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| show | boolean | false | Controls when the alert shows |
+| role | string | alert | ARIA live region "role" attribute value |

@@ -1,3 +1,12 @@
+# Divider - Frameworks
+A divider creates separation of content.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```kotlin
@@ -27,4 +36,10 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Divider" />
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| modifier | Modifier | Modifier | Modifier for the divider |
+| orientation | Orientation.Horizontal   Orientation.Vertical | Orientation.Horizontal | Orientation of the divider |
+| dashed | Boolean | false | Style of the divider, solid if false |

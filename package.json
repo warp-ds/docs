@@ -8,6 +8,7 @@
     "check": "pnpm biome check --write .",
     "dev": "vitepress dev docs",
     "format": "pnpm biome format --write .",
+    "generate-frameworks": "node scripts/generate-frameworks.js",
     "lint:check": "pnpm biome lint .",
     "lint": "pnpm biome lint --write .",
     "serve": "vitepress serve docs",

@@ -1,3 +1,12 @@
+# Link - Frameworks
+Link component to use when creating links that look like buttons.
+
+<ComponentsStatus />
+
+## React 19
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -100,4 +109,23 @@ The fullWidth prop sets the links width to its parent's width.
 
 ### Props
 
-<api-table type=react component="Link" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | ReactNode |  | The contents of the Link |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| className | string |  | Additional classes to include |
+| style | CSSProperties |  | CSS styles to inline on the component |
+| onClick | `(event: MouseEvent) => void` |  | Handler that is called when the link is clicked. |
+| button | boolean | false | Set the link to look like a button. |
+| variant | `'primary' \| 'secondary' \| 'negative' \| 'utility' \| 'overlay' \| 'overlayInverted' \|'quiet'\| 'negativeQuiet' \| 'utilityQuiet'\| 'overlayQuiet' \| 'overlayInvertedQuiet' \| 'link'` |  | Set the correct variant on the link. |
+| size | `'small' \| 'default'` | default | Set the link to be either small or default size. |
+| fullWidth | boolean | false | Sets the links width to its parent's width. Useful especially on mobile when link should take full width. |
+| href | string |  | Set the href for the location where clicking the link will take you to. |
+| target | string |  | Anchor target, see [The Anchor element / MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a). |
+| rel | string |  | The relationship of the linked URL. |

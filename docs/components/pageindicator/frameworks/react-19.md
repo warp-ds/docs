@@ -1,3 +1,12 @@
+# Page indicator - Frameworks
+A page indicator shows the total amount of pages (or images) and the current page using dots.
+
+<ComponentsStatus />
+
+## React 19
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -24,4 +33,15 @@ You can apply custom styling to align the component and add padding as needed:
 
 ### Props
 
-<api-table type="react" component="PageIndicator" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| pageCount | number |  | The total number of pages. |
+| selectedPage | number |  | Currently selected page. |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| style | CSSProperties |  | CSS styles to inline on the component container. |

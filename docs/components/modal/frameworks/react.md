@@ -1,3 +1,12 @@
+# Modal - Frameworks
+A modal is a focused dialog that temporarily blocks the interface to request a specific decision or input. Because it pauses the experience, use it sparingly for high-priority tasks.
+
+<ComponentsStatus />
+
+## React
+
+<FrameworkTabs />
+
 ### Import
 
 You can import the component like so:
@@ -13,7 +22,34 @@ import { Modal } from '@warp-ds/react/components/modal'
 
 ### Props
 
-<api-table type=react component="Modal" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| children | Element \|Element[] |  | The modal contents |
+| open | boolean |  | Whether the modal is open or not |
+
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| title | string \|Element \|Element[] |  | A string or your own custom elements |
+| left | boolean \|Element \|Element[] |  | Whether a default back button should render with an onDismiss() callback. It can also be your own custom element(s). |
+| right | boolean \|Element \|Element[] |  | A default close button or your own custom elements |
+| footer | Element \|Element[] |  | Buttons passed to the footer |
+| className | string |  | Additional classes added to the container |
+| id | string |  | An id for the container and ARIA attributes. A random id is generated if none is provided. |
+| style | CSSProperties |  | Additional styles to the container. [More info about CSSProperties](https://legacy.reactjs.org/docs/dom-elements.html#style) |
+| aria-label | number |  | Defines a string value that labels the current element. Must be set if neither `aria-labelledby` or `` is defined, |
+| aria-labelledby | string |  | Identifies the element (or elements) that labels the current element. Must be set if neither `aria-label` or `` is defined. |
+| initialFocusRef | RefObject |  | A reference to the element that should be focused. By default it'll be the first interactive element. [More info](https://react.dev/learn/manipulating-the-dom-with-refs) |
+
+#### Events
+
+| Name | Description |
+| --- | --- |
+| onDismiss | () => void |
+| onLeftClick | () => void |
 
 ### Example
 

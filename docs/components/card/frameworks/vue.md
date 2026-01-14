@@ -1,3 +1,12 @@
+# Card - Frameworks
+Card is an interactive layout component to display information.
+
+<ComponentsStatus />
+
+## Vue
+
+<FrameworkTabs />
+
 ### Import
 
 > Use in entire app
@@ -21,4 +30,10 @@ import { wCard } from '@warp-ds/vue/card'
 
 ### Props
 
-<api-table type=vue component="Card"/>
+#### Optional Props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| selected | boolean |  | If the card is selected |
+| flat | boolean |  | Removes box shadow around card |
+| as | string | div | The DOM element to emit |

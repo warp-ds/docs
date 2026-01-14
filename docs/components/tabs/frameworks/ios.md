@@ -1,3 +1,12 @@
+# Tabs - Frameworks
+Tabs are used to group content, allowing users to navigate views without.
+
+<ComponentsStatus />
+
+## iOS
+
+<FrameworkTabs />
+
 ### Syntax
 
 ```swift
@@ -36,4 +45,9 @@ Warp.Tabs(
 
 ### Parameters
 
-<api-table type=iOS component="Tabs" />
+#### Required props
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| tabs | [Warp.TabItem] |  | An array of `Warp.TabItem` objects to display as selectable tabs. |
+| selectedIndex | Binding Int |  | A binding to the index of the currently selected tab. |

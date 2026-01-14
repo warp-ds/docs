@@ -1,0 +1,618 @@
+{
+  "components": {
+    "alert": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "badge": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "box": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "breadcrumbs": [
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "broadcast": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
+    "button": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "buttongroup": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "buttonpill": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
+    "callout": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "card": [
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "checkbox": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      },
+      {
+        "name": "Web",
+        "file": "web"
+      }
+    ],
+    "combobox": [
+      {
+        "name": "React",
+        "file": "react"
+      }
+    ],
+    "datepicker": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      }
+    ],
+    "divider": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
+    "expandable": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "icons": [
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      }
+    ],
+    "link": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      }
+    ],
+    "modal": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "Figma",
+        "file": "figma"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "pageindicator": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      }
+    ],
+    "pagination": [
+      {
+        "name": "React",
+        "file": "react"
+      }
+    ],
+    "pill": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "popover": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "radio": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "radiobuttons": [
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "rangeslider": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      }
+    ],
+    "select": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "slider": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "spinner": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
+    "steps": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "switch": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "tabs": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "text": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
+    "textarea": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "textfield": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "toast": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React 19",
+        "file": "react-19"
+      }
+    ],
+    "tooltip": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      },
+      {
+        "name": "React",
+        "file": "react"
+      },
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ],
+    "utilities": [
+      {
+        "name": "Vue",
+        "file": "vue"
+      }
+    ]
+  },
+  "patterns": {
+    "emptystates": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ]
+  }
+}
