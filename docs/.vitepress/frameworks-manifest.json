@@ -600,7 +600,7 @@
     ]
   },
   "patterns": {
-    "emptystates": [
+    "empty-states": [
       {
         "name": "Android",
         "file": "android"

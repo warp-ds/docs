@@ -62,11 +62,6 @@ const members = [
     name: 'Daniel Talakoubi',
     title: 'Visual Designer',
   },
-  {
-    avatar: "https://ca.slack-edge.com/T0356Q2CJ-U023FQYL8AJ-4b39dde5143a-512",
-    name: 'Zara Melyan',
-    title: 'Frontend Developer',
-  },
 ]
 </script>
 
