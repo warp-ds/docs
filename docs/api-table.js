@@ -1943,6 +1943,24 @@ export const elements = {
     ],
   },
 
+  Switch: {
+    required: [],
+    props: [
+      ['name', 'string', '', 'Name used when submitting an HTML form.'],
+      ['value', 'string', '', 'Value submitted when the switch is checked.'],
+      ['checked', 'boolean', 'false', 'Whether the switch is on (checked).'],
+      ['disabled', 'boolean', 'false', 'Whether the switch is disabled.'],
+    ],
+    events: [
+      [
+        'change',
+        '(event: CustomEvent) => void',
+        '',
+        'Fired when the switch toggles. `event.detail` contains `{ checked, value }`.',
+      ],
+    ],
+  },
+
   TextField: {
     required: [],
     props: [
