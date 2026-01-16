@@ -1,3 +1,12 @@
+# Icons - Frameworks
+Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+
+<ComponentsStatus />
+
+## iOS
+
+<FrameworkTabs />
+
 ### Warp Resources
 
 Warp icons are located within the Warp framework. They are ImageVectors created from vector drawables located in Icon/Icons.xcassets.
@@ -69,6 +78,15 @@ Warp.Logo(for brand: Warp.BrandLogo)
 Warp.Logo(for: .finn(.small))
 ```
 
+There two provided sizes for logos: `small` and `default`.
+
+```swift
+enum Warp.BrandLogo.LogoSize {
+    case small // 32x32 square logo 
+    case `default` // Freeform logo
+}
+```
+
 ### Legacy support
 
 By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
@@ -80,6 +98,8 @@ Warp.Logo(for: .finn(.small)).uiView
 ```
 
 ### Parameters
+
+Regular icons
 
 #### Required props
 
@@ -93,3 +113,9 @@ Warp.Logo(for: .finn(.small)).uiView
 | --- | --- | --- | --- |
 | size | Warp.IconSize | .default | The size of the icon (`.small`, `.default`, `.large`, or `.custom`). |
 | color | Color | Warp.Token.icon | The color of the icon. |
+
+Brand logos
+
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| logo | Warp.BrandLogo |  | The `Warp.BrandLogo` to display. |

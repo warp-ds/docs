@@ -1,3 +1,12 @@
+# Icons - Frameworks
+Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+
+<ComponentsStatus />
+
+## Android
+
+<FrameworkTabs />
+
 ### Warp Resources
 
 Warp icons are located within the WarpResources object. They are WarpIconResources created from vector drawables located in res/drawable and content descriptions located in res/values/strings.xml. Each brand has their corresponding translations of the text.
