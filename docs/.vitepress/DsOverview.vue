@@ -36,7 +36,7 @@ const allItems = computed(() =>
   Object.keys(manifestSection.value).map((it) => {
     return {
       slug: it,
-      title: it[0].toUpperCase() + it.slice(1),
+      title: (it[0].toUpperCase() + it.slice(1)).replaceAll('-', ' '),
       description: `${it} ${props.type === 'components' ? 'component' : 'pattern'} description.`,
       frameworks: manifestSection.value[it],
       svgComponent: placeholderBySlug.value[it],
