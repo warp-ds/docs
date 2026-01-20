@@ -12,7 +12,8 @@ A tooltip is a message box that is displayed when a user hovers over or gives fo
 ```swift example
 Warp.Tooltip(
     title: String,
-    arrowEdge: Edge = .top
+    arrowEdge: Edge = .top,
+    arrowOffset: CGFloat? = nil // customizable arrow offset from edge
 )
 ```
 
@@ -54,3 +55,4 @@ Warp.Tooltip(title: "This is a Tooltip").uiView
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | arrowEdge | Edge | .top | The direction of the arrow.  Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing` |
+| arrowOffset | CGFloat? | nil | The offset of the arrow from the edge. If nil, the arrow will be centered. |
