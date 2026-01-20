@@ -52,9 +52,9 @@ const badges = computed(() => {
 .fw-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 16px;
   align-items: center;
-  margin: .5rem 0 1rem;
+  margin: 2rem 0 2rem;
 }
 .fw-auto { justify-content: center; }
 @media (min-width: 960px) {
