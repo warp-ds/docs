@@ -14,7 +14,8 @@ Warp.Callout(
     size: CalloutSize = .default,
     type: CalloutType = .inline,
     title: String,
-    arrowEdge: Edge = .top
+    arrowEdge: Edge = .top,
+    arrowOffset: CGFloat? = nil // customizable arrow offset from edge
 )
 ```
 
@@ -66,5 +67,6 @@ Warp.Callout(title: "This is a Callout").uiView
 | size | Warp.CalloutSize | .default | The size of the Callout. Use one of the predefined `CalloutSize` values: `.default`, or `.small`. |
 | type | Warp.CalloutType | .inline | The type of the Callout. Use one of the predefined `CalloutType` values: `.inline`, or `.popover`.  Popover accepts an optional onClose action, which will display a close button. |
 | arrowEdge | Edge | .top | The direction of the arrow. Use one of the predefined `Edge` values: `.top`, `.leading`, `.bottom`, or `.trailing` |
+| arrowOffset | CGFloat? | nil | The offset of the arrow from the edge. If nil, the arrow will be centered. |
 
 <component-questions />
