@@ -22,7 +22,7 @@ const cardData = {
     },
     {
       title: 'Icons',
-      href: 'components/icons/overview',
+      href: 'components/icons',
       image: { component: IconsCard, alt: 'Three talk bubbles that are smiling and have closed eyes' },
       description: 'Browse our library of UI icons',
     },
