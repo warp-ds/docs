@@ -66,7 +66,7 @@ const cardData = {
   <div class="container">
     <div class="main">
       <h1 class="name"><span class="clip">Vend’s Design System</span></h1>
-      <p class="tagline">Design, build and ship coherent experience with WARP</p>
+      <p class="tagline">Design, build, and ship coherent experiences with WARP</p>
       <div class="actions">
         <div class="action">
           <a class="vp-font-size-4 brand" href="get-started">Get Started →</a>
@@ -139,7 +139,7 @@ const cardData = {
 <style scoped>
 /* Cards styling */
 .cards {
-  margin-top: 40px;
+  margin-bottom: 40px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
@@ -288,13 +288,13 @@ h2.card-title {
 
 @media (min-width: 960px) {
   .banner-content-wrapper {
-    padding: 40px 112px;
+    padding: 40px 135px;
   }
 }
 
 @media (min-width: 1600px) {
   .banner-content-wrapper {
-    padding: 40px 213px;
+    padding: 40px 204px;
   }
 }
 
@@ -589,9 +589,10 @@ h2.card-title {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 97%;
     height: 100%;
-    transform: translate(-32px, -32px);
+    transform: translate(-32px);
+    margin-left: 10%;
   }
 
   .VPHero .image-bg {
