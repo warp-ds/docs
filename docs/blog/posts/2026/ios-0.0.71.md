@@ -3,7 +3,7 @@ title: 'WARP iOS release v.0.0.71'
 date: 2026-01-20
 ---
 
-StateView component
+New icons and style tokens update
 
 ---
 
