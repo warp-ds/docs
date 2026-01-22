@@ -102,7 +102,6 @@ Default: `''` (first tab is active by default)
 
 | Name   | Type    | Default | Description                                          |
 | ------ | ------- | ------- | ---------------------------------------------------- |
-| active | boolean | false   | Whether this tab is currently active. Managed by `<w-tabs>`. |
 | over   | boolean | false   | Display the icon above the label instead of beside it. |
 
 #### Slots
