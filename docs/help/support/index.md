@@ -25,12 +25,12 @@ const members = [
   {
     avatar: "https://ca.slack-edge.com/T0356Q2CJ-UE69TFG2U-5c0b613bff68-72",
     name: 'Adrian Dick',
-    title: 'Design System Lead',
+    title: 'Lead Designer',
   },
   {
     avatar: "https://ca.slack-edge.com/T0356Q2CJ-U7BT9BAAH-bcbd1a8b5569-512",
     name: ' Prash Mehra',
-    title: 'Senior Developer & Tech Lead',
+    title: 'Lead Software Engineer',
   },
   {
     avatar: "https://ca.slack-edge.com/T0356Q2CJ-UTAMQM1JS-be0577a3ce81-72",
@@ -55,17 +55,12 @@ const members = [
   {
     avatar: "https://ca.slack-edge.com/T0356Q2CJ-U0583JWEW01-3c56f7f7d6d4-72",
     name: 'Yuri Shatalov',
-    title: 'Visual Designer',
+    title: 'Product Designer',
   },
   {
     avatar: "https://ca.slack-edge.com/T0356Q2CJ-U0266UPB5RU-a07e97493e28-72",
     name: 'Daniel Talakoubi',
     title: 'Visual Designer',
-  },
-  {
-    avatar: "https://ca.slack-edge.com/T0356Q2CJ-U023FQYL8AJ-4b39dde5143a-512",
-    name: 'Zara Melyan',
-    title: 'Frontend Developer',
   },
 ]
 </script>

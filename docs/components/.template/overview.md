@@ -10,7 +10,7 @@ import { mapFrameworkStatuses } from '../utils.js';
 
 [Component ingress]
 
-Related components: [Text field](../textfield/overview.md)
+Related components: [Text field](../text-field/overview.md)
 
 ## Example
 <ThemeSwitcher />

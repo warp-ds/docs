@@ -116,7 +116,7 @@
         "file": "vue"
       }
     ],
-    "buttongroup": [
+    "button-group": [
       {
         "name": "iOS",
         "file": "ios"
@@ -126,7 +126,7 @@
         "file": "vue"
       }
     ],
-    "buttonpill": [
+    "button-pill": [
       {
         "name": "iOS",
         "file": "ios"
@@ -190,7 +190,7 @@
         "file": "web"
       }
     ],
-    "combobox": [
+    "combo-box": [
       {
         "name": "Elements",
         "file": "elements"
@@ -200,7 +200,7 @@
         "file": "react"
       }
     ],
-    "datepicker": [
+    "date-picker": [
       {
         "name": "Android",
         "file": "android"
@@ -308,7 +308,7 @@
         "file": "vue"
       }
     ],
-    "pageindicator": [
+    "page-indicator": [
       {
         "name": "Android",
         "file": "android"
@@ -386,7 +386,7 @@
         "file": "vue"
       }
     ],
-    "radiobuttons": [
+    "radio-buttons": [
       {
         "name": "React",
         "file": "react"
@@ -396,7 +396,7 @@
         "file": "vue"
       }
     ],
-    "rangeslider": [
+    "range-slider": [
       {
         "name": "Android",
         "file": "android"
@@ -532,7 +532,7 @@
         "file": "ios"
       }
     ],
-    "textarea": [
+    "text-area": [
       {
         "name": "iOS",
         "file": "ios"
@@ -546,7 +546,7 @@
         "file": "vue"
       }
     ],
-    "textfield": [
+    "text-field": [
       {
         "name": "Android",
         "file": "android"
@@ -616,7 +616,7 @@
     ]
   },
   "patterns": {
-    "emptystates": [
+    "empty-states": [
       {
         "name": "Android",
         "file": "android"
