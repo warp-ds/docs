@@ -6,7 +6,7 @@ A text area allows users to input extended text content that covers multiple lin
 ## General
 A text area is used to capture extended user input, such as messages, item descriptions, comments, or reviews. Unlike the Text field component, Text area offers a more spacious input experience.
 
-Related components: [Text field](../textfield/overview.md).
+Related components: [Text field](../text-field/overview.md).
 
 ## Examples
 <ThemeSwitcher />

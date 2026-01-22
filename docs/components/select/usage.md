@@ -13,7 +13,7 @@ A select is a form input component that lets users choose one option from a pred
 
 ### When not to use
 
-- **If users need to enter custom values:** use [Text area](../textarea/overview.md) component.
+- **If users need to enter custom values:** use [Text area](../text-area/overview.md) component.
 - **If users need to select multiple values:** use [Checkbox](../checkbox/overview.md) component.
 
 
