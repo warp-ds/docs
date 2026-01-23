@@ -9,8 +9,12 @@ A page indicator shows the total amount of pages (or images) and the current pag
 
 ### Syntax
 
+<style-isolate>
+<w-page-indicator page-count="5" selected-page="1"></w-page-indicator>
+</style-isolate>
+
 ```js
-<w-page-indicator pageCount="5" selectedPage="1"></w-page-indicator>
+<w-page-indicator page-count="5" selected-page="1"></w-page-indicator>
 ```
 
 ### Props
