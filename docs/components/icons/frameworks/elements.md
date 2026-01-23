@@ -9,14 +9,6 @@ Warp’s icons are crafted to deliver consistency, clarity, and scalability acro
 
 <icon-code-example />
 
-### Import
-
-You can import the component like so:
-
-```js
-import '@warp-ds/components/icon';
-```
-
 ### Example
 
 Use icon name from above list
