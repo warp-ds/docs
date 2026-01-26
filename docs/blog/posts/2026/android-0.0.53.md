@@ -11,7 +11,7 @@ Fix for Transparent color
 
 ## 2026-01-26
 
-#### Style tokens update
+### Style tokens update
 
 - Background color fix
     - Transparent token updated
