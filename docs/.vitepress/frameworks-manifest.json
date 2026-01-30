@@ -328,6 +328,10 @@
     ],
     "pagination": [
       {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
         "name": "React",
         "file": "react"
       }
