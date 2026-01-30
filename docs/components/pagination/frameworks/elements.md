@@ -54,6 +54,7 @@ The `page-click` event is dispatched when any page link is clicked. The event in
   const pagination = document.querySelector('w-pagination');
 
   pagination.addEventListener('page-click', (event) => {
+    event.preventDefault();
     // event.detail = { clickedPage: string }
     console.log('Clicked page:', event.detail.clickedPage);
   });
