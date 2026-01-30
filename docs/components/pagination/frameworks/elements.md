@@ -56,7 +56,7 @@ The `page-click` event is dispatched when any page link is clicked. The event in
   pagination.addEventListener('page-click', (event) => {
     event.preventDefault();
     // event.detail = { clickedPage: string }
-    console.log('Clicked page:', event.detail.clickedPage);
+    console.log('Do something with the clicked page after preventing default navigation:', event.detail.clickedPage);
   });
 </script>
 ```
