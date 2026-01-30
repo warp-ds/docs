@@ -118,13 +118,4 @@ You can programmatically change the current page by setting the `current-page` a
 </script>
 ```
 
-### Accessibility
-
-The pagination component includes accessibility features:
-
-- Navigation is wrapped in a `<nav>` element with a screen-reader-only heading "Pages"
-- Each page link has an appropriate `aria-label` (e.g., "Page 3")
-- The current page has `aria-current="page"` attribute
-- Navigation buttons have screen-reader-only text describing their function (First page, Previous page, Next page)
-
 <component-questions />
