@@ -5,6 +5,8 @@ A Popover is a message box that is displayed floating over page content after pr
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Popover" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38513" />
 
 <iframe

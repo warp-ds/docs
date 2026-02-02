@@ -5,6 +5,8 @@ Card is an interactive layout component to display information.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Card" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-42768" />
 
 <iframe

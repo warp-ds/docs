@@ -5,6 +5,8 @@ A spinner informs users about the loading of content.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Spinner" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=900-35603" />
 
 <iframe

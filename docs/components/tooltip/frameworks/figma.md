@@ -5,6 +5,8 @@ A tooltip is a message box that is displayed when a user hovers over or gives fo
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Tooltip" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38514" />
 
 <iframe

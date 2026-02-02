@@ -5,6 +5,8 @@ A text field is a single-line input component used for entering and editing text
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Text field" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-40600" />
 
 <iframe

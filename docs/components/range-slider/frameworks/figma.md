@@ -5,6 +5,8 @@ Range sliders allow users to adjust minimum and maximum numeric values within a 
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Range slider" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=23942-797" />
 
 <iframe

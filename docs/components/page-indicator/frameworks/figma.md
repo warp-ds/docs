@@ -5,6 +5,8 @@ A page indicator shows the total amount of pages (or images) and the current pag
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Page indicator" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=816-35006" />
 
 <iframe

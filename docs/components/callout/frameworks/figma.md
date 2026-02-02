@@ -5,6 +5,8 @@ Callouts are snippets of information, drawing attention to important content.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Callout" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-42328" />
 
 <iframe

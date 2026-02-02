@@ -5,6 +5,8 @@ Toasts are brief user feedback messages that overlay content.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Toast" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-42163" />
 
 <iframe

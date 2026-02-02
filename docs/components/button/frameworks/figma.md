@@ -5,6 +5,8 @@ Buttons initiate events or actions within a page, informing users of what to exp
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Button" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=303-19039" />
 
 <iframe

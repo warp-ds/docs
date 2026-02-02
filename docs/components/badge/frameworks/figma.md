@@ -6,6 +6,8 @@ Badges are used to highlight a relevant piece of information, like status or cat
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Badge" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-42423" />
 
 <iframe

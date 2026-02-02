@@ -5,6 +5,8 @@ Radios allow users to select a single option from a list.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Radio" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-40974" />
 
 <iframe

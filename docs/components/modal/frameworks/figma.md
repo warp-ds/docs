@@ -5,6 +5,8 @@ A modal is a focused dialog that temporarily blocks the interface to request a s
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Modal" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38520" />
 
 <iframe

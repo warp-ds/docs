@@ -5,6 +5,8 @@ Pill is a type of button that is often used as a filter, but can also be used as
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Pill" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=828-35233" />
 
 <iframe

@@ -5,6 +5,8 @@ A select is a form input component that lets users choose one option from a pred
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Select" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=866-35253" />
 
 <iframe

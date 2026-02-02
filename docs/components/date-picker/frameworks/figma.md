@@ -5,6 +5,8 @@ A date picker allows the user to select a specific calendar date.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Date picker" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=811-34489" />
 
 <iframe

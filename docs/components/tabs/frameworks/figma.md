@@ -5,6 +5,8 @@ Tabs are used to group content, allowing users to navigate views without.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Tabs" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-41084" />
 
 <iframe

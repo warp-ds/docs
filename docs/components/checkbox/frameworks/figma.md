@@ -5,6 +5,8 @@ Checkboxes allow users to select one or more options from a number of choices.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Checkbox" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-40975" />
 
 <iframe

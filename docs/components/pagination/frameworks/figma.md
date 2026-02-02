@@ -5,6 +5,8 @@ Pagination is used to split up long datasets into multiple 'pages'.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Pagination" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=818-35572" />
 
 <iframe

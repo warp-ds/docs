@@ -5,6 +5,8 @@ Expandable is a layout component used for creating content that can be expanded 
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Expandable" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38508" />
 
 <iframe

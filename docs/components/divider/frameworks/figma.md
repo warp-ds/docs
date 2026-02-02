@@ -5,6 +5,8 @@ A divider creates separation of content.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Divider" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=349-19669" />
 
 <iframe

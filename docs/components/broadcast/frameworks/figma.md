@@ -5,6 +5,8 @@ Broadcast automatically fetches broadcast messages for the current (or a given) 
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Broadcast" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-42303" />
 
 <iframe

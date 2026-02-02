@@ -5,6 +5,8 @@ Pre-defined styles provide a font and size.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Text" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=11099-1148" />
 
 <iframe

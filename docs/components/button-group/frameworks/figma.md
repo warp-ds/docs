@@ -5,6 +5,8 @@ Button group is a grouping concept for buttons.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Button group" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=839-35187" />
 
 <iframe

@@ -5,6 +5,8 @@ The Switch component allows users to toggle between two states.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Switch" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=915-37468" />
 
 <iframe

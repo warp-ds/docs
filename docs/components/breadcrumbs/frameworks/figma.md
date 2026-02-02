@@ -5,6 +5,8 @@ Breadcrumbs show users their current location relative to the information archit
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Breadcrumbs" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=507-34326" />
 
 <iframe

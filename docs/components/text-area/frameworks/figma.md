@@ -5,6 +5,8 @@ A text area allows users to input extended text content that covers multiple lin
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Text area" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38523" />
 
 <iframe

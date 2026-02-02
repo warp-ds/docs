@@ -5,6 +5,8 @@ Alerts show high-signal messages meant to be noticed and prompting users.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Alert" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=171-20423" />
 
 <iframe

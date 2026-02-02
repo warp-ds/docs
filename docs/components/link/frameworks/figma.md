@@ -5,6 +5,8 @@ Link component to use when creating links that look like buttons.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Link" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=27805-4420" />
 
 <iframe

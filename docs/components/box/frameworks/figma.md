@@ -5,6 +5,8 @@ Box is a layout component used for separating content areas on a page.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Box" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=381-42474" />
 
 <iframe

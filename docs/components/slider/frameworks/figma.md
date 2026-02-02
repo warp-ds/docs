@@ -5,6 +5,8 @@ Sliders allow users to adjust a numeric value within a given range.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Slider" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=23942-797" />
 
 <iframe

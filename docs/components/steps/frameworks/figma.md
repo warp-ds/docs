@@ -5,6 +5,8 @@ The steps component is built to handle user journeys, showing progress.
 
 ## Figma
 
+<FrameworkTabs />
+
 <component-design-guidelines name="Warp - Components > Steps" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=915-35741" />
 
 <iframe
