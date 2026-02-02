@@ -5,10 +5,14 @@ A modal is a focused dialog that temporarily blocks the interface to request a s
 
 ## Figma
 
-<FrameworkTabs />
+<component-design-guidelines name="Warp - Components > Modal" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=1308-38520" />
 
-### Design Guidelines
-
-See Figma: [Warp - Components / Modal](https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=354-18223&mode=design)
+<iframe
+    style="border: 1px solid rgba(0, 0, 0, 0.1);"
+    width="100%"
+    height="450"
+    src="https://embed.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?m=auto&node-id=7786-56801&t=u2RafMRXrTsdzMly-4&embed-host=share"
+    allowfullscreen>
+</iframe>
 
 <component-questions />
