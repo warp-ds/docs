@@ -470,6 +470,10 @@
         "file": "android"
       },
       {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
         "name": "iOS",
         "file": "ios"
       },
@@ -537,6 +541,10 @@
       }
     ],
     "textarea": [
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
       {
         "name": "iOS",
         "file": "ios"
