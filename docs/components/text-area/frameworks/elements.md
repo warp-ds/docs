@@ -267,3 +267,5 @@ The textarea component works with native HTML forms:
   });
 </script>
 ```
+
+<component-questions />
