@@ -26,23 +26,23 @@ Each `<w-tab>` has a `for` attribute that matches the `id` of its corresponding 
 
 <style-isolate>
   <w-tabs active="one">
-    <w-tab for="one">Tab 1</w-tab>
-    <w-tab for="two">Tab 2</w-tab>
-    <w-tab for="three">Tab 3</w-tab>
-    <w-tab-panel id="one">Tab one selected!</w-tab-panel>
-    <w-tab-panel id="two">Tab two selected!</w-tab-panel>
-    <w-tab-panel id="three">Tab three selected!</w-tab-panel>
+    <w-tab for="roald-amundsen">Tab 1</w-tab>
+    <w-tab for="fridtjof-nansen">Tab 2</w-tab>
+    <w-tab for="tor-heyerdahl">Tab 3</w-tab>
+    <w-tab-panel id="roald-amundsen">Tab one selected!</w-tab-panel>
+    <w-tab-panel id="fridtjof-nansen">Tab two selected!</w-tab-panel>
+    <w-tab-panel id="tor-heyerdahl">Tab three selected!</w-tab-panel>
   </w-tabs>
 </style-isolate>
 
 ```html
 <w-tabs active="one">
-  <w-tab for="one">Tab 1</w-tab>
-  <w-tab for="two">Tab 2</w-tab>
-  <w-tab for="three">Tab 3</w-tab>
-  <w-tab-panel id="one">Tab one selected!</w-tab-panel>
-  <w-tab-panel id="two">Tab two selected!</w-tab-panel>
-  <w-tab-panel id="three">Tab three selected!</w-tab-panel>
+  <w-tab for="roald-amundsen">Tab 1</w-tab>
+  <w-tab for="fridtjof-nansen">Tab 2</w-tab>
+  <w-tab for="tor-heyerdahl">Tab 3</w-tab>
+  <w-tab-panel id="roald-amundsen">Tab one selected!</w-tab-panel>
+  <w-tab-panel id="fridtjof-nansen">Tab two selected!</w-tab-panel>
+  <w-tab-panel id="tor-heyerdahl">Tab three selected!</w-tab-panel>
 </w-tabs>
 
 <script type="module">
@@ -81,12 +81,12 @@ Default: `''` (first tab is active by default)
 
 ```html example
 <w-tabs active="two">
-  <w-tab for="one">Tab 1</w-tab>
-  <w-tab for="two">Tab 2</w-tab>
-  <w-tab for="three">Tab 3</w-tab>
-  <w-tab-panel id="one">Content one</w-tab-panel>
-  <w-tab-panel id="two">Content two</w-tab-panel>
-  <w-tab-panel id="three">Content three</w-tab-panel>
+  <w-tab for="roald-amundsen">Tab 1</w-tab>
+  <w-tab for="fridtjof-nansen">Tab 2</w-tab>
+  <w-tab for="tor-heyerdahl">Tab 3</w-tab>
+  <w-tab-panel id="roald-amundsen">Content one</w-tab-panel>
+  <w-tab-panel id="fridtjof-nansen">Content two</w-tab-panel>
+  <w-tab-panel id="tor-heyerdahl">Content three</w-tab-panel>
 </w-tabs>
 ```
 
@@ -102,7 +102,6 @@ Default: `''` (first tab is active by default)
 
 | Name   | Type    | Default | Description                                          |
 | ------ | ------- | ------- | ---------------------------------------------------- |
-| active | boolean | false   | Whether this tab is currently active. Managed by `<w-tabs>`. |
 | over   | boolean | false   | Display the icon above the label instead of beside it. |
 
 #### Slots
@@ -137,16 +136,16 @@ Default: `false`
 
 ```html example
 <w-tabs active="one">
-  <w-tab for="one" over>
+  <w-tab for="roald-amundsen" over>
     <w-icon name="Info" slot="icon" />
     Tab 1
   </w-tab>
-  <w-tab for="two" over>
+  <w-tab for="fridtjof-nansen" over>
     <w-icon name="Success" slot="icon" />
     Tab 2
   </w-tab>
-  <w-tab-panel id="one">Content one</w-tab-panel>
-  <w-tab-panel id="two">Content two</w-tab-panel>
+  <w-tab-panel id="roald-amundsen">Content one</w-tab-panel>
+  <w-tab-panel id="fridtjof-nansen">Content two</w-tab-panel>
 </w-tabs>
 ```
 
@@ -156,16 +155,16 @@ Icons can be added to tabs using the `icon` slot. By default, icons appear besid
 
 ```html example
 <w-tabs active="one">
-  <w-tab for="one">
+  <w-tab for="roald-amundsen">
     <w-icon name="Info" slot="icon" />
     Tab 1
   </w-tab>
-  <w-tab for="two">
+  <w-tab for="fridtjof-nansen">
     <w-icon name="Success" slot="icon" />
     Tab 2
   </w-tab>
-  <w-tab-panel id="one">Content one</w-tab-panel>
-  <w-tab-panel id="two">Content two</w-tab-panel>
+  <w-tab-panel id="roald-amundsen">Content one</w-tab-panel>
+  <w-tab-panel id="fridtjof-nansen">Content two</w-tab-panel>
 </w-tabs>
 ```
 
@@ -173,16 +172,16 @@ Use the `over` attribute to position icons above the label:
 
 ```html example
 <w-tabs active="one">
-  <w-tab for="one" over>
+  <w-tab for="roald-amundsen" over>
     <w-icon name="Info" slot="icon" />
     Tab 1
   </w-tab>
-  <w-tab for="two" over>
+  <w-tab for="fridtjof-nansen" over>
     <w-icon name="Success" slot="icon" />
     Tab 2
   </w-tab>
-  <w-tab-panel id="one">Content one</w-tab-panel>
-  <w-tab-panel id="two">Content two</w-tab-panel>
+  <w-tab-panel id="roald-amundsen">Content one</w-tab-panel>
+  <w-tab-panel id="fridtjof-nansen">Content two</w-tab-panel>
 </w-tabs>
 ```
 
@@ -213,10 +212,10 @@ Dispatched when the active tab changes.
 
 ```html example
 <w-tabs id="tabs-change">
-  <w-tab for="one">Tab 1</w-tab>
-  <w-tab for="two">Tab 2</w-tab>
-  <w-tab-panel id="one">Content one</w-tab-panel>
-  <w-tab-panel id="two">Content two</w-tab-panel>
+  <w-tab for="roald-amundsen">Tab 1</w-tab>
+  <w-tab for="fridtjof-nansen">Tab 2</w-tab>
+  <w-tab-panel id="roald-amundsen">Content one</w-tab-panel>
+  <w-tab-panel id="fridtjof-nansen">Content two</w-tab-panel>
 </w-tabs>
 <script type="module">
   const tabs = document.querySelector('#tabs-change');
@@ -232,18 +231,18 @@ You can programmatically change the active tab by setting the `active` property:
 
 ```html example
 <w-tabs id="controlled-tabs">
-  <w-tab for="one">Tab 1</w-tab>
-  <w-tab for="two">Tab 2</w-tab>
-  <w-tab for="three">Tab 3</w-tab>
-  <w-tab-panel id="one">Content one</w-tab-panel>
-  <w-tab-panel id="two">Content two</w-tab-panel>
-  <w-tab-panel id="three">Content three</w-tab-panel>
+  <w-tab for="roald-amundsen">Tab 1</w-tab>
+  <w-tab for="fridtjof-nansen">Tab 2</w-tab>
+  <w-tab for="tor-heyerdahl">Tab 3</w-tab>
+  <w-tab-panel id="roald-amundsen">Content one</w-tab-panel>
+  <w-tab-panel id="fridtjof-nansen">Content two</w-tab-panel>
+  <w-tab-panel id="tor-heyerdahl">Content three</w-tab-panel>
 </w-tabs>
 <script type="module">
   const tabs = document.querySelector('#controlled-tabs');
 
   // Activate the second tab programmatically
-  tabs.active = 'two';
+  tabs.active = 'fridtjof-nansen';
 </script>
 ```
 
