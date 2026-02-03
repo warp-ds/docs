@@ -227,14 +227,4 @@ You can programmatically update step states by setting the `active` and `complet
 </script>
 ```
 
-### Accessibility
-
-The steps component follows accessibility best practices:
-
-- The step indicator container has `role="list"`
-- Each step has `role="listitem"`
-- The step indicator dot has `role="img"` with descriptive `aria-label`
-- The active step has `aria-current="step"` to indicate the current position
-- Labels are localized for multiple languages (English, Norwegian, Finnish, Danish, Swedish)
-
 <component-questions />
