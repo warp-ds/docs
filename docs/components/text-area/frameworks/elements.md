@@ -15,7 +15,7 @@ The textarea component is a custom element that provides a multi-line text input
 
 The component automatically handles:
 
-- Form integration via `FormControlMixin`
+- Form integration
 - Auto-resizing based on content and row constraints
 - Built-in validation with customizable error messages
 - Accessibility attributes and labeling
