@@ -267,13 +267,3 @@ The textarea component works with native HTML forms:
   });
 </script>
 ```
-
-### Accessibility
-
-The textarea component follows accessibility best practices:
-
-- The `<label>` element is properly associated with the textarea via `for` attribute
-- `aria-describedby` links the textarea to its help text
-- `aria-errormessage` links to the error message when invalid
-- `aria-invalid` is set when the field is in an invalid state
-- The component supports keyboard navigation and focus management

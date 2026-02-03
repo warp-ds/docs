@@ -7,7 +7,7 @@ A date picker allows the user to select a specific calendar date.
 
 The date picker consists of a text field and a popover calendar panel. It is designed to allow users to select a single date in a clean, accessible manner. The popover appears upon click/tap and closes on date selection or when the user clicks/taps outside the popover.
 
-Related components: [Text field](../textfield/overview.md)
+Related components: [Text field](../text-field/overview.md)
 
 ## Example
 <ThemeSwitcher />
