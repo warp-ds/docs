@@ -542,6 +542,10 @@
     ],
     "text-area": [
       {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
         "name": "iOS",
         "file": "ios"
       },
