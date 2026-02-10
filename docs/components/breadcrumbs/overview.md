@@ -22,3 +22,5 @@ Breadcrumbs show users their current location relative to the information archit
 ## Content
 Breadcrumbs expect their component children to be the link "crumbs" that make up the navigation structure.
 The component will interject a separator between the crumbs.
+
+<component-questions />
