@@ -10,10 +10,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -40,10 +36,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -66,10 +58,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -88,10 +76,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "React",
         "file": "react"
       },
@@ -101,10 +85,6 @@
       }
     ],
     "broadcast": [
-      {
-        "name": "Figma",
-        "file": "figma"
-      },
       {
         "name": "iOS",
         "file": "ios"
@@ -118,10 +98,6 @@
       {
         "name": "Elements",
         "file": "elements"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -142,10 +118,6 @@
     ],
     "button-group": [
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -155,10 +127,6 @@
       }
     ],
     "button-pill": [
-      {
-        "name": "Figma",
-        "file": "figma"
-      },
       {
         "name": "iOS",
         "file": "ios"
@@ -172,10 +140,6 @@
       {
         "name": "Elements",
         "file": "elements"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -196,10 +160,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "React",
         "file": "react"
       },
@@ -212,10 +172,6 @@
       {
         "name": "Android",
         "file": "android"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -254,10 +210,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -272,10 +224,6 @@
         "file": "android"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       }
@@ -288,10 +236,6 @@
       {
         "name": "Elements",
         "file": "elements"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -334,10 +278,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "React 19",
         "file": "react-19"
       }
@@ -350,10 +290,6 @@
       {
         "name": "Elements",
         "file": "elements"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -378,10 +314,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -391,10 +323,6 @@
       }
     ],
     "pagination": [
-      {
-        "name": "Figma",
-        "file": "figma"
-      },
       {
         "name": "React",
         "file": "react"
@@ -408,10 +336,6 @@
       {
         "name": "Elements",
         "file": "elements"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -436,10 +360,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "React",
         "file": "react"
       },
@@ -452,10 +372,6 @@
       {
         "name": "Android",
         "file": "android"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -486,10 +402,6 @@
         "file": "android"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -508,10 +420,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -528,10 +436,6 @@
       {
         "name": "Android",
         "file": "android"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -556,10 +460,6 @@
         "file": "android"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       }
@@ -568,10 +468,6 @@
       {
         "name": "Android",
         "file": "android"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -596,10 +492,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -622,10 +514,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -644,19 +532,11 @@
         "file": "android"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       }
     ],
     "text-area": [
-      {
-        "name": "Figma",
-        "file": "figma"
-      },
       {
         "name": "iOS",
         "file": "ios"
@@ -678,10 +558,6 @@
       {
         "name": "Elements",
         "file": "elements"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
@@ -706,10 +582,6 @@
         "file": "elements"
       },
       {
-        "name": "Figma",
-        "file": "figma"
-      },
-      {
         "name": "iOS",
         "file": "ios"
       },
@@ -726,10 +598,6 @@
       {
         "name": "Elements",
         "file": "elements"
-      },
-      {
-        "name": "Figma",
-        "file": "figma"
       },
       {
         "name": "iOS",
