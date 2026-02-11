@@ -4,15 +4,15 @@ import { useData, withBase } from 'vitepress';
 defineProps({
   light: {
     type: String,
-    required: true,
+    default: '/warp-in-progress-light.png'
   },
   dark: {
     type: String,
-    required: true,
+    default: '/warp-in-progress-dark.png'
   },
   alt: {
     type: String,
-    default: '',
+    default: 'Warp ilustration displaying two Warp astronaut workers on a construction site',
   },
 });
 

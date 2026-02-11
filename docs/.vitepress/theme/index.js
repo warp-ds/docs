@@ -18,7 +18,7 @@ import 'uno.css';
 import Badge from '../Badge.vue';
 import Card from '../Card.vue';
 import Cards from '../Cards.vue';
-import DarkModeImage from '../DarkModeImage.vue';
+import InProgressStatus from '../InProgressStatus.vue';
 import DsOverview from '../DsOverview.vue';
 import FrameworkTabs from '../FrameworkTabs.vue';
 import TabsContent from '../TabsContent.vue';
@@ -40,7 +40,7 @@ export default {
     // plugins
     app.use(warpThemeSwitcher);
 
-    app.component('DarkModeImage', DarkModeImage);
+    app.component('InProgressStatus', InProgressStatus);
     app.component('DsComponentOverview', DsComponentOverview);
     app.component('ThemeSwitcher', ThemeSwitcher);
     app.component('ComponentDesignGuidelines', ComponentDesignGuidelines);

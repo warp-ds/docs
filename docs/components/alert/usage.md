@@ -6,10 +6,6 @@
 
 We're working on adding these usage guidelines
 
-<DarkModeImage
-  light="/warp-in-progress-light.png"
-  dark="/warp-in-progress-dark.png"
-  alt="Warp ilustration displaying two Warp astronaut workers on a construction site"
-/>
+<InProgressStatus />
 
 <component-questions />
