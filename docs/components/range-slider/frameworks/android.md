@@ -1,5 +1,8 @@
 # Range slider - Frameworks
-Range sliders allow users to adjust minimum and maximum numeric values within a given range.
+
+Range sliders are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
+
+See also [Slider](/components/slider/overview.md).
 
 <ComponentsStatus />
 
@@ -62,9 +65,9 @@ The slider supports two-way bindings, meaning when `startIndex` or `endIndex` is
 
 ```kotlin example
 val radiusSteps = listOf(
-    "100 m", 
-    "300 m", 
-    "700 m", 
+    "100 m",
+    "300 m",
+    "700 m",
     "1 km"
 )
 
@@ -80,7 +83,7 @@ WarpRangeSlider(
 )
 ```
 ### Visual options
-The slider can show tooltips with the currently selected value above the thumbs when dragging. It can also show indicators below the track showing the total possible range of values. 
+The slider can show tooltips with the currently selected value above the thumbs when dragging. It can also show indicators below the track showing the total possible range of values.
 
 ```kotlin example
 val items = listOf(

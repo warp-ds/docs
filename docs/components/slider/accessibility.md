@@ -1,11 +1,16 @@
 # Slider - Accessibility
-Sliders allow users to adjust a numeric value within a given range.
+
+Sliders are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
+
+See also [Range Slider](/components/range-slider/overview.md).
+
+<ComponentsStatus />
+
+## General
 
 The slider component has been designed with accessibility in mind, providing range selection functionality that is fully keyboard accessible and screen reader compatible.
 
 The number input value and slider position should always be in sync. An update to either causes the other to update.
-
-<ComponentsStatus />
 
 ### Mouse
 
