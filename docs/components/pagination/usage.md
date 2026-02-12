@@ -1,4 +1,4 @@
-# Text - Usage
+# Pagination - Usage
 
 <ComponentsStatus />
 

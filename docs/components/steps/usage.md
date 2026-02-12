@@ -1,8 +1,11 @@
 # Steps - Usage
-The steps component is built to handle user journeys, showing progress.
 
 <ComponentsStatus />
 
-<component-design-guidelines name="Warp - Components / Step Indicator" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=377-23906&mode=design" />
+## Status - in progress 🚧
+
+We're working on adding these usage guidelines
+
+<InProgressStatus />
 
 <component-questions />

@@ -1,7 +1,5 @@
 # Badge - Usage
 
-Badges are used to highlight a relevant piece of information, like status or category.
-
 <ComponentsStatus />
 
 ## Guidelines

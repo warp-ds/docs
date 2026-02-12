@@ -1,4 +1,4 @@
-# Text - Usage
+# Combo Box - Usage
 
 <ComponentsStatus />
 

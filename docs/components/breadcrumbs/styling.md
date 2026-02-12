@@ -42,5 +42,4 @@ Breadcrumbs show users their current location relative to the information archit
 ![Example showing an annotated example of a breadcrumbs component. There are three annotations: 1. highlighting the page name, 2. Highlighting the separator,  and 3. highlighting the current page.](/components/breadcrumbs/breadcrumbs-code-layout-and-spacing.svg)
 :::
 
-
-
+<component-questions />

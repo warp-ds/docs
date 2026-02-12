@@ -1,4 +1,4 @@
-# Text - Usage
+# Button Group - Usage
 
 <ComponentsStatus />
 

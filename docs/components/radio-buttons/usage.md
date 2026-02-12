@@ -1,4 +1,4 @@
-# Text - Usage
+# Radio Buttons - Usage
 
 <ComponentsStatus />
 

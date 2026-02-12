@@ -20,9 +20,7 @@ Breadcrumbs show users their current location relative to the information archit
 **3. Current page**: This is the last item in the breadcrumbs and shows the current page the user is on. It uses default text, and should not be a clickable link. 
 
 ## Content
-
 Breadcrumbs expect their component children to be the link "crumbs" that make up the navigation structure.
 The component will interject a separator between the crumbs.
 
-
-<component-design-guidelines name="Warp - Components / Breadcrumbs" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=17-139&mode=design" />
+<component-questions />

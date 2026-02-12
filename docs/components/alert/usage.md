@@ -1,4 +1,4 @@
-# Text - Usage
+# Alert - Usage
 
 <ComponentsStatus />
 

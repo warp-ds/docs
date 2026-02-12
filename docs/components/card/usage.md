@@ -1,8 +1,11 @@
 # Card - Usage
-Card is an interactive layout component to display information.
 
 <ComponentsStatus />
 
-<component-design-guidelines name="Warp - Components / Card" link="https://www.figma.com/file/nkiRpuVu6XRfvY96BA80H8/Components-overview?type=design&node-id=377-34742&mode=design" />
+## Status - in progress 🚧
+
+We're working on adding these usage guidelines
+
+<InProgressStatus />
 
 <component-questions />

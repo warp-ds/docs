@@ -62,3 +62,5 @@ If the breadcrumb item labels are too long to fit on smaller screens, we:
 
 **1. Not truncated** - the first path does not get truncated.   
 **2. Truncated** - the last path does gets truncated.
+
+<component-questions />
