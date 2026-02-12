@@ -333,53 +333,151 @@ The checkbox and checkbox group components work with native HTML forms. The grou
 </script>
 ```
 
-### CSS Customization
+# Styling API
 
-Customize the checkbox using shadow parts and CSS custom properties.
+This section documents the supported styling hooks for `<w-checkbox>`.
 
-#### Shadow Parts
+Use these hooks can be used to customize appearance without relying on internal structure or selectors.
 
-| Part      | Description                              |
-| --------- | ---------------------------------------- |
-| base      | Wrapper label element.                   |
-| control   | Visible checkbox control.                |
-| input     | Native checkbox input (visually hidden). |
-| label     | Slotted label text.                      |
+---
 
-```css example
-w-checkbox::part(control) {
-  border-radius: 6px;
-}
+## Parts
 
+The checkbox exposes a small set of parts that can be targeted for last‑mile layout or typography tweaks.
+
+| Part | Targets | Typical use |
+|---|---|---|
+| `base` | wrapper element | layout adjustments (spacing, alignment) |
+| `control` | checkbox control (box) | minor alignment or sizing tweaks |
+| `input` | native `<input type="checkbox">` | focus / outline adjustments |
+| `label` | label content | typography tweaks |
+
+Example:
+
+```css
 w-checkbox::part(label) {
   font-weight: 600;
 }
+
+w-checkbox::part(control) {
+  margin-top: 1px;
+}
 ```
 
-#### CSS Custom Properties
+Parts are intended as an **escape hatch**.  
+Prefer component tokens for anything state‑ or size‑related.
 
-| Name                                  | Description |
-| ------------------------------------- | ----------- |
-| --w-c-checkbox-label-font-size        | Label font size. |
-| --w-c-checkbox-label-line-height      | Label line height. |
-| --w-c-checkbox-control-size           | Size of the checkbox control. |
-| --w-c-checkbox-gap                    | Space between control and label. |
-| --w-c-checkbox-radius                 | Border radius of the control. |
-| --w-c-checkbox-border-width           | Border width of the control. |
-| --w-c-checkbox-bg                     | Default background color. |
-| --w-c-checkbox-border-color           | Default border color. |
-| --w-c-checkbox-icon-color             | Icon color for checked/indeterminate states. |
-| --w-c-checkbox-bg-checked             | Background color when checked/indeterminate. |
-| --w-c-checkbox-border-color-checked   | Border color when checked/indeterminate. |
-| --w-c-checkbox-checked-icon           | Background image used for the checked icon. |
-| --w-c-checkbox-border-color-invalid   | Border color when invalid. |
-| --w-c-checkbox-bg-invalid-checked     | Background color when invalid and checked/indeterminate. |
-| --w-c-checkbox-bg-disabled            | Background color when disabled. |
-| --w-c-checkbox-border-color-disabled  | Border color when disabled. |
-| --w-c-checkbox-bg-disabled-checked    | Background color when disabled and checked/indeterminate. |
-| --w-c-checkbox-outline-width          | Focus outline width. |
-| --w-c-checkbox-outline-color          | Focus outline color. |
-| --w-c-checkbox-outline-offset         | Focus outline offset. |
-| --w-c-checkbox-transition             | Transition applied to the control. |
+---
 
-<component-questions />
+## Component tokens (`--w-c-checkbox-*`)
+
+Component tokens act as inputs to the checkbox styling.  
+They can be set directly on the component or inherited from a parent container.
+
+```css
+.settings-panel {
+  --w-c-checkbox-gap: 12px;
+}
+```
+
+Defaults are defined internally; setting a token is always optional.
+
+---
+
+### Layout & size
+
+| Token | Purpose | Default |
+|---|---|---|
+| `--w-c-checkbox-gap` | space between control and label | `8px` |
+| `--w-c-checkbox-control-size` | width/height of the control | `2rem` |
+| `--w-c-checkbox-radius` | border radius of the control | `4px` |
+| `--w-c-checkbox-border-width` | border width | `1px` |
+
+---
+
+### Colors
+
+| Token | Purpose | Default |
+|---|---|---|
+| `--w-c-checkbox-bg` | control background | theme default |
+| `--w-c-checkbox-border-color` | control border color | theme default |
+| `--w-c-checkbox-bg-checked` | background when checked | theme default |
+| `--w-c-checkbox-border-color-checked` | border when checked | theme default |
+| `--w-c-checkbox-icon-color` | icon color | theme default |
+
+---
+
+### Invalid state
+
+| Token | Purpose | Default |
+|---|---|---|
+| `--w-c-checkbox-border-color-invalid` | border color when invalid | theme default |
+| `--w-c-checkbox-bg-invalid-checked` | background when invalid and checked | theme default |
+
+---
+
+### Disabled state
+
+| Token | Purpose | Default |
+|---|---|---|
+| `--w-c-checkbox-bg-disabled` | background when disabled | theme default |
+| `--w-c-checkbox-border-color-disabled` | border when disabled | theme default |
+| `--w-c-checkbox-bg-disabled-checked` | background when disabled and checked | theme default |
+
+---
+
+### Focus
+
+| Token | Purpose | Default |
+|---|---|---|
+| `--w-c-checkbox-outline-width` | focus outline width | `2px` |
+| `--w-c-checkbox-outline-color` | focus outline color | theme default |
+| `--w-c-checkbox-outline-offset` | focus outline offset | theme default |
+
+---
+
+### Motion
+
+| Token | Purpose | Default |
+|---|---|---|
+| `--w-c-checkbox-transition` | transition for control | `150ms cubic-bezier(0.4, 0, 0.2, 1)` |
+
+Transitions are automatically disabled when `prefers-reduced-motion: reduce` is active.
+
+---
+
+## Examples
+
+### Compact checkbox
+
+```css
+.filters w-checkbox {
+  --w-c-checkbox-gap: 4px;
+  --w-c-checkbox-control-size: 1.6rem;
+}
+```
+
+### Rounded checkbox
+
+```css
+w-checkbox {
+  --w-c-checkbox-radius: 9999px;
+}
+```
+
+### Contextual color override (advanced)
+
+```css
+.danger-zone w-checkbox {
+  --w-c-checkbox-border-color-checked: red;
+}
+```
+
+---
+
+## Guidelines
+
+- Prefer **component tokens** for size, spacing, and state styling
+- Use **parts** only for small, local tweaks
+- Avoid relying on internal class names or selectors
+- If multiple tokens are required to achieve a look, consider whether a new variant or design token is more appropriate
