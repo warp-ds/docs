@@ -333,4 +333,53 @@ The checkbox and checkbox group components work with native HTML forms. The grou
 </script>
 ```
 
+### CSS Customization
+
+Customize the checkbox using shadow parts and CSS custom properties.
+
+#### Shadow Parts
+
+| Part      | Description                              |
+| --------- | ---------------------------------------- |
+| base      | Wrapper label element.                   |
+| control   | Visible checkbox control.                |
+| input     | Native checkbox input (visually hidden). |
+| label     | Slotted label text.                      |
+
+```css example
+w-checkbox::part(control) {
+  border-radius: 6px;
+}
+
+w-checkbox::part(label) {
+  font-weight: 600;
+}
+```
+
+#### CSS Custom Properties
+
+| Name                                  | Description |
+| ------------------------------------- | ----------- |
+| --w-c-checkbox-label-font-size        | Label font size. |
+| --w-c-checkbox-label-line-height      | Label line height. |
+| --w-c-checkbox-control-size           | Size of the checkbox control. |
+| --w-c-checkbox-gap                    | Space between control and label. |
+| --w-c-checkbox-radius                 | Border radius of the control. |
+| --w-c-checkbox-border-width           | Border width of the control. |
+| --w-c-checkbox-bg                     | Default background color. |
+| --w-c-checkbox-border-color           | Default border color. |
+| --w-c-checkbox-icon-color             | Icon color for checked/indeterminate states. |
+| --w-c-checkbox-bg-checked             | Background color when checked/indeterminate. |
+| --w-c-checkbox-border-color-checked   | Border color when checked/indeterminate. |
+| --w-c-checkbox-checked-icon           | Background image used for the checked icon. |
+| --w-c-checkbox-border-color-invalid   | Border color when invalid. |
+| --w-c-checkbox-bg-invalid-checked     | Background color when invalid and checked/indeterminate. |
+| --w-c-checkbox-bg-disabled            | Background color when disabled. |
+| --w-c-checkbox-border-color-disabled  | Border color when disabled. |
+| --w-c-checkbox-bg-disabled-checked    | Background color when disabled and checked/indeterminate. |
+| --w-c-checkbox-outline-width          | Focus outline width. |
+| --w-c-checkbox-outline-color          | Focus outline color. |
+| --w-c-checkbox-outline-offset         | Focus outline offset. |
+| --w-c-checkbox-transition             | Transition applied to the control. |
+
 <component-questions />
