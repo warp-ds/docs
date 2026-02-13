@@ -188,10 +188,6 @@
       {
         "name": "Vue",
         "file": "vue"
-      },
-      {
-        "name": "Web",
-        "file": "web"
       }
     ],
     "combo-box": [

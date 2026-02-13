@@ -62,14 +62,14 @@ export const headLinks = [
     'link',
     {
       rel: 'stylesheet',
-      href: 'https://assets.finn.no/pkg/@warp-ds/elements/2.6.0/styles.css',
+      href: 'https://assets.finn.no/pkg/@warp-ds/elements/2.7.0/styles.css',
     },
   ],
   [
     'script',
     {
       type: 'module',
-      src: 'https://assets.finn.no/pkg/@warp-ds/elements/2.6.0/index.js',
+      src: 'https://assets.finn.no/pkg/@warp-ds/elements/2.7.0/index.js',
     },
   ],
   [
