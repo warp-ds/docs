@@ -133,6 +133,10 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     {
+                      text: 'Setup Web-Components (New)',
+                      link: '/get-started/developers/web/web-components',
+                    },
+                    {
                       text: 'Setup',
                       link: '/get-started/developers/web/',
                     },
