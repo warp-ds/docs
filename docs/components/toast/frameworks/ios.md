@@ -15,6 +15,7 @@ Warp.Toast(
     title: String,
     toastEdge: Warp.ToastEdge,
     duration: Duration = .short,
+    showCloseButton: Bool = true,
     isPresented: Binding<Bool>
 )
 ```
@@ -105,5 +106,6 @@ Warp.Toast(
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | duration | Warp.Toast.Duration.short   Warp.Toast.Duration.long   Warp.Toast.Duration.custom(interval:) | .short | Duration the Toast is shown |
+| showCloseButton | Bool | true | Whether to show the close button on the Toast |
 
 <component-questions />
