@@ -1,38 +1,28 @@
 <script setup>
-import IconInfo16 from '@warp-ds/icons/vue/info-16';
-import { wAttention, wButton } from '@warp-ds/vue';
 import { ref } from 'vue';
 
-const popoverTarget = ref(null);
-const popoverIconTarget = ref(null);
+const popoverRef = ref(null);
+const isOpen = ref(false);
 
-const popoverShowing = ref(false);
-const popoverIconTargetShowing = ref(false);
+const togglePopover = () => {
+  isOpen.value = !isOpen.value;
+  if (popoverRef.value) {
+    popoverRef.value.show = isOpen.value;
+  }
+};
 </script>
 
 <template>
   <div class="component space-y-32">
     <div>
-      <w-button
-        utility
-        :aria-expanded="popoverShowing"
-        aria-controls="popover-example"
-        aria-details="popover-bubbletext"
-        ref="popoverTarget"
-        @click="() => (popoverShowing = !popoverShowing)"
-      >
-        Open popover
-      </w-button>
-      <w-attention
-        popover
-        placement="right-start"
-        :target-el="popoverTarget ? popoverTarget.$el : null"
-        v-model="popoverShowing"
-        id="popover-example"
-        class="w-1/2">
-        <div>
+      <h3 class="t4">Click to toggle popover</h3>
+      <w-attention ref="popoverRef" popover placement="right-start">
+        <w-button slot="target" variant="utility" @click="togglePopover" :aria-expanded="isOpen">
+          Open popover
+        </w-button>
+        <div slot="message">
           <h3 class="h4">Heading</h3>
-          <p id="popover-bubbletext">Text goes in this box and is responsive so that if more text is written, the box grows in size</p>
+          <p>Text goes in this box and is responsive so that if more text is written, the box grows in size</p>
         </div>
       </w-attention>
     </div>

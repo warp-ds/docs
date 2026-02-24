@@ -1,17 +1,14 @@
-<template>
-  <div class="component" ref="el"/>
-</template>
-
 <script setup>
-import { createElement } from 'react';
-import { createRoot } from 'react-dom/client';
-import { onMounted, ref } from 'vue';
-import Link from './Link.jsx';
-
-const el = ref();
-
-onMounted(() => {
-  const root = createRoot(el.value);
-  root.render(createElement(Link, {}, null));
-});
 </script>
+
+<template>
+  <div class="component flex flex-wrap gap-16">
+    <w-link variant="primary" href="https://example.com">Primary</w-link>
+    <w-link variant="secondary" href="https://example.com">Secondary</w-link>
+    <w-link variant="negative" href="https://example.com">Negative</w-link>
+    <w-link variant="utility" href="https://example.com">Utility</w-link>
+    <w-link variant="utilityQuiet" href="https://example.com">Utility Quiet</w-link>
+    <w-link variant="quiet" href="https://example.com">Quiet</w-link>
+    <w-link small="" href="https://example.com">Small</w-link>
+  </div>
+</template>

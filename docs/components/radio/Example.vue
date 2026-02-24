@@ -1,30 +1,35 @@
 <script setup>
-import { wToggle } from '@warp-ds/vue';
-import { ref } from 'vue';
-
-const toggleModel = ref('');
-const invalidToggleModel = ref('1');
-const disabledToggleModel = ref('2');
-
-const toggles = [
-  { label: 'One', value: 1, 'data-test': 'toggle:1' },
-  { label: 'Two', value: 2, 'data-test': 'toggle:2' },
-];
 </script>
 
 <template>
   <div class="component space-y-16">
     <div>
       <h3 class="t4">Default</h3>
-      <w-toggle radio v-model="toggleModel" label="Radio Toggle" :toggles="toggles" />
+      <w-radio-group label="Radio Group" name="default-radio">
+        <w-radio value="1">One</w-radio>
+        <w-radio value="2">Two</w-radio>
+      </w-radio-group>
+    </div>
+    <div>
+      <h3 class="t4">With selection</h3>
+      <w-radio-group label="Radio Group" name="selected-radio">
+        <w-radio value="1" checked>One (selected)</w-radio>
+        <w-radio value="2">Two</w-radio>
+      </w-radio-group>
     </div>
     <div>
       <h3 class="t4">Disabled</h3>
-      <w-toggle radio disabled v-model="disabledToggleModel" label="Disabled radio Toggle" :toggles="toggles" />
+      <w-radio-group label="Disabled Radio Group" name="disabled-radio">
+        <w-radio value="1" disabled>One</w-radio>
+        <w-radio value="2" disabled checked>Two (selected)</w-radio>
+      </w-radio-group>
     </div>
     <div>
       <h3 class="t4">Invalid</h3>
-      <w-toggle radio invalid v-model="invalidToggleModel" label="Invalid radio Toggle" :toggles="toggles" />
+      <w-radio-group label="Invalid Radio Group" name="invalid-radio" invalid>
+        <w-radio value="1" checked>One</w-radio>
+        <w-radio value="2">Two</w-radio>
+      </w-radio-group>
     </div>
   </div>
 </template>

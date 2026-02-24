@@ -39,7 +39,48 @@ export default defineConfig({
   vue: {
     template: {
       compilerOptions: {
-        isCustomElement: (tag) => /(-example|-color-table|example-container|poc-1-div|w-icon)$/.test(tag),
+        isCustomElement: (tag) => {
+          // Pattern-based matches
+          if (/(-example|-color-table|example-container|poc-1-div)$/.test(tag)) return true;
+          // w-icon-* variants (e.g., w-icon-share-16)
+          if (tag.startsWith('w-icon')) return true;
+          // Specific @warp-ds/elements web components
+          const elementsComponents = [
+            'w-alert',
+            'w-affix',
+            'w-attention',
+            'w-badge',
+            'w-box',
+            'w-breadcrumbs',
+            'w-button',
+            'w-card',
+            'w-checkbox',
+            'w-checkbox-group',
+            'w-datepicker',
+            'w-expandable',
+            'w-link',
+            'w-modal',
+            'w-modal-header',
+            'w-modal-footer',
+            'w-page-indicator',
+            'w-pagination',
+            'w-pill',
+            'w-radio',
+            'w-radio-group',
+            'w-select',
+            'w-slider',
+            'w-slider-thumb',
+            'w-step',
+            'w-step-indicator',
+            'w-switch',
+            'w-tab',
+            'w-tab-panel',
+            'w-tabs',
+            'w-textarea',
+            'w-textfield',
+          ];
+          return elementsComponents.includes(tag);
+        },
       },
     },
   },
