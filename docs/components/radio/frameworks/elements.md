@@ -491,4 +491,3 @@ w-radio {
 - Prefer **component tokens** for size, spacing, and state styling
 - Use **parts** only for small, local tweaks
 - Avoid relying on internal class names or selectors
-- If multiple tokens are required to achieve a look, consider whether a new variant or design token is more appropriate
