@@ -4,7 +4,7 @@
 <template>
   <div class="component flex flex-wrap gap-16">
     <w-button variant="primary">Primary</w-button>
-    <w-button variant="primary" loading="">Loading</w-button>
+    <w-button variant="primary" loading>Loading</w-button>
     <w-button variant="utility">Utility</w-button>
     <w-button variant="secondary">Secondary</w-button>
     <w-button variant="secondary" quiet>Secondary Quiet</w-button>

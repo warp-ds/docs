@@ -27,7 +27,7 @@
       <h3 class="h4">Suffix + Prefix</h3>
       <w-textfield label="A label">
         <w-affix slot="prefix" label="kr"></w-affix>
-        <w-affix slot="suffix" clear="" aria-label="Clear text"></w-affix>
+        <w-affix slot="suffix" clear aria-label="Clear text"></w-affix>
       </w-textfield>
     </div>
     <div>

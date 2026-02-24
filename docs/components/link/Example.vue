@@ -9,6 +9,6 @@
     <w-link variant="utility" href="https://example.com">Utility</w-link>
     <w-link variant="utilityQuiet" href="https://example.com">Utility Quiet</w-link>
     <w-link variant="quiet" href="https://example.com">Quiet</w-link>
-    <w-link small="" href="https://example.com">Small</w-link>
+    <w-link small href="https://example.com">Small</w-link>
   </div>
 </template>
