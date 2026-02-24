@@ -108,7 +108,8 @@ Default: `false`
 
 ```html example
 <form id="radio-form">
-  <w-radio name="terms" required>I agree to the terms</w-radio>
+  <w-radio name="terms" required value="agree">I agree to the terms</w-radio>
+  <w-radio name="terms" required value="disagree">I do not agree to the terms</w-radio>
   <w-button type="submit" style="margin-top: 8px;">Submit</w-button>
 </form>
 <script type="module">
@@ -484,6 +485,8 @@ w-radio {
 ---
 
 ## Guidelines
+
+- Before changing the default styles, remember that doing so can result in less consistent experiences for users across the product. Prefer defaults.
 
 - Prefer **component tokens** for size, spacing, and state styling
 - Use **parts** only for small, local tweaks
