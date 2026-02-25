@@ -18,4 +18,4 @@ You can switch to dark mode whenever you want, either for a specific component o
 
 It’s always a good idea to see what your designs look like in dark mode to make sure colour contrasts are good enough and that illustrations and graphics are optimised for a darker setting.
 
-![Figma: a selected button component with an expanded dropdown of all supported modes](/foundations/figma-button-modes.svg)
+![Figma: a selected button component with an expanded dropdown of all supported modes](/foundations/figma-button-modes.png)
