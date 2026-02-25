@@ -21,16 +21,7 @@ Guidance and onboarding to the WARP design system.
 ![Overview of the "Get started" project in Figma for designers](/get-started/figma-warp-get-started.jpg)
 :::
 
-### 02. Documentation
-
-[Component overview](https://www.figma.com/design/nkiRpuVu6XRfvY96BA80H8/Component-overview?m=auto): component documentation. The content in here will be migrated from Figma to this page. <br><br>
-[DataViz Guidelines (Beta)](<https://www.figma.com/design/nGpxtM37E56I832ZDR3lRt/DataViz-Guidelines-(Beta)?m=auto>): guidelines for data visualization.
-
-::: image-block
-![Overview of the "Documentation" project in Figma for designers](/get-started/figma-warp-documentation.jpg)
-:::
-
-### 03. Libraries
+### 02. Libraries
 
 [WARP - Components](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?m=auto): contains all tokens and themable components. <br><br>
 [WARP - Icons](https://www.figma.com/design/yEx16ew6S0Xgd579dN4hsM/WARP---Icons?m=auto): icon library containing all supported icons. <br><br>
@@ -41,7 +32,7 @@ Guidance and onboarding to the WARP design system.
 ![Overview of the "Libraries" project in Figma for designers](/get-started/figma-warp-libraries.jpg)
 :::
 
-### 04. Examples
+### 03. Examples
 
 1. [Example pages](): generic web/app designs showing brand specific tokens in play. You can use this to understand how tokens are used.
 
