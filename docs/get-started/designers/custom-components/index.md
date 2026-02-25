@@ -22,4 +22,4 @@ You can find an overview of our semantic tokens here: [foundations > tokens > ov
 
 Connecting the design tokens to Figma variables makes it possible to easily switch between brands and light/dark modes. You can do this by selecting an element using WARP tokens and using the right sidebar to switch modes within "Appearance"
 
-![Figma interface showing a selected button and the available modes for NMP brands and light/dark mode options](/foundations/figma-button-modes.svg)
+![Figma interface showing a selected button and the available modes for NMP brands and light/dark mode options](/foundations/figma-button-modes.png)
