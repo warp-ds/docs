@@ -1,5 +1,4 @@
 <script setup>
-import { wBox } from '@warp-ds/vue';
 </script>
 
 <template>

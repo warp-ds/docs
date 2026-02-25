@@ -1,17 +1,19 @@
-<template>
-  <div class="component" ref="el"/>
-</template>
-
 <script setup>
-import { createElement } from 'react';
-import { createRoot } from 'react-dom/client';
-import { onMounted, ref } from 'vue';
-import DatePicker from './DatePicker.jsx';
-
-const el = ref();
-
-onMounted(() => {
-  const root = createRoot(el.value);
-  root.render(createElement(DatePicker, {}, null));
-});
 </script>
+
+<template>
+  <div class="component space-y-16">
+    <div>
+      <h3 class="h4">Default Date Picker</h3>
+      <w-datepicker label="Select date"></w-datepicker>
+    </div>
+    <div>
+      <h3 class="h4">With pre-selected date</h3>
+      <w-datepicker label="Birthday" value="2000-01-15"></w-datepicker>
+    </div>
+    <div>
+      <h3 class="h4">Norwegian locale</h3>
+      <w-datepicker label="Velg dato" lang="nb"></w-datepicker>
+    </div>
+  </div>
+</template>

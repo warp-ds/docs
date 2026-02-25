@@ -1,6 +1,4 @@
 <script setup>
-import { wBox } from '@warp-ds/vue';
-
 defineProps({ x: Boolean, y: Boolean });
 </script>
 
