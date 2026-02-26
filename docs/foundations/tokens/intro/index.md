@@ -19,10 +19,6 @@ WARP is supporting multiple Vend brands, we’re currently working on adding mor
 | Neutral  | Live ✅ | Live ✅ | Live ✅   | Live ✅ |
 | Vend     | Live ✅ | Live ✅ | Live ✅   | Live ✅ |
 
-::: tip Note
-The Vend and Neutral themes are available in Warp and open for testing, but they’re still in beta—please do not use them in production for now. For more information, [read this communication](https://sch-chat.slack.com/archives/C05ET166B42/p1744625736206399).
-:::
-
 ## Semantic colour tokens
 
 Semantic tokens are not connected to any specific component and can be used to create custom designs that are still multi-brand friendly.
