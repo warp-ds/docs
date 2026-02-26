@@ -16,8 +16,8 @@ WARP is supporting multiple Vend brands, we’re currently working on adding mor
 | Blocket  | Live ✅ | Live ✅ | Live ✅ | Live ✅ |
 | Bilbasen | TBA ⌛   | TBA ⌛   | TBA ⌛   | TBA ⌛   |
 | Oikotie  | TBA ⌛   | TBA ⌛   | TBA ⌛   | TBA ⌛   |
-| Neutral  | Live ✅ | Live ✅ | TBA ⌛   | Live ✅ |
-| Vend     | Live ✅ | Live ✅ | TBA ⌛   | Live ✅ |
+| Neutral  | Live ✅ | Live ✅ | Live ✅   | Live ✅ |
+| Vend     | Live ✅ | Live ✅ | Live ✅   | Live ✅ |
 
 ::: tip Note
 The Vend and Neutral themes are available in Warp and open for testing, but they’re still in beta—please do not use them in production for now. For more information, [read this communication](https://sch-chat.slack.com/archives/C05ET166B42/p1744625736206399).
