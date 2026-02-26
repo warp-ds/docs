@@ -34,7 +34,7 @@ Guidance and onboarding to the WARP design system.
 
 ### 03. Examples
 
-1. [Example pages](): generic web/app designs showing brand specific tokens in play. You can use this to understand how tokens are used.
+1. [Example pages](https://www.figma.com/design/mUsNZDskDWF8XB6ZqxO8l8/Example-Pages?m=auto): generic web/app designs showing brand specific tokens in play. You can use this to understand how tokens are used.
 
 ::: image-block
 ![Overview of the "Examples" project in Figma for designers](/get-started/figma-warp-examples.jpg)
