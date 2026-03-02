@@ -5,7 +5,14 @@ Breadcrumbs show users their current location relative to the information archit
 
 ## Example
 <ThemeSwitcher />
-<breadcrumbs-example />
+
+<style-isolate>
+    <w-breadcrumbs>
+        <a href="/url/1">Page 1</a>
+        <a href="/url/2">Page 2</a>
+        <span aria-current="page">Current Page</span>
+    </w-breadcrumbs>
+</style-isolate>
 
 ## Anatomy
 
