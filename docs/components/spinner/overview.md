@@ -9,7 +9,14 @@ For the web implementation of a "spinner", see [CSS - Animation - Spinner](../..
 
 ## Example
 <ThemeSwitcher />
-<spinner-example />
+
+<style-isolate>
+    <div class="py-32 px-16 flex gap-32 place-content-center place-items-center">
+        <div class="animate-spinner [--spinner-size:16px]"></div>
+        <div class="animate-spinner"></div>
+        <div class="animate-spinner [--spinner-size:32px]"></div>
+    </div>
+</style-isolate>
 
 ## Usage
 

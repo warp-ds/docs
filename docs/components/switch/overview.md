@@ -5,6 +5,12 @@ The Switch component allows users to toggle between two states.
 
 ## Examples
 <ThemeSwitcher />
-<switch-example />
+
+<style-isolate>
+    <div class="flex items-center gap-8">
+        <label for="switch-example">Switch it</label>
+        <w-switch id="switch-example" name="toggle"></w-switch>
+    </div>
+</style-isolate>
 
 <component-questions />

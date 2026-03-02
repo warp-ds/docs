@@ -57,6 +57,11 @@ if (typeof window !== 'undefined' && typeof HTMLElement !== 'undefined') {
       // Add base styles for wrapper
       const style = document.createElement('style');
       style.textContent = `
+      @unocss-placeholder
+
+        h3 {
+          font-weight: bold;
+        }
         .component {
           padding: 16px;
           border: 2px solid var(--vp-c-gray-1);
