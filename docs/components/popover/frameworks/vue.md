@@ -72,7 +72,6 @@ const showing = ref(false);
 <script setup>
 import { ref } from 'vue';
 import { wAttention, wButton } from '#components';
-import IconInfo16 from '@warp-ds/icons/vue/info-16';
 
 const target = ref(null);
 const showing = ref(false);
@@ -87,7 +86,7 @@ const showing = ref(false);
   ref="popoverIconTarget"
   @click="() => (popoverIconTargetShowing = !popoverIconTargetShowing)"
   >
-    <icon-info-16 />
+    <w-icon name="info" size="small" />
   </w-button>
   <w-attention
     popover

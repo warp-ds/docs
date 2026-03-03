@@ -25,18 +25,18 @@ Control the color of an icon using the `s-icon-{semantic color}` utilities speci
 
 <example-container>
   <div class="grid grid-cols-4 gap-16 justify-items-center">
-    <icon-star-full-32 class="s-icon text-xxl h-64 w-64" />
-    <icon-star-full-32 class="s-icon-primary text-xxl h-64 w-64" />
-    <icon-star-full-32 class="s-icon-positive text-xxl h-64 w-64" />
-    <icon-star-full-32 class="s-icon-warning text-xxl h-64 w-64" />
+    <w-icon name="StarFull" size="64px" class="s-icon text-xxl" />
+    <w-icon name="StarFull" size="64px" class="s-icon-primary text-xxl" />
+    <w-icon name="StarFull" size="64px" class="s-icon-positive text-xxl" />
+    <w-icon name="StarFull" size="64px" class="s-icon-warning text-xxl" />
   </div>
 </example-container>
 
 ```html
-<icon-star-full-32 class="s-icon ..." />
-<icon-star-full-32 class="s-icon-primary ..." />
-<icon-star-full-32 class="s-icon-positive ..." />
-<icon-star-full-32 class="s-icon-warning ..." />
+<w-icon name="StarFull" size="64px" class="s-icon ..." />
+<w-icon name="StarFull" size="64px" class="s-icon-primary ..." />
+<w-icon name="StarFull" size="64px" class="s-icon-positive ..." />
+<w-icon name="StarFull" size="64px" class="s-icon-warning ..." />
 ```
 
 ### Arbitrary values
@@ -61,16 +61,16 @@ Always make sure to have sufficient contrast.
 
 <example-container class="bg-center bg-[url(../../images/50s-scientists.jpg)]">
   <div class="grid grid-cols-4 gap-16 justify-items-center">
-    <div class="s-icon/60 hover:s-icon/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><icon-star-full-32 class="h-64 w-64" /></div>
-    <div class="s-icon-primary/60 hover:s-icon-primary/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><icon-star-full-32 class="h-64 w-64" /></div>
-    <div class="text-[--w-s-color-text-positive/60] hover:text-[--w-s-color-text-positive/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><icon-star-full-32 class="h-64 w-64" /></div>
-    <div class="text-[var(--w-black)/50] hover:text-[var(--w-black)/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><icon-star-full-32 class="h-64 w-64" /></div>
+    <div class="s-icon/60 hover:s-icon/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><w-icon name="StarFull" size="64px" /></div>
+    <div class="s-icon-primary/60 hover:s-icon-primary/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><w-icon name="StarFull" size="64px" /></div>
+    <div class="text-[--w-s-color-text-positive/60] hover:text-[--w-s-color-text-positive/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><w-icon name="StarFull" size="64px" /></div>
+    <div class="text-[var(--w-black)/50] hover:text-[var(--w-black)/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><w-icon name="StarFull" size="64px" /></div>
   </div>
 </example-container>
 
 ```html
-<icon-star-full-32 class="s-icon/60 hover:s-icon/100 ..." />
-<icon-star-full-32 class="s-icon-primary/60 hover:s-icon-primary/100 ... ..." />
-<icon-star-full-32 class="text-[--w-s-color-text-positive/60] hover:text-[--w-s-color-text-positive/100] ..." />
-<icon-star-full-32 class="text-[var(--w-black)/50] hover:text-[var(--w-black)/100] ..." />
+<w-icon name="StarFull" size="64px" class="s-icon/60 hover:s-icon/100 ..." />
+<w-icon name="StarFull" size="64px" class="s-icon-primary/60 hover:s-icon-primary/100 ... ..." />
+<w-icon name="StarFull" size="64px" class="text-[--w-s-color-text-positive/60] hover:text-[--w-s-color-text-positive/100] ..." />
+<w-icon name="StarFull" size="64px" class="text-[var(--w-black)/50] hover:text-[var(--w-black)/100] ..." />
 ```

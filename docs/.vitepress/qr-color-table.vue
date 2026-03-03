@@ -1,5 +1,4 @@
 <script setup>
-import { IconStarFull24 } from '@warp-ds/icons/vue';
 import { computed } from 'vue';
 import { data } from '../supported.data.js';
 
@@ -76,7 +75,7 @@ const getCellBgColor = (cls) => {
               <div class="pl-6">B</div>
             </div>
             <div v-else :class="[cls, { 'border-4': /^(s-)?border/.test(cls) }, { 'h-24': !/^(s-)?(text|icon)/.test(cls) }, { [outlineClasses]: /^(s-)?outline/.test(cls) } ]" class="w-64 px-8 text-center rounded-8">
-              <icon-star-full-24 v-if="/^s-icon/.test(cls)" class="m-auto my-4" />
+              <w-icon v-if="/^s-icon/.test(cls)" name="StarFull" size="medium" class="m-auto my-4" />
               <span v-else-if="/^(s-)?text/.test(cls)" class="text-l">Text</span>
             </div>
           </td>

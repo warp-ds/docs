@@ -1,4 +1,3 @@
-import { IconStarFull32 } from '@warp-ds/icons/vue';
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
 import ComponentDesignGuidelines from '../ComponentDesignGuidelines.md';
@@ -57,7 +56,6 @@ export default {
     app.component('DsOverview', DsOverview);
     app.component('WidthController', WidthController);
     app.component('DsSearchInput', DsSearchInput);
-    app.component('IconStarFull32', IconStarFull32);
     app.component('TabsContent', TabsContent);
   },
 };
