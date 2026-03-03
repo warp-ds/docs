@@ -5,11 +5,11 @@ import markdownItContainer from 'markdown-it-container';
 import uno from 'unocss/vite';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
 import { defineConfig } from 'vitepress';
-import { supported as supportedClasses } from '../supported.js';
 import { headLinks } from './headLinks.js';
 import { docsClasses } from './safelist.js';
 import { sidebarFoundations } from './sidebar-foundations.js';
 import { generateComponentsSidebar, generatePatternsSidebar } from './sidebar-generator.js';
+import { supported as supportedClasses } from './supported.js';
 
 const base = '/docs';
 

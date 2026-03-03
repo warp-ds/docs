@@ -2,7 +2,7 @@
 import camelcase from 'camelcase';
 import { useData } from 'vitepress';
 import { computed } from 'vue';
-import { data } from '../supported.data.js';
+import { data } from './supported.data.js';
 
 const pageData = useData();
 const props = defineProps({ list: Array });

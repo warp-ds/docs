@@ -1,6 +1,6 @@
 <script setup>
 import { computed } from 'vue';
-import { data } from '../supported.data.js';
+import { data } from './supported.data.js';
 
 const props = defineProps({
   dataId: String,
