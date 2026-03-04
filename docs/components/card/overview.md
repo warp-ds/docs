@@ -11,7 +11,6 @@ Card is an interactive layout component to display information.
     <p>
         The card can have any content but it needs to at least have one interactive item.
     </p>
-
     <h5>with box-shadow (default)</h5>
     <div class="grid grid-cols-3 gap-24 mb-32 mt-24">
         <w-card clickable>
@@ -36,7 +35,6 @@ Card is an interactive layout component to display information.
             </article>
         </w-card>
     </div>
-
     <h5>without box-shadow (using the flat prop)</h5>
     <div class="grid grid-cols-3 gap-24 mb-32 mt-24">
         <w-card flat clickable>
@@ -61,7 +59,6 @@ Card is an interactive layout component to display information.
             </article>
         </w-card>
     </div>
-
     <h3 class="t4">Selected Card</h3>
     <div class="grid grid-cols-3 gap-24 mb-32 mt-24">
         <w-card selected>
@@ -79,7 +76,6 @@ Card is an interactive layout component to display information.
             </article>
         </w-card>
     </div>
-
     <h3 class="t4">Card with click toggle selection</h3>
     <div class="grid grid-cols-3 gap-24 mb-32 mt-24">
         <w-card clickable onclick="this.selected = !this.selected">
