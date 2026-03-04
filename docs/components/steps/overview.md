@@ -22,8 +22,7 @@ The steps component is built to handle user journeys, showing progress.
             <p>The last step</p>
         </w-step>
     </w-step-indicator>
-
-    <h3 class="h4">Vertical Steps</h3>
+    <h3 class="h4 pt-12">Vertical Steps</h3>
     <w-step-indicator class="mb-32">
         <w-step completed>
             <strong>Step 1</strong>
@@ -38,8 +37,7 @@ The steps component is built to handle user journeys, showing progress.
             <p>The last step</p>
         </w-step>
     </w-step-indicator>
-
-    <h3 class="h4">Vertical Steps (Right aligned)</h3>
+    <h3 class="h4 pt-12">Vertical Steps (Right aligned)</h3>
     <w-step-indicator right>
         <w-step completed>
             <strong>Step 1</strong>

@@ -38,7 +38,7 @@ const badges = computed(() => {
 </script>
 
 <template>
-  <div class="fw-badges fw-left" :class="justifyClass" role="list" aria-label="Framework support status">
+  <div class="fw-badges fw-left" role="list" aria-label="Framework support status">
     <WarpBadge
       v-for="badge in badges"
       :key="badge.label"

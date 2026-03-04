@@ -11,6 +11,7 @@ import PopoverFallbackPlacements from '../components/popover/FallbackPlacementsE
 import PopoverFlip from '../components/popover/FlipExample.vue';
 import PopoverStatic from '../components/popover/StaticExample.vue';
 import RadioButtons from '../components/radio-buttons/Example.vue';
+import Toast from '../components/toast/Example.vue';
 import Tooltip from '../components/tooltip/Example.vue';
 import TooltipFallbackPlacements from '../components/tooltip/FallbackPlacementsExample.vue';
 import TooltipFlip from '../components/tooltip/FlipExample.vue';
@@ -33,6 +34,7 @@ buildWc('popover-fallback-placements-example', PopoverFallbackPlacements);
 buildWc('popover-flip-example', PopoverFlip);
 buildWc('popover-static-example', PopoverStatic);
 buildWc('radiobuttons-example', RadioButtons);
+buildWc('toast-example', Toast);
 buildWc('tooltip-example', Tooltip);
 buildWc('tooltip-fallback-placements-example', TooltipFallbackPlacements);
 buildWc('tooltip-flip-example', TooltipFlip);

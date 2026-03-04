@@ -23,6 +23,7 @@
     "@unocss/core": "66.5.2",
     "@vueuse/core": "10.11.0",
     "@warp-ds/css": "2.3.0",
+    "@warp-ds/elements": "^2.8.0",
     "@warp-ds/preset-docs": "0.0.16",
     "@warp-ds/uno": "2.2.0",
     "@warp-ds/vue": "2.2.1",
