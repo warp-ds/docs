@@ -17,7 +17,6 @@ import TooltipFallbackPlacements from '../components/tooltip/FallbackPlacementsE
 import TooltipFlip from '../components/tooltip/FlipExample.vue';
 import TooltipStatic from '../components/tooltip/StaticExample.vue';
 import Utilities from '../components/utilities/Example.vue';
-import fontWeights from '../foundations/font-weights/FontWeights.vue';
 import { buildWc } from './ex-base.js';
 
 buildWc('buttongroup-example', ButtonGroup);
@@ -41,5 +40,3 @@ buildWc('tooltip-static-example', TooltipStatic);
 buildWc('utilities-example', Utilities);
 
 buildWc('example-container');
-
-buildWc('font-weights', fontWeights);
