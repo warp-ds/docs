@@ -10,7 +10,12 @@ The `s-` (semantic) prefix signals that the color value of these will change wit
 
 ## Quick reference
 
-<surface-color-table />
+| Class | Color | Description |
+|-------|-------|-------------|
+| s-surface-sunken | <div class="s-bg p-10 td-reset"><div class="s-surface-sunken h-24 w-64 rounded-8"></div></div> | background-color: var(--w-s-color-surface-sunken) |
+| s-surface-elevated-100 | <div class="s-bg p-10 td-reset"><div class="s-surface-elevated-100 h-24 w-64 rounded-8 shadow-s"></div></div> | background-color: var(--w-s-color-surface-elevated-100) |
+| s-surface-elevated-200 | <div class="s-bg p-10 td-reset"><div class="s-surface-elevated-200 h-24 w-64 rounded-8 shadow-m"></div></div> | background-color: var(--w-s-color-surface-elevated-200) |
+| s-surface-elevated-300 | <div class="s-bg p-10 td-reset"><div class="s-surface-elevated-300 h-24 w-64 rounded-8 shadow-l"></div></div> | background-color: var(--w-s-color-surface-elevated-300) |
 
 ## Basic usage
 

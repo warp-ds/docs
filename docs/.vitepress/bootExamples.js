@@ -19,7 +19,6 @@ import TooltipStatic from '../components/tooltip/StaticExample.vue';
 import Utilities from '../components/utilities/Example.vue';
 import fontWeights from '../foundations/font-weights/FontWeights.vue';
 import { buildWc } from './ex-base.js';
-import QrColorTable from './qr-color-table.vue';
 
 buildWc('buttongroup-example', ButtonGroup);
 buildWc('callout-fallback-placements-example', CalloutFallbackPlacements);
@@ -42,25 +41,5 @@ buildWc('tooltip-static-example', TooltipStatic);
 buildWc('utilities-example', Utilities);
 
 buildWc('example-container');
-
-buildWc('background-color-table', QrColorTable, {
-  dataId: 'backgroundColor',
-});
-
-buildWc('surface-color-table', QrColorTable, {
-  dataId: 'surfaceColor',
-});
-
-buildWc('border-color-table', QrColorTable, {
-  dataId: 'borderColor',
-});
-buildWc('divide-color-table', QrColorTable, {
-  dataId: 'divideColor',
-});
-buildWc('outline-color-table', QrColorTable, {
-  dataId: 'outlineColor',
-});
-buildWc('icon-color-table', QrColorTable, { dataId: 'iconColor' });
-buildWc('text-color-table', QrColorTable, { dataId: 'textColor' });
 
 buildWc('font-weights', fontWeights);

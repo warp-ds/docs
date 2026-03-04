@@ -10,7 +10,22 @@ The `s-` (semantic) prefix signals that the color value of these will change wit
 
 ## Quick reference
 
-<text-color-table />
+| Class | Color | Description |
+|-------|-------|-------------|
+| text-transparent | <div class="s-bg p-10 abc inline-block"><span class="text-transparent text-l">Text</span></div> | color: transparent |
+| text-current | <div class="s-bg p-10 abc inline-block"><span class="text-current text-l">Text</span></div> | color: currentColor |
+| s-text | <div class="s-bg p-10 abc inline-block"><span class="s-text text-l">Text</span></div> | color: var(--w-s-color-text) |
+| s-text-static | <div class="s-bg-negative-subtle p-10 abc inline-block"><span class="s-text-static text-l">Text</span></div> | color: var(--w-s-color-text-static) *(v2)* |
+| s-text-subtle | <div class="s-bg p-10 abc inline-block"><span class="s-text-subtle text-l">Text</span></div> | color: var(--w-s-color-text-subtle) |
+| s-text-placeholder | <div class="s-bg p-10 abc inline-block"><span class="s-text-placeholder text-l">Text</span></div> | color: var(--w-s-color-text-placeholder) |
+| s-text-inverted | <div class="s-bg-inverted p-10 abc inline-block"><span class="s-text-inverted text-l">Text</span></div> | color: var(--w-s-color-text-inverted) |
+| s-text-inverted-static | <div class="s-bg-notification p-10 abc inline-block"><span class="s-text-inverted-static text-l">Text</span></div> | color: var(--w-s-color-text-inverted-static) *(v2)* |
+| s-text-inverted-subtle | <div class="s-bg-inverted p-10 abc inline-block"><span class="s-text-inverted-subtle text-l">Text</span></div> | color: var(--w-s-color-text-inverted-subtle) |
+| s-text-link | <div class="s-bg p-10 abc inline-block"><span class="s-text-link text-l">Text</span></div> | color: var(--w-s-color-text-link) |
+| s-text-disabled | <div class="s-bg p-10 abc inline-block"><span class="s-text-disabled text-l">Text</span></div> | color: var(--w-s-color-text-disabled) |
+| s-text-negative | <div class="s-bg p-10 abc inline-block"><span class="s-text-negative text-l">Text</span></div> | color: var(--w-s-color-text-negative) |
+| s-text-positive | <div class="s-bg p-10 abc inline-block"><span class="s-text-positive text-l">Text</span></div> | color: var(--w-s-color-text-positive) |
+| ~~s-text-notification~~ || Replaced by `s-text-inverted-static` in v2 |
 
 ::: tip New in v2
 To cater for upcoming dark mode, we've added two classes.  
