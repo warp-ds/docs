@@ -2,6 +2,7 @@ import ButtonGroup from '../components/button-group/Example.vue';
 import CalloutFallbackPlacements from '../components/callout/FallbackPlacementsExample.vue';
 import CalloutFlip from '../components/callout/FlipExample.vue';
 import CalloutStatic from '../components/callout/StaticExample.vue';
+import Combobox from '../components/combo-box/Example.vue';
 import IconCode from '../components/icons/Code.vue';
 import Icon from '../components/icons/Example.vue';
 import Modal from '../components/modal/Example.vue';
@@ -21,6 +22,7 @@ import QrColorTable from './qr-color-table.vue';
 
 buildWc('buttongroup-example', ButtonGroup);
 buildWc('callout-fallback-placements-example', CalloutFallbackPlacements);
+buildWc('combobox-example', Combobox);
 buildWc('callout-flip-example', CalloutFlip);
 buildWc('callout-static-example', CalloutStatic);
 buildWc('icon-example', Icon);

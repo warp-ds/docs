@@ -10,6 +10,6 @@ You can, however, validate that the value comes from the list, that's up to your
 
 ## Example
 
-![Combobox](/components/combobox.png)
+<combobox-example />
 
 <component-questions />
