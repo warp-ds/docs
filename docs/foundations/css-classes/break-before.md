@@ -6,7 +6,16 @@ Utilities for controlling how a column or page should break before an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `break-before-auto` | `break-before: auto` |
+| `break-before-avoid` | `break-before: avoid` |
+| `break-before-all` | `break-before: all` |
+| `break-before-avoid-page` | `break-before: avoid-page` |
+| `break-before-page` | `break-before: page` |
+| `break-before-left` | `break-before: left` |
+| `break-before-right` | `break-before: right` |
+| `break-before-column` | `break-before: column` |
 
 ## Basic usage
 

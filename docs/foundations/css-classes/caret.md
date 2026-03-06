@@ -10,7 +10,12 @@ If you are using the Warp input components (and you probably should use them for
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| ~~`caret`~~ | Unsupported |
+| `caret-current` | `caret-color: currentColor` |
+| `caret-inherit` | `caret-color: inherit` |
+| `caret-transparent` | `caret-color: transparent` |
 
 ## Basic usage
 

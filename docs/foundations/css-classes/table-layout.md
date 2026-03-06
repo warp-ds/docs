@@ -6,7 +6,10 @@ Utilities for controlling the table layout algorithm.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `table-auto` | `table-layout: auto` |
+| `table-fixed` | `table-layout: fixed` |
 
 ## Basic usage
 

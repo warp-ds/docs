@@ -6,7 +6,10 @@ Utilities for controlling the position of bullets/numbers in lists.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `list-inside` | `list-style-position: inside` |
+| `list-outside` | `list-style-position: outside` |
 
 ## Basic usage
 

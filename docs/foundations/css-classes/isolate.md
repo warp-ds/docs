@@ -6,7 +6,10 @@ Utilities for controlling whether an element should explicitly create a new stac
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `isolate` | `isolation: isolate` |
+| `isolation-auto` | `isolation: auto` |
 
 ## Basic usage
 

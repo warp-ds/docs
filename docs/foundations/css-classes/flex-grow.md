@@ -6,7 +6,10 @@ Utilities for controlling how flex items grow.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `grow` | `flex-grow: 1` |
+| `grow-0` | `flex-grow: 0` |
 
 ## Basic usage
 

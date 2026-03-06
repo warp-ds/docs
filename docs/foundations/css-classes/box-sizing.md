@@ -6,7 +6,10 @@ Utilities for controlling how the browser should calculate an element's total si
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `box-border` | `box-sizing: border-box` |
+| `box-content` | `box-sizing: content-box` |
 
 ## Basic usage
 

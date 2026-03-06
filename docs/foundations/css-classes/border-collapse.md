@@ -6,7 +6,10 @@ Utilities for controlling whether table borders should collapse or be separated.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `border-collapse` | `border-collapse: collapse` |
+| `border-separate` | `border-collapse: separate` |
 
 ## Basic usage
 

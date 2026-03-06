@@ -6,7 +6,12 @@ Utilities for controlling the box shadow of an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `shadow-s` | `box-shadow: var(--w-shadow-s)` |
+| `shadow-m` | `box-shadow: var(--w-shadow-m)` |
+| `shadow-l` | `box-shadow: var(--w-shadow-l)` |
+| `shadow-xl` | `box-shadow: var(--w-shadow-xl)` |
 
 ## Basic usage
 

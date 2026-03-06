@@ -6,7 +6,13 @@ Utilities for controlling how an individual flex or grid item is positioned alon
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `self-auto` | `align-self: auto` |
+| `self-start` | `align-self: flex-start` |
+| `self-center` | `align-self: center` |
+| `self-end` | `align-self: flex-end` |
+| `self-stretch` | `align-self: stretch` |
 
 ## Basic usage
 

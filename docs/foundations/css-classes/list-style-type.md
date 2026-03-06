@@ -6,7 +6,12 @@ Utilities for controlling the bullet/number style of a list.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `list-none` | `list-style-type: none` |
+| `list-disc` | `list-style-type: disc` |
+| `list-decimal` | `list-style-type: decimal` |
+| `list-checked` | `.list-checked > li {   position:  relative   padding-left:  1.5em } .list-checked > li: : before {   content:  ""   position:  absolute   left:  0   width:  1em   height:  1.2em   background:  no-repeat 50%/contain var(--w-icon-list-checked) }` |
 
 ## Basic usage
 

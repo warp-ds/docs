@@ -6,7 +6,15 @@ Utilities for controlling whether an element responds to pointer events.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `pointer-events-auto` | `pointer-events: auto` |
+| `pointer-events-none` | `pointer-events: none` |
+| `pointer-events-inherit` | `pointer-events: inherit` |
+| `pointer-events-initial` | `pointer-events: initial` |
+| `pointer-events-revert` | `pointer-events: revert` |
+| `pointer-events-revert-layer` | `pointer-events: revert-layer` |
+| `pointer-events-unset` | `pointer-events: unset` |
 
 ## Basic usage
 

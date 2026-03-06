@@ -6,7 +6,12 @@ Utilities for controlling the direction of flex items.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `flex-row` | `flex-direction: row` |
+| `flex-row-reverse` | `flex-direction: row-reverse` |
+| `flex-col` | `flex-direction: column` |
+| `flex-col-reverse` | `flex-direction: column-reverse` |
 
 ## Basic usage
 

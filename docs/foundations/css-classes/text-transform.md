@@ -6,7 +6,12 @@ Utilities for controlling the transformation of text.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `uppercase` | `text-transform: uppercase` |
+| `lowercase` | `text-transform: lowercase` |
+| `capitalize` | `text-transform: capitalize` |
+| `normal-case` | `text-transform: none` |
 
 ## Basic usage
 

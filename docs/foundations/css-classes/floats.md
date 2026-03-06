@@ -6,7 +6,11 @@ Utilities for controlling the wrapping of content around an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `float-right` | `float: right` |
+| `float-left` | `float: left` |
+| `float-none` | `float: none` |
 
 ## Basic usage
 

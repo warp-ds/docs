@@ -6,7 +6,12 @@ Utilities for controlling how an element can be resized.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `resize-none` | `resize: none` |
+| `resize-y` | `resize: vertical` |
+| `resize-x` | `resize: horizontal` |
+| `resize` | `resize: both` |
 
 ## Basic usage
 

@@ -10,7 +10,12 @@ Some of this functionality is not yet supported! If you need this, reach out to 
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `will-change-auto` | `will-change: auto` |
+| ~~`will-change-scroll`~~ | Unsupported |
+| ~~`will-change-contents`~~ | Unsupported |
+| `will-change-transform` | `will-change: transform` |
 
 ## Basic usage
 
