@@ -6,7 +6,6 @@ import ComponentsStatus from '../ComponentsStatus.vue';
 import Do from '../Do.vue';
 import DoDont from '../DoDont.vue';
 import Footer from '../Footer.vue';
-import QrColorTable from '../qr-color-table.vue';
 import QrTable from '../qr-table.vue';
 import ThemeSwitcher from '../ThemeSwitcher.vue';
 import '../bootExamples.js';
@@ -46,7 +45,6 @@ export default {
     app.component('Do', Do);
     app.component('DoDont', DoDont);
     app.component('QrTable', QrTable);
-    app.component('QrColorTable', QrColorTable);
     app.component('Cards', Cards);
     app.component('Card', Card);
     app.component('FrameworkTabs', FrameworkTabs);

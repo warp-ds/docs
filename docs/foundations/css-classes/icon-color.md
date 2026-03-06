@@ -10,7 +10,31 @@ The `s-` (semantic) prefix signals that the color value of these will change wit
 
 ## Quick reference
 
-<icon-color-table />
+| Class | Color | Description |
+|-------|-------|-------------|
+| s-icon | <div class="s-bg p-10 td-reset"><div class="s-icon text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon) |
+| s-icon-static | <div class="s-bg-negative-subtle p-10 td-reset"><div class="s-icon-static text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-static) *(v2)* |
+| s-icon-hover | <div class="s-bg p-10 td-reset"><div class="s-icon-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-hover) |
+| s-icon-active | <div class="s-bg p-10 td-reset"><div class="s-icon-active text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-active) |
+| s-icon-selected | <div class="s-bg p-10 td-reset"><div class="s-icon-selected text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-selected) |
+| s-icon-selected-hover | <div class="s-bg p-10 td-reset"><div class="s-icon-selected-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-selected-hover) |
+| s-icon-disabled | <div class="s-bg p-10 td-reset"><div class="s-icon-disabled text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-disabled) |
+| s-icon-subtle | <div class="s-bg p-10 td-reset"><div class="s-icon-subtle text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-subtle) |
+| s-icon-subtle-hover | <div class="s-bg p-10 td-reset"><div class="s-icon-subtle-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-subtle-hover) |
+| s-icon-subtle-active | <div class="s-bg p-10 td-reset"><div class="s-icon-subtle-active text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-subtle-active) |
+| s-icon-inverted | <div class="s-bg-inverted p-10 td-reset"><div class="s-icon-inverted text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted) |
+| s-icon-inverted-static | <div class="s-bg-notification p-10 td-reset"><div class="s-icon-inverted-static text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted-static) *(v2)* |
+| s-icon-inverted-hover | <div class="s-bg-inverted p-10 td-reset"><div class="s-icon-inverted-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted-hover) |
+| s-icon-inverted-active | <div class="s-bg-inverted p-10 td-reset"><div class="s-icon-inverted-active text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted-active) |
+| s-icon-primary | <div class="s-bg p-10 td-reset"><div class="s-icon-primary text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-primary) |
+| s-icon-secondary | <div class="s-bg p-10 td-reset"><div class="s-icon-secondary text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-secondary) |
+| s-icon-secondary-hover | <div class="s-bg p-10 td-reset"><div class="s-icon-secondary-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-secondary-hover) |
+| s-icon-secondary-active | <div class="s-bg p-10 td-reset"><div class="s-icon-secondary-active text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-secondary-active) |
+| s-icon-positive | <div class="s-bg p-10 td-reset"><div class="s-icon-positive text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-positive) |
+| s-icon-negative | <div class="s-bg p-10 td-reset"><div class="s-icon-negative text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-negative) |
+| s-icon-warning | <div class="s-bg p-10 td-reset"><div class="s-icon-warning text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-warning) |
+| s-icon-info | <div class="s-bg p-10 td-reset"><div class="s-icon-info text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-info) |
+| ~~s-icon-notification~~ | | Replaced by `s-icon-inverted-static` in v2 |
 
 ::: tip New in v2
 To cater for upcoming dark mode, we've added two classes.  
