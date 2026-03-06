@@ -6,7 +6,13 @@ Utilities for controlling how elements in a grid are auto-placed.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `grid-flow-row` | `grid-auto-flow: row` |
+| `grid-flow-col` | `grid-auto-flow: column` |
+| `grid-flow-dense` | `grid-auto-flow: dense` |
+| `grid-flow-row-dense` | `grid-auto-flow: row dense` |
+| `grid-flow-col-dense` | `grid-auto-flow: column dense` |
 
 ## Basic usage
 

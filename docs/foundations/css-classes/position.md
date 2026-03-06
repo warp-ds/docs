@@ -6,7 +6,13 @@ Utilities for controlling how an element is positioned in the DOM.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `static` | `position: static` |
+| `fixed` | `position: fixed` |
+| `absolute` | `position: absolute` |
+| `relative` | `position: relative` |
+| `sticky` | `position: sticky` |
 
 ## Basic usage
 

@@ -6,7 +6,10 @@ Utilities for controlling the scroll behavior of an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `scroll-auto` | `scroll-behavior: auto` |
+| `scroll-smooth` | `scroll-behavior: smooth` |
 
 ## Basic usage
 

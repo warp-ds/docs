@@ -6,7 +6,11 @@ Utilities for controlling how a background image behaves when scrolling.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `bg-fixed` | `background-attachment: fixed` |
+| `bg-local` | `background-attachment: local` |
+| `bg-scroll` | `background-attachment: scroll` |
 
 ## Basic usage
 

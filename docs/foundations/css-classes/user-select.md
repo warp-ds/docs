@@ -6,7 +6,12 @@ Utilities for controlling whether the user can select text in an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `select-none` | `user-select: none` |
+| `select-text` | `user-select: text` |
+| `select-all` | `user-select: all` |
+| `select-auto` | `user-select: auto` |
 
 ## Basic usage
 

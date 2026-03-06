@@ -6,7 +6,15 @@ Utilities for controlling the variant of numbers.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| ~~`normal-nums`~~ | Unsupported |
+| `tabular-nums` | `font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif font-variant-numeric: tabular-nums` |
+| `ordinal` | `font-variant-numeric: ordinal` |
+| `slashed-zero` | `font-variant-numeric: slashed-zero` |
+| `lining-nums` | `font-variant-numeric: lining-nums` |
+| `oldstyle-nums` | `font-variant-numeric: oldstyle-nums` |
+| `proportional-nums` | `font-variant-numeric: proportional-nums` |
 
 ::: warning `normal-nums` not yet supported
 This class is not yet supported! If you need this, reach out to us on [#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV).

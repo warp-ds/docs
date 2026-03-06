@@ -6,7 +6,9 @@ Utilities for suppressing native form control styling.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `appearance-none` | `appearance: none -webkit-appearance: none` |
 
 ## Basic usage
 

@@ -6,7 +6,10 @@ Utilities for controlling the visibility of an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `visible` | `visibility: visible` |
+| `invisible` | `visibility: hidden` |
 
 ## Basic usage
 

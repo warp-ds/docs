@@ -6,7 +6,12 @@ Utilities for controlling how items are justified and aligned at the same time.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `place-items-start` | `place-items: start` |
+| `place-items-end` | `place-items: end` |
+| `place-items-center` | `place-items: center` |
+| `place-items-stretch` | `place-items: stretch` |
 
 ## Basic usage
 

@@ -6,7 +6,11 @@ Utilities for controlling how flex items wrap.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `flex-nowrap` | `flex-wrap: nowrap` |
+| `flex-wrap` | `flex-wrap: wrap` |
+| `flex-wrap-reverse` | `flex-wrap: wrap-reverse` |
 
 ## Basic usage
 

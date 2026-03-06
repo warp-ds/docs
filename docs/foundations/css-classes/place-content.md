@@ -6,7 +6,14 @@ Utilities for controlling how content is justified and aligned at the same time.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `place-content-center` | `place-content: center` |
+| `place-content-start` | `place-content: start` |
+| `place-content-end` | `place-content: end` |
+| `place-content-between` | `place-content: space-between` |
+| `place-content-around` | `place-content: space-around` |
+| `place-content-evenly` | `place-content: space-evenly` |
 
 ## Basic usage
 

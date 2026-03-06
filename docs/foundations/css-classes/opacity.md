@@ -6,7 +6,13 @@ Utilities for controlling the opacity of an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `opacity-0` | `opacity: 0%` |
+| `opacity-25` | `opacity: 25%` |
+| `opacity-50` | `opacity: 50%` |
+| `opacity-75` | `opacity: 75%` |
+| `opacity-100` | `opacity: 100%` |
 
 ## Basic usage
 

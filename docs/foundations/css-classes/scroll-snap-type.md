@@ -9,7 +9,14 @@ This functionality is not yet supported! If you need this, reach out to us on [#
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| ~~`snap-none`~~ | Unsupported |
+| ~~`snap-x`~~ | Unsupported |
+| ~~`snap-y`~~ | Unsupported |
+| ~~`snap-both`~~ | Unsupported |
+| ~~`snap-mandatory`~~ | Unsupported |
+| ~~`snap-proximity`~~ | Unsupported |
 
 ## Basic usage
 

@@ -5,7 +5,27 @@ Utilities for controlling the font size of an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `text-detail` | `font-size: var(--w-font-size-xs) line-height: var(--w-line-height-xs)` |
+| `text-caption` | `font-size: var(--w-font-size-s) line-height: var(--w-line-height-s)` |
+| `text-body` | `font-size: var(--w-font-size-m) line-height: var(--w-line-height-m)` |
+| `text-preamble` | `font-size: var(--w-font-size-ml) line-height: var(--w-line-height-ml)` |
+| `text-display` | `font-size: var(--w-font-size-xxxl) line-height: var(--w-line-height-xxxl)` |
+| `t6` | `font-weight: 700 font-size: var(--w-font-size-xs) line-height: var(--w-line-height-xs)` |
+| `t5` | `font-weight: 700 font-size: var(--w-font-size-s) line-height: var(--w-line-height-s)` |
+| `t4` | `font-weight: 700 font-size: var(--w-font-size-m) line-height: var(--w-line-height-m)` |
+| `t3` | `font-weight: 700 font-size: var(--w-font-size-l) line-height: var(--w-line-height-l)` |
+| `t2` | `font-weight: 700 font-size: var(--w-font-size-xl) line-height: var(--w-line-height-xl)` |
+| `t1` | `font-weight: 700 font-size: var(--w-font-size-xxl) line-height: var(--w-line-height-xxl)` |
+| `text-xs` | `font-size: var(--w-font-size-xs) line-height: var(--w-line-height-xs)` |
+| `text-s` | `font-size: var(--w-font-size-s) line-height: var(--w-line-height-s)` |
+| `text-m` | `font-size: var(--w-font-size-m) line-height: var(--w-line-height-m)` |
+| `text-ml` | `font-size: var(--w-font-size-ml) line-height: var(--w-line-height-ml)` |
+| `text-l` | `font-size: var(--w-font-size-l) line-height: var(--w-line-height-l)` |
+| `text-xl` | `font-size: var(--w-font-size-xl) line-height: var(--w-line-height-xl)` |
+| `text-xxl` | `font-size: var(--w-font-size-xxl) line-height: var(--w-line-height-xxl)` |
+| `text-xxxl` | `font-size: var(--w-font-size-xxxl) line-height: var(--w-line-height-xxxl)` |
 
 ## Basic usage
 

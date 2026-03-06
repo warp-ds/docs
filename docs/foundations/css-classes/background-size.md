@@ -6,7 +6,11 @@ Utilities for controlling the background size of an element's background image.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `bg-auto` | `background-size: auto` |
+| `bg-cover` | `background-size: cover` |
+| `bg-contain` | `background-size: contain` |
 
 ## Basic usage
 

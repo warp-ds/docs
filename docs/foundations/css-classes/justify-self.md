@@ -6,7 +6,13 @@ Utilities for controlling how an individual grid item is aligned along its inlin
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `justify-self-auto` | `justify-self: auto` |
+| `justify-self-start` | `justify-self: start` |
+| `justify-self-center` | `justify-self: center` |
+| `justify-self-end` | `justify-self: end` |
+| `justify-self-stretch` | `justify-self: stretch` |
 
 ## Basic usage
 

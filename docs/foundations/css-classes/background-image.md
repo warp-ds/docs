@@ -6,7 +6,11 @@ Utilities for controlling an element's background image.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `bg-none` | `background-image: none` |
+| `bg-[url({url})]` | `background-image: url({url})` |
+| `bg-[url(var(--any-css-variable))]` | `background-image: var(--any-css-variable)` |
 
 > `{url}`: _Any valid image url_
 

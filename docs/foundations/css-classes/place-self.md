@@ -6,7 +6,13 @@ Utilities for controlling how an individual item is justified and aligned at the
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `place-self-auto` | `place-self: auto` |
+| `place-self-start` | `place-self: start` |
+| `place-self-end` | `place-self: end` |
+| `place-self-center` | `place-self: center` |
+| `place-self-stretch` | `place-self: stretch` |
 
 ## Basic usage
 

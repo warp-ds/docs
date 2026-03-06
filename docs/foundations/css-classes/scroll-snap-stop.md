@@ -10,7 +10,10 @@ This functionality is not yet supported! If you need this, reach out to us on [#
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| ~~`snap-normal`~~ | Unsupported |
+| ~~`snap-always`~~ | Unsupported |
 
 ## Basic usage
 

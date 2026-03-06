@@ -5,7 +5,11 @@ Utilities for controlling the decoration of text.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `underline` | `text-decoration-line: underline` |
+| `line-through` | `text-decoration-line: line-through` |
+| `no-underline` | `text-decoration: none` |
 
 ## Basic usage
 

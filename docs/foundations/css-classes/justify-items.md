@@ -6,7 +6,12 @@ Utilities for controlling how grid items are aligned along their inline axis.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `justify-items-start` | `justify-items: start` |
+| `justify-items-center` | `justify-items: center` |
+| `justify-items-end` | `justify-items: end` |
+| `justify-items-stretch` | `justify-items: stretch` |
 
 ## Basic usage
 

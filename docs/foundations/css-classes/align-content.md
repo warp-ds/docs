@@ -5,7 +5,14 @@ Utilities for controlling how rows are positioned in multi-row flex and grid con
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `content-start` | `align-content: flex-start` |
+| `content-center` | `align-content: center` |
+| `content-end` | `align-content: flex-end` |
+| `content-between` | `align-content: space-between` |
+| `content-around` | `align-content: space-around` |
+| `content-evenly` | `align-content: space-evenly` |
 
 ## Basic usage
 

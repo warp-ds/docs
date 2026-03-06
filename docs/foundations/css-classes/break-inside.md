@@ -6,7 +6,12 @@ Utilities for controlling how a column or page should break within an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `break-inside-auto` | `break-inside: auto` |
+| `break-inside-avoid` | `break-inside: avoid` |
+| `break-inside-avoid-page` | `break-inside: avoid-page` |
+| `break-inside-avoid-column` | `break-inside: avoid-column` |
 
 ## Basic usage
 

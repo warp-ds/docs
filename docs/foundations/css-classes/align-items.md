@@ -6,7 +6,13 @@ Utilities for controlling how flex and grid items are positioned along a contain
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `items-baseline` | `align-items: baseline` |
+| `items-stretch` | `align-items: stretch` |
+| `items-start` | `align-items: flex-start` |
+| `items-center` | `align-items: center` |
+| `items-end` | `align-items: flex-end` |
 
 ## Basic usage
 

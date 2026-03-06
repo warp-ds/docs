@@ -6,7 +6,11 @@ Utilities for controlling text overflow in an element.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `truncate` | `overflow: hidden text-overflow: ellipsis white-space: nowrap` |
+| `text-ellipsis` | `text-overflow: ellipsis` |
+| `text-clip` | `text-overflow: clip` |
 
 ## Basic usage
 

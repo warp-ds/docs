@@ -6,7 +6,11 @@ Utilities for controlling how an element's background is positioned relative to 
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `bg-origin-border` | `background-origin: border-box` |
+| `bg-origin-padding` | `background-origin: padding-box` |
+| `bg-origin-content` | `background-origin: content-box` |
 
 ## Basic usage
 

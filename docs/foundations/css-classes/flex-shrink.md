@@ -6,7 +6,10 @@ Utilities for controlling how flex items shrink.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `shrink` | `flex-shrink: 1` |
+| `shrink-0` | `flex-shrink: 0` |
 
 ## Basic usage
 

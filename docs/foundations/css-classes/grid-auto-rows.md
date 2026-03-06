@@ -6,7 +6,12 @@ Utilities for controlling the size of implicitly-created grid rows.
 
 ## Quick reference
 
-<qr-table />
+| Class | Description |
+|-------|-------------|
+| `auto-rows-auto` | `grid-auto-rows: auto` |
+| `auto-rows-min` | `grid-auto-rows: min-content` |
+| `auto-rows-max` | `grid-auto-rows: max-content` |
+| `auto-rows-fr` | `grid-auto-rows: minmax(0, 1fr)` |
 
 ## Basic usage
 
