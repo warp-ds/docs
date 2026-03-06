@@ -124,6 +124,15 @@ html {
   font-size: 62.5% !important;
 }
 
+*,
+:before,
+:after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+  border-color: var(--w-s-color-border);
+}
+
 body {
   --vp-font-family-base:
     Finntype, Inter, -apple-system,
@@ -346,4 +355,8 @@ html.dark body {
   border-radius: 8px;
   margin-bottom: 8px;
   background-color: var(--w-s-color-background);
+}
+
+td:has(.td-reset) {
+  padding: 0px;
 }
