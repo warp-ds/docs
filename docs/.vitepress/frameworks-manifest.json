@@ -282,6 +282,16 @@
         "file": "react-19"
       }
     ],
+    "logo": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
     "modal": [
       {
         "name": "Android",
