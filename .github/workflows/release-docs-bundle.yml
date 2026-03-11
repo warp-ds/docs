@@ -1,0 +1,104 @@
+name: Release docs bundle (v1)
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      bundle_version:
+        description: "Optional bundle version suffix (without docs-bundle- prefix)"
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    if: github.event_name != 'push' || !contains(github.event.head_commit.message, '[skip ci]')
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build docs
+        run: pnpm build
+
+      - name: Compute bundle metadata
+        id: meta
+        shell: bash
+        run: |
+          if [ -n "${{ github.event.inputs.bundle_version || '' }}" ]; then
+            BUNDLE_VERSION="${{ github.event.inputs.bundle_version }}"
+          else
+            BUNDLE_VERSION="$(date -u +%Y%m%d%H%M%S)-${GITHUB_SHA::12}"
+          fi
+
+          RELEASE_TAG="docs-bundle-${BUNDLE_VERSION}"
+          BUNDLE_ASSET="docs-bundle-${BUNDLE_VERSION}.tgz"
+          BUILD_TIMESTAMP="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+
+          echo "bundle_version=${BUNDLE_VERSION}" >> "$GITHUB_OUTPUT"
+          echo "release_tag=${RELEASE_TAG}" >> "$GITHUB_OUTPUT"
+          echo "bundle_asset=${BUNDLE_ASSET}" >> "$GITHUB_OUTPUT"
+          echo "build_timestamp=${BUILD_TIMESTAMP}" >> "$GITHUB_OUTPUT"
+
+      - name: Assemble docs bundle
+        shell: bash
+        run: |
+          mkdir -p bundle
+          cp -R docs bundle/docs
+
+          cat > bundle/manifest.json <<EOF_MANIFEST
+          {
+            "bundleVersion": "${{ steps.meta.outputs.bundle_version }}",
+            "releaseTag": "${{ steps.meta.outputs.release_tag }}",
+            "docsCommitSha": "${{ github.sha }}",
+            "buildTimestamp": "${{ steps.meta.outputs.build_timestamp }}",
+            "version": "v1"
+          }
+          EOF_MANIFEST
+
+          tar -czf "${{ steps.meta.outputs.bundle_asset }}" -C bundle .
+
+      - name: Publish release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.release_tag }}
+          name: ${{ steps.meta.outputs.release_tag }}
+          files: |
+            ${{ steps.meta.outputs.bundle_asset }}
+            bundle/manifest.json
+          overwrite_files: true
+
+      - name: Trigger warp-docs-mcp build
+        if: ${{ secrets.MCP_REPO_DISPATCH_TOKEN != '' }}
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.MCP_REPO_DISPATCH_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: "warp-ds",
+              repo: "warp-docs-mcp",
+              workflow_id: "build.yml",
+              ref: "main",
+              inputs: {
+                docs_v1_bundle_version: "${{ steps.meta.outputs.release_tag }}",
+              },
+            });
