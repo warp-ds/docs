@@ -12,8 +12,10 @@ This is the Warp Design System documentation site, built with VitePress. It docu
 pnpm install          # Install dependencies
 pnpm dev              # Start dev server with hot reload
 pnpm build            # Build static site (outputs to docs/.vitepress/dist)
+pnpm build:skill      # Generate the committed agent skill in skills/warp-docs
 pnpm serve            # Serve built site locally
 pnpm check            # Run Biome linting + formatting (with auto-fix)
+pnpm check:skill      # Verify the generated skill is up to date
 pnpm lint             # Lint only (with auto-fix)
 pnpm format           # Format only (with auto-fix)
 pnpm lint:check       # Lint without fixing (CI check)
