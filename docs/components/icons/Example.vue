@@ -2,9 +2,17 @@
 import { computed, onMounted, ref } from 'vue';
 import { data } from './iconNames.data.js';
 
+const icons = Object.entries(data);
 const searchTerm = ref('');
 const filteredIcons = computed(() =>
-  data.filter((name) => name.toLowerCase().includes(searchTerm.value.toLowerCase())),
+  icons
+    .filter(([name, aliases]) => {
+      const directMatch = name.toLowerCase().includes(searchTerm.value.toLowerCase());
+      if (directMatch) return true;
+      const aliasMatch = aliases.some((alias) => alias.toLowerCase().includes(searchTerm.value.toLowerCase()));
+      return aliasMatch;
+    })
+    .map(([name]) => name),
 );
 </script>
 

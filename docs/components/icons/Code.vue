@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { data } from './iconNames.data.js';
 
-const iconNames = data;
+const iconNames = Object.keys(data);
 const sizes = ['small', 'medium', 'large'];
 const selectedIcon = ref('');
 const selectedSize = ref(sizes[1]);

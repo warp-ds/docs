@@ -1,7 +1,7 @@
 <script setup>
 import { data } from './iconNames.data.js'
 
-const iconNames = data;
+const iconNames = Object.keys(data);
 </script>
 
 # Icons - Overview
