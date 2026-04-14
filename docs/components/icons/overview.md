@@ -1,3 +1,9 @@
+<script setup>
+import { data } from './iconNames.data.js'
+
+const iconNames = data;
+</script>
+
 # Icons - Overview
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
@@ -7,7 +13,13 @@ Warp’s icons are crafted to deliver consistency, clarity, and scalability acro
 
 Warp uses the [Phosphor icon set](https://phosphoricons.com) as its foundation and offers a curated subset. Phosphor is an open-source icon family with 9,000+ UI-focused icons, see the warp supported icons below.
 
-<icon-example />
+<icon-example>
+<ul>
+    <li v-for="name in iconNames">
+        {{name}}
+    </li>
+</ul>
+</icon-example>
 
 ## Need new icons?
 

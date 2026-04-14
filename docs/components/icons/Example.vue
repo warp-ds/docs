@@ -1,16 +1,11 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import { fetchIconNames } from './iconNames';
+import { data } from './iconNames.data.js';
 
-const iconNames = ref([]);
 const searchTerm = ref('');
 const filteredIcons = computed(() =>
-  iconNames.value.filter((name) => name.toLowerCase().includes(searchTerm.value.toLowerCase())),
+  data.filter((name) => name.toLowerCase().includes(searchTerm.value.toLowerCase())),
 );
-
-onMounted(async () => {
-  iconNames.value = await fetchIconNames();
-});
 </script>
 
 <template>
