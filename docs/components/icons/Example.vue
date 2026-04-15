@@ -1,16 +1,19 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import { fetchIconNames } from './iconNames';
+import { data } from './iconNames.data.js';
 
-const iconNames = ref([]);
+const icons = Object.entries(data);
 const searchTerm = ref('');
 const filteredIcons = computed(() =>
-  iconNames.value.filter((name) => name.toLowerCase().includes(searchTerm.value.toLowerCase())),
+  icons
+    .filter(([name, aliases]) => {
+      const directMatch = name.toLowerCase().includes(searchTerm.value.toLowerCase());
+      if (directMatch) return true;
+      const aliasMatch = aliases.some((alias) => alias.toLowerCase().includes(searchTerm.value.toLowerCase()));
+      return aliasMatch;
+    })
+    .map(([name]) => name),
 );
-
-onMounted(async () => {
-  iconNames.value = await fetchIconNames();
-});
 </script>
 
 <template>

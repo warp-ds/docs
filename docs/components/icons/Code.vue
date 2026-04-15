@@ -1,15 +1,14 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { fetchIconNames } from './iconNames';
+import { data } from './iconNames.data.js';
 
-const iconNames = ref([]);
+const iconNames = Object.keys(data);
 const sizes = ['small', 'medium', 'large'];
 const selectedIcon = ref('');
 const selectedSize = ref(sizes[1]);
 
 onMounted(async () => {
-  iconNames.value = await fetchIconNames();
-  selectedIcon.value = iconNames.value[0] || '';
+  selectedIcon.value = iconNames[0] || '';
 });
 </script>
 
