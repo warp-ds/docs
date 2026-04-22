@@ -5,6 +5,7 @@ import markdownItContainer from 'markdown-it-container';
 import uno from 'unocss/vite';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
 import { defineConfig } from 'vitepress';
+import llmstxt from 'vitepress-plugin-llms';
 import { headLinks } from './headLinks.js';
 import { docsClasses } from './safelist.js';
 import { sidebarFoundations } from './sidebar-foundations.js';
@@ -86,6 +87,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      llmstxt(),
       uno({ presets: [presetWarp({ skipResets: true })] }),
       uno({
         presets: [presetWarp(), presetDocs()],
