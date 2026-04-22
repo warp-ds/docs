@@ -5,19 +5,23 @@ editLink: true
 
 # Component Customization Philosophy
 
-## Real-world Scenario
+## The Ideal: Use Variants As-Is
 
-Imagine you need a primary button (with all its behavioral guarantees: size, padding, interaction states), but your Figma mockup specifies a custom border color to match a brand campaign.
+The design system provides variants (primary, secondary, etc.) that should cover most use cases. These maintain consistency and require no customization.
 
-If the design system can't accommodate this, teams will:
+## The Reality: Preventing Component Forks
+
+However, teams will occasionally encounter edge cases where existing variants don't match their design mockup (e.g., a primary button with a custom border color for a brand campaign).
+
+When the design system can't accommodate this, teams historically:
 1. Fork the component
 2. Create their own variant
 3. Stop using the design system
 4. Break design consistency
 
-## Our Implementation Approach: Maximum Flexibility
+## Controlled Escape Hatches
 
-Warp components provide **three levels of customization**, from simple to advanced:
+To prevent forks while maintaining consistency, Warp components provide **three levels of customization** - documented ways to handle edge cases:
 
 ### Level 1: Component Tokens (Recommended)
 
@@ -49,10 +53,10 @@ w-button::part(base) {
 ✅ For one-off customizations  
 ✅ Documented in styling-api.md
 
-### Level 3: Combined (Ultimate Flexibility)
+### Level 3: Combined
 
 ```css
-/* Combine tokens and parts for complex needs */
+/* Combine tokens and parts for rare complex needs */
 w-button {
   --w-c-button-bg: linear-gradient(45deg, blue, purple);
 }
@@ -70,17 +74,17 @@ w-button::part(base) {
 
 ## Expected Usage Distribution
 
-We design for this distribution:
+The goal is to minimize customization:
 
 ```
 ┌────────────────────────────────────────────┐
-│ 95% → Use variants as-is                  │ ✅ Default behavior
+│ 90% → Use variants as-is                  │ ✅ The goal
 ├────────────────────────────────────────────┤
-│  4% → Tweak with component tokens         │ ✅ Simple customization
+│  9% → Edge case tweaks with tokens        │ ⚠️  When necessary
 ├────────────────────────────────────────────┤
-│  1% → Advanced styling with parts         │ ✅ Edge cases
+│  1% → Rare advanced styling with parts    │ ⚠️  Exception only
 ├────────────────────────────────────────────┤
-│  0% → Need to fork components             │ 🎯 Goal: prevent this!
+│  0% → Need to fork components             │ 🎯 What we're preventing
 └────────────────────────────────────────────┘
 ```
 
@@ -96,15 +100,15 @@ We design for this distribution:
 
 ✅ Good defaults (semantic tokens)  
 ✅ Variant presets (primary, secondary, etc.)  
-✅ Documented customization points (component tokens)  
-✅ Escape hatches (parts)
+⚠️ Documented escape hatches when variants aren't enough (component tokens)  
+⚠️ Advanced overrides for rare exceptions (parts)
 
-### Teams Get
+### The Trade-off
 
-✅ Design system compliance by default  
-✅ Flexibility for edge cases  
-✅ No need to fork components  
-✅ Documented, supported customization
+✅ Variants provide design system compliance by default  
+⚠️ Escape hatches prevent teams from forking components  
+📋 Documentation makes necessary customization supportable (vs undocumented hacks)  
+🎯 Goal: Keep teams in the design system, even for edge cases
 
 ## Real-world Examples
 
@@ -173,13 +177,13 @@ Each component documents its customization API in two places:
 
 ### 1. Component Token Reference
 
-See `styling-api.md` in each component's package for:
+Component documentation includes a Styling API section with:
 - All available component tokens (`--w-c-*`)
 - Available parts (`::part()`)
 - Usage examples
 - Default values
 
-Example: [Button Styling API](/components/button/styling-api.md)
+Example: [Checkbox Styling API](/components/checkbox/frameworks/elements#styling-api)
 
 ### 2. Live Examples
 
