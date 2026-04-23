@@ -101,7 +101,7 @@ attribute on [MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/AR
 
 ## API
 
-<!--generated-api-docs-->
+<!--generated-->
 
 ### Props
 
@@ -118,6 +118,6 @@ attribute on [MDN](https://developer.mozilla.org/en-US/docs/Web/Accessibility/AR
 | show | boolean | false   | Controls when the alert shows           |
 | role | string  | alert   | ARIA live region "role" attribute value |
 
-<!--/generated-api-docs-->
+<!--/generated-->
 
 <component-questions />
