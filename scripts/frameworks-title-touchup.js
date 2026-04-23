@@ -33,10 +33,10 @@ function scanFrameworks(globPattern, ignore, nameIndex) {
     const itemName = parts[nameIndex];
     const frameworkFile = basename(file, '.md');
 
-    const displayName =  toDisplayName(frameworkFile);
-    const content = readFileSync(file, "utf-8");
-    const newContent = content.replace(" - Frameworks", ` - ${displayName}`);
-    writeFileSync(file, newContent, "utf-8");
+    const displayName = toDisplayName(frameworkFile);
+    const content = readFileSync(file, 'utf-8');
+    const newContent = content.replace(' - Frameworks', ` - ${displayName}`);
+    writeFileSync(file, newContent, 'utf-8');
   }
 }
 

@@ -1,4 +1,4 @@
-# Text area - Frameworks
+# Text area - Vue
 A text area allows users to input extended text content that covers multiple lines.
 
 <ComponentsStatus />

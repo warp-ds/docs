@@ -1,4 +1,4 @@
-# Steps - Frameworks
+# Steps - iOS
 The steps component is built to handle user journeys, showing progress.
 
 <ComponentsStatus />

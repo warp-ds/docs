@@ -1,4 +1,4 @@
-# Pagination - Frameworks
+# Pagination - React
 Pagination is used to split up long datasets into multiple 'pages'.
 
 <ComponentsStatus />

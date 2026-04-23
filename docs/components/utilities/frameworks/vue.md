@@ -1,4 +1,4 @@
-# Utilities - Frameworks
+# Utilities - Vue
 These utility components are available to make some layout components interactive.
 
 <ComponentsStatus />

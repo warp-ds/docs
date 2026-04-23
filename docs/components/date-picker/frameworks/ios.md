@@ -1,4 +1,4 @@
-# Date picker - Frameworks
+# Date picker - iOS
 A date picker allows the user to select a specific calendar date.
 
 <ComponentsStatus />
