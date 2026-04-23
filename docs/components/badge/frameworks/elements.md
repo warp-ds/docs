@@ -1,83 +1,116 @@
 # Badge - Elements
 
-Badges are used to highlight a relevant piece of information, like status or category.
+Badge is used for showing a small amount of non-interactive color-categorized metadata, like a status or count.
 
 <ComponentsStatus />
-
-## Elements
 
 <FrameworkTabs />
 
 <ThemeSwitcher />
 
-### Variants
+## Examples
 
-#### Neutral
-<style-isolate><w-badge variant="neutral">Badge text</w-badge></style-isolate>
+### Neutral
 
-```html
-<w-badge variant="neutral">Badge text</w-badge>
-```
-
-#### Info
-<style-isolate><w-badge variant="info">Badge text</w-badge></style-isolate>
+<style-isolate>
+  <w-badge variant="neutral">Neutral</w-badge>
+</style-isolate>
 
 ```html
-<w-badge variant="info">Badge text</w-badge>
+<w-badge variant="neutral">Neutral</w-badge>
 ```
 
-#### Positive
-<style-isolate><w-badge variant="positive">Badge text</w-badge></style-isolate>
+### Info
+
+<style-isolate>
+  <w-badge variant="info">Info</w-badge>
+</style-isolate>
 
 ```html
-<w-badge variant="positive">Badge text</w-badge>
+<w-badge variant="info">Info</w-badge>
 ```
 
-#### Warning
-<style-isolate><w-badge variant="warning">Badge text</w-badge></style-isolate>
+### Positive
+
+<style-isolate>
+  <w-badge variant="positive">Positive</w-badge>
+</style-isolate>
 
 ```html
-<w-badge variant="warning">Badge text</w-badge>
+<w-badge variant="positive">Positive</w-badge>
 ```
 
-#### Negative
-<style-isolate><w-badge variant="negative">Badge text</w-badge></style-isolate>
+### Warning
+
+<style-isolate>
+  <w-badge variant="warning">Warning</w-badge>
+</style-isolate>
 
 ```html
-<w-badge variant="negative">Badge text</w-badge>
+<w-badge variant="warning">Warning</w-badge>
 ```
 
-#### Disabled
-<style-isolate><w-badge variant="disabled">Badge text</w-badge></style-isolate>
+### Negative
+
+<style-isolate>
+  <w-badge variant="negative">Negative</w-badge>
+</style-isolate>
 
 ```html
-<w-badge variant="disabled">Badge text</w-badge>
+<w-badge variant="negative">Negative</w-badge>
 ```
 
-#### Price
-<style-isolate><w-badge variant="price">Badge text</w-badge></style-isolate>
+### Disabled
+
+Note that this isn't actually disabling anything since the badge element is not interactive. This is a visual variant.
+
+<style-isolate>
+  <w-badge variant="disabled">Disabled</w-badge>
+</style-isolate>
 
 ```html
-<w-badge variant="price">Badge text</w-badge>
+<w-badge variant="disabled">Disabled</w-badge>
 ```
 
-#### Sponsored
-<style-isolate><w-badge variant="sponsored">Badge text</w-badge></style-isolate>
+### Price
+
+<style-isolate>
+  <w-badge variant="price">Price</w-badge>
+</style-isolate>
 
 ```html
-<w-badge variant="sponsored">Badge text</w-badge>
+<w-badge variant="price">Price</w-badge>
 ```
 
-#### Positioned
-<style-isolate><div style="position: relative; width: 200px; height: 100px; background: #f0f0f0; border-radius: 8px; overflow: hidden;">
-  <w-badge variant="price" position="top-right">Badge</w-badge>
-</div></style-isolate>
+### Sponsored
+
+<style-isolate>
+  <w-badge variant="sponsored">Sponsored</w-badge>
+</style-isolate>
+
+```html
+<w-badge variant="sponsored">Sponsored</w-badge>
+```
+
+### Positioned
+
+For use in for example cards where the badge can appear in a corner with a rounded border only on the side that doesn't touch the card's border. See the `position` property.
+
+<style-isolate>
+  <div style="position: relative; width: 200px; height: 100px; background: #f0f0f0; border-radius: 8px; overflow: hidden;">
+    <w-badge variant="price" position="top-right">Positioned</w-badge>
+  </div>
+</style-isolate>
 
 ```html
 <div style="position: relative; width: 200px; height: 100px; background: #f0f0f0; border-radius: 8px; overflow: hidden;">
-  <w-badge variant="price" position="top-right">Badge</w-badge>
+  <w-badge variant="price" position="top-right">Positioned</w-badge>
 </div>
 ```
+
+## API
+
+<!--generated-->
 
 ### Props
 
@@ -87,5 +120,7 @@ Badges are used to highlight a relevant piece of information, like status or cat
 | --- | --- | --- | --- |
 | variant | `'neutral', 'info', 'positive', 'warning', 'negative', 'disabled', 'price', 'sponsored'` | 'neutral' |  |
 | position | `'top-left', 'top-right', 'bottom-right', 'bottom-left'` | undefined | Used for absolute positioning of the badge within a container |
+
+<!--/generated-->
 
 <component-questions />
