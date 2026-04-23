@@ -1,4 +1,4 @@
-# Button group - Frameworks
+# Button group - iOS
 Button group is a grouping concept for buttons.
 
 <ComponentsStatus />

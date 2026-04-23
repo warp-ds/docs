@@ -1,4 +1,4 @@
-# Callout - Frameworks
+# Callout - Elements
 Callouts are snippets of information, drawing attention to important content.
 
 <ComponentsStatus />

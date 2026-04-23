@@ -1,4 +1,4 @@
-# Radio - Frameworks
+# Radio - Elements
 Radios allow users to select a single option from a list of choices.
 
 <ComponentsStatus />

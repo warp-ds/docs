@@ -1,4 +1,4 @@
-# Steps - Frameworks
+# Steps - React
 The steps component is built to handle user journeys, showing progress.
 
 <ComponentsStatus />

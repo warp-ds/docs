@@ -1,4 +1,4 @@
-# Alert - Frameworks
+# Alert - Elements
 Alerts show high-signal messages meant to be noticed and prompting users.
 
 <ComponentsStatus />

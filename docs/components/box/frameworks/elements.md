@@ -1,4 +1,4 @@
-# Box - Frameworks
+# Box - Elements
 Box is a layout component used for separating content areas on a page.
 
 <ComponentsStatus />

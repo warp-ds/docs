@@ -1,4 +1,4 @@
-# Page indicator - Frameworks
+# Page indicator - Android
 A page indicator shows the total amount of pages (or images) and the current page using dots.
 
 <ComponentsStatus />

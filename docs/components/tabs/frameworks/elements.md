@@ -1,4 +1,4 @@
-# Tabs - Frameworks
+# Tabs - Elements
 Tabs are used to group content, allowing users to navigate views without leaving the page.
 
 <ComponentsStatus />

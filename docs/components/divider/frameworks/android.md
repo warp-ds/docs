@@ -1,4 +1,4 @@
-# Divider - Frameworks
+# Divider - Android
 A divider creates separation of content.
 
 <ComponentsStatus />

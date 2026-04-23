@@ -1,4 +1,4 @@
-# Pagination - Frameworks
+# Pagination - Elements
 Pagination allows users to navigate through multiple pages of content by providing navigation controls with page numbers and directional arrows.
 
 <ComponentsStatus />
