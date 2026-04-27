@@ -45,6 +45,7 @@ export default defineConfig({
           if (/(-example|-color-table|example-container|poc-1-div)$/.test(tag)) return true;
           // w-icon-* variants (e.g., w-icon-share-16)
           if (tag.startsWith('w-icon')) return true;
+          if (tag === 'style-isolate') return true;
           // Specific @warp-ds/elements web components
           const elementsComponents = [
             'w-alert',
