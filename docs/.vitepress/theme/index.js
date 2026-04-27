@@ -1,3 +1,4 @@
+import { toast } from '@warp-ds/elements';
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
 import ComponentDesignGuidelines from '../ComponentDesignGuidelines.md';
@@ -22,6 +23,10 @@ import InProgressStatus from '../InProgressStatus.vue';
 import TabsContent from '../TabsContent.vue';
 import WidthController from '../WidthController.vue';
 import warpThemeSwitcher from '../warp-theme-switcher.js';
+
+if (typeof window !== 'undefined') {
+  window.toast = toast;
+}
 
 export default {
   extends: DefaultTheme,
