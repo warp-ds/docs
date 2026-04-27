@@ -106,6 +106,15 @@ export default defineConfig({
         safelist: [...componentClasses, ...supportedClasses, ...docsClasses],
       }),
       svgLoader(),
+      {
+        name: 'watch-node-modules',
+        configureServer: (server) => {
+          server.watcher.options = {
+            ...server.watcher.options,
+            ignored: [/node_modules\/(?!@warp-ds).*/, '**/.git/**'],
+          };
+        },
+      },
     ],
   },
   head: headLinks,
