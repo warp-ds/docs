@@ -3,6 +3,7 @@ import { computed, onMounted, ref } from 'vue';
 import { data } from './iconNames.data.js';
 
 const icons = Object.entries(data);
+const placeholder = `Search among ${icons.length} icons`;
 const searchTerm = ref('');
 const filteredIcons = computed(() =>
   icons
@@ -19,7 +20,7 @@ const filteredIcons = computed(() =>
 <template>
   <div class="component space-y-16" style="background-color: var(--vp-sidebar-bg-color);">
     <div class="m-8">
-      <input v-model="searchTerm" type="text" placeholder="Search icons..."
+      <input v-model="searchTerm" type="text" :placeholder="placeholder"
         class="block text-m leading-m mb-0 px-8 py-12 rounded-4 w-full focusable focus:[--w-outline-offset:-2px] caret-current border-1 s-text s-bg s-border-strong hover:s-border-strong-hover active:s-border-selected" />
     </div>
     <div class="grid gap-24 grid-cols-4 md:grid-cols-4 m-8">
