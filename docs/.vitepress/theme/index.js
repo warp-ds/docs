@@ -11,6 +11,7 @@ import ThemeSwitcher from '../ThemeSwitcher.vue';
 import '../bootExamples.js';
 // Only import client side
 import '../StyleIsolate.js'; // Web component for style isolation
+import '../elements-example.js';
 import './custom.css';
 import 'uno.css';
 import Badge from '../Badge.vue';
