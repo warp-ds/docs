@@ -83,6 +83,9 @@ class ElementsExample extends HTMLElement {
     // Append the wrapped content to shadow DOM
     this.shadowRoot.appendChild(wrapper);
 
+    // Show the code example as-is in the light-DOM via slots
+    this.shadowRoot.appendChild(document.createElement('slot'));
+
     this._hasRendered = true;
   }
 }
