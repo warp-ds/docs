@@ -10,6 +10,9 @@ class ElementsExample extends HTMLElement {
   }
 
   connectedCallback() {
+    this.id = Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+    this.setAttribute('id', this.id);
+
     this.style.display = 'block';
     this.style.marginTop = '16px';
 
@@ -85,6 +88,27 @@ class ElementsExample extends HTMLElement {
 
     // Show the code example as-is in the light-DOM via slots
     this.shadowRoot.appendChild(document.createElement('slot'));
+
+    // Create the script tag (if any) explicitly to make it run
+    const codeExScript = this.shadowRoot.querySelector('script');
+    if (codeExScript) {
+      try {
+        const execScript = document.createElement('script');
+        let scriptContent = codeExScript.innerText;
+
+        // Enrich all "demo" query selectors with the elements-example shadow root
+        scriptContent = scriptContent.replaceAll(
+          /document.querySelector\((.*?data-testid.*?)\)/gs,
+          `document.querySelector('elements-example[id="${this.id}"]').shadowRoot.querySelector($1)`,
+        );
+
+        execScript.innerText = scriptContent;
+        document.body.appendChild(execScript);
+      } catch (e) {
+        console.error(e);
+        console.debug(execScript.innerText);
+      }
+    }
 
     this._hasRendered = true;
   }
