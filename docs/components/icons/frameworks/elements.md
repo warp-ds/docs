@@ -1,36 +1,14 @@
 # Icons - Elements
+
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 <ComponentsStatus />
-
-## Elements
-
 <FrameworkTabs />
+<ThemeSwitcher />
 
-<icon-code-example />
-
-### Example
-
-Use icon name from above list
-
-```jsx
-<w-icon name="ActiveAds" size="small" locale="nb"></w-icon>
-<w-icon name="ActiveAds" size="medium" locale="nb"></w-icon>
-<w-icon name="ActiveAds" size="large" locale="nb"></w-icon>
-<w-icon name="ActiveAds" size="42px" locale="nb"></w-icon>
-<w-icon name="ActiveAds" size="64px" locale="nb"></w-icon>
-<w-icon name="ActiveAds" size="96px" locale="nb"></w-icon>
-<w-icon name="ActiveAds" size="128px" locale="nb"></w-icon>
-```
-
-### Props
-
-#### Required props
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| name | string |  | The name of the icon to render |
-| size | `'small' \| 'medium' \| 'large' \| 'xypx'` | medium | The size of the icon: `small`, `medium`, `large`, or a custom size in pixels like `32px`. |
-| locale | string |  | The locale to use for the icon, e.g. "nb" for Norwegian Bokmål |
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/icon/accessibility.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/icon/usage.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/icon/examples.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/icon/api.md-->
 
 <component-questions />
