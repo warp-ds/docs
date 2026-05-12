@@ -1,6 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
+  "packageManager": "pnpm@11.1.0",
   "description": "Documentation of the Warp Design System",
   "main": "index.js",
   "scripts": {

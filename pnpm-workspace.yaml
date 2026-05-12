@@ -1,2 +1,6 @@
+allowBuilds:
+  esbuild: false
+  vue-demi: false
+
 overrides:
   '@warp-ds/elements': link:../elements
