@@ -2,16 +2,16 @@
 Callouts are snippets of information, drawing attention to important content.
 
 <ComponentsStatus />
-
-## Elements
-
 <FrameworkTabs />
+<ThemeSwitcher />
 
 ### Visual options
 
 #### Default (inline type)
 
-```js
+<elements-example>
+
+```html
 <w-attention callout placement="right" show class="flex items-center">
   <div id="target" slot="target">
     <p>This is a target to callout element</p>
@@ -20,9 +20,14 @@ Callouts are snippets of information, drawing attention to important content.
 </w-attention>
 ```
 
+</elements-example>
+
 #### Highlight with close button (popover type)
 
-```js
+<elements-example>
+
+
+```html
 <w-attention highlight placement="right" can-close id="highlight">
   <button
     id="highlightTarget"
@@ -33,6 +38,9 @@ Callouts are snippets of information, drawing attention to important content.
   <span slot="message">I'm a highlight (popover type) that is dismissable</span>
 </w-attention>
 ```
+
+</elements-example>
+
 
 ### Flip prop
 The attention component uses the Floating-ui library to calculate its position.
@@ -73,7 +81,9 @@ It is possible to tell assistive technologies to recognize only a part of Attent
 To do that set the `role` attribute on the relevant text element nested in `w-attention` and reference it by id through the use of `aria-details`.
 The `aria-details` attribute is on the target element, not on `w-attention`.
 
-```js
+<elements-example>
+
+```html
 <w-attention highlight placement="top">
   <div slot="message">
     <p id="aria-content">This text is important</p>
@@ -84,6 +94,9 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
   </button>
 </w-attention>
 ```
+
+</elements-example>
+
 
 ### Props
 

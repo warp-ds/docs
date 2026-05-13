@@ -3,10 +3,12 @@ Toasts are brief user feedback messages that overlay content.
 
 <ComponentsStatus />
 <FrameworkTabs />
+<ThemeSwitcher />
 
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/accessibility.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/usage.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/examples.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/styling.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/api.md-->
 
 <component-questions />

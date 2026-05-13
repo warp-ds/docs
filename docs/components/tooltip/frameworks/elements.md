@@ -2,14 +2,14 @@
 A tooltip is a message box that is displayed when a user hovers over or gives focus to a UI element.
 
 <ComponentsStatus />
-
-## Elements
-
 <FrameworkTabs />
+<ThemeSwitcher />
 
-### Visual option
+### Visual options
 
-```js
+<elements-example>
+
+```html
 <w-attention tooltip placement="right">
   <button id="target" slot="target">
     Hover or focus to show a tooltip on right
@@ -17,6 +17,9 @@ A tooltip is a message box that is displayed when a user hovers over or gives fo
   <span slot="message">I'm a tooltip on right</span>
 </w-attention>
 ```
+
+</elements-example>
+
 
 ### Flip prop
 The attention component uses the Floating-ui library to calculate its position.
@@ -57,7 +60,9 @@ It is possible to tell assistive technologies to recognize only a part of Attent
 To do that set the `role` attribute on the relevant text element nested in `w-attention` and reference it by id through the use of `aria-details`.
 The `aria-details` attribute is on the target element, not on `w-attention`.
 
-```js
+<elements-example>
+
+```html
 <w-attention placement="top" tooltip>
   <div slot="message">
     <p id="aria-content" role="tooltip">This tooltip text is important</p>
@@ -68,6 +73,8 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
   </button>
 </w-attention>
 ```
+
+</elements-example>
 
 ### Props
 

@@ -10,3 +10,5 @@ Pagination allows users to navigate through multiple pages of content by providi
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/pagination/examples.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/pagination/styling.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/pagination/api.md-->
+
+<component-questions />

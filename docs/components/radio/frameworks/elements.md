@@ -12,3 +12,5 @@ Radios allow users to select a single option from a list of choices.
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/radio-group/styling.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/radio-group/api.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/radio/api.md-->
+
+<component-questions />
