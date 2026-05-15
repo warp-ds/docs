@@ -2,10 +2,11 @@
 Toasts are brief user feedback messages that overlay content.
 
 <ComponentsStatus />
-
-## Android
-
 <FrameworkTabs />
+
+## Deprecated
+
+The Toast component is deprecated in favor of [Snackbar](../../snackbar/frameworks/android.md).
 
 ### Syntax
 

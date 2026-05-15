@@ -5,6 +5,10 @@ Toasts are brief user feedback messages that overlay content.
 <FrameworkTabs />
 <ThemeSwitcher />
 
+## Deprecated
+
+The Toast component is deprecated in favor of [Snackbar](../../snackbar/frameworks/elements.md).
+
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/accessibility.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/usage.md-->
 <!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/examples.md-->

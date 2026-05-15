@@ -2,10 +2,11 @@
 Toasts are brief user feedback messages that overlay content.
 
 <ComponentsStatus />
-
-## iOS
-
 <FrameworkTabs />
+
+## Deprecated
+
+The Toast component is deprecated in favor of [Snackbar](../../snackbar/frameworks/ios.md).
 
 ### Syntax
 
