@@ -21,6 +21,9 @@ export default defineConfig({
   lastUpdated: false,
   cleanUrls: true,
   base: `${base}/`,
+  ignoreDeadLinks: [
+    (url) => url.startsWith('/docs'), // doesn't detect properly when we link using pathname
+  ],
   markdown: {
     theme: {
       light: 'github-light',
@@ -41,14 +44,17 @@ export default defineConfig({
     template: {
       compilerOptions: {
         isCustomElement: (tag) => {
-          return tag.includes('-');
+          // Pattern-based matches
+          if (/(-example|-color-table|example-container|poc-1-div)$/.test(tag)) return true;
+          const warpVueComponents = ['w-clickable', 'w-button-group', 'w-button-group-item', 'w-toggle'];
+          if (warpVueComponents.includes(tag)) return false;
+          return tag.startsWith('w-');
         },
       },
     },
   },
   vite: {
     plugins: [
-      llmstxt(),
       uno({ presets: [presetWarp({ skipResets: true })] }),
       uno({
         presets: [presetWarp(), presetDocs()],
