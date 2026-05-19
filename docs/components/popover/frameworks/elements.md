@@ -2,16 +2,16 @@
 A Popover is a message box that is displayed floating over page content after pressing a trigger element, like an info-icon.
 
 <ComponentsStatus />
-
-## Elements
-
 <FrameworkTabs />
+<ThemeSwitcher>
 
 ### Visual options
 
 #### Default
 
-```js
+<elements-example>
+
+```html
 <w-attention placement="right" popover flip cross-axis fallback-placements='["left", "bottom", "top"]'>
   <button id="target" onclick="toggleShow()" slot="target">
     Click to toggle a popover on bottom
@@ -20,9 +20,13 @@ A Popover is a message box that is displayed floating over page content after pr
 </w-attention>
 ```
 
+</elements-example>
+
 #### With icon as target element
 
-```js
+<elements-example>
+
+```html
 <w-attention placement="right-end" popover distance="-8" skidding='27'>
   <button id="target" quiet variant="utility" onclick="toggleShow()" slot="target">
     <w-icon-info-16></w-icon-info-16>
@@ -30,6 +34,8 @@ A Popover is a message box that is displayed floating over page content after pr
   <span slot="message">I'm a popover on right-end</span>
 </w-attention>
 ```
+
+</elements-example>
 
 ### Flip prop
 The attention component uses the Floating-ui library to calculate its position.
@@ -70,7 +76,9 @@ It is possible to tell assistive technologies to recognize only a part of Attent
 To do that set the `role` attribute on the relevant text element nested in `w-attention` and reference it by id through the use of `aria-details`.
 The `aria-details` attribute is on the target element, not on `w-attention`.
 
-```js
+<elements-example>
+
+```html
 <w-attention placement="top" popover>
   <div slot="message">
     <p id="aria-content">This popover text is important</p>
@@ -81,6 +89,8 @@ The `aria-details` attribute is on the target element, not on `w-attention`.
   </button>
 </w-attention>
 ```
+
+</elements-example>
 
 ### Props
 

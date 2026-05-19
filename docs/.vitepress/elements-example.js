@@ -1,4 +1,4 @@
-class StyleIsolate extends HTMLElement {
+class ElementsExample extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -10,6 +10,9 @@ class StyleIsolate extends HTMLElement {
   }
 
   connectedCallback() {
+    this.id = Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+    this.setAttribute('id', this.id);
+
     this.style.display = 'block';
     this.style.marginTop = '16px';
 
@@ -30,16 +33,12 @@ class StyleIsolate extends HTMLElement {
 
     // Get current WARP theme tokens
     const currentTheme = localStorage.getItem('warpTheme') || 'finn-no';
-    const tokensUrl = `https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/${currentTheme}.css`;
+    const tokensUrl = `https://assets.finn.no/pkg/@warp-ds/css/~2/tokens/${currentTheme}.css`;
 
-    // Move light DOM content into shadow DOM for true isolation
-    // (slots don't isolate - slotted content stays in light DOM and inherits page styles)
+    // Get the text content of the <code> element and recreate it as HTML inside
+    // the shadow root for style isolation.
     const content = document.createDocumentFragment();
-
-    // Move all children from light DOM to shadow DOM
-    while (this.firstChild) {
-      content.appendChild(this.firstChild);
-    }
+    const codeEl = this.firstChild.querySelector('code');
 
     // Clear shadow root
     this.shadowRoot.innerHTML = '';
@@ -78,31 +77,44 @@ class StyleIsolate extends HTMLElement {
       this.shadowRoot.appendChild(link);
     }
 
-    // Create wrapper div
+    // Create wrapper div and include code
     const wrapper = document.createElement('div');
+    wrapper.innerHTML = codeEl.innerText;
     wrapper.className = 'component space-y-16';
     wrapper.appendChild(content);
 
     // Append the wrapped content to shadow DOM
     this.shadowRoot.appendChild(wrapper);
 
+    // Show the code example as-is in the light-DOM via slots
+    this.shadowRoot.appendChild(document.createElement('slot'));
+
+    // Create the script tag (if any) explicitly to make it run
+    const codeExScript = this.shadowRoot.querySelector('script');
+    if (codeExScript) {
+      try {
+        const execScript = document.createElement('script');
+        let scriptContent = codeExScript.innerText;
+
+        // Enrich all "demo" query selectors with the elements-example shadow root
+        scriptContent = scriptContent.replaceAll(
+          /document.querySelector\((.*?data-testid.*?)\)/gs,
+          `document.querySelector('elements-example[id="${this.id}"]').shadowRoot.querySelector($1)`,
+        );
+
+        execScript.innerText = scriptContent;
+        document.body.appendChild(execScript);
+      } catch (e) {
+        console.error(e);
+        console.debug(execScript.innerText);
+      }
+    }
+
     this._hasRendered = true;
   }
 }
 
 // Register the custom element
-if (!customElements.get('style-isolate')) {
-  customElements.define('style-isolate', StyleIsolate);
-}
-
-class StyleIsolatedTypoNotice extends StyleIsolate {
-  connectedCallback() {
-    console.log('You wrote <style-isolated>, it should be <style-isolate>');
-    super.connectedCallback();
-  }
-}
-
-// Register the custom element
-if (!customElements.get('style-isolated')) {
-  customElements.define('style-isolated', StyleIsolatedTypoNotice);
+if (!customElements.get('elements-example')) {
+  customElements.define('elements-example', ElementsExample);
 }

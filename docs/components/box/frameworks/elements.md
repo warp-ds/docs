@@ -2,29 +2,13 @@
 Box is a layout component used for separating content areas on a page.
 
 <ComponentsStatus />
-
-## Elements
-
 <FrameworkTabs />
+<ThemeSwitcher />
 
-### Syntax
-
-```js
-<w-box info>
-    <p>This is <strong>info</strong> variant of the box component</p>
-</w-box>
-```
-
-### Props
-
-#### Optional Props
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| bleed | boolean | false | Will make a box full-width on sm-size |
-| bordered | boolean | false | Adds a lovely border |
-| info | boolean | false | Will style the box with colors for indicating that it has informative content |
-| neutral | boolean | false | Will style the box in a neutral fashion |
-| role | string | region | Sets the ARIA `role` attribute to provide semantic meaning. To remove the default role attribute, supply an empty role (`role=""`). |
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/box/accessibility.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/box/usage.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/box/examples.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/box/styling.md-->
+<!--@include: ../../../../node_modules/@warp-ds/elements/dist/docs/box/api.md-->
 
 <component-questions />

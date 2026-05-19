@@ -1,10 +1,7 @@
-# Switch - Usage
+# Switch - React
 The Switch component allows users to toggle between two states.
 
 <ComponentsStatus />
-
-## React
-
 <FrameworkTabs />
 
 ### Import

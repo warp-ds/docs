@@ -1,10 +1,7 @@
-# Switch - Usage
+# Switch - iOS
 The Switch component allows users to toggle between two states.
 
 <ComponentsStatus />
-
-## iOS
-
 <FrameworkTabs />
 
 ### Syntax

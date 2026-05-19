@@ -1,3 +1,4 @@
+import { toast } from '@warp-ds/elements';
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
 import ComponentDesignGuidelines from '../ComponentDesignGuidelines.md';
@@ -10,6 +11,7 @@ import ThemeSwitcher from '../ThemeSwitcher.vue';
 import '../bootExamples.js';
 // Only import client side
 import '../StyleIsolate.js'; // Web component for style isolation
+import '../elements-example.js';
 import './custom.css';
 import 'uno.css';
 import Badge from '../Badge.vue';
@@ -22,6 +24,10 @@ import InProgressStatus from '../InProgressStatus.vue';
 import TabsContent from '../TabsContent.vue';
 import WidthController from '../WidthController.vue';
 import warpThemeSwitcher from '../warp-theme-switcher.js';
+
+if (typeof window !== 'undefined') {
+  window.toast = toast;
+}
 
 export default {
   extends: DefaultTheme,

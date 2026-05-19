@@ -28,8 +28,8 @@ importers:
         specifier: 2.3.0
         version: 2.3.0(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
       '@warp-ds/elements':
-        specifier: ^2.8.0
-        version: 2.8.0(@lingui/core@5.2.0)(@types/react@18.3.28)
+        specifier: 2.10.0-next.5
+        version: 2.10.0-next.5(@lingui/core@5.2.0)(@types/react@18.3.28)
       '@warp-ds/preset-docs':
         specifier: 0.0.16
         version: 0.0.16(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
@@ -485,8 +485,8 @@ packages:
     bundledDependencies:
       - '@messageformat/date-skeleton'
 
-  '@lit-labs/ssr-dom-shim@1.5.1':
-    resolution: {integrity: sha512-Aou5UdlSpr5whQe8AA/bZG0jMj96CoJIWbGfZ91qieWu5AWUMKw8VR/pAkQkJYvBNhmCcWnZlyyk5oze8JIqYA==}
+  '@lit-labs/ssr-dom-shim@1.6.0':
+    resolution: {integrity: sha512-VHb0ALPMTlgKjM6yIxxoQNnpKyUKLD04VzeQdsiXkMqkvYlAHxq9glGLmgbb889/1GsohSOAjvQYoiBppXFqrQ==}
 
   '@lit/react@1.0.8':
     resolution: {integrity: sha512-p2+YcF+JE67SRX3mMlJ1TKCSTsgyOVdAwd/nxp3NuV1+Cb6MWALbN6nT7Ld4tpmYofcE5kcaSY1YBB9erY+6fw==}
@@ -919,8 +919,8 @@ packages:
     peerDependencies:
       '@warp-ds/uno': 2.x
 
-  '@warp-ds/elements@2.8.0':
-    resolution: {integrity: sha512-gdmzzYDiWCsC7qK46oR8s+FTxaJcfFkNxHHsNCMqv1G0HHQ6rW8mQLSniNyALSSiiZhpGzya5ah8/yA02e+KIQ==}
+  '@warp-ds/elements@2.10.0-next.5':
+    resolution: {integrity: sha512-jO0s04oteG8kj1ZcjMkXh/mVytRLr5XOGetiUyAMnVVAz1h3IkEfDF082F++pITSfAbY4DwjvYGuoASlczG6NQ==}
 
   '@warp-ds/icons@2.5.0':
     resolution: {integrity: sha512-tOI8hdXb2wlybpknhnySZ4m6jqA0fS+ycE7pHnpAeg27sN+XJJehL07cNuJ27MmZc0hvZtzv/L1O2F8ivjVbfQ==}
@@ -1330,11 +1330,11 @@ packages:
   lit-element@4.2.2:
     resolution: {integrity: sha512-aFKhNToWxoyhkNDmWZwEva2SlQia+jfG0fjIWV//YeTaWrVnOxD89dPKfigCUspXFmjzOEUQpOkejH5Ly6sG0w==}
 
-  lit-html@3.3.2:
-    resolution: {integrity: sha512-Qy9hU88zcmaxBXcc10ZpdK7cOLXvXpRoBxERdtqV9QOrfpMZZ6pSYP91LhpPtap3sFMUiL7Tw2RImbe0Al2/kw==}
+  lit-html@3.3.3:
+    resolution: {integrity: sha512-el8M6jK2o3RXBnrSHX3ZKrsN8zEV63pSExTO1wYJz7QndGYZ8353e2a5PPX+qHe2aGayfnchQmkAojaWAREOIA==}
 
-  lit@3.3.2:
-    resolution: {integrity: sha512-NF9zbsP79l4ao2SNrH3NkfmFgN/hBYSQo90saIVI1o5GpjAdCPVstVzO1MrLOakHoEhYkrtRjPK6Ob521aoYWQ==}
+  lit@3.3.3:
+    resolution: {integrity: sha512-fycuvZg/hkpozL00lm1pEJH5nN/lr9ZXd6mJI2HSN4+Bzc+LDNdEApJ6HFbPkdFNHLvOplIIuJvxkS4XUxqirw==}
 
   local-pkg@1.1.2:
     resolution: {integrity: sha512-arhlxbFRmoQHl33a0Zkle/YWlmNwoyt6QNZEIJcqNbdrsix5Lvc4HyyI3EnwxTYlZYc32EbYrQ8SzEZ7dqgg9A==}
@@ -2199,7 +2199,7 @@ snapshots:
       '@messageformat/parser': 5.1.1
       js-sha256: 0.10.1
 
-  '@lit-labs/ssr-dom-shim@1.5.1': {}
+  '@lit-labs/ssr-dom-shim@1.6.0': {}
 
   '@lit/react@1.0.8(@types/react@18.3.28)':
     dependencies:
@@ -2207,7 +2207,7 @@ snapshots:
 
   '@lit/reactive-element@2.1.2':
     dependencies:
-      '@lit-labs/ssr-dom-shim': 1.5.1
+      '@lit-labs/ssr-dom-shim': 1.6.0
 
   '@messageformat/parser@5.1.1':
     dependencies:
@@ -2671,11 +2671,11 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@warp-ds/components@1.0.0-beta.2(@lingui/core@5.2.0)(@lit/react@1.0.8(@types/react@18.3.28))(lit@3.3.2)':
+  '@warp-ds/components@1.0.0-beta.2(@lingui/core@5.2.0)(@lit/react@1.0.8(@types/react@18.3.28))(lit@3.3.3)':
     dependencies:
       '@lingui/core': 5.2.0
       '@lit/react': 1.0.8(@types/react@18.3.28)
-      lit: 3.3.2
+      lit: 3.3.3
 
   '@warp-ds/core@1.1.8(@floating-ui/dom@1.6.13)':
     dependencies:
@@ -2685,11 +2685,11 @@ snapshots:
     dependencies:
       '@warp-ds/uno': 2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8)))
 
-  '@warp-ds/elements@2.8.0(@lingui/core@5.2.0)(@types/react@18.3.28)':
+  '@warp-ds/elements@2.10.0-next.5(@lingui/core@5.2.0)(@types/react@18.3.28)':
     dependencies:
       '@lit/react': 1.0.8(@types/react@18.3.28)
-      '@warp-ds/components': 1.0.0-beta.2(@lingui/core@5.2.0)(@lit/react@1.0.8(@types/react@18.3.28))(lit@3.3.2)
-      lit: 3.3.2
+      '@warp-ds/components': 1.0.0-beta.2(@lingui/core@5.2.0)(@lit/react@1.0.8(@types/react@18.3.28))(lit@3.3.3)
+      lit: 3.3.3
     transitivePeerDependencies:
       - '@lingui/core'
       - '@types/react'
@@ -3086,19 +3086,19 @@ snapshots:
 
   lit-element@4.2.2:
     dependencies:
-      '@lit-labs/ssr-dom-shim': 1.5.1
+      '@lit-labs/ssr-dom-shim': 1.6.0
       '@lit/reactive-element': 2.1.2
-      lit-html: 3.3.2
+      lit-html: 3.3.3
 
-  lit-html@3.3.2:
+  lit-html@3.3.3:
     dependencies:
       '@types/trusted-types': 2.0.7
 
-  lit@3.3.2:
+  lit@3.3.3:
     dependencies:
       '@lit/reactive-element': 2.1.2
       lit-element: 4.2.2
-      lit-html: 3.3.2
+      lit-html: 3.3.3
 
   local-pkg@1.1.2:
     dependencies:
