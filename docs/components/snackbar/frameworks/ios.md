@@ -61,7 +61,7 @@ enum Warp.Snackbar.Duration {
     /// Default is 5 seconds.
     case short
     /// Long duration, typically used for more significant messages that require user attention.
-    /// Default is 20 seconds.
+    /// Default is 10 seconds.
     case long
     /// Infinite duration, typically used for messages that require user interaction to dismiss.
     case infinite
@@ -69,6 +69,8 @@ enum Warp.Snackbar.Duration {
     case custom(interval: TimeInterval)
 }
 ```
+
+> **Note:** When an action button is provided (either `action` or `longAction`), a minimum duration of `.long` (10 seconds) is enforced to give users adequate time to read the message and tap the action button.
 
 ### Action buttons
 
@@ -134,7 +136,7 @@ Warp.Snackbar(
 | --- | --- | --- | --- |
 | action | Warp.Snackbar.Action? | nil | An inline action button displayed next to the message |
 | longAction | Warp.Snackbar.Action? | nil | An action button displayed below the message for longer action titles |
-| duration | Warp.Snackbar.Duration | .short | How long the snackbar remains visible. Use one of the predefined `Duration` values: `.short` (5s), `.long` (20s), `.infinite`, or `.custom(interval:)` |
+| duration | Warp.Snackbar.Duration | .short | How long the snackbar remains visible. Use one of the predefined `Duration` values: `.short` (5s), `.long` (10s), `.infinite`, or `.custom(interval:)`. When an action is provided, minimum `.long` (10s) is enforced |
 | showCloseButton | Bool | true | Whether to show a close button on the snackbar |
 
 <component-questions />
