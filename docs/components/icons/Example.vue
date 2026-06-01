@@ -29,7 +29,7 @@ const filteredIcons = computed(() =>
 align-items: center;">
           <w-icon :name="icon" size="medium" locale="en" />
         </div>
-        <span class="text-s mt-8" style="color:var(--w-s-color-text);">{{ icon }}</span>
+        <span class="text-s mt-8" style="color:var(--vp-c-text-1);">{{ icon }}</span>
       </div>
     </div>
   </div>
