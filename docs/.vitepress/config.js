@@ -55,6 +55,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      llmstxt(),
       uno({ presets: [presetWarp({ skipResets: true })] }),
       uno({
         presets: [presetWarp(), presetDocs()],
