@@ -48,9 +48,32 @@ enum Warp.SnackbarType {
     case warning
     /// Negative message. Example: Internal server error
     case negative
-    /// Neutral message. Example: Generic information
+    /// Info message. Example: Generic information
+    case info
+    /// Neutral message without icon. Example: Generic information
     case neutral
+    /// Neutral message with custom icon. Example: Generic information with custom icon
+    case neutralIcon(Warp.Icon)
 }
+```
+
+The `.neutralIcon` variant allows you to provide a custom `Warp.Icon`:
+
+```swift example
+Warp.Snackbar(
+    type: .neutralIcon(.bag),
+    title: "Item added to your bag",
+    isPresented: $showSnackbar
+)
+
+.warpSnackbar(
+    type: .neutralIcon(.heart),
+    title: "Added to favorites",
+    action: Warp.Snackbar.Action(title: "View") {
+        showFavorites()
+    },
+    isPresented: $showSnackbar
+)
 ```
 
 ### Auto dismiss duration option - default: short
@@ -58,7 +81,7 @@ enum Warp.SnackbarType {
 ```swift example
 enum Warp.Snackbar.Duration {
     /// Short duration, typically used for quick feedback messages.
-    /// Default is 5 seconds.
+    /// Default is 4 seconds.
     case short
     /// Long duration, typically used for more significant messages that require user attention.
     /// Default is 10 seconds.
@@ -126,7 +149,7 @@ Warp.Snackbar(
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| type | Warp.SnackbarType |  | The visual style of the snackbar. Use one of the predefined `SnackbarType` values: `.positive`, `.warning`, `.negative`, or `.neutral` |
+| type | Warp.SnackbarType |  | The visual style of the snackbar. Use one of the predefined `SnackbarType` values: `.positive`, `.warning`, `.negative`, `.info`, `.neutral`, or `.neutralIcon(Warp.Icon)` |
 | title | String |  | The message text to display in the snackbar |
 | isPresented | Binding Bool |  | A binding to control the visibility of the snackbar |
 
@@ -136,7 +159,7 @@ Warp.Snackbar(
 | --- | --- | --- | --- |
 | action | Warp.Snackbar.Action? | nil | An inline action button displayed next to the message |
 | longAction | Warp.Snackbar.Action? | nil | An action button displayed below the message for longer action titles |
-| duration | Warp.Snackbar.Duration | .short | How long the snackbar remains visible. Use one of the predefined `Duration` values: `.short` (5s), `.long` (10s), `.infinite`, or `.custom(interval:)`. When an action is provided, minimum `.long` (10s) is enforced |
+| duration | Warp.Snackbar.Duration | .short | How long the snackbar remains visible. Use one of the predefined `Duration` values: `.short` (4s), `.long` (10s), `.infinite`, or `.custom(interval:)`. When an action is provided, minimum `.long` (10s) is enforced |
 | showCloseButton | Bool | true | Whether to show a close button on the snackbar |
 
 <component-questions />
