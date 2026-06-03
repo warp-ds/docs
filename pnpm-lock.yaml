@@ -28,8 +28,8 @@ importers:
         specifier: 2.3.0
         version: 2.3.0(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
       '@warp-ds/elements':
-        specifier: v2.10.0-next.5
-        version: 2.10.0-next.5(@lingui/core@5.2.0)(@types/react@18.3.28)
+        specifier: 2.10.0-next.12
+        version: 2.10.0-next.12(@lingui/core@5.2.0)(@types/react@18.3.28)
       '@warp-ds/preset-docs':
         specifier: 0.0.16
         version: 0.0.16(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
@@ -919,8 +919,8 @@ packages:
     peerDependencies:
       '@warp-ds/uno': 2.x
 
-  '@warp-ds/elements@2.10.0-next.5':
-    resolution: {integrity: sha512-jO0s04oteG8kj1ZcjMkXh/mVytRLr5XOGetiUyAMnVVAz1h3IkEfDF082F++pITSfAbY4DwjvYGuoASlczG6NQ==}
+  '@warp-ds/elements@2.10.0-next.12':
+    resolution: {integrity: sha512-W4tv1O2dPHdOK0JGsLFZ/s5wYm4QATI+L5yMDyaMZMlSKhEDa/qrpIjLWk1iNrWZ/WFJzLOlW6TQYa0I7lqh/Q==}
 
   '@warp-ds/icons@2.5.0':
     resolution: {integrity: sha512-tOI8hdXb2wlybpknhnySZ4m6jqA0fS+ycE7pHnpAeg27sN+XJJehL07cNuJ27MmZc0hvZtzv/L1O2F8ivjVbfQ==}
@@ -2685,7 +2685,7 @@ snapshots:
     dependencies:
       '@warp-ds/uno': 2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8)))
 
-  '@warp-ds/elements@2.10.0-next.5(@lingui/core@5.2.0)(@types/react@18.3.28)':
+  '@warp-ds/elements@2.10.0-next.12(@lingui/core@5.2.0)(@types/react@18.3.28)':
     dependencies:
       '@lit/react': 1.0.8(@types/react@18.3.28)
       '@warp-ds/components': 1.0.0-beta.2(@lingui/core@5.2.0)(@lit/react@1.0.8(@types/react@18.3.28))(lit@3.3.3)

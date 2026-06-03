@@ -25,7 +25,7 @@ const filteredIcons = computed(() =>
     </div>
     <div class="grid gap-24 grid-cols-4 md:grid-cols-4 m-8">
       <div v-for="icon in filteredIcons" :key="icon" class="flex flex-col items-center text-center">
-        <div style="display:flex;background-color: #fff;border-radius: 4px;width:100%;height: 56px;padding: 8px 16px;gap: 10px;align-self: stretch;justify-content: center;
+        <div style="display:flex;color:var(--w-s-color-icon);background-color: var(--w-s-color-background);border-color:var(--w-s-color-border);border-width:1px;border-radius: 4px;width:100%;height: 56px;padding: 8px 16px;gap: 10px;align-self: stretch;justify-content: center;
 align-items: center;">
           <w-icon :name="icon" size="medium" locale="en" />
         </div>

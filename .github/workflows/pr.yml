@@ -1,0 +1,29 @@
+name: Test
+
+on:
+  pull_request:
+    target: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+        with:
+          run_install: true
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Lint
+        run: pnpm lint
+      - name: Build with VitePress
+        run: pnpm build

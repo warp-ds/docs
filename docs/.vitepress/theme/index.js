@@ -1,4 +1,4 @@
-import { toast } from '@warp-ds/elements';
+import { toast } from '@warp-ds/elements/components/toast';
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
 import ComponentDesignGuidelines from '../ComponentDesignGuidelines.md';

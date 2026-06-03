@@ -3,7 +3,7 @@ A Popover is a message box that is displayed floating over page content after pr
 
 <ComponentsStatus />
 <FrameworkTabs />
-<ThemeSwitcher>
+<ThemeSwitcher />
 
 ### Visual options
 

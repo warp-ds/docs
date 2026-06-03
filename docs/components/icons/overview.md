@@ -8,6 +8,7 @@ const iconNames = Object.keys(data);
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 <ComponentsStatus />
+<ThemeSwitcher />
 
 ## Phosphor
 
