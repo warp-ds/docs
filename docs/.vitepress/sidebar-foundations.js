@@ -618,6 +618,20 @@ export const sidebarFoundations = [
         text: 'Accessibility',
         link: '/foundations/accessibility/',
       },
+      {
+        text: 'Keyboard',
+        collapsed: true,
+        items: [
+          {
+            text: 'Keyboard navigation',
+            link: '/foundations/keyboard/navigation/',
+          },
+          {
+            text: 'Keyboard shortcuts',
+            link: '/foundations/keyboard/shortcuts/',
+          },
+        ],
+      },
       { text: 'Brands', link: '/foundations/brands/' },
       {
         text: 'Data visualization',
