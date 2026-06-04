@@ -4,10 +4,6 @@ Toasts are brief user feedback messages that overlay content.
 <ComponentsStatus />
 <FrameworkTabs />
 
-## Deprecated
-
-The Toast component is deprecated in favor of [Snackbar](../../snackbar/frameworks/react.md).
-
 ### Import
 
 The Toast system consists of two parts.
