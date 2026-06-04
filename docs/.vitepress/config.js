@@ -21,7 +21,7 @@ export default defineConfig({
   lastUpdated: false,
   cleanUrls: true,
   sitemap: {
-    hostname: `https://warp-ds.github.io${base}`
+    hostname: 'https://warp-ds.github.io/docs/',
   },
   base: `${base}/`,
   ignoreDeadLinks: [
