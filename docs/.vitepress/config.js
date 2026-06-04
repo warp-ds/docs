@@ -20,9 +20,12 @@ export default defineConfig({
   description: 'Documentation for Warp Design System',
   lastUpdated: false,
   cleanUrls: true,
+  sitemap: {
+    hostname: `https://warp-ds.github.io${base}`
+  },
   base: `${base}/`,
   ignoreDeadLinks: [
-    (url) => url.startsWith('/docs'), // doesn't detect properly when we link using pathname
+    (url) => url.startsWith(base), // doesn't detect properly when we link using pathname
   ],
   markdown: {
     theme: {
