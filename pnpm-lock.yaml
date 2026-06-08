@@ -28,8 +28,8 @@ importers:
         specifier: 2.3.0
         version: 2.3.0(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
       '@warp-ds/elements':
-        specifier: 2.10.0-next.12
-        version: 2.10.0-next.12(@lingui/core@5.2.0)(@types/react@18.3.28)
+        specifier: 2.10.0-next.15
+        version: 2.10.0-next.15(@types/react@18.3.28)
       '@warp-ds/preset-docs':
         specifier: 0.0.16
         version: 0.0.16(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
@@ -902,13 +902,6 @@ packages:
   '@vueuse/shared@10.11.1':
     resolution: {integrity: sha512-LHpC8711VFZlDaYUXEBbFBCQ7GS3dVU9mjOhhMhXP6txTV4EhYQg/KGnQuvt/sPAtoUKq7VVUnL6mVtFoL42sA==}
 
-  '@warp-ds/components@1.0.0-beta.2':
-    resolution: {integrity: sha512-xZ3YJ0TB0FT2O0S7WlU3YMEAD7j5pqu+Dn7COodR4ogJ0OrF3VYu8IOBrshfxi4VRDYB3uOZB0HayZ4NshyNvA==}
-    peerDependencies:
-      '@lingui/core': 5.x
-      '@lit/react': ^1.0.3
-      lit: ^3.1.2
-
   '@warp-ds/core@1.1.8':
     resolution: {integrity: sha512-sQNhqtwug5ZvnQ/b5ENHM10eGxoFplLWPp8/ICECxzBfkDfwQHfu3Z71CRiuf3VQYEYvvGQ21uQHNfC4YTQAxg==}
     peerDependencies:
@@ -919,8 +912,8 @@ packages:
     peerDependencies:
       '@warp-ds/uno': 2.x
 
-  '@warp-ds/elements@2.10.0-next.12':
-    resolution: {integrity: sha512-W4tv1O2dPHdOK0JGsLFZ/s5wYm4QATI+L5yMDyaMZMlSKhEDa/qrpIjLWk1iNrWZ/WFJzLOlW6TQYa0I7lqh/Q==}
+  '@warp-ds/elements@2.10.0-next.15':
+    resolution: {integrity: sha512-kKzW96XhxuMIhrVKv4plFIc6BjkbAt0Mn+1HC4XmXt7c3XAZxOfRjLgv4kY3W1Syr/1CgOwJvDIBes3+y/ILfw==}
 
   '@warp-ds/icons@2.5.0':
     resolution: {integrity: sha512-tOI8hdXb2wlybpknhnySZ4m6jqA0fS+ycE7pHnpAeg27sN+XJJehL07cNuJ27MmZc0hvZtzv/L1O2F8ivjVbfQ==}
@@ -2671,12 +2664,6 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
-  '@warp-ds/components@1.0.0-beta.2(@lingui/core@5.2.0)(@lit/react@1.0.8(@types/react@18.3.28))(lit@3.3.3)':
-    dependencies:
-      '@lingui/core': 5.2.0
-      '@lit/react': 1.0.8(@types/react@18.3.28)
-      lit: 3.3.3
-
   '@warp-ds/core@1.1.8(@floating-ui/dom@1.6.13)':
     dependencies:
       '@floating-ui/dom': 1.6.13
@@ -2685,13 +2672,11 @@ snapshots:
     dependencies:
       '@warp-ds/uno': 2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8)))
 
-  '@warp-ds/elements@2.10.0-next.12(@lingui/core@5.2.0)(@types/react@18.3.28)':
+  '@warp-ds/elements@2.10.0-next.15(@types/react@18.3.28)':
     dependencies:
       '@lit/react': 1.0.8(@types/react@18.3.28)
-      '@warp-ds/components': 1.0.0-beta.2(@lingui/core@5.2.0)(@lit/react@1.0.8(@types/react@18.3.28))(lit@3.3.3)
       lit: 3.3.3
     transitivePeerDependencies:
-      - '@lingui/core'
       - '@types/react'
 
   '@warp-ds/icons@2.5.0(@lingui/core@5.2.0)':
