@@ -14,8 +14,7 @@ A Snackbar shows brief user feedback messages that overlay content, with an opti
 @Composable
 fun WarpSnackbar(
     snackbarData: SnackbarData,
-    modifier: Modifier = Modifier,
-    actionPlacement: WarpSnackbarActionPlacement = WarpSnackbarActionPlacement.Auto
+    modifier: Modifier = Modifier
 )
 ```
 
@@ -158,27 +157,27 @@ WarpSnackbarVisuals(
 
 ### Action button placement
 
-By default (`WarpSnackbarActionPlacement.Auto`), action buttons are automatically placed on a new line when the action text is 10 or more characters. You can override this for edge cases:
+By default (`WarpSnackbarActionPlacement.Auto`), action buttons are automatically placed on a new line when the action text is 10 or more characters. You can override this for edge cases by setting `actionPlacement` in the visuals:
 
 ```kotlin example
-WarpScaffold(
-    snackbarHost = {
-        SnackbarHost(hostState = snackbarHostState) { data ->
+scope.launch {
+    snackbarHostState.showSnackbar(
+        WarpSnackbarVisuals(
+            message = "Item deleted",
+            actionLabel = "Undo immediately",
             // Force action button on same line even for long text
-            WarpSnackbar(
-                snackbarData = data,
-                actionPlacement = WarpSnackbarActionPlacement.Inline
-            )
-        }
-    }
-) {
-    // Your content
+            actionPlacement = WarpSnackbarActionPlacement.Inline
+        )
+    )
 }
 
 // Or force action button on new line even for short text
-WarpSnackbar(
-    snackbarData = data,
-    actionPlacement = WarpSnackbarActionPlacement.NewLine
+snackbarHostState.showSnackbar(
+    WarpSnackbarVisuals(
+        message = "Done",
+        actionLabel = "OK",
+        actionPlacement = WarpSnackbarActionPlacement.NewLine
+    )
 )
 ```
 
@@ -200,7 +199,6 @@ Available placement options:
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | modifier | Modifier | Modifier | Modifier for the snackbar |
-| actionPlacement | WarpSnackbarActionPlacement | WarpSnackbarActionPlacement.Auto | Controls action button placement: Auto (based on text length), Inline (always same line), or NewLine (always new line) |
 
 #### WarpSnackbarVisuals parameters
 
@@ -211,5 +209,6 @@ Available placement options:
 | actionLabel | String? | null | Optional label for the action button |
 | withDismissAction | Boolean | true | Whether to show the dismiss (X) button |
 | duration | SnackbarDuration | Short (or Long if actionLabel is set) | How long to display: Short, Long, or Indefinite |
+| actionPlacement | WarpSnackbarActionPlacement | WarpSnackbarActionPlacement.Auto | Controls action button placement: Auto (based on text length), Inline (always same line), or NewLine (always new line) |
 
 <component-questions />
