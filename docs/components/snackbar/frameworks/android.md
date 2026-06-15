@@ -14,7 +14,8 @@ A Snackbar shows brief user feedback messages that overlay content, with an opti
 @Composable
 fun WarpSnackbar(
     snackbarData: SnackbarData,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    actionPlacement: WarpSnackbarActionPlacement = WarpSnackbarActionPlacement.Auto
 )
 ```
 
@@ -141,7 +142,7 @@ WarpSnackbarVisuals(
 )
 ```
 
-**Note:** `Long` and `Indefinite` snackbars must have either a dismiss action (X button) or an action button. Only `Short` duration snackbars can be shown without any user interaction option.
+**Note:** `Indefinite` snackbars must have either a dismiss action (X button) or an action button to allow the user to dismiss them.
 
 ### Dismiss action
 
@@ -154,6 +155,37 @@ WarpSnackbarVisuals(
     duration = SnackbarDuration.Short
 )
 ```
+
+### Action button placement
+
+By default (`WarpSnackbarActionPlacement.Auto`), action buttons are automatically placed on a new line when the action text is 10 or more characters. You can override this for edge cases:
+
+```kotlin example
+WarpScaffold(
+    snackbarHost = {
+        SnackbarHost(hostState = snackbarHostState) { data ->
+            // Force action button on same line even for long text
+            WarpSnackbar(
+                snackbarData = data,
+                actionPlacement = WarpSnackbarActionPlacement.Inline
+            )
+        }
+    }
+) {
+    // Your content
+}
+
+// Or force action button on new line even for short text
+WarpSnackbar(
+    snackbarData = data,
+    actionPlacement = WarpSnackbarActionPlacement.NewLine
+)
+```
+
+Available placement options:
+- `Auto` (default) - Automatically places action on new line when text is ≥10 characters
+- `Inline` - Always places action on the same line as the message
+- `NewLine` - Always places action on a new line below the message
 
 ### Parameters
 
@@ -168,6 +200,7 @@ WarpSnackbarVisuals(
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | modifier | Modifier | Modifier | Modifier for the snackbar |
+| actionPlacement | WarpSnackbarActionPlacement | WarpSnackbarActionPlacement.Auto | Controls action button placement: Auto (based on text length), Inline (always same line), or NewLine (always new line) |
 
 #### WarpSnackbarVisuals parameters
 
