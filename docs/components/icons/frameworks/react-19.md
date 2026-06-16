@@ -1,15 +1,15 @@
 # Icons - React 19
+
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 <ComponentsStatus />
-
-## React 19
-
 <FrameworkTabs />
+
+This component works the same way as `<w-icon>` from [@warp-ds/elements](./elements.md). Prefer using `<w-icon>` over this component.
 
 <icon-code-example />
 
-### Import
+## Import
 
 You can import the component like so:
 
@@ -17,7 +17,7 @@ You can import the component like so:
 import { WIcon } from '@warp-ds/components/react/icon';
 ```
 
-### Example
+## Example
 
 Use icon name from above list
 
@@ -31,9 +31,9 @@ Use icon name from above list
 <WIcon name="ActiveAds" size="128px" locale="nb" />
 ```
 
-### Props
+## Props
 
-#### Required props
+### Required props
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
