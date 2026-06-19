@@ -1,3 +1,5 @@
+import packageJson from '../../package.json' with { type: 'json' };
+
 const base = '/docs';
 
 export const headLinks = [
@@ -62,14 +64,14 @@ export const headLinks = [
     'link',
     {
       rel: 'stylesheet',
-      href: 'https://assets.finn.no/pkg/@warp-ds/elements/~2/styles.css',
+      href: `https://assets.finn.no/pkg/@warp-ds/elements/${packageJson.devDependencies['@warp-ds/elements']}/styles.css`,
     },
   ],
   [
     'script',
     {
       type: 'module',
-      src: 'https://assets.finn.no/pkg/@warp-ds/elements/~2/index.js',
+      src: `https://assets.finn.no/pkg/@warp-ds/elements/${packageJson.devDependencies['@warp-ds/elements']}/index.js`,
     },
   ],
   [
