@@ -27,6 +27,9 @@ import warpThemeSwitcher from '../warp-theme-switcher.js';
 
 if (typeof window !== 'undefined') {
   window.toast = toast;
+
+  const snackbar = document.createElement('w-snackbar');
+  document.body.append(snackbar);
 }
 
 export default {

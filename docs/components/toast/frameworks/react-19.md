@@ -2,9 +2,6 @@
 Toasts are brief user feedback messages that overlay content.
 
 <ComponentsStatus />
-
-## React 19
-
 <FrameworkTabs />
 
 ### Import
