@@ -1,6 +1,6 @@
 ---
 title: 'Warp Figma Updates'
-date: 2026-01-05
+date: 2026-06-23
 
 ---
 
