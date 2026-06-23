@@ -1,9 +1,10 @@
 ---
-title: 'WARP Icon Library updates'
+title: 'Warp Figma Updates'
 date: 2026-01-05
-description: 8 icons added & New Snackbar component to replace deprecated Toast component
+
 ---
-# Warp Figma Updates - 8 new icons & new Snackbar component
+
+Added 8 new icons & new Snackbar component
 
 ---
 
@@ -19,6 +20,8 @@ What’s new:
 - Chainsaw
 - LowSpeedVehicle
 - Trailer
+
+<br>
 
 ![Screenshot showing the Figma frame with new icons.](/whats-new/2026/design-06-23-1.svg)
 
@@ -45,8 +48,9 @@ Built-in accessibility: We’ve built platform-specific behaviours to improve th
 
 Designers: The updated component is now live in the main Figma libraries. Please use the Snackbar for any new notification designs and begin swapping out old Toast instances in your existing mockups.
 Developers: Check your platform’s respective library to pull the updated component. The dev documentation is fully updated on the WARP Portal.
-  
+
 ![Screenshot showing the Figma frame with snackbar examples.](/whats-new/2026/design-06-23-2.svg)
+
 ![Screenshot showing the Figma frame with Deprecated Toast component image.](/whats-new/2026/design-06-23-3.svg)
 
 -------
