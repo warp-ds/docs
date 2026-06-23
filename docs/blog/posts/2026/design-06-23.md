@@ -8,6 +8,8 @@ Added 8 new icons & new Snackbar component
 
 ---
 
+# Warp Figma updates
+
 ## Warp Figma icon library update
   
 We’ve added a new batch of icons to the Warp icon library that is now available in Figma as well as in code on all platforms.
