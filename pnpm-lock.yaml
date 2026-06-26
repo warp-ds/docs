@@ -28,8 +28,8 @@ importers:
         specifier: 2.3.0
         version: 2.3.0(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
       '@warp-ds/elements':
-        specifier: 2.10.0
-        version: 2.10.0(@types/react@18.3.28)
+        specifier: 2.11.0
+        version: 2.11.0(@types/react@18.3.28)
       '@warp-ds/preset-docs':
         specifier: 0.0.16
         version: 0.0.16(@warp-ds/uno@2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8))))
@@ -915,8 +915,8 @@ packages:
     peerDependencies:
       '@warp-ds/uno': 2.x
 
-  '@warp-ds/elements@2.10.0':
-    resolution: {integrity: sha512-kQkedkjvk2CkSDx0jh8Ys4AqBuC04KPU0LsIoQjZWI37H1/Jb8A7pw8zKhEnJ6A2s53eWwX6DfD+2ZzK7Ul+IA==}
+  '@warp-ds/elements@2.11.0':
+    resolution: {integrity: sha512-5KdJnEX9hmGfGFu4aogbrK/CmsOdYgySmr26/kafbhk8DE3UBR6vxS7+n91d0QHX/6OASmPmdmmg5f9Cct6tFA==}
 
   '@warp-ds/icons@2.5.0':
     resolution: {integrity: sha512-tOI8hdXb2wlybpknhnySZ4m6jqA0fS+ycE7pHnpAeg27sN+XJJehL07cNuJ27MmZc0hvZtzv/L1O2F8ivjVbfQ==}
@@ -2677,7 +2677,7 @@ snapshots:
     dependencies:
       '@warp-ds/uno': 2.2.0(unocss@66.5.2(postcss@8.5.2)(vite@5.3.5(sass@1.77.8)))
 
-  '@warp-ds/elements@2.10.0(@types/react@18.3.28)':
+  '@warp-ds/elements@2.11.0(@types/react@18.3.28)':
     dependencies:
       '@lit/react': 1.0.8(@types/react@18.3.28)
       '@open-wc/form-control': 1.0.0
