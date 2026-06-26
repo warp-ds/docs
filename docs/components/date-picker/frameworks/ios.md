@@ -7,83 +7,86 @@ A date picker allows the user to select a specific calendar date.
 
 <FrameworkTabs />
 
-### Inline DatePicker
+### Warp Style Modifier
 
-A graphical calendar interface that can be embedded directly in your view hierarchy.
+The `.warpStyle()` modifier applies brand-specific theming (tint color) to a native SwiftUI `DatePicker`. It must be called directly on the `DatePicker` before any other modifiers.
 
 ### Syntax
 
 ```swift
-Warp.DatePicker(
-    date: Binding<Date>
-)
+DatePicker("", selection: $date, displayedComponents: [.date])
+    .warpStyle()
 ```
 
-#### Basic usage
+### Graphical (Inline) DatePicker
+
+A full calendar interface embedded directly in your view hierarchy.
 
 ```swift
-Warp.DatePicker(date: $selectedDate)
+DatePicker("", selection: $selectedDate, displayedComponents: [.date])
+    .warpStyle()
+    .datePickerStyle(.graphical)
+    .labelsHidden()
 ```
 
-#### Range Constraints
+#### With range constraint
 
-You can limit the selectable dates using different range types:
+```swift
+DatePicker("", selection: $selectedDate, in: startDate...endDate, displayedComponents: [.date])
+    .warpStyle()
+    .datePickerStyle(.graphical)
+    .labelsHidden()
+```
+
+### Compact (Popup) DatePicker
+
+A compact tappable date label that opens a calendar popup when tapped.
+
+```swift
+DatePicker("", selection: $selectedDate, displayedComponents: [.date])
+    .warpStyle()
+    .labelsHidden()
+```
+
+### Wheel DatePicker
+
+The classic iOS spinning wheel date picker.
+
+```swift
+DatePicker("", selection: $selectedDate, displayedComponents: [.date])
+    .warpStyle()
+    .datePickerStyle(.wheel)
+    .labelsHidden()
+```
+
+### Date and Time
+
+Include time selection by adding `.hourAndMinute` to displayed components:
+
+```swift
+DatePicker("", selection: $selectedDate, displayedComponents: [.date, .hourAndMinute])
+    .warpStyle()
+    .datePickerStyle(.graphical)
+    .labelsHidden()
+```
+
+### Range Constraints
+
+All native SwiftUI range types are supported:
 
 ```swift
 // Closed range (from-to)
-Warp.DatePicker(date: $selectedDate, range: startDate...endDate)
+DatePicker("", selection: $selectedDate, in: startDate...endDate)
+    .warpStyle()
 
 // Partial range (from-infinity)
-Warp.DatePicker(date: $selectedDate, range: startDate...)
+DatePicker("", selection: $selectedDate, in: startDate...)
+    .warpStyle()
 
 // Partial range (infinity-to)
-Warp.DatePicker(date: $selectedDate, range: ...endDate)
+DatePicker("", selection: $selectedDate, in: ...endDate)
+    .warpStyle()
 ```
-
-### Dialog DatePicker
-
-A compact date picker that can be attached to any view using a view modifier.
-
-### Syntax
-
-```swift
- .warpDatePicker(
-    date: Binding<Date>
-) -> some View
-```
-
-#### Basic usage
-
-This example shows how to attach a dialog date picker to Warp TextField using the `warpDatePicker` modifier + some formatting.
-
-```swift
-Warp.TextField(
-    text: Binding(
-        get: { formattedDate(selectedDate) },
-        set: { _ in }
-    ),
-    placeholder: "Select a date",
-    rightIcon: .calendar
-)
-.warpDatePicker(date: $selectedDate)
-```
-
-#### Range Constraints
-
-Similar to the inline picker, you can constrain the selectable dates:
-
-```swift
-// Closed range
-.warpDatePicker(date: $selectedDate, range: startDate...endDate)
-
-// Partial range (from)
-.warpDatePicker(date: $selectedDate, range: startDate...)
-
-// Partial range (through)
-.warpDatePicker(date: $selectedDate, range: ...endDate)
-```
-
-Note: The dialog picker will intercept all touch events on the view it's applied to.
 
 ### Legacy support
 
@@ -91,16 +94,19 @@ Not supported
 
 ### Parameters
 
-#### Required props
+`.warpStyle()` is a `DatePicker` extension that applies brand tint color. All configuration is done via native SwiftUI `DatePicker` parameters.
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| date | Binding |  | A binding to the currently selected date. |
+| selection | Binding\<Date\> |  | A binding to the currently selected date. |
+| displayedComponents | DatePicker.Components | [.date] | The date and time components to display. |
+| in | ClosedRange\|PartialRangeFrom\|PartialRangeThrough |  | Optional range of selectable dates. |
 
-#### Optional Props
+### Deprecated
 
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| range | ClosedRange\|PartialRangeFrom\|PartialRangeThrough |  | The range of selectable dates. If not provided, there is no date range restriction. |
+The following APIs are deprecated and will be removed in a future release:
+
+- `Warp.DatePicker(date:)` — Use a native `DatePicker` with `.warpStyle()` instead.
+- `.warpDatePicker(date:)` — Use a native `DatePicker` with `.warpStyle()` instead.
 
 <component-questions />
