@@ -5,7 +5,7 @@
 </template>
 
 <style>
-.usage-examples {
+.usage-grid {
   display: grid;
   grid-template:
     "first-figure first-figure"
@@ -15,11 +15,11 @@
     "second-pill second-pill"
     "second-caption second-caption";
   grid-column-gap: 24px;
-  margin-top: 16px;
+  margin-block: 16px;
 }
 
 @media (min-width: 480px) {
-  .usage-examples {
+  .usage-grid {
     grid-template:
     "first-figure second-figure"
     "first-pill second-pill"

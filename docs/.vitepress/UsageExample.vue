@@ -1,17 +1,3 @@
-<!--
-// USAGE
-// <do>This is a nice do box</do>
-// <do not>This is a nice do not box</do>
-// <do imgurl="..." imgalt="Description of image"></do>
-// <do darkmode>This is a nice do box with a dark background.</do>
-//
-// LAYOUT
-// We might put these inside a <do-dont-grid></do-dont-grid> for some automagic layout love, or set up any other layout if that is wanted.
-// <do-dont-grid><do>Simple example</do></do-dont-grid>
-//
-// The grid will always try to put do's to the left and dont's to the right. Any combination and number of these can be entered into the grid.
--->
-
 <script setup>
 const props = defineProps({
   second: Boolean,
@@ -62,23 +48,23 @@ const props = defineProps({
 }
 
 .second [part="image"] {
-  grid-area: dont-figure;
+  grid-area: second-figure;
 }
 
 .usage-wrapper [part="pill"] {
-  grid-area: do-pill;
+  grid-area: first-pill;
   margin-bottom: 8px;
 }
 
 .second [part="pill"] {
-  grid-area: dont-pill;
+  grid-area: second-pill;
 }
 
 .usage-wrapper figcaption {
-  grid-area: do-caption;
+  grid-area: first-caption;
 }
 
 .second figcaption {
-  grid-area: dont-caption;
+  grid-area: second-caption;
 }
 </style>

@@ -15,7 +15,7 @@
     "dont-pill dont-pill"
     "dont-caption dont-caption";
   grid-column-gap: 24px;
-  margin-top: 16px;
+  margin-block: 16px;
 }
 
 @media (min-width: 480px) {

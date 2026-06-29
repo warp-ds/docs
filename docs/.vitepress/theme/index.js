@@ -8,10 +8,10 @@ import ComponentQuestions from '../ComponentQuestions.md';
 import ComponentsStatus from '../ComponentsStatus.vue';
 import Do from '../Do.vue';
 import DoDont from '../DoDont.vue';
-import UsageExample from '../UsageExample.vue';
-import UsageExamples from '../UsageExamples.vue';
 import Footer from '../Footer.vue';
 import ThemeSwitcher from '../ThemeSwitcher.vue';
+import UsageExample from '../UsageExample.vue';
+import UsageExamples from '../UsageExamples.vue';
 import '../bootExamples.js';
 // Only import client side
 import '../StyleIsolate.js'; // Web component for style isolation
@@ -54,6 +54,7 @@ export default {
     app.component('ComponentsStatus', ComponentsStatus);
     app.component('Do', Do);
     app.component('DoDont', DoDont);
+    app.component('DoDont', DoDont);
     app.component('Cards', Cards);
     app.component('Card', Card);
     app.component('FrameworkTabs', FrameworkTabs);
@@ -62,5 +63,7 @@ export default {
     app.component('WidthController', WidthController);
     app.component('DsSearchInput', DsSearchInput);
     app.component('TabsContent', TabsContent);
+    app.component('UsageExample', UsageExample);
+    app.component('UsageExamples', UsageExamples);
   },
 };

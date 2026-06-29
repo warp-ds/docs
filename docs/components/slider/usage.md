@@ -45,6 +45,62 @@ Always use a text field when:
 
 Example: Selecting a search radius on a map. Users usually explore the distance by sliding rather than typing an exact or arbitrary number.
 
+<UsageExamples>
+    <UsageExample imgurl="/docs/components/slider/usage/usage-with-text-field.svg">
+        Slider with integrated text field for value display and manual entry.
+    </UsageExample>
+    <UsageExample second imgurl="/docs/components/slider/usage/usage-without-text-field.svg">
+        Slider without text fields. The selected value is displayed inline with the label.
+    </UsageExample>
+</UsageExamples>
 
+#### Displaying values without text fields
+
+When using the Slider without a text field, the selected value must be visible at all times and easy to read.
+
+<DoDont>
+    <Do imgurl="/docs/components/slider/usage/usage-behaviour-text_fields-value-do.svg">
+        Place the value near the label and ensure it updates instantly as the handle moves.
+    </Do>
+    <Do not imgurl="/docs/components/slider/usage/usage-behaviour-text_fields-value-dont.svg">
+        Don’t force users to "guess" the value based on the handle position alone.
+    </Do>
+</DoDont>
+
+#### Units and formatting
+
+When there is no text field, units must be explicitly shown with the value.
+
+<DoDont>
+    <Do imgurl="/docs/components/slider/usage/usage-behaviour-text_fields-units-do.svg">
+        Display the unit next to the range label, and reinforce by showing it in the tooltip.
+    </Do>
+    <Do not imgurl="/docs/components/slider/usage/usage-behaviour-text_fields-units-dont.svg">
+        Don’t rely on the tooltip alone to communicate the unit of measurement.
+    </Do>
+</DoDont>
+
+#### Dynamic units and values
+
+In some contexts, units may change dynamically to stay relevant to the user based on scale or context.
+
+<UsageExamples>
+    <UsageExample imgurl="/docs/components/slider/usage/usage-behaviour-text_fields-dynamic-metres.svg">
+        Example: The slider displays metres for shorter distances to allow for more granular control.
+    </UsageExample>
+    <UsageExample second imgurl="/docs/components/slider/usage/usage-behaviour-text_fields-dynamic-kilometres.svg">
+        Then, switching to kilometres once the value reaches or exceeds 1 km.
+    </UsageExample>
+</UsageExamples>
+
+:::warning ⚠️ A note on implementation
+
+Specific rules for step sizes and unit thresholds (e.g., metres to kilometres) are defined by individual product teams, not the design system.
+
+:::
+
+### Other slider elements
+
+There aren’t many use cases for the single-handle Slider across Vend marketplaces. For a full specification of its elements and best practices, please refer to the [Range slider](/components/range-slider/overview.md) documentation, which serves as the primary guide for both components.
 
 <component-questions />
