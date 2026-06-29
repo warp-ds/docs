@@ -8,6 +8,8 @@ import ComponentQuestions from '../ComponentQuestions.md';
 import ComponentsStatus from '../ComponentsStatus.vue';
 import Do from '../Do.vue';
 import DoDont from '../DoDont.vue';
+import UsageExample from '../UsageExample.vue';
+import UsageExamples from '../UsageExamples.vue';
 import Footer from '../Footer.vue';
 import ThemeSwitcher from '../ThemeSwitcher.vue';
 import '../bootExamples.js';
