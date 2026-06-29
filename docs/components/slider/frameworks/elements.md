@@ -1,6 +1,6 @@
 # Slider - Elements
 
-Sliders are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
+Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
 See also [Range slider](/components/range-slider/overview.md).
 

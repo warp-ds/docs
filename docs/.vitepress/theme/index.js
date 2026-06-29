@@ -1,3 +1,5 @@
+import './custom.css';
+import 'uno.css';
 import { toast } from '@warp-ds/elements/components/toast';
 import DefaultTheme from 'vitepress/theme';
 import { h } from 'vue';
@@ -12,8 +14,6 @@ import '../bootExamples.js';
 // Only import client side
 import '../StyleIsolate.js'; // Web component for style isolation
 import '../elements-example.js';
-import './custom.css';
-import 'uno.css';
 import Badge from '../Badge.vue';
 import Card from '../Card.vue';
 import Cards from '../Cards.vue';

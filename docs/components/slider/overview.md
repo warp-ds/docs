@@ -1,39 +1,14 @@
 # Slider - Overview
 
-Sliders are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
+Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
 See also [Range slider](/components/range-slider/overview.md).
 
 <ComponentsStatus />
 
-## Example
-
-<ThemeSwitcher />
-
-<style-isolate>
-    <div>
-        <h3 class="h4">Default Slider</h3>
-        <w-slider label="Volume" min="0" max="100">
-            <w-slider-thumb name="volume"></w-slider-thumb>
-        </w-slider>
-    </div>
-    <div>
-        <h3 class="h4">Slider with step</h3>
-        <w-slider label="Rating" min="0" max="10" step="1">
-            <w-slider-thumb name="rating"></w-slider-thumb>
-        </w-slider>
-    </div>
-    <div>
-        <h3 class="h4">Slider with suffix</h3>
-        <w-slider label="Price" min="0" max="1000" suffix="kr">
-            <w-slider-thumb name="price"></w-slider-thumb>
-        </w-slider>
-    </div>
-</style-isolate>
-
 ## Overview
 
-A slider provides a visual indication of an adjustable value within a defined range (minimum and maximum values) by moving a handle along a horizontal track.
+Sliders are best suited for quickly setting a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
 
 Sliders are available in two different variants:
 
