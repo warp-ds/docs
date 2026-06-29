@@ -2,7 +2,7 @@
 
 Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
-See also [Range slider](/components/range-slider/overview.md).
+
 
 <ComponentsStatus />
 

@@ -13,7 +13,7 @@
     "first-caption first-caption"
     "second-figure second-figure"
     "second-pill second-pill"
-    "second-caption second-caption";
+    "second-caption second-caption" / 50% 50%;
   grid-column-gap: 24px;
   margin-block: 16px;
 }
@@ -23,7 +23,7 @@
     grid-template:
     "first-figure second-figure"
     "first-pill second-pill"
-    "first-caption second-caption";
+    "first-caption second-caption" / 50% 50%;
   }
 }
 </style>
