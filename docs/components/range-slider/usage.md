@@ -78,7 +78,7 @@ Use when the lower and upper limits are known and fixed.
 
 ### Open-ended ranges
 
-**Open minimum**
+#### Open minimum
 
 When there is no concrete lower limit in the range. 
 
@@ -98,5 +98,26 @@ When there is no concrete lower limit in the range.
         Don’t use mathematical symbols (< or -) to indicate an open-ended minimum.
     </Do>
 </DoDont>
+
+#### Open maximum
+
+When there is no concrete upper limit in the range.
+
+
+**Alternative (to be tested)**: Use words as “Over” or “After” to indicate an open-ended maximum.
+
+:::warning ⚠️ Important
+This alternative isn’t verified. Help us validate it for improved range clarity. If you have a relevant use case, please reach out to share your findings.
+:::
+
+
+<UsageExamples>
+    <UsageExample imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-over.svg">
+        “Over” to indicate an open-ended maximum for prices, volume, weight, etc.
+    </UsageExample>
+    <UsageExample second imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-after.svg">
+        “After” to indicate an open-ended maximum for years.
+    </UsageExample>
+</UsageExamples>
 
 <component-questions />
