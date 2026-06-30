@@ -89,7 +89,7 @@ if (typeof window !== 'undefined' && !customElements.get('elements-example')) {
         // Append the wrapped content to shadow DOM
         this.shadowRoot.appendChild(wrapper);
 
-        if  (this.shadowRoot.host.hasAttribute("no-code")) {
+        if (this.shadowRoot.host.hasAttribute('no-code')) {
           // Skip adding a slot so we can hide the code example
         } else {
           // Show the code example as-is in the light-DOM via slots
@@ -101,7 +101,7 @@ if (typeof window !== 'undefined' && !customElements.get('elements-example')) {
         if (codeExScript) {
           try {
             const execScript = document.createElement('script');
-            
+
             // wrap in an IFFE to avoid scope collisions on hot reloads
             let scriptContent = `(function(){${codeExScript.innerText}})()`;
 

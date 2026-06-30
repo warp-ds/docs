@@ -229,5 +229,137 @@ The text fields never enter an undefined or empty state.
     </Do>
 </DoDont>
 
+#### Interactino on open-ended ranges
+
+On open-ended ranges, both text fields must display the actual values of the range limits; they are not placeholders.
+
+- “Min” represents the available minimum value.
+- “Max” represents the available maximum value.
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-open_ended-do.svg">
+        Display the minimum and maximum values as text when handles are in their default positions.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-open_ended-dont.svg">
+        Don’t use "Min" or "Max" as text placeholders inside the text field.
+    </Do>
+</DoDont>
+
+:::warning Accessibility notes
+
+- Min and Max are treated as actual input values, not placeholders.
+- Screen readers announce the current state correctly.
+- The text field never enters an undefined or empty state.
+
+:::
+
+#### Manual entry
+
+Manual entry follows a “strict-value” pattern to ensure the slider always reflects an active selection. This maintains a stable visual state during focus and prevents the component from ever falling into an ‘empty’ or undefined state.
+
+**When focusing on a text field:**
+
+The text field continues to display the text value “Min” or “Max” until the user actively types another value or moves the handles.
+
+**When typing a new value:**
+
+- Handle must update with the text field. “Min” or “Max” is replaced by the entered value.
+- Delay showing validation errors until the user has finished typing or the text field loses focus. This prevents "premature errors" (e.g., error for "20" when the user is in the middle of typing "200" for a 30–300 range).
+
+**If the user clears the entry:**
+
+- The field automatically reverts to the corresponding boundary value (minimum or maximum).
+- The handle returns to the start or end of the track accordingly.
+- Apply the same grace period before validating to avoid flashing error states while the user is resetting the value.
+
+<elements-example no-code>
+
+```html
+<w-slider label="Price" min="50" max="200" suffix="m²" data-testid="sqm" open-ended>
+  <w-slider-thumb
+    slot="from"
+    aria-label="From square meters"
+    name="from"
+  ></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To square meters" name="to"></w-slider-thumb>
+</w-slider>
+<script>
+  let sqmNumberFormatter = new Intl.NumberFormat("no", {
+    maximumFractionDigits: 0,
+  }).format;
+  let sqmSlider = document.querySelector('w-slider[data-testid="sqm"]');
+  sqmSlider.labelFormatter = (slot) => {
+    if (slot === "from") return "0";
+    return sqmNumberFormatter("200") + "+";
+  };
+  sqmSlider.tooltipFormatter = function (value) {
+    return sqmNumberFormatter(value);
+  };
+  sqmSlider.valueFormatter = function (value, slot) {
+    if (slot === "from" && value === "") {
+      return "Min";
+    }
+    if (slot === "to" && value === "") {
+      return "Max";
+    }
+    return sqmNumberFormatter(value);
+  };
+</script>
+```
+
+</elements-example>
+
+### Suffixes
+
+Suffixes should provide essential clarity, not visual decoration. Use them only to clarify ambiguous values and avoid adding them to obvious contexts, as unnecessary suffixes increase visual noise and cognitive load.
+
+Follow these guidelines to maintain a clean and consistent interface across all slider components.
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-use-do.svg">
+        Include a suffix if the value requires context to be understood.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-use-dont.svg">
+        Don’t use suffixes when the meaning of the value is clear from the label, context, or component type.
+    </Do>
+</DoDont>
+
+Suffixes should provide essential clarity, not visual decoration. Follow the following guidelines to maintain consistent and clean interfaces.
+
+#### Currency
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-currency-do.svg">
+        Always use the country’s currency symbol when displaying monetary values.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-currency-dont.svg">
+        Avoid using three-letter international code to indicate currency, unless strictly required.
+    </Do>
+</DoDont>
+
+#### Measurement units
+
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
+
+Always use standard measurement units when displaying values such as distance, volume, weight, power, etc.
+
+- 120 km
+- 75 m²
+- 3.5 kg
+
+</div>
+
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-text_fields-suffixes-measurement_units.svg">
+</UsageExample>
+
+</div>
+
+#### Years
+
+Don’t use suffixes for years, as the four-digit format and slider’s context provide sufficient clarity.
+
+You are here, about to export the do/dont
 
 <component-questions />
