@@ -120,4 +120,114 @@ This alternative isn’t verified. Help us validate it for improved range clarit
     </UsageExample>
 </UsageExamples>
 
+### Track
+
+#### Continuous intervals
+
+- Use continuous intervals when users need fine-grained control or when exact values are not critical.
+- Handle movement should be smooth, with values updating continuously as the user drags.
+
+
+<elements-example no-code>
+
+```html
+<w-slider label="Price" min="0" max="700000" suffix="kr" data-testid="currency" open-ended>
+  <w-slider-thumb
+    slot="from"
+    aria-label="From price"
+    name="from"
+  ></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To price" name="to"></w-slider-thumb>
+</w-slider>
+<script>
+  let numberFormatter = new Intl.NumberFormat("no", {
+    maximumFractionDigits: 0,
+  }).format;
+  let currencySlider = document.querySelector('w-slider[data-testid="currency"]');
+  currencySlider.labelFormatter = (slot) => {
+    if (slot === "from") return "0";
+    return numberFormatter("700000") + "+";
+  };
+  currencySlider.tooltipFormatter = function (value) {
+    return numberFormatter(value);
+  };
+  currencySlider.valueFormatter = function (value, slot) {
+    if (slot === "from" && value === "") {
+      return "Min";
+    }
+    if (slot === "to" && value === "") {
+      return "Max";
+    }
+    return numberFormatter(value);
+  };
+</script>
+```
+
+</elements-example>
+
+#### Step intervals
+
+
+- Use step intervals (integers) when values must align to predefined increments or discrete options.
+- Handle movement should snap to each step, updating the value only when a step is reached.
+- On native apps, trigger a light haptic “thump” as the handles snap to each increment.
+- Step intervals must be clearly communicated in the tooltip and in the input value to avoid ambiguity.
+- In open-ended ranges, step intervals apply only to concrete values. Relative labels (e.g., Before 1950) represent a boundary state, not a step.
+- Steps should reflect how precise users need to be: small steps for exact values (e.g., Year), larger steps for fast exploration (e.g., Price) — never more precision than users can realistically control. Focus on speed and touch usability for exploration.
+
+<elements-example no-code>
+
+```html
+<w-slider label="Price" min="0" max="700000" step="10" suffix="kr" data-testid="step" open-ended>
+  <w-slider-thumb
+    slot="from"
+    aria-label="From price"
+    name="from"
+  ></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To price" name="to"></w-slider-thumb>
+</w-slider>
+<script>
+  let stepNumberFormatter = new Intl.NumberFormat("no", {
+    maximumFractionDigits: 0,
+  }).format;
+  let stepSlider = document.querySelector('w-slider[data-testid="step"]');
+  stepSlider.labelFormatter = (slot) => {
+    if (slot === "from") return "0";
+    return stepNumberFormatter("700000") + "+";
+  };
+  stepSlider.tooltipFormatter = function (value) {
+    return stepNumberFormatter(value);
+  };
+  stepSlider.valueFormatter = function (value, slot) {
+    if (slot === "from" && value === "") {
+      return "Min";
+    }
+    if (slot === "to" && value === "") {
+      return "Max";
+    }
+    return stepNumberFormatter(value);
+  };
+</script>
+```
+
+</elements-example>
+
+### Text fields
+
+Range sliders must be paired with two text fields, which serve as the canonical sources for the selected values. This setup is required to ensure the component remains fully accessible.
+
+The text fields reflect the values selected by the handles; they aren’t placeholders, even in their default position. Any change made via dragging, keyboard interaction, or manual input must remain synchronised across the text fields, handles, and tooltips.
+
+The text fields never enter an undefined or empty state.
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-default_state-do.svg">
+        Display the exact values currently selected by the slider handles.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-default_state-dont.svg">
+        Don’t use placeholders to represent the handles' default or initial positions.
+    </Do>
+</DoDont>
+
+
 <component-questions />

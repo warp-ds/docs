@@ -89,15 +89,21 @@ if (typeof window !== 'undefined' && !customElements.get('elements-example')) {
         // Append the wrapped content to shadow DOM
         this.shadowRoot.appendChild(wrapper);
 
-        // Show the code example as-is in the light-DOM via slots
-        this.shadowRoot.appendChild(document.createElement('slot'));
+        if  (this.shadowRoot.host.hasAttribute("no-code")) {
+          // Skip adding a slot so we can hide the code example
+        } else {
+          // Show the code example as-is in the light-DOM via slots
+          this.shadowRoot.appendChild(document.createElement('slot'));
+        }
 
         // Create the script tag (if any) explicitly to make it run
         const codeExScript = this.shadowRoot.querySelector('script');
         if (codeExScript) {
           try {
             const execScript = document.createElement('script');
-            let scriptContent = codeExScript.innerText;
+            
+            // wrap in an IFFE to avoid scope collisions on hot reloads
+            let scriptContent = `(function(){${codeExScript.innerText}})()`;
 
             // Enrich all "demo" query selectors with the elements-example shadow root
             scriptContent = scriptContent.replaceAll(
