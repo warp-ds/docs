@@ -22,9 +22,9 @@ Range sliders provide a visual indication of a selected interval within a define
 
 ### When not to use
 
-- Don’t use sliders for small ranges (e.g., 1-10). Use a [Checkbox](/components/checkbox/overview/) or Stepper instead (Note: Steppers are not yet available in Warp; please reach out if your use case requires one).
-- Don’t use for complex input values that aren’t numeric (e.g., categories or words). Use a [Select](/components/select/overview/), Checkbox, [Radio](/components/radio/overview.md), [Pill](/components/pill/overview.md), or [Text field](/components/text-field/overview.md) instead.
-- Don’t use when only one value needs to be defined. Use the [Slider](/components/slider/overview/) instead.
+- Don’t use sliders for small ranges (e.g., 1-10). Use a [Checkbox](/components/checkbox/overview.md) or Stepper instead (Note: Steppers are not yet available in Warp; please reach out if your use case requires one).
+- Don’t use for complex input values that aren’t numeric (e.g., categories or words). Use a [Select](/components/select/overview.md), Checkbox, [Radio](/components/radio/overview.md), [Pill](/components/pill/overview.md), or [Text field](/components/text-field/overview.md) instead.
+- Don’t use when only one value needs to be defined. Use the [Slider](/components/slider/overview.md) instead.
 
 ## Behaviour
 
@@ -489,6 +489,6 @@ The native Range slider implementation on iOS and Android currently follows plat
 - Use native haptic APIs (e.g., UISelectionFeedbackGenerator on iOS or LocalHapticFeedback on Android) to provide a tactile "click" as the handle snaps to increments or reaches boundaries.
 - The business and product logic of the component must be defined by product teams, not the design system.
 
-![](/docs/components/range-slider/usage/usage-native.svg)
+![](/public/components/range-slider/usage/usage-native.svg)
 
 <component-questions />
