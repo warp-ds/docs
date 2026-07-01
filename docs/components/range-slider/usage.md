@@ -360,6 +360,82 @@ Always use standard measurement units when displaying values such as distance, v
 
 Don’t use suffixes for years, as the four-digit format and slider’s context provide sufficient clarity.
 
-You are here, about to export the do/dont
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-year-do.svg">
+        Display years without adding a suffix.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-year-dont.svg">
+        Don’t add “year” or “yr” as suffixes to numeric year values.
+    </Do>
+</DoDont>
+
+Learn more about [Astro’s Style and mechanics](https://www.astro-contentguide.com/05b2d7be6/p/55eee3-dates/b/237ae5) for the different Vend languages and markets.
+
+### Tooltip
+
+The tooltip provides contextual feedback during interaction and helps users understand both:
+
+- The current selected value, and
+- The range semantics of the slider.
+
+The tooltip is an ephemeral, supporting element and must not introduce new information or act as the source of truth. Its content must be dynamic, context-aware, and non-redundant.
+
+#### When the tooltip is shown
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-tooltip-do.svg">
+        Show the tooltip only during active handle dragging or when a handle has keyboard focus
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-tooltip-dont.svg">
+        Keep the tooltip visible once the interaction has ended.
+    </Do>
+</DoDont>
+
+#### Tooltip content
+
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
+
+**Current selected value (default)**
+
+While dragging, the tooltip displays the real-time numeric value of the active handle.
+
+</div>
+
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-behaviour-tooltip-do.svg">
+</UsageExample>
+
+</div>
+
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
+
+**Relative minimum**
+
+For open-ended ranges, the tooltip must display “Min” once the handle reaches the lower threshold. When moving away from the minimum, the tooltip immediately displays the first concrete value.
+
+</div>
+
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-tooltip-content-relative-minimum.svg">
+</UsageExample>
+
+</div>
+
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
+
+**Relative maximum**
+
+For open-ended ranges, the tooltip must display “Max” once the handle reaches the upper threshold. When moving away from the maximum, the tooltip immediately displays the first concrete value.
+
+</div>
+
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-tooltip-content-relative-maximum.svg">
+</UsageExample>
+
+</div>
 
 <component-questions />
