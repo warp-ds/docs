@@ -438,4 +438,57 @@ For open-ended ranges, the tooltip must display “Max” once the handle reache
 
 </div>
 
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
+
+**Unit**
+
+If the text fields use suffixes, the tooltip must mirror the exact suffix and formatting for consistency.
+
+</div>
+
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-tooltip-content-units.svg">
+</UsageExample>
+
+</div>
+
+:::warning Accessibility note
+Including units in the tooltip ensures the value is fully understandable when announced by screen readers.
+:::
+
+#### Tooltip behaviour while dragging
+
+- The tooltip updates continuously as the handle is moved.
+- The displayed value reflects the exact current selection in real-time.
+- Only the active handle displays a tooltip to maintain focus.
+
+##### Why this matters
+
+- Gives users a complete picture at the moment of interaction, even when fields are temporarily obscured by the user’s thumbs on mobile.
+- Reduces ambiguity in open-ended or relative ranges.
+- Improves keyboard and screen reader accessibility.
+- Prevents misinterpretation of slider limits.
+- Aligns visual and semantic feedback.
+
+## Native platforms (iOS & Android)
+
+:::warning ⚠️ Important
+The native experience is not yet fully aligned with the guidelines defined in this documentation.This section describes the current behaviour and provides interim guidance until the native components are revisited.
+
+Current implementations may differ from the target behaviour and will be refined over time.
+:::
+
+The native Range slider implementation on iOS and Android currently follows platform-specific patterns and existing product decisions.
+
+### Recommendation for native
+
+- Use the Warp Range slider component standalone (label and text fields not visible).
+- Use native text fields for manual value entry to ensure platform-standard keyboard behaviour and accessibility.
+- The component is a combination (custom component), not a single native control.
+- Use native haptic APIs (e.g., UISelectionFeedbackGenerator on iOS or LocalHapticFeedback on Android) to provide a tactile "click" as the handle snaps to increments or reaches boundaries.
+- The business and product logic of the component must be defined by product teams, not the design system.
+
+![](/docs/components/range-slider/usage/usage-native.svg)
+
 <component-questions />
