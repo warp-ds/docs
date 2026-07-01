@@ -259,17 +259,17 @@ outline: [2, 3]
 
 ---
 
-### `<do>`, `<do not>`, `<dodonts>`
+### `<do>`, `<do not>`, `<do-dont>`
 
 ```md
-<dodonts>
+<do-dont>
   <do imgurl="/right.png" imgalt="Right">Do this</do>
-  <do not imgurl="/wrong.png" imgalt="Wrong">Avoid this</do not>
-</dodonts>
+  <do not imgurl="/wrong.png" imgalt="Wrong">Avoid this</do>
+</do-dont>
 ```
 
 * Props: `imgurl`, `imgalt`, `darkmode`
-* Use `<dodonts>` to automatically layout left/right pairs
+* Use `<do-dont>` to automatically layout left/right pairs
 
 ---
 

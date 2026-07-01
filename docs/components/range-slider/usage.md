@@ -1,185 +1,347 @@
 # Range slider - Usage
 
-Range sliders are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
+Range sliders provide a visual indication of a selected interval within a defined range by moving two handles along a horizontal track to set both a minimum and maximum value.
 
-See also [Slider](/components/slider/overview.md).
+
 
 <ComponentsStatus />
 
 ## Guidelines
 
-- [Sliders](/components/slider/overview.md) are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
-- Range sliders are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
+- Range sliders are best suited for when people need to quickly select an interval within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
 - Use step intervals (integers) when precision input is required.
-- Use a tooltip to show the selected value.
-- Ensure the slider is wide enough to be easily interacted with on touch devices.
-- Although Slider and Range slider support a disabled state, we recommend avoiding their use in interfaces. Disabled sliders provide limited accessibility feedback, are not focusable by keyboard or screen readers, and can make it unclear why an option is unavailable.
+- Always use a tooltip to show the selected value.
+- Ensure the Range slider is wide enough to be easily operated on touch devices.
+- Avoid disabling sliders. They provide poor accessibility feedback, and it’s unclear why the option is unavailable.
 
 ### When to use
 
-- Use when selecting a range of number values.
-- Use sliders when there is a need to show a selection within a range of values.
-- Use when needing to expose a variety of options or to limit the number of options quickly.
+- Use to allow users to see their selection relative to a minimum and maximum.
+- Use to provide a wide range of options within a compact space.
+- Use when users should see results of their selection in real-time.
 
 ### When not to use
 
-- Do not use ranges that are too small (e.g. 1-3). Use a stepper instead (NB: currently not available in Warp. Reach out if you need this)
-- Do not use complex inputted values that are not numbers. Use [Select](/components/select/overview.md), [Checkbox](/components/checkbox/overview.md), [Radio](/components/radio/overview.md), [Pill](/components/pill/overview.md), or [Text field](/components/text-field/overview.md) instead.
-
+- Don’t use sliders for small ranges (e.g., 1-10). Use a [Checkbox](/components/checkbox/overview.md) or Stepper instead (Note: Steppers are not yet available in Warp; please reach out if your use case requires one).
+- Don’t use for complex input values that aren’t numeric (e.g., categories or words). Use a [Select](/components/select/overview.md), Checkbox, [Radio](/components/radio/overview.md), [Pill](/components/pill/overview.md), or [Text field](/components/text-field/overview.md) instead.
+- Don’t use when only one value needs to be defined. Use the [Slider](/components/slider/overview.md) instead.
 
 ## Behaviour
 
+Standardise the Range slider logic across our apps to build user trust. When interaction rules remain consistent, users can focus on making selections rather than relearning how the component works.
+
+**Avoid duplicating information:** To reduce cognitive load, ensure each element of the slider communicates a unique piece of data. Avoid repeating the same information across labels, ticks, text fields, and tooltips. Streamlining these elements prevents "visual noise" and allows users to scan the interface faster.
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-duplication-text_field-do.svg">
+        Each element of the slider communicates a unique piece of data.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-duplication-text_field-dont.svg">
+        Don’t repeat information across range labels, text fields, suffixes, and tooltips.
+    </Do>
+</DoDont>
+
+Review the behaviour guidelines for each slider element below.
+
 ### Range labels
 
-- As a general rule, don’t add units (e.g. kr, km, hk, etc.) to the min and max labels.
-- Range labels shown under the slider are a visual representation of the available range, not the selected value.
+- Range labels are placed under the slider. They are a visual representation of the available range, not the selected values.
 - Labels are indicative rather than precise and do not require exact alignment with the slider handles.
+- As a general rule, don’t add units (e.g., kr, km, hk, etc.) to the min and max range labels.
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-duplication-range-label-do.svg">
+        Communicate slider boundaries via range labels only.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-duplication-range-label-dont.svg">
+        Don’t repeat contextual symbols (like +) in the text field if they are already visible on the range label.
+    </Do>
+</DoDont>
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-duplication-range-labels-do.svg">
+        Display units as a suffix inside of the text field.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-duplication-range-labels-dont.svg">
+        Don’t add units to the range labels.
+    </Do>
+</DoDont>
+
 
 ### Absolute ranges
 
 Use when the lower and upper limits are known and fixed.
 
-Examples:
+<UsageExamples>
+    <UsageExample imgurl="/docs/components/range-slider/usage/usage-behaviour-absolute_ranges-do.svg"></UsageExample>
+    <UsageExample second imgurl="/docs/components/range-slider/usage/usage-behaviour-absolute_ranges-do-also.svg"></UsageExample>
+</UsageExamples>
 
-- 0 — 200
-- 1950 — 2027
+### Open-ended ranges
 
-### Relative ranges
+#### Open minimum
 
-#### Relative maximum
+When there is no concrete lower limit in the range. 
+
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_minimum-do-words.svg">
+        Use descriptive words such as “Under” to indicate an open-ended minimum.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_minimum-dont-min.svg">
+        Avoid using arbitrary non-zero minimum values (e.g., “under 5”); default to 0 as minimum wherever possible to avoid unnecessary noise.
+    </Do>
+</DoDont>
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_minimum-do-before.svg">
+        Use “Before” to indicate an open-minimum in year ranges.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_minimum-dont-symbols.svg">
+        Don’t use mathematical symbols (< or -) to indicate an open-ended minimum.
+    </Do>
+</DoDont>
+
+#### Open maximum
 
 When there is no concrete upper limit in the range.
 
-**Recommended:**
 
-- Use + (plus symbol) to indicate an open-ended maximum.
-- Always use a concrete year as the maximum value for year ranges (for example, 2027 rather than 2026+). Only use the plus symbol (+) when a meaningful concrete maximum is not possible.
+**Alternative (to be tested)**: Use words as “Over” or “After” to indicate an open-ended maximum.
 
-Examples:
-
-- 0 — 700,000+
-- 1950 – 2020+
-
-**Alternative (to be tested):**
-
-Use words as Over or After to indicate an open-ended maximum.
-
-Example:
-
-- 0 — Over 700,000
-- 1950 – After 2020
-
-We’d like to test this alternative alongside the recommended approach to see whether it more clearly communicates the available range to users. If your team is working on a related use case and can help test it, please reach out to Warp and share your findings.
-
-#### Relative minimum
-
-When there is no concrete lower limit in the range.
-
-- Use descriptive labels (e.g. Under and Before) instead of symbols.
-- For year ranges, use Before (e.g. Before 1950).
-
-**Recommended:**
-
-- Use 0 as Min value as much as possible. E.g. even though most boats go over 5 knots, don't have 5 knots as a minimum, use 0 instead to reduce noise.
+:::warning ⚠️ Important
+This alternative isn’t verified. Help us validate it for improved range clarity. If you have a relevant use case, please reach out to share your findings.
+:::
 
 
-**Do:**
-
-- Under 100 - 200
-- Before 1950 - 2027
-
-**Do Not**
-
-Don’t use mathematical symbols like < (lesser than) to refer to relative minimum limits.
-
-- < 1950 — 2027
+<UsageExamples>
+    <UsageExample imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-over.svg">
+        “Over” to indicate an open-ended maximum for prices, volume, weight, etc.
+    </UsageExample>
+    <UsageExample second imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-after.svg">
+        “After” to indicate an open-ended maximum for years.
+    </UsageExample>
+</UsageExamples>
 
 ### Track
 
-The track visually represents the full range of available values. The selected range is highlighted, clearly distinguishing it from the unselected portion of the track.
-
 #### Continuous intervals
 
-Use continuous intervals when users need fine-grained control or when exact values are not critical.
+- Use continuous intervals when users need fine-grained control or when exact values are not critical.
+- Handle movement should be smooth, with values updating continuously as the user drags.
 
-Handle movement should be smooth, with values updating continuously as the user drags.
+
+<elements-example no-code>
+
+```html
+<w-slider label="Price" min="0" max="700000" suffix="kr" data-testid="currency" open-ended>
+  <w-slider-thumb
+    slot="from"
+    aria-label="From price"
+    name="from"
+  ></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To price" name="to"></w-slider-thumb>
+</w-slider>
+<script>
+  let numberFormatter = new Intl.NumberFormat("no", {
+    maximumFractionDigits: 0,
+  }).format;
+  let currencySlider = document.querySelector('w-slider[data-testid="currency"]');
+  currencySlider.labelFormatter = (slot) => {
+    if (slot === "from") return "0";
+    return numberFormatter("700000") + "+";
+  };
+  currencySlider.tooltipFormatter = function (value) {
+    return numberFormatter(value);
+  };
+  currencySlider.valueFormatter = function (value, slot) {
+    if (slot === "from" && value === "") {
+      return "Min";
+    }
+    if (slot === "to" && value === "") {
+      return "Max";
+    }
+    return numberFormatter(value);
+  };
+</script>
+```
+
+</elements-example>
 
 #### Step intervals
-Use step intervals (integers) when values must align to predefined increments or discrete options.
 
-Handle movement should snap to each step, updating the value only when a step is reached.
 
-Step intervals must be clearly communicated in the Tooltip and in the input value to avoid ambiguity.
+- Use step intervals (integers) when values must align to predefined increments or discrete options.
+- Handle movement should snap to each step, updating the value only when a step is reached.
+- On native apps, trigger a light haptic “thump” as the handles snap to each increment.
+- Step intervals must be clearly communicated in the tooltip and in the input value to avoid ambiguity.
+- In open-ended ranges, step intervals apply only to concrete values. Relative labels (e.g., Before 1950) represent a boundary state, not a step.
+- Steps should reflect how precise users need to be: small steps for exact values (e.g., Year), larger steps for fast exploration (e.g., Price) — never more precision than users can realistically control. Focus on speed and touch usability for exploration.
 
-In relative ranges, step intervals apply only to concrete values. Relative labels (e.g. Before 1950) represent a boundary state, not a step.
+<elements-example no-code>
 
-Steps should reflect how precise users need to be: small steps for exact values (e.g. Year), larger steps for fast exploration (e.g. Price) — never more precision than users can realistically control. Focus on speed and touch usability for exploration.
+```html
+<w-slider label="Price" min="0" max="700000" step="10" suffix="kr" data-testid="step" open-ended>
+  <w-slider-thumb
+    slot="from"
+    aria-label="From price"
+    name="from"
+  ></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To price" name="to"></w-slider-thumb>
+</w-slider>
+<script>
+  let stepNumberFormatter = new Intl.NumberFormat("no", {
+    maximumFractionDigits: 0,
+  }).format;
+  let stepSlider = document.querySelector('w-slider[data-testid="step"]');
+  stepSlider.labelFormatter = (slot) => {
+    if (slot === "from") return "0";
+    return stepNumberFormatter("700000") + "+";
+  };
+  stepSlider.tooltipFormatter = function (value) {
+    return stepNumberFormatter(value);
+  };
+  stepSlider.valueFormatter = function (value, slot) {
+    if (slot === "from" && value === "") {
+      return "Min";
+    }
+    if (slot === "to" && value === "") {
+      return "Max";
+    }
+    return stepNumberFormatter(value);
+  };
+</script>
+```
 
-### Text inputs
+</elements-example>
 
-Sliders must be paired with one text field to indicate the selected value. This is a recommended set to ensure accessibility.
+### Text fields
 
-Range sliders must be paired with two text fields to indicate the selected values: Min and Max. This is a recommended set to ensure accessibility.
+Range sliders must be paired with two text fields, which serve as the canonical sources for the selected values. This setup is required to ensure the component remains fully accessible.
 
-Text input fields are the canonical source of the selected value(s).
+The text fields reflect the values selected by the handles; they aren’t placeholders, even in their default position. Any change made via dragging, keyboard interaction, or manual input must remain synchronised across the text fields, handles, and tooltips.
 
-Any change made via dragging, keyboard interaction, or manual input must remain synchronised between inputs, handles, and tooltip.
+The text fields never enter an undefined or empty state.
 
-#### Default state (filled)
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-default_state-do.svg">
+        Display the exact values currently selected by the slider handles.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-default_state-dont.svg">
+        Don’t use placeholders to represent the handles' default or initial positions.
+    </Do>
+</DoDont>
 
-Both inputs display Min and Max as actual values, not placeholders.
+#### Interactino on open-ended ranges
 
-- Min represents the available minimum value
-- Max represents the available maximum value
+On open-ended ranges, both text fields must display the actual values of the range limits; they are not placeholders.
 
-This reflects the real state of the Range slider, where both bounds are already defined by the labels.
+- “Min” represents the available minimum value.
+- “Max” represents the available maximum value.
 
-#### Interaction on relative ranges
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-open_ended-do.svg">
+        Display the minimum and maximum values as text when handles are in their default positions.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-text_inputs-open_ended-dont.svg">
+        Don’t use "Min" or "Max" as text placeholders inside the text field.
+    </Do>
+</DoDont>
 
-When the user focuses or clicks/taps on the input field that displays a relative value:
+:::warning Accessibility notes
 
-_ The active or focused input continues to display Min or Max until the user actively types another value or moves the handles
-
-When the user types a new value:
-
-- Min / Max is replaced by the entered numeric value
-- The slider’s handle position updates accordingly and remains synchronized
-- Allow a brief grace period before showing validation errors. When users manually enter a value, delay error feedback to give them time to complete their input. This prevents premature errors while a value is still being typed (for example, entering 20 on the way to 200 in a 30–300 range)
-
-If the user clears the value entered:
-- The input automatically reverts back to Min or Max
-- The slider returns to the corresponding boundary value
-- Allow a brief grace period before showing validation errors
-
-Rationale:
-- Preserves a stable visual state on focus
-- Prevents accidental “empty” or undefined states
-- Clearly communicates that the slider always has an active selection
-
-Accessibility note:
-
-- Min and Max must not only be placeholders. Placeholders are not reliably announced by screen readers.
+- Min and Max are treated as actual input values, not placeholders.
 - Screen readers announce the current state correctly.
-- The input never enters an undefined or empty state.
+- The text field never enters an undefined or empty state.
+
+:::
+
+#### Manual entry
+
+Manual entry follows a “strict-value” pattern to ensure the slider always reflects an active selection. This maintains a stable visual state during focus and prevents the component from ever falling into an ‘empty’ or undefined state.
+
+**When focusing on a text field:**
+
+The text field continues to display the text value “Min” or “Max” until the user actively types another value or moves the handles.
+
+**When typing a new value:**
+
+- Handle must update with the text field. “Min” or “Max” is replaced by the entered value.
+- Delay showing validation errors until the user has finished typing or the text field loses focus. This prevents "premature errors" (e.g., error for "20" when the user is in the middle of typing "200" for a 30–300 range).
+
+**If the user clears the entry:**
+
+- The field automatically reverts to the corresponding boundary value (minimum or maximum).
+- The handle returns to the start or end of the track accordingly.
+- Apply the same grace period before validating to avoid flashing error states while the user is resetting the value.
+
+<elements-example no-code>
+
+```html
+<w-slider label="Price" min="50" max="200" suffix="m²" data-testid="sqm" open-ended>
+  <w-slider-thumb
+    slot="from"
+    aria-label="From square meters"
+    name="from"
+  ></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To square meters" name="to"></w-slider-thumb>
+</w-slider>
+<script>
+  let sqmNumberFormatter = new Intl.NumberFormat("no", {
+    maximumFractionDigits: 0,
+  }).format;
+  let sqmSlider = document.querySelector('w-slider[data-testid="sqm"]');
+  sqmSlider.labelFormatter = (slot) => {
+    if (slot === "from") return "0";
+    return sqmNumberFormatter("200") + "+";
+  };
+  sqmSlider.tooltipFormatter = function (value) {
+    return sqmNumberFormatter(value);
+  };
+  sqmSlider.valueFormatter = function (value, slot) {
+    if (slot === "from" && value === "") {
+      return "Min";
+    }
+    if (slot === "to" && value === "") {
+      return "Max";
+    }
+    return sqmNumberFormatter(value);
+  };
+</script>
+```
+
+</elements-example>
 
 ### Suffixes
 
-Use suffixes in text fields only when the numeric value is ambiguous without additional context. The goal of a suffix is to clarify meaning, not to restate what is already obvious. Adding unnecessary suffixes increases visual noise and cognitive load.
+Suffixes should provide essential clarity, not visual decoration. Use them only to clarify ambiguous values and avoid adding them to obvious contexts, as unnecessary suffixes increase visual noise and cognitive load.
 
+Follow these guidelines to maintain a clean and consistent interface across all slider components.
 
-#### When to use suffixes
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-use-do.svg">
+        Include a suffix if the value requires context to be understood.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-use-dont.svg">
+        Don’t use suffixes when the meaning of the value is clear from the label, context, or component type.
+    </Do>
+</DoDont>
 
-Use suffixes when the number cannot be correctly interpreted on its own.
+Suffixes should provide essential clarity, not visual decoration. Follow the following guidelines to maintain consistent and clean interfaces.
 
-**Currency**
+#### Currency
 
-Always use the country’s currency symbol when displaying monetary values.
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-currency-do.svg">
+        Always use the country’s currency symbol when displaying monetary values.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-currency-dont.svg">
+        Avoid using three-letter international code to indicate currency, unless strictly required.
+    </Do>
+</DoDont>
 
-- 390,000 kr
-- 25,000 €
-- 1,200 $
+#### Measurement units
 
-**Measurement units**
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
 
 Always use standard measurement units when displaying values such as distance, volume, weight, power, etc.
 
@@ -187,53 +349,32 @@ Always use standard measurement units when displaying values such as distance, v
 - 75 m²
 - 3.5 kg
 
-The examples above are only illustrative for the English language. Learn more about [Astro’s Style and mechanics](https://www.astro-contentguide.com/05b2d7be6/p/529e40-style-and-mechanics) for the different languages and markets where Vend operates.
+</div>
 
-#### When not to use suffixes
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-text_fields-suffixes-measurement_units.svg">
+</UsageExample>
 
-Do not use suffixes when the meaning of the value is clear from the label, context, or component type.
+</div>
 
-**Years**
+#### Years
 
-Years are universally understood numeric values.
+Don’t use suffixes for years, as the four-digit format and slider’s context provide sufficient clarity.
 
-Do:
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-year-do.svg">
+        Display years without adding a suffix.
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-suffixes-year-dont.svg">
+        Don’t add “year” or “yr” as suffixes to numeric year values.
+    </Do>
+</DoDont>
 
-- 1988
-- 2027
-
-Do not:
-
-- 1988 year
-- 2027 yr
-
-**Values defined by context**
-
-If the surrounding UI elements already define what the number represents, a suffix is redundant.
-
-Examples:
-
-- A field labeled “Model year”
-- A range slider labeled “Build year”
-
-Do:
-
-- 1995 — 2010
-
-Do not:
-
-- Year 1995 – Year 2010
-- 1995 models – 2010 models
-
-**Common mistakes to avoid**
-
-- Using suffixes as a form of label repetition
-- Adding suffixes “for consistency” across different filters
-- Mixing symbolic (€) and textual (EUR) suffixes inconsistently
+Learn more about [Astro’s Style and mechanics](https://www.astro-contentguide.com/05b2d7be6/p/55eee3-dates/b/237ae5) for the different Vend languages and markets.
 
 ### Tooltip
 
 The tooltip provides contextual feedback during interaction and helps users understand both:
+
 - The current selected value, and
 - The range semantics of the slider.
 
@@ -241,150 +382,113 @@ The tooltip is an ephemeral, supporting element and must not introduce new infor
 
 #### When the tooltip is shown
 
-- Tooltip is shown only during direct interaction (focus, dragging, or adjusting the handle)
-- Tooltip is hidden when interaction ends
+<DoDont>
+    <Do imgurl="/docs/components/range-slider/usage/usage-behaviour-tooltip-do.svg">
+        Show the tooltip only during active handle dragging or when a handle has keyboard focus
+    </Do>
+    <Do not imgurl="/docs/components/range-slider/usage/usage-behaviour-tooltip-dont.svg">
+        Keep the tooltip visible once the interaction has ended.
+    </Do>
+</DoDont>
 
-#### What the tooltip displays
+#### Tooltip content
 
-**1. Current selected value**
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
 
-During dragging, the tooltip shows the current numeric value of the active handle.
+<div>
 
-Example:
+**Current selected value (default)**
 
-- 390,000
-- 2012
+While dragging, the tooltip displays the real-time numeric value of the active handle.
 
+</div>
 
-**2. Relative maximum**
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-behaviour-tooltip-do.svg">
+</UsageExample>
 
-When the slider uses an open-ended range:
+</div>
 
-- The tooltip must include + to indicate that the upper bound is open
-- This applies when the handle reaches or exceeds the defined threshold
-- In relative maximum ranges (for example, 700,000+), the first concrete value selected when moving the handle away from the maximum must be the value shown (700,000)
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
 
-**3. Relative minimum**
+<div>
 
-When the slider uses an open-start range:
+**Relative minimum**
 
-- The tooltip must include descriptive word in the min tick label (e.g. Before)
-- Avoid using mathematical symbols for year, such as < (lesser than)
+For open-ended ranges, the tooltip must display “Min” once the handle reaches the lower threshold. When moving away from the minimum, the tooltip immediately displays the first concrete value.
 
-**4. Suffixes**
+</div>
 
-If the component uses a suffix in the inputs:
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-tooltip-content-relative-minimum.svg">
+</UsageExample>
 
-- The tooltip must include the same suffix
-- The format must match the input field
+</div>
 
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
+
+**Relative maximum**
+
+For open-ended ranges, the tooltip must display “Max” once the handle reaches the upper threshold. When moving away from the maximum, the tooltip immediately displays the first concrete value.
+
+</div>
+
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-tooltip-content-relative-maximum.svg">
+</UsageExample>
+
+</div>
+
+<div style="display: grid; gap: 24px; grid-template-columns: repeat(2, 50%);">
+
+<div>
+
+**Unit**
+
+If the text fields use suffixes, the tooltip must mirror the exact suffix and formatting for consistency.
+
+</div>
+
+<UsageExample style="display: block;" imgurl="/docs/components/range-slider/usage/usage-tooltip-content-units.svg">
+</UsageExample>
+
+</div>
+
+:::warning Accessibility note
 Including units in the tooltip ensures the value is fully understandable when announced by screen readers.
+:::
 
-#### Tooltip behavior during dragging
+#### Tooltip behaviour while dragging
 
-- Tooltip updates continuously while the handle is dragged
-- The value reflects the exact current selection
-- Only the active handle shows a tooltip (for Range Slider)
+- The tooltip updates continuously as the handle is moved.
+- The displayed value reflects the exact current selection in real-time.
+- Only the active handle displays a tooltip to maintain focus.
 
-Why this matters:
+##### Why this matters
 
-- Gives users a complete picture at the moment of interaction, even when fields are temporarily obscured by the user’s thumbs on mobile
-- Reduces ambiguity in open-ended or relative ranges
-- Improves keyboard and screen reader accessibility
-- Prevents misinterpretation of slider limits
-- Aligns visual and semantic feedback
-
-## Avoid duplicated information
-
-Slider and Range slider must not repeat the same information across:
-
-- tick labels
-- text inputs
-- suffixes
-- tooltips
-
-Each element should communicate one unique piece of information.
-
-Duplicating information increases cognitive load and makes the interface harder to scan.
-
-### Do not duplicate range semantics
-
-If the range meaning is already expressed in tick labels, do not repeat it in the input fields.
-
-**Correct:*
-
-- Tick labels: Before 1950 — 2027
-- Inputs: Min - Max
-
-**Incorrect:**
-
-- Tick labels: Before 1950 — 2027
-- Inputs: Before 1950 — 2027
-
-In this case, the open-ended nature of the range is already communicated by the ticks.
-Repeating Before in the input adds noise without adding clarity.
-
-### Do not duplicate units
-
-If a unit is shown in the input suffix, do not repeat it in the tick labels.
-
-**Correct:**
-
-- Tick labels: 0 — 500,000
-- Inputs with suffix: 0 (suffix: kr) - 500,000 (suffix: kr)
-
-
-**Incorrect:**
-- Tick labels: 0 kr — 500,000 kr
-- Inputs with suffix: 0 (suffix: kr) - 500,000 (suffix: kr)
-
-Repeating the same unit in multiple places makes the UI heavier and harder to read.
-
+- Gives users a complete picture at the moment of interaction, even when fields are temporarily obscured by the user’s thumbs on mobile.
+- Reduces ambiguity in open-ended or relative ranges.
+- Improves keyboard and screen reader accessibility.
+- Prevents misinterpretation of slider limits.
+- Aligns visual and semantic feedback.
 
 ## Native platforms (iOS & Android)
 
-The native Slider implementation on iOS and Android currently follows platform-specific patterns and existing product decisions.
+:::warning ⚠️ Important
+The native experience is not yet fully aligned with the guidelines defined in this documentation.This section describes the current behaviour and provides interim guidance until the native components are revisited.
 
-The native Range slider implementation on iOS and Android apps currently follows platform-specific patterns and existing product decisions.
+Current implementations may differ from the target behaviour and will be refined over time.
+:::
 
-The native experience is not yet fully aligned with the guidelines defined in this documentation.
-This section describes the current behavior and provides interim guidance until the native components are revisited.
-
-Current implementations may differ from the target behavior and will be refined over time.
+The native Range slider implementation on iOS and Android currently follows platform-specific patterns and existing product decisions.
 
 ### Recommendation for native
 
-- Use the Warp Slider component standalone (label and text fields not visible).
 - Use the Warp Range slider component standalone (label and text fields not visible).
-- Use native input fields for manual value entry.
+- Use native text fields for manual value entry to ensure platform-standard keyboard behaviour and accessibility.
 - The component is a combination (custom component), not a single native control.
+- Use native haptic APIs (e.g., UISelectionFeedbackGenerator on iOS or LocalHapticFeedback on Android) to provide a tactile "click" as the handle snaps to increments or reaches boundaries.
 - The business and product logic of the component must be defined by product teams, not the design system.
 
-## Error states
-
-Error state logic is handled by the teams implementing the component. When an error occurs, the text field adopts the error state and displays a clear message explaining the issue.
-
-[Read guidelines on error messages on text inputs.](https://www.astro-contentguide.com/05b2d7be6/p/58387b-text-input)
-
-::: image-block
-![Example of error state on a range slider.](/components/rangeslider/style-error-states.svg)
-:::
-
-## Interaction
-
-- Slide the handle, or type in the input field to choose/change a value.
-- Click on the track to pick a value.
-- The slide handle grows in size when selected and dragged to provide a visual cue to the user that the handle is being pressed.
-- A tooltip should appear when the user interacts with the slider, even when text input is present, ensuring consistent feedback on the selected value.
-
-## Placement
-
-Place sliders close to the content or filters they control to ensure clarity and ease of use. They should appear next to related labels, content or result previews, so it’s obvious what the value adjustment affects.
-
-Avoid placing them in crowded areas or too far from their context, as this can make the connection between control and effect unclear. Ensure enough horizontal space for smooth interaction, especially on touch devices.
-
-::: image-block
-![Examples from FINN and Blocket.](/components/rangeslider/usage-placement.svg)
-:::
+![](/public/components/range-slider/usage/usage-native.svg)
 
 <component-questions />

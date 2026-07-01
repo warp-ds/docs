@@ -1,14 +1,20 @@
 # Slider - Accessibility
 
-Sliders are best suited for cases where people need to quickly set a value within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.
+Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
-See also [Range slider](/components/range-slider/overview.md).
+
 
 <ComponentsStatus />
 
 ## General
 
-The slider component has been designed with accessibility in mind, providing range selection functionality that is fully keyboard accessible and screen reader compatible.
+The Slider component is designed to be keyboard accessible and compatible with screen readers.
+
+### Best practices
+
+Although the Slider supports a disabled state, we recommend avoiding its use in interfaces. Disabled sliders provide limited accessibility feedback, are not focusable by keyboard or screen readers, and can make it unclear why an option is unavailable.
+
+## Interaction
 
 ### Mouse
 
@@ -17,19 +23,20 @@ The slider component has been designed with accessibility in mind, providing ran
 
 ### Keyboard interaction
 
-- Slider handles must be operable using keyboard input.
+- The handle must be operable using keyboard input.
 - Arrow keys adjust values according to the defined continuous or step interval.
 - Keyboard interactions must remain synchronised with inputs and tooltips.
 
+## Other considerations
 
 ### Text fields
 
-- Min / Max are announced, not placeholders.
-- Screen readers announce the current state correctly.
-- The input never enters an undefined or empty state.
+- Current state/selection should be announced by screen readers.
+- "Min" or "Max" values should be announced by screen readers, they are not placeholders.
+- The text field must never enter an undefined or empty state.
 
 ### Tooltip
 
-- Including units in the tooltip ensures the value is fully understandable when announced by screen readers.
+Include units in the tooltip. This ensures the value is fully understandable when announced by screen readers.
 
 <component-questions />

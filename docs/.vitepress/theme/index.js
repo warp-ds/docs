@@ -1,5 +1,7 @@
-import { toast } from '@warp-ds/elements/components/toast';
 import DefaultTheme from 'vitepress/theme';
+import 'uno.css';
+import './custom.css';
+import { toast } from '@warp-ds/elements/components/toast';
 import { h } from 'vue';
 import ComponentDesignGuidelines from '../ComponentDesignGuidelines.md';
 import ComponentQuestions from '../ComponentQuestions.md';
@@ -8,12 +10,12 @@ import Do from '../Do.vue';
 import DoDont from '../DoDont.vue';
 import Footer from '../Footer.vue';
 import ThemeSwitcher from '../ThemeSwitcher.vue';
+import UsageExample from '../UsageExample.vue';
+import UsageExamples from '../UsageExamples.vue';
 import '../bootExamples.js';
 // Only import client side
 import '../StyleIsolate.js'; // Web component for style isolation
 import '../elements-example.js';
-import './custom.css';
-import 'uno.css';
 import Badge from '../Badge.vue';
 import Card from '../Card.vue';
 import Cards from '../Cards.vue';
@@ -52,6 +54,7 @@ export default {
     app.component('ComponentsStatus', ComponentsStatus);
     app.component('Do', Do);
     app.component('DoDont', DoDont);
+    app.component('DoDont', DoDont);
     app.component('Cards', Cards);
     app.component('Card', Card);
     app.component('FrameworkTabs', FrameworkTabs);
@@ -60,5 +63,7 @@ export default {
     app.component('WidthController', WidthController);
     app.component('DsSearchInput', DsSearchInput);
     app.component('TabsContent', TabsContent);
+    app.component('UsageExample', UsageExample);
+    app.component('UsageExamples', UsageExamples);
   },
 };
