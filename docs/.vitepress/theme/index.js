@@ -1,7 +1,7 @@
-import './custom.css';
-import 'uno.css';
-import { toast } from '@warp-ds/elements/components/toast';
 import DefaultTheme from 'vitepress/theme';
+import 'uno.css';
+import './custom.css';
+import { toast } from '@warp-ds/elements/components/toast';
 import { h } from 'vue';
 import ComponentDesignGuidelines from '../ComponentDesignGuidelines.md';
 import ComponentQuestions from '../ComponentQuestions.md';
