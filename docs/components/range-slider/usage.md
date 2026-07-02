@@ -131,36 +131,10 @@ This alternative isn’t verified. Help us validate it for improved range clarit
 <elements-example no-code>
 
 ```html
-<w-slider label="Price" min="0" max="700000" suffix="kr" data-testid="currency" open-ended>
-  <w-slider-thumb
-    slot="from"
-    aria-label="From price"
-    name="from"
-  ></w-slider-thumb>
-  <w-slider-thumb slot="to" aria-label="To price" name="to"></w-slider-thumb>
+<w-slider label="Continuous interval" min="0" max="100">
+  <w-slider-thumb slot="from" aria-label="From" name="from"></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To" name="to"></w-slider-thumb>
 </w-slider>
-<script>
-  let numberFormatter = new Intl.NumberFormat("no", {
-    maximumFractionDigits: 0,
-  }).format;
-  let currencySlider = document.querySelector('w-slider[data-testid="currency"]');
-  currencySlider.labelFormatter = (slot) => {
-    if (slot === "from") return "0";
-    return numberFormatter("700000") + "+";
-  };
-  currencySlider.tooltipFormatter = function (value) {
-    return numberFormatter(value);
-  };
-  currencySlider.valueFormatter = function (value, slot) {
-    if (slot === "from" && value === "") {
-      return "Min";
-    }
-    if (slot === "to" && value === "") {
-      return "Max";
-    }
-    return numberFormatter(value);
-  };
-</script>
 ```
 
 </elements-example>
@@ -178,36 +152,10 @@ This alternative isn’t verified. Help us validate it for improved range clarit
 <elements-example no-code>
 
 ```html
-<w-slider label="Price" min="0" max="700000" step="10" suffix="kr" data-testid="step" open-ended>
-  <w-slider-thumb
-    slot="from"
-    aria-label="From price"
-    name="from"
-  ></w-slider-thumb>
-  <w-slider-thumb slot="to" aria-label="To price" name="to"></w-slider-thumb>
+<w-slider label="Step interval" min="0" max="100" step="10">
+  <w-slider-thumb slot="from" aria-label="From" name="from"></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To" name="to"></w-slider-thumb>
 </w-slider>
-<script>
-  let stepNumberFormatter = new Intl.NumberFormat("no", {
-    maximumFractionDigits: 0,
-  }).format;
-  let stepSlider = document.querySelector('w-slider[data-testid="step"]');
-  stepSlider.labelFormatter = (slot) => {
-    if (slot === "from") return "0";
-    return stepNumberFormatter("700000") + "+";
-  };
-  stepSlider.tooltipFormatter = function (value) {
-    return stepNumberFormatter(value);
-  };
-  stepSlider.valueFormatter = function (value, slot) {
-    if (slot === "from" && value === "") {
-      return "Min";
-    }
-    if (slot === "to" && value === "") {
-      return "Max";
-    }
-    return stepNumberFormatter(value);
-  };
-</script>
 ```
 
 </elements-example>
@@ -275,7 +223,7 @@ The text field continues to display the text value “Min” or “Max” until 
 <elements-example no-code>
 
 ```html
-<w-slider label="Price" min="50" max="200" suffix="m²" data-testid="sqm" open-ended>
+<w-slider label="Apartment size" min="50" max="200" suffix="m²" data-testid="sqm" open-ended>
   <w-slider-thumb
     slot="from"
     aria-label="From square meters"
