@@ -437,6 +437,6 @@ The native Range slider implementation on iOS and Android currently follows plat
 - Use native haptic APIs (e.g., UISelectionFeedbackGenerator on iOS or LocalHapticFeedback on Android) to provide a tactile "click" as the handle snaps to increments or reaches boundaries.
 - The business and product logic of the component must be defined by product teams, not the design system.
 
-![](/docs/components/range-slider/usage/usage-native.svg)
+![](/components/range-slider/usage/usage-native.svg)
 
 <component-questions />
