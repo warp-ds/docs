@@ -47,7 +47,6 @@ To always get its `inverted` (dark mode) form, use the `inverted` modifier.
 To get its inverted form in light mode but have it change to its light mode counterpart in dark mode then only use the `inverted` modifier:
 
 ```css
-/* TODO: this token doesn't actually exist yet, fix that */
 .s-text-inverted-link
 ```
 
