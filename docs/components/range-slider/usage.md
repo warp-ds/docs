@@ -112,10 +112,10 @@ This alternative isn’t verified. Help us validate it for improved range clarit
 
 
 <UsageExamples>
-    <UsageExample imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-over.svg">
+    <UsageExample imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-over.svg" caution>
         “Over” to indicate an open-ended maximum for prices, volume, weight, etc.
     </UsageExample>
-    <UsageExample second imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-after.svg">
+    <UsageExample second imgurl="/docs/components/range-slider/usage/usage-behaviour-open_ended_ranges-open_maximum-after.svg"caution>
         “After” to indicate an open-ended maximum for years.
     </UsageExample>
 </UsageExamples>
