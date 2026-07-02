@@ -240,7 +240,13 @@ The text field continues to display the text value “Min” or “Max” until 
     if (slot === "from") return "0";
     return sqmNumberFormatter("200") + "+";
   };
-  sqmSlider.tooltipFormatter = function (value) {
+  sqmSlider.tooltipFormatter = function (value, slot) {
+    if (slot === "from" && value === "") {
+      return "Min";
+    }
+    if (slot === "to" && value === "") {
+      return "Max";
+    }
     return sqmNumberFormatter(value);
   };
   sqmSlider.valueFormatter = function (value, slot) {
