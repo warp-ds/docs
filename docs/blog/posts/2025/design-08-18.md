@@ -21,7 +21,7 @@ We’ve made several updates to the WARP Component Library in Figma to better al
 - Improved accessibility with a text field and tooltip, along with a refreshed visual design.
 - Deprecated the old version of the Single slider.
 - Updated Figma component description with a link to the WARP Portal.
-- Updated WARP Portal documentation - [Slider documentation](https://warp-ds.github.io/docs/components/slider/) and [Range slider documentation](https://warp-ds.github.io/docs/components/rangeslider/)
+- Updated WARP Portal documentation - [Slider documentation](https://warp-ds.github.io/docs/components/slider/overview/) and [Range slider documentation](https://warp-ds.github.io/docs/components/range-slider/overview/)
 
 ![Figma screenshot of the Slider and Range slider component with input fields, both in light and dark mode](/whats-new/2025/design-08-18-2.svg)
 

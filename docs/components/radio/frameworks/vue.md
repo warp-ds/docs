@@ -1,4 +1,4 @@
-# Radio - Frameworks
+# Radio - Vue
 Radios allow users to select a single option from a list.
 
 <ComponentsStatus />

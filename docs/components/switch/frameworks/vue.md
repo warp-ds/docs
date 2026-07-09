@@ -1,4 +1,4 @@
-# Switch - Usage
+# Switch - Vue
 The Switch component allows users to toggle between two states.
 
 <ComponentsStatus />

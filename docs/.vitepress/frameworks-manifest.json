@@ -480,6 +480,20 @@
         "file": "vue"
       }
     ],
+    "snackbar": [
+      {
+        "name": "Android",
+        "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
+      },
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
     "spinner": [
       {
         "name": "Android",

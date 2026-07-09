@@ -48,6 +48,10 @@ const pages = [{
   title: "Motion",
   description: "Guidelines for motion.",
   href: "motion/",
+},{
+  title: "Keyboard",
+  description: "Guidelines for keyboard navigation and shortcuts.",
+  href: "keyboard/navigation",
 }]
 </script>
 

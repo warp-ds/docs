@@ -1,4 +1,4 @@
-# Text - Frameworks
+# Text - iOS
 Pre-defined styles provide a font and size.
 
 <ComponentsStatus />
