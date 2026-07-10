@@ -28,4 +28,30 @@ Use snackbars for success confirmations, process status updates, non-critical wa
 1. **Action button (optional)**: Interactive element for user response (e.g., "Undo", "Retry", "View").
 1. **Close button (optional)**: Allows manual dismissal before auto-dismiss timeout.
 
+## Example
+
+See [more examples on the Elements page](./frameworks/elements.md#examples).
+
+<elements-example no-code>
+
+```html
+<w-button data-testid="neutral-action">Neutral variant with action</w-button>
+
+<script>
+  document.querySelector('w-button[data-testid="neutral-action"]').onclick =
+    () => {
+      document.querySelector("w-snackbar").create("Snackbar message", {
+        action: {
+          label: "Undo",
+          onclick(e) {
+            console.log(e);
+          },
+        },
+      });
+    };
+</script>
+```
+
+</elements-example>
+
 <component-questions />

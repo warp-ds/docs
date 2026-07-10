@@ -2,9 +2,22 @@
 
 Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
-
-
 <ComponentsStatus />
+<ThemeSwitcher />
+
+## Example
+
+<elements-example no-code>
+
+```html
+<form id="audio">
+  <w-slider label="Volume" min="0" max="100">
+    <w-slider-thumb name="volume"></w-slider-thumb>
+  </w-slider>
+</form>
+```
+
+</elements-example>
 
 ## Overview
 

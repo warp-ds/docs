@@ -3,6 +3,25 @@
 Range sliders provide a visual indication of a selected interval within a defined range by moving two handles along a horizontal track to set both a minimum and maximum value.
 
 <ComponentsStatus />
+<ThemeSwitcher />
+
+## Example
+
+<elements-example no-code>
+
+```html
+<w-slider label="Range" min="0" max="100">
+  <w-slider-thumb
+    slot="from"
+    aria-label="From value"
+    name="from"
+  ></w-slider-thumb>
+  <w-slider-thumb slot="to" aria-label="To value" name="to"></w-slider-thumb>
+</w-slider>
+```
+
+</elements-example>
+
 
 ## Overview
 
