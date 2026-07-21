@@ -1,5 +1,5 @@
 # Alert - Overview
-Alerts show high-signal messages meant to be noticed and prompting users.
+Alerts show high-signal messages meant to be noticed and prompting users to take action.
 
 <ComponentsStatus />
 
