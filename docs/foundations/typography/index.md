@@ -43,11 +43,11 @@ For designers, our fonts are automatically made available for you in Figma, so y
 | -------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Bilbasen | [GT Walsheim Pro](https://drive.google.com/file/d/1bOA6RVTfXO5NBs-YRRUPIxr4KCGbh1y9/view?usp=drive_link)                  |
 | Blocket  | [Blocket Sans & Blocket Display](https://drive.google.com/drive/folders/1tELjrbHZImwaHGI7uTtLuSYJvLzl-giT?usp=drive_link) |
-| DBA      | [Vend Sans Text](https://drive.google.com/drive/folders/1bDfSKPmv5mKo51FZJP4WQVndYRA5EYAQ?usp=drive_link)                     |
+| DBA      | [Vend Sans Text](https://drive.google.com/file/d/1h_h22cdyZQCFPwHIL9nlM_JySJd1X3G8/view?usp=drive_link)                     |
 | FINN     | [FINNType Web Strippet](https://drive.google.com/file/d/1ReyX8Vac6hnXCbsAcV5jLRQ4p8FsPsev/view?usp=drive_link)                      |
 | Oikotie  | [Roboto](https://drive.google.com/file/d/1-0_2_ZCPTRvCOy6QCbBafIVvVofMLI0i/view?usp=drive_link)                           |
 | Tori     | [Tori Sans Family](https://drive.google.com/file/d/1BkyYUR3sAoNrY2rvDC7hSandXp78_xtD/view?usp=drive_link)                 |
-| Vend     | [Vend Sans Text](https://drive.google.com/drive/folders/1bDfSKPmv5mKo51FZJP4WQVndYRA5EYAQ?usp=drive_link)                 |
+| Vend     | [Vend Sans Text](https://drive.google.com/file/d/1h_h22cdyZQCFPwHIL9nlM_JySJd1X3G8/view?usp=drive_link)                 |
 
 
 
