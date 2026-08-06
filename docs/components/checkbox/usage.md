@@ -24,14 +24,10 @@
   </div>
 
   <div>
-    Checkboxes have three states of selection:
-    - Not selected - the default state
-    - Selected
-    - Indeterminate
-
-Indeterminate is used when there are nested levels of checkboxes, and indicates that there are some checkboxes selected at the level below. Clicking this subsequently selects all of those checkboxes. .
+  Checkboxes have three states of selection: Not selected (the default state), Selected and Indeterminate.
+  Indeterminate is used when there are nested levels of checkboxes, and indicates that there are some checkboxes selected at the level below. Clicking this subsequently selects all of those checkboxes.
+    
   </div>
 </div>
-
 
 <component-questions />
