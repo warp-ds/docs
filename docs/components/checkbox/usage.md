@@ -9,7 +9,7 @@
 - selecting multiple values from several options.
 - a collection of options share context.
 
-### Avoid Checkboxes when
+### Avoid Checkbox when
 
 - you need to restrict selection to a single option. Use a Radio button, Switch or Select instead. 
 - a checkbox requires a submission step (e.g., clicking "Save" or "Submit"), instead use Switch to trigger immediate state change (no save required). 
