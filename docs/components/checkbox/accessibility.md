@@ -13,10 +13,10 @@ Every checkbox must have a clear, programmatically associated label. Labels shou
 #### Mouse
 Click toggles the selected state.
 
-### Keyboard
+#### Keyboard
 Selection can be toggled using the spacebar when focused.
 
-### Other
+#### Other
 Works with assistive devices like screens readers, which announce the keyboard label and state. 
 
 ## Design considerations
