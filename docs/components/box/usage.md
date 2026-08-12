@@ -74,14 +74,14 @@ If you find yourself wanting a hover state on the box, that is a signal you want
 Name the group, do not describe it. The heading should tell users what the block contains so they can decide whether to read on.
 
 <DoDont>
-<Do imgurl="/docs/components/box/placeholders/usage-heading-do.svg" imgalt="A box with the short heading 'Delivery options' above a short paragraph.">
+<Do imgurl="/docs/components/box/DoDonts/usage-heading-do.svg" imgalt="A box with the short heading 'Delivery options' above a short paragraph.">
 
 **"Delivery options"**
 
 Names the content in two words. Users can scan past it if it is not what they need.
 
 </Do>
-<Do not imgurl="/docs/components/box/placeholders/usage-heading-dont.svg" imgalt="A box whose heading is a full sentence that wraps onto three lines.">
+<Do not imgurl="/docs/components/box/DoDonts/usage-heading-dont.svg" imgalt="A box whose heading is a full sentence that wraps onto three lines.">
 
 **"Here is some information about how your order will be delivered"**
 
@@ -102,23 +102,6 @@ A sentence, not a heading. It is slow to scan and will wrap on mobile.
 - Use one supporting action per box. Two competing actions inside a passive container leaves users unsure which matters.
 - Use a secondary or utility button. A primary button inside a box competes with the real primary action on the page.
 
-<DoDont>
-<Do imgurl="/docs/components/box/placeholders/usage-label-do.svg" imgalt="A box with a secondary button labelled 'Change address'.">
-
-**"Change address"**
-
-The label states the outcome, so users know what happens before they tap.
-
-</Do>
-<Do not imgurl="/docs/components/box/placeholders/usage-label-dont.svg" imgalt="A box with a secondary button labelled only 'Continue'.">
-
-**"Continue"**
-
-Vague out of context. Screen reader users hearing the button alone learn nothing.
-
-</Do>
-</DoDont>
-
 ## Placement
 
 Place the box directly next to the content it relates to. An info box about delivery belongs beside the delivery section, not at the bottom of the page.
@@ -127,6 +110,20 @@ Place the box directly next to the content it relates to. An info box about deli
 - **Desktop**: keep the box within its content column. A box stretched across the full page width stops reading as a group and starts reading as a page section.
 - Leave clear space above and below so the box separates from surrounding content. That separation is the whole point of the component.
 
+</Do>
+<Do imgurl="/docs/components/box/DoDonts/usage-background-do.svg" imgalt="A bordered box on a coloured page background, clearly readable as its own surface.">
+
+Use the bordered variant on coloured or low-contrast backgrounds.
+
+**Why**: Neutral and info rely on a subtle fill. On a coloured background that fill disappears, and the grouping disappears with it.
+
+</Do>
+<Do not imgurl="/docs/components/box/DoDonts/usage-background-dont.svg" imgalt="A neutral box on a coloured background where the subtle fill disappears into the page.">
+
+Use a neutral box on a coloured background and adjust the colours yourself.
+
+**Why**: Custom colours break theming across brands and dark mode, and are likely to fail contrast in at least one of them.
+
 ## Interaction
 
 The box itself does not respond to input — there is nothing to hover, focus, or click. Users interact only with the elements inside it.
@@ -134,66 +131,5 @@ The box itself does not respond to input — there is nothing to hover, focus, o
 - Links and buttons inside the box follow the normal tab order of the page.
 - Keep interactive elements at least 44×44px on web, 44×44pt on iOS, and 48×48dp on Android.
 - Do not attach a click handler to the box to make the whole surface a shortcut. It is not focusable, gets no visible focus indicator, and is invisible to keyboard and screen reader users. Use [Card](/components/card/overview.md).
-
-## Best practices
-
-<DoDont>
-<Do imgurl="/docs/components/box/placeholders/usage-variant-do.svg" imgalt="Three boxes, each using a single variant: neutral, info, and bordered.">
-
-Use one variant per box and pick it based on the background and relevance of the content.
-
-**Why**: The three variants are alternatives. Combining them produces a surface that matches nothing in the design system.
-
-</Do>
-<Do not imgurl="/docs/components/box/placeholders/usage-variant-dont.svg" imgalt="A box with both the info background and the bordered outline applied at once.">
-
-Combine `info` and `bordered` to make a box stand out more.
-
-**Why**: There is no defined style for the combination, and "more attention" is not what Box is for. If the content needs to be noticed, it is probably an [Alert](/components/alert/overview.md).
-
-</Do>
-<Do imgurl="/docs/components/box/placeholders/usage-background-do.svg" imgalt="A bordered box on a coloured page background, clearly readable as its own surface.">
-
-Use the bordered variant on coloured or low-contrast backgrounds.
-
-**Why**: Neutral and info rely on a subtle fill. On a coloured background that fill disappears, and the grouping disappears with it.
-
-</Do>
-<Do not imgurl="/docs/components/box/placeholders/usage-background-dont.svg" imgalt="A neutral box on a coloured background where the subtle fill disappears into the page.">
-
-Use a neutral box on a coloured background and adjust the colours yourself.
-
-**Why**: Custom colours break theming across brands and dark mode, and are likely to fail contrast in at least one of them.
-
-</Do>
-<Do imgurl="/docs/components/box/placeholders/usage-topic-do.svg" imgalt="A box containing one heading, one paragraph, and one secondary button.">
-
-Keep each box to one topic and one supporting action.
-
-**Why**: A box is a visual promise that its content belongs together. Mixed topics break that promise.
-
-</Do>
-<Do not imgurl="/docs/components/box/placeholders/usage-topic-dont.svg" imgalt="A box containing three unrelated blocks of content stacked on top of each other.">
-
-Stack several unrelated blocks of content inside one box to save vertical space.
-
-**Why**: Users read the surface as one group and miss that the parts are unrelated.
-
-</Do>
-<Do imgurl="/docs/components/box/placeholders/usage-grouping-do.svg" imgalt="A box with a heading that names the group of content beneath it.">
-
-Use a heading inside the box when the content needs a name.
-
-**Why**: Headings give both sighted and screen reader users a way to navigate and skip the block.
-
-</Do>
-<Do not imgurl="/docs/components/box/placeholders/usage-grouping-dont.svg" imgalt="A box with no heading, where only the background colour suggests the content belongs together.">
-
-Rely on the box surface alone to communicate that content is grouped.
-
-**Why**: The grouping is purely visual. Users who do not see the surface get no grouping at all — see [Accessibility](/components/box/accessibility.md).
-
-</Do>
-</DoDont>
 
 <component-questions />

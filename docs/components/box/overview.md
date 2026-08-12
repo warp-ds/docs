@@ -106,7 +106,7 @@ It also works as an alternative way to group information on a page that already 
 
 <div class="grid grid-cols-2 gap-24">
   <div class="py-16">
-    <img src="/components/box/box-variants-info.svg" alt="Box anatomy showing the container, icon, heading, body text, link, and button." />
+    <img src="/components/box/overview-anatomy.svg" alt="Box anatomy showing the container, icon, heading, body text, link, and button." />
   </div>
   <div class="py-16">
 
@@ -121,11 +121,5 @@ It also works as an alternative way to group information on a page that already 
 </div>
 
 _Note: a labelled anatomy diagram with numbered callouts is not yet available in Figma. The illustration above shows the info variant with all optional parts enabled._
-
-## All variants
-
-::: image-block
-![The three box types side by side: neutral, info, and bordered.](/components/box/box-all-variants.svg)
-:::
 
 <component-questions />
