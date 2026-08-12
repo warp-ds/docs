@@ -110,7 +110,7 @@ Place the box directly next to the content it relates to. An info box about deli
 - **Desktop**: keep the box within its content column. A box stretched across the full page width stops reading as a group and starts reading as a page section.
 - Leave clear space above and below so the box separates from surrounding content. That separation is the whole point of the component.
 
-</Do>
+<DoDont>
 <Do imgurl="/docs/components/box/DoDonts/usage-background-do.svg" imgalt="A bordered box on a coloured page background, clearly readable as its own surface.">
 
 Use the bordered variant on coloured or low-contrast backgrounds.
@@ -123,6 +123,9 @@ Use the bordered variant on coloured or low-contrast backgrounds.
 Use a neutral box on a coloured background and adjust the colours yourself.
 
 **Why**: Custom colours break theming across brands and dark mode, and are likely to fail contrast in at least one of them.
+
+</Do>
+</DoDont>
 
 ## Interaction
 
