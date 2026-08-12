@@ -27,9 +27,6 @@ The default is worth thinking about rather than accepting:
 
 How you name the region depends on the framework, because the two implementations put the role in different places:
 
-- **React and Vue** render a single element (`div` by default, configurable with the `as` property) and place `role` on it. An `aria-label` or `aria-labelledby` you pass lands on the same element, so the region is named correctly.
-- **Elements** renders `w-box` as a web component and places `role` on a `div` inside its shadow root. An `aria-label` set on the `<w-box>` host is therefore **not** associated with that role. If you need a named landmark with the Elements version, set `role=""` on the box and wrap it in your own labelled element.
-
 Prefer `aria-labelledby` pointing at a visible heading inside the box over `aria-label`. A visible name helps everyone, not just screen reader users.
 
 ## Heading structure
@@ -42,11 +39,6 @@ Prefer `aria-labelledby` pointing at a visible heading inside the box over `aria
 
 Box adds nothing to the tab order — it is not focusable, and it should not be.
 
-| Key | Result |
-| --- | --- |
-| <kbd>Tab</kbd> | Moves to the next focusable element inside or after the box. The box itself is skipped. |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | Moves to the previous focusable element. |
-
 - Interactive elements inside the box follow normal DOM order. Keep the visual order and the DOM order the same.
 - Every link and button inside the box must show a visible focus indicator. Warp components handle this — do not remove the outline with custom CSS.
 - Do not add `tabindex` to the box. A focusable element with no role and no action is a dead stop for keyboard users.
@@ -57,7 +49,7 @@ Box adds nothing to the tab order — it is not focusable, and it should not be.
 - With `role=""`, the box is transparent to assistive technology: users hear the content, in order, with no wrapper. For purely visual grouping this is the correct outcome.
 - With a **named** region, screen reader users can jump to the box via the landmarks list and hear its name on entry.
 - With an **unnamed** region, most screen readers announce nothing extra, so the box neither helps nor hurts — it is just an unused wrapper.
-- Box has no live region behaviour and announces nothing on its own. If content inside the box updates and users need to know, use [Alert](/components/alert/overview.md) or [Toast](/components/toast/overview.md), which are built for that.
+- Box has no live region behaviour and announces nothing on its own. If content inside the box updates and users need to know, use [Alert](/components/alert/overview.md) or [Snackbar](/components/snackbar/overview.md), which are built for that.
 - An icon inside the box is decorative in most cases. If it carries meaning that the text does not, give it a text alternative; otherwise hide it from assistive technology so it is not announced as a stray graphic.
 
 ## Visual accessibility
