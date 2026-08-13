@@ -1,6 +1,6 @@
 # Alert - Accessibility
 
-Alerts show high-signal messages meant to be noticed and prompting users. An alert sits inline in the page, carries a status colour and icon, and stays visible until the situation it describes is resolved.
+Alerts show high-signal messages meant to be noticed by or prompt users. An alert sits inline in the page, carries a status colour and icon, and stays visible until the situation it describes is resolved.
 
 <ComponentsStatus />
 
