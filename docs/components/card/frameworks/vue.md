@@ -1,4 +1,4 @@
-# Card - Frameworks
+# Card - Vue
 Card is an interactive layout component to display information.
 
 <ComponentsStatus />

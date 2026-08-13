@@ -15,6 +15,10 @@ export default createContentLoader('/blog/posts/**/*.md', {
       })
       .map((page) => ({
         ...page,
+        frontmatter: {
+          ...page.frontmatter,
+          search: false,
+        },
         url: `${base}${page.url}`,
       }));
   },

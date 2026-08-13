@@ -1,27 +1,31 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import { fetchIconNames } from './iconNames';
+import { data } from './iconNames.data.js';
 
-const iconNames = ref([]);
+const icons = Object.entries(data);
+const placeholder = `Search among ${icons.length} icons`;
 const searchTerm = ref('');
 const filteredIcons = computed(() =>
-  iconNames.value.filter((name) => name.toLowerCase().includes(searchTerm.value.toLowerCase())),
+  icons
+    .filter(([name, aliases]) => {
+      const directMatch = name.toLowerCase().includes(searchTerm.value.toLowerCase());
+      if (directMatch) return true;
+      const aliasMatch = aliases.some((alias) => alias.toLowerCase().includes(searchTerm.value.toLowerCase()));
+      return aliasMatch;
+    })
+    .map(([name]) => name),
 );
-
-onMounted(async () => {
-  iconNames.value = await fetchIconNames();
-});
 </script>
 
 <template>
   <div class="component space-y-16" style="background-color: var(--vp-sidebar-bg-color);">
     <div class="m-8">
-      <input v-model="searchTerm" type="text" placeholder="Search icons..."
+      <input v-model="searchTerm" type="text" :placeholder="placeholder"
         class="block text-m leading-m mb-0 px-8 py-12 rounded-4 w-full focusable focus:[--w-outline-offset:-2px] caret-current border-1 s-text s-bg s-border-strong hover:s-border-strong-hover active:s-border-selected" />
     </div>
     <div class="grid gap-24 grid-cols-4 md:grid-cols-4 m-8">
       <div v-for="icon in filteredIcons" :key="icon" class="flex flex-col items-center text-center">
-        <div style="display:flex;background-color: #fff;border-radius: 4px;width:100%;height: 56px;padding: 8px 16px;gap: 10px;align-self: stretch;justify-content: center;
+        <div style="display:flex;color:var(--w-s-color-icon);background-color: var(--w-s-color-background);border-color:var(--w-s-color-border);border-width:1px;border-radius: 4px;width:100%;height: 56px;padding: 8px 16px;gap: 10px;align-self: stretch;justify-content: center;
 align-items: center;">
           <w-icon :name="icon" size="medium" locale="en" />
         </div>

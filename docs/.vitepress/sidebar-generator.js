@@ -42,15 +42,14 @@ function generateItemSidebar(type, name) {
   const items = [];
 
   for (const page of pageTypes) {
-    if (page.isFrameworks) {
-      // For frameworks, link to the first framework file
-      if (frameworks.length > 0) {
-        const firstFramework = frameworks[0].file;
-        items.push({
-          text: page.text,
-          link: `/${type}/${name}/frameworks/${firstFramework}`,
-        });
-      }
+    if (page.isFrameworks && frameworks.length > 0) {
+      items.push({
+        text: 'Frameworks',
+        items: frameworks.map((entry) => ({
+          text: entry.name,
+          link: `/${type}/${name}/frameworks/${entry.file}`,
+        })),
+      });
     } else {
       // Check if the page file exists
       const pagePath = join(itemDir, `${page.file}.md`);

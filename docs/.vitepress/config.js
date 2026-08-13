@@ -5,6 +5,7 @@ import markdownItContainer from 'markdown-it-container';
 import uno from 'unocss/vite';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
 import { defineConfig } from 'vitepress';
+import llmstxt from 'vitepress-plugin-llms';
 import { headLinks } from './headLinks.js';
 import { docsClasses } from './safelist.js';
 import { sidebarFoundations } from './sidebar-foundations.js';
@@ -19,7 +20,13 @@ export default defineConfig({
   description: 'Documentation for Warp Design System',
   lastUpdated: false,
   cleanUrls: true,
+  sitemap: {
+    hostname: 'https://warp-ds.github.io/docs/',
+  },
   base: `${base}/`,
+  ignoreDeadLinks: [
+    (url) => url.startsWith(base), // doesn't detect properly when we link using pathname
+  ],
   markdown: {
     theme: {
       light: 'github-light',
@@ -42,50 +49,16 @@ export default defineConfig({
         isCustomElement: (tag) => {
           // Pattern-based matches
           if (/(-example|-color-table|example-container|poc-1-div)$/.test(tag)) return true;
-          // w-icon-* variants (e.g., w-icon-share-16)
-          if (tag.startsWith('w-icon')) return true;
-          // Specific @warp-ds/elements web components
-          const elementsComponents = [
-            'w-alert',
-            'w-affix',
-            'w-attention',
-            'w-badge',
-            'w-box',
-            'w-breadcrumbs',
-            'w-button',
-            'w-card',
-            'w-checkbox',
-            'w-checkbox-group',
-            'w-datepicker',
-            'w-expandable',
-            'w-link',
-            'w-modal',
-            'w-modal-header',
-            'w-modal-footer',
-            'w-page-indicator',
-            'w-pagination',
-            'w-pill',
-            'w-radio',
-            'w-radio-group',
-            'w-select',
-            'w-slider',
-            'w-slider-thumb',
-            'w-step',
-            'w-step-indicator',
-            'w-switch',
-            'w-tab',
-            'w-tab-panel',
-            'w-tabs',
-            'w-textarea',
-            'w-textfield',
-          ];
-          return elementsComponents.includes(tag);
+          const warpVueComponents = ['w-clickable', 'w-button-group', 'w-button-group-item', 'w-toggle'];
+          if (warpVueComponents.includes(tag)) return false;
+          return tag.startsWith('w-');
         },
       },
     },
   },
   vite: {
     plugins: [
+      llmstxt(),
       uno({ presets: [presetWarp({ skipResets: true })] }),
       uno({
         presets: [presetWarp(), presetDocs()],
@@ -103,6 +76,15 @@ export default defineConfig({
         safelist: [...componentClasses, ...supportedClasses, ...docsClasses],
       }),
       svgLoader(),
+      {
+        name: 'watch-node-modules',
+        configureServer: (server) => {
+          server.watcher.options = {
+            ...server.watcher.options,
+            ignored: [/node_modules\/(?!@warp-ds).*/, '**/.git/**'],
+          };
+        },
+      },
     ],
   },
   head: headLinks,

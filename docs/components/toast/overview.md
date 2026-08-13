@@ -1,13 +1,18 @@
 # Toast - Overview
+
 Toasts are brief user feedback messages that overlay content.
 
 <ComponentsStatus />
-
-## Example
 <ThemeSwitcher />
+
 <toast-example />
 
+## Deprecated
+
+The Toast component is deprecated in favor of [Snackbar](../snackbar/overview.md).
+
 ## General
+
 A toast overlay is used to provide system status notifications, such as error, completion, and loading progress messages. The icons and colours are available, which must be selectively used according to the component's attention level.
 
 ## Variants

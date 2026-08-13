@@ -1,4 +1,4 @@
-# Spinner - Frameworks
+# Spinner - iOS
 A spinner informs users about the loading of content.
 
 <ComponentsStatus />

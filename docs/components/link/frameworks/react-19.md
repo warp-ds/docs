@@ -1,4 +1,4 @@
-# Link - Frameworks
+# Link - React 19
 Link component to use when creating links that look like buttons.
 
 <ComponentsStatus />

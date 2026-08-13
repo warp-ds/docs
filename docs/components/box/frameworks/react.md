@@ -1,4 +1,4 @@
-# Box - Frameworks
+# Box - React
 Box is a layout component used for separating content areas on a page.
 
 <ComponentsStatus />

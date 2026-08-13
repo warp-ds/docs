@@ -1,4 +1,4 @@
-# Alert - Frameworks
+# Alert - Vue
 Alerts show high-signal messages meant to be noticed and prompting users.
 
 <ComponentsStatus />

@@ -1,4 +1,4 @@
-# Radio buttons - Frameworks
+# Radio buttons - React
 Radio buttons allow users to select a single option from a button group.
 
 <ComponentsStatus />
