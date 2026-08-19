@@ -41,7 +41,8 @@ On the web, each `<w-tab>` names its panel with `for`, matching the panel's `id`
 If a tab has no `id` of its own, one is generated for it, so the panel always has something to be labelled by.
 
 ::: warning Warning
-In **React** and **Vue**, ids are derived from the `name` prop and prefixed with `warp-tab-` and `warp-tabpanel-`. Those names must be unique across the entire document, not just within one tab set. `aria-controls` and `aria-labelledby` rely on `id` attributes, and duplicates silently break the association — so two tab sets both using `name="one"` will point at each other's panels.
+The `name` attributes will be used to generate `id` attributes (prefixed with `warp-tab-` and `warp-tabpanel-`), and therefore they must be unique throughout the entire DOM.
+This is because aria-controls and aria-labelledby rely on id attributes, and they are required for the tabs to be ARIA compliant.
 :::
 
 ### Naming the tab set
@@ -85,8 +86,6 @@ Two details worth knowing:
 - **The set does not wrap.** <kbd>→</kbd> stops on the last tab and <kbd>←</kbd> stops on the first, rather than cycling round.
 - **Selection is automatic.** Arrowing onto a tab selects it and shows its panel immediately. This is the right pattern when panels are cheap to render; if a panel triggers an expensive load, that cost is paid on every arrow press.
 
-Arrow presses combined with <kbd>Alt</kbd>, <kbd>Ctrl</kbd>, or <kbd>Shift</kbd> are ignored, so browser and screen reader shortcuts keep working.
-
 ## Screen readers
 
 Each tab is announced with its label, its role, its selected state, and its position — "Overview, tab, selected, 1 of 3". Because position is announced, keeping the set short and the order stable matters more than it looks.
@@ -113,15 +112,15 @@ Width is the more common failure. A one-word tab like "Map" is narrow, and narro
 
 ## Visual accessibility
 
-**Contrast** — measured against a white surface:
+**Contrast** — tab colours come from semantic tokens, so they resolve to a different value in every brand and mode:
 
-| Element | Colour | Ratio | Requirement |
-| --- | --- | --- | --- |
-| Unselected label | `#5C5C66` | 6.61:1 | 4.5:1 (text) ✓ |
-| Selected label | `#0063FB` | 5.03:1 | 4.5:1 (text) ✓ |
-| Active indicator | `#0063FB` | 5.03:1 | 3:1 (non-text) ✓ |
+| Element | Token | Requirement |
+| --- | --- | --- |
+| Unselected label | `--w-s-color-text-subtle` | 4.5:1 (text) |
+| Selected label | `--w-s-color-text-link` | 4.5:1 (text) |
+| Active indicator | `--w-s-color-border-selected` | 3:1 (non-text) |
 
-Don't override these colours. Tab labels are small text, so there's less headroom than the numbers suggest.
+Every Warp theme meets or exceeds these ratios against its own background, in both light and dark mode. The margin is narrowest on the selected label, so don't override these tokens with hard-coded colours — tab labels are small text, and there's less headroom than a single brand's numbers would suggest.
 
 **Colour independence** — the selected tab is marked by the underline *and* the colour change, so it survives greyscale and colour-vision differences. If you restyle tabs, keep a non-colour signal.
 
