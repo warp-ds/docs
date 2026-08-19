@@ -15,7 +15,7 @@ Tooltips explain what an element does or clarify a term without adding permanent
 
 Use tooltips sparingly. Content inside a tooltip is hidden until the user interacts with the trigger, so anything essential to completing a task belongs in the interface itself.
 
-On the web, the tooltip is a variant of the Attention component: set the `tooltip` prop to render it with tooltip styling and semantics. On iOS and Android, Tooltip is a dedicated component.
+On the web, Tooltip is a dedicated component. Put the trigger and tooltip next to each other, give the trigger an `id`, and reference it from the tooltip with `for`. On iOS and Android, Tooltip is also a dedicated component.
 
 ### Related components
 
@@ -88,7 +88,7 @@ Use when the tooltip sits to the **right** of the trigger (`right` placement). S
   </div>
   <div>
 
-Use when the tooltip sits to the **left** of the trigger (`left` placement). Remember to place the tooltip before the target in the DOM for left placements — see [Accessibility](/components/tooltip/accessibility.md).
+Use when the tooltip sits to the **left** of the trigger (`left` placement). Connect the tooltip to its trigger with the trigger's `id` and the tooltip's `for` attribute — see [Accessibility](/components/tooltip/accessibility.md).
 
   </div>
 </div>
@@ -110,19 +110,13 @@ Use only when the connection to the trigger is already obvious — for example, 
 
 Tooltips are positioned relative to their trigger.
 
-**Web** supports twelve placements: `top-start`, `top`, `top-end`, `bottom-start`, `bottom`, `bottom-end`, `left-start`, `left`, `left-end`, `right-start`, `right`, and `right-end`. The default is `bottom`.
+**Web** supports four placements: `top`, `bottom`, `left`, and `right`. The default is `top`; the tooltip automatically flips to the opposite side and shifts to stay in view.
 
 **iOS** exposes the arrow edge instead: `.top`, `.leading`, `.bottom`, `.trailing`, defaulting to `.top`. **Android** uses the equivalent `Edge.Top`, `Edge.Bottom`, `Edge.Leading`, and `Edge.Trailing`.
 
 ### Staying in view
 
-On the web, the tooltip uses [Floating UI](https://floating-ui.com/) to calculate its position. Three props control what happens when there isn't room for the preferred placement:
-
-- `flip` (default `false`) — flip to the opposite side to stay in the viewport.
-- `cross-axis` (default `false`) — also check cross-axis overflow. Requires `flip`.
-- `fallback-placements` (default `undefined`) — an ordered list of placements to try before flipping. Requires `flip`.
-
-Enable `flip` whenever the trigger can scroll near the edge of the viewport. See the [Elements](/components/tooltip/frameworks/elements.md), [React](/components/tooltip/frameworks/react.md), and [Vue](/components/tooltip/frameworks/vue.md) pages for live examples.
+On the web, the tooltip uses [Floating UI](https://floating-ui.com/) to flip and shift automatically when there isn't room for the requested placement. See the [Elements](/components/tooltip/frameworks/elements.md) page for live examples.
 
 ### Offsets
 
@@ -131,7 +125,7 @@ Fine-tune the gap between tooltip and trigger with `distance` (perpendicular off
 ## Platform considerations
 
 **Web**
-The tooltip is shown on `mouseenter` and `focus`, and hidden on `mouseleave`, `blur`, and <kbd>Escape</kbd>. You control visibility yourself through `isShowing` (React), `v-model` (Vue), or `show` (Elements).
+The tooltip is shown on `mouseenter` and `focus`, and hidden on `mouseleave`, `blur`, and <kbd>Escape</kbd>. Associate it with its trigger using `for`; use `open` only when visibility must also be controlled programmatically.
 
 **iOS/iPadOS**
 `Warp.Tooltip` renders a SwiftUI view; a UIKit `UIView` is available via `.uiView`. There is no hover on touch, so pair the tooltip with a visible tap target of at least 44×44pt.

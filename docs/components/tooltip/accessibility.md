@@ -13,44 +13,37 @@ Tooltip content is hidden by default, so it's easy to make it unreachable for pe
 
 ## ARIA
 
-On the web, the Attention component handles the tooltip semantics for you. When the `tooltip` prop is set, it wraps the slotted content in a `div` with `role="tooltip"` and a localised default `aria-label`, and sets `aria-details` on the target element pointing at the message.
+On the web, the Tooltip component handles the tooltip semantics for you. It renders its content in a `div` with `role="tooltip"` and a localised `aria-description` describing the arrow direction.
 
 ### Associating the tooltip with its trigger
 
-Give the message element an `id` and reference it from the trigger with `aria-describedby`. Screen readers then announce the tooltip text after the trigger's own name.
+Give the tooltip an `id` and reference it from the trigger with `aria-labelledby`. The Tooltip component uses the `for` attribute to associate itself with the trigger and handles hover, focus, and Escape-key behavior.
 
 ```html
-<w-attention tooltip placement="top">
-  <button id="target" slot="target" aria-describedby="tooltip-text">
-    Sort
-  </button>
-  <span id="tooltip-text" slot="message">Sort results by price</span>
-</w-attention>
+<button id="target" aria-labelledby="tooltip-text">
+  Sort
+</button>
+<w-tooltip id="tooltip-text" for="target" placement="top">Sort results by price</w-tooltip>
 ```
 
-Use `aria-describedby` for supporting detail and `aria-label` for the trigger's name. An icon-only button needs both: an accessible name so it can be identified, and a description if the tooltip adds information beyond that name.
+Use `aria-label` for a trigger's name and `aria-labelledby` to associate it with the tooltip. An icon-only button needs an accessible name so it can be identified; the tooltip supplies supporting detail.
 
 ### Narrowing what's announced
 
-When the tooltip contains more text than a screen reader needs, mark up only the relevant part. Set `role="tooltip"` on that element, give it an `id`, and point `aria-describedby` on the target at it.
+When the tooltip contains more text than a screen reader needs, keep only the relevant text in the tooltip. The Tooltip component supplies `role="tooltip"`; reference the tooltip's `id` from the target with `aria-labelledby`.
 
 ```html
-<w-attention placement="top" tooltip>
-  <div slot="message">
-    <p id="aria-content" role="tooltip">This tooltip text is important</p>
-    <p>(this text is less relevant)</p>
-  </div>
-  <button aria-describedby="aria-content" id="target" slot="target">
-    Click to toggle a tooltip on top
-  </button>
-</w-attention>
+<button aria-labelledby="aria-content" id="target">
+  Click to toggle a tooltip on top
+</button>
+<w-tooltip id="aria-content" for="target" placement="top">This tooltip text is important</w-tooltip>
 ```
 
-In React and Vue you can also clear the default role and label with `role=""` and `aria-label=""`. If you do, you must set `aria-details` on the target element yourself — otherwise the association is lost. See [MDN: aria-details](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-details).
+The trigger still needs its own accessible name. Do not use the tooltip as the only accessible name for an icon-only control; give the control an `aria-label` as well as `aria-labelledby`.
 
 ### DOM order
 
-Place the Attention element **before** the target element in the DOM when the placement is `left` or `top`. This keeps the reading order matching the visual order.
+Place the trigger before the Tooltip element and connect them with the trigger's `id` and the tooltip's `for` attribute. The Tooltip element is not itself a focus target.
 
 ## Keyboard interaction
 
@@ -62,7 +55,7 @@ Place the Attention element **before** the target element in the DOM when the pl
 
 The tooltip itself never receives focus, and focus is never trapped. Because a tooltip can't be focused, its content can't be reached by keyboard — another reason to keep links and buttons out of it.
 
-Wire up `focus` and `blur` alongside `mouseenter` and `mouseleave` on every trigger. The framework examples show this pattern for [React](/components/tooltip/frameworks/react.md) and [Vue](/components/tooltip/frameworks/vue.md).
+The Tooltip component wires up `focus`, `blur`, `mouseover`, and `mouseout` on the element named by `for`. It also handles <kbd>Escape</kbd> and hover transitions between the trigger and tooltip.
 
 ## Screen readers
 
@@ -89,7 +82,7 @@ Small info icons are the most common failure here — pad the tap target beyond 
 - **Contrast.** Tooltip text meets at least 4.5:1 against the tooltip surface. Don't override the tooltip's colours with custom styling.
 - **Colour independence.** The tooltip carries meaning through text alone, so it works without colour perception. Don't add colour-only meaning to the trigger.
 - **Focus indicator.** The trigger keeps its visible focus ring while the tooltip is open. Never suppress the focus ring to make the tooltip look cleaner.
-- **Text resizing.** The tooltip grows with the user's text size. Test at 200% and confirm the message wraps rather than truncating, and that it still fits on screen — enable `flip` so it repositions instead of getting clipped.
+- **Text resizing.** The tooltip grows with the user's text size. Test at 200% and confirm the message wraps rather than truncating, and that it still fits on screen — Tooltip automatically flips and shifts to avoid clipping.
 - **Hover persistence.** WCAG 1.4.13 (Content on Hover or Focus) requires that hover-triggered content be dismissible with <kbd>Escape</kbd>, remain visible while the pointer is over the trigger, and not obscure other content. Position the tooltip so it doesn't cover the trigger or nearby text.
 
 ## Best practices
@@ -97,7 +90,7 @@ Small info icons are the most common failure here — pad the tap target beyond 
 | ✓ DO | ✗ DON'T |
 | --- | --- |
 | Show the tooltip on focus as well as hover | Bind only to `mouseenter` / `mouseleave` |
-| Associate the message with `aria-describedby` | Leave the tooltip orphaned from its trigger |
+| Associate the tooltip with `aria-labelledby` and `for` | Leave the tooltip orphaned from its trigger |
 | Keep all essential information outside the tooltip | Hide the only copy of an instruction in a tooltip |
 | Allow <kbd>Escape</kbd> to dismiss | Force the user to move the pointer away to close |
 | Give icon-only triggers an accessible name of their own | Rely on the tooltip to name the control |

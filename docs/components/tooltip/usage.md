@@ -8,7 +8,7 @@ A tooltip is a small message box that appears when a user hovers over, focuses, 
 
 - Use tooltips for supplementary information only. The interface must still make sense with every tooltip closed.
 - Keep the message to one or two short lines.
-- Attach a tooltip to a single, clearly interactive trigger.
+- Attach a tooltip to a single, clearly interactive trigger using the trigger's `id` and the tooltip's `for` attribute.
 - Show only plain text. Tooltips can't hold links, buttons, or images.
 - Show one tooltip at a time.
 - Position the tooltip so it never covers the trigger or the content the user is reading.
@@ -47,7 +47,7 @@ Never make a tooltip persistent. If the message needs to stay on screen, it isn'
 
 ### Positioning
 
-The tooltip flips or shifts to stay in the viewport when `flip` is enabled. Enable it whenever the trigger can scroll close to a screen edge — otherwise the tooltip will be clipped and the message lost.
+On web, the tooltip automatically flips or shifts to stay in the viewport when the trigger moves close to a screen edge.
 
 Pick the placement that keeps the tooltip clear of what the user is looking at:
 
@@ -162,7 +162,7 @@ Don't stack or chain tooltips. Overlapping messages compete for attention and ob
 <DoDont>
 <Do imgurl="/docs/components/tooltip/usage-best-practices-5-keep-in-view-do.svg" imgalt="Two panels: in the first the tooltip sits above its trigger, in the second the trigger is near the top edge so the tooltip has flipped below it to stay fully visible">
 
-Enable `flip` whenever the trigger can scroll near the edge of the viewport, so the tooltip repositions itself.
+The tooltip automatically flips and shifts whenever the trigger moves near the edge of the viewport, so no additional positioning prop is needed.
 
 </Do>
 <Do not imgurl="/docs/components/tooltip/usage-best-practices-5-keep-in-view-dont.svg" imgalt="A tooltip clipped by the top edge of the viewport, leaving only the bottom half of “Save your progress” readable">
