@@ -1,5 +1,5 @@
 # Tabs - Android
-Tabs are used to group content, allowing users to navigate views without.
+Tabs organise related content into sections that sit at the same level, and let people switch between them without leaving the page.
 
 <ComponentsStatus />
 
