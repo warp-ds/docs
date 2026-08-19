@@ -5,9 +5,9 @@
   "description": "Documentation of the Warp Design System",
   "main": "index.js",
   "scripts": {
-    "build": "vitepress build docs",
+    "build": "NODE_ENV=production vitepress build docs",
     "check": "pnpm biome check --write .",
-    "dev": "vitepress dev docs",
+    "dev": "NODE_ENV=development vitepress dev docs",
     "format": "pnpm biome format --write .",
     "generate-frameworks": "node scripts/generate-frameworks.js",
     "lint:check": "pnpm biome lint .",

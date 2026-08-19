@@ -58,7 +58,7 @@ export default defineConfig({
   },
   vite: {
     plugins: [
-      llmstxt(),
+      process.env.NODE_ENV === 'production' ? llmstxt() : null,
       uno({ presets: [presetWarp({ skipResets: true })] }),
       uno({
         presets: [presetWarp(), presetDocs()],
@@ -85,7 +85,7 @@ export default defineConfig({
           };
         },
       },
-    ],
+    ].filter((plugin) => plugin !== null),
   },
   head: headLinks,
   themeConfig: {
