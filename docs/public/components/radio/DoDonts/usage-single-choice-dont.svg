@@ -1,0 +1,12 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title description">
+  <title id="title">Placeholder for incorrect single-choice guidance</title>
+  <desc id="description">Artwork should show checkboxes incorrectly used for one mutually exclusive choice.</desc>
+  <rect x="1" y="1" width="398" height="298" rx="8" fill="#EDEDED" stroke="#BDBDBD" stroke-width="2" stroke-dasharray="8 6"/>
+  <rect x="1" y="1" width="10" height="298" rx="5" fill="#BE3830"/>
+  <text x="200" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#4A4A4A">PLACEHOLDER</text>
+  <text x="200" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#4A4A4A">
+    <tspan x="200" dy="0">Checkboxes used for one mutually</tspan>
+    <tspan x="200" dy="22">exclusive choice</tspan>
+  </text>
+  <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666">usage-single-choice-dont.svg</text>
+</svg>
