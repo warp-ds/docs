@@ -75,14 +75,14 @@ Write a question or short instruction that gives every option the same context. 
 ### Match the control to the choice
 
 <DoDont>
-<Do imgurl="/docs/components/radio/DoDonts/usage-single-choice-do.svg" imgalt="A group of Radio buttons used to choose one delivery method from three options.">
+<Do imgurl="/docs/components/radio/DoDonts/usage-single-choice-do.svg" imgalt="A Size group using Radio buttons, with one of three options selected.">
 
 Use Radio for one choice from a visible set of alternatives.
 
 **Why**: The options are mutually exclusive, and users can compare all of them before choosing.
 
 </Do>
-<Do not imgurl="/docs/components/radio/DoDonts/usage-single-choice-dont.svg" imgalt="A group of checkboxes incorrectly used for mutually exclusive delivery methods.">
+<Do not imgurl="/docs/components/radio/DoDonts/usage-single-choice-dont.svg" imgalt="A Size group incorrectly using checkboxes, allowing two mutually exclusive options to be selected.">
 
 Use checkboxes when selecting one option must clear the others.
 
@@ -94,14 +94,14 @@ Use checkboxes when selecting one option must clear the others.
 ### Label the whole group
 
 <DoDont>
-<Do imgurl="/docs/components/radio/DoDonts/usage-group-label-do.svg" imgalt="A Radio group with the visible group label “How should we deliver your item?” above three labelled options.">
+<Do imgurl="/docs/components/radio/DoDonts/usage-group-label-do.svg" imgalt="A Radio group with a visible label above three labelled options.">
 
 Give related options one clear group label.
 
 **Why**: The label explains the relationship between the choices and gives assistive technology a name for the group.
 
 </Do>
-<Do not imgurl="/docs/components/radio/DoDonts/usage-group-label-dont.svg" imgalt="Three Radio options shown without a group label, leaving the purpose of the choices unclear.">
+<Do not imgurl="/docs/components/radio/DoDonts/usage-group-label-dont.svg" imgalt="Three Radio options shown without a group label or help text, leaving their purpose unclear.">
 
 Present options without saying what question they answer.
 
