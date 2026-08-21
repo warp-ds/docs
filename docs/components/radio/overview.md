@@ -92,4 +92,13 @@ The same concepts use different API names across platforms:
 | Error | `invalid` | `.error` | `isError = true` |
 | Disabled | `disabled` | `.disabled` | `enabled = false` |
 
+## Anatomy
+
+::: image-block
+![Radio anatomy diagram showing the circular indicator and option label, with unchecked and checked examples.](/components/radio/overview-anatomy.svg)
+:::
+
+1. **Radio indicator**: Shows whether the option is selected. Only one indicator can be selected within a group.
+2. **Option label**: Names the choice and forms part of the option's interactive target.
+
 <component-questions />
