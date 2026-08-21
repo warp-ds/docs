@@ -1,33 +1,8 @@
-<script setup>
-import { ref } from 'vue';
-
-const show = ref(false);
-</script>
-
 <template>
   <div class="component">
     <div>
-      <w-attention
-        tooltip
-        placement="right"
-        flip
-        cross-axis
-        :fallback-placements="['top']"
-        :show="show"
-      >
-        <w-button
-          slot="target"
-          variant="utility"
-          aria-describedby="tooltip-bubbletext"
-          @mouseenter="show = true"
-          @mouseleave="show = false"
-          @focus="show = true"
-          @blur="show = false"
-        >
-          Hover me to trigger this dynamic tooltip!
-        </w-button>
-        <p slot="message" id="tooltip-bubbletext">Tooltip</p>
-      </w-attention>
+      <w-button id="dynamic-button" variant="utility" aria-labelledby="dynamic-tooltip">Hover me to trigger this dynamic tooltip!</w-button>
+      <w-tooltip id="dynamic-tooltip" for="dynamic-button" placement="right">Tooltip flips and shifts automatically</w-tooltip>
     </div>
   </div>
 </template>

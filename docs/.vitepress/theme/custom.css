@@ -265,8 +265,55 @@ html.dark body {
   margin-top: 0.5rem;
   padding-top: 0.5rem;
 }
+/* ---------------------------------------------------------------
+   Image plate
+
+   Shared container for documentation imagery. The background lives
+   here rather than baked into the exported asset, so illustrations
+   can be exported as transparent SVGs and the surface controlled
+   from code.
+
+   Override --doc-image-plate-bg on any instance (inline style, or a
+   class of your own) to change the surface for a single image:
+     <div class="image-plate" style="--doc-image-plate-bg: #fff">
+   --------------------------------------------------------------- */
+:root {
+  --doc-image-plate-bg: #f1f1f1;
+  --doc-image-plate-bg-dark: #333;
+  --doc-image-plate-radius: 10px;
+}
+
+.image-plate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--doc-image-plate-radius);
+  background-color: var(--doc-image-plate-bg);
+}
+
+.image-plate img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Figure plate, used by the do/don't and usage-example illustrations.
+   Illustrations are authored at the column width (332px), so the image
+   fills the plate edge to edge and renders 1:1 — no inner padding and
+   no fixed aspect ratio, both of which scaled the artwork down. Plates
+   in the same grid row stretch to the tallest image and centre the
+   shorter one. */
+.image-plate--figure img {
+  width: 100%;
+}
+
+/* Opt-in dark surface for light-on-dark illustrations */
+.image-plate--dark {
+  --doc-image-plate-bg: var(--doc-image-plate-bg-dark);
+}
+
 .styled-image-block {
-  background-color: #f5f5f5; /* Light grey background */
+  background-color: var(--doc-image-plate-bg);
   padding: 16px;
   margin: 16px 0;
   border-radius: 8px;

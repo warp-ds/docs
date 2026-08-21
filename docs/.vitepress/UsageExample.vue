@@ -13,6 +13,7 @@ const props = defineProps({
     <div
       v-if="imgurl"
       part="image"
+      class="image-plate image-plate--figure"
       v-bind:class="[darkmode ? 'darkmode' : 'lightmode']"
     >
       <img :src="imgurl" :alt="imgalt" />
@@ -37,7 +38,7 @@ const props = defineProps({
         fill="white"
       />
     </svg>
-    <figcaption class="text-body font-bold">
+    <figcaption class="text-body">
       <slot></slot>
     </figcaption>
   </figure>
@@ -48,23 +49,14 @@ const props = defineProps({
   display: contents;
 }
 
+/* Surface styling lives in the shared .image-plate class (custom.css)
+   so illustrations can be exported transparent. Only layout here. */
 .usage-wrapper [part="image"] {
   grid-area: first-figure;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background-color: #f1f1f1;
   margin-bottom: 16px;
 
-  img {
-    max-width: 80%;
-  }
-
   &.darkmode {
-    background-color: #333;
+    --doc-image-plate-bg: var(--doc-image-plate-bg-dark);
   }
 }
 
