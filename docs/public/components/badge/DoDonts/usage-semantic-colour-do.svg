@@ -1,0 +1,12 @@
+<svg width="332" height="220" viewBox="0 0 332 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="332" height="220" rx="16" fill="#F6F6F6"/>
+  <rect x="28" y="22" width="276" height="176" rx="12" fill="white" stroke="#E0E0E3"/>
+  <text x="44" y="53" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" fill="#5C5C66">LISTING REVIEW</text>
+  <path d="M44 66H288" stroke="#E0E0E3"/>
+  <text x="44" y="96" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1B1B1F">Vintage watch</text>
+  <text x="44" y="120" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5C5C66">Review completed</text>
+  <rect x="218" y="82" width="70" height="24" rx="4" fill="#FFEFEF"/>
+  <text x="253" y="94.5" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B1B1F">Rejected</text>
+  <rect x="44" y="143" width="244" height="35" rx="6" fill="#F6F6F6"/>
+  <text x="56" y="164" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#5C5C66">Reason: Restricted item</text>
+</svg>

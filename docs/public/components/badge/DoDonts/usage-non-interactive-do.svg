@@ -1,0 +1,16 @@
+<svg width="332" height="220" viewBox="0 0 332 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="332" height="220" rx="16" fill="#F6F6F6"/>
+  <rect x="28" y="22" width="276" height="176" rx="12" fill="white" stroke="#E0E0E3"/>
+  <rect x="44" y="40" width="72" height="72" rx="8" fill="#E4E4E7"/>
+  <path d="M59 88H101M64 88V99M96 88V99M67 78H93L98 88H62L67 78Z" stroke="#84848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#1B1B1F">
+    <text x="132" y="57" font-size="14" font-weight="700">Oak dining table</text>
+    <text x="132" y="80" font-size="12" fill="#5C5C66">Oslo · Used</text>
+    <text x="132" y="105" font-size="16" font-weight="700">1 200 kr</text>
+  </g>
+  <rect x="44" y="132" width="67" height="24" rx="4" fill="#CDFEE5"/>
+  <text x="77.5" y="144.5" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B1B1F">Available</text>
+  <rect x="186" y="128" width="96" height="32" rx="8" fill="#0063FB"/>
+  <text x="234" y="144.5" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="700" fill="white">View listing</text>
+  <path d="M44 176H282" stroke="#E0E0E3"/>
+</svg>

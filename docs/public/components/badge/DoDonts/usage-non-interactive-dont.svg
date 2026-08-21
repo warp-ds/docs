@@ -1,0 +1,15 @@
+<svg width="332" height="220" viewBox="0 0 332 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="332" height="220" rx="16" fill="#F6F6F6"/>
+  <rect x="28" y="22" width="276" height="176" rx="12" fill="white" stroke="#E0E0E3"/>
+  <rect x="44" y="40" width="72" height="72" rx="8" fill="#E4E4E7"/>
+  <path d="M59 88H101M64 88V99M96 88V99M67 78H93L98 88H62L67 78Z" stroke="#84848F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#1B1B1F">
+    <text x="132" y="57" font-size="14" font-weight="700">Oak dining table</text>
+    <text x="132" y="80" font-size="12" fill="#5C5C66">Oslo · Used</text>
+    <text x="132" y="105" font-size="16" font-weight="700">1 200 kr</text>
+  </g>
+  <rect x="186" y="132" width="96" height="24" rx="4" fill="#E0F6FF"/>
+  <text x="234" y="144.5" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#1B1B1F">View listing</text>
+  <path d="M267 151L271 168L275 163L280 169L284 166L278 160L284 157L267 151Z" fill="white" stroke="#1B1B1F" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M44 176H282" stroke="#E0E0E3"/>
+</svg>
