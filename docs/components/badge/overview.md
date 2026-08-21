@@ -136,15 +136,12 @@ Related components: [Pill](../pill/overview.md)
 ## Anatomy
 
 ::: image-block
-![Diagram of a badge component anatomy. The badge is a rounded rectangle container with three labeled parts: a leading icon (optional, shown on the left), and a text label in the center displaying the badge content, and the overall container that holds these elements.](/components/badge/badge-anatomy.svg)
+![Badge anatomy diagram showing the container, optional leading icon, and label.](/components/badge/overview-anatomy.svg)
 :::
 
-
-**1. Container**
-
-**2. Leading icon (optional):** Visual indicator that reinforces the badge's label.
-
-**3. Label:** Communicates what is being highlighted.
+1. **Container**: Groups the badge content and applies the selected variant's background colour.
+2. **Leading icon (optional)**: Reinforces the meaning of the label.
+3. **Label**: Communicates the status or metadata being highlighted.
 
 <br>
 
