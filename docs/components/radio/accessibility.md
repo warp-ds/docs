@@ -84,14 +84,6 @@ These details were verified against Warp Elements 2.11.0, the version used by th
 - Vertical layout is the default. Test horizontal groups with TalkBack, increased font size, and narrow screens because the row scrolls horizontally.
 - Help and error text are visible, but the current implementation does not explicitly connect that text to the Radio group through semantics. Verify the full announcement and add screen-level context if TalkBack does not expose the message with the options.
 
-## Known implementation gaps
-
-- On Web, `aria-errormessage` currently refers to `error-message`, while the rendered help/error element uses `help-text` as its identifier. The text is still included through `aria-describedby`, but do not rely on `aria-errormessage` alone until the identifiers match.
-- On iOS, explicit Radio role, selected trait, and group semantics are not present in the component source. Treat VoiceOver verification as required for every implementation.
-- On Android, help and error text do not have an explicit semantic association with the group.
-
-These are component limitations, not reasons to duplicate the control. Prefer a small, tested platform-level accommodation and remove it when the underlying component is corrected.
-
 ## Testing
 
 - **Keyboard**: Tab into and out of each group. Use all four arrow keys and Space; confirm movement wraps, selection follows focus, and disabled options are skipped.
