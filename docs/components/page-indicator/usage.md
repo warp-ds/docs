@@ -70,11 +70,11 @@ Place the Page indicator inside or directly below the content it describes. Keep
 - **Inside the content**: Leave 12px between the indicator and the bottom edge.
 - **Outside the content**: Leave 24px between the content and the indicator.
 
-<div class="flex gap-20 w-full">
-  <div class="w-1/2">
+<div class="flex flex-col gap-20 w-full md:flex-row">
+  <div class="w-full md:w-1/2">
     <img src="/components/pageindicator/placement-inside.svg" alt="Page indicator centred inside the content container with 12px bottom spacing." />
   </div>
-  <div class="w-1/2">
+  <div class="w-full md:w-1/2">
     <img src="/components/pageindicator/placement-outside.svg" alt="Page indicator centred below the content container with 24px spacing." />
   </div>
 </div>

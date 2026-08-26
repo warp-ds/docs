@@ -43,12 +43,49 @@ Web and Android present the Page indicator as passive status. The iOS component 
 
 The same concepts use different names and index bases across platforms:
 
-| Concept | Figma | Web (Elements / React 19) | iOS | Android |
-| --- | --- | --- | --- | --- |
-| Component | Page indicator | `w-page-indicator` / `PageIndicator` | `Warp.PageIndicator` | `WarpPageIndicator` |
-| Total items | `# Dots` | `pageCount` | `pageCount` | `pageCount` |
-| Current item | `Active dot` | `selectedPage` | `selectedPage` | `currentPage` |
-| Index base | 1-based | 1-based | 0-based | 0-based |
+<div class="max-w-full overflow-x-auto">
+  <table>
+    <thead>
+      <tr>
+        <th>Concept</th>
+        <th>Figma</th>
+        <th>Web (Elements / React 19)</th>
+        <th>iOS</th>
+        <th>Android</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Component</td>
+        <td>Page indicator</td>
+        <td><code>w-page-indicator</code> / <code>PageIndicator</code></td>
+        <td><code>Warp.PageIndicator</code></td>
+        <td><code>WarpPageIndicator</code></td>
+      </tr>
+      <tr>
+        <td>Total items</td>
+        <td><code># Dots</code></td>
+        <td><code>pageCount</code></td>
+        <td><code>pageCount</code></td>
+        <td><code>pageCount</code></td>
+      </tr>
+      <tr>
+        <td>Current item</td>
+        <td><code>Active dot</code></td>
+        <td><code>selectedPage</code></td>
+        <td><code>selectedPage</code></td>
+        <td><code>currentPage</code></td>
+      </tr>
+      <tr>
+        <td>Index base</td>
+        <td>1-based</td>
+        <td>1-based</td>
+        <td>0-based</td>
+        <td>0-based</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Convert the current position deliberately when sharing state between platforms. For example, the third page is `3` on Web and `2` on iOS and Android.
 
