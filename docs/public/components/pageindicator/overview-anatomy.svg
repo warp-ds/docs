@@ -1,0 +1,16 @@
+<svg width="412" height="220" viewBox="0 0 412 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="412" height="220" fill="#F6F6F6"/>
+
+  <path d="M160 62V78L179 113" stroke="#BE3830" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M252 62V78L215 113" stroke="#BE3830" stroke-width="3" stroke-linejoin="round"/>
+
+  <circle cx="179" cy="115" r="5" fill="#0063FB"/>
+  <circle cx="197" cy="115" r="5" fill="#DEDEE3"/>
+  <circle cx="215" cy="115" r="5" fill="#DEDEE3"/>
+  <circle cx="233" cy="115" r="5" fill="#DEDEE3"/>
+
+  <circle cx="160" cy="42" r="20" fill="#BE3830"/>
+  <text x="160" y="42.5" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">1</text>
+  <circle cx="252" cy="42" r="20" fill="#BE3830"/>
+  <text x="252" y="42.5" dominant-baseline="middle" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="white">2</text>
+</svg>
