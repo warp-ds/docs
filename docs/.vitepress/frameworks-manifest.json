@@ -26,6 +26,12 @@
         "file": "vue"
       }
     ],
+    "alert-dialog": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
     "badge": [
       {
         "name": "Android",
@@ -198,6 +204,12 @@
       {
         "name": "React",
         "file": "react"
+      }
+    ],
+    "confirmation-dialog": [
+      {
+        "name": "iOS",
+        "file": "ios"
       }
     ],
     "date-picker": [
