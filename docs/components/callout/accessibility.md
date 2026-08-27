@@ -17,9 +17,7 @@ Two consequences follow, and they shape everything on this page:
 
 ### Web
 
-`w-attention` renders a `div` with `role="img"` and a localized `aria-label` describing the type and arrow direction — for example "callout speech bubble pointing up" or "highlighted speech bubble pointing right". Translations ship for English, Norwegian, Swedish, Danish, and Finnish.
-
-That role and label sit on a wrapper around the **arrow**, not around the message. They tell a screen reader user that a speech bubble is present and which way it points; they say nothing about what it is pointing at. The message itself is your slotted content, with whatever semantics you give it.
+`w-attention` includes built-in accessible descriptions that indicate the component type and which direction the arrow is pointing (translated into English, Norwegian, Swedish, Danish, and Finnish).
 
 To connect the message to its target, give the message element an `id` and put `aria-details` on the target:
 
@@ -29,8 +27,6 @@ To connect the message to its target, give the message element an `id` and put `
   <w-button slot="target" aria-details="boost-callout" variant="secondary">Boost ad</w-button>
 </w-attention>
 ```
-
-Wire this up yourself. Elements v2.8.0 set `aria-details` on the target automatically; that behaviour was removed in v2.9.0, so on any current version an unwired callout has no programmatic link to its target at all.
 
 If the default "speech bubble pointing up" announcement is noise in your context, pass an empty `role` and your own `aria-label` — but only after you have connected the message with `aria-details`, or the message becomes orphaned.
 
