@@ -26,12 +26,6 @@
         "file": "vue"
       }
     ],
-    "alert-dialog": [
-      {
-        "name": "iOS",
-        "file": "ios"
-      }
-    ],
     "badge": [
       {
         "name": "Android",

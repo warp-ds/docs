@@ -2,7 +2,7 @@
 
 A confirmation dialog presents a set of choices in response to a user-initiated action. It uses the platform's native action sheet mechanism and appears anchored to the bottom of the screen on iPhone, or as a popover on iPad and Mac.
 
-See also [Alert dialog](/components/alert-dialog/overview.md), [Modal](/components/modal/overview.md).
+See also [Alert](/components/alert/overview.md), [Modal](/components/modal/overview.md).
 
 <ComponentsStatus />
 

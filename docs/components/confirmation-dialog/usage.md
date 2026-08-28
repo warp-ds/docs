@@ -2,7 +2,7 @@
 
 A confirmation dialog presents a set of choices in response to a user-initiated action.
 
-See also [Alert dialog](/components/alert-dialog/overview.md), [Modal](/components/modal/overview.md).
+See also [Alert](/components/alert/overview.md), [Modal](/components/modal/overview.md).
 
 <ComponentsStatus />
 
@@ -23,9 +23,9 @@ See also [Alert dialog](/components/alert-dialog/overview.md), [Modal](/componen
 
 ### When not to use
 
-- For single-option confirmations ("Are you sure?"). Use [Alert dialog](/components/alert-dialog/overview.md) — it is better suited for binary yes/no decisions.
-- For displaying information the user needs to read before deciding. Use [Alert dialog](/components/alert-dialog/overview.md), which has a message field.
-- For collecting input. Use [Alert dialog](/components/alert-dialog/overview.md), which supports embedded text fields.
+- For single-option confirmations ("Are you sure?"). Use [Alert](/components/alert/overview.md) — it is better suited for binary yes/no decisions.
+- For displaying information the user needs to read before deciding. Use [Alert](/components/alert/overview.md), which has a message field.
+- For collecting input. Use [Alert](/components/alert/overview.md), which supports embedded text fields.
 - For navigating to a new context. Use a standard navigation push or [Modal](/components/modal/overview.md).
 - Whenever the user has not triggered an action. An unsolicited dialog is an interruption with no payoff.
 
