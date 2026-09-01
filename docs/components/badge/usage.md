@@ -24,14 +24,14 @@ Badges label a small piece of metadata—such as a status, category, price, or s
 ## Behaviour
 
 <DoDont>
-<Do imgurl="/docs/components/badge/DoDonts/usage-non-interactive-do.svg" imgalt="A listing card uses an Available badge for status and a blue View listing button for the action.">
+<Do imgurl="/docs/components/badge/DoDonts/usage-non-interactive-do.png" imgalt="A listing card uses an Available badge for status and a blue View listing button for the action.">
 
 Use a badge for metadata and a Button or Link for the action.
 
 **Why**: Interactive controls provide the expected focus, hover, pressed, and assistive-technology behaviour.
 
 </Do>
-<Do not imgurl="/docs/components/badge/DoDonts/usage-non-interactive-dont.svg" imgalt="A listing card incorrectly presents View listing as a pale blue badge with a pointer cursor.">
+<Do not imgurl="/docs/components/badge/DoDonts/usage-non-interactive-dont.png" imgalt="A listing card incorrectly presents View listing as a pale blue badge.">
 
 Use a badge as the action itself.
 
@@ -54,14 +54,14 @@ Badges can stand alone or sit inside a parent container such as a card. When you
 ## Content guidelines
 
 <DoDont>
-<Do imgurl="/docs/components/badge/DoDonts/usage-concise-labels-do.svg" imgalt="A listing uses the concise badge label Sold.">
+<Do imgurl="/docs/components/badge/DoDonts/usage-concise-labels-do.png" imgalt="A listing uses the concise badge label Sold.">
 
 Use a short, descriptive label such as "Sold".
 
 **Why**: A compact label stays scannable and leaves room for the content it describes.
 
 </Do>
-<Do not imgurl="/docs/components/badge/DoDonts/usage-concise-labels-dont.svg" imgalt="A listing uses the sentence This item is no longer available as a badge, crowding the price.">
+<Do not imgurl="/docs/components/badge/DoDonts/usage-concise-labels-dont.png" imgalt="A listing uses the sentence This item is no longer available as a badge, crowding the price.">
 
 Write a sentence such as "This item is no longer available" inside a badge.
 
@@ -73,14 +73,14 @@ Write a sentence such as "This item is no longer available" inside a badge.
 ## Best practices
 
 <DoDont>
-<Do imgurl="/docs/components/badge/DoDonts/usage-semantic-colour-do.svg" imgalt="A rejected listing uses the negative red badge variant.">
+<Do imgurl="/docs/components/badge/DoDonts/usage-semantic-colour-do.png" imgalt="A rejected listing uses the negative red badge variant.">
 
 Match the variant to the meaning. Use the negative variant for "Rejected".
 
 **Why**: The colour supports the label and helps people recognise the outcome quickly.
 
 </Do>
-<Do not imgurl="/docs/components/badge/DoDonts/usage-semantic-colour-dont.svg" imgalt="A rejected listing incorrectly uses the positive green badge variant.">
+<Do not imgurl="/docs/components/badge/DoDonts/usage-semantic-colour-dont.png" imgalt="A rejected listing incorrectly uses the positive green badge variant.">
 
 Choose a variant for decoration. A positive "Rejected" badge contradicts its label.
 
@@ -90,14 +90,14 @@ Choose a variant for decoration. A positive "Rejected" badge contradicts its lab
 </DoDont>
 
 <DoDont>
-<Do imgurl="/docs/components/badge/DoDonts/usage-one-badge-do.svg" imgalt="A car listing uses one Sponsored badge and presents dealer and delivery details as regular text.">
+<Do imgurl="/docs/components/badge/DoDonts/usage-one-badge-do.png" imgalt="A car listing uses one Sponsored badge and presents dealer and delivery details as regular text.">
 
 Show one badge with the most important distinction and leave supporting details as regular text.
 
 **Why**: A single badge preserves a clear visual priority.
 
 </Do>
-<Do not imgurl="/docs/components/badge/DoDonts/usage-one-badge-dont.svg" imgalt="A car listing is crowded with Sponsored, Dealer, Delivery, and EV badges.">
+<Do not imgurl="/docs/components/badge/DoDonts/usage-one-badge-dont.png" imgalt="A car listing is crowded with Sponsored, Dealer, Delivery, and EV badges.">
 
 Turn every attribute into a badge.
 
