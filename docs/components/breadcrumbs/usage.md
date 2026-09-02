@@ -18,7 +18,7 @@ Do not use breadcrumbs to represent browsing history, filters, tabs, or progress
 
 <DoDont type="do">
 
-![A breadcrumb with stable hierarchy levels: Motor, Cars, and Electric cars.](/components/breadcrumbs/DoDonts/usage-hierarchy-do.jpg)
+![A breadcrumb with stable hierarchy levels: Motor, Cars, and Electric cars.](/components/breadcrumbs/DoDonts/usage-hierarchy-do.png)
 
 Use stable levels from the information architecture.
 
@@ -26,7 +26,7 @@ Use stable levels from the information architecture.
 
 <DoDont type="dont">
 
-![A breadcrumb using Search, Results, and Saved, which describes browsing history rather than hierarchy.](/components/breadcrumbs/DoDonts/usage-hierarchy-dont.jpg)
+![A breadcrumb using Search, Results, and Saved, which describes browsing history rather than hierarchy.](/components/breadcrumbs/DoDonts/usage-hierarchy-dont.png)
 
 Don't use transient actions or browsing history as hierarchy levels.
 
@@ -54,7 +54,7 @@ The current page can be omitted when the page heading immediately below the trai
 
 <DoDont type="do">
 
-![A breadcrumb where Oslo is the final current-page text and is not a link.](/components/breadcrumbs/DoDonts/usage-current-page-do.jpg)
+![A breadcrumb where Oslo is the final current-page text and is not a link.](/components/breadcrumbs/DoDonts/usage-current-page-do.png)
 
 Show the current page as the final non-interactive item.
 
@@ -62,7 +62,7 @@ Show the current page as the final non-interactive item.
 
 <DoDont type="dont">
 
-![A breadcrumb where Oslo is styled as a link to the page the user is already viewing.](/components/breadcrumbs/DoDonts/usage-current-page-dont.jpg)
+![A breadcrumb where Oslo is styled as a link to the page the user is already viewing.](/components/breadcrumbs/DoDonts/usage-current-page-dont.png)
 
 Don't link the current page back to itself.
 
@@ -90,7 +90,7 @@ Avoid allowing long trails to wrap into several lines. Test the actual content a
 
 <DoDont type="do">
 
-![A compact breadcrumb showing the nearest parent, Cars, followed by the current page, Electric cars.](/components/breadcrumbs/DoDonts/usage-responsive-do.jpg)
+![A compact breadcrumb showing the nearest parent, Cars, followed by the current page, Electric cars.](/components/breadcrumbs/DoDonts/usage-responsive-do.png)
 
 Prioritise the nearest parent and current page when space is limited.
 
@@ -98,7 +98,7 @@ Prioritise the nearest parent and current page when space is limited.
 
 <DoDont type="dont">
 
-![A long breadcrumb squeezed into a narrow layout and wrapping over several lines.](/components/breadcrumbs/DoDonts/usage-responsive-dont.jpg)
+![A long breadcrumb squeezed into a narrow layout and wrapping over several lines.](/components/breadcrumbs/DoDonts/usage-responsive-dont.png)
 
 Don't squeeze a long trail into a narrow layout and let it wrap repeatedly.
 
