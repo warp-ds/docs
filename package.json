@@ -12,8 +12,10 @@
     "generate-frameworks": "node scripts/generate-frameworks.js",
     "lint:check": "pnpm biome lint .",
     "lint": "pnpm biome lint --write .",
+    "review:docs": "node scripts/review-docs.mjs",
     "serve": "vitepress serve docs",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:review-docs": "node --test scripts/review-docs.test.mjs",
     "prepare": "husky"
   },
   "type": "module",

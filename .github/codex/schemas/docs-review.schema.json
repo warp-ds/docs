@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["summary", "findings", "checklist"],
+  "properties": {
+    "summary": {
+      "type": "string",
+      "description": "One or two sentences stating whether the documentation is ready to merge."
+    },
+    "findings": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["priority", "title", "path", "line", "body"],
+        "properties": {
+          "priority": {
+            "type": "string",
+            "enum": ["P1", "P2", "P3"]
+          },
+          "title": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "description": "Repository-relative path to a file changed by the pull request."
+          },
+          "line": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "A changed line number on the right-hand side of the pull request diff."
+          },
+          "body": {
+            "type": "string",
+            "description": "Evidence, impact, and the specific correction."
+          }
+        }
+      }
+    },
+    "checklist": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "component_structure",
+        "illustrations_and_assets",
+        "images_and_alt_text",
+        "source_accuracy",
+        "accessibility",
+        "links_examples_and_completeness"
+      ],
+      "properties": {
+        "component_structure": { "$ref": "#/$defs/result" },
+        "illustrations_and_assets": { "$ref": "#/$defs/result" },
+        "images_and_alt_text": { "$ref": "#/$defs/result" },
+        "source_accuracy": { "$ref": "#/$defs/result" },
+        "accessibility": { "$ref": "#/$defs/result" },
+        "links_examples_and_completeness": { "$ref": "#/$defs/result" }
+      }
+    }
+  },
+  "$defs": {
+    "result": {
+      "type": "string",
+      "enum": ["Pass", "Fail", "Not applicable", "Unable to verify"]
+    }
+  }
+}

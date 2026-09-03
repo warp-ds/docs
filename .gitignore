@@ -4,3 +4,6 @@ dist/
 .idea/
 settings.json
 .DS_Store
+.review-checklist.md
+.review-sources/
+codex-review.md
