@@ -5,6 +5,8 @@ The `docs-review.yml` workflow runs two reviews for every non-draft pull request
 1. `scripts/review-docs.mjs` checks deterministic structure, asset, markup, and PNG transparency rules.
 2. OpenAI Codex uses `gpt-5.6-sol` in a read-only sandbox to review the diff against the WARP Elements, React, Vue, iOS, and Android source repositories.
 
+The WARP-specific review policy lives in `prompts/docs-review.md`, so it applies only to this CI reviewer and is not inherited by other agents working in the repository.
+
 ## Repository setup
 
 Add an Actions repository secret named `OPENAI_API_KEY` containing an OpenAI project API key with access to `gpt-5.6-sol`.
