@@ -111,6 +111,7 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          codex-version: '0.150.1'
           model: gpt-5.6-sol
           effort: high
           sandbox: read-only
