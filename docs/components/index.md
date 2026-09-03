@@ -7,5 +7,3 @@ editLink: false
 Explore All WARP Components Across Figma, React, Vue, Elements, iOS, and Android.
 
 <DsOverview type="components" />
-
-<!-- DEBUG-docs-review-smoke -->
