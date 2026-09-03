@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: docs-review-${{ github.event.pull_request.number }}
+  group: docs-review-stable-${{ github.event.pull_request.number }}
   cancel-in-progress: true
 
 jobs:
@@ -105,7 +105,8 @@ jobs:
 
       - name: Review documentation with GPT-5.6 Sol
         id: codex
-        uses: openai/codex-action@v1
+        # v1.12 can leave GitHub-hosted runners stuck after Codex completes.
+        uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1.11
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
         with:
