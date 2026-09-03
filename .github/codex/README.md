@@ -15,8 +15,6 @@ The workflow deliberately does not expose that key to pull requests from forks. 
 
 After each push, the workflow updates one summary comment and creates a GitHub review with findings attached to changed lines. It creates at most one inline review for each head commit, so rerunning a workflow does not duplicate comments. A finding with an invalid or outdated line is kept in the summary instead of failing the review job.
 
-The deterministic `WARP docs checklist` job can be made a required status check in the `main` branch protection rules.
-
 ## Run the checklist locally
 
 Compare the current checkout with `main`:

@@ -74,6 +74,19 @@ Description.
   assert.ok(findings.some((finding) => finding.message.includes('Accessibility pages must not contain')));
 });
 
+test('audits images on non-core component pages without requiring core-page structure', () => {
+  const findings = auditMarkdown(
+    'docs/components/example/styling.md',
+    `# Styling
+
+![](/components/missing.svg)`,
+    { requireStructure: false },
+  );
+  assert.ok(findings.some((finding) => finding.message.includes('Referenced image does not exist')));
+  assert.ok(!findings.some((finding) => finding.message.includes('<ComponentsStatus />')));
+  assert.ok(!findings.some((finding) => finding.message.includes('<component-questions />')));
+});
+
 test('does not report unchanged legacy findings', () => {
   const legacy = [{ level: 'error', file: 'usage.md', line: 10, message: 'Image is missing alt text.' }];
   const current = [
@@ -81,4 +94,10 @@ test('does not report unchanged legacy findings', () => {
     { level: 'error', file: 'usage.md', line: 20, message: 'Image is missing alt text.' },
   ];
   assert.deepEqual(introducedFindings(current, legacy), [current[1]]);
+});
+
+test('reports a finding on an added line when an identical legacy finding was removed', () => {
+  const legacy = [{ level: 'error', file: 'usage.md', line: 10, message: 'Image is missing alt text.' }];
+  const introduced = { level: 'error', file: 'usage.md', line: 30, message: 'Image is missing alt text.' };
+  assert.deepEqual(introducedFindings([introduced], legacy, new Set([30])), [introduced]);
 });

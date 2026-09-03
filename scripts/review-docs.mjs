@@ -46,6 +46,21 @@ function addedLines(base, file) {
     .map((line) => line.slice(1));
 }
 
+function addedLineNumbers(base, file) {
+  const diff = git(['diff', '--unified=0', base, 'HEAD', '--', file]);
+  const lines = new Set();
+  let current = 0;
+  for (const line of diff.split('\n')) {
+    const header = line.match(/^@@ -\d+(?:,\d+)? \+(\d+)(?:,\d+)? @@/);
+    if (header) current = Number(header[1]);
+    else if (line.startsWith('+') && !line.startsWith('+++')) {
+      lines.add(current);
+      current += 1;
+    } else if (!line.startsWith('-') && !line.startsWith('\\')) current += 1;
+  }
+  return lines;
+}
+
 function fileAt(ref, file) {
   try {
     return execFileSync('git', ['show', `${ref}:${file}`], {
@@ -59,7 +74,8 @@ function fileAt(ref, file) {
 }
 
 function lineNumber(content, search, start = 0) {
-  const index = typeof search === 'string' ? content.indexOf(search, start) : content.slice(start).search(search) + start;
+  const index =
+    typeof search === 'string' ? content.indexOf(search, start) : content.slice(start).search(search) + start;
   if (index < start) return 1;
   return content.slice(0, index).split('\n').length;
 }
@@ -184,7 +200,12 @@ function checkDoDont(file, content, add) {
   const wrapperOpenCount = (content.match(/<DoDont>/g) || []).length;
   const wrapperCloseCount = (content.match(/<\/DoDont>/g) || []).length;
   if (wrapperOpenCount !== wrapperCloseCount || wrappers.length !== wrapperOpenCount) {
-    add('error', file, lineNumber(content, '<DoDont>'), 'Every <DoDont> must have a matching closing tag and may not be nested.');
+    add(
+      'error',
+      file,
+      lineNumber(content, '<DoDont>'),
+      'Every <DoDont> must have a matching closing tag and may not be nested.',
+    );
   }
 
   for (const wrapper of wrappers) {
@@ -202,17 +223,21 @@ function checkDoDont(file, content, add) {
   if (stray) add('error', file, lineNumber(content, stray[0]), '<Do> and <Do not> must be wrapped in <DoDont>.');
 }
 
-function checkMarkdown(file, content, add) {
-  if (!/^#\s+\S+/m.test(content)) add('error', file, 1, 'Component page needs an H1 title.');
-  if (!/<ComponentsStatus\s*\/>/.test(content)) add('error', file, 1, 'Component page needs <ComponentsStatus />.');
-  if (!/<component-questions\s*\/>/.test(content)) add('error', file, 1, 'Component page needs <component-questions />.');
+function checkMarkdown(file, content, add, { requireStructure = true } = {}) {
+  if (requireStructure) {
+    if (!/^#\s+\S+/m.test(content)) add('error', file, 1, 'Component page needs an H1 title.');
+    if (!/<ComponentsStatus\s*\/>/.test(content)) add('error', file, 1, 'Component page needs <ComponentsStatus />.');
+    if (!/<component-questions\s*\/>/.test(content))
+      add('error', file, 1, 'Component page needs <component-questions />.');
+  }
 
   checkDoDont(file, content, add);
   for (const image of extractImages(content)) {
     const line = lineNumber(content, image.syntax);
     if (image.doBlock && !image.url) add('error', file, line, '<Do> entries require imgurl.');
     if (image.alt === undefined) add('error', file, line, 'Image is missing alt text.');
-    else if (!image.decorative && !image.alt.trim()) add('error', file, line, 'Meaningful image alt text may not be empty.');
+    else if (!image.decorative && !image.alt.trim())
+      add('error', file, line, 'Meaningful image alt text may not be empty.');
     if (image.url) {
       const path = resolveAssetPath(file, image.url);
       if (path && !existsSync(path)) add('error', file, line, `Referenced image does not exist: ${image.url}`);
@@ -220,22 +245,28 @@ function checkMarkdown(file, content, add) {
   }
 }
 
-export function auditMarkdown(file, content) {
+export function auditMarkdown(file, content, options) {
   const findings = [];
-  checkMarkdown(file, content, (level, findingFile, line, message) => {
-    findings.push({ level, file: findingFile, line, message });
-  });
+  checkMarkdown(
+    file,
+    content,
+    (level, findingFile, line, message) => {
+      findings.push({ level, file: findingFile, line, message });
+    },
+    options,
+  );
   return findings;
 }
 
-export function introducedFindings(current, previous) {
+export function introducedFindings(current, previous, added = new Set()) {
   const previousCounts = new Map();
   for (const finding of previous) {
-    const key = `${finding.level}\0${finding.message}`;
+    const key = `${finding.level}\0${finding.file}\0${finding.message}`;
     previousCounts.set(key, (previousCounts.get(key) || 0) + 1);
   }
   return current.filter((finding) => {
-    const key = `${finding.level}\0${finding.message}`;
+    if (added.has(finding.line)) return true;
+    const key = `${finding.level}\0${finding.file}\0${finding.message}`;
     const remaining = previousCounts.get(key) || 0;
     if (!remaining) return true;
     previousCounts.set(key, remaining - 1);
@@ -246,13 +277,23 @@ export function introducedFindings(current, previous) {
 function checkNewRaster(file, add) {
   const extension = extname(file).toLowerCase();
   if (extension === '.jpg' || extension === '.jpeg') {
-    add('error', file, 1, 'New component illustrations must support transparency; use SVG or transparent PNG instead of JPEG.');
+    add(
+      'error',
+      file,
+      1,
+      'New component illustrations must support transparency; use SVG or transparent PNG instead of JPEG.',
+    );
     return;
   }
   if (extension !== '.png') return;
   try {
     if (!pngHasTransparentPixel(readFileSync(join(ROOT, file)))) {
-      add('error', file, 1, 'New PNG component illustration has no transparent pixels. Use a transparent asset or SVG.');
+      add(
+        'error',
+        file,
+        1,
+        'New PNG component illustration has no transparent pixels. Use a transparent asset or SVG.',
+      );
     }
   } catch (error) {
     add('error', file, 1, `Could not verify PNG transparency: ${error.message}`);
@@ -330,13 +371,16 @@ export function run(base) {
       if (!existsSync(join(ROOT, file))) {
         const remainingDocs = git(['ls-tree', '-r', '--name-only', 'HEAD', `docs/components/${docMatch[1]}`]);
         if (remainingDocs) add('error', file, 1, `Component is missing required ${docMatch[2]}.`);
-      } else {
-        const current = auditMarkdown(file, readFileSync(join(ROOT, file), 'utf8'));
-        const previousContent = fileAt(base, file);
-        const previous = previousContent === null ? [] : auditMarkdown(file, previousContent);
-        for (const finding of introducedFindings(current, previous)) {
-          add(finding.level, finding.file, finding.line, finding.message);
-        }
+      }
+    }
+
+    if (docMatch && file.endsWith('.md') && existsSync(join(ROOT, file))) {
+      const options = { requireStructure: CORE_PAGES.includes(docMatch[2]) };
+      const current = auditMarkdown(file, readFileSync(join(ROOT, file), 'utf8'), options);
+      const previousContent = fileAt(base, file);
+      const previous = previousContent === null ? [] : auditMarkdown(file, previousContent, options);
+      for (const finding of introducedFindings(current, previous, addedLineNumbers(base, file))) {
+        add(finding.level, finding.file, finding.line, finding.message);
       }
     }
 
