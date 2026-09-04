@@ -133,7 +133,9 @@ jobs:
       - name: Checkout trusted review publisher
         uses: actions/checkout@v6
         with:
-          ref: ${{ github.event.pull_request.base.sha }}
+          # An existing PR keeps the base SHA it was opened against. Read the
+          # publisher from the current protected default branch instead.
+          ref: ${{ github.event.repository.default_branch }}
           sparse-checkout: .github/codex/scripts
           persist-credentials: false
 
