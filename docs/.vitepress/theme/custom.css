@@ -297,6 +297,19 @@ html.dark body {
   height: auto;
 }
 
+/* Standalone plates (the option/variant grids on overview pages) size to
+   their image instead of stretching to the height of the text column
+   beside them. The image fills the plate width, so the plate height is
+   the image's own height at whatever width the column happens to be.
+   Excludes --figure, which stretches on purpose (see below). */
+.image-plate:not(.image-plate--figure) {
+  align-self: start;
+}
+
+.image-plate:not(.image-plate--figure) img {
+  width: 100%;
+}
+
 /* Figure plate, used by the do/don't and usage-example illustrations.
    Illustrations are authored at the column width (332px), so the image
    fills the plate edge to edge and renders 1:1 — no inner padding and
