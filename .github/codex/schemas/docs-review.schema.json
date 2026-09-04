@@ -1,68 +1,50 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["summary", "findings", "checklist"],
+  "required": ["summary", "comments"],
   "properties": {
     "summary": {
       "type": "string",
-      "description": "One or two sentences stating whether the documentation is ready to merge."
+      "minLength": 1,
+      "maxLength": 500,
+      "description": "A short closing reflection stating whether the documentation is ready and what matters most."
     },
-    "findings": {
+    "comments": {
       "type": "array",
-      "maxItems": 20,
+      "maxItems": 6,
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["priority", "title", "path", "line", "body"],
+        "required": ["path", "start_line", "line", "body", "replacement"],
         "properties": {
-          "priority": {
-            "type": "string",
-            "enum": ["P1", "P2", "P3"]
-          },
-          "title": {
-            "type": "string"
-          },
           "path": {
             "type": "string",
+            "minLength": 1,
             "description": "Repository-relative path to a file changed by the pull request."
+          },
+          "start_line": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "First changed line covered by the comment. Use the same value as line for a single-line comment."
           },
           "line": {
             "type": "integer",
             "minimum": 1,
-            "description": "A changed line number on the right-hand side of the pull request diff."
+            "description": "Last changed line covered by the comment on the right-hand side of the diff."
           },
           "body": {
             "type": "string",
-            "description": "Evidence, impact, and the specific correction."
+            "minLength": 1,
+            "maxLength": 700,
+            "description": "A concise explanation of the issue, why it matters, and what should change."
+          },
+          "replacement": {
+            "type": "string",
+            "maxLength": 4000,
+            "description": "Exact replacement for the selected lines, or an empty string when a safe edit cannot be supplied."
           }
         }
       }
-    },
-    "checklist": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "component_structure",
-        "illustrations_and_assets",
-        "images_and_alt_text",
-        "source_accuracy",
-        "accessibility",
-        "links_examples_and_completeness"
-      ],
-      "properties": {
-        "component_structure": { "$ref": "#/$defs/result" },
-        "illustrations_and_assets": { "$ref": "#/$defs/result" },
-        "images_and_alt_text": { "$ref": "#/$defs/result" },
-        "source_accuracy": { "$ref": "#/$defs/result" },
-        "accessibility": { "$ref": "#/$defs/result" },
-        "links_examples_and_completeness": { "$ref": "#/$defs/result" }
-      }
-    }
-  },
-  "$defs": {
-    "result": {
-      "type": "string",
-      "enum": ["Pass", "Fail", "Not applicable", "Unable to verify"]
     }
   }
 }

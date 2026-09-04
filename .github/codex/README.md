@@ -13,7 +13,7 @@ Add an Actions repository secret named `OPENAI_API_KEY` containing an OpenAI pro
 
 The workflow deliberately does not expose that key to pull requests from forks. The deterministic checklist still runs for forked pull requests, but the Codex review is skipped. If reviews are required for untrusted fork contributions, enable Codex automatic reviews for the repository instead of exposing an API key through `pull_request_target`.
 
-After each push, the workflow updates one summary comment and creates a GitHub review with findings attached to changed lines. It creates at most one inline review for each head commit, so rerunning a workflow does not duplicate comments. A finding with an invalid or outdated line is kept in the summary instead of failing the review job.
+After each push, the workflow submits one concise GitHub review. It attaches up to six comments to changed lines, renders exact replacements as one-click suggestions, and ends with a short reflection instead of a repeated findings list or checklist. It creates at most one review for each head commit, so rerunning a workflow does not duplicate comments.
 
 ## Run the checklist locally
 
