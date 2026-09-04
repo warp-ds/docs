@@ -90,14 +90,12 @@ jobs:
           path: .review-sources/warp-android
           persist-credentials: false
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Set up Node
-        uses: actions/setup-node@v6
+      - name: Set up pnpm and Node
+        uses: pnpm/setup@v2
         with:
-          node-version: lts/*
-          cache: pnpm
+          runtime: node@lts
+          cache: true
+          install: false
 
       - name: Install published documentation dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
@@ -139,12 +137,24 @@ jobs:
           sparse-checkout: .github/codex/scripts
           persist-credentials: false
 
+      - name: Create WARP Docs Reviewer token
+        id: review-app-token
+        if: vars.WARP_DOCS_REVIEW_APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.WARP_DOCS_REVIEW_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WARP_DOCS_REVIEW_APP_PRIVATE_KEY }}
+          permission-contents: read
+          permission-pull-requests: write
+
       - name: Post pull request review
         uses: actions/github-script@v8
         env:
           CODEX_REVIEW: ${{ needs.review.outputs.final_message }}
         with:
-          github-token: ${{ github.token }}
+          # A configured GitHub App gives reviews their own name and avatar.
+          # Keep the built-in token as a fallback while the app is being set up.
+          github-token: ${{ steps.review-app-token.outputs.token || github.token }}
           script: |
             const { postReview } = require(
               `${process.env.GITHUB_WORKSPACE}/.github/codex/scripts/post-review.cjs`,

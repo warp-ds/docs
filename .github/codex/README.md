@@ -13,6 +13,15 @@ Add an Actions repository secret named `OPENAI_API_KEY` containing an OpenAI pro
 
 The workflow deliberately does not expose that key to pull requests from forks. The deterministic checklist still runs for forked pull requests, but the Codex review is skipped. If reviews are required for untrusted fork contributions, enable Codex automatic reviews for the repository instead of exposing an API key through `pull_request_target`.
 
+### Optional reviewer name and avatar
+
+By default, GitHub attributes submitted reviews to `github-actions[bot]`. To give the reviewer its own identity, create a GitHub App (for example, **WARP Docs Reviewer**), set its avatar, give it read-only **Contents** and read/write **Pull requests** repository permissions, and install it only on this repository. Then configure:
+
+- Actions variable `WARP_DOCS_REVIEW_APP_CLIENT_ID` with the app's client ID.
+- Actions secret `WARP_DOCS_REVIEW_APP_PRIVATE_KEY` with the complete generated private key.
+
+The publishing job will then create a repository-scoped installation token and submit reviews as the app. It falls back to `github-actions[bot]` while the client ID variable is absent; once the variable is added, the private-key secret is required.
+
 After each push, the workflow submits one concise GitHub review. It attaches up to six comments to changed lines, renders exact replacements as one-click suggestions, and ends with a short reflection instead of a repeated findings list or checklist. It creates at most one review for each head commit, so rerunning a workflow does not duplicate comments.
 
 ## Run the checklist locally
