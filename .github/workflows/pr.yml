@@ -2,7 +2,7 @@ name: Test
 
 on:
   pull_request:
-    target: [main]
+    branches: [main]
 
 permissions:
   contents: read
@@ -25,5 +25,7 @@ jobs:
         run: pnpm install
       - name: Lint
         run: pnpm lint
+      - name: Test documentation review
+        run: pnpm test:review-docs
       - name: Build with VitePress
         run: pnpm build
