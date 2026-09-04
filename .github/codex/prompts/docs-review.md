@@ -26,11 +26,16 @@ Review only problems introduced by the pull request. Read the complete affected 
 
 - Verify changed claims about props, defaults, variants, roles, ARIA, focus, keyboard interaction, animation, announcements, and requirements against the actual source under `.review-sources/` rather than inferring from another docs page.
 - Inspect the relevant repositories: `elements` and `react` for web/React, `vue` for Vue, `warp-ios` for iOS, and `warp-android` for Android. Keep platform behaviour separate where implementations differ.
-- Check the versions consumed by `package.json` and `pnpm-lock.yaml`. If current source differs from the published version used by the docs, make that distinction explicit instead of mixing behaviours from different releases.
+- Check the versions consumed by `package.json` and `pnpm-lock.yaml`. If current source differs from the published version, distinguish the behaviours in the review. Require a reader-facing version note only when the difference changes what readers should use or do; do not ask docs to describe how a claim was verified.
 - Confirm every documented component, prop, enum value, import, and code example exists. Check source defaults and package exports, including React wrappers, instead of assuming framework support.
 - Flag deprecated APIs that the pull request recommends and claims that an unavailable API is supported. Check `@deprecated`, `@Deprecated`, and Swift deprecation annotations.
-- When Figma, web, iOS, and Android use different names or support different variants, require a clear platform mapping rather than a universal claim.
+- When Figma, web, iOS, and Android use different names or support different variants, prefer one shared reader-facing concept with a clear platform mapping rather than a universal claim.
 - Distinguish implementation facts from standards guidance. If the implementation has a real accessibility gap, document it honestly with a workaround instead of claiming behaviour it does not provide.
+
+### Reader value and conceptual consistency
+
+- Each changed paragraph or recommendation should answer a realistic reader question or help someone decide, use, or test the component. Flag internal verification notes, speculative scenarios, and technically possible advice that has no plausible use case or rationale.
+- Check that guidance holds across every context it claims to cover. Flag hidden assumptions about the surrounding pattern, such as treating every paged sequence as a carousel. Prefer neutral terms and make context-specific instructions conditional.
 
 ### Review quality
 
@@ -55,7 +60,7 @@ Review only problems introduced by the pull request. Read the complete affected 
 
 ## What deserves a comment
 
-Comment only on actionable problems caused by the pull request. Focus on false or unsafe guidance, broken rendering or assets, incorrect component APIs or examples, missing required documentation, accessibility misinformation, and violations of the WARP illustration conventions. Skip praise, generic summaries of the diff, subjective copy preferences, and issues already caught by normal linting unless they have a concrete documentation impact.
+Comment only on actionable problems caused by the pull request. Focus on false or unsafe guidance, broken rendering or assets, incorrect component APIs or examples, missing required documentation, accessibility misinformation, and violations of the WARP illustration conventions. Skip praise, generic summaries of the diff, taste-only copy preferences, and issues already caught by normal linting unless they have a concrete documentation impact. Unsupported rationale, hidden assumptions, and irrelevant process details are substantive reader problems, not subjective preferences.
 
 ## Writing style
 
@@ -65,7 +70,7 @@ Comment only on actionable problems caused by the pull request. Focus on false o
 - Do not use priority labels, severity codes, finding titles, checklists, or headings in inline comments.
 - Do not repeat the same issue in multiple places. Combine closely related evidence into the most useful comment.
 - When the exact replacement is clear and safe, provide it in `replacement` so GitHub can render a one-click suggestion. The replacement must fully replace the selected lines, use valid repository syntax, and contain no Markdown fence. Use an empty string when the fix needs judgment, spans unchanged lines, or cannot be expressed safely as a direct edit.
-- Keep `summary` under 80 words. Say whether the docs look ready, identify the main theme of any comments, and add one brief reflection. Do not list every comment again.
+- Keep `summary` under 80 words. Say whether the docs look ready and identify the main theme of any comments without listing them again. Add at most one directly observed, non-blocking reflection about broader consistency, such as equivalent platform APIs using different names; do not turn accurate source naming into a docs blocker.
 
 ## Response format
 

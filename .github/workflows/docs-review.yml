@@ -139,12 +139,24 @@ jobs:
           sparse-checkout: .github/codex/scripts
           persist-credentials: false
 
+      - name: Create WARP Docs Reviewer token
+        id: review-app-token
+        if: vars.WARP_DOCS_REVIEW_APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.WARP_DOCS_REVIEW_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WARP_DOCS_REVIEW_APP_PRIVATE_KEY }}
+          permission-contents: read
+          permission-pull-requests: write
+
       - name: Post pull request review
         uses: actions/github-script@v8
         env:
           CODEX_REVIEW: ${{ needs.review.outputs.final_message }}
         with:
-          github-token: ${{ github.token }}
+          # A configured GitHub App gives reviews their own name and avatar.
+          # Keep the built-in token as a fallback while the app is being set up.
+          github-token: ${{ steps.review-app-token.outputs.token || github.token }}
           script: |
             const { postReview } = require(
               `${process.env.GITHUB_WORKSPACE}/.github/codex/scripts/post-review.cjs`,
