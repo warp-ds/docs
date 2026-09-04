@@ -90,14 +90,12 @@ jobs:
           path: .review-sources/warp-android
           persist-credentials: false
 
-      - name: Set up pnpm
-        uses: pnpm/action-setup@v6
-
-      - name: Set up Node
-        uses: actions/setup-node@v6
+      - name: Set up pnpm and Node
+        uses: pnpm/setup@v2
         with:
-          node-version: lts/*
-          cache: pnpm
+          runtime: node@lts
+          cache: true
+          install: false
 
       - name: Install published documentation dependencies
         run: pnpm install --frozen-lockfile --ignore-scripts
