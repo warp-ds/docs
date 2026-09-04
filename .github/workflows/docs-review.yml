@@ -29,9 +29,10 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
 
+      - name: Resolve current pull request base
+        run: echo "BASE_SHA=$(git rev-parse HEAD^1)" >> "$GITHUB_ENV"
+
       - name: Check component documentation
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: node scripts/review-docs.mjs --base "$BASE_SHA"
 
   review:
@@ -50,6 +51,9 @@ jobs:
           ref: refs/pull/${{ github.event.pull_request.number }}/merge
           fetch-depth: 0
           persist-credentials: false
+
+      - name: Resolve current pull request base
+        run: echo "BASE_SHA=$(git rev-parse HEAD^1)" >> "$GITHUB_ENV"
 
       - name: Checkout WARP Elements source
         uses: actions/checkout@v6
@@ -99,16 +103,12 @@ jobs:
         run: pnpm install --frozen-lockfile --ignore-scripts
 
       - name: Prepare deterministic checklist for Codex
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: node scripts/review-docs.mjs --base "$BASE_SHA" --report .review-checklist.md || true
 
       - name: Review documentation with GPT-5.6 Sol
         id: codex
         # v1.12 can leave GitHub-hosted runners stuck after Codex completes.
         uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1.11
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
         with:
           openai-api-key: ${{ secrets.OPENAI_API_KEY }}
           codex-version: '0.150.1'
