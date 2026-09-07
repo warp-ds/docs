@@ -1,0 +1,209 @@
+name: WARP docs review follow-up
+
+on:
+  workflow_run:
+    workflows: [WARP docs review follow-up request]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  prepare:
+    name: Validate follow-up request
+    if: github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      should_run: ${{ steps.prepare.outputs.should_run }}
+      pr_number: ${{ steps.prepare.outputs.pr_number }}
+      target_json: ${{ steps.prepare.outputs.target_json }}
+    steps:
+      - name: Checkout trusted follow-up handler
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          sparse-checkout: .github/codex/scripts
+          persist-credentials: false
+
+      - name: Download captured event
+        uses: actions/download-artifact@v5
+        with:
+          name: docs-review-followup-event-${{ github.event.workflow_run.id }}
+          path: .followup-event
+          github-token: ${{ github.token }}
+          run-id: ${{ github.event.workflow_run.id }}
+
+      - name: Re-fetch and validate the live GitHub comment
+        id: prepare
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { prepareFollowupFromFile } = require(
+              `${process.env.GITHUB_WORKSPACE}/.github/codex/scripts/followup.cjs`,
+            );
+            const result = await prepareFollowupFromFile({
+              github,
+              context,
+              eventPath: `${process.env.GITHUB_WORKSPACE}/.followup-event/event.json`,
+              contextPath: `${process.env.GITHUB_WORKSPACE}/review-followup-context.json`,
+            });
+            core.setOutput('should_run', String(result.shouldRun));
+            if (!result.shouldRun) {
+              core.notice(`Ignoring follow-up: ${result.reason}`);
+              return;
+            }
+            core.setOutput('pr_number', String(result.target.pullNumber));
+            core.setOutput('target_json', JSON.stringify(result.target));
+
+      - name: Preserve validated review context
+        if: steps.prepare.outputs.should_run == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-review-followup-context-${{ github.run_id }}
+          path: review-followup-context.json
+          retention-days: 1
+
+  review:
+    name: GPT-5.6 Sol follow-up
+    needs: prepare
+    if: needs.prepare.outputs.should_run == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      final_message: ${{ steps.codex.outputs.final-message }}
+    steps:
+      - name: Checkout pull request
+        uses: actions/checkout@v6
+        with:
+          ref: refs/pull/${{ needs.prepare.outputs.pr_number }}/merge
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Resolve current pull request base
+        run: echo "BASE_SHA=$(git rev-parse HEAD^1)" >> "$GITHUB_ENV"
+
+      - name: Checkout trusted reviewer instructions
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: .trusted-reviewer
+          sparse-checkout: |
+            .github/codex/prompts
+            .github/codex/schemas
+          persist-credentials: false
+
+      - name: Restore validated review context
+        uses: actions/download-artifact@v5
+        with:
+          name: docs-review-followup-context-${{ github.run_id }}
+          path: .
+
+      - name: Checkout WARP Elements source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/elements
+          path: .review-sources/elements
+          persist-credentials: false
+
+      - name: Checkout WARP React source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/react
+          path: .review-sources/react
+          persist-credentials: false
+
+      - name: Checkout WARP Vue source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/vue
+          path: .review-sources/vue
+          persist-credentials: false
+
+      - name: Checkout WARP iOS source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/warp-ios
+          path: .review-sources/warp-ios
+          persist-credentials: false
+
+      - name: Checkout WARP Android source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/warp-android
+          path: .review-sources/warp-android
+          persist-credentials: false
+
+      - name: Set up pnpm and Node
+        uses: pnpm/setup@v2
+        with:
+          runtime: node@lts
+          cache: true
+          install: false
+
+      - name: Install published documentation dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Answer with GPT-5.6 Sol
+        id: codex
+        # v1.12 can leave GitHub-hosted runners stuck after Codex completes.
+        uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1.11
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          codex-version: '0.150.1'
+          model: gpt-5.6-sol
+          effort: high
+          sandbox: read-only
+          safety-strategy: drop-sudo
+          codex-args: '["--ephemeral"]'
+          prompt-file: .trusted-reviewer/.github/codex/prompts/docs-review-followup.md
+          output-schema-file: .trusted-reviewer/.github/codex/schemas/docs-review-followup.schema.json
+          output-file: codex-followup.json
+
+  post-feedback:
+    name: Post follow-up
+    needs: [prepare, review]
+    if: needs.review.result == 'success' && needs.review.outputs.final_message != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout trusted follow-up publisher
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          sparse-checkout: .github/codex/scripts
+          persist-credentials: false
+
+      - name: Create WARP Docs Reviewer token
+        id: review-app-token
+        if: vars.WARP_DOCS_REVIEW_APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.WARP_DOCS_REVIEW_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WARP_DOCS_REVIEW_APP_PRIVATE_KEY }}
+          permission-contents: read
+          permission-pull-requests: write
+
+      - name: Reply to pull request comment
+        uses: actions/github-script@v8
+        env:
+          CODEX_FOLLOWUP: ${{ needs.review.outputs.final_message }}
+          FOLLOWUP_TARGET: ${{ needs.prepare.outputs.target_json }}
+        with:
+          github-token: ${{ steps.review-app-token.outputs.token || github.token }}
+          script: |
+            const { postFollowup } = require(
+              `${process.env.GITHUB_WORKSPACE}/.github/codex/scripts/followup.cjs`,
+            );
+            await postFollowup({
+              github,
+              context,
+              responseJson: process.env.CODEX_FOLLOWUP,
+              targetJson: process.env.FOLLOWUP_TARGET,
+            });

@@ -24,6 +24,20 @@ The publishing job will then create a repository-scoped installation token and s
 
 After each push, the workflow submits one concise GitHub review. It attaches up to six comments to changed lines, renders exact replacements as one-click suggestions, and ends with a short reflection instead of a repeated findings list or checklist. It creates at most one review for each head commit, so rerunning a workflow does not duplicate comments.
 
+## Continue a review conversation
+
+Organization members and repository collaborators can reply directly in a thread started by `warp-docs-reviewer[bot]`. The reviewer will automatically re-check the pull request and implementation evidence, then answer in the same thread. No command is needed in its own threads.
+
+To ask the reviewer something elsewhere on a component-documentation pull request, start a general pull request comment or another inline thread with `/warp-bot`, followed by the question. For example:
+
+```text
+/warp-bot Is this default the same in Elements and React?
+```
+
+Follow-ups run only when the pull request changes `docs/components/**` or `docs/public/components/**`, and only for comments from an organization member, repository owner, or collaborator. Bot comments are ignored to prevent loops. The reviewer can explain or correct an earlier finding and can attach a one-click suggestion when the active inline range supports an exact edit. It cannot edit branches, commit, approve, resolve, or merge pull requests.
+
+Comment events first pass through `docs-review-followup-request.yml`, which has no secrets and only captures the event as untrusted data. The `workflow_run`-based `docs-review-followup.yml` then runs from the protected default branch, re-fetches the live comment from GitHub, checks the author and command or thread owner, and only then makes the OpenAI and GitHub App credentials available. This separation prevents pull request changes from replacing the trusted prompt or publisher before secrets are used.
+
 ## Run the checklist locally
 
 Compare the current checkout with `main`:

@@ -1,0 +1,18 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reply", "replacement"],
+  "properties": {
+    "reply": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1200,
+      "description": "A concise, conversational answer to the pull request comment."
+    },
+    "replacement": {
+      "type": "string",
+      "maxLength": 4000,
+      "description": "Exact replacement for the anchored lines, or an empty string when no safe inline suggestion is available."
+    }
+  }
+}
