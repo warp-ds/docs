@@ -1,4 +1,10 @@
 const { REVIEW_MARKER_PREFIX, SUMMARY_MARKER, readReviewState, reviewHead } = require('./review-context.cjs');
+const {
+  planComponentIssues,
+  publishComponentIssues,
+  renderComponentLinks,
+  validateComponentFindings,
+} = require('./component-issues.cjs');
 
 function addedLines(patch) {
   const lines = new Set();
@@ -62,6 +68,8 @@ function parseReview(reviewJson) {
   }
   // Accept reviews from a workflow that started before the context schema landed.
   result.thread_updates ??= [];
+  result.component_issues ??= [];
+  validateComponentFindings(result.component_issues);
   if (
     !Array.isArray(result.thread_updates) ||
     result.thread_updates.some(
@@ -112,7 +120,7 @@ async function isCurrentPullRequest(github, params, headSha) {
   return pull.state === 'open' && !pull.draft && pull.head.sha === headSha;
 }
 
-async function postReview({ github, context, reviewJson, reviewContext }) {
+async function postReview({ github, context, reviewJson, reviewContext, componentGithub, componentContext }) {
   const result = parseReview(reviewJson);
   const headSha = context.payload.pull_request.head.sha;
   const params = { ...context.repo, pull_number: context.payload.pull_request.number };
@@ -143,6 +151,13 @@ async function postReview({ github, context, reviewJson, reviewContext }) {
     per_page: 100,
   });
   const changedLines = new Map(files.map((file) => [file.filename, addedLines(file.patch)]));
+  const componentPlans = await planComponentIssues({
+    github: componentGithub,
+    context,
+    findings: result.component_issues,
+    componentContext,
+    changedLines,
+  });
   const commentKey = (path, body) => `${path}\n${body.trim().replace(/\s+/g, ' ')}`;
   const existing = new Set(
     state.threads
@@ -194,15 +209,22 @@ async function postReview({ github, context, reviewJson, reviewContext }) {
     newComments = comments.length;
   }
 
+  const componentResults = await publishComponentIssues({
+    github: componentGithub,
+    context,
+    plans: componentPlans,
+    isCurrent: () => isCurrentPullRequest(github, params, headSha),
+  });
+  const componentLinks = renderComponentLinks(componentResults, state.summary?.body);
   const body =
-    `${SUMMARY_MARKER}\n${reviewMarker}\n**WARP Docs Reviewer**\n\n${result.summary.trim()}\n\n` +
+    `${SUMMARY_MARKER}\n${reviewMarker}\n**WARP Docs Reviewer**\n\n${result.summary.trim()}${componentLinks}\n\n` +
     `Reviewed [${headSha.slice(0, 7)}](https://github.com/${params.owner}/${params.repo}/commit/${headSha}).`;
   if (state.summary) {
     await github.rest.issues.updateComment({ ...context.repo, comment_id: state.summary.id, body });
   } else {
     await github.rest.issues.createComment({ ...context.repo, issue_number: params.pull_number, body });
   }
-  return { new_comments: newComments, resolved_threads: resolved.size };
+  return { new_comments: newComments, resolved_threads: resolved.size, component_issues: componentResults.length };
 }
 
 module.exports = {
