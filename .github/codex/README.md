@@ -19,6 +19,20 @@ Before publishing, the workflow checks the live PR head and the discussion snaps
 
 Reviews use a friendly, specific tone: acknowledge observed progress, explain what matters to readers, and distinguish new findings from existing questions. They do not give a "ready/not ready" verdict. The writing policy draws on [Humanizer](https://github.com/blader/humanizer) and [Writing Clearly and Concisely](https://github.com/obra/the-elements-of-style/tree/main/skills/writing-clearly-and-concisely): concrete language, useful detail, natural phrasing, and no formulaic praise. Their guidance is adapted into the trusted prompt; the workflow does not download skills at runtime.
 
+## Component bugs found through documentation
+
+The reviewer distinguishes incorrect documentation, implementation bugs, and unclear or intentional platform differences. A component bug can predate the PR, but it must be directly uncovered while checking a changed documentation claim. It does not search for unrelated component debt.
+
+With component issue reporting enabled, the workflow snapshots the checked-out source commits, open and closed issues, and the 100 most recently updated PRs from `warp-ds/elements`, `warp-ds/react`, `warp-ds/vue`, `warp-ds/warp-ios`, and `warp-ds/warp-android`. Issues are paginated separately from PRs. If a repository has more than 500 issues, the snapshot is marked incomplete and automatic filing is deferred until a complete duplicate check is available.
+
+The model can propose up to three component follow-ups. Filing a new issue requires an established expectation from a primary contract, design, or accessibility source; actual behavior and user impact; affected versions; a reproduction or failing test actually executed against the real implementation; and evidence that the bug is still present in current source. Source inspection alone is not a reproduction. Native or assistive-technology behavior that cannot be tested in the runner remains a review question.
+
+The publisher validates the target repository and changed docs location, verifies the quoted source lines at the captured commit, and checks whether the default branch moved during the review. It reuses matching existing issues, including closed issues, and uses a stable fingerprint to recognize the same bug across PRs and retries. If the issue inventory changed and the match is uncertain, it defers filing. Publishing jobs run serially with a queue so simultaneous reviews cannot race to create the same issue.
+
+Each new issue includes expected and actual behavior, reproduction evidence, affected versions, source permalinks, and a backlink to the docs PR. The maintained review summary links the component follow-ups and preserves those links on subsequent reviews. A bug already fixed upstream is linked to its fix or current source, with a reminder to check release availability. The publisher never closes or reopens component issues: resolving a docs discussion or documenting a workaround does not fix the implementation.
+
+The model remains read-only and has no issue-writing token. Component context collection uses a separate read-only app token; the publisher receives a token with issue-writing access limited to the five component repositories. It never executes commands from a proposed reproduction.
+
 ## Repository setup
 
 Add an Actions repository secret named `OPENAI_API_KEY` containing an OpenAI project API key with access to `gpt-6-astra`.
@@ -33,6 +47,14 @@ By default, GitHub attributes submitted reviews to `github-actions[bot]`. To giv
 - Actions secret `WARP_DOCS_REVIEW_APP_PRIVATE_KEY` with the complete generated private key.
 
 The publishing job will then create a repository-scoped installation token and submit reviews as the app. It falls back to `github-actions[bot]` while the client ID variable is absent; once the variable is added, the private-key secret is required.
+
+### Enable component issue reporting
+
+1. Give the **WARP Docs Reviewer** GitHub App read/write **Issues**, retaining read-only **Contents** and read/write **Pull requests**.
+2. Install or configure it on the `warp-ds` organization for exactly `docs`, `elements`, `react`, `vue`, `warp-ios`, and `warp-android`. Accept the updated installation permissions.
+3. Keep the existing app client ID and private-key settings, and set the `warp-ds/docs` Actions variable `WARP_DOCS_REVIEW_COMPONENT_ISSUES` to `true`.
+
+Enable the variable after the installation is ready. Without it, normal documentation reviews continue and component concerns stay in the review. Once enabled, a missing token permission or repository installation is an actionable workflow failure, so a failed issue publication cannot be mistaken for a completed review. A rerun can finish a partially published review without creating another component issue.
 
 GitHub converts the app's name into a lowercase handle with hyphens for its activity: **WARP Docs Reviewer** appears beside comments as `warp-docs-reviewer[bot]`. This is [GitHub's display behavior](https://docs.github.com/en/apps/creating-github-apps/registering-a-github-app/registering-a-github-app#registering-a-github-app), and does not mean the app name is misconfigured. The maintained summary uses **WARP Docs Reviewer** as its visible title. The context collector recognizes this app and the `github-actions[bot]` fallback, and only manages threads attached to reviews with the reviewer's marker.
 

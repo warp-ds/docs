@@ -6,6 +6,7 @@ settings.json
 .DS_Store
 .review-checklist.md
 .review-context.json
+.component-context.json
 .review-publish/
 .review-sources/
 .trusted-reviewer/
