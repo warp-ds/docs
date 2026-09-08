@@ -6,7 +6,7 @@ Radio buttons let users choose one value from a compact row of button-shaped opt
 
 ## General
 
-The button shape must retain radio semantics. Users need to hear the question, identify each answer, and know which answer is selected. Keep the native inputs and their associated labels; replacing them with clickable containers removes the browser's radio behaviour.
+The button shape must retain single-selection semantics. Users need to hear the question, identify each answer, and know which answer is selected. React and Vue use native radio inputs; keep those inputs and their associated labels. The iOS counterpart uses tappable text views and needs separate semantic and interaction checks.
 
 - Give the group a visible, programmatically associated label.
 - Keep every option's label visible and unique within the group.
@@ -40,20 +40,21 @@ For filters that refresh results immediately, communicate the result update with
 
 ## Visual accessibility
 
-- Keep focus distinguishable from selection. The shared component styles show a focus indicator around the group when an input has focus.
-- Preserve the selected option's filled shape and contrasting text. Check that the current answer remains recognisable in forced-colours mode, rather than depending on a particular brand colour.
+- Keep focus distinguishable from selection. The shared web styles show a focus indicator around the group when an input has focus.
+- The web button-style implementation may lose its visible selected cue in forced-colours mode: selection is shown through authored colours, with no distinct checked geometry or forced-colours treatment. Use standard [Radio](/components/radio/overview.md) when forced-colours support is required, and verify that its checked indicator remains visible.
 - Meet 4.5:1 contrast for regular text, or 3:1 for large text. Control boundaries and state indicators need 3:1 contrast against adjacent colours where required to identify the control or state.
 - Test at 200% text size and in a narrow viewport. Keep complete labels visible; use a vertical [Radio](/components/radio/overview.md) group when the connected row no longer fits.
 - Meet the [WCAG 2.2 minimum target size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html) of 24×24 CSS pixels unless an applicable exception is met. Aim for 44×44 CSS pixels for comfortable touch use, and check the small size particularly carefully.
 
-## Framework considerations
+## Platform-specific accessibility
 
 ### React
 
 `Toggle` with `type="radio-button"` renders a `fieldset` with the `radiogroup` role. Supply `title` for its visible `legend`. Each option receives a native radio input and an associated label.
 
 - Use `helpText` for group-level guidance. The fieldset references it with `aria-describedby`; when `invalid` is set, it is also referenced as the error message.
-- For controlled groups, keep `selected` to zero or one entry and replace it when `onChange` returns a new answer. Appending entries would make application state disagree with the single visible selection.
+- For controlled groups, keep `selected` to zero or one entry and replace it when `onChange` passes a new answer. Submit that entry from application state: React 2.3.0 does not map `option.value` to the native input value, so native `FormData` reports `"on"` instead.
+- `Toggle` has no `required` prop and supplies neither native nor ARIA required semantics. Make a required question clear in its visible title and validate the selected entry in application state. Use `invalid` and `helpText` to explain an error.
 - In React 2.3.0, `disabled` is not applied to the `radio-button` variant. If the flow needs unavailable options, use the standard [Radio](/components/radio/overview.md) component or present the unavailable choice as explanatory text outside the group. A dimmed appearance alone must not imply that an option is disabled.
 
 ### Vue
@@ -61,15 +62,38 @@ For filters that refresh results immediately, communicate the result update with
 `w-toggle` with `radio-button` uses `w-field` to render a fieldset. With multiple options it has the `radiogroup` role. The `label` becomes a legend associated through `aria-labelledby`, and each option's native radio input is associated with its visible label.
 
 - Use `v-model` for the selected value. Give separate groups distinct `id` values, because each group derives its shared input name from that ID.
-- Use `hint` for supporting text. Field validation connects hint and error text to the fieldset and exposes required and invalid states.
+- Use `hint` for supporting text. Field validation connects hint and error text to the fieldset and exposes required and invalid states. The `required` rule is handled by `w-field`; it is not a native `required` attribute on each radio input.
 - Vue passes `disabled` to the native inputs, including overrides supplied on individual options. Check the visual treatment too: the button-style labels do not have a dedicated disabled treatment matching the standard Radio control. Prefer standard Radio when unavailable options must remain visibly distinguishable.
+
+### iOS
+
+`Warp.ButtonGroup(singleSelect: true)` provides the button-shaped single-selection interaction. In Warp iOS 0.0.86, its options are `Text` views with `onTapGesture`; it does not explicitly add Radio roles, selected-state traits, group semantics or keyboard handling. Do not assume the web keyboard and announcement behaviour applies to it.
+
+- Test each option's name, activation and selected-state announcement with VoiceOver. Supply an accessible alternative if the interaction cannot be understood or operated.
+- Place the visible question and supporting text in the surrounding view, then verify that VoiceOver presents them with sufficient context.
+- Keep at least a 44×44pt activation area. The implementation uses fixed padding rather than an explicit minimum touch target.
+- Test long labels and Dynamic Type. The connected `HStack` has no built-in wrapping or scrolling mode.
+- Validate the selection in application state. The component has no built-in required, invalid or per-option disabled API.
+
+### Elements, React 19 and Android
+
+These libraries provide circular Radio controls rather than this button-shaped variant. Use the [Radio accessibility guidance](/components/radio/accessibility.md) for those implementations.
+
+### Known gaps
+
+| Implementation | Gap | Product workaround |
+| --- | --- | --- |
+| React and Vue button-style Radio | Selected appearance depends on colours that may be replaced in forced-colours mode. | Use standard Radio and verify the checked indicator. |
+| React 2.3.0 | `disabled` is ignored; option values and required semantics are not forwarded to native inputs. | Use standard Radio for disabled choices; validate and submit the selected application state. |
+| Vue 2.3.0 | Native disabled inputs lack a matching button-style disabled appearance. | Use standard Radio when unavailable options need a visible distinction. |
+| iOS 0.0.86 | Explicit selection semantics and keyboard support are absent from the implementation. | Verify VoiceOver and hardware-keyboard operation; provide an accessible alternative where needed. |
 
 ## Testing
 
-- **Keyboard**: Enter from both directions with and without a selection. Use all four arrow keys and Space. Check wrapping, visible focus, and that Tab leaves the group.
+- **Keyboard**: In React and Vue, enter from both directions with and without a selection. Use all four arrow keys and Space. Check wrapping, visible focus, and that Tab leaves the group. Test hardware-keyboard activation separately on iOS.
 - **Selection**: Change the answer repeatedly. Confirm that one option is checked and that the value used by the form or filter matches it.
-- **Screen readers**: Test with VoiceOver and Safari, and NVDA with a supported Windows browser. Listen for the group name, option names, checked state, help, and any validation error.
-- **Validation**: Submit a required choice without an answer. Check that the error explains how to continue and that focus reaches the group or its link in the error summary.
+- **Screen readers**: Test with VoiceOver on iOS and with Safari, and NVDA with a supported Windows browser. Listen for the group name, option names, checked state, help, and any validation error.
+- **Validation and submission**: In Vue, trigger field validation on a required choice without an answer. In React and iOS, validate the selected application state. Check that the error explains how to continue and focus reaches the right context. Confirm that the submitted value matches the visible selection.
 - **Layout and themes**: Check regular and small sizes, both width settings, long translations, enlarged text, light and dark themes, and forced colours. Labels must remain readable and selection must remain identifiable.
 - **Automated checks**: Run an accessibility scanner for names and relationships, then complete the keyboard and screen reader checks. A scanner cannot confirm that the interaction makes sense.
 

@@ -18,9 +18,11 @@ Use Radio buttons for a few short choices that users benefit from seeing togethe
 
 These controls have the selection behaviour of [Radio](/components/radio/overview.md), with a stronger visual treatment. The connected shape makes the options read as one set. Each option answers the same question; selecting it does not perform a separate action.
 
-Use [Button group](/components/button-group/overview.md) when composing a group of buttons or other controls. Use [Tabs](/components/tabs/overview.md) to navigate between content panels. A similar appearance does not make those interactions interchangeable.
+On web, use [Button group](/components/button-group/overview.md) when composing a group of buttons or other controls. On iOS, the single-selection mode of `Warp.ButtonGroup` provides the Radio buttons interaction. Use [Tabs](/components/tabs/overview.md) to navigate between content panels. A similar appearance does not make those interactions interchangeable.
 
 ## Sizes
+
+React and Vue provide regular and small sizes. The iOS counterpart has one built-in size.
 
 ### Regular
 
@@ -54,7 +56,7 @@ Use the small size in compact interfaces where the labels remain readable and th
 ![The rental-period group stretched across the available space.](/components/radio-buttons/overview-equal-width.svg)
 :::
 
-By default, the group fits its content. The width option stretches the group across its container and distributes spare space between the options. Labels still need enough room to remain readable; stretching the group does not solve a lack of space.
+In React and Vue, the group fits its content by default. The width option stretches the group across its container and distributes spare space between the options. Labels still need enough room to remain readable; stretching the group does not solve a lack of space. The iOS counterpart does not expose this width setting.
 
 ## Anatomy
 
@@ -66,19 +68,26 @@ By default, the group fits its content. The width option stretches the group acr
 2. **Option label**: Names one possible answer and forms the visible selection target.
 3. **Selected option**: Shows the current answer. Only one option can be selected in a group.
 
-## Names in React and Vue
+## Names and availability
 
-The framework APIs use different names for the same concepts:
+Figma calls the connected control **Button group**. For single selection, use the following implementation on each platform:
 
-| Concept | React | Vue |
-| --- | --- | --- |
-| Radio buttons | `Toggle` with `type="radio-button"` | `w-toggle` with `radio-button` |
-| Group label | `title` | `label` |
-| Options | `options` | `toggles` |
-| Current selection | `selected` | `v-model` |
-| Small size | `small` | `small` |
-| Fill available width | `equalWidth` | `equal-width` |
+| Platform | Implementation |
+| --- | --- |
+| React | [`Toggle` with `type="radio-button"`](/components/radio-buttons/frameworks/react.md) |
+| Vue | [`w-toggle` with `radio-button`](/components/radio-buttons/frameworks/vue.md) |
+| iOS | [`Warp.ButtonGroup` with `singleSelect: true`](/components/radio-buttons/frameworks/ios.md) |
+| Elements and its React 19 wrappers | Provide the circular [Radio](/components/radio/frameworks/elements.md) control, without this button-shaped variant. |
+| Android | Provides circular [Radio](/components/radio/frameworks/android.md) controls, without this button-shaped variant. |
 
-See the [React](/components/radio-buttons/frameworks/react.md) and [Vue](/components/radio-buttons/frameworks/vue.md) pages for implementation details.
+The supported implementations use different names for the same concepts:
+
+| Concept | React | Vue | iOS |
+| --- | --- | --- | --- |
+| Group label | `title` | `label` | Supplied by the surrounding view |
+| Options | `options` | `toggles` | `buttons` binding |
+| Current selection | Zero or one entry in `selected` | One value in `v-model` | `isSelected` in each tuple, with `singleSelect: true` |
+| Small size | `small` | `small` | One built-in size |
+| Fill available width | `equalWidth` | `equal-width` | No equivalent setting |
 
 <component-questions />

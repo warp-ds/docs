@@ -38,7 +38,7 @@ If a filter needs a way to include everything, make “All” an explicit option
 
 ## Interaction
 
-Clicking or tapping an option selects it. With a keyboard, users enter the group with `Tab` and move between options with the arrow keys. Arrow-key navigation also changes the selection. See [Accessibility](/components/radio-buttons/accessibility.md) for the complete keyboard pattern.
+Clicking or tapping an option selects it. In React and Vue, keyboard users enter the group with `Tab` and move between options with the arrow keys. Arrow-key navigation also changes the selection. The iOS counterpart needs separate accessibility verification. See [Accessibility](/components/radio-buttons/accessibility.md) for the platform differences.
 
 In a form, choosing an answer should leave users in the form so they can review it before submitting. For a filter that updates results immediately, keep focus on the chosen option and preserve the rest of the user's filters. Do not navigate to another page or move focus as a side effect of choosing.
 
