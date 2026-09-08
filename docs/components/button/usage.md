@@ -18,7 +18,7 @@ See also [Button group](/components/button-group/overview.md), [Button pill](/co
 ### When not to use
 
 - For navigation to another page or location, use [Link](/components/link/overview.md). Do not style a navigation link as a Button just to make it prominent.
-- For several related actions that need consistent spacing and wrapping, use [Button group](/components/button-group/overview.md).
+- For several related actions, arrange individual Buttons in a responsive row or stack with consistent spacing.
 - For an icon-only utility action, use [Button pill](/components/button-pill/overview.md).
 - Do not use a Button as an on/off setting. Use [Switch](/components/switch/overview.md) or [Checkbox](/components/checkbox/overview.md), depending on when the change takes effect.
 
