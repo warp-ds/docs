@@ -56,7 +56,7 @@ The accessible name should describe the result, such as “Save changes”, rath
 - Keep application-side guards against duplicate activation while loading or disabled. In Warp Elements 2.11.0, these attributes block pointer interaction on the host but are not forwarded to the inner native Button's `disabled` property, so keyboard and programmatic activation require explicit verification.
 - Do not override the component's focus delegation or native keyboard behaviour.
 
-These details were verified against Warp Elements 2.11.0, the version used by this documentation site.
+The Web guidance above describes Warp Elements 2.11.0 and its React wrapper. The separate `@warp-ds/react` and `@warp-ds/vue` Button implementations apply `disabled` to their native buttons. In those libraries, `loading` alone does not disable activation; guard asynchronous actions against repeated keyboard or programmatic activation.
 
 ### iOS
 
