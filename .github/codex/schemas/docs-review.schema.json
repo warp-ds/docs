@@ -1,13 +1,13 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["summary", "comments"],
+  "required": ["summary", "comments", "thread_updates"],
   "properties": {
     "summary": {
       "type": "string",
       "minLength": 1,
       "maxLength": 500,
-      "description": "A short closing reflection stating whether the documentation is ready and what matters most."
+      "description": "A friendly, specific update acknowledging verified progress and distinguishing new findings from existing discussions, without a readiness verdict."
     },
     "comments": {
       "type": "array",
@@ -15,7 +15,7 @@
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["path", "start_line", "line", "body", "replacement"],
+        "required": ["path", "start_line", "line", "body", "replacement", "existing_thread_id"],
         "properties": {
           "path": {
             "type": "string",
@@ -42,6 +42,37 @@
             "type": "string",
             "maxLength": 4000,
             "description": "Exact replacement for the selected lines, or an empty string when a safe edit cannot be supplied."
+          },
+          "existing_thread_id": {
+            "type": "string",
+            "description": "ID of an existing unresolved thread about the same issue, even if its wording or location changed. Use an empty string only for a new finding."
+          }
+        }
+      }
+    },
+    "thread_updates": {
+      "type": "array",
+      "description": "Re-checks of existing unresolved bot threads. Omitted threads remain open.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["thread_id", "status", "reason"],
+        "properties": {
+          "thread_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "An existing thread ID from the supplied review context."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["open", "fixed"],
+            "description": "Use fixed only after verifying the correction in the current documentation or implementation. Outdated anchors alone are not evidence of a fix."
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 700,
+            "description": "A short explanation of the current evidence, identifying the text or code that fixes the finding when status is fixed."
           }
         }
       }

@@ -45,23 +45,34 @@ test('rejects malformed structured review output', () => {
   assert.throws(() => parseReview('{"summary":"Ready"}'), /comments array/);
 });
 
-test('publishes one concise review with inline suggestions and a closing summary', async () => {
+test('publishes inline suggestions and a separate maintained summary', async () => {
   const listReviews = () => {};
   const listFiles = () => {};
+  const listComments = () => {};
   const created = [];
+  const summaries = [];
   const github = {
     paginate: async (method) => {
       if (method === listReviews) return [];
+      if (method === listComments) return [];
       if (method === listFiles) {
         return [{ filename: 'docs/example.md', patch: '@@ -7,1 +7,1 @@\n-old\n+new' }];
       }
       throw new Error('Unexpected pagination call');
     },
+    graphql: async () => ({
+      repository: { pullRequest: { reviewThreads: { nodes: [], pageInfo: { hasNextPage: false } } } },
+    }),
     rest: {
       pulls: {
+        get: async () => ({ data: { head: { sha: 'abc123' }, state: 'open', draft: false } }),
         listReviews,
         listFiles,
         createReview: async (review) => created.push(review),
+      },
+      issues: {
+        listComments,
+        createComment: async (comment) => summaries.push(comment),
       },
     },
   };
@@ -89,8 +100,10 @@ test('publishes one concise review with inline suggestions and a closing summary
 
   assert.equal(created.length, 1);
   assert.equal(created[0].event, 'COMMENT');
-  assert.match(created[0].body, /warp-docs-codex-review:abc123/);
-  assert.match(created[0].body, /otherwise the guidance is clear/);
+  assert.equal(created[0].body, '<!-- warp-docs-codex-review:abc123 -->');
   assert.equal(created[0].comments.length, 1);
   assert.match(created[0].comments[0].body, /```suggestion\ncorrectName\n```/);
+  assert.equal(summaries.length, 1);
+  assert.match(summaries[0].body, /otherwise the guidance is clear/);
+  assert.match(summaries[0].body, /\*\*WARP Docs Reviewer\*\*/);
 });
