@@ -33,7 +33,7 @@ The accessible name should describe the result, such as “Save changes”, rath
 - Let visible text provide the accessible name whenever possible.
 - If the Button has only an icon, add visually hidden text or an equivalent platform label. Do not depend on the icon filename or a tooltip.
 - Mark supporting icons as decorative so the icon and text are not announced twice.
-- Announce loading as progress. Warp Elements exposes a localized progressbar announcement while `loading` is set; the application still needs to expose the final success or error result.
+- Announce loading as progress. Warp Elements exposes localized `role="progressbar"` information while `loading` is set, but this is not a live-region announcement. Provide an application-owned status region for loading and the final success or error result, and verify announcements with screen readers.
 - Do not include unavailable actions in a way that confuses the task. If a disabled Button must remain discoverable, make its reason available in nearby text and verify how the platform exposes it.
 
 ## Visual
