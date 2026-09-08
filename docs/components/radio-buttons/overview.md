@@ -61,12 +61,14 @@ In React and Vue, the group fits its content by default. The width option stretc
 ## Anatomy
 
 ::: image-block
-![Numbered Radio buttons anatomy showing the group label, an option label, and the selected option.](/components/radio-buttons/overview-anatomy.svg)
+![Numbered Radio buttons anatomy showing the selected option, an option label, and the group container.](/components/radio-buttons/overview-anatomy.svg)
 :::
 
-1. **Group label**: States the question that the options answer.
+1. **Selected option**: Shows the current answer. Only one option can be selected in a group.
 2. **Option label**: Names one possible answer and forms the visible selection target.
-3. **Selected option**: Shows the current answer. Only one option can be selected in a group.
+3. **Group container**: Connects the options visually so they read as one set.
+
+Place a visible group label above the control to state the question that the options answer.
 
 ## Names and availability
 
@@ -82,6 +84,8 @@ Figma calls the connected control **Button group**. For single selection, use th
 
 The supported implementations use different names for the same concepts:
 
+<div class="overflow-x-auto" tabindex="0" role="region" aria-label="Radio buttons API names by platform">
+
 | Concept | React | Vue | iOS |
 | --- | --- | --- | --- |
 | Group label | `title` | `label` | Supplied by the surrounding view |
@@ -89,5 +93,7 @@ The supported implementations use different names for the same concepts:
 | Current selection | Zero or one entry in `selected` | One value in `v-model` | `isSelected` in each tuple, with `singleSelect: true` |
 | Small size | `small` | `small` | One built-in size |
 | Fill available width | `equalWidth` | `equal-width` | No equivalent setting |
+
+</div>
 
 <component-questions />
