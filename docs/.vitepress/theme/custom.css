@@ -292,19 +292,21 @@ html.dark body {
   background-color: var(--doc-image-plate-bg);
 }
 
+/* Illustrations are authored at the width of the container they sit in,
+   so the image fills the plate edge to edge with no inner padding — the
+   artwork carries its own whitespace. Plates in the same grid row
+   stretch to the tallest image and centre the shorter one. */
 .image-plate img {
+  display: block; /* Avoids the baseline gap that inline images leave beneath them */
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
 
-/* Figure plate, used by the do/don't and usage-example illustrations.
-   Illustrations are authored at the column width (332px), so the image
-   fills the plate edge to edge and renders 1:1 — no inner padding and
-   no fixed aspect ratio, both of which scaled the artwork down. Plates
-   in the same grid row stretch to the tallest image and centre the
-   shorter one. */
-.image-plate--figure img {
+.image-plate p {
+  margin: 0;
   width: 100%;
+  line-height: 0;
 }
 
 /* Opt-in dark surface for light-on-dark illustrations */
@@ -312,9 +314,10 @@ html.dark body {
   --doc-image-plate-bg: var(--doc-image-plate-bg-dark);
 }
 
+/* No inner padding: illustrations are authored to bleed to the edges of
+   the block, so any padding here would inset the artwork and shrink it. */
 .styled-image-block {
   background-color: var(--doc-image-plate-bg);
-  padding: 16px;
   margin: 16px 0;
   border-radius: 8px;
   width: 100%; /* Full width of parent */
@@ -325,10 +328,19 @@ html.dark body {
   justify-content: center; /* Center image horizontally */
 }
 
+/* Markdown wraps the image in a <p>, which would otherwise contribute
+   .vp-doc paragraph margins above and below the artwork. */
+.styled-image-block p {
+  margin: 0;
+  width: 100%;
+  line-height: 0;
+}
+
 .styled-image-block img {
-  max-width: 100%; /* Ensure the image scales to fit within the container */
+  display: block; /* Inline images sit on the text baseline, which adds a gap beneath */
+  width: 100%; /* Fill the block edge to edge */
+  max-width: 100%;
   height: auto; /* Maintain image aspect ratio */
-  object-fit: cover; /* Cover the container, preserving aspect ratio */
 }
 
 /* Plain html elements with general styling for the whole doc */

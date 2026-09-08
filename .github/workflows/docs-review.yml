@@ -1,0 +1,218 @@
+name: WARP docs review
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review]
+    paths:
+      - 'docs/components/**'
+      - 'docs/public/components/**'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-review-stable-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  checklist:
+    name: WARP docs checklist
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout pull request
+        uses: actions/checkout@v6
+        with:
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Resolve current pull request base
+        run: echo "BASE_SHA=$(git rev-parse HEAD^1)" >> "$GITHUB_ENV"
+
+      - name: Check component documentation
+        run: node scripts/review-docs.mjs --base "$BASE_SHA"
+
+  review:
+    name: GPT-6 Astra review
+    if: >-
+      github.event.pull_request.draft == false &&
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      final_message: ${{ steps.codex.outputs.final-message }}
+    steps:
+      - name: Checkout pull request
+        uses: actions/checkout@v6
+        with:
+          ref: refs/pull/${{ github.event.pull_request.number }}/merge
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Resolve current pull request base
+        run: |
+          echo "BASE_SHA=$(git rev-parse HEAD^1)" >> "$GITHUB_ENV"
+          echo "REVIEW_HEAD_SHA=$(git rev-parse HEAD^2)" >> "$GITHUB_ENV"
+
+      - name: Checkout trusted reviewer policy and scripts
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          path: .trusted-reviewer
+          sparse-checkout: .github/codex
+          persist-credentials: false
+
+      - name: Checkout WARP Elements source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/elements
+          path: .review-sources/elements
+          persist-credentials: false
+
+      - name: Checkout WARP React source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/react
+          path: .review-sources/react
+          persist-credentials: false
+
+      - name: Checkout WARP Vue source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/vue
+          path: .review-sources/vue
+          persist-credentials: false
+
+      - name: Checkout WARP iOS source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/warp-ios
+          path: .review-sources/warp-ios
+          persist-credentials: false
+
+      - name: Checkout WARP Android source
+        uses: actions/checkout@v6
+        with:
+          repository: warp-ds/warp-android
+          path: .review-sources/warp-android
+          persist-credentials: false
+
+      - name: Set up pnpm and Node
+        uses: pnpm/setup@v2
+        with:
+          runtime: node@lts
+          cache: true
+          install: false
+
+      - name: Install published documentation dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
+      - name: Prepare deterministic checklist for Codex
+        run: node scripts/review-docs.mjs --base "$BASE_SHA" --report .review-checklist.md || true
+
+      - name: Read earlier reviews and discussions
+        id: review-context
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require('node:fs');
+            const { prepareReviewContext } = require(
+              `${process.env.GITHUB_WORKSPACE}/.trusted-reviewer/.github/codex/scripts/review-context.cjs`,
+            );
+            const reviewContext = await prepareReviewContext({
+              github,
+              context,
+              headSha: process.env.REVIEW_HEAD_SHA,
+              baseSha: process.env.BASE_SHA,
+            });
+            fs.writeFileSync('.review-context.json', JSON.stringify(reviewContext));
+            core.setOutput('should-review', String(reviewContext.should_review));
+
+      - name: Save the discussion snapshot for the publisher
+        if: steps.review-context.outputs.should-review == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-review-context
+          path: .review-context.json
+          include-hidden-files: true
+          if-no-files-found: error
+          overwrite: true
+          retention-days: 7
+
+      - name: Review documentation with GPT-6 Astra
+        id: codex
+        if: steps.review-context.outputs.should-review == 'true'
+        # v1.12 can leave GitHub-hosted runners stuck after Codex completes.
+        uses: openai/codex-action@52fe01ec70a42f454c9d2ebd47598f9fd6893d56 # v1.11
+        with:
+          openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          codex-version: '0.150.1'
+          model: gpt-6-astra
+          effort: high
+          sandbox: read-only
+          safety-strategy: drop-sudo
+          codex-args: '["--ephemeral"]'
+          prompt-file: .trusted-reviewer/.github/codex/prompts/docs-review.md
+          output-schema-file: .trusted-reviewer/.github/codex/schemas/docs-review.schema.json
+          output-file: codex-review.md
+
+  post-feedback:
+    name: Post review
+    needs: review
+    if: needs.review.result == 'success' && needs.review.outputs.final_message != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout trusted review publisher
+        uses: actions/checkout@v6
+        with:
+          # An existing PR keeps the base SHA it was opened against. Read the
+          # publisher from the current protected default branch instead.
+          ref: ${{ github.event.repository.default_branch }}
+          sparse-checkout: .github/codex/scripts
+          persist-credentials: false
+
+      - name: Download the reviewed discussion snapshot
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-review-context
+          path: .review-publish
+
+      - name: Create WARP Docs Reviewer token
+        id: review-app-token
+        if: vars.WARP_DOCS_REVIEW_APP_CLIENT_ID != ''
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.WARP_DOCS_REVIEW_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WARP_DOCS_REVIEW_APP_PRIVATE_KEY }}
+          permission-contents: read
+          permission-pull-requests: write
+
+      - name: Post pull request review
+        uses: actions/github-script@v8
+        env:
+          CODEX_REVIEW: ${{ needs.review.outputs.final_message }}
+        with:
+          # A configured GitHub App gives reviews their own name and avatar.
+          # Keep the built-in token as a fallback while the app is being set up.
+          github-token: ${{ steps.review-app-token.outputs.token || github.token }}
+          script: |
+            const { postReview } = require(
+              `${process.env.GITHUB_WORKSPACE}/.github/codex/scripts/post-review.cjs`,
+            );
+            await postReview({
+              github,
+              context,
+              reviewJson: process.env.CODEX_REVIEW,
+              reviewContext: JSON.parse(require('node:fs').readFileSync(
+                '.review-publish/.review-context.json', 'utf8',
+              )),
+            });
