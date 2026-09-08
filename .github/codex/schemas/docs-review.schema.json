@@ -1,7 +1,7 @@
 {
   "type": "object",
   "additionalProperties": false,
-  "required": ["summary", "comments", "thread_updates"],
+  "required": ["summary", "comments", "thread_updates", "component_issues"],
   "properties": {
     "summary": {
       "type": "string",
@@ -46,6 +46,137 @@
           "existing_thread_id": {
             "type": "string",
             "description": "ID of an existing unresolved thread about the same issue, even if its wording or location changed. Use an empty string only for a new finding."
+          }
+        }
+      }
+    },
+    "component_issues": {
+      "type": "array",
+      "maxItems": 3,
+      "description": "Component bugs directly uncovered while verifying changed documentation. Match existing issues before proposing a new one. The publisher, not the reviewer, files or links issues.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "repository",
+          "component",
+          "failure_key",
+          "title",
+          "docs_path",
+          "docs_line",
+          "expected_behavior",
+          "expectation_source",
+          "actual_behavior",
+          "impact",
+          "affected_versions",
+          "reproduction",
+          "upstream_status",
+          "upstream_evidence",
+          "source",
+          "existing_issue_number",
+          "existing_fix_number"
+        ],
+        "properties": {
+          "repository": {
+            "type": "string",
+            "enum": ["warp-ds/elements", "warp-ds/react", "warp-ds/vue", "warp-ds/warp-ios", "warp-ds/warp-android"]
+          },
+          "component": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "description": "The affected docs component directory, such as button or radio-buttons."
+          },
+          "failure_key": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            "maxLength": 100,
+            "description": "Stable name for the underlying failure, independent of versions, wording, PRs, and commits. Reuse the key in an existing warp-docs-component-key marker for the same bug."
+          },
+          "title": { "type": "string", "minLength": 1, "maxLength": 160 },
+          "docs_path": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Changed component documentation that led to this finding."
+          },
+          "docs_line": {
+            "type": "integer",
+            "minimum": 1,
+            "description": "An added line in docs_path connecting the bug to the reviewed claim."
+          },
+          "expected_behavior": { "type": "string", "minLength": 1, "maxLength": 2000 },
+          "expectation_source": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "description": "A primary requirement verified from available material: a full-commit GitHub permalink in a WARP repo, a W3C accessibility requirement, or Apple, Android, or Figma design guidance. The changed docs claim alone cannot establish the expectation."
+          },
+          "actual_behavior": { "type": "string", "minLength": 1, "maxLength": 2000 },
+          "impact": { "type": "string", "minLength": 1, "maxLength": 2000 },
+          "affected_versions": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "description": "Exact tested packages/versions and relevant runtime or platform versions."
+          },
+          "reproduction": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["status", "procedure", "observed_result"],
+            "properties": {
+              "status": { "type": "string", "enum": ["reproduced", "not_reproduced"] },
+              "procedure": {
+                "type": "string",
+                "maxLength": 6000,
+                "description": "A self-contained test or exact steps actually executed against the real implementation, including commands and required setup. Never invent a run."
+              },
+              "observed_result": {
+                "type": "string",
+                "maxLength": 6000,
+                "description": "The observed output or failure from that execution, including expected versus actual results."
+              }
+            }
+          },
+          "upstream_status": { "type": "string", "enum": ["present", "fixed", "unverified"] },
+          "upstream_evidence": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 2000,
+            "description": "How the failure was checked against the latest source snapshot, separately from the affected published version."
+          },
+          "source": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["commit_sha", "path", "line", "end_line", "excerpt"],
+            "properties": {
+              "commit_sha": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{40}$",
+                "description": "The source_sha for this repository in .component-context.json."
+              },
+              "path": {
+                "type": "string",
+                "minLength": 1,
+                "description": "Path inside the component repository, without the .review-sources prefix."
+              },
+              "line": { "type": "integer", "minimum": 1 },
+              "end_line": { "type": "integer", "minimum": 1 },
+              "excerpt": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12000,
+                "description": "Exact text of the selected source lines. The publisher verifies this against GitHub."
+              }
+            }
+          },
+          "existing_issue_number": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "An issue from the supplied repository context about the same underlying problem, including closed issues; otherwise 0."
+          },
+          "existing_fix_number": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "A merged fix PR from the supplied context when upstream_status is fixed; otherwise 0."
           }
         }
       }

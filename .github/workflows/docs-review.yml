@@ -134,12 +134,56 @@ jobs:
             fs.writeFileSync('.review-context.json', JSON.stringify(reviewContext));
             core.setOutput('should-review', String(reviewContext.should_review));
 
+      - name: Create component context token
+        id: component-context-token
+        if: steps.review-context.outputs.should-review == 'true' && vars.WARP_DOCS_REVIEW_COMPONENT_ISSUES == 'true'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.WARP_DOCS_REVIEW_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WARP_DOCS_REVIEW_APP_PRIVATE_KEY }}
+          owner: warp-ds
+          repositories: |
+            elements
+            react
+            vue
+            warp-ios
+            warp-android
+          permission-contents: read
+          permission-issues: read
+          permission-pull-requests: read
+
+      - name: Read component issues and upstream fixes
+        if: steps.review-context.outputs.should-review == 'true'
+        uses: actions/github-script@v8
+        env:
+          COMPONENT_ISSUES_ENABLED: ${{ vars.WARP_DOCS_REVIEW_COMPONENT_ISSUES == 'true' }}
+        with:
+          github-token: ${{ steps.component-context-token.outputs.token || github.token }}
+          script: |
+            const fs = require('node:fs');
+            const { execFileSync } = require('node:child_process');
+            const { COMPONENT_REPOSITORIES, prepareComponentContext } = require(
+              `${process.env.GITHUB_WORKSPACE}/.trusted-reviewer/.github/codex/scripts/component-context.cjs`,
+            );
+            const headSha = process.env.REVIEW_HEAD_SHA;
+            let componentContext = { enabled: false, head_sha: headSha, repositories: [] };
+            if (process.env.COMPONENT_ISSUES_ENABLED === 'true') {
+              const sourceHeads = Object.fromEntries(COMPONENT_REPOSITORIES.map((name) => [
+                name,
+                execFileSync('git', ['-C', `.review-sources/${name}`, 'rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),
+              ]));
+              componentContext = await prepareComponentContext({ github, headSha, sourceHeads });
+            }
+            fs.writeFileSync('.component-context.json', JSON.stringify(componentContext));
+
       - name: Save the discussion snapshot for the publisher
         if: steps.review-context.outputs.should-review == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: docs-review-context
-          path: .review-context.json
+          path: |
+            .review-context.json
+            .component-context.json
           include-hidden-files: true
           if-no-files-found: error
           overwrite: true
@@ -167,6 +211,11 @@ jobs:
     needs: review
     if: needs.review.result == 'success' && needs.review.outputs.final_message != ''
     runs-on: ubuntu-latest
+    # Re-check and file component issues serially across PRs to prevent races.
+    concurrency:
+      group: warp-docs-review-publication
+      queue: max
+      cancel-in-progress: false
     permissions:
       contents: read
       pull-requests: write
@@ -196,10 +245,29 @@ jobs:
           permission-contents: read
           permission-pull-requests: write
 
+      - name: Create component issue publisher token
+        id: component-issue-token
+        if: vars.WARP_DOCS_REVIEW_COMPONENT_ISSUES == 'true'
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.WARP_DOCS_REVIEW_APP_CLIENT_ID }}
+          private-key: ${{ secrets.WARP_DOCS_REVIEW_APP_PRIVATE_KEY }}
+          owner: warp-ds
+          repositories: |
+            elements
+            react
+            vue
+            warp-ios
+            warp-android
+          permission-contents: read
+          permission-issues: write
+          permission-pull-requests: read
+
       - name: Post pull request review
         uses: actions/github-script@v8
         env:
           CODEX_REVIEW: ${{ needs.review.outputs.final_message }}
+          COMPONENT_ISSUE_TOKEN: ${{ steps.component-issue-token.outputs.token }}
         with:
           # A configured GitHub App gives reviews their own name and avatar.
           # Keep the built-in token as a fallback while the app is being set up.
@@ -208,8 +276,18 @@ jobs:
             const { postReview } = require(
               `${process.env.GITHUB_WORKSPACE}/.github/codex/scripts/post-review.cjs`,
             );
+            const fs = require('node:fs');
+            const componentFile = '.review-publish/.component-context.json';
+            const componentContext = fs.existsSync(componentFile)
+              ? JSON.parse(fs.readFileSync(componentFile, 'utf8'))
+              : { enabled: false };
+            const componentGithub = process.env.COMPONENT_ISSUE_TOKEN
+              ? new github.constructor({ auth: process.env.COMPONENT_ISSUE_TOKEN, baseUrl: process.env.GITHUB_API_URL })
+              : undefined;
             await postReview({
               github,
+              componentGithub,
+              componentContext,
               context,
               reviewJson: process.env.CODEX_REVIEW,
               reviewContext: JSON.parse(require('node:fs').readFileSync(
