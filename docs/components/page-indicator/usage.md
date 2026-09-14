@@ -102,7 +102,7 @@ Place the indicator over content that makes some dots disappear.
 
 ## Sizing and alignment
 
-Use the component's standard 10px dots and 8px gap. Its width adjusts to the number of pages; do not stretch the row or change its height.
+Use 10px dots with an 8px gap on Web, 10pt dots with an 8pt gap on iOS, and 10dp dots with 8dp between them on Android. The component's width adjusts to the number of pages; do not stretch the row or change its height.
 
 Centre the complete row rather than the active dot. The row should stay in the same position while the selected state moves from one dot to another.
 
