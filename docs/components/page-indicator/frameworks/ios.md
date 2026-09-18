@@ -12,11 +12,11 @@ A page indicator shows the total amount of pages (or images) and the current pag
 ```swift example
 Warp.PageIndicator(
     pageCount: Int,
-    selectedPage: Binding<Int> = .constant(0)
+    selectedPage: Binding<Int>
 )
 ```
 ```swift example
-Warp.PageIndicator(pageCount: 5)
+Warp.PageIndicator(pageCount: 5, selectedPage: $currentPage)
 ```
 
 ### Legacy support
@@ -24,7 +24,7 @@ Warp.PageIndicator(pageCount: 5)
 By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
 ```swift example
-Warp.PageIndicator(pageCount: 5).uiView
+Warp.PageIndicator(pageCount: 5, selectedPage: $currentPage).uiView
 ```
 
 ### Parameters
