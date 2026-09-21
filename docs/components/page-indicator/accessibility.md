@@ -58,7 +58,6 @@ Warp Elements renders the Page indicator as one non-interactive image with a loc
 - Keep both properties updated with the visible content.
 - The image role is not a live region. Verify the surrounding carousel's page-position announcement when navigation occurs.
 
-These details were verified against Warp Elements 2.11.0, the version used by this documentation site.
 
 ### iOS
 
