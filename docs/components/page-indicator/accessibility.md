@@ -81,7 +81,6 @@ Warp Elements renders the Page indicator as one non-interactive image with a loc
 
 ## Testing
 
-- **Keyboard**: Move through the carousel using its supported keys and controls. Focus must stay visible and never land on a passive dot.
 - **Screen readers**: Test VoiceOver, TalkBack, and NVDA or JAWS. Confirm the sequence name, current position, total, and navigation controls are understandable without seeing the dots.
 - **All navigation paths**: Change pages with buttons, gestures, keyboard commands, and programmatic updates. The visible item, active dot, and spoken status must stay synchronised.
 - **Boundaries**: Verify the first and last pages, a two-item sequence, and the largest supported sequence. Controls and announcements must reflect when no previous or next item is available.
