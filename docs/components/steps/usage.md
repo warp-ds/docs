@@ -53,7 +53,7 @@ The indicator itself has no hover, focus, pressed, or disabled state on web, bec
 ### Moving between steps
 
 - Advance the active step only when the user has actually completed the current one. The indicator reflects state; it does not lead it.
-- When the user goes back to an earlier step, mark the later steps incomplete again. Leaving them complete claims work that may now be invalid.
+- When a user edits an earlier step, mark only later steps whose completed work is invalidated as incomplete. Simply navigating back does not undo completed steps.
 - On Android, `onStepClicked` lets the user jump between steps, and `highestEnabledStep` caps how far forward they can go. Use it to allow backward navigation without letting anyone skip ahead.
 - Keep the primary Back and Next controls outside the indicator on every platform. Web, React, Vue, and iOS give the user no way to activate a step.
 
