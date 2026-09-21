@@ -33,7 +33,7 @@ Render it only when the sequence contains at least two items. For indexed result
 
 ## Behaviour
 
-The component grows horizontally as the page count increases and keeps one active dot at a time. The active position must update whenever the surrounding carousel or pager changes.
+The component grows horizontally as the page count increases. Web clamps `selectedPage` to its valid 1-based range; iOS and Android do not clamp their 0-based values, so keep `selectedPage` or `currentPage` between `0` and `pageCount - 1` to preserve one active dot. Update the active position whenever the surrounding carousel or pager changes.
 
 Figma provides configurations for two to five dots. The platform implementations accept dynamic page counts, but product use should remain short enough to understand at a glance.
 
