@@ -1,11 +1,15 @@
 # Button group - Vue
-Button group is a grouping concept for buttons.
+
+A button group is a type of form input displayed as multiple buttons in a group, typically used as a filter control.
 
 <ComponentsStatus />
+<FrameworkTabs />
 
 ## Vue
 
-<FrameworkTabs />
+::: warning Deprecated
+This component is deprecated in favor of the [Elements](/components/button-group/frameworks/elements) version.
+:::
 
 ### Import
 
