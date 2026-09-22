@@ -3,25 +3,31 @@ import { wButton, wToggle } from '@warp-ds/vue';
 import { ref } from 'vue';
 
 const isJustified = ref(false);
-const multiToggleModelSmall = ref('');
-const multiToggleModel = ref('');
+const rentalPeriod = ref('week');
+const sellerType = ref('all');
 
-const toggles = [
-  { label: 'One', value: 1, 'data-test': 'toggle:1' },
-  { label: 'Two', value: 2, 'data-test': 'toggle:2' },
+const periods = [
+  { label: 'Day', value: 'day' },
+  { label: 'Week', value: 'week' },
+  { label: 'Month', value: 'month' },
+];
+const sellers = [
+  { label: 'All', value: 'all' },
+  { label: 'Private', value: 'private' },
+  { label: 'Dealer', value: 'dealer' },
 ];
 </script>
 
 <template>
   <div class="component space-y-16">
-    <h3 class="t4">Default</h3>
-    <w-toggle id="radio-button-group" radio-button :equal-width="isJustified" v-model="multiToggleModel" label="Radio-button Toggle" :toggles="toggles" />
+    <h3 class="t4">Regular</h3>
+    <w-toggle id="radio-button-group" radio-button :equal-width="isJustified" v-model="rentalPeriod" label="Rental period" :toggles="periods" />
 
     <h3 class="t4">Small</h3>
-    <w-toggle id="radio-button-group-small" small radio-button :equal-width="isJustified" v-model="multiToggleModelSmall" label="Small Radio-button Toggle" :toggles="toggles" />
+    <w-toggle id="radio-button-group-small" small radio-button :equal-width="isJustified" v-model="sellerType" label="Seller type" :toggles="sellers" />
 
     <demo-controls>
-      <w-button aria-controls="radio-button-group" small utility @click="isJustified = !isJustified">{{ isJustified ? 'Unjustify radio button groups' : 'Justify radio button groups' }}</w-button>
+      <wButton :aria-pressed="isJustified" small utility @click="isJustified = !isJustified">Fill available width</wButton>
     </demo-controls>
   </div>
 </template>

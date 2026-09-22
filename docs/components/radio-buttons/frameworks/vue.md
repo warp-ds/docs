@@ -1,5 +1,6 @@
 # Radio buttons - Vue
-Radio buttons allow users to select a single option from a button group.
+
+Radio buttons let users choose one value from a compact row of button-shaped options.
 
 <ComponentsStatus />
 
@@ -7,92 +8,72 @@ Radio buttons allow users to select a single option from a button group.
 
 <FrameworkTabs />
 
-### Import
+### Import and example
 
-> Use in entire app
-```js
-import { Forms } from '@warp-ds/vue'
-app.use(Forms)
-```
-
-> Use in one component and special imports
-
-You can import the component like so:
-```js
-import { wToggle } from '@warp-ds/vue';
-```
-
-or import it individually to optimize your JS bundle size by adding only the components you need:
-```js
-import { wToggle } from '@warp-ds/vue/toggle';
-
-```
-
-### Syntax
+Use `wToggle` with `radio-button`, a group label and an array of choices.
 
 ```vue
-<w-toggle radio-button v-model="model" label="A label" :toggles="[
-  { label: 'One', value: 1 },
-  { label: 'Two', value: 2 }
-]" />
+<script setup>
+import { ref } from 'vue';
+import { wToggle } from '@warp-ds/vue';
+
+const rentalPeriod = ref('week');
+const periods = [
+  { label: 'Day', value: 'day' },
+  { label: 'Week', value: 'week' },
+  { label: 'Month', value: 'month' },
+];
+</script>
+
+<template>
+  <w-toggle
+    id="rental-period"
+    radio-button
+    v-model="rentalPeriod"
+    label="Rental period"
+    :toggles="periods"
+  />
+</template>
 ```
+
+### Selection
+
+`v-model` holds one option's value, such as `'week'`. Selecting another option replaces that value. Use `ref(null)` when the question must start without an answer.
+
+Give every option a distinct value. If you supply an `id`, make it unique to that group: the component derives its shared input name from the group ID. Option attributes are passed to their individual inputs, so do not override `name` in a way that splits the group.
+
+### Size and width
+
+Use `small` for the compact size. `equal-width` fills the available container width and distributes spare space between the options. Labels still affect their widths, so the options are not necessarily identical in width.
 
 ### Props
 
-The props documented below have defaults set or are unique to this component, all typical HTML5 attributes are valid props. See Field for additional props.
-
-#### Optional Props
-
-| Name | Type | Default | Description |
-| --- | --- | --- | --- |
-| radio | boolean |  |  |
-| checkbox | boolean |  |  |
-| radio-button | boolean |  |  |
-| toggles | array |  | An array of objects. Each object must at least have a value and label attribute. Any other attributes will be transferred directly to the individual toggle |
-| invalid | boolean |  | Whether elements should be styled as invalid |
-| disabled | boolean |  | Whether elements should be styled as disabled |
-| indeterminate | boolean |  | Whether a single option is indeterminate, or "partially checked." The checkbox will appear with a small dash instead of a tick to indicate that the option is not exactly checked or unchecked. |
-| equal-width | boolean |  | Will make each option equal width, only applied when radio-button is set |
-| small | boolean |  | Whether the elements should be small, only applied when radio-button is set |
+| Name | Type | Purpose |
+| --- | --- | --- |
+| `radio-button` | `boolean` | Enables the button-shaped Radio variant. |
+| `toggles` | `array` | Required. Objects with a `label` and a `value`; additional attributes are passed to each option. |
+| `v-model` | Option value | The selected value. |
+| `id` | `string` | Group identifier; generated when omitted. |
+| `label` | `string` | Visible group legend. Supply it to name the question. |
+| `small` | `boolean` | Uses the compact size when set; otherwise the regular size. |
+| `equal-width` | `boolean` | Fills the container when set; otherwise the group fits its content. |
+| `disabled` | `boolean` | Disables the native inputs. Individual option attributes can override it. |
+| `invalid` | `boolean` | Marks the field invalid and shows its error message. |
+| `hint` | `string` | Supporting text associated with the group. |
+| `required` | `boolean` or validation function | Adds required validation through `w-field`. |
+| `rules` | `array` | Validation functions; defaults to an empty array. |
+| `optional` | `boolean` | Adds the localised optional text to the label. |
 
 ### Validation
 
-#### Validating Elements
-Every form element accepts a prop rules which takes an array of functions. These functions will be run in order until one returns an object. If all functions return true the field is considered valid.
+`w-toggle` uses `w-field` validation. Set `required` for a mandatory question and use `rules` for more specific checks. Each rule receives the current value and returns `true` or an object such as `{ valid: false, hint: 'Choose a delivery method' }`.
 
-```js
-[v => v.trim().length > 5 || { valid: false, hint: 'This should be longer' }]
-```
+Validation runs when an option loses focus and can be collected and triggered through `w-form`. The field exposes required and invalid states on its fieldset and connects supporting text and errors to the group. This is field validation, not the browser's native `required` validation on each radio input.
 
-The function has one argument, the current value of the form element — and can either return true or an object with attributes described below
+### Accessibility considerations
 
-| attribute | type | notes |
-| --- | --- | --- |
-| valid | boolean |  |
-| hint | string |  |
-| always | boolean |  |
+In Vue 2.3.0, disabled inputs cannot be activated, but the button-shaped labels lack a dedicated disabled visual treatment. Prefer standard [Radio](/components/radio/frameworks/vue.md) when users need to see which options are unavailable. Standard Radio is also the alternative when forced-colours support is required.
 
-#### Collecting Validation from wForm
-The wForm component registers element descendants at any level, and provides the aggregate validation status.
-
-| prop | type | default | notes |
-| --- | --- | --- | --- |
-| v-model | boolean |  | True when all descendants are valid |
-| v-model:completed | boolean |  | True when all descendants are completed - passing their required rule |
-| should-validate | boolean |  | Can be used to instruct all descendants to immediately validate. Note that this will not update if the should-validate logic is updated elsewhere. |
-| as | string | form | The DOM element to emit for the wrapper |
-
-#### Programmatic validation
-The wField component can provide access to programmatic validation beyond what wForm's props can. For information on which methods are available, see the documentation on Field.
-
-```vue
-<w-field #control="{ form }">
-  <button @click="submit(form)">Submit</button>
-</w-field>
-```
-
-#### Validation and required Form Elements
-If the form element is marked `required`, a special rule will be inserted before any user-defined rules.
-The `required` prop can accept a function that will be used as the required-rule.
+Keep the label visible and preserve the native keyboard interaction. See [Accessibility](/components/radio-buttons/accessibility.md) for naming, validation and testing guidance.
 
 <component-questions />
