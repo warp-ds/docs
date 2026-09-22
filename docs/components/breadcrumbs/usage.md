@@ -1,66 +1,125 @@
 # Breadcrumbs - Usage
-Breadcrumbs show users their current location relative to the information architecture and enable them to quickly move up to a parent level or previous step. 
+
+Breadcrumbs help users understand and move through a product's information hierarchy. Keep them secondary to the product's primary navigation.
 
 <ComponentsStatus />
 
-## Usage guidelines
-Breadcrumbs are effective in products that have a large amount of content organised in a hierarchy of more than two levels. They use little space but still provide context for the user’s place in the navigation hierarchy. 
+## When to use breadcrumbs
 
-Breadcrumbs should always be treated as secondary and should never entirely replace the primary navigation.
+Use breadcrumbs when:
 
-## Behavior
+- content has more than two meaningful hierarchy levels;
+- users may arrive on a deep page without navigating through its parents;
+- moving to a parent level is a common task.
 
-### Interactions
-All pages in the breadcrumb component should be interactive (except the current page) and link to their respective pages. 
+Do not use breadcrumbs to represent browsing history, filters, tabs, or progress through a multi-step task. For peer content use [Tabs](/components/tabs/overview.md), and for task progress use [Steps](/components/steps/overview.md).
 
-#### Mouse
-Users can trigger an item by clicking on a breadcrumb page link. The separators between page links are not interactive.
+<div class="grid gap-16 grid-cols-1 md:grid-cols-2 my-24">
 
-#### Keyboard
-Users can navigate between breadcrumb links by pressing tab and shift-tab. Users can trigger a breadcrumb link by pressing Enter while the link has focus. 
+<DoDont type="do">
 
-## Placement
-Breadcrumbs are placed in the top left portion of the page. They sit underneath the header and navigation, but above the page title and content.  
-&nbsp;
+![A breadcrumb with stable hierarchy levels: Motor, Cars, and Electric cars.](/components/breadcrumbs/DoDonts/usage-hierarchy-do.png)
 
-**Desktop example**
-::: image-block
-![Example showing an example of breadcrumbs in a desktop website. The example shows a the logo and top bar navigation, with the breadcrumbs underneath, and part of an image carousel.](/components/breadcrumbs/breadcrumbs-usage-placement-desktop-example.svg)
-:::  
-&nbsp;
+Use stable levels from the information architecture.
 
-**Mobile example**
-::: image-block
-![Example showing an example of breadcrumbs in mobile website. The example shows a the logo and top bar navigation, with the breadcrumbs underneath, and part of an image carousel.](/components/breadcrumbs/breadcrumbs-usage-placement-mobile-example.svg)
-:::
+</DoDont>
+
+<DoDont type="dont">
+
+![A breadcrumb using Search, Results, and Saved, which describes browsing history rather than hierarchy.](/components/breadcrumbs/DoDonts/usage-hierarchy-dont.png)
+
+Don't use transient actions or browsing history as hierarchy levels.
+
+</DoDont>
+
+</div>
+
+## Behaviour
+
+In Elements, compose breadcrumbs from `w-breadcrumb-item` elements. The component inserts a non-interactive slash between items and warns during development if more than one item is current, if the current item is not last, or if modern items are mixed with the legacy child API.
+
+All parent items are links to their respective destinations. Pointer users select a link normally. Keyboard users move between links with <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd>, then follow the focused link with <kbd>Enter</kbd>. The current page and separators are not interactive.
+
+Do not mix `w-breadcrumb-item` with direct anchors or spans in the same Elements breadcrumb.
+
+## Current page
+
+When the current page is included, place it last and render it as non-interactive text. This distinguishes the user's location from the available navigation and avoids a link that reloads the same page.
+
+In Elements, set `current-page` on the final `w-breadcrumb-item` and omit `href`. In React and Vue, use a non-link child with `aria-current="page"`.
+
+The current page can be omitted when the page heading immediately below the trail already identifies the location. In that case, the final breadcrumb must link to the nearest parent.
+
+<div class="grid gap-16 grid-cols-1 md:grid-cols-2 my-24">
+
+<DoDont type="do">
+
+![A breadcrumb where Oslo is the final current-page text and is not a link.](/components/breadcrumbs/DoDonts/usage-current-page-do.png)
+
+Show the current page as the final non-interactive item.
+
+</DoDont>
+
+<DoDont type="dont">
+
+![A breadcrumb where Oslo is styled as a link to the page the user is already viewing.](/components/breadcrumbs/DoDonts/usage-current-page-dont.png)
+
+Don't link the current page back to itself.
+
+</DoDont>
+
+</div>
 
 ## Content guidelines
 
-### Main elements
+- Start with the highest useful parent and move deeper through the hierarchy.
+- Use the destination's page or section name for each link.
+- Keep labels concise, specific, and consistent with the destination heading.
+- Do not add slash characters; the component provides them.
+- Avoid duplicating levels or adding categories that users cannot visit.
 
-#### Page link
-- Each page link should be short and clearly reflect the location or entity it links to.
-- Start with the highest level parent page and move deeper into the information architecture as the breadcrumb trail progresses.
-- If the current page is included in a breadcrumb trail, it is always the last text listed and is not an interactive link.
-- Each breadcrumb path is separated by a “/”, which should use the same font as the other breadcrumbs, but using a default text style (not an interactive link style).
+## Responsive layouts and overflow
 
-### Overflow content
-The breadcrumb component should always aim to display as many crumbs (items) as possible to give users a clear view of their current position within the marketplace's hierarchy. However, when space is limited, the component should adapt:
+The component does not collapse items or truncate labels automatically. Products must decide which hierarchy levels remain useful at each breakpoint.
 
-#### Reduce number of crumbs on smaller viewports
-When the screen isn’t wide enough to display the full breadcrumb path, we only show the last two crumbs (items) in the breadcrumb trail. This helps the user get a better understanding of where they are within the site structure, and allows them the opportunity to go one level up within the site structure to explore more.
+When the full trail does not fit, preserve the nearest parent and the current page. Remove intermediate levels before shortening meaningful labels. If the current page is omitted, keep the nearest parent as a link and let the page heading identify the current location.
 
-#### Text truncation for long item labels
-If the breadcrumb item labels are too long to fit on smaller screens, we:
-- Use truncation to shorten the amount of visible text. 
-- When truncating text, use an ellipsis (...) at the end of the last label.
+Avoid allowing long trails to wrap into several lines. Test the actual content at narrow widths and with text enlarged. If labels must be visually shortened, keep enough text to distinguish the destination and preserve its full accessible name.
 
-&nbsp;
+<div class="grid gap-16 grid-cols-1 md:grid-cols-2 my-24">
+
+<DoDont type="do">
+
+![A compact breadcrumb showing the nearest parent, Cars, followed by the current page, Electric cars.](/components/breadcrumbs/DoDonts/usage-responsive-do.png)
+
+Prioritise the nearest parent and current page when space is limited.
+
+</DoDont>
+
+<DoDont type="dont">
+
+![A long breadcrumb squeezed into a narrow layout and wrapping over several lines.](/components/breadcrumbs/DoDonts/usage-responsive-dont.png)
+
+Don't squeeze a long trail into a narrow layout and let it wrap repeatedly.
+
+</DoDont>
+
+</div>
+
+## Placement
+
+Place breadcrumbs near the top-left of the content area, below the header and primary navigation but above the page heading and main content. Keep their position consistent between related pages.
+
+<div class="grid gap-32 grid-cols-1 md:grid-cols-2 items-start">
+
 ::: image-block
-![Example showing an annotated example of a breadcrumbs component, highlighting how truncation of text looks like.](/components/breadcrumbs/breadcrumbs-usage-overflow-content.svg)
-:::  
+![Breadcrumbs placed below the desktop header and above the page content.](/components/breadcrumbs/breadcrumbs-usage-placement-desktop-example.svg)
+:::
 
-**1. Not truncated** - the first path does not get truncated.   
-**2. Truncated** - the last path does gets truncated.
+::: image-block
+![Breadcrumbs placed below the mobile header and above the page content.](/components/breadcrumbs/breadcrumbs-usage-placement-mobile-example.svg)
+:::
+
+</div>
 
 <component-questions />
