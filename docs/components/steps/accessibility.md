@@ -106,7 +106,7 @@ This is the component's main visual risk. Complete, active, and incomplete are d
 - In the vertical layout the circle comes before the text, so VoiceOver reads the state, then the step.
 - The progress circle and combined title and description are non-activatable VoiceOver stops. A user can move between them with swipe gestures, but neither performs an action.
 - The horizontal layout is inside a horizontal `ScrollView`. VoiceOver will scroll to reach steps that are off screen, but a user cannot see how many are left.
-- `Warp.StepIndicatorModel(from:)` throws if the step order is invalid, so an incoherent indicator fails at build time rather than confusing a user.
+- `Warp.StepIndicatorModel(from:)` throws when an invalid model is constructed, so callers must handle that runtime error before presenting the indicator.
 
 ### Android
 
