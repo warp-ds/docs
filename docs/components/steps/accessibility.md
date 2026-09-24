@@ -104,7 +104,7 @@ This is the component's main visual risk. Complete, active, and incomplete are d
 - The circle carries an accessibility label of **"Incomplete"**, **"In Progress"**, or **"Complete"**.
 - The title and description are merged with `.accessibilityElement(children: .combine)`, so VoiceOver reads them as one continuous announcement rather than two separate stops.
 - In the vertical layout the circle comes before the text, so VoiceOver reads the state, then the step.
-- Nothing is focusable or activatable. There is no way for a VoiceOver user to move between steps by swiping on the indicator, and that is expected.
+- The progress circle and combined title and description are non-activatable VoiceOver stops. A user can move between them with swipe gestures, but neither performs an action.
 - The horizontal layout is inside a horizontal `ScrollView`. VoiceOver will scroll to reach steps that are off screen, but a user cannot see how many are left.
 - `Warp.StepIndicatorModel(from:)` throws if the step order is invalid, so an incoherent indicator fails at build time rather than confusing a user.
 
