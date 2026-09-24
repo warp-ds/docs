@@ -122,8 +122,9 @@ On web, React, Vue, and iOS the component is inert: no step is focusable, clicka
 On Android, steps become tappable when you pass `onStepClicked`. If you use it:
 
 - Provide `stepContentDescription` as well. Without it the indicators have no accessible name at all.
-- Set `highestEnabledStep` so users cannot jump to a step they have not earned.
-- Note that the indicator itself is 24dp, below the 48dp minimum touch target. Add padding around it, or keep the real navigation in buttons below.
+- On `HorizontalWarpStepIndicator`, set `highestEnabledStep` so users cannot jump to a step they have not reached.
+- `VerticalWarpStepIndicator` has no per-step limiting API; when skipping must be blocked, keep navigation in buttons outside the indicator.
+- The public API cannot enlarge the internal 24dp click targets. Use external controls with at least 48×48dp targets instead.
 
 ## Best practices
 
