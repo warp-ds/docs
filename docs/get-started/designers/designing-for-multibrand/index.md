@@ -15,7 +15,7 @@ Auto layout is a property you add to frames and components. It lets you create d
 Differences in the brands like typography, spacing and language can cause the components to be different in sizes and if you don't use auto layout your designs might break when switching between brands.
 
 ::: image-block
-![WARP alert components displayed in the FINN brand and Tori brand](/get-started/multibrand-alerts.svg)
+![WARP alert components displayed in the FINN brand and Tori brand](/get-started/multibrand-alerts.png)
 :::
 
 ### Learn how to use auto layout
