@@ -13,7 +13,6 @@ The `s-` (semantic) prefix signals that the color value of these will change wit
 | Class | Color | Description |
 |-------|-------|-------------|
 | s-icon | <div class="s-bg p-10 td-reset"><div class="s-icon text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon) |
-| s-icon-static | <div class="s-bg-negative-subtle p-10 td-reset"><div class="s-icon-static text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-static) *(v2)* |
 | s-icon-hover | <div class="s-bg p-10 td-reset"><div class="s-icon-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-hover) |
 | s-icon-active | <div class="s-bg p-10 td-reset"><div class="s-icon-active text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-active) |
 | s-icon-selected | <div class="s-bg p-10 td-reset"><div class="s-icon-selected text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-selected) |
@@ -22,10 +21,6 @@ The `s-` (semantic) prefix signals that the color value of these will change wit
 | s-icon-subtle | <div class="s-bg p-10 td-reset"><div class="s-icon-subtle text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-subtle) |
 | s-icon-subtle-hover | <div class="s-bg p-10 td-reset"><div class="s-icon-subtle-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-subtle-hover) |
 | s-icon-subtle-active | <div class="s-bg p-10 td-reset"><div class="s-icon-subtle-active text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-subtle-active) |
-| s-icon-inverted | <div class="s-bg-inverted p-10 td-reset"><div class="s-icon-inverted text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted) |
-| s-icon-inverted-static | <div class="s-bg-notification p-10 td-reset"><div class="s-icon-inverted-static text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted-static) *(v2)* |
-| s-icon-inverted-hover | <div class="s-bg-inverted p-10 td-reset"><div class="s-icon-inverted-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted-hover) |
-| s-icon-inverted-active | <div class="s-bg-inverted p-10 td-reset"><div class="s-icon-inverted-active text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-inverted-active) |
 | s-icon-primary | <div class="s-bg p-10 td-reset"><div class="s-icon-primary text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-primary) |
 | s-icon-secondary | <div class="s-bg p-10 td-reset"><div class="s-icon-secondary text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-secondary) |
 | s-icon-secondary-hover | <div class="s-bg p-10 td-reset"><div class="s-icon-secondary-hover text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-secondary-hover) |
@@ -36,11 +31,46 @@ The `s-` (semantic) prefix signals that the color value of these will change wit
 | s-icon-info | <div class="s-bg p-10 td-reset"><div class="s-icon-info text-center"><w-icon name="StarFull"></w-icon></div></div> | color: var(--w-s-color-icon-info) |
 | ~~s-icon-notification~~ | | Replaced by `s-icon-inverted-static` in v2 |
 
-::: tip New in v2
-To cater for upcoming dark mode, we've added two classes.  
-Whenever you have an icon that should be "black" in both light and dark mode, use `s-icon-static`.  
-If you have an icon that should be "white" in both light and dark mode, use `s-icon-inverted-static`.
-:::
+### Static and inverted static variants
+
+All of the classes in the quick reference have two additional variants to cater for areas of the page that should not change between light and dark mode.
+
+- The `static` suffix.
+- The `inverted` modifier.
+
+The format is always `s-icon(-inverted)-<name>(-static)` where `<name>` is what comes after `s-icon` in the quick reference.
+
+For example, to get a positive icon that stays in its light mode form even in dark mode, use this class:
+
+```css
+.s-icon-positive-static
+```
+
+To always get its `inverted` (dark mode) form, use the `inverted` modifier.
+
+```css
+.s-icon-inverted-positive-static
+```
+
+To get its inverted form in light mode but have it change to its light mode counterpart in dark mode then only use the `inverted` modifier:
+
+```css
+.s-icon-inverted-positive
+```
+
+The active and hover states for interactive icons work the same way:
+
+```css
+.s-icon-secondary-static,
+.s-icon-secondary-hover-static,
+.s-icon-secondary-active-static
+```
+
+```css
+.s-icon-inverted-secondary-static,
+.s-icon-inverted-secondary-hover-static,
+.s-icon-inverted-secondary-active-static
+```
 
 ## Basic usage
 
