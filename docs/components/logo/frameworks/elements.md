@@ -20,7 +20,7 @@ Brand logos for web are available in SVG format. You can use them as you would a
 
 ### Variants
 
-Logos that need it have an inverted variant designed for dark backgrounds. Add the `-inverted` suffix to your logo file name to use it, for example `dba-inverted.svg`.
+Logos that need it have an inverted variant designed for dark backgrounds. Add the `-inverted` suffix after the brand name to use it, for example `dba-inverted.svg` or `dba-inverted-small.svg`.
 
 :::info Not all logos have an inverted variant
 
