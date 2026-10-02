@@ -135,9 +135,9 @@ html {
 
 body {
   --vp-font-family-base:
-    Finntype, Inter, -apple-system,
-    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    Finntype, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
   -webkit-font-smoothing: auto;
 }
 
@@ -419,26 +419,29 @@ td:has(.td-reset) {
 }
 
 .logo-grid {
+  margin-top: 24px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
-  gap: 8px;
+  column-gap: 18px;
+  border: 2px solid var(--vp-c-gray-1);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .logo-grid__logo {
   padding: 16px;
-  border: 2px solid var(--vp-c-gray-1);
-  border-radius: 8px;
   font-size: 14px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.logo-grid__logo--light-background {
+.logo-grid__logo:nth-of-type(odd) {
   background-color: rgb(255, 255, 255);
   color: rgb(27, 27, 31);
 }
 
-.logo-grid__logo--dark-background,
-.dark .logo-grid__logo:not(.logo-grid__logo--light-background) {
+.logo-grid__logo:nth-of-type(even) {
   background-color: rgb(27, 27, 31);
   color: rgb(255, 255, 255);
 }
