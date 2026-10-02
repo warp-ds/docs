@@ -417,3 +417,28 @@ html.dark body {
 td:has(.td-reset) {
   padding: 0px;
 }
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 8px;
+}
+
+.logo-grid__logo {
+  padding: 16px;
+  border: 2px solid var(--vp-c-gray-1);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.logo-grid__logo--light-background {
+  background-color: rgb(255, 255, 255);
+  color: rgb(27, 27, 31);
+}
+
+.logo-grid__logo--dark-background,
+.dark .logo-grid__logo:not(.logo-grid__logo--light-background) {
+  background-color: rgb(27, 27, 31);
+  color: rgb(255, 255, 255);
+}
