@@ -6,6 +6,29 @@ See also [Box](/components/box/overview.md), [Button](/components/button/overvie
 
 <ComponentsStatus />
 
+## General
+
+Use Card when content forms one recognisable item, such as a listing, recommendation, or guide. A collection of cards helps users scan summaries and decide which item to open or act on.
+
+Card supplies the surface and its visual treatment. You supply the content, padding, layout, headings, links, and controls. A Card can contain information without being interactive; a shadow or border does not make it a button.
+
+- **Grouping:** Keep information about one item together.
+- **Navigation:** Use a link when users open another page or resource.
+- **Selection or action:** Use a labelled control when users choose an item or change something on the current page.
+
+Use [Box](/components/box/overview.md) for a section that does not represent an item. If a choice only needs a short label, such as “Pick up” or “Ship to me”, use [Radio](/components/radio/overview.md) or [Checkbox](/components/checkbox/overview.md) directly. Use Card when each choice needs supporting details, such as a price or delivery terms.
+
+## Visual treatments and states
+
+| Treatment or state | Purpose |
+| --- | --- |
+| Elevated | The default shadow separates the Card from its background. |
+| Flat | A bordered surface gives a quieter treatment. |
+| Selected styling | Card has a visual selected property, but in Elements 2.11.0 it introduces an unnamed checked control. For the choice examples below, use labelled radios or checkboxes and leave Card's `selected` property unset. |
+| Hover and focus | Help users identify the interactive link or control and its focus indicator. |
+
+Selected and focused mean different things: selection records a choice, while focus shows where the next keyboard action will go. Card has no dedicated loading, error, or disabled property; communicate these conditions through its content and controls. Read the [accessibility guidance](/components/card/accessibility.md) before using `clickable` in Elements.
+
 ## Examples
 
 ### Elevated and flat
@@ -54,32 +77,53 @@ The title opens the Radio documentation. The checkbox independently marks the gu
     </w-card>
 </style-isolate>
 
-## General
+### Choice cards
 
-Use Card when the content forms one recognisable item, such as a listing, a recommendation, or a guide. A collection of cards helps users scan summaries and decide which item to open or act on.
+Use a named radio group when people choose one Card, or checkboxes when they may choose several. Keep the controls visible and let each Card's supporting text explain the option.
 
-The component supplies the surface and its visual treatment. You supply the content, padding, layout, headings, links, and controls. A card can contain information without being interactive; a shadow or border does not make it a button.
-
-Keep three decisions separate:
-
-- **Grouping:** Decide which information belongs to the same item.
-- **Navigation:** Use a link when users open another page or resource.
-- **Selection or action:** Use a labelled control when users choose an item or change something on the current page.
-
-For a simple section of related content, [Box](/components/box/overview.md) may be enough. For choices that need only a short label, use [Radio](/components/radio/overview.md) or [Checkbox](/components/checkbox/overview.md) directly.
-
-## Visual treatments and states
-
-| Treatment or state | Purpose |
-| --- | --- |
-| Elevated | The default shadow separates the card from its background. Use it when individual items need a clear boundary. |
-| Flat | A bordered surface gives a quieter treatment. Keep enough separation between neighbouring cards. |
-| Selected | Highlights a chosen item. Keep it synchronised with the actual selection control and application state. |
-| Hover and focus | Help users identify an interactive target. Preserve the focus indicator on the link or control that receives focus. |
-
-Selected and focused mean different things: selection records a choice, while focus shows where the next keyboard action will go. A selected appearance alone does not establish an accessible selection control. Read the [implementation limits](/components/card/accessibility.md#elements) before using the Elements `selected` or `clickable` properties.
-
-Card has no dedicated loading, error, or disabled property. Communicate these conditions through the content and the relevant controls, for example by explaining why a listing is unavailable.
+<style-isolate>
+    <div class="grid gap-24 sm:grid-cols-2">
+        <div>
+            <h3 class="h4 mb-16">Choose one</h3>
+            <w-radio-group label="Delivery method" name="card-delivery">
+                <div class="grid gap-16">
+                    <w-card flat>
+                        <div class="p-16">
+                            <w-radio value="pickup">Pick up</w-radio>
+                            <p class="mt-8 mb-0">Collect your order for free.</p>
+                        </div>
+                    </w-card>
+                    <w-card flat>
+                        <div class="p-16">
+                            <w-radio value="shipping">Ship to me</w-radio>
+                            <p class="mt-8 mb-0">Delivered to your address.</p>
+                        </div>
+                    </w-card>
+                </div>
+            </w-radio-group>
+        </div>
+        <div>
+            <h3 class="h4 mb-16">Choose several</h3>
+            <fieldset>
+                <legend class="mb-16">Guides to save</legend>
+                <div class="grid gap-16">
+                    <w-card flat>
+                        <div class="p-16">
+                            <w-checkbox name="card-guides" value="radio">Radio guide</w-checkbox>
+                            <p class="mt-8 mb-0">Choosing one option from a group.</p>
+                        </div>
+                    </w-card>
+                    <w-card flat>
+                        <div class="p-16">
+                            <w-checkbox name="card-guides" value="checkbox">Checkbox guide</w-checkbox>
+                            <p class="mt-8 mb-0">Choosing independent options.</p>
+                        </div>
+                    </w-card>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</style-isolate>
 
 ## Anatomy
 
@@ -94,22 +138,5 @@ Card has no dedicated loading, error, or disabled property. Communicate these co
 5. **Secondary action, optional:** Acts on this item independently of the primary link.
 
 The surface belongs to Card. The other parts are content you compose inside it; they are not fixed slots or required properties. Images and badges are optional too. Include them when they help users identify or compare the item.
-
-## Design and implementation
-
-The [Figma Card](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf?node-id=1379-39480) includes editable heading, detail, body, and link text, with optional image, badge, and button content. The Web Card APIs accept composed content rather than these named text properties.
-
-<div class="table-container" role="region" aria-label="Card implementation comparison" tabindex="0">
-
-| Concept | Elements | React and Vue |
-| --- | --- | --- |
-| Flat surface | `flat` | `flat` |
-| Selected appearance | `selected` | `selected` |
-| Content | Slotted HTML | Children in React; slot content in Vue |
-| Interaction | Links and controls inside the card; `clickable` has accessibility limits | Links, controls, or the framework's `Clickable` helper |
-
-</div>
-
-The examples use Elements 2.11.0. Framework interaction differs; consult [Accessibility](/components/card/accessibility.md) and the [Elements](/components/card/frameworks/elements.md), [React](/components/card/frameworks/react.md), or [Vue](/components/card/frameworks/vue.md) documentation for the implementation you use.
 
 <component-questions />
