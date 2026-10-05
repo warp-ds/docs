@@ -79,15 +79,6 @@ For filters that refresh results immediately, communicate the result update with
 
 These libraries provide circular Radio controls rather than this button-shaped variant. Use the [Radio accessibility guidance](/components/radio/accessibility.md) for those implementations.
 
-### Known gaps
-
-| Implementation | Gap | Product workaround |
-| --- | --- | --- |
-| React and Vue button-style Radio | Selected appearance depends on colours that may be replaced in forced-colours mode. | Use standard Radio and verify the checked indicator. |
-| React 2.3.0 | `disabled` is ignored; option values and required semantics are not forwarded to native inputs. | Use standard Radio for disabled choices; validate and submit the selected application state. |
-| Vue 2.3.0 | Native disabled inputs lack a matching button-style disabled appearance. | Use standard Radio when unavailable options need a visible distinction. |
-| iOS 0.0.86 | Explicit selection semantics and keyboard support are absent from the implementation. | Verify VoiceOver and hardware-keyboard operation; provide an accessible alternative where needed. |
-
 ## Testing
 
 - **Keyboard**: In React and Vue, enter from both directions with and without a selection. Use all four arrow keys and Space. Check wrapping, visible focus, and that Tab leaves the group. Test hardware-keyboard activation separately on iOS.
