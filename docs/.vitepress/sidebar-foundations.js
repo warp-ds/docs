@@ -22,7 +22,7 @@ export const sidebarFoundations = [
             collapsed: true,
             items: [
               {
-                text: "UnoCSS - what's that?",
+                text: 'Warp CSS overview',
                 link: '/foundations/css-classes/unocss',
               },
               {
