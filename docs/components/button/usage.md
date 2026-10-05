@@ -14,11 +14,11 @@ See also [Button group](/components/button-group/overview.md), [Button pill](/co
 - Use a primary Button for the main action within a local decision area.
 - Use loading when an action takes long enough that users need confirmation that it started.
 - Use full width when the layout is narrow and the larger target improves scanning and activation.
+- For several related actions, arrange individual Buttons in a responsive row or stack with consistent spacing.
 
 ### When not to use
 
 - For navigation to another page or location, use [Link](/components/link/overview.md). Do not style a navigation link as a Button just to make it prominent.
-- For several related actions, arrange individual Buttons in a responsive row or stack with consistent spacing.
 - For an icon-only utility action, use [Button pill](/components/button-pill/overview.md).
 - Do not use a Button as an on/off setting. Use [Switch](/components/switch/overview.md) or [Checkbox](/components/checkbox/overview.md), depending on when the change takes effect.
 
@@ -69,7 +69,7 @@ Avoid disabling an action before users understand the requirement. For form vali
 
 Use the default size in most flows and the small size only in dense interfaces where the surrounding targets have a similar scale. Keep enough spacing around a small Button to preserve a comfortable touch target.
 
-- Let labels fit without truncation. At narrow widths or large text sizes, allow a Button group to wrap or stack.
+- Let labels fit without truncation. At narrow widths or large text sizes, arrange individual Buttons in a row that wraps or a stack.
 - Use full width consistently within a narrow action area. Avoid mixing full-width and content-width Buttons without a clear hierarchy.
 - Keep related actions close together and separate them from unrelated controls.
 - Test layouts with translated labels. A short English label is not evidence that the Button will fit in every language.

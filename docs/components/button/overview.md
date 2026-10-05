@@ -29,14 +29,14 @@ See also [Button group](/components/button-group/overview.md), [Button pill](/co
 
 ## General
 
-Use Button for an action that happens in the current context. Its label should describe the result of activating it. Use [Link](/components/link/overview.md) when the destination is another page or location, and [Button group](/components/button-group/overview.md) when related actions need a shared layout.
+Use Button for an action that happens in the current context. Its label should describe the result of activating it. Use [Link](/components/link/overview.md) when the destination is another page or location.
 
 A Button can contain a text label and an optional leading or trailing icon. Keep a visible label for most actions. For an icon-only action, use [Button pill](/components/button-pill/overview.md) and provide an accessible name.
 
 ## Variants
 
 ::: image-block
-![Rendered Warp Buttons showing primary, secondary, negative, negative quiet, quiet, utility, utility quiet, and overlay variants.](/components/button/overview-variants.png)
+![Rendered Warp Buttons showing primary, secondary, negative, negative quiet, quiet, utility, utility quiet, and utility overlay variants.](/components/button/overview-variants.png)
 :::
 
 Choose a variant from the action's meaning and relative importance:
@@ -48,13 +48,15 @@ Choose a variant from the action's meaning and relative importance:
 - **Negative quiet / critical quiet**: A lower-emphasis destructive action.
 - **Utility**: A compact tool or view action, such as filtering or sorting.
 - **Utility quiet**: A low-emphasis utility action.
-- **Overlay**: An action displayed over imagery or other media. Choose the regular or inverted treatment for sufficient contrast with the surface behind it.
+- **Utility overlay**: An action displayed over imagery or other media. Choose the regular or inverted treatment for sufficient contrast with the surface behind it.
 
 Do not choose a variant from colour preference alone. The hierarchy should remain meaningful when colours are unavailable.
 
 ### Names per platform
 
 The same concepts use different names across platforms:
+
+<div class="table-container" role="region" aria-label="Button variant names by platform" tabindex="0">
 
 | Figma | Web (Elements) | iOS | Android |
 | --- | --- | --- | --- |
@@ -67,6 +69,8 @@ The same concepts use different names across platforms:
 | Utility quiet | `utilityQuiet` | `.utilityQuiet` | `UtilityQuiet` |
 | Utility overlay | `overlay`, `overlayInverted`, `overlayQuiet`, or `overlayInvertedQuiet` | `.utilityOverlay` | `UtilityOverlay` |
 
+</div>
+
 Web defaults to Secondary, while iOS and Android default to Primary. Set the variant explicitly in shared examples and specifications so the intended hierarchy does not change between platforms.
 
 ## States and sizes
@@ -77,7 +81,7 @@ Web defaults to Secondary, while iOS and Android default to Primary. Set the var
 
 - **Enabled**: Available for activation. Pointer hover, press, and keyboard focus provide temporary interaction feedback.
 - **Loading**: Shows that an action is in progress. Keep the label specific to the work, prevent duplicate activation, and replace loading with a clear result.
-- **Disabled**: Unavailable for activation. Prefer explaining what is missing over leaving users to infer why the action is unavailable.
+- **Disabled**: Marks an action as unavailable. Ensure the application does not run that action while disabled, and explain what is missing rather than leaving users to infer why it is unavailable.
 - **Small**: A compact size for dense layouts. Small is a size, not an interaction state.
 
 Use the default size for most interfaces. Use full width when a narrow layout benefits from a larger, consistent target, not simply to fill spare space.
