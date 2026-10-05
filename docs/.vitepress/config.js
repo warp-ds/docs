@@ -41,6 +41,12 @@ export default defineConfig({
           return '</div>';
         },
       });
+
+      // Wrap every table so .table-container can scroll it horizontally.
+      // Wide tables (the cross-platform naming ones especially) otherwise
+      // overflow the content column and sit under the outline sidebar.
+      md.renderer.rules.table_open = () => '<div class="table-container">\n<table>\n';
+      md.renderer.rules.table_close = () => '</table>\n</div>\n';
     },
   },
   vue: {
