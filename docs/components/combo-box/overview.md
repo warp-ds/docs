@@ -14,29 +14,15 @@ See also [Select](/components/select/overview.md) and [Text field](/components/t
 
 ## General
 
-Use a combo box when suggestions help users enter a value, especially when the list is too long to scan in a Select. Unlike Select, the input remains editable. The component accepts free text unless the application validates the value against the available suggestions.
+Use a combo box when typing helps users find a value in a long list. Unlike Select, the input remains editable. It accepts free text unless the application requires a value from the suggestions.
 
-The input and suggestion list work as one control. By default, typing filters the available suggestions. Choosing a suggestion returns one value: Elements fills the input, while the controlled React component requires the application to update it. The application supplies the options, decides whether to query a remote source, and handles any rule that limits the value to a listed option.
+The input and suggestion list work as one control. Typing narrows the suggestions, and choosing one fills the input. Give the field a visible label and explain when users must choose a listed value.
 
-## States
-
-- **Default**: The input is empty and the suggestion list is closed.
-- **Focus**: The input has keyboard focus. The focus indicator remains on the input while users move through suggestions.
-- **Open**: The suggestion list is visible. One suggestion can be active and previewed in the input without being committed as the field value.
-- **Filled**: The input contains typed text or a selected suggestion.
-- **Invalid**: The value does not meet an application rule. Pair this state with a message that explains how to fix the value.
-- **Disabled**: The input cannot receive focus or be changed.
-
-The Elements implementation is collapsed by default and opens when the user types or presses a list-navigation key. Products can also open the list when the input receives focus.
+The list begins collapsed. Users can reveal suggestions with the list-navigation keys, and products can choose to show suggestions when the input receives focus. Keep focus visible on the input while users review suggestions. If a value is invalid, explain how to correct it beside the field.
 
 ## Availability
 
-Combo box is available for Web through Elements and the legacy React package. The current framework matrix does not list Vue, React 19, iOS, or Android implementations.
-
-| Platform | Component name |
-| --- | --- |
-| Web (Elements) | `<w-combobox>` |
-| React | `Combobox` |
+WARP provides `<w-combobox>` for Web through Elements. WARP does not provide a native iOS or Android Combo box.
 
 ## Anatomy
 

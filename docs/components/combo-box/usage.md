@@ -27,24 +27,22 @@ Decide whether the field accepts free text or requires a listed value before cho
 
 - If free text is allowed, keep the user's text when it does not match a suggestion.
 - If a listed value is required, validate after the user has had a reasonable chance to finish and explain how to correct an unmatched value.
-- In Elements, keep the visible option label clear and the stored value stable. In legacy React, keep `value` human-readable because it controls filtering and selected text; map internal identifiers in application state.
+- Keep suggestion labels clear and distinguish similar choices with words users can recognise.
 - Preserve the entered value after an unrelated validation error.
 
-Choosing a suggestion closes the list. Elements fills the field, while legacy React requires the application to update the controlled `value` from `onSelect`. Both implementations can also select an active suggestion when focus leaves the field. If you use that default, test the surrounding form to ensure a pointer click or `Tab` does not commit an unexpected value.
+Choosing a suggestion closes the list and fills the field. Check the control in its surrounding form so leaving the field does not commit a suggestion unexpectedly.
 
 ## Suggestions and filtering
 
 Show suggestions that help users recognise the right choice. Keep labels short, distinct, and ordered predictably. Put distinguishing words early when options have similar labels.
 
-Elements filters suggestions by their visible labels using a case-insensitive substring match. React filters by option value. For remote search or another matching strategy, disable the built-in filtering and let the application provide the results. See the [Elements](/components/combo-box/frameworks/elements) and [React](/components/combo-box/frameworks/react) pages for implementation details.
-
-When application-managed results use fuzzy or non-literal matching in Elements, compare the visible list with the announced result count during testing. The built-in status still counts literal matches in the supplied labels and can otherwise report no suggestions while results are visible.
+The default filtering matches typed text in option labels. For remote or fuzzy results, set `disable-static-filtering` and supply the options from your application. See the [Elements guide](/components/combo-box/frameworks/elements) for the available settings.
 
 - Update results as the query changes, but avoid replacing the list so abruptly that users lose their place.
 - Keep the option order stable unless relevance clearly changes.
 - Ensure the surrounding product communicates when a remote search returns no suggestions.
 - Do not put essential information only in visual highlighting. Matched-text emphasis is optional.
-- Use plain, readable option labels. Elements does not support rich option content.
+- Use plain, readable option labels.
 
 ## Opening the list
 
