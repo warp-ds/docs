@@ -14,29 +14,22 @@ Use breadcrumbs when:
 
 Do not use breadcrumbs to represent browsing history, filters, tabs, or progress through a multi-step task. For peer content use [Tabs](/components/tabs/overview.md), and for task progress use [Steps](/components/steps/overview.md).
 
-<div class="grid gap-16 grid-cols-1 md:grid-cols-2 my-24">
-
-<DoDont type="do">
-
-![A breadcrumb with stable hierarchy levels: Motor, Cars, and Electric cars.](/components/breadcrumbs/DoDonts/usage-hierarchy-do.png)
+<DoDont>
+<Do imgurl="/docs/components/breadcrumbs/DoDonts/usage-hierarchy-do.png" imgalt="A breadcrumb with stable hierarchy levels: Motor, Cars, and Electric cars.">
 
 Use stable levels from the information architecture.
 
-</DoDont>
-
-<DoDont type="dont">
-
-![A breadcrumb using Search, Results, and Saved, which describes browsing history rather than hierarchy.](/components/breadcrumbs/DoDonts/usage-hierarchy-dont.png)
+</Do>
+<Do not imgurl="/docs/components/breadcrumbs/DoDonts/usage-hierarchy-dont.png" imgalt="A breadcrumb using Search, Results, and Saved, which describes browsing history rather than hierarchy.">
 
 Don't use transient actions or browsing history as hierarchy levels.
 
+</Do>
 </DoDont>
-
-</div>
 
 ## Behaviour
 
-In Elements, compose breadcrumbs from `w-breadcrumb-item` elements. The component inserts a non-interactive slash between items and warns during development if more than one item is current, if the current item is not last, or if modern items are mixed with the legacy child API.
+In Elements, compose breadcrumbs from `w-breadcrumb-item` elements. The component inserts separators between items. Keep the current page last and use links for its parent levels.
 
 All parent items are links to their respective destinations. Pointer users select a link normally. Keyboard users move between links with <kbd>Tab</kbd> and <kbd>Shift</kbd> + <kbd>Tab</kbd>, then follow the focused link with <kbd>Enter</kbd>. The current page and separators are not interactive.
 
@@ -44,31 +37,24 @@ Do not mix `w-breadcrumb-item` with direct anchors or spans in the same Elements
 
 ## Current page
 
-When the current page is included, place it last and render it as non-interactive text. This distinguishes the user's location from the available navigation and avoids a link that reloads the same page.
+Place the current page last and render it as non-interactive text. This distinguishes the user's location from the available navigation and avoids a link that reloads the same page.
 
-In Elements, set `current-page` on the final `w-breadcrumb-item` and omit `href`. In React and Vue, use a non-link child with `aria-current="page"`.
+In Elements, set `current-page` on the final `w-breadcrumb-item` and omit `href`.
 
-The current page can be omitted when the page heading immediately below the trail already identifies the location. In that case, the final breadcrumb must link to the nearest parent.
+In Elements 2.11.0, omitting the current-page item leaves a trailing separator. Include it in the component. If the page heading already names the current location and the design calls for parent links only, use a separate set of navigation links instead of `w-breadcrumbs` in that version.
 
-<div class="grid gap-16 grid-cols-1 md:grid-cols-2 my-24">
-
-<DoDont type="do">
-
-![A breadcrumb where Oslo is the final current-page text and is not a link.](/components/breadcrumbs/DoDonts/usage-current-page-do.png)
+<DoDont>
+<Do imgurl="/docs/components/breadcrumbs/DoDonts/usage-current-page-do.png" imgalt="A breadcrumb where Oslo is the final current-page text and is not a link.">
 
 Show the current page as the final non-interactive item.
 
-</DoDont>
-
-<DoDont type="dont">
-
-![A breadcrumb where Oslo is styled as a link to the page the user is already viewing.](/components/breadcrumbs/DoDonts/usage-current-page-dont.png)
+</Do>
+<Do not imgurl="/docs/components/breadcrumbs/DoDonts/usage-current-page-dont.png" imgalt="A breadcrumb where Oslo is styled as a link to the page the user is already viewing.">
 
 Don't link the current page back to itself.
 
+</Do>
 </DoDont>
-
-</div>
 
 ## Content guidelines
 
@@ -82,29 +68,22 @@ Don't link the current page back to itself.
 
 The component does not collapse items or truncate labels automatically. Products must decide which hierarchy levels remain useful at each breakpoint.
 
-When the full trail does not fit, preserve the nearest parent and the current page. Remove intermediate levels before shortening meaningful labels. If the current page is omitted, keep the nearest parent as a link and let the page heading identify the current location.
+When the full trail does not fit, preserve the nearest parent and the current page. Remove intermediate levels before shortening meaningful labels.
 
 Avoid allowing long trails to wrap into several lines. Test the actual content at narrow widths and with text enlarged. If labels must be visually shortened, keep enough text to distinguish the destination and preserve its full accessible name.
 
-<div class="grid gap-16 grid-cols-1 md:grid-cols-2 my-24">
-
-<DoDont type="do">
-
-![A compact breadcrumb showing the nearest parent, Cars, followed by the current page, Electric cars.](/components/breadcrumbs/DoDonts/usage-responsive-do.png)
+<DoDont>
+<Do imgurl="/docs/components/breadcrumbs/DoDonts/usage-responsive-do.png" imgalt="A compact breadcrumb showing the nearest parent, Cars, followed by the current page, Electric cars.">
 
 Prioritise the nearest parent and current page when space is limited.
 
-</DoDont>
-
-<DoDont type="dont">
-
-![A long breadcrumb squeezed into a narrow layout and wrapping over several lines.](/components/breadcrumbs/DoDonts/usage-responsive-dont.png)
+</Do>
+<Do not imgurl="/docs/components/breadcrumbs/DoDonts/usage-responsive-dont.png" imgalt="A long breadcrumb squeezed into a narrow layout and wrapping over several lines.">
 
 Don't squeeze a long trail into a narrow layout and let it wrap repeatedly.
 
+</Do>
 </DoDont>
-
-</div>
 
 ## Placement
 

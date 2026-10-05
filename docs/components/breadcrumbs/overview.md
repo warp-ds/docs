@@ -24,19 +24,7 @@ Use breadcrumbs when the product has a stable hierarchy and users benefit from m
 
 Items are ordered from the broadest parent to the current location. The component adds the separators, so do not include slash characters in item labels.
 
-Breadcrumbs are currently available for web frameworks only.
-
-## Design and implementation
-
-The Figma component has `Levels` variants from one to six and a `Current page` option. These are composition controls, not content rules or an enforced maximum.
-
-| Figma property | Implementation |
-| --- | --- |
-| `Levels` 1–6 | Add the required number of breadcrumb items in Elements, or children in React and Vue. The implementation does not enforce a six-item limit. |
-| `Current page: Yes` | Make the final item the current page. In Elements, use `current-page` and omit `href`. In React and Vue, render the final child as non-interactive text with `aria-current="page"`. |
-| `Current page: No` | End the trail at the nearest parent when the current page is intentionally omitted. |
-
-Six levels are available for design flexibility, but shorter trails are easier to scan. Include only levels that help users understand or move through the hierarchy.
+WARP provides Breadcrumbs on Web. Include only the levels that help users understand or move through the hierarchy.
 
 ## Anatomy
 
@@ -50,7 +38,7 @@ Six levels are available for design flexibility, but shorter trails are easier t
 
 1. **Parent link**: The name of a parent page or section. Selecting it moves the user to that level.
 2. **Separator**: A slash inserted automatically between items. It is visual only and is not interactive.
-3. **Current page**: The user's present location. When included, it is the final item and should not link to itself.
+3. **Current page**: The user's present location. It is the final item and does not link to itself.
 
 </div>
 </div>

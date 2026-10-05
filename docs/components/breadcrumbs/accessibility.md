@@ -6,7 +6,6 @@ Breadcrumbs must expose their purpose, links, current location, and reading orde
 
 ## General
 
-- Wrap the trail in a navigation landmark with an accessible label that identifies it as breadcrumbs.
 - Keep breadcrumb items in hierarchy order in the DOM, from the broadest parent to the current location.
 - Use real links for parent destinations. Do not reproduce link behaviour with click handlers on generic elements.
 - Identify the current page with `aria-current="page"`. Prefer non-interactive text so the current page does not link to itself.
@@ -40,13 +39,11 @@ The breadcrumb trail must be exposed as a navigation landmark with a concise acc
 
 ### Current page
 
-`aria-current="page"` communicates which item represents the page being viewed. The modern Elements item API applies it when `current-page` is set. In React and Vue, add `aria-current="page"` to the final non-link child yourself.
-
-If the current page is omitted from the trail, do not set `aria-current` on its parent link.
+`aria-current="page"` communicates which item represents the page being viewed. Elements applies it when the final `w-breadcrumb-item` has `current-page`.
 
 ### Separators
 
-Separators are visual punctuation, not navigation content. `w-breadcrumb-item` inserts separators with `aria-hidden="true"`. The React and Vue wrappers insert visible slash separators but do not currently hide them from assistive technology, so include this in screen-reader testing when using those wrappers.
+Separators are visual punctuation, not navigation content. `w-breadcrumb-item` inserts separators with `aria-hidden="true"`.
 
 ## Visual accessibility
 
@@ -77,15 +74,9 @@ Use `w-breadcrumb-item` for each item. The component:
 - hides inserted separators from assistive technology;
 - warns when current-page state is duplicated or placed before the final item.
 
-Avoid the legacy direct anchor-and-span API because its inserted separators are not hidden from assistive technology.
+In Elements 2.11.0, a final item without `current-page` still renders a trailing slash. Include the current page as the final, non-link item while this behaviour remains.
 
-### React and Vue
-
-The React and Vue wrappers expose a labelled navigation landmark and insert separators between their direct children. Authors are responsible for using real links for parents and adding `aria-current="page"` to the final non-link child.
-
-The wrappers' separators may be announced by screen readers, so test the rendered output with the browser and assistive technology combinations supported by the product.
-
-### Native
+### iOS and Android
 
 Warp does not currently provide a Breadcrumbs component for iOS or Android.
 
