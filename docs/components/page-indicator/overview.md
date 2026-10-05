@@ -25,7 +25,7 @@ Page indicators show how many pages or items are in a sequence and which one is 
 
 ## General
 
-Use a Page indicator to orient people within a short, ordered sequence such as an image carousel, onboarding flow, or pager. The dots are a compact status display: the number of dots represents the total and the highlighted dot represents the current position.
+Use a Page indicator to orient people within a short, ordered sequence such as an image carousel, onboarding flow, or pager. The dots are a compact status display: the number of dots represents the total and the highlighted dot represents the current page or item.
 
 A Page indicator supplements the control that moves the content. Pair it with swipe, scroll, or clearly labelled previous and next controls rather than treating the dots as the only navigation.
 
@@ -33,7 +33,7 @@ Render it only when the sequence contains at least two items. For indexed result
 
 ## Behaviour
 
-The component grows horizontally as the page count increases. Web clamps `selectedPage` to its valid 1-based range; iOS and Android do not clamp their 0-based values, so keep `selectedPage` or `currentPage` between `0` and `pageCount - 1` to preserve one active dot. Update the active position whenever the surrounding carousel or pager changes.
+The component grows horizontally as the page count increases. Web uses a 1-based `selectedPage` and clamps it to the valid range. iOS and Android use 0-based positions and do not clamp them, so keep `selectedPage` or `currentPage` between `0` and `pageCount - 1` to show a current-page dot. On iOS, a `pageCount` below two still renders two dots; hide the indicator when the sequence has only one item. Update the position whenever the surrounding carousel or pager changes.
 
 Figma provides configurations for two to five dots. The platform implementations accept dynamic page counts, but product use should remain short enough to understand at a glance.
 
@@ -95,7 +95,7 @@ Convert the current position deliberately when sharing state between platforms. 
 ![Page indicator anatomy diagram with numbered callouts pointing to the active dot and an inactive dot.](/components/pageindicator/overview-anatomy.svg)
 :::
 
-1. **Active dot**: Identifies the page or item currently visible.
-2. **Inactive dot**: Represents another page or item in the sequence.
+1. **Current-page dot**: Identifies the page or item currently visible.
+2. **Other dots**: Represent the remaining pages or items in the sequence.
 
 <component-questions />

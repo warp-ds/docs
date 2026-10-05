@@ -21,19 +21,19 @@ Page indicators help people understand their position within a short, ordered se
 
 ## Page count
 
-A short row can be understood as a pattern at a glance. Beyond eight dots, the total and current position become difficult to count, especially at narrow widths or high zoom. For a longer sequence, show a numeric position such as “3 of 12” or choose a navigation pattern that supports the full collection.
+A short row can be understood at a glance. When the dots become difficult to count, especially at narrow widths or high zoom, show a numeric position such as “3 of 12” or choose a navigation pattern that supports the full collection.
 
 <DoDont>
-<Do imgurl="/docs/components/pageindicator/DoDonts/usage-scannable-count-do.svg" imgalt="A carousel uses five Page indicator dots in a short, scannable row.">
+<Do imgurl="/docs/components/pageindicator/DoDonts/usage-scannable-count-do.png" imgalt="Featured bike card for City commuter with labelled Previous bike and Next bike controls and a numeric position, 3 of 12.">
 
-Keep the number of dots short enough to count at a glance.
+For a long sequence, show a numeric position such as “3 of 12”.
 
-**Why**: A compact row communicates both the total and current position without demanding careful counting.
+**Why**: People can understand their position without counting many dots.
 
 </Do>
-<Do not imgurl="/docs/components/pageindicator/DoDonts/usage-scannable-count-dont.svg" imgalt="A carousel uses twelve Page indicator dots in a long, crowded row.">
+<Do not imgurl="/docs/components/pageindicator/DoDonts/usage-scannable-count-dont.png" imgalt="The same City commuter card shows twelve Page indicator dots instead of a numeric position.">
 
-Show a dot for every item in a long collection.
+Use a long row of dots that is hard to count.
 
 **Why**: A long row is hard to count, takes up space, and makes small position changes difficult to recognise.
 
@@ -47,16 +47,16 @@ Keep the Page indicator synchronised with every way the content can move: previo
 The indicator communicates position; the surrounding carousel or pager provides navigation. Web and Android indicators are passive. iOS dots can update the selected page when tapped, but they should still be supplementary to controls that are easy to find, operate, and understand.
 
 <DoDont>
-<Do imgurl="/docs/components/pageindicator/DoDonts/usage-navigation-do.svg" imgalt="A carousel provides visible previous and next controls as well as a passive Page indicator.">
+<Do imgurl="/docs/components/pageindicator/DoDonts/usage-navigation-do.png" imgalt="City commuter card with Previous bike and Next bike WARP Buttons above a five-dot Page indicator.">
 
-Provide clear carousel controls and use the Page indicator as supporting status.
+Provide labelled previous and next controls with the Page indicator.
 
 **Why**: Dedicated controls are easier to discover and can provide appropriate keyboard, touch, and assistive-technology behaviour.
 
 </Do>
-<Do not imgurl="/docs/components/pageindicator/DoDonts/usage-navigation-dont.svg" imgalt="A carousel provides only tiny Page indicator dots, with a pointer trying to use one as navigation.">
+<Do not imgurl="/docs/components/pageindicator/DoDonts/usage-navigation-dont.png" imgalt="The same City commuter card shows only a five-dot Page indicator, with no visible previous or next controls.">
 
-Make the dots the only way to move through the sequence.
+Rely on dots as the only visible navigation.
 
 **Why**: The visible dots are too small to serve as the sole navigation target and are passive on Web and Android.
 
@@ -67,36 +67,7 @@ Make the dots the only way to move through the sequence.
 
 Place the Page indicator inside or directly below the content it describes. Keep it horizontally centred within the carousel or pager so its location remains predictable as the content changes.
 
-- **Inside the content**: Leave 12px between the indicator and the bottom edge.
-- **Outside the content**: Leave 24px between the content and the indicator.
-
-<div class="flex flex-col gap-20 w-full md:flex-row">
-  <div class="w-full md:w-1/2">
-    <img src="/components/pageindicator/placement-inside.svg" alt="Page indicator centred inside the content container with 12px bottom spacing." />
-  </div>
-  <div class="w-full md:w-1/2">
-    <img src="/components/pageindicator/placement-outside.svg" alt="Page indicator centred below the content container with 24px spacing." />
-  </div>
-</div>
-
-When content changes underneath the indicator, verify every image or surface. If either the active or inactive dots can disappear against the background, place the indicator outside the content on a stable surface.
-
-<DoDont>
-<Do imgurl="/docs/components/pageindicator/DoDonts/usage-contrast-do.svg" imgalt="A Page indicator sits below an image on a plain surface where active and inactive dots are clear.">
-
-Place the indicator outside the content when that gives every dot reliable contrast.
-
-**Why**: A stable surface keeps the current position visible across the whole sequence.
-
-</Do>
-<Do not imgurl="/docs/components/pageindicator/DoDonts/usage-contrast-dont.svg" imgalt="A Page indicator sits over an image where the inactive dots blend into the background.">
-
-Place the indicator over content that makes some dots disappear.
-
-**Why**: Variable imagery can hide the inactive dots and make the total impossible to understand.
-
-</Do>
-</DoDont>
+When content changes underneath the indicator, check every image or surface. Move the indicator outside the content if the dots disappear against it, and verify that both the current and remaining dots are distinguishable on the new surface.
 
 <component-design-guidelines name="Warp - Components / Page indicator" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=816-35117" />
 

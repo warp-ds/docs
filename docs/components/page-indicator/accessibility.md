@@ -17,7 +17,7 @@ An accessible carousel or pager communicates the sequence, the item currently vi
 
 ## Keyboard
 
-The passive Page indicator should not receive keyboard focus. Keyboard interaction belongs to the surrounding carousel or pager and its controls.
+On Web and Android, the Page indicator is passive and should not receive keyboard focus. Keyboard interaction belongs to the surrounding carousel or pager and its controls.
 
 - Make previous and next controls reachable in a logical tab order with visible focus indicators.
 - Use native Button controls so `Enter` and `Space` work without custom handlers.
@@ -25,7 +25,7 @@ The passive Page indicator should not receive keyboard focus. Keyboard interacti
 - Do not add a separate tab stop for every visual dot.
 - After navigation, keep focus on the control that was used unless the product flow has a clear reason to move it.
 
-On iOS, where a dot can update the selected page, provide an equivalent labelled navigation path for people using an external keyboard, Switch Control, or Voice Control.
+On iOS, tapping a dot can update the selected page, but the dots have no supplied accessibility action. Provide an equivalent labelled navigation path for people using an external keyboard, Switch Control, or Voice Control.
 
 ## Screen reader
 
@@ -44,7 +44,7 @@ Screen reader users need the current position and total in words, not a series o
 - When the indicator overlays images or other changing content, test every item in the sequence. Move it outside the content if any dot loses contrast.
 - Check the component at 200% browser zoom and at narrow widths. The complete row must remain visible without clipping or horizontal page scrolling.
 - Do not use animation, scale, or movement as the only indication that the selected page changed.
-- Use appropriately sized carousel controls for interaction. A visible 10px dot is not an adequate standalone touch target.
+- Use appropriately sized controls for navigation. A visible 10px Web dot is not an adequate standalone touch target.
 
 ## Platform-specific accessibility
 
@@ -58,16 +58,14 @@ Warp Elements renders the Page indicator as one non-interactive image with a loc
 - Keep both properties updated with the visible content.
 - The image role is not a live region. Verify the surrounding carousel's page-position announcement when navigation occurs.
 
-
 ### iOS
 
-`Warp.PageIndicator` uses a 0-based `selectedPage` binding. Tapping a dot updates that binding and animates the selected colour.
+`Warp.PageIndicator` uses a 0-based `selectedPage` binding. Its 10×10pt dots accept taps, but the component supplies no accessible names, selected states, or accessibility actions for them. The row's padding does not enlarge the individual targets, which are below [Apple's recommended 44×44pt hit region](https://developer.apple.com/design/human-interface-guidelines/buttons). These gaps are tracked in [warp-ios#242](https://github.com/warp-ds/warp-ios/issues/242).
 
-- Give the containing carousel a concise VoiceOver label and a value such as “Page 3 of 5”.
-- Keep labelled previous and next actions available; do not make the 10pt dots the only way to navigate.
-- Make the visible item, spoken position, and `selectedPage` binding update together.
-- Test dot selection and the equivalent navigation path with VoiceOver, Switch Control, Voice Control, and an external keyboard.
-- Respect Reduce Motion if application code adds movement beyond the component's colour transition.
+- Treat the dots as supplementary visual status. When the surrounding pager communicates the position, hide the indicator from assistive technology with `.accessibilityHidden(true)`.
+- Give the pager a concise accessible label and value such as “Page 3 of 5”, plus labelled previous and next actions. Do not rely on dot taps for navigation.
+- Keep the visible item, spoken position, and `selectedPage` binding synchronised. iOS renders at least two dots even when `pageCount` is one, and an out-of-range `selectedPage` leaves no dot selected. Omit the indicator for one item and keep the 0-based selected index within the sequence.
+- Test the equivalent navigation path with VoiceOver, Switch Control, Voice Control, and an external keyboard. Respect Reduce Motion if the application adds movement beyond the component's colour transition.
 
 ### Android
 
@@ -75,7 +73,7 @@ Warp Elements renders the Page indicator as one non-interactive image with a loc
 
 - Expose the current position through the pager or a surrounding semantics node so TalkBack can hear “Page 3 of 5”.
 - Keep `currentPage` synchronised with gesture, Button, and programmatic navigation.
-- Give previous and next controls clear content descriptions and a minimum 48×48dp touch target.
+- Give previous and next controls clear content descriptions and follow [Android's 48×48dp recommended touch target](https://developer.android.com/develop/ui/compose/accessibility/api-defaults).
 - Do not add click semantics to the visual dots unless the product intentionally implements and labels each one as a control.
 - Test the pager and position announcement together; the dots themselves are supplementary visual status.
 
@@ -83,7 +81,7 @@ Warp Elements renders the Page indicator as one non-interactive image with a loc
 
 - **Screen readers**: Test VoiceOver, TalkBack, and NVDA or JAWS. Confirm the sequence name, current position, total, and navigation controls are understandable without seeing the dots.
 - **All navigation paths**: Change pages with buttons, gestures, keyboard commands, and programmatic updates. The visible item, active dot, and spoken status must stay synchronised.
-- **Boundaries**: Verify the first and last pages, a two-item sequence, and the largest supported sequence. Controls and announcements must reflect when no previous or next item is available.
+- **Boundaries**: Verify a single-item sequence, the first and last pages of a two-item sequence, and the longest sequence the product permits. On iOS, check that the indicator is omitted for one item and that the selected index never falls outside its range.
 - **Contrast and themes**: Check active and inactive dots over every content item, in every supported brand, and in light and dark themes.
 - **Zoom and layout**: Test at 200% browser zoom and narrow widths. The row must remain centred, complete, and unclipped.
 - **Automated checks**: Use axe or an equivalent scanner to catch missing names and invalid roles, then complete manual announcement and navigation testing.
