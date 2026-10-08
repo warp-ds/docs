@@ -746,7 +746,28 @@ export const sidebarFoundations = [
         ],
       },
       { text: 'Elevation', link: '/foundations/elevation/' },
-      { text: 'Dark mode', link: '/foundations/dark-mode/' },
+      {
+        text: 'Dark mode',
+        link: '/foundations/dark-mode/',
+        items: [
+          {
+            text: 'Dark mode in Warp',
+            link: '/foundations/dark-mode/',
+          },
+          {
+            text: 'Dark mode in Figma',
+            link: '/foundations/dark-mode/figma/',
+          },
+          {
+            text: 'Dark mode in Warp Elements',
+            link: '/foundations/dark-mode/elements/',
+          },
+          {
+            text: 'Dark mode in React',
+            link: '/foundations/dark-mode/react/',
+          },
+        ],
+      },
       { text: 'Motion', link: '/foundations/motion/' },
     ],
   },
