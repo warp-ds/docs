@@ -13,7 +13,7 @@
     "do-caption do-caption"
     "dont-figure dont-figure"
     "dont-pill dont-pill"
-    "dont-caption dont-caption" / 50% 50%;
+    "dont-caption dont-caption" / minmax(0, 1fr) minmax(0, 1fr);
   grid-column-gap: 24px;
   margin-block: 16px;
 }
@@ -23,7 +23,7 @@
     grid-template:
     "do-figure dont-figure"
     "do-pill dont-pill"
-    "do-caption dont-caption" / 50% 50%;
+    "do-caption dont-caption" / minmax(0, 1fr) minmax(0, 1fr);
   }
 }
 </style>
