@@ -50,13 +50,13 @@ Screen reader users need the current position and total in words, not a series o
 
 ### Web
 
-Warp Elements renders the Page indicator as one non-interactive image with a localised accessible label. For example, `selectedPage="3"` and `pageCount="5"` produces “Dot 3 is highlighted in a row of 5 dots”.
+Warp Elements exposes the Page indicator as one non-interactive image. In Elements 2.13.0, its accessible label is set before the page properties are applied, so it can announce “Dot 1 is highlighted in a row of 1 dots” while showing a different position. When the surrounding pager announces the correct position, set `aria-hidden="true"` on the indicator until this is fixed.
 
 - `selectedPage` is 1-based and is clamped to the valid page range.
 - `pageCount` is clamped to a minimum of one.
 - The component has `pointer-events: none` and should not receive `tabindex`, click handlers, or Button semantics.
-- Keep both properties updated with the visible content.
-- The image role is not a live region. Verify the surrounding carousel's page-position announcement when navigation occurs.
+- Keep both properties updated for the visual dots and update the pager's spoken position separately.
+- The image role is not a live region. Verify the surrounding pager's page-position announcement when navigation occurs.
 
 ### iOS
 
