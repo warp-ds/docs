@@ -108,7 +108,8 @@
             "type": "string",
             "minLength": 1,
             "maxLength": 2000,
-            "description": "A primary requirement verified from available material: a full-commit GitHub permalink in a WARP repo, a W3C accessibility requirement, or Apple, Android, or Figma design guidance. The changed docs claim alone cannot establish the expectation."
+            "pattern": "^https://[^\\s]+$",
+            "description": "Exactly one HTTPS URL for the strongest primary requirement, with no prose, Markdown, or second URL: a full-commit GitHub permalink in a WARP repo, a W3C accessibility requirement, or Apple, Android, or Figma design guidance. Put the explanation in expected_behavior and other links in upstream_evidence. The changed docs claim alone cannot establish the expectation."
           },
           "actual_behavior": { "type": "string", "minLength": 1, "maxLength": 2000 },
           "impact": { "type": "string", "minLength": 1, "maxLength": 2000 },
