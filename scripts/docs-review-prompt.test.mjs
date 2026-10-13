@@ -3,6 +3,9 @@ import { readFile } from 'node:fs/promises';
 import test from 'node:test';
 
 const prompt = await readFile(new URL('../.github/codex/prompts/docs-review.md', import.meta.url), 'utf8');
+const schema = JSON.parse(
+  await readFile(new URL('../.github/codex/schemas/docs-review.schema.json', import.meta.url), 'utf8'),
+);
 
 test('reviews reader value and hidden context assumptions', () => {
   assert.match(prompt, /### Reader value and conceptual consistency/);
@@ -20,4 +23,16 @@ test('keeps version and terminology feedback proportional', () => {
   assert.match(prompt, /taste-only copy preferences/);
   assert.match(prompt, /directly observed, non-blocking reflection/);
   assert.match(prompt, /do not turn accurate source naming into a docs blocker/);
+});
+
+test('requires one primary expectation source URL for component issues', () => {
+  assert.match(prompt, /expectation_source.*exactly one HTTPS URL/);
+  const source = schema.properties.component_issues.items.properties.expectation_source;
+  const pattern = new RegExp(source.pattern);
+  assert.match('https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html', pattern);
+  assert.doesNotMatch('WCAG guidance: https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html', pattern);
+  assert.doesNotMatch(
+    'https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html https://github.com/warp-ds/elements',
+    pattern,
+  );
 });
