@@ -144,9 +144,6 @@ Include a close button when the message contains an action button (allows dismis
 #### Android
 
 - Above bottom navigation bars and FABs.
-- 16dp horizontal and vertical margins.
-- Minimum width 328dp, maximum width 420dp.
-- Centered horizontally when not full width.
 
 ### Interaction
 

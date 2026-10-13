@@ -1,0 +1,28 @@
+diff --git a/dist/docs/tooltip/api.md b/dist/docs/tooltip/api.md
+index d9d00aeb69a5367da802dbf795903f21fa037f96..c65636125a46adddf20d1599d9475bdceabe53ff 100644
+--- a/dist/docs/tooltip/api.md
++++ b/dist/docs/tooltip/api.md
+@@ -81,19 +81,19 @@ Focusing the target element shows the tooltip immediately.
+ 
+ ### Types
+ 
+-#### Element | null
++#### `Element | null`
+ 
+ `null | Element`
+ 
+-#### Placement
++#### `Placement`
+ 
+ `'top' | 'bottom' | 'left' | 'right' | 'top-start' | 'top-end' | 'right-start' | 'right-end' | 'bottom-start' | 'bottom-end' | 'left-start' | 'left-end'`
+ 
+-#### ReturnType<typeof autoUpdate> | null
++#### `ReturnType<typeof autoUpdate> | null`
+ 
+ `null | {  }`
+ 
+-#### TooltipPlacement
++#### `TooltipPlacement`
+ 
+ `'top' | 'bottom' | 'left' | 'right'`
+ 

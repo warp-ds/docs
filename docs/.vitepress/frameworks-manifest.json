@@ -200,6 +200,12 @@
         "file": "react"
       }
     ],
+    "confirmation-dialog": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
     "date-picker": [
       {
         "name": "Android",
@@ -286,6 +292,10 @@
       {
         "name": "Android",
         "file": "android"
+      },
+      {
+        "name": "Elements",
+        "file": "elements"
       },
       {
         "name": "iOS",

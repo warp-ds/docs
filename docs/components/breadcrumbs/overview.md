@@ -24,7 +24,7 @@ Breadcrumbs show users their current location relative to the information archit
 
 **2. Separator**: A forward slash symbol (“/”) positioned between each item in the list. It provides visual distinction between individual links (or crumbs) using the same font as the rest of the breadcrumbs. 
 
-**3. Current page**: This is the last item in the breadcrumbs and shows the current page the user is on. It uses default text, and should not be a clickable link. 
+**3. Current page**: This is the last item in the breadcrumbs and shows the current page the user is on. It uses default text, and should not be a clickable link. An alternative is to have the heading for the current page immediately after the breadcrumb, in which case you can omit the current page from the breadcrumb trail.
 
 ## Content
 Breadcrumbs expect their component children to be the link "crumbs" that make up the navigation structure.

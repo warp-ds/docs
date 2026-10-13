@@ -2,3 +2,5 @@ allowBuilds:
   '@parcel/watcher': false
   esbuild: false
   vue-demi: false
+patchedDependencies:
+  '@warp-ds/elements@2.13.0': patches/@warp-ds__elements@2.13.0.patch

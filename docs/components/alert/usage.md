@@ -152,6 +152,9 @@ Soften a failure by reporting it in the positive or info variants.
 **Why**: The colour contradicts the message. Once green or blue can mean failure, the variants stop carrying information anywhere in the product.
 
 </Do>
+</DoDont>
+
+<DoDont>
 <Do imgurl="/docs/components/alert/DoDonts/usage-next-step-do.svg" imgalt="A negative alert reading 'Payment declined. Your bank rejected the card. Try another card or pay with Vipps,' with a 'Change payment method' button.">
 
 Say what happened, then how to get out of it.
@@ -166,6 +169,9 @@ Report the problem and stop there.
 **Why**: An error code is for your logs. The user is left guessing whether to retry, wait, or call support — and many will simply leave.
 
 </Do>
+</DoDont>
+
+<DoDont>
 <Do imgurl="/docs/components/alert/DoDonts/usage-one-alert-do.svg" imgalt="One negative alert reading 'Three fields need your attention,' listing email, postcode, and phone number.">
 
 Combine everything wrong in one context into a single alert.

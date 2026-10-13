@@ -8,12 +8,12 @@ Utilities for controlling gutters between grid and flexbox items.
 
 | Class       | Description       |
 |-------------|-------------------|
-| `gap-{n}`   | `gap: {n}`        |
-| `gap-x-{n}` | `column-gap: {n}` |
-| `gap-y-{n}` | `row-gap: {n}`    |
+| `gap-{size}`   | `gap: {size}`        |
+| `gap-x-{size}` | `column-gap: {size}` |
+| `gap-y-{size}` | `row-gap: {size}`    |
 
 > Available values <br />
-> `{n}`: Any spacing value <br />
+> `{size}`: `0`, `1`, `2`, `4`, `6`, `8`, `10`, `12`, `14`, `16`, `20`, `24`, `28`, `32`, `40`, `44`, `48`, `56`, `64`, `80`, `96`, `112`, `128`, `144` <br />
 
 ## Basic usage
 
