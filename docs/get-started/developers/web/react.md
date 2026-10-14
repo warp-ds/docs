@@ -14,7 +14,7 @@ Follow the [Elements setup guide](/get-started/developers/web/elements.md) to lo
 
 ## Using Components
 
-Import each wrapper from `@warp-ds/elements/react/{component}` and use it in JSX:
+Import each wrapper from `@warp-ds/elements/react` and use it in JSX:
 
 ```jsx
 import { Breadcrumbs, BreadcrumbItem } from '@warp-ds/elements/react';
