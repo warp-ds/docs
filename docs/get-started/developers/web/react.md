@@ -1,85 +1,32 @@
-## Installation
-
-The Warp React package can be installed from NPM.
-
-```shell
-npm install @warp-ds/react
-```
-
 ## Setup
 
-Since warp components are internationalised, you'd need to either set `NMP_LANGUAGE` for server-side rendering of the component, or set html document lang with a two-letter-code, eg: `<html lang="en">`. The server-side variable is read as `process.env.NMP_LANGUAGE` so you could either define this in your package.json script, or use `.env` files to leverage [dotenv](https://github.com/motdotla/dotenv).
+Use Warp Elements (web components) in React apps. The React-specific `@warp-ds/react` package is deprecated.
+
+React apps should use the React wrappers provided by `@warp-ds/elements` to avoid some hydration mismatch errors when using server-side rendering. While the wrappers are recommended, in React v19 apps and later, you may also use the custom elements directly if you prefer.
+
+Install the package to use the wrappers:
+
+```shell
+npm install @warp-ds/elements
+```
+
+Follow the [Elements setup guide](/get-started/developers/web/elements.md) to load the script and styles in your document head. That guide also covers internationalisation, editor support and Warp Cloak.
 
 ## Using Components
 
-Once installed, components can be imported into your app by name.
+Import each wrapper from `@warp-ds/elements/react` and use it in JSX:
 
-```js
-import { Box } from '@warp-ds/react';
-```
+```jsx
+import { Breadcrumbs, BreadcrumbItem } from '@warp-ds/elements/react';
 
-You can also import them individually to optimize your JS bundle size by adding only the components you need:
-```js
-import { Box } from '@warp-ds/react/components/box'
-
-```
-
-You can find the specific import statement to import each component on that
-component's documentation page. For example, here's the [button page](/components/button/overview.md).
-
-
-## TypeScript support
-
-The components are written in TypeScript. To take advantage of this, make sure
-your project is up to date on the latest `@types/react` definitions.
-
-```shell
-npm install @types/react --save-dev
-```
-
-## Eik support
-We publish `@warp-ds/react` package to EIK cdn in 2 variants, eg:
-
-For react 18:
-```
-https://assets.finn.no/pkg/@warp-ds/react/v2/warp-react-18.js
-```
-For react 17:
-```
-https://assets.finn.no/pkg/@warp-ds/react/v2/warp-react-17.js
-```
-
-### Import mapping
-
-We publish a Warp import map for use with Eik. Be sure to include the React import map first.
-
-```json
-{
-	"name": "my-app",
-	"version": "1.0.0",
-	"server": "https://assets.finn.no",
-	"import-map": [
-		"https://assets.finn.no/map/react/v18",
-		"https://assets.finn.no/map/warp/v2"
-	]
+export default function Example() {
+  return (
+    <Breadcrumbs aria-label="You are here">
+      <BreadcrumbItem href="/">Home</BreadcrumbItem>
+      <BreadcrumbItem current-page>Current page</BreadcrumbItem>
+    </Breadcrumbs>
+  );
 }
 ```
 
-#### Legacy React v17 support
-
-While we no longer officially support React v17, in order to buy yourself time to migrate to React v18, you can add the Warp legacy map for interrim support.
-When React v19 is released, React v17 support will be dropped entirely.
-Map order is important.
-
-```json
-{
-	"name": "my-app",
-	"version": "1.0.0",
-	"server": "https://assets.finn.no",
-	"import-map": [
-		"https://assets.finn.no/map/react/v17",
-		"https://assets.finn.no/map/warp/v2",
-		"https://assets.finn.no/map/warp-legacy/v2"
-	]
-}
-```
+See each component's Elements documentation for its attributes, properties and events.

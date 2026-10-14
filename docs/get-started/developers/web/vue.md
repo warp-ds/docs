@@ -1,64 +1,41 @@
-## Installation
-
-The Warp Vue package can be installed from NPM.
-
-```shell
-npm install @warp-ds/vue
-```
-
 ## Setup
 
-Since warp components are internationalised, you'd need to either set `NMP_LANGUAGE` for server-side rendering of the component, or set html document lang with a two-letter-code, eg: `<html lang="en">`. The server-side variable is read as `process.env.NMP_LANGUAGE` so you could either define this in your package.json script, or use `.env` files to leverage [dotenv](https://github.com/motdotla/dotenv).
+Use Warp Elements (web components) in Vue apps. The Vue-specific `@warp-ds/vue` package is deprecated.
 
+Follow the [Elements setup guide](/get-started/developers/web/elements.md) to load the script and styles in your document head. That guide also covers internationalisation, editor support and Warp Cloak.
+
+Configure Vue to treat tags starting with `w-` as custom elements. For a Vue 3 app using Vite, add `isCustomElement` to your existing Vue plugin configuration in `vite.config.js`:
+
+```js
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+
+export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('w-'),
+        },
+      },
+    }),
+  ],
+});
+```
+
+For other build tools, see [Vue's custom element configuration](https://vuejs.org/guide/extras/web-components.html#skipping-component-resolution).
 
 ## Using Components
 
-### 1. Using in the entire app
+Use Warp elements directly in Vue templates. No component imports or `app.use()` calls are needed.
 
-```js
-import { Box } from '@warp-ds/vue'
-app.use(Box)
+```vue
+<template>
+  <w-breadcrumbs>
+    <a href="/">Home</a>
+    <span aria-current="page">Current page</span>
+  </w-breadcrumbs>
+</template>
 ```
 
-This code is bringing in **an installer** for the Box component, and any additional helper-components (in the case of Box, this would be the Clickable component). It will install the component app-wide, so you never need to import the component again.
-
-### 2. Using in one place, or special exports
-
-Once installed, components can be imported into your app by name.
-
-```js
-import { wButton } from '@warp-ds/vue';
-```
-
-You can also import them individually to optimize your JS bundle size by adding only the components you need:
-```js
-import { wButton } from '@warp-ds/vue/button'
-
-```
-
-This code is bringing in the Button component itself, rather than an installer - this is denoted by the `w` prefix of the component. Some edge-case components may be available this way that don't make sense to globally install for everyone.
-
-You can find the specific import statement to import each component on that
-component's documentation page. For example, here's the [button page](/components/button/overview.md).
-
-## Eik support
-We publish `@warp-ds/vue` package to EIK cdn, eg:
-```
-https://assets.finn.no/pkg/@warp-ds/vue/v2/warp-vue.eik.js
-```
-
-### Import mapping
-
-We publish a Warp import map for use with Eik. Be sure to include the Vue import map first.
-
-```json
-{
-	"name": "my-app",
-	"version": "1.0.0",
-	"server": "https://assets.finn.no",
-	"import-map": [
-		"https://assets.finn.no/map/vue/v3",
-		"https://assets.finn.no/map/warp/v2"
-	]
-}
-```
+See each component's Elements documentation for its attributes, properties and events.
