@@ -144,50 +144,8 @@ export default defineConfig({
           text: 'Get started',
           items: [
             {
-              text: 'Mission, Values, Principles',
-              link: '/get-started/mission-values-principles/',
-            },
-            {
-              text: 'Developers',
-              collapsed: true,
-              items: [
-                {
-                  text: 'Web',
-                  collapsed: true,
-                  items: [
-                    {
-                      text: 'Setup Web-Components (New)',
-                      link: '/get-started/developers/web/web-components',
-                    },
-                    {
-                      text: 'Setup',
-                      link: '/get-started/developers/web/',
-                    },
-                    {
-                      text: 'Migrate from Fabric',
-                      link: '/get-started/developers/web/migrate-from-fabric/',
-                    },
-                    {
-                      text: 'Building custom components with Warp',
-                      link: '/get-started/developers/web/custom-components/',
-                    },
-                  ],
-                },
-                {
-                  text: 'Android',
-                  collapsed: true,
-                  link: '/get-started/developers/android/',
-                },
-                {
-                  text: 'iOS',
-                  collapsed: true,
-                  link: '/get-started/developers/ios/',
-                },
-              ],
-            },
-            {
               text: 'Designers',
-              collapsed: true,
+              collapsed: false,
               items: [
                 {
                   text: 'Warp in Figma',
@@ -198,14 +156,52 @@ export default defineConfig({
                   link: '/get-started/designers/designing-for-multibrand/',
                 },
                 {
-                  text: 'Migrate from Fabric',
-                  link: '/get-started/designers/migrate-from-fabric/',
-                },
-                {
                   text: 'Building custom components with Warp',
                   link: '/get-started/designers/custom-components/',
                 },
+                {
+                  text: 'Migrate from Fabric',
+                  link: '/get-started/designers/migrate-from-fabric/',
+                },
               ],
+            },
+            {
+              text: 'Developers',
+              collapsed: false,
+              items: [
+                {
+                  text: 'Android',
+                  collapsed: true,
+                  link: '/get-started/developers/android/',
+                },
+                {
+                  text: 'iOS',
+                  collapsed: true,
+                  link: '/get-started/developers/ios/',
+                },
+                {
+                  text: 'Web',
+                  collapsed: true,
+                  items: [
+                    {
+                      text: 'Getting started with Warp',
+                      link: '/get-started/developers/web/',
+                    },
+                    {
+                      text: 'Building custom components with Warp',
+                      link: '/get-started/developers/web/custom-components/',
+                    },
+                    {
+                      text: 'Migrate from Fabric',
+                      link: '/get-started/developers/web/migrate-from-fabric/',
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              text: 'Mission, Values, Principles',
+              link: '/get-started/mission-values-principles/',
             },
           ],
         },

@@ -1,221 +1,299 @@
-<script setup>
-  import Vue from './vue.md';
-  import Elements from './elements.md';
-  import React from './react.md';
-</script>
+<style>
+td:first-of-type {
+  white-space: nowrap;
+}
+</style>
 
-# Get started for Web developers
+# Getting started with Warp
 
-This page describes how to get started building a web application with Warp styling and components.
-Warp is using [UnoCSS](https://unocss.dev/), an atomic CSS engine.
-UnoCSS works by searching for the utilities (classes) usages from your codebase and generate the corresponding CSS on-demand.
-The Warp preset contains the utilities UnoCSS will look for.
-Only the used utilities are shipped to your app, ensuring speed and efficiency in any project size.
+:::tip For Vendies
 
-If you are migrating from Fabric to Warp, please visit the [Migration page](./migrate-from-fabric/).
+The Borealis application templates available on Backstage come with Warp already configured. We recommend you start there rather than setting up Warp from scratch.
 
-If you have any questions or need clarification, please don't hesitate to reach out to the Warp team on the [#warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) channel on Slack!
+:::
 
-## 1. Integrate with UnoCSS and Warp
+## Warp design system packages
 
-A guide on how to integrate your project with UnoCSS and Warp.
+Warp for web consists of a few different packages:
 
-### Build time
+| Package                                                  | Description                                                                                                                                       |
+| -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [@warp-ds/fonts](https://github.com/warp-ds/fonts)       | The fonts used by our different brands and the CSS needed to set them up.                                                                         |
+| [@warp-ds/css](https://github.com/warp-ds/css)           | The CSS versions of the Warp [design system tokens](/foundations/tokens/intro/), a CSS reset, and CSS used by some Warp components.               |
+| [@warp-ds/elements](https://github.com/warp-ds/elements) | The canonical version of Warp components for web, implemented as web components to work with any frontend framework. Includes wrappers for React. |
 
-#### Installation
-To get started, you need to install the necessary packages.
+You don't tecnically need to `npm install` any of them.
 
-```shell
-npm install unocss @warp-ds/uno @warp-ds/css
+Borealis applications include these Warp packages on all pages through the shared HTML template.
+
+If you are not using the Vend HTML template through Borealis for some reason, make sure this HTML snippet is included in your docoument `<head>`. Adjust the brand according to your environment.
+
+```html
+<html>
+  <head>
+    <!-- Load the Warp elements as soon as possible to reduce the risk of flash of unstyled component (FOUC). -->
+    <script type="module" src="https://assets.finn.no/pkg/@warp-ds/elements/~2/index.js" fetchpriority="high"></script>
+    <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/elements/~2/styles.css" fetchpriority="high">
+    <!-- Load the fonts and tokens for your brand. -->
+    <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/fonts/~1/finn-no.css" />
+    <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/css/~v~2/tokens/finn-no.css" />
+    <!-- Include the Warp CSS reset and CSS for components. -->
+    <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/css/~2/resets.css" />
+    <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/css/~2/components.css" />
+  </head>
+  <!-- Apply the Warp component cloaking to reduce the risk of FOUC. -->
+  <body class="warp-cloak">
+  </body>
+</html>
 ```
 
-#### If you are using Webpack
-In addition to the installation of the Warp packages, Webpack based projects should also install `@unocss/webpack`
+## Other Warp packages
 
-```shell
-npm install @unocss/webpack --save-dev
+A handful of other Warp packages serve different needs, or have been replaced by packages in the list above:
+
+| Package                                                      | Description                                                                                                                              |
+| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| [@warp-ds/uno](https://github.com/warp-ds/uno)               | Warp preset for [UnoCSS](/foundations/css-classes/unocss), an atomic CSS engine.                                                         |
+| [@warp-ds/react](https://github.com/warp-ds/react)           | A direct-in-React implementation of some Warp components. No longer actively maintained. Use `@warp-ds/elements` React wrappers instead. |
+| [@warp-ds/vue](https://github.com/warp-ds/vue)               | A direct-in-Vue implementation of some Warp components. No longer actively maintained. Use `@warp-ds/elements` components instead.       |
+| [@warp-ds/components](https://github.com/warp-ds/components) | A React 19 implementation of some Warp components. No longer actively maintained. Use `@warp-ds/elements` React wrappers instead.        |
+
+## Editor integration
+
+For improved integration with your editor, install the Warp packages as development dependencies and set up these extensions (or equivalent for your editor):
+
+- [Web Components Language Server] for hover info and code completion for [Warp components](/nmp-web/borealis-docs/applications/ui/warp-components/).
+- [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) to get InstelliSense for CSS variables inside stylesheets.
+- [UnoCSS] for hover info and code completion for [Warp CSS classes](https://warp-ds.github.io/docs/foundations/css-classes/unocss).
+- [Lit](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) for syntax highlighting and code completion in [Lit](/nmp-web/borealis-docs/applications/ui/web-components/lit-getting-started/) components.
+
+For improved editor integration you should have Warp packages installed, so the tooling can process and show Warp documentation.
+
+```sh
+npm install @warp-ds/elements
 ```
 
-See [UnoCSS docs](https://unocss.dev/integrations/webpack) for more information.
+In your tsconfig file, add Warp Elements to compiler options:
 
----
+```json
+{
+  "compilerOptions": {
+    "types": ["@warp-ds/elements"]
+  }
+}
+```
 
-#### Configuration and setup
-When setting up Warp in your project, you can choose to create a `uno.config.js` file, or you can include the UnoCSS configuration settings directly in the build tool.
-Below, the two different alternatives are described.
+The [Web Components Language Server] will automatically provide documentation on hover and code completions whenever you use Warp Elements, even in other frameworks such as React.
 
-##### Alternative 1
-- **Add a uno.config.js file**
+### Configuration for CSS variables IntelliSense
 
-  Create a `uno.config.[js,ts,mjs,mts]` file with the following content. This file will configure UnoCSS with our Warp preset.
-  
-  > uno.config.js
-  
-  ```js
-  import { defineConfig } from 'unocss';
-  import { presetWarp } from '@warp-ds/uno';
-  import { classes } from '@warp-ds/css/component-classes/classes';
-  
-  export default defineConfig({
-    presets: [presetWarp({ externalClasses: classes, skipResets: true })],
-  });
-  ```
-  
-  By default, UnoCSS will automatically look in the root directory of your project for `uno.config.[js,ts,mjs,mts]` or `unocss.config.[js,ts,mjs,mts]`.
-  
-  <details>
-    <summary><b>Details about this configuration setup</b></summary>
-    When an application consists of several parts (e.g. if you are using [Podium](https://podium-lib.io/)) and each part needs to integrate with UnoCSS and Warp - it's more performant to get styling from an external stylesheet (as this will be cached in the browser) instead of making UnoCSS generate the same CSS multiple times.
-    In the example above we pass external classes and skip resets, because we import components.css and reset.css as mentioned [below](#make-sure-you-import-the-resets-and-components-classes-from-eik-cdn).
-  
-    See all configuration options for `presetWarp` at https://github.com/warp-ds/drive#plugin-api.
-  </details>
+Once you add brand token files to `lookupFiles` you should see Warp CSS variables as code suggestions when writing CSS `var(--w-s)`.
 
-- **Add UnoCSS to your build tool**
+```
+// settings.json
+{
+  "cssVariables.lookupFiles": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.sass",
+    "**/*.less",
+    "node_modules/@warp-ds/css/dist/tokens/finn-no.css"
+ ]
+}
+```
 
-  Then add UnoCSS to your build tool. Below is an example for Vite, but you choose whatever build tool that suites your case.
-  For more examples how to configure other building tools, please refer to the [examples](https://github.com/unocss/unocss/tree/main/examples) found in the UnoCSS project.
-  We will eventually have in-depth installation guides for frameworks on the golden path.
+![VS Code screenshot displaying use of intellisense for css tokens](/get-started/warp-css-intellisense.webp)
 
-> vite.config.js
+## Choose an approach to CSS
+
+Warp includes a set of ready made components, but you will still be writing a lot of CSS, especially for laying out the content on the page.
+
+How you want to manage your CSS is up to you. If you have no strong preference, Object oriented CSS (OOCSS) in plain CSS files using Warp CSS variables is a safe default with low risk of lock-in.
+
+:::tip
+
+Warp started out using Atomic CSS internally, but is gradually replacing it for a style closer to OOCSS.
+
+:::
+
+### Atomic CSS
+
+Warp started out being built with [UnoCSS](https://unocss.dev/), an [atomic CSS](https://css-tricks.com/lets-define-exactly-atomic-css/) engine.
+
+> Atomic CSS is the approach to CSS architecture that favors small, single-purpose classes with names based on visual function.
+
+Examples of atomic CSS classes are `p-16` and `s-bg-primary-subtle`. The classes do one thing each:
+
+- Set `padding: 1.6rem` (we use a CSS hack in Vend so `1px == 0.1rem`)
+- Set `background-color` to a subtle variant of the brand's primary color.
+
+```html
+<aside class="p-16 s-bg-primary-subtle"></aside>
+```
+
+### Object oriented CSS, Block Element modifier
+
+While you are welcome to use the Atomic CSS architecture in your applications, you don't have to. Other popular architectures are [Block Element Modifier (BEM)](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Organizing#bem) and [Object Oriented CSS (OOCSS)](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Styling_basics/Organizing#oocss).
+
+In these architectures CSS classes lean more toward a semantic class name that includes all relevant styles. Of the two, OOCSS is less strict in its conventions.
+
+```css
+.callout {
+  padding: 1.6rem;
+  background-color: var(--w-s-color-background-subtle);
+}
+```
+
+```html
+<aside class="callout"></aside>
+```
+
+:::tip
+
+Internally `@warp-ds/elements` uses a style closer to this one, instead of UnoCSS.
+
+:::
+
+## Using Warp CSS variables
+
+All Warp styles come from a style dictionary shared between Figma and code. This is essentially a list of names and their values (color codes, pixel sizes).
+
+Entries in this style dictionary are available globally as [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties).
+
+You can use them in any CSS file, even plain CSS with no build tools. This approach to CSS is a great way to reduce your dependencies and avoid lock-in.
+
+```css
+.callout {
+  padding: 1.6rem;
+  background-color: var(--w-s-color-background-subtle);
+}
+```
+
+## Additional setup needed for Atomic CSS
+
+With the OOCSS or BEM approaches all you really need is a `.css` file and you are good to go. Most bundlers let you `import` CSS files to have them included in the built output.
+
+For Atomic CSS the setup is a bit more involved.
+
+First you will need to install UnoCSS, the Warp UnoCSS preset and the "safelist" of classes UnoCSS can assume is always present (and so can be skipped in the compiled output).
+
+```sh
+npm install --save-dev unocss @warp-ds/css @warp-ds/uno
+```
+
+
+UnoCSS needs a `uno.config.ts` file to work properly. Here is a minimal config that includes Warp. Refer to the [UnoCSS documentation](https://unocss.dev/guide/config-file) for other options and possible integrations, such as what files to include in scans, and bundler plugins.
 
 ```ts
-import { defineConfig } from 'vite';
-import UnoCSS from 'unocss/vite';
+// uno.config.ts
+// @ts-expect-error
+import { presetWarp } from "@warp-ds/uno";
+// @ts-expect-error
+import { classes } from "@warp-ds/css/component-classes/classes";
+import { defineConfig } from "unocss";
 
 export default defineConfig({
-  plugins: [UnoCSS()],
+  presets: [
+    presetWarp({
+      externalClasses: classes,
+      skipResets: true,
+    }),
+  ],
 });
 ```
 
-##### **Alternative 2**
-- **Include UnoCSS directly in the build setup**
+## Use Warp web components
 
-  You can also specify the configuration file manually and in that case you won't need a separate `uno.config.js` file.
+These components can be used in any framework and is the only set of Warp components for web that is actively maintained.
+
+With the setup from the introduction the Warp web components are available globally and can be freely used in your application.
+
+```html
+<w-breadcrumbs>
+  <a href="/url/1">Page 1</a>
+  <a href="/url/2">Page 2</a>
+  <span aria-current="page">Page 3</span>
+</w-breadcrumbs>
+```
+
+:::tip Don't `import` these components in your own code
+
+Perhaps counterintuitively you should not `import` the components in your own application code. For one, the component code is already shipped to browsers so you don't need to include it in your bundle. Secondly, if you server-side render Lit code you risk seeing Lit hydratino errors (where the server version does not match the browser version), in which case Lit will render two instances of the component.
+
+:::
   
-  Below is an example for Vite:
-  
-  > vite.config.js
-  
-  ```ts
-  import { defineConfig } from 'vite';
-  import UnoCSS from 'unocss/vite';
-  import { presetWarp } from '@warp-ds/uno';
-  import { classes } from '@warp-ds/css/component-classes/classes';
-  
-  export default defineConfig({
-    plugins: [
-      UnoCSS({
-        presets: [presetWarp({ externalClasses: classes, skipResets: true })],
-      }),
-    ],
-  });
-  ```
+## Warp components in React
 
-- **Add `uno.css` to your main entry**
+Use Warp Elements (web components) in React apps. The React-specific `@warp-ds/react` package is deprecated.
 
-  Depending on the build tool you have chosen, this step can look different.
-  The example below is applicable if you build UnoCSS together with Vite.
-  If you for example use PostCSS as a build tool, you would need to add `@unocss` to the main stylesheet.
-  Please take a look at the [examples](https://github.com/unocss/unocss/tree/main/examples) and see what is needed to be added in your setup.
+React apps should use the React wrappers provided by `@warp-ds/elements` to avoid some hydration mismatch errors when using server-side rendering.
 
-  > e.g. main.js or main.ts
-  
-  ```js
-  import 'uno.css';
-  ```
-
----
-
-### Runtime
-UnoCSS also provides a CSS-in-JS runtime module which runs the UnoCSS engine right in the browser. It will detect the DOM changes and generate the styles on the fly.
-See ["Runtime" section of UnoCSS docs](https://unocss.dev/integrations/runtime#runtime) for more information and examples.
-
-#### Bundler usage
+Install the package to use the wrappers:
 
 ```shell
-npm install @unocss/runtime @warp-ds/uno
+npm install @warp-ds/elements
 ```
+
+### Using Elements wrappers in React components
+
+Import each wrapper from `@warp-ds/elements/react` and use it in JSX:
+
+```jsx
+import { Breadcrumbs, BreadcrumbItem } from '@warp-ds/elements/react';
+
+export default function Example() {
+  return (
+    <Breadcrumbs aria-label="You are here">
+      <BreadcrumbItem href="/">Home</BreadcrumbItem>
+      <BreadcrumbItem current-page>Current page</BreadcrumbItem>
+    </Breadcrumbs>
+  );
+}
+```
+
+See each component's [Elements documentation](/components/button/frameworks/elements) for its attributes, properties and events.
+
+## Warp components in Vue
+
+Use Warp Elements (web components) in Vue apps. The Vue-specific `@warp-ds/vue` package is deprecated.
+
+Follow the [Elements setup guide](/get-started/developers/web/elements.md) to load the script and styles in your document head. That guide also covers internationalisation, editor support and Warp Cloak.
+
+Configure Vue to treat tags starting with `w-` as custom elements. For a Vue 3 app using Vite, add `isCustomElement` to your existing Vue plugin configuration in `vite.config.js`:
 
 ```js
-import initUnocssRuntime from '@unocss/runtime';
-import { presetWarp } from '@warp-ds/uno';
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-window.__unocss = {
-  presets: [presetWarp()],
-};
-
-initUnocssRuntime();
+export default defineConfig({
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.startsWith('w-'),
+        },
+      },
+    }),
+  ],
+});
 ```
 
----
+For other build tools, see [Vue's custom element configuration](https://vuejs.org/guide/extras/web-components.html#skipping-component-resolution).
 
-### UnoCSS CLI
-With the custom configurations in `uno.config.js`, you can also generate styles at build step using UnoCSS's standalone client.
-See [UnoCSS CLI](https://unocss.dev/integrations/cli) for more information and examples.
+### Using Elements components in Vue components
 
----
+Use Warp elements directly in Vue templates. No component imports or `app.use()` calls are needed.
 
-### Use with Shadow DOM and Vite
-In case of apps using Vite where Warp components are used inside Shadow DOM, the css generated by the UnoCSS plugin needs to be inlined into the Shadow DOM style.
-See [UnoCSS Vite plugin's shadow-dom mode](https://unocss.dev/integrations/vite#shadow-dom) for more information.
-
-## 2. Apply theme
-
-### Add fonts
-In order to load correct fonts for each brand, you need to include a font setup for that brand in your document.
-
-Add this to your `index.html`:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://assets.finn.no/pkg/@warp-ds/fonts/v1/finn-no.css"
-/>
+```vue
+<template>
+  <w-breadcrumbs>
+    <a href="/">Home</a>
+    <span aria-current="page">Current page</span>
+  </w-breadcrumbs>
+</template>
 ```
 
-### Add brand CSS
-In order to apply your application's theme, a respective brand CSS should be added to the document.
-Brand specific stylesheets are available via our Eik CDN server:
+See each component's [Elements documentation](/components/button/frameworks/elements) for its attributes, properties and events.
 
-- Finn: https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/finn-no.css
-- Tori: https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/tori-fi.css
-- DBA: https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/dba-dk.css
-
-Add this to your `index.html`:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://assets.finn.no/pkg/@warp-ds/css/v2/tokens/finn-no.css"
-/>
-```
-
-### Make sure you import the resets and components classes from Eik CDN:
-
-```html
-<link
-  rel="stylesheet"
-  href="https://assets.finn.no/pkg/@warp-ds/css/v2/resets.css"
-/>
-<link
-  rel="stylesheet"
-  href="https://assets.finn.no/pkg/@warp-ds/css/v2/components.css"
-/>
-```
-
-## 3. Use Warp components
-
-Select which Warp component library you wish to set up:
-
-<tabs-content> 
-  <template v-slot:react>
-    <react />
-  </template>
-  <template v-slot:vue>
-    <vue />
-  </template>
-  <template v-slot:elements>
-    <elements />
-  </template>
-</tabs-content>
+[Web Components Language Server]: https://marketplace.visualstudio.com/items?itemName=wc-toolkit.web-components-language-server
+[UnoCSS]: https://marketplace.visualstudio.com/items?itemName=antfu.unocss
