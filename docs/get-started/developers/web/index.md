@@ -19,7 +19,7 @@ Warp for web consists of a few different packages:
 | Package                                                  | Description                                                                                                                                       |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [@warp-ds/fonts](https://github.com/warp-ds/fonts)       | The fonts used by our different brands and the CSS needed to set them up.                                                                         |
-| [@warp-ds/css](https://github.com/warp-ds/css)           | The CSS versions of the Warp [design system tokens](/foundations/tokens/intro/), a CSS reset, and CSS used by some Warp components.               |
+| [@warp-ds/css](https://github.com/warp-ds/css)           | The CSS versions of the Warp [design system tokens](/foundations/tokens/intro/) and a CSS reset.                                                  |
 | [@warp-ds/elements](https://github.com/warp-ds/elements) | The canonical version of Warp components for web, implemented as web components to work with any frontend framework. Includes wrappers for React. |
 
 You don't tecnically need to `npm install` any of them.
@@ -208,10 +208,10 @@ These components can be used in any framework and is the only set of Warp compon
 With the setup from the introduction, Warp web components are available globally and can be freely used in your application.
 
 ```html
-<w-breadcrumbs>
-  <a href="/url/1">Page 1</a>
-  <a href="/url/2">Page 2</a>
-  <span aria-current="page">Page 3</span>
+<w-breadcrumbs aria-label="You are here">
+  <w-breadcrumb-item href="/marketplace">Marketplace</w-breadcrumb-item>
+  <w-breadcrumb-item href="/marketplace/furniture">Furniture</w-breadcrumb-item>
+  <w-breadcrumb-item current-page>Sofas</w-breadcrumb-item>
 </w-breadcrumbs>
 ```
 
@@ -243,8 +243,9 @@ import { Breadcrumbs, BreadcrumbItem } from '@warp-ds/elements/react';
 export default function Example() {
   return (
     <Breadcrumbs aria-label="You are here">
-      <BreadcrumbItem href="/">Home</BreadcrumbItem>
-      <BreadcrumbItem current-page>Current page</BreadcrumbItem>
+      <BreadcrumbItem href="/marketplace">Marketplace</BreadcrumbItem>
+      <BreadcrumbItem href="/marketplace/furniture">Furniture</BreadcrumbItem>
+      <BreadcrumbItem current-page>Sofas</BreadcrumbItem>
     </Breadcrumbs>
   );
 }
@@ -283,9 +284,10 @@ Use Warp elements directly in Vue templates. No component imports or `app.use()`
 
 ```vue
 <template>
-  <w-breadcrumbs>
-    <a href="/">Home</a>
-    <span aria-current="page">Current page</span>
+  <w-breadcrumbs aria-label="You are here">
+    <w-breadcrumb-item href="/marketplace">Marketplace</w-breadcrumb-item>
+    <w-breadcrumb-item href="/marketplace/furniture">Furniture</w-breadcrumb-item>
+    <w-breadcrumb-item current-page>Sofas</w-breadcrumb-item>
   </w-breadcrumbs>
 </template>
 ```
