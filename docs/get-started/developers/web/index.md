@@ -26,7 +26,7 @@ You don't tecnically need to `npm install` any of them.
 
 Borealis applications include these Warp packages on all pages through the shared HTML template.
 
-If you are not using the Vend HTML template through Borealis for some reason, make sure this HTML snippet is included in your docoument `<head>`. Adjust the brand according to your environment.
+If you are not using the Vend HTML template through Borealis for some reason, make sure this HTML snippet is included in your document `<head>`. Adjust the brand according to your environment.
 
 ```html
 <html>
@@ -37,9 +37,8 @@ If you are not using the Vend HTML template through Borealis for some reason, ma
     <!-- Load the fonts and tokens for your brand. -->
     <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/fonts/~1/finn-no.css" />
     <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/css/~v~2/tokens/finn-no.css" />
-    <!-- Include the Warp CSS reset and CSS for components. -->
+    <!-- Include the Warp CSS reset. -->
     <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/css/~2/resets.css" />
-    <link rel="stylesheet" href="https://assets.finn.no/pkg/@warp-ds/css/~2/components.css" />
   </head>
   <!-- Apply the Warp component cloaking to reduce the risk of FOUC. -->
   <body class="warp-cloak">
@@ -206,7 +205,7 @@ export default defineConfig({
 
 These components can be used in any framework and is the only set of Warp components for web that is actively maintained.
 
-With the setup from the introduction the Warp web components are available globally and can be freely used in your application.
+With the setup from the introduction, Warp web components are available globally and can be freely used in your application.
 
 ```html
 <w-breadcrumbs>
@@ -218,7 +217,7 @@ With the setup from the introduction the Warp web components are available globa
 
 :::tip Don't `import` these components in your own code
 
-Perhaps counterintuitively you should not `import` the components in your own application code. For one, the component code is already shipped to browsers so you don't need to include it in your bundle. Secondly, if you server-side render Lit code you risk seeing Lit hydratino errors (where the server version does not match the browser version), in which case Lit will render two instances of the component.
+Perhaps counterintuitively you should **not** `import` the components in your own application code. For one, the component code is already shipped to browsers so you don't need to include it in your bundle. Secondly, if you server-side render Lit code you risk seeing Lit hydration errors (where the server version does not match the browser version), in which case Lit will render two instances of the component.
 
 :::
   
