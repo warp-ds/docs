@@ -62,10 +62,10 @@ A handful of other Warp packages serve different needs, or have been replaced by
 
 For improved integration with your editor, install the Warp packages as development dependencies and set up these extensions (or equivalent for your editor):
 
-- [Web Components Language Server] for hover info and code completion for [Warp components](/nmp-web/borealis-docs/applications/ui/warp-components/).
+- [Web Components Language Server] for hover info and code completion for Warp components.
 - [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) to get InstelliSense for CSS variables inside stylesheets.
 - [UnoCSS] for hover info and code completion for [Warp CSS classes](https://warp-ds.github.io/docs/foundations/css-classes/unocss).
-- [Lit](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) for syntax highlighting and code completion in [Lit](/nmp-web/borealis-docs/applications/ui/web-components/lit-getting-started/) components.
+- [Lit](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) for syntax highlighting and code completion in [Lit](https://lit.dev) components.
 
 For improved editor integration you should have Warp packages installed, so the tooling can process and show Warp documentation.
 
@@ -256,8 +256,6 @@ See each component's [Elements documentation](/components/button/frameworks/elem
 ## Warp components in Vue
 
 Use Warp Elements (web components) in Vue apps. The Vue-specific `@warp-ds/vue` package is deprecated.
-
-Follow the [Elements setup guide](/get-started/developers/web/elements.md) to load the script and styles in your document head. That guide also covers internationalisation, editor support and Warp Cloak.
 
 Configure Vue to treat tags starting with `w-` as custom elements. For a Vue 3 app using Vite, add `isCustomElement` to your existing Vue plugin configuration in `vite.config.js`:
 
