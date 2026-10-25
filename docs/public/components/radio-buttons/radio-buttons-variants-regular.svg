@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="320" viewBox="20 70 270 160" fill="none">
+<title>Regular Radio buttons with Week selected.</title>
+<desc>Derived from the rendered @warp-ds/vue 2.3.0 wToggle component and @warp-ds/css 2.4.1, FINN theme. Geometry, colours and type measured in Chrome. This is an implementation-derived illustration, not a Figma export.</desc>
+<rect width="400" height="300" fill="#F6F6F6"/>
+<text x="40" y="133.08" fill="rgb(27, 27, 31)" font-family="Arial, sans-serif" font-size="14" font-weight="700">Rental period</text>
+<path d="M 48 143.08 H 92.69 Q 92.69 143.08 92.69 143.08 V 179.08 Q 92.69 179.08 92.69 179.08 H 48 Q 41 179.08 41 172.08 V 150.08 Q 41 143.08 48 143.08 Z" fill="rgb(255, 255, 255)" stroke="rgb(222, 222, 227)" stroke-width="2"/><text x="54" y="166.08" fill="rgb(0, 99, 251)" font-family="Arial, sans-serif" font-size="14" font-weight="700">Day</text>
+<path d="M 155.02 143.08 H 218 Q 225 143.08 225 150.08 V 172.08 Q 225 179.08 218 179.08 H 155.02 Q 155.02 179.08 155.02 179.08 V 143.08 Q 155.02 143.08 155.02 143.08 Z" fill="rgb(255, 255, 255)" stroke="rgb(222, 222, 227)" stroke-width="2"/><text x="168.02" y="166.08" fill="rgb(0, 99, 251)" font-family="Arial, sans-serif" font-size="14" font-weight="700">Month</text>
+<path d="M 92.69 143.08 H 155.01999999999998 Q 155.01999999999998 143.08 155.01999999999998 143.08 V 179.08 Q 155.01999999999998 179.08 155.01999999999998 179.08 H 92.69 Q 92.69 179.08 92.69 179.08 V 143.08 Q 92.69 143.08 92.69 143.08 Z" fill="rgb(0, 99, 251)" stroke="rgb(0, 99, 251)" stroke-width="2"/><text x="105.69" y="166.08" fill="rgb(255, 255, 255)" font-family="Arial, sans-serif" font-size="14" font-weight="700">Week</text>
+</svg>

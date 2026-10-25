@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="10 65 250 187.5" fill="none">
+<title>The same delivery choices without a group label.</title>
+<desc>Derived from the rendered @warp-ds/vue 2.3.0 wToggle component and @warp-ds/css 2.4.1, FINN theme. Geometry, colours and type measured in Chrome. This is an implementation-derived illustration, not a Figma export.</desc>
+
+<path d="M 116.8 132.08 H 209.36 Q 216.36 132.08 216.36 139.08 V 161.08 Q 216.36 168.08 209.36 168.08 H 116.8 Q 116.8 168.08 116.8 168.08 V 132.08 Q 116.8 132.08 116.8 132.08 Z" fill="rgb(255, 255, 255)" stroke="rgb(222, 222, 227)" stroke-width="2"/><text x="129.8" y="155.08" fill="rgb(0, 99, 251)" font-family="Arial, sans-serif" font-size="14" font-weight="700">Ship to me</text>
+<path d="M 48 132.08 H 116.8 Q 116.8 132.08 116.8 132.08 V 168.08 Q 116.8 168.08 116.8 168.08 H 48 Q 41 168.08 41 161.08 V 139.08 Q 41 132.08 48 132.08 Z" fill="rgb(0, 99, 251)" stroke="rgb(0, 99, 251)" stroke-width="2"/><text x="54" y="155.08" fill="rgb(255, 255, 255)" font-family="Arial, sans-serif" font-size="14" font-weight="700">Pick up</text>
+</svg>
