@@ -228,10 +228,19 @@ html.dark body {
   min-width: 100%; /* Ensure the table is at least 100% of its container */
 }
 
-/* Wrap tables inside a container to handle horizontal overflow */
+/* Every table is wrapped in this container by markdown.config in config.js.
+   Tables wider than the content column scroll inside it instead of
+   overflowing the page and sliding under the outline sidebar. */
 .vp-doc .table-container {
   overflow-x: auto;
   width: 100%; /* Ensure the container itself takes up the full width */
+  max-width: 100%; /* Never let the container itself grow past the content column */
+  margin: 20px 0; /* Carries the margin the table had before it was wrapped */
+}
+
+/* The wrapper owns the vertical rhythm now, so the table must not add its own */
+.vp-doc .table-container > table {
+  margin: 0;
 }
 .vp-doc kbd {
   display: inline-block;
@@ -292,15 +301,18 @@ html.dark body {
   background-color: var(--doc-image-plate-bg);
 }
 
-/* Illustrations are authored at the width of the container they sit in,
-   so the image fills the plate edge to edge with no inner padding — the
-   artwork carries its own whitespace. Plates in the same grid row
-   stretch to the tallest image and centre the shorter one. */
+/* Illustrations render at the size they were exported at — never enlarged
+   to fill the plate. The artwork carries its own whitespace, so there is no
+   inner padding either. The only exception is a container narrower than the
+   image, where max-width lets it shrink rather than be clipped by the
+   plate's overflow. Plates in the same grid row stretch to the tallest
+   image and centre the shorter one. */
 .image-plate img {
   display: block; /* Avoids the baseline gap that inline images leave beneath them */
-  width: 100%;
+  width: auto;
   max-width: 100%;
   height: auto;
+  margin-inline: auto; /* Centres the image when markdown has wrapped it in a full-width <p> */
 }
 
 .image-plate p {
@@ -314,8 +326,8 @@ html.dark body {
   --doc-image-plate-bg: var(--doc-image-plate-bg-dark);
 }
 
-/* No inner padding: illustrations are authored to bleed to the edges of
-   the block, so any padding here would inset the artwork and shrink it. */
+/* No inner padding: the artwork carries its own whitespace, so any padding
+   here would inset it. Sizing matches .image-plate — see the note there. */
 .styled-image-block {
   background-color: var(--doc-image-plate-bg);
   margin: 16px 0;
@@ -338,9 +350,10 @@ html.dark body {
 
 .styled-image-block img {
   display: block; /* Inline images sit on the text baseline, which adds a gap beneath */
-  width: 100%; /* Fill the block edge to edge */
-  max-width: 100%;
+  width: auto; /* Exported size, never enlarged to fill the block */
+  max-width: 100%; /* Shrink only when the block is narrower than the image */
   height: auto; /* Maintain image aspect ratio */
+  margin-inline: auto; /* Centres the image inside the full-width <p> markdown wraps it in */
 }
 
 /* Plain html elements with general styling for the whole doc */
