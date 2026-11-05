@@ -1,3 +1,4 @@
+import { inBrowser } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import 'uno.css';
 import './custom.css';
@@ -26,6 +27,8 @@ import InProgressStatus from '../InProgressStatus.vue';
 import NavCta from '../NavCta.vue';
 import NavDocsLabel from '../NavDocsLabel.vue';
 import PlatformCoverage from '../PlatformCoverage.vue';
+import RedirectNotFound from '../RedirectNotFound.vue';
+import { resolveRedirect } from '../redirect-rules.js';
 import SeededNotice from '../SeededNotice.vue';
 import SidebarComposer from '../SidebarComposer.vue';
 import TabsContent from '../TabsContent.vue';
@@ -51,10 +54,24 @@ export default {
       'sidebar-nav-before': () => h(SidebarComposer, { position: 'before' }),
       'sidebar-nav-after': () => h(SidebarComposer, { position: 'after' }),
       'doc-before': () => h(SeededNotice),
+      'not-found': () => h(RedirectNotFound),
     });
   },
 
-  enhanceApp({ app }) {
+  enhanceApp({ app, router, siteData }) {
+    // Old URLs (pre platform split) -> new URLs, for in-app navigation and back/forward.
+    // Hard loads are handled by the redirect stubs written at build time (build/redirect-stubs.js).
+    if (inBrowser) {
+      const redirect = async (to) => {
+        const target = await resolveRedirect(to, siteData.value.base);
+        if (!target) return;
+        setTimeout(() => router.go(target));
+        return false;
+      };
+      router.onBeforeRouteChange = redirect;
+      router.onBeforePageLoad = redirect;
+    }
+
     // plugins
     app.use(warpThemeSwitcher);
 

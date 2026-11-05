@@ -17,7 +17,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:review-docs": "node --test scripts/docs-review-prompt.test.mjs scripts/docs-review-history.test.mjs scripts/component-issues.test.mjs scripts/review-docs.test.mjs scripts/post-docs-review.test.mjs",
     "prepare": "husky",
-    "generate-manifest": "node scripts/generate-manifest.js"
+    "generate-manifest": "node scripts/generate-manifest.js",
+    "check:site": "node scripts/check-site.mjs"
   },
   "type": "module",
   "license": "Apache-2.0",

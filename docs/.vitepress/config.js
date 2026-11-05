@@ -6,6 +6,7 @@ import uno from 'unocss/vite';
 import svgLoader from 'vite-svg-loader'; // Import the svg loader
 import { defineConfig } from 'vitepress';
 import llmstxt from 'vitepress-plugin-llms';
+import { writeRedirectStubs } from './build/redirect-stubs.js';
 import { headLinks } from './headLinks.js';
 import { docsClasses } from './safelist.js';
 import { platformSidebars } from './sidebar/platform.js';
@@ -125,5 +126,8 @@ export default defineConfig({
       '/android/': platformSidebars.android,
       '/': sharedSidebar,
     },
+  },
+  buildEnd(siteConfig) {
+    writeRedirectStubs(siteConfig, hostname);
   },
 });
