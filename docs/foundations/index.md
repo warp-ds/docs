@@ -7,7 +7,7 @@ const pages = [{
 {
   title: "CSS classes",
   description: "UnoCSS classes for layout and styling on web.",
-  href: "css-classes/unocss",
+  href: "../web/foundations/css-classes/unocss",
 },
 {
   title: "Illustrations",
@@ -51,7 +51,7 @@ const pages = [{
 },{
   title: "Keyboard",
   description: "Guidelines for keyboard navigation and shortcuts.",
-  href: "keyboard/navigation",
+  href: "../web/foundations/keyboard/navigation/",
 }]
 </script>
 

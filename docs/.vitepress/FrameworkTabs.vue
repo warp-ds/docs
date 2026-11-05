@@ -1,13 +1,12 @@
 <template>
-  <nav ref="tabsRef" class="framework-tabs" role="tablist" aria-label="Framework selection">
+  <nav v-if="tabs.length > 1" ref="tabsRef" class="framework-tabs" aria-label="Web framework">
     <a
       v-for="tab in tabs"
       :key="tab.file"
       :href="'./' + tab.file"
       class="framework-tab"
-      :class="{ active: tab.file === currentFramework }"
-      role="tab"
-      :aria-selected="tab.file === currentFramework"
+      :class="{ active: tab.file === currentFile }"
+      :aria-current="tab.file === currentFile ? 'page' : undefined"
     >
       {{ tab.name }}
     </a>
@@ -15,79 +14,51 @@
 </template>
 
 <script>
-import { useRoute } from 'vitepress';
+// Web Code page tabs: Elements (primary) + legacy React / React 19 / Vue pages.
+// Renders nothing on iOS/Android Code pages. Still visually hides the preceding H2 (kept for search).
 import { computed, onMounted, ref } from 'vue';
-import manifest from '../.vitepress/frameworks-manifest.json';
+import { usePlatform } from './composables/platform.js';
+import manifest from './platform-manifest.json';
+
+const TABS = {
+  elements: { file: 'code', name: 'Elements' },
+  react: { file: 'code-react', name: 'React (legacy)' },
+  'react-19': { file: 'code-react-19', name: 'React 19 (legacy)' },
+  vue: { file: 'code-vue', name: 'Vue (legacy)' },
+};
 
 export default {
   setup() {
-    const route = useRoute();
+    const { current } = usePlatform();
     const tabsRef = ref(null);
 
-    // Parse route to get item name and current framework
-    // Route path looks like: /components/alert/frameworks/vue or /patterns/emptystates/frameworks/ios
-    const pathSegments = computed(() => {
-      const path = route.path.replace(/\.html$/, '');
-      return path.split('/').filter(Boolean);
-    });
-
-    // Detect whether we're in components or patterns section
-    const section = computed(() => {
-      if (pathSegments.value.includes('patterns')) return 'patterns';
-      if (pathSegments.value.includes('components')) return 'components';
-      return null;
-    });
-
-    const itemName = computed(() => {
-      // Path: components/alert/frameworks/vue -> alert is at index 1
-      // Path: patterns/emptystates/frameworks/ios -> emptystates is at index 1
-      const sectionKey = section.value;
-      if (!sectionKey) return null;
-      const idx = pathSegments.value.indexOf(sectionKey);
-      if (idx !== -1 && pathSegments.value[idx + 1]) {
-        return pathSegments.value[idx + 1];
-      }
-      return null;
-    });
-
-    const currentFramework = computed(() => {
-      // Last segment is the framework
-      return pathSegments.value[pathSegments.value.length - 1] || null;
-    });
+    const currentFile = computed(() => current.value?.page ?? null);
 
     const tabs = computed(() => {
-      if (!section.value || !itemName.value) return [];
-      return manifest[section.value]?.[itemName.value] || [];
+      const c = current.value;
+      if (c?.platform !== 'web' || !c.type) return [];
+      const entry = manifest.web[c.type]?.[c.name];
+      if (!entry?.frameworks) return [];
+      const list = entry.frameworks.map((fw) => TABS[fw]).filter(Boolean);
+      // components without Elements still get a "Code" landing tab
+      if (!entry.frameworks.includes('elements')) list.unshift({ file: 'code', name: 'Overview' });
+      return list;
     });
 
     onMounted(() => {
-      // Hide the preceding H2 heading (keeps it in DOM for VitePress search)
       const tabsEl = tabsRef.value;
       if (!tabsEl) return;
-
       let sibling = tabsEl.previousElementSibling;
       while (sibling) {
         if (sibling.tagName === 'H2') {
-          sibling.style.position = 'absolute';
-          sibling.style.width = '1px';
-          sibling.style.height = '1px';
-          sibling.style.padding = '0';
-          sibling.style.margin = '-1px';
-          sibling.style.overflow = 'hidden';
-          sibling.style.clip = 'rect(0, 0, 0, 0)';
-          sibling.style.whiteSpace = 'nowrap';
-          sibling.style.border = '0';
+          sibling.classList.add('visually-hidden');
           break;
         }
         sibling = sibling.previousElementSibling;
       }
     });
 
-    return {
-      tabs,
-      currentFramework,
-      tabsRef,
-    };
+    return { tabs, currentFile, tabsRef };
   },
 };
 </script>

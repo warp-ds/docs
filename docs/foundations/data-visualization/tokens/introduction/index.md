@@ -62,7 +62,7 @@ Example of applying the primary dataviz border color to a `<rect>` stroke in an 
 
 ## Alternative 2: Utility classes
 
-Before using the utility classes, you need to install UnoCSS, see [Get started for Web developers](/get-started/developers/web/). You need `version 2.1` of UnoCSS for the dataviz colors to work.
+Before using the utility classes, you need to install UnoCSS, see [Get started for Web developers](/get-started/web/). You need `version 2.1` of UnoCSS for the dataviz colors to work.
 
 ### Utility classes for HTML elements
 

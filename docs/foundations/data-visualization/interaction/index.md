@@ -71,7 +71,7 @@ For **lines**, adding a focus border for the whole line will become messy. In st
 Information about which components and tokens to use for interactive graphs and charts. 
 
 ### Tooltip
-For tooltip, use the WARP [Tooltip](/components/tooltip/overview.md) component.
+For tooltip, use the WARP [Tooltip](/web/components/tooltip/overview.md) component.
 
 ### Highlight color
 Use the `highlight` color on hover, touch/tap and keyboard focus.
@@ -94,7 +94,7 @@ When using keyboard navigation, use a focus border around the active data elemen
 
 `s-border-focus` or `border-color: var(--w-s-color-border-focus)`.
 
-See [CSS Border Color](/foundations/css-classes/border-color).
+See [CSS Border Color](/web/foundations/css-classes/border-color).
 
 ## Legend
 

@@ -16,19 +16,19 @@ const cardData = {
   CardType1: [
     {
       title: 'CSS classes',
-      href: 'foundations/css-classes/unocss',
+      href: 'web/foundations/css-classes/unocss',
       image: { component: ClassesCard, alt: 'A paper with two curly braces.' },
       description: 'Explore how to use pre-defined utility-first CSS classes',
     },
     {
       title: 'Icons',
-      href: 'components/icons/overview',
+      href: 'web/components/icons/overview',
       image: { component: IconsCard, alt: 'Three talk bubbles that are smiling and have closed eyes' },
       description: 'Browse our library of UI icons',
     },
     {
       title: 'Colors',
-      href: 'foundations/css-classes/background-color#quick-reference',
+      href: 'web/foundations/css-classes/background-color#quick-reference',
       image: { component: ColorsCard, alt: 'Two abstract shapes in grey and black colors, one bigger than the other' },
       description: 'Get quick access to predefined color palettes for backgrounds, text, and border',
     },
@@ -49,13 +49,13 @@ const cardData = {
     {
       title: 'Components',
       description: 'Elements that can be combined to build great experiences.',
-      href: 'components',
+      href: 'web/components/',
       image: { component: CompSVG, alt: 'Illustration representing design system components (UI elements).' },
     },
     {
       title: 'Patterns',
       description: 'Guidelines and recommendations for solving recurring user tasks.',
-      href: 'patterns',
+      href: 'web/patterns/',
       image: { component: PatternsSVG, alt: 'Illustration representing design system patterns' },
     },
   ],
@@ -115,7 +115,7 @@ const cardData = {
   <div class="banner-column">
     <h2 class="banner-title">Collaborate</h2>
     <p class="banner-content">Contributing to the WARP design system, requesting new components or adjustments to existing ones.</p>
-    <a href="collaborate/request-new-component" class="banner-link collaborate">
+    <a href="about/help/requests/new-component/" class="banner-link collaborate">
       Collaborate with us
       <span class="vpi-arrow-right link-text-icon"></span>
     </a>

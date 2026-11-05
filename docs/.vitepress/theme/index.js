@@ -23,6 +23,11 @@ import DsOverview from '../DsOverview.vue';
 import DsSearchInput from '../DsSearchInput.vue';
 import FrameworkTabs from '../FrameworkTabs.vue';
 import InProgressStatus from '../InProgressStatus.vue';
+import NavCta from '../NavCta.vue';
+import NavDocsLabel from '../NavDocsLabel.vue';
+import PlatformCoverage from '../PlatformCoverage.vue';
+import SeededNotice from '../SeededNotice.vue';
+import SidebarComposer from '../SidebarComposer.vue';
 import TabsContent from '../TabsContent.vue';
 import WidthController from '../WidthController.vue';
 import warpThemeSwitcher from '../warp-theme-switcher.js';
@@ -40,6 +45,12 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'layout-bottom': () => h(Footer),
+      'nav-bar-title-after': () => h(NavDocsLabel),
+      'nav-bar-content-after': () => h(NavCta),
+      'nav-screen-content-after': () => h(NavCta, { screen: true }),
+      'sidebar-nav-before': () => h(SidebarComposer, { position: 'before' }),
+      'sidebar-nav-after': () => h(SidebarComposer, { position: 'after' }),
+      'doc-before': () => h(SeededNotice),
     });
   },
 
@@ -54,12 +65,12 @@ export default {
     app.component('ComponentsStatus', ComponentsStatus);
     app.component('Do', Do);
     app.component('DoDont', DoDont);
-    app.component('DoDont', DoDont);
     app.component('Cards', Cards);
     app.component('Card', Card);
     app.component('FrameworkTabs', FrameworkTabs);
     app.component('WarpBadge', Badge);
     app.component('DsOverview', DsOverview);
+    app.component('PlatformCoverage', PlatformCoverage);
     app.component('WidthController', WidthController);
     app.component('DsSearchInput', DsSearchInput);
     app.component('TabsContent', TabsContent);

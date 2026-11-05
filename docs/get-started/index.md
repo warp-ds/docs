@@ -2,27 +2,27 @@
 const pages = [{
   title: "Mission, values, principles",
   description: "The Warp Design System mission reflecting its values and principles",
-  href: "mission-values-principles",
+  href: "../foundations/about/",
 },
 {
   title: "Web Developers",
   description: "Getting started guide for Web developers",
-  href: "developers/web/",
+  href: "web/",
 },
 {
   title: "iOS Developers",
   description: "Getting started guide for iOS developers",
-  href: "developers/ios/",
+  href: "ios/",
 },
 {
   title: "Android Developers",
   description: "Getting started guide for Android developers",
-  href: "developers/android/",
+  href: "android/",
 },
 {
   title: "Designers",
   description: "Getting started guide for designers",
-  href: "designers/warp-in-figma/",
+  href: "design/warp-in-figma/",
 }]
 </script>
 

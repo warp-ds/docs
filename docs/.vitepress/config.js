@@ -8,11 +8,12 @@ import { defineConfig } from 'vitepress';
 import llmstxt from 'vitepress-plugin-llms';
 import { headLinks } from './headLinks.js';
 import { docsClasses } from './safelist.js';
-import { sidebarFoundations } from './sidebar-foundations.js';
-import { generateComponentsSidebar, generatePatternsSidebar } from './sidebar-generator.js';
+import { platformSidebars } from './sidebar/platform.js';
+import { sharedSidebar } from './sidebar/shared.js';
 import { supported as supportedClasses } from './supported.js';
 
 const base = '/docs';
+const hostname = 'https://warp-ds.github.io/docs/';
 
 export default defineConfig({
   lang: 'en',
@@ -21,9 +22,11 @@ export default defineConfig({
   lastUpdated: false,
   cleanUrls: true,
   sitemap: {
-    hostname: 'https://warp-ds.github.io/docs/',
+    hostname,
   },
   base: `${base}/`,
+  // Opt-in shared snippets live in docs/_shared (included with <!--@include: @/_shared/...-->), never routed
+  srcExclude: ['_shared/**'],
   ignoreDeadLinks: [
     (url) => url.startsWith(base), // doesn't detect properly when we link using pathname
   ],
@@ -93,124 +96,34 @@ export default defineConfig({
     editLink: {
       pattern: 'https://github.com/warp-ds/docs/edit/main/docs/:path', // Edit link for GitHub
     },
-    search: { provider: 'local' },
+    search: {
+      provider: 'local',
+      options: {
+        // Three parallel platform trees share titles ("Button - Overview"); label results by platform.
+        _render(src, env, md) {
+          const html = md.render(src, env);
+          if (env.frontmatter?.search === false) return '';
+          const labels = { web: 'Web', ios: 'iOS', android: 'Android' };
+          const platform = env.relativePath.match(/^(web|ios|android)\//)?.[1];
+          if (!platform) return html;
+          return html.replace(/<h1([^>]*)>/, `<h1$1>${labels[platform]} › `);
+        },
+      },
+    },
     logo: '/warp-logo-small.svg',
     outline: 'deep',
     socialLinks: [{ icon: 'github', link: 'https://github.com/warp-ds' }],
     nav: [
-      { text: 'Get started', link: '/get-started/' },
-      { text: 'Foundations', link: '/foundations/' },
-      { text: 'Components', link: '/components/' },
-      { text: 'Patterns', link: '/patterns/' },
-      {
-        text: "What's new",
-        link: '/blog/',
-        activeMatch: '/blog/$',
-      },
+      { text: 'Changelog', link: '/about/whats-new/', activeMatch: '^/about/whats-new/' },
+      { text: 'About DS', link: '/foundations/about/' },
     ],
+    // Each page gets the tree it belongs to (keeps prev/next and active state native).
+    // SidebarComposer.vue adds the shared sections, the Platform switcher and the other tree.
     sidebar: {
-      '/': [
-        {
-          text: 'Collaborate',
-          items: [
-            {
-              text: 'Request new component',
-              link: '/collaborate/request-new-component/',
-            },
-            {
-              text: 'Request component changes',
-              link: '/collaborate/request-component-changes/',
-            },
-          ],
-        },
-        {
-          text: 'Help',
-          items: [
-            { text: 'FAQ', link: '/help/faq/' },
-            { text: 'Support', link: '/help/support/' },
-            {
-              text: 'Doc authoring guide',
-              link: '/help/authoring-guide/',
-            },
-            {
-              text: 'Report bugs/errors',
-              link: '/help/report-bugs/',
-            },
-          ],
-        },
-      ],
-      '/get-started/': [
-        {
-          text: 'Get started',
-          items: [
-            {
-              text: 'Designers',
-              collapsed: false,
-              items: [
-                {
-                  text: 'Warp in Figma',
-                  link: '/get-started/designers/warp-in-figma/',
-                },
-                {
-                  text: 'Designing for multibrand',
-                  link: '/get-started/designers/designing-for-multibrand/',
-                },
-                {
-                  text: 'Building custom components with Warp',
-                  link: '/get-started/designers/custom-components/',
-                },
-                {
-                  text: 'Migrate from Fabric',
-                  link: '/get-started/designers/migrate-from-fabric/',
-                },
-              ],
-            },
-            {
-              text: 'Developers',
-              collapsed: false,
-              items: [
-                {
-                  text: 'Android',
-                  collapsed: true,
-                  link: '/get-started/developers/android/',
-                },
-                {
-                  text: 'iOS',
-                  collapsed: true,
-                  link: '/get-started/developers/ios/',
-                },
-                {
-                  text: 'Web',
-                  collapsed: true,
-                  items: [
-                    {
-                      text: 'Getting started with Warp',
-                      link: '/get-started/developers/web/',
-                    },
-                    {
-                      text: 'Building custom components with Warp',
-                      link: '/get-started/developers/web/custom-components/',
-                    },
-                    {
-                      text: 'Migrate from Fabric',
-                      link: '/get-started/developers/web/migrate-from-fabric/',
-                    },
-                  ],
-                },
-              ],
-            },
-            {
-              text: 'Mission, Values, Principles',
-              link: '/get-started/mission-values-principles/',
-            },
-          ],
-        },
-      ],
-      '/foundations/': sidebarFoundations,
-      // Components and patterns sidebars are dynamically generated from frameworks-manifest.json
-      // See sidebar-generator.js for implementation
-      '/components/': generateComponentsSidebar(),
-      '/patterns/': generatePatternsSidebar(),
+      '/web/': platformSidebars.web,
+      '/ios/': platformSidebars.ios,
+      '/android/': platformSidebars.android,
+      '/': sharedSidebar,
     },
   },
 });

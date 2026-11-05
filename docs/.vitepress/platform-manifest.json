@@ -1,0 +1,489 @@
+{
+  "web": {
+    "components": {
+      "alert": {
+        "title": "Alert",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "react-19", "vue"]
+      },
+      "badge": {
+        "title": "Badge",
+        "pages": ["overview", "usage", "styling", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "box": {
+        "title": "Box",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "breadcrumbs": {
+        "title": "Breadcrumbs",
+        "pages": ["overview", "usage", "styling", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "button": {
+        "title": "Button",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "react-19", "vue"]
+      },
+      "button-group": {
+        "title": "Button group",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["vue"]
+      },
+      "callout": {
+        "title": "Callout",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "card": {
+        "title": "Card",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "checkbox": {
+        "title": "Checkbox",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "combo-box": {
+        "title": "Combo box",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["elements", "react"]
+      },
+      "date-picker": {
+        "title": "Date picker",
+        "pages": ["overview", "usage", "styling", "code", "accessibility"],
+        "frameworks": ["elements", "react-19"]
+      },
+      "expandable": {
+        "title": "Expandable",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "icons": {
+        "title": "Icons",
+        "pages": ["overview", "usage", "styling", "code", "accessibility"],
+        "frameworks": ["elements", "react-19"]
+      },
+      "link": {
+        "title": "Link",
+        "pages": ["overview", "usage", "styling", "code", "accessibility"],
+        "frameworks": ["elements", "react-19"]
+      },
+      "logo": {
+        "title": "Logo",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements"]
+      },
+      "modal": {
+        "title": "Modal",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "page-indicator": {
+        "title": "Page indicator",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react-19"]
+      },
+      "pagination": {
+        "title": "Pagination",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react"]
+      },
+      "pill": {
+        "title": "Pill",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "popover": {
+        "title": "Popover",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "radio": {
+        "title": "Radio",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "radio-buttons": {
+        "title": "Radio buttons",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["react", "vue"]
+      },
+      "range-slider": {
+        "title": "Range slider",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react-19"]
+      },
+      "select": {
+        "title": "Select",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "slider": {
+        "title": "Slider",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "react-19", "vue"]
+      },
+      "snackbar": {
+        "title": "Snackbar",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements"]
+      },
+      "steps": {
+        "title": "Steps",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "switch": {
+        "title": "Switch",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "tabs": {
+        "title": "Tabs",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "text-area": {
+        "title": "Text area",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "text-field": {
+        "title": "Text field",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "tooltip": {
+        "title": "Tooltip",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "frameworks": ["elements", "react", "vue"]
+      },
+      "utilities": {
+        "title": "Utilities",
+        "pages": ["overview", "usage", "code"],
+        "frameworks": ["vue"]
+      }
+    },
+    "patterns": {
+      "empty-states": {
+        "title": "Empty states",
+        "pages": ["overview", "usage", "accessibility"]
+      }
+    }
+  },
+  "ios": {
+    "components": {
+      "alert": {
+        "title": "Alert",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "badge": {
+        "title": "Badge",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "box": {
+        "title": "Box",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "broadcast": {
+        "title": "Broadcast",
+        "pages": ["overview", "code"]
+      },
+      "button": {
+        "title": "Button",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "button-group": {
+        "title": "Button group",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "button-pill": {
+        "title": "Button pill",
+        "pages": ["overview", "code"]
+      },
+      "callout": {
+        "title": "Callout",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "checkbox": {
+        "title": "Checkbox",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "confirmation-dialog": {
+        "title": "Confirmation dialog",
+        "pages": ["overview", "usage", "code", "accessibility"]
+      },
+      "date-picker": {
+        "title": "Date picker",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "divider": {
+        "title": "Divider",
+        "pages": ["overview", "code"]
+      },
+      "expandable": {
+        "title": "Expandable",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "icons": {
+        "title": "Icons",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "logo": {
+        "title": "Logo",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "modal": {
+        "title": "Modal",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "page-indicator": {
+        "title": "Page indicator",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "pill": {
+        "title": "Pill",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "radio": {
+        "title": "Radio",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "range-slider": {
+        "title": "Range slider",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "select": {
+        "title": "Select",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "slider": {
+        "title": "Slider",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "snackbar": {
+        "title": "Snackbar",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "spinner": {
+        "title": "Spinner",
+        "pages": ["overview", "code"]
+      },
+      "steps": {
+        "title": "Steps",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "switch": {
+        "title": "Switch",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "tabs": {
+        "title": "Tabs",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "text": {
+        "title": "Text",
+        "pages": ["overview", "code"]
+      },
+      "text-area": {
+        "title": "Text area",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "text-field": {
+        "title": "Text field",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "toast": {
+        "title": "Toast",
+        "pages": ["code"]
+      },
+      "tooltip": {
+        "title": "Tooltip",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      }
+    },
+    "patterns": {
+      "empty-states": {
+        "title": "Empty states",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      }
+    }
+  },
+  "android": {
+    "components": {
+      "alert": {
+        "title": "Alert",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "badge": {
+        "title": "Badge",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "box": {
+        "title": "Box",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "button": {
+        "title": "Button",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "callout": {
+        "title": "Callout",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "checkbox": {
+        "title": "Checkbox",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "date-picker": {
+        "title": "Date picker",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "divider": {
+        "title": "Divider",
+        "pages": ["overview", "code"]
+      },
+      "expandable": {
+        "title": "Expandable",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "icons": {
+        "title": "Icons",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "link": {
+        "title": "Link",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "logo": {
+        "title": "Logo",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "modal": {
+        "title": "Modal",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "page-indicator": {
+        "title": "Page indicator",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "pill": {
+        "title": "Pill",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "popover": {
+        "title": "Popover",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "radio": {
+        "title": "Radio",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "range-slider": {
+        "title": "Range slider",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "select": {
+        "title": "Select",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "slider": {
+        "title": "Slider",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "snackbar": {
+        "title": "Snackbar",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "spinner": {
+        "title": "Spinner",
+        "pages": ["overview", "code"]
+      },
+      "steps": {
+        "title": "Steps",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "switch": {
+        "title": "Switch",
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
+      },
+      "tabs": {
+        "title": "Tabs",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "text": {
+        "title": "Text",
+        "pages": ["overview", "code"]
+      },
+      "text-field": {
+        "title": "Text field",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      },
+      "tooltip": {
+        "title": "Tooltip",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      }
+    },
+    "patterns": {
+      "empty-states": {
+        "title": "Empty states",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"]
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <script setup>
 import { withBase } from 'vitepress';
 import { computed, ref } from 'vue';
-import manifest from './frameworks-manifest.json';
+import manifest from './platform-manifest.json';
 
 const props = defineProps({
   type: {
@@ -9,50 +9,54 @@ const props = defineProps({
     default: 'components',
     validator: (value) => ['components', 'patterns'].includes(value),
   },
+  platform: {
+    type: String,
+    default: 'web',
+    validator: (value) => ['web', 'ios', 'android'].includes(value),
+  },
 });
 
-// Import SVGs from both directories
-const componentSvgModules = import.meta.glob('../components/*/placeholder.svg', { eager: true, import: 'default' });
-const patternSvgModules = import.meta.glob('../patterns/*/placeholder.svg', { eager: true, import: 'default' });
+const FRAMEWORK_LABELS = { elements: 'Elements', react: 'React', 'react-19': 'React 19', vue: 'Vue' };
+
+// Placeholder illustrations live next to each platform's pages
+const svgModules = import.meta.glob(['../{web,ios,android}/{components,patterns}/*/placeholder.svg'], {
+  eager: true,
+  import: 'default',
+});
 
 const placeholderBySlug = computed(() => {
   const map = Object.create(null);
-  const modules = props.type === 'components' ? componentSvgModules : patternSvgModules;
-  const regex =
-    props.type === 'components' ? /\/components\/([^/]+)\/placeholder\.svg$/ : /\/patterns\/([^/]+)\/placeholder\.svg$/;
-
-  for (const [key, mod] of Object.entries(modules)) {
-    const s = String(key).replace(/\\/g, '/');
-    const slug = s.match(regex)?.[1];
+  const regex = new RegExp(`/${props.platform}/${props.type}/([^/]+)/placeholder\\.svg$`);
+  for (const [key, mod] of Object.entries(svgModules)) {
+    const slug = String(key).replace(/\\/g, '/').match(regex)?.[1];
     if (slug) map[slug] = mod;
   }
   return map;
 });
 
-// Get the section of the manifest based on type prop
-const manifestSection = computed(() => manifest[props.type] || {});
+const manifestSection = computed(() => manifest[props.platform]?.[props.type] || {});
+const isWeb = computed(() => props.platform === 'web');
+const frameworksOf = (entry) => (entry.frameworks || []).map((f) => FRAMEWORK_LABELS[f] || f);
 
 const allItems = computed(() =>
-  Object.keys(manifestSection.value).map((it) => {
-    return {
-      slug: it,
-      title: (it[0].toUpperCase() + it.slice(1)).replaceAll('-', ' '),
-      description: `${it} ${props.type === 'components' ? 'component' : 'pattern'} description.`,
-      frameworks: manifestSection.value[it],
-      svgComponent: placeholderBySlug.value[it],
-      href: withBase(`/${props.type}/${it}/overview`),
-      placeholder: { label: it },
-    };
-  }),
+  Object.entries(manifestSection.value).map(([slug, entry]) => ({
+    slug,
+    title: entry.title,
+    description: `${entry.title} ${props.type === 'components' ? 'component' : 'pattern'}.`,
+    frameworks: frameworksOf(entry),
+    svgComponent: placeholderBySlug.value[slug],
+    href: withBase(
+      `/${props.platform}/${props.type}/${slug}/${entry.pages.includes('overview') ? 'overview' : entry.pages[0]}`,
+    ),
+    placeholder: { label: entry.title },
+  })),
 );
 
+// Framework filter only makes sense on Web (Elements + legacy React/Vue)
 const allFrameworks = computed(() => {
+  if (!isWeb.value) return [];
   const set = new Set();
-  for (const fwList of Object.values(manifestSection.value)) {
-    for (const fw of fwList) {
-      set.add(fw.name);
-    }
-  }
+  for (const item of allItems.value) for (const fw of item.frameworks) set.add(fw);
   return Array.from(set);
 });
 
@@ -65,10 +69,8 @@ const filtered = computed(() => {
 
   return allItems.value.filter((it) => {
     const textOk = !query || it.title.toLowerCase().includes(query);
-
-    const fwNames = manifestSection.value[it.slug].map((f) => f.name.toLowerCase());
+    const fwNames = it.frameworks.map((f) => f.toLowerCase());
     const fwOk = sel.length === 0 || sel.some((s) => fwNames.includes(s)); // OR
-
     return textOk && fwOk;
   });
 });
@@ -91,7 +93,7 @@ function showAll() {
         <DsSearchInput v-model="q" placeholder="Filter by title or description…" aria-label="Filter components" />
       </div>
 
-      <div class="flex flex-wrap gap-8">
+      <div v-if="allFrameworks.length" class="flex flex-wrap gap-8">
         <button
           v-for="fw in allFrameworks"
           :key="fw"

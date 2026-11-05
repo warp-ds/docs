@@ -7,14 +7,14 @@
     </div>
     <div class="footer-column">
       <h3 class="footer-column-title">Collaborate</h3>
-      <a class="footer-link" :href="`${baseUrl}collaborate/request-new-component`">Request new component</a>
-      <a class="footer-link" :href="`${baseUrl}collaborate/request-component-changes`">Request component changes</a>
+      <a class="footer-link" :href="`${baseUrl}about/help/requests/new-component/`">Request new component</a>
+      <a class="footer-link" :href="`${baseUrl}about/help/requests/component-changes/`">Request component changes</a>
     </div>
     <div class="footer-column">
       <h3 class="footer-column-title">Help</h3>
-      <a class="footer-link" :href="`${baseUrl}help/faq`">FAQ</a>
-      <a class="footer-link" :href="`${baseUrl}help/support`">Support</a>
-      <a class="footer-link" :href="`${baseUrl}help/report-bugs`">Report bugs/errors</a>
+      <a class="footer-link" :href="`${baseUrl}about/help/faq/`">FAQ</a>
+      <a class="footer-link" :href="`${baseUrl}about/help/support/`">Support</a>
+      <a class="footer-link" :href="`${baseUrl}about/help/report-bugs/`">Report bugs/errors</a>
     </div>
   </footer>
 </template>
@@ -51,7 +51,7 @@ import WarpLogo from '../src/warp-logo.svg';
 .footer::before {
   bottom: 0;
   height: 104px;
-  background: url('stars-background.svg') no-repeat center/cover;
+  background: url('/stars-background.svg') no-repeat center/cover;
 }
 /*
 .footer::after {

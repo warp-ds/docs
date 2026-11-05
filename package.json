@@ -9,14 +9,15 @@
     "check": "pnpm biome check --write .",
     "dev": "NODE_ENV=development vitepress dev docs",
     "format": "pnpm biome format --write .",
-    "generate-frameworks": "node scripts/generate-frameworks.js",
+    "generate-frameworks": "node scripts/generate-manifest.js",
     "lint:check": "pnpm biome lint .",
     "lint": "pnpm biome lint --write .",
     "review:docs": "node scripts/review-docs.mjs",
     "serve": "vitepress serve docs",
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:review-docs": "node --test scripts/docs-review-prompt.test.mjs scripts/docs-review-history.test.mjs scripts/component-issues.test.mjs scripts/review-docs.test.mjs scripts/post-docs-review.test.mjs",
-    "prepare": "husky"
+    "prepare": "husky",
+    "generate-manifest": "node scripts/generate-manifest.js"
   },
   "type": "module",
   "license": "Apache-2.0",

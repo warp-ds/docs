@@ -1,65 +1,112 @@
 <script setup>
-import { useRoute } from 'vitepress';
+// Platform availability for a component/pattern page: "Available on: Web · iOS · Android".
+// Links go to the same page kind on the other platform (fallback: overview). Platforms without
+// the item are left out. On Web Code pages it also lists the frameworks (React/Vue = legacy).
+import { withBase } from 'vitepress';
 import { computed } from 'vue';
-import manifest from './frameworks-manifest.json';
+import { equivalentUrl, PLATFORMS, usePlatform } from './composables/platform.js';
+import manifest from './platform-manifest.json';
 
-const route = useRoute();
+const FRAMEWORK_LABELS = { elements: 'Elements', react: 'React', 'react-19': 'React 19', vue: 'Vue' };
 
-// Parse route to get item name
-// Route path looks like: /components/alert/frameworks/vue or /patterns/emptystates/frameworks/ios
-const pathSegments = computed(() => {
-  const path = route.path.replace(/\.html$/, '');
-  return path.split('/').filter(Boolean);
+const { current } = usePlatform();
+
+const platforms = computed(() => {
+  const c = current.value;
+  if (!c?.type) return [];
+  return PLATFORMS.filter((p) => manifest[p.id]?.[c.type]?.[c.name]).map((p) => ({
+    ...p,
+    current: p.id === c.platform,
+    href: withBase(equivalentUrl(c, p.id)),
+  }));
 });
 
-// Detect whether we're in components or patterns section
-const section = computed(() => {
-  if (pathSegments.value.includes('patterns')) return 'patterns';
-  if (pathSegments.value.includes('components')) return 'components';
-  return null;
-});
-
-const itemName = computed(() => {
-  // Path: components/alert/frameworks/vue -> alert is at index 1
-  // Path: patterns/emptystates/frameworks/ios -> emptystates is at index 1
-  const sectionKey = section.value;
-  if (!sectionKey) return null;
-  const idx = pathSegments.value.indexOf(sectionKey);
-  if (idx !== -1 && pathSegments.value[idx + 1]) {
-    return pathSegments.value[idx + 1];
-  }
-  return null;
-});
-
-const badges = computed(() => {
-  if (!section.value || !itemName.value) return [];
-  return manifest[section.value]?.[itemName.value] || [];
+const frameworks = computed(() => {
+  const c = current.value;
+  if (c?.platform !== 'web' || !c.page.startsWith('code')) return [];
+  return (manifest.web[c.type]?.[c.name]?.frameworks ?? []).map((fw) => ({
+    name: FRAMEWORK_LABELS[fw] ?? fw,
+    status: fw === 'elements' ? 'released' : 'legacy',
+  }));
 });
 </script>
 
 <template>
-  <div class="fw-badges fw-left" role="list" aria-label="Framework support status">
-    <WarpBadge
-      v-for="badge in badges"
-      :key="badge.label"
-      :framework="badge.name"
-      status="released"
-    />
+  <div v-if="platforms.length" class="availability">
+    <nav aria-label="Platform availability" class="platforms">
+      <span class="caption">Available on:</span>
+      <ul>
+        <li v-for="p in platforms" :key="p.id">
+          <a :href="p.href" :class="{ current: p.current }" :aria-current="p.current ? 'page' : undefined">{{ p.label }}</a>
+        </li>
+      </ul>
+    </nav>
+    <div v-if="frameworks.length" class="fw-badges" role="list" aria-label="Web frameworks">
+      <WarpBadge v-for="fw in frameworks" :key="fw.name" role="listitem" :framework="fw.name" :status="fw.status" />
+    </div>
   </div>
 </template>
 
 <style scoped>
+.availability {
+  margin: 1.5rem 0 2rem;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.caption {
+  color: var(--vp-c-text-2);
+}
+
+.platforms ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.platforms li {
+  margin: 0;
+}
+
+.platforms a {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 999px;
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.platforms a:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
+
+.platforms a.current {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+  font-weight: 700;
+}
+
+.platforms a:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
 .fw-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  align-items: center;
-  margin: 2rem 0 2rem;
+  gap: 12px;
+  margin-top: 12px;
 }
-.fw-auto { justify-content: center; }
-@media (min-width: 960px) {
-  .fw-auto { justify-content: flex-start; }
-}
-.fw-left   { justify-content: flex-start; }
-.fw-center { justify-content: center; }
 </style>
