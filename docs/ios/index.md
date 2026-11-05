@@ -10,4 +10,4 @@ Warp for iOS (SwiftUI).
 - [iOS components](/ios/components/) — code and design guidance for each component.
 - [iOS patterns](/ios/patterns/) — guidance for recurring user tasks.
 
-The shared [Foundation (Design Language)](/foundations/) applies to every platform.
+The shared [Design Language](/design-language/) applies to every platform.

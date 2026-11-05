@@ -12,7 +12,7 @@ A guide on how to integrate Warp into your project.
 
 ### Gradle
 
-Warp is used together with a brand theme and should be installed for a specific flavor of the code. Currently Finn, Tori and DBA are supported.
+Warp is used together with a brand theme and should be installed for a specific flavor of the code. Supported brands: Finn, Tori, DBA, Blocket, Vend and Neutral (see [Theming](/android/foundations/theming.md)).
 
 ```groovy
 implementation("com.schibsted.nmp.warp:warp-android:0.0.27")

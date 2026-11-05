@@ -3,19 +3,26 @@
 // The config sidebar renders the tree the current page belongs to (so prev/next and active state
 // stay native); this component, mounted in the sidebar-nav-before/after slots, renders the rest.
 
+import { useData } from 'vitepress';
 // Internal default-theme component (allowed by vitepress' `./dist/*` export). VitePress is pinned.
 import VPSidebarGroup from 'vitepress/dist/client/theme-default/components/VPSidebarGroup.vue';
 import { computed } from 'vue';
 import { usePlatform } from './composables/platform.js';
 import PlatformSwitcher from './PlatformSwitcher.vue';
-import { platformSidebars } from './sidebar/platform.js';
+import { patternSidebars, platformSidebars } from './sidebar/platform.js';
 import { sharedSidebar } from './sidebar/shared.js';
 
 const props = defineProps({
   position: { type: String, required: true, validator: (v) => ['before', 'after'].includes(v) },
 });
 
+const { page } = useData();
 const { routePlatform, selectedPlatform } = usePlatform();
+// Patterns context: the shared /patterns/ landing page lists the selected platform's patterns only
+const inPatterns = computed(() => /^(?:(?:web|ios|android)\/)?patterns\//.test(page.value.relativePath));
+const platformTree = computed(() =>
+  inPatterns.value ? patternSidebars[selectedPlatform.value] : platformSidebars[selectedPlatform.value],
+);
 const onPlatformPage = computed(() => Boolean(routePlatform.value));
 const showBefore = computed(() => props.position === 'before' && onPlatformPage.value);
 const showAfter = computed(() => props.position === 'after' && !onPlatformPage.value);
@@ -32,7 +39,7 @@ const showAfter = computed(() => props.position === 'after' && !onPlatformPage.v
     <div class="platform-block">
       <PlatformSwitcher />
     </div>
-    <VPSidebarGroup :key="selectedPlatform" :items="platformSidebars[selectedPlatform]" />
+    <VPSidebarGroup :key="`${selectedPlatform}-${inPatterns}`" :items="platformTree" />
   </div>
 </template>
 

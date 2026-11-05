@@ -1,3 +1,7 @@
+---
+designLanguage: /design-language/dark-mode/
+---
+
 # Dark mode in Warp React
 
 WARP offers light and dark mode for all supported brands.

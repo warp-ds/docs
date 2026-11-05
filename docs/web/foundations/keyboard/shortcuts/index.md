@@ -1,3 +1,7 @@
+---
+designLanguage: /design-language/accessibility/
+---
+
 # Keyboard shortcuts
 
 Some Warp components come with custom keyboard shortcuts.

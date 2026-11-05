@@ -32,14 +32,16 @@ export const sharedSidebar = [
     ],
   },
   {
-    text: 'Foundation (Design Language)',
+    text: 'Design Language',
     collapsed: true,
     items: [
-      { text: 'Overview', link: '/foundations/' },
-      { text: 'About DS', link: '/foundations/about/' },
+      { text: 'Overview', link: '/design-language/' },
+      { text: 'About DS', link: '/design-language/about/' },
       ...foundationItems,
     ],
   },
+  // Patterns are their own section; the Platform switcher picks whose patterns are listed
+  { text: 'Patterns', link: '/patterns/', items: [] },
   {
     text: 'About Warp',
     collapsed: true,

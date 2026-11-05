@@ -3,7 +3,7 @@
 
 /** Old URL shapes that may have a redirect. Keeps the map out of the bundle for normal navigation. */
 export const OLD_URL_PREFIX =
-  /^\/(components|patterns|blog|help|collaborate|pre-migrating|get-started\/(designers|developers|mission-values-principles)|foundations\/(css-classes|customization|font-weights|keyboard|dark-mode\/(elements|react)))(\/|$)/;
+  /^\/(components|patterns|blog|help|collaborate|pre-migrating|get-started\/(designers|developers|mission-values-principles)|foundations)(\/|$)/;
 
 /**
  * Turn a pathname into a map key: strip base, `.html` and a trailing `index`.

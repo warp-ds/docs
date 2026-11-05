@@ -28,13 +28,28 @@ dependencies: [
 
 ## 2. Apply theme
 
-To start using Warp you must first initialize the theme depending on the selected target of the project.
+Set the brand in two places: assign the global `Warp.Theme` (registers the brand's fonts, selects its typeface and loads Warp's built-in strings) and apply `.warpTheme(_:)` near the root of your view hierarchy (Warp components read the theme from the SwiftUI environment).
 
 ```swift
-Warp.Config.warpTheme = .tori
+import SwiftUI
+import Warp
+
+@main
+struct MyApp: App {
+    init() {
+        Warp.Theme = .tori
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .warpTheme(.tori)
+        }
+    }
+}
 ```
 
-Right now we support `.finn`, `.tori`, `.dba` and `.blocket` with `.finn` as the default one.
+Supported brands: `.finn` (default), `.tori`, `.dba`, `.blocket`, `.vend` and `.neutral`. See [Theming](/ios/foundations/theming.md) for details, runtime switching and dark mode.
 
 ## 3. Use Warp components
 

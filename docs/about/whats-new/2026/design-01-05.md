@@ -28,7 +28,7 @@ This pattern was a fantastic cross-team effort! 👏 Huge thanks to:
 - **Fredrik Øverlie** and the developers from the **Native Brand Experience team** for their contribution.
 - **Astri Eiterstraum**, **Brian Stefan Jensen**, **Christer Johnsrud**, **Damon Chan**, **Kevin Jeppesen**, **Mikkel Winsvold Staff**, **Mimmi Hallberg**, **Pekka Murto** and **Vishaka Mantri Roininen** for volunteering to test the component and documentation before release.
 
-👉 [Learn more about Empty states and our guidelines here](/web/patterns/empty-states/overview.md)
+👉 [Learn more about Empty states and our guidelines here](/patterns/)
 
 ![Example of the Empty state 'Fail to load’ variant shown in the context of FINN's iOS app, and screenshot of the pattern's usage guidelines on Warp Portal.](/whats-new/2026/design-01-05-2.svg)
 

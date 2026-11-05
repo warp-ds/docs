@@ -23,10 +23,13 @@ import Cards from '../Cards.vue';
 import DsOverview from '../DsOverview.vue';
 import DsSearchInput from '../DsSearchInput.vue';
 import FrameworkTabs from '../FrameworkTabs.vue';
+import HomeLanding from '../HomeLanding.vue';
 import InProgressStatus from '../InProgressStatus.vue';
 import NavCta from '../NavCta.vue';
 import NavDocsLabel from '../NavDocsLabel.vue';
+import PatternsIndex from '../PatternsIndex.vue';
 import PlatformCoverage from '../PlatformCoverage.vue';
+import PlatformLinks from '../PlatformLinks.vue';
 import RedirectNotFound from '../RedirectNotFound.vue';
 import { resolveRedirect } from '../redirect-rules.js';
 import SeededNotice from '../SeededNotice.vue';
@@ -53,7 +56,7 @@ export default {
       'nav-screen-content-after': () => h(NavCta, { screen: true }),
       'sidebar-nav-before': () => h(SidebarComposer, { position: 'before' }),
       'sidebar-nav-after': () => h(SidebarComposer, { position: 'after' }),
-      'doc-before': () => h(SeededNotice),
+      'doc-before': () => [h(PlatformLinks), h(SeededNotice)],
       'not-found': () => h(RedirectNotFound),
     });
   },
@@ -88,6 +91,8 @@ export default {
     app.component('WarpBadge', Badge);
     app.component('DsOverview', DsOverview);
     app.component('PlatformCoverage', PlatformCoverage);
+    app.component('PatternsIndex', PatternsIndex);
+    app.component('HomeLanding', HomeLanding);
     app.component('WidthController', WidthController);
     app.component('DsSearchInput', DsSearchInput);
     app.component('TabsContent', TabsContent);

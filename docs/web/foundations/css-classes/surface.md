@@ -20,7 +20,7 @@ The `s-` (semantic) prefix signals that the color value of these will change wit
 ## Basic usage
 
 ### Usage guide
-Refer to the [Elevation guide](/foundations/elevation/) for more information about when to use elevation and when not to.
+Refer to the [Elevation guide](/design-language/elevation/) for more information about when to use elevation and when not to.
 
 ### Setting the elevation
 Control the elevation of an element using the `s-surface-{sunken|elevated-100|elevated-200|elevated-300}` utilities as specified in the table above.

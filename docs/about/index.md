@@ -19,4 +19,4 @@ Help, contribution and news about the Warp Design System.
 - [What's new](/about/whats-new/) — release notes and updates.
 - [Platform coverage](/about/platform-coverage) — which components are documented on Web, iOS and Android.
 
-What Warp is and why it exists: [About DS](/foundations/about/).
+What Warp is and why it exists: [About DS](/design-language/about/).

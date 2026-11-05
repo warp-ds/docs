@@ -1,9 +1,3 @@
----
-seeded: true
-seededFrom: /web/patterns/empty-states/usage
-seededAt: 2026-11-05
----
-
 # Empty states - Usage
 
 Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.

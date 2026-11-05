@@ -13,7 +13,7 @@ Pre-defined styles provide a font and size.
 Warp.Text(
     _ text: String,
     style: Warp.TextStyle,
-    color: Color = Warp.Color.token.text
+    color: Color? = nil
 )
 ```
 ```swift example
@@ -63,6 +63,6 @@ Warp.Text("This is a text", style: .body).uiView
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| color | Color | Warp.Token.text | A solid color for the text. |
+| color | Color? | nil | A solid color for the text. `nil` uses the theme's default text colour. |
 
 <component-questions />

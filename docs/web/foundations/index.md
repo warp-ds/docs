@@ -4,7 +4,7 @@ title: Web foundation
 
 # Web foundation
 
-Web-specific foundations. For colour, typography, elevation, tokens and other design-language topics that apply to every platform, see [Foundation (Design Language)](/foundations/).
+Web-specific foundations. For colour, typography, elevation, tokens and other design-language topics that apply to every platform, see [Design Language](/design-language/).
 
 - [CSS classes](/web/foundations/css-classes/unocss) — utility classes generated with UnoCSS.
 - [Customization](/web/foundations/customization/) — how far Warp components can be customised, and how.

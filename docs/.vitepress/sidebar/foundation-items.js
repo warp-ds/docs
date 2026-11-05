@@ -6,29 +6,29 @@ export const foundationItems = [
     items: [
       {
         text: 'Intro',
-        link: '/foundations/tokens/intro/',
+        link: '/design-language/tokens/intro/',
       },
       {
         text: 'Overview',
-        link: '/foundations/tokens/overview/',
+        link: '/design-language/tokens/overview/',
       },
     ],
   },
   {
     text: 'Illustrations',
-    link: '/foundations/illustrations/',
+    link: '/design-language/illustrations/',
   },
   {
     text: 'Typography',
-    link: '/foundations/typography/',
+    link: '/design-language/typography/',
   },
   {
     text: 'Accessibility',
-    link: '/foundations/accessibility/',
+    link: '/design-language/accessibility/',
   },
   {
     text: 'Brands',
-    link: '/foundations/brands/',
+    link: '/design-language/brands/',
   },
   {
     text: 'Data visualization',
@@ -36,11 +36,11 @@ export const foundationItems = [
     items: [
       {
         text: 'Introduction',
-        link: '/foundations/data-visualization/introduction/',
+        link: '/design-language/data-visualization/introduction/',
       },
       {
         text: 'Figma Library',
-        link: '/foundations/data-visualization/figma-library/',
+        link: '/design-language/data-visualization/figma-library/',
       },
       {
         text: 'Color Guidelines',
@@ -48,27 +48,27 @@ export const foundationItems = [
         items: [
           {
             text: 'Introduction',
-            link: '/foundations/data-visualization/color/introduction/',
+            link: '/design-language/data-visualization/color/introduction/',
           },
           {
             text: 'Chart Colors',
-            link: '/foundations/data-visualization/color/chart-colors/',
+            link: '/design-language/data-visualization/color/chart-colors/',
           },
           {
             text: 'Data Colors',
-            link: '/foundations/data-visualization/color/data-colors/',
+            link: '/design-language/data-visualization/color/data-colors/',
           },
           {
             text: 'Lines & Points',
-            link: '/foundations/data-visualization/color/lines-points/',
+            link: '/design-language/data-visualization/color/lines-points/',
           },
           {
             text: 'Bars & Areas',
-            link: '/foundations/data-visualization/color/bars-areas/',
+            link: '/design-language/data-visualization/color/bars-areas/',
           },
           {
             text: 'Text & Icons',
-            link: '/foundations/data-visualization/color/text-icons/',
+            link: '/design-language/data-visualization/color/text-icons/',
           },
         ],
       },
@@ -78,41 +78,41 @@ export const foundationItems = [
         items: [
           {
             text: 'Introduction',
-            link: '/foundations/data-visualization/tokens/introduction/',
+            link: '/design-language/data-visualization/tokens/introduction/',
           },
           {
             text: 'Chart Colors',
-            link: '/foundations/data-visualization/tokens/chart/',
+            link: '/design-language/data-visualization/tokens/chart/',
           },
           {
             text: 'Background',
-            link: '/foundations/data-visualization/tokens/background/',
+            link: '/design-language/data-visualization/tokens/background/',
           },
           {
             text: 'Border',
-            link: '/foundations/data-visualization/tokens/border/',
+            link: '/design-language/data-visualization/tokens/border/',
           },
           {
             text: 'Icon',
-            link: '/foundations/data-visualization/tokens/icon/',
+            link: '/design-language/data-visualization/tokens/icon/',
           },
           {
             text: 'Line',
-            link: '/foundations/data-visualization/tokens/line/',
+            link: '/design-language/data-visualization/tokens/line/',
           },
           {
             text: 'Text',
-            link: '/foundations/data-visualization/tokens/text/',
+            link: '/design-language/data-visualization/tokens/text/',
           },
         ],
       },
       {
         text: 'Chart Components',
-        link: '/foundations/data-visualization/components/',
+        link: '/design-language/data-visualization/components/',
       },
       {
         text: 'Interaction',
-        link: '/foundations/data-visualization/interaction/',
+        link: '/design-language/data-visualization/interaction/',
       },
       {
         text: 'Success Criteria',
@@ -120,23 +120,23 @@ export const foundationItems = [
         items: [
           {
             text: 'Introduction',
-            link: '/foundations/data-visualization/success-criteria/introduction/',
+            link: '/design-language/data-visualization/success-criteria/introduction/',
           },
           {
             text: 'Cognitive Accessibility',
-            link: '/foundations/data-visualization/success-criteria/cognitive/',
+            link: '/design-language/data-visualization/success-criteria/cognitive/',
           },
           {
             text: 'Visual Accessibility',
-            link: '/foundations/data-visualization/success-criteria/visual/',
+            link: '/design-language/data-visualization/success-criteria/visual/',
           },
           {
             text: 'Keyboard Navigation',
-            link: '/foundations/data-visualization/success-criteria/keyboard/',
+            link: '/design-language/data-visualization/success-criteria/keyboard/',
           },
           {
             text: 'Screen Reader',
-            link: '/foundations/data-visualization/success-criteria/screenreader/',
+            link: '/design-language/data-visualization/success-criteria/screenreader/',
           },
         ],
       },
@@ -144,24 +144,24 @@ export const foundationItems = [
   },
   {
     text: 'Elevation',
-    link: '/foundations/elevation/',
+    link: '/design-language/elevation/',
   },
   {
     text: 'Dark mode',
-    link: '/foundations/dark-mode/',
+    link: '/design-language/dark-mode/',
     items: [
       {
         text: 'Dark mode in Warp',
-        link: '/foundations/dark-mode/',
+        link: '/design-language/dark-mode/',
       },
       {
         text: 'Dark mode in Figma',
-        link: '/foundations/dark-mode/figma',
+        link: '/design-language/dark-mode/figma',
       },
     ],
   },
   {
     text: 'Motion',
-    link: '/foundations/motion/',
+    link: '/design-language/motion/',
   },
 ];

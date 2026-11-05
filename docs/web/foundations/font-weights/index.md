@@ -1,3 +1,7 @@
+---
+designLanguage: /design-language/typography/
+---
+
 # Understanding Font Weights in Web Browsers
 This document explains how font weights are handled in web browsers, particularly in the context of the brand-font setups in our projects.
 

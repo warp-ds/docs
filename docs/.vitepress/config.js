@@ -9,7 +9,7 @@ import llmstxt from 'vitepress-plugin-llms';
 import { writeRedirectStubs } from './build/redirect-stubs.js';
 import { headLinks } from './headLinks.js';
 import { docsClasses } from './safelist.js';
-import { platformSidebars } from './sidebar/platform.js';
+import { patternSidebars, platformSidebars } from './sidebar/platform.js';
 import { sharedSidebar } from './sidebar/shared.js';
 import { supported as supportedClasses } from './supported.js';
 
@@ -116,11 +116,14 @@ export default defineConfig({
     socialLinks: [{ icon: 'github', link: 'https://github.com/warp-ds' }],
     nav: [
       { text: 'Changelog', link: '/about/whats-new/', activeMatch: '^/about/whats-new/' },
-      { text: 'About DS', link: '/foundations/about/' },
+      { text: 'About DS', link: '/design-language/about/' },
     ],
     // Each page gets the tree it belongs to (keeps prev/next and active state native).
     // SidebarComposer.vue adds the shared sections, the Platform switcher and the other tree.
     sidebar: {
+      '/web/patterns/': patternSidebars.web,
+      '/ios/patterns/': patternSidebars.ios,
+      '/android/patterns/': patternSidebars.android,
       '/web/': platformSidebars.web,
       '/ios/': platformSidebars.ios,
       '/android/': platformSidebars.android,

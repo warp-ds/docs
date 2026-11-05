@@ -20,11 +20,18 @@ export function parsePlatformPath(relativePath) {
   const m = relativePath.match(/^(web|ios|android)\/(?:(components|patterns)\/([^/]+)\/([^/]+)\.md|.*)$/);
   if (!m) return null;
   const [, platform, type, name, page] = m;
-  return { platform, type, name, page };
+  const foundation = relativePath.match(/^(?:web|ios|android)\/foundations\/(.+?)(?:\/index)?\.md$/)?.[1];
+  return { platform, type, name, page, foundation: foundation === 'index' ? '' : foundation };
 }
 
 /** Best equivalent URL (without base) on another platform. */
 export function equivalentUrl(current, target) {
+  if (current?.foundation !== undefined) {
+    const hasPage = manifest[target]?.foundations?.some((f) => f.slug === current.foundation);
+    if (current.foundation && hasPage) return `/${target}/foundations/${current.foundation}`;
+    const hasFoundation = target === 'web' || manifest[target]?.foundations?.length;
+    return hasFoundation ? `/${target}/foundations/` : `/${target}/`;
+  }
   if (!current?.type) return `/${target}/`;
   const { type, name } = current;
   const page = current.page.startsWith('code-') ? 'code' : current.page;

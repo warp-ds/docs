@@ -19,7 +19,7 @@ Warp for web consists of a few different packages:
 | Package                                                  | Description                                                                                                                                       |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [@warp-ds/fonts](https://github.com/warp-ds/fonts)       | The fonts used by our different brands and the CSS needed to set them up.                                                                         |
-| [@warp-ds/css](https://github.com/warp-ds/css)           | The CSS versions of the Warp [design system tokens](/foundations/tokens/intro/) and a CSS reset.                                                  |
+| [@warp-ds/css](https://github.com/warp-ds/css)           | The CSS versions of the Warp [design system tokens](/design-language/tokens/intro/) and a CSS reset.                                                  |
 | [@warp-ds/elements](https://github.com/warp-ds/elements) | The canonical version of Warp components for web, implemented as web components to work with any frontend framework. Includes wrappers for React. |
 
 You don't tecnically need to `npm install` any of them.

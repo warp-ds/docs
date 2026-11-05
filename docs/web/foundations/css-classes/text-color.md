@@ -1,3 +1,7 @@
+---
+designLanguage: /design-language/tokens/intro/
+---
+
 > Typography
 
 # Text Color

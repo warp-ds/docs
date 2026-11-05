@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the Warp Design System documentation site, built with VitePress. It has shared, platform-agnostic sections (Get started, Foundation / Design Language, About Warp) and three **independent platform sections: Web, iOS and Android**. Each platform owns its own components and patterns pages. On Web, Warp Elements (web components) is the primary implementation; React, React 19 and Vue are documented as legacy.
+This is the Warp Design System documentation site, built with VitePress. It has shared, platform-agnostic sections (Get started, Design Language, About Warp) and three **independent platform sections: Web, iOS and Android**. Each platform owns its own components and patterns pages. On Web, Warp Elements (web components) is the primary implementation; React, React 19 and Vue are documented as legacy.
 
 ## Common Commands
 
@@ -30,7 +30,8 @@ docs/
 ├── .vitepress/            # config, theme, custom Vue components, sidebar/, redirects.json, platform-manifest.json
 ├── index.md               # Home
 ├── get-started/           # Shared: design/, web/, ios/, android/ onboarding
-├── foundations/           # Shared Foundation (Design Language): about/, tokens, typography, dataviz, …
+├── design-language/       # Shared Design Language: about/, tokens, typography, dark mode, dataviz, …
+├── patterns/index.md      # Shared Patterns landing page (lists each pattern and its platforms)
 ├── about/                 # Shared: help/ (FAQ, support, requests, …), whats-new/ (blog), platform-coverage
 ├── web/
 │   ├── foundations/       # Web-only foundation: css-classes, customization, dark-mode, keyboard, font-weights
@@ -38,6 +39,7 @@ docs/
 │   │                      # code.md = Elements; legacy tabs: code-react.md, code-react-19.md, code-vue.md
 │   └── patterns/{name}/
 ├── ios/
+│   ├── foundations/       # iOS foundation: tokens, typography, theming, … (written from warp-ios source)
 │   ├── components/{name}/ # overview.md, usage.md, code.md, [accessibility.md]
 │   └── patterns/{name}/
 ├── android/               # same shape as ios/
@@ -48,14 +50,18 @@ docs/
 - Sources live where they are served (no `rewrites`). Do not put `foo.md` next to a `foo/` folder (GitHub Pages may redirect `/foo` to `/foo/`); that is why the legacy Web code pages are flat siblings (`code-react.md`).
 - Platforms are independent: a component page on one platform never has to match another. A platform only lists components it actually has.
 - Pages with frontmatter `seeded: true` were copied from the Web docs and still need checking against the platform source. A notice is shown automatically. Remove the flag once reviewed.
-- Old URLs (`/components/…`, `/patterns/…`, `/blog/…`, …) redirect via `docs/.vitepress/redirects.json`: stub pages written in `buildEnd` (`build/redirect-stubs.js`), router hooks (`theme/index.js`) and a 404 fallback (`RedirectNotFound.vue`). When you move or delete a page, add an entry (old URL → new URL, no chains).
+- Patterns are their own section (as in production): on `/patterns/` and `/{platform}/patterns/…` the sidebar shows only that platform's patterns under the switcher (`patternSidebars` in `sidebar/platform.js`), not Foundation/Components. A platform lists only the patterns it documents (Empty states: iOS + Android).
+- The home page (`index.md`, `layout: page`, `<HomeLanding />`) keeps the sidebar visible from the start, Fluent 2 style.
+- Cross-links between the Design Language and platform foundations are opt-in: a platform foundation page adds frontmatter `designLanguage: /design-language/<topic>/`. It then shows a "Shared guidance" link, and the Design Language page lists it under "Platform specifics" (collected by `pnpm generate-manifest`).
+- Component and pattern pages get page tabs (Overview | Usage | Styling | Code | Accessibility) and the platform availability line from `<ComponentsStatus />`. Each tab is a separate page.
+- Old URLs (`/components/…`, `/patterns/…`, `/foundations/…`, `/blog/…`, …) redirect via `docs/.vitepress/redirects.json`: stub pages written in `buildEnd` (`build/redirect-stubs.js`), router hooks (`theme/index.js`) and a 404 fallback (`RedirectNotFound.vue`). When you move or delete a page, add an entry (old URL → new URL, no chains).
 
 ### Platform Manifest System
 
 The platform sidebars, the availability line, the Web code tabs and the overview grids are generated from a manifest:
 
 1. Pages live at `docs/{web,ios,android}/{components,patterns}/{name}/{page}.md`
-2. `pnpm generate-manifest` (`scripts/generate-manifest.js`) scans them and writes `docs/.vitepress/platform-manifest.json`: per platform and item, its `pages`, `seeded` pages and (Web) `frameworks`. A Web `code.md` with frontmatter `elements: false` means there is no Elements implementation.
+2. `pnpm generate-manifest` (`scripts/generate-manifest.js`) scans them and writes `docs/.vitepress/platform-manifest.json`: per platform and item, its `pages`, `seeded` pages and (Web) `frameworks`; per platform, its top-level `foundations` pages; and `designLanguage`, the reverse map of cross-links. A Web `code.md` with frontmatter `elements: false` means there is no Elements implementation.
 3. `sidebar/platform.js` builds each platform tree from the manifest. `sidebar/shared.js` holds the shared sections. `config.js` maps `/web/`, `/ios/`, `/android/` and `/` to the trees.
 4. `SidebarComposer.vue` (in the `sidebar-nav-before/after` slots) adds the shared sections, the `PlatformSwitcher` and the other tree. It imports the internal `VPSidebarGroup` from `vitepress/dist/…`, so re-check it when upgrading VitePress (pinned at 1.6.4).
 5. The pre-commit hook regenerates the manifest when platform component/pattern pages change.
@@ -66,8 +72,8 @@ These Vue components are registered globally for use in markdown files:
 
 | Component | Purpose |
 |-----------|---------|
-| `<ComponentsStatus />` | Platform availability ("Available on: Web · iOS · Android", linking to the same page on each platform); framework badges on Web code pages |
-| `<FrameworkTabs />` | Web Code page tabs: Elements + legacy React / React 19 / Vue (renders nothing on iOS/Android) |
+| `<ComponentsStatus />` | Page tabs (Overview, Usage, Styling, Code, Accessibility) + platform availability ("Available on: Web · iOS · Android", linking to the same page on each platform) |
+| `<FrameworkTabs />` | Second-level "Framework" control on Web Code pages: Elements + legacy React / React 19 / Vue (renders nothing on iOS/Android) |
 | `<DsOverview type platform />` | Filterable grid of a platform's components or patterns |
 | `<PlatformCoverage type />` | Generated platform/framework coverage table |
 | `<Do>`, `<DoDont>` | Do/Don't guidance blocks with images |

@@ -1,5 +1,6 @@
 <template>
   <nav v-if="tabs.length > 1" ref="tabsRef" class="framework-tabs" aria-label="Web framework">
+    <span class="caption">Framework:</span>
     <a
       v-for="tab in tabs"
       :key="tab.file"
@@ -64,46 +65,45 @@ export default {
 </script>
 
 <style scoped>
+/* Second-level navigation under the page tabs (ComponentsStatus): a compact segmented control */
 .framework-tabs {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  border-bottom: 1px solid var(--vp-c-divider);
-  margin-top: 32px;
-  margin-bottom: 24px;
-  padding-bottom: 0;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 24px;
+  font-size: 13px;
+}
+
+.caption {
+  margin-right: 2px;
+  color: var(--vp-c-text-2);
 }
 
 .framework-tab {
   display: inline-flex;
   align-items: center;
-  padding: 12px 16px;
-  font-weight: bold;
-  font-size: 16px;
+  padding: 4px 12px;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 6px;
   color: var(--vp-c-text-2);
+  font-weight: 600;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
-  margin-bottom: -1px;
-  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .framework-tab:hover {
+  border-color: var(--vp-c-brand-1);
   color: var(--vp-c-text-1);
-  text-decoration: none;
 }
 
 .framework-tab.active {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
-  border-bottom-color: var(--vp-c-brand-1);
 }
 
-.framework-tab:focus {
+.framework-tab:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
-  outline-offset: -2px;
-  border-radius: 4px 4px 0 0;
-}
-
-.framework-tab:focus:not(:focus-visible) {
-  outline: none;
+  outline-offset: 2px;
 }
 </style>

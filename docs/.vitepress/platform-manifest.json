@@ -167,12 +167,8 @@
         "frameworks": ["vue"]
       }
     },
-    "patterns": {
-      "empty-states": {
-        "title": "Empty states",
-        "pages": ["overview", "usage", "accessibility"]
-      }
-    }
+    "patterns": {},
+    "foundations": []
   },
   "ios": {
     "components": {
@@ -333,10 +329,35 @@
     "patterns": {
       "empty-states": {
         "title": "Empty states",
-        "pages": ["overview", "usage", "code"],
-        "seeded": ["overview", "usage"]
+        "pages": ["overview", "usage", "code", "accessibility"]
       }
-    }
+    },
+    "foundations": [
+      {
+        "slug": "theming",
+        "title": "Theming"
+      },
+      {
+        "slug": "tokens",
+        "title": "Tokens"
+      },
+      {
+        "slug": "typography",
+        "title": "Typography"
+      },
+      {
+        "slug": "spacing",
+        "title": "Spacing"
+      },
+      {
+        "slug": "shape",
+        "title": "Shape"
+      },
+      {
+        "slug": "elevation",
+        "title": "Elevation"
+      }
+    ]
   },
   "android": {
     "components": {
@@ -481,9 +502,115 @@
     "patterns": {
       "empty-states": {
         "title": "Empty states",
-        "pages": ["overview", "usage", "code"],
-        "seeded": ["overview", "usage"]
+        "pages": ["overview", "usage", "code", "accessibility"]
       }
-    }
+    },
+    "foundations": [
+      {
+        "slug": "theming",
+        "title": "Theming"
+      },
+      {
+        "slug": "tokens",
+        "title": "Tokens"
+      },
+      {
+        "slug": "typography",
+        "title": "Typography"
+      },
+      {
+        "slug": "elevation",
+        "title": "Elevation"
+      }
+    ]
+  },
+  "designLanguage": {
+    "/design-language/accessibility/": [
+      {
+        "platform": "web",
+        "url": "/web/foundations/keyboard/navigation/",
+        "title": "Keyboard navigation"
+      },
+      {
+        "platform": "web",
+        "url": "/web/foundations/keyboard/shortcuts/",
+        "title": "Keyboard shortcuts"
+      }
+    ],
+    "/design-language/brands/": [
+      {
+        "platform": "ios",
+        "url": "/ios/foundations/theming",
+        "title": "Theming"
+      },
+      {
+        "platform": "android",
+        "url": "/android/foundations/theming",
+        "title": "Theming"
+      }
+    ],
+    "/design-language/dark-mode/": [
+      {
+        "platform": "web",
+        "url": "/web/foundations/dark-mode/",
+        "title": "Dark mode in Warp Elements"
+      },
+      {
+        "platform": "web",
+        "url": "/web/foundations/dark-mode/react",
+        "title": "Dark mode in Warp React"
+      }
+    ],
+    "/design-language/elevation/": [
+      {
+        "platform": "ios",
+        "url": "/ios/foundations/elevation",
+        "title": "Elevation"
+      },
+      {
+        "platform": "android",
+        "url": "/android/foundations/elevation",
+        "title": "Elevation"
+      }
+    ],
+    "/design-language/tokens/intro/": [
+      {
+        "platform": "web",
+        "url": "/web/foundations/css-classes/background-color",
+        "title": "Background Color"
+      },
+      {
+        "platform": "web",
+        "url": "/web/foundations/css-classes/text-color",
+        "title": "Text Color"
+      },
+      {
+        "platform": "ios",
+        "url": "/ios/foundations/tokens",
+        "title": "Tokens"
+      },
+      {
+        "platform": "android",
+        "url": "/android/foundations/tokens",
+        "title": "Tokens"
+      }
+    ],
+    "/design-language/typography/": [
+      {
+        "platform": "web",
+        "url": "/web/foundations/font-weights/",
+        "title": "Understanding Font Weights in Web Browsers"
+      },
+      {
+        "platform": "ios",
+        "url": "/ios/foundations/typography",
+        "title": "Typography"
+      },
+      {
+        "platform": "android",
+        "url": "/android/foundations/typography",
+        "title": "Typography"
+      }
+    ]
   }
 }

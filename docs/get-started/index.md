@@ -2,7 +2,7 @@
 const pages = [{
   title: "Mission, values, principles",
   description: "The Warp Design System mission reflecting its values and principles",
-  href: "../foundations/about/",
+  href: "../design-language/about/",
 },
 {
   title: "Web Developers",

@@ -1,9 +1,3 @@
----
-seeded: true
-seededFrom: /web/patterns/empty-states/overview
-seededAt: 2026-11-05
----
-
 # Empty states - Overview
 
 Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
@@ -20,6 +14,7 @@ State, no-data state, empty view, zero-data state, no results, first-use state, 
 ::: image-block
 ![Example of a focused date input field with an open calendar below displaying January 2023 and the current selection is the 11th. The example is surrounded by four numbered highlights, pointing to the label, date input field, the optional calendar icon and the calendar popover](/patterns/emptystates/overview-anatomy.svg)
 :::
+
 
 1. **Visual (optional)**: A non-interactive icon or illustration that relates to the situation.
 

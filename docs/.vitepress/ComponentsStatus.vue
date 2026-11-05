@@ -1,15 +1,39 @@
 <script setup>
-// Platform availability for a component/pattern page: "Available on: Web · iOS · Android".
-// Links go to the same page kind on the other platform (fallback: overview). Platforms without
-// the item are left out. On Web Code pages it also lists the frameworks (React/Vue = legacy).
+// Navigation block under the title of every component/pattern page:
+//  1. page tabs — Overview | Usage | Styling | Code | Accessibility (each tab is its own page, so URLs,
+//     search and prev/next keep working)
+//  2. platform availability — "Available on: Web · iOS · Android", linking to the same page kind
 import { withBase } from 'vitepress';
 import { computed } from 'vue';
 import { equivalentUrl, PLATFORMS, usePlatform } from './composables/platform.js';
 import manifest from './platform-manifest.json';
 
-const FRAMEWORK_LABELS = { elements: 'Elements', react: 'React', 'react-19': 'React 19', vue: 'Vue' };
+const PAGE_LABELS = {
+  overview: 'Overview',
+  usage: 'Usage',
+  styling: 'Styling',
+  code: 'Code',
+  accessibility: 'Accessibility',
+};
 
 const { current } = usePlatform();
+
+const entry = computed(() => {
+  const c = current.value;
+  return c?.type ? manifest[c.platform]?.[c.type]?.[c.name] : null;
+});
+
+// legacy Web code pages (code-react, …) belong to the Code tab
+const currentPage = computed(() => (current.value?.page?.startsWith('code') ? 'code' : current.value?.page));
+
+const tabs = computed(() =>
+  (entry.value?.pages ?? []).map((page) => ({
+    page,
+    label: PAGE_LABELS[page] ?? page,
+    href: withBase(`/${current.value.platform}/${current.value.type}/${current.value.name}/${page}`),
+    current: page === currentPage.value,
+  })),
+);
 
 const platforms = computed(() => {
   const c = current.value;
@@ -20,36 +44,73 @@ const platforms = computed(() => {
     href: withBase(equivalentUrl(c, p.id)),
   }));
 });
-
-const frameworks = computed(() => {
-  const c = current.value;
-  if (c?.platform !== 'web' || !c.page.startsWith('code')) return [];
-  return (manifest.web[c.type]?.[c.name]?.frameworks ?? []).map((fw) => ({
-    name: FRAMEWORK_LABELS[fw] ?? fw,
-    status: fw === 'elements' ? 'released' : 'legacy',
-  }));
-});
 </script>
 
 <template>
-  <div v-if="platforms.length" class="availability">
-    <nav aria-label="Platform availability" class="platforms">
+  <div v-if="entry" class="component-nav">
+    <nav v-if="tabs.length > 1" class="page-tabs" :aria-label="`${entry.title} pages`">
+      <a
+        v-for="tab in tabs"
+        :key="tab.page"
+        :href="tab.href"
+        class="page-tab"
+        :class="{ active: tab.current }"
+        :aria-current="tab.current ? 'page' : undefined"
+        >{{ tab.label }}</a
+      >
+    </nav>
+    <nav v-if="platforms.length" aria-label="Platform availability" class="platforms">
       <span class="caption">Available on:</span>
       <ul>
         <li v-for="p in platforms" :key="p.id">
-          <a :href="p.href" :class="{ current: p.current }" :aria-current="p.current ? 'page' : undefined">{{ p.label }}</a>
+          <a :href="p.href" :class="{ current: p.current }" :aria-current="p.current ? 'page' : undefined">{{
+            p.label
+          }}</a>
         </li>
       </ul>
     </nav>
-    <div v-if="frameworks.length" class="fw-badges" role="list" aria-label="Web frameworks">
-      <WarpBadge v-for="fw in frameworks" :key="fw.name" role="listitem" :framework="fw.name" :status="fw.status" />
-    </div>
   </div>
 </template>
 
 <style scoped>
-.availability {
+.component-nav {
   margin: 1.5rem 0 2rem;
+}
+
+.page-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.page-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 14px;
+  margin-bottom: -1px;
+  border-bottom: 2px solid transparent;
+  color: var(--vp-c-text-2);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-tab:hover {
+  color: var(--vp-c-text-1);
+}
+
+.page-tab.active {
+  color: var(--vp-c-brand-1);
+  border-bottom-color: var(--vp-c-brand-1);
+}
+
+.page-tab:focus-visible,
+.platforms a:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
 .platforms {
@@ -57,7 +118,8 @@ const frameworks = computed(() => {
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  margin-top: 12px;
+  font-size: 13px;
 }
 
 .caption {
@@ -67,7 +129,7 @@ const frameworks = computed(() => {
 .platforms ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -79,7 +141,7 @@ const frameworks = computed(() => {
 
 .platforms a {
   display: inline-block;
-  padding: 2px 10px;
+  padding: 1px 10px;
   border: 1px solid var(--vp-c-border);
   border-radius: 999px;
   color: var(--vp-c-text-1);
@@ -98,15 +160,9 @@ const frameworks = computed(() => {
   font-weight: 700;
 }
 
-.platforms a:focus-visible {
-  outline: 2px solid var(--vp-c-brand-1);
-  outline-offset: 2px;
-}
-
-.fw-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 12px;
+@media (prefers-reduced-motion: reduce) {
+  .page-tab {
+    transition: none;
+  }
 }
 </style>

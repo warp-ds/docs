@@ -1,3 +1,7 @@
+---
+designLanguage: /design-language/accessibility/
+---
+
 # Keyboard navigation
 
 Keyboard navigation is an important part of accessibility. Any action a user can perform with a pointer device (typically mouse or touch) must be possible to achieve with keyboard.
