@@ -18,7 +18,7 @@ const finding = {
   component: 'button',
   failure_key: 'loading-announcement-missing',
   title: 'Button loading status is not announced',
-  docs_path: 'docs/components/button/accessibility.md',
+  docs_path: 'docs/web/components/button/accessibility.md',
   docs_line: 2,
   expected_behavior: 'The documented loading status is announced without moving focus.',
   expectation_source: 'https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html',
@@ -333,7 +333,7 @@ test('rejects unverified source excerpts, commits, references, or docs locations
     { ...finding, source: { ...finding.source, commit_sha: 'c'.repeat(40) } },
     { ...finding, source: { ...finding.source, path: '../secret' } },
     { ...finding, docs_line: 100 },
-    { ...finding, docs_path: 'docs/components/alert/accessibility.md' },
+    { ...finding, docs_path: 'docs/web/components/alert/accessibility.md' },
     { ...finding, expectation_source: 'https://unrelated.example/claim' },
     { ...finding, existing_issue_number: 999 },
   ]) {

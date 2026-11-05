@@ -41,7 +41,7 @@ test('rejects a PNG without a valid signature', () => {
 
 test('requires exactly one Do and one Do not in each DoDont', () => {
   const findings = auditMarkdown(
-    'docs/components/example/usage.md',
+    'docs/web/components/example/usage.md',
     `# Example
 
 Description.
@@ -60,7 +60,7 @@ Description.
 
 test('rejects DoDont examples on accessibility pages', () => {
   const findings = auditMarkdown(
-    'docs/components/example/accessibility.md',
+    'docs/web/components/example/accessibility.md',
     `# Accessibility
 
 Description.
@@ -76,7 +76,7 @@ Description.
 
 test('audits images on non-core component pages without requiring core-page structure', () => {
   const findings = auditMarkdown(
-    'docs/components/example/styling.md',
+    'docs/web/components/example/styling.md',
     `# Styling
 
 ![](/components/missing.svg)`,

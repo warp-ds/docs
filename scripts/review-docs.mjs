@@ -6,9 +6,17 @@ import { dirname, extname, join, normalize } from 'node:path';
 import { inflateSync } from 'node:zlib';
 
 const ROOT = process.cwd();
-const COMPONENT_DOC = /^docs\/components\/([^/]+)\/(.+)$/;
+// group 1 = component directory (per platform), group 2 = page file
+const COMPONENT_DOC = /^(docs\/(?:web|ios|android)\/components\/[^/]+)\/(.+)$/;
 const COMPONENT_ASSET = /^docs\/public\/components\/([^/]+)\/(.+)$/;
 const CORE_PAGES = ['overview.md', 'usage.md', 'accessibility.md'];
+// Pages a new component must ship with, per platform (native a11y pages need source verification first)
+const REQUIRED_PAGES = {
+  web: ['overview.md', 'usage.md', 'accessibility.md'],
+  ios: ['overview.md', 'code.md'],
+  android: ['overview.md', 'code.md'],
+};
+const requiredPages = (componentDir) => REQUIRED_PAGES[componentDir.split('/')[1]] ?? CORE_PAGES;
 const IMAGE_EXTENSIONS = new Set(['.gif', '.jpeg', '.jpg', '.png', '.svg', '.webp']);
 
 function git(args) {
@@ -356,20 +364,20 @@ export function run(base) {
       .map((match) => match[1]),
   );
   const newComponents = new Set(
-    [...componentsWithAddedDocs].filter((component) => !fileAt(base, `docs/components/${component}/overview.md`)),
+    [...componentsWithAddedDocs].filter((componentDir) => !fileAt(base, `${componentDir}/overview.md`)),
   );
-  for (const component of newComponents) {
-    for (const page of CORE_PAGES) {
-      const file = `docs/components/${component}/${page}`;
+  for (const componentDir of newComponents) {
+    for (const page of requiredPages(componentDir)) {
+      const file = `${componentDir}/${page}`;
       if (!existsSync(join(ROOT, file))) add('error', file, 1, `New component requires ${page}.`);
     }
   }
 
   for (const file of componentFiles) {
     const docMatch = file.match(COMPONENT_DOC);
-    if (docMatch && CORE_PAGES.includes(docMatch[2])) {
+    if (docMatch && requiredPages(docMatch[1]).includes(docMatch[2])) {
       if (!existsSync(join(ROOT, file))) {
-        const remainingDocs = git(['ls-tree', '-r', '--name-only', 'HEAD', `docs/components/${docMatch[1]}`]);
+        const remainingDocs = git(['ls-tree', '-r', '--name-only', 'HEAD', docMatch[1]]);
         if (remainingDocs) add('error', file, 1, `Component is missing required ${docMatch[2]}.`);
       }
     }

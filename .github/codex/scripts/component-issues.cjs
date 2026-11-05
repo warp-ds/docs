@@ -69,7 +69,9 @@ function validateComponentFindings(findings) {
       throw new Error('Component issues need a changed documentation location.');
     }
     if (
-      !finding.docs_path.startsWith('docs/components/' + finding.component + '/') &&
+      !['web', 'ios', 'android'].some((platform) =>
+        finding.docs_path.startsWith('docs/' + platform + '/components/' + finding.component + '/'),
+      ) &&
       !finding.docs_path.startsWith('docs/public/components/' + finding.component + '/')
     ) {
       throw new Error('The component must match the affected documentation.');

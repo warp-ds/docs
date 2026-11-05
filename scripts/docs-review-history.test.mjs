@@ -18,7 +18,7 @@ const context = {
 function thread(id, overrides = {}) {
   return {
     id,
-    path: 'docs/components/radio-buttons/accessibility.md',
+    path: 'docs/web/components/radio-buttons/accessibility.md',
     line: 1,
     startLine: 1,
     originalLine: 1,
@@ -72,7 +72,7 @@ function harness({ threads = [], reviews = [], summaries = [], liveHead = headSh
       if (method === listFiles) {
         return [
           {
-            filename: 'docs/components/radio-buttons/accessibility.md',
+            filename: 'docs/web/components/radio-buttons/accessibility.md',
             patch: '@@ -0,0 +1,2 @@\n+first line\n+second line',
           },
         ];
@@ -118,7 +118,7 @@ function review(overrides = {}) {
 }
 
 const finding = {
-  path: 'docs/components/radio-buttons/accessibility.md',
+  path: 'docs/web/components/radio-buttons/accessibility.md',
   start_line: 2,
   line: 2,
   body: 'Could we describe backward entry and exit here? Shift+Tab crosses the group boundary.',

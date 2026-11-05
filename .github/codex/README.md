@@ -1,6 +1,6 @@
 # WARP docs review
 
-The `docs-review.yml` workflow runs two reviews for non-draft pull requests that change component documentation under `docs/components/` or component assets under `docs/public/components/`:
+The `docs-review.yml` workflow runs two reviews for non-draft pull requests that change component documentation under `docs/{web,ios,android}/components/` or component assets under `docs/public/components/`:
 
 1. `scripts/review-docs.mjs` checks deterministic structure, asset, markup, and PNG transparency rules.
 2. OpenAI Codex uses `gpt-5.6-sol` with `xhigh` reasoning effort in a read-only sandbox to review the diff against the WARP Elements, React, Vue, iOS, and Android source repositories.
