@@ -69,11 +69,10 @@ export function platformSidebar(platform) {
  */
 export function patternSidebar(platform) {
   const label = PLATFORMS.find((p) => p.id === platform)?.label ?? platform;
+  // same shape as the platform tree: a top-level "All … patterns" link, then one collapsible group per pattern
   return [
-    {
-      text: `${label} patterns`,
-      items: [{ text: `All ${label} patterns`, link: `/${platform}/patterns/` }, ...itemTree(platform, 'patterns')],
-    },
+    { text: `All ${label} patterns`, link: `/${platform}/patterns/`, items: [] },
+    ...itemTree(platform, 'patterns'),
   ];
 }
 

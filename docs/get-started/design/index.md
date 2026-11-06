@@ -1,12 +1,26 @@
 ---
 title: Get started — Design
+cards:
+  - title: Warp in Figma
+    text: Get access to the Warp Figma libraries and set them up.
+    href: /get-started/design/warp-in-figma/
+    icon: figma
+  - title: Designing for multibrand
+    text: Design once for all Warp brands.
+    href: /get-started/design/designing-for-multibrand/
+    icon: multibrand
+  - title: Building custom components
+    text: When to build your own component with Warp, and how.
+    href: /get-started/design/custom-components/
+    icon: components
+  - title: Migrate from Fabric
+    text: Move existing designs from Fabric to Warp.
+    href: /get-started/design/migrate-from-fabric/
+    icon: migrate
 ---
 
 # Get started: Design
 
 Getting access and setting up Warp as a designer.
 
-- [Warp in Figma](/get-started/design/warp-in-figma/) — get access to the Warp Figma libraries.
-- [Designing for multibrand](/get-started/design/designing-for-multibrand/) — design once for all Warp brands.
-- [Building custom components with Warp](/get-started/design/custom-components/) — when and how to build your own.
-- [Migrate from Fabric](/get-started/design/migrate-from-fabric/) — move existing designs to Warp.
+<NavCards :items="$frontmatter.cards" />

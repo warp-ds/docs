@@ -224,7 +224,27 @@ outline: [2, 3]
 
 ---
 
-### `<card>` and `<cards>`
+### `<NavCards>`
+
+The card grid for overview and landing pages. Put the items in frontmatter and pass them in:
+
+```md
+---
+cards:
+  - title: Tokens
+    text: Colour, spacing and typography tokens.
+    href: /design-language/tokens/intro/
+    icon: tokens
+---
+
+<NavCards :items="$frontmatter.cards" />
+```
+
+* Item fields: `title`, `text`, `href`, and optionally `icon` (a name from `CardIcon.vue`), `logo` (a [simple-icons](https://simpleicons.org) slug, for platform logos), `meta` (a short fact pinned to the bottom) and `disabled: true` (a muted card that is not a link).
+* Props: `columns` (`2` or `3`, default `2`) and `variant="row"` for compact horizontal cards (related links).
+* Prefer cards to bullet lists of links on overview pages, so every landing page looks and works the same.
+
+### `<card>` and `<cards>` (legacy)
 
 ```md
 <cards>
@@ -233,8 +253,7 @@ outline: [2, 3]
 </cards>
 ```
 
-* Use `<cards>` to lay out multiple `<card>` items
-* Props: `imgurl`, `imgalt`
+* Generic layout wrappers kept for older pages. Use `<NavCards>` for navigation cards.
 
 ---
 

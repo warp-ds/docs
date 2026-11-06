@@ -75,6 +75,7 @@ These Vue components are registered globally for use in markdown files:
 |-----------|---------|
 | `<ComponentsStatus />` | Page header under the H1: status badges (this platform's implementations: `Elements released`, `React legacy`, …), page tabs (Overview, Usage, Styling, Code, Accessibility), the Framework control on Web Code pages, and the seeded-page notice |
 | `<FrameworkTabs />` | Marker after the framework H2 on code pages (`## React`): hides that H2 visually (kept for search). The Framework control itself is rendered by `<ComponentsStatus />` |
+| `<NavCards :items variant columns />` | The card grid for overview/landing pages (items in frontmatter: `title`, `text`, `href`, optional `icon` from `CardIcon.vue`, `logo`, `meta`, `disabled`); `variant="row"` for compact related links |
 | `<PlatformOverview platform />` | Card grid on a platform overview page (`/web/`, `/ios/`, `/android/`): Get started, Foundation, Components, Patterns (with live counts; Patterns is a disabled card where none are documented) and the shared sections |
 | `<DsOverview type platform />` | Filterable grid of a platform's components or patterns |
 | `<PlatformCoverage type />` | Generated platform/framework coverage table |
@@ -85,6 +86,10 @@ These Vue components are registered globally for use in markdown files:
 | `<WidthController />` | Responsive example container |
 
 ### Styling
+
+- **Docs UI system** (end of `theme/custom.css`): one spacing scale (`--warp-space-*`: 4, 8, 12, 16, 24, 32, 48, 64), one radius scale (`--warp-radius-s/m/l`: 8 controls, 12 cards, 16 panels) and one card pattern (`.dc-grid`, `.dc-card` with `--media`, `--row` and `--disabled`). Every card on the site (NavCards, PlatformOverview, the components and patterns grids, What's new, the home page) uses it; reuse it rather than styling new cards.
+- Overview and landing pages use `<NavCards>` instead of bullet lists of links.
+- Typography: Inter; titles are semibold (600), never bold; body text is near-black (`--vp-c-text-1: #1d1d22`). Headings: H2 48px above, H3 32px, H4 24px.
 
 - Uses UnoCSS with `@warp-ds/uno` preset for Warp design tokens
 - `@warp-ds/preset-docs` provides documentation-specific utilities (prefixed `pd-`)

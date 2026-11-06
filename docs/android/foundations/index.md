@@ -1,19 +1,42 @@
 ---
 title: Android foundation
+cards:
+  - title: Theming
+    text: Wrap your UI in a brand theme, choose the brand, and control light and dark mode.
+    href: /android/foundations/theming
+    icon: theme
+  - title: Tokens
+    text: Colour, spacing, border, size and shape tokens, and how to read them from WarpTheme.
+    href: /android/foundations/tokens
+    icon: tokens
+  - title: Typography
+    text: The 14 Warp text styles, the font each brand uses, and how to apply them.
+    href: /android/foundations/typography
+    icon: type
+  - title: Elevation
+    text: Shadow tokens, shadow modifiers and elevated surface colours.
+    href: /android/foundations/elevation
+    icon: elevation
+related:
+  - title: Icons
+    text: The Warp icon set in Compose.
+    href: /android/components/icons/code
+    icon: icons
 ---
 
 # Android foundation
 
-How the Warp foundations work in Jetpack Compose. For colour, typography, elevation, tokens and other design-language topics that apply to every platform, see [Foundation (Design Language)](/design-language/).
+How the Warp foundations work in Jetpack Compose. For colour, typography, elevation, tokens and other design-language topics that apply to every platform, see the [Design Language](/design-language/).
 
 To add Warp to your app, start with [Get started on Android](/get-started/android/).
 
-- [Theming](/android/foundations/theming) — wrap your UI in a brand theme, choose the brand, and control light and dark mode.
-- [Tokens](/android/foundations/tokens) — colour, spacing, border, size and shape tokens, and how to read them from `WarpTheme`.
-- [Typography](/android/foundations/typography) — the 14 Warp text styles, the font each brand uses, and how to apply them.
-- [Elevation](/android/foundations/elevation) — shadow tokens, shadow modifiers and elevated surface colours.
+## Topics
 
-Icons are documented on the [Android icons page](/android/components/icons/code).
+<NavCards :items="$frontmatter.cards" />
+
+## Related
+
+<NavCards :items="$frontmatter.related" variant="row" />
 
 ## Source
 

@@ -2,13 +2,8 @@
 // Home page (layout: page, so the sidebar is visible from the start — Fluent 2 style).
 // Platform numbers come from platform-manifest.json, so they stay current.
 import { withBase } from 'vitepress';
-import ColorsCard from '../src/colors-card.svg';
-import ClassesCard from '../src/css-classes-card.svg';
-import FoundationsSVG from '../src/foundations.svg';
-import IconsCard from '../src/icons-card.svg';
-import PatternsSVG from '../src/patterns.svg';
-import TokensCard from '../src/tokens-card.svg';
 import HeroSVG from '../src/warp-hero.svg';
+import CardIcon from './CardIcon.vue';
 import manifest from './platform-manifest.json';
 
 const count = (platform, type) => Object.keys(manifest[platform][type]).length;
@@ -49,13 +44,13 @@ const shared = [
     title: 'Design Language',
     description: 'The shared foundation: colour, typography, elevation, motion, tokens and more.',
     href: withBase('/design-language/'),
-    image: FoundationsSVG,
+    icon: 'language',
   },
   {
     title: 'Patterns',
     description: 'Guidelines and recommendations for solving recurring user tasks.',
     href: withBase('/patterns/'),
-    image: PatternsSVG,
+    icon: 'patterns',
   },
 ];
 
@@ -64,25 +59,25 @@ const quickLinks = [
     title: 'CSS classes',
     description: 'Utility-first CSS classes for the web',
     href: withBase('/web/foundations/css-classes/unocss'),
-    image: ClassesCard,
+    icon: 'code',
   },
   {
     title: 'Icons',
     description: 'Browse the UI icon library',
     href: withBase('/web/components/icons/overview'),
-    image: IconsCard,
+    icon: 'icons',
   },
   {
     title: 'Colors',
     description: 'Background, text and border palettes',
     href: withBase('/web/foundations/css-classes/background-color#quick-reference'),
-    image: ColorsCard,
+    icon: 'droplet',
   },
   {
     title: 'Tokens',
     description: 'Design tokens for colour, typography and spacing',
     href: withBase('/design-language/tokens/intro/'),
-    image: TokensCard,
+    icon: 'tokens',
   },
 ];
 
@@ -93,19 +88,19 @@ const collaborate = [
     text: 'Contribute guidance',
     description: 'Improve a page or write a new one with the authoring guide.',
     href: withBase('/about/help/authoring-guide/'),
-    icon: withBase('/collaborate-icon.svg'),
+    icon: 'edit',
   },
   {
     text: 'Request a component',
     description: 'Tell us what is missing and what your team needs it for.',
     href: withBase('/about/help/requests/new-component/'),
-    icon: null, // drawn inline: a plus in the same red circle
+    icon: 'request',
   },
   {
     text: 'Get help',
     description: 'Find answers in the FAQ, or reach the Warp team.',
     href: withBase('/about/help/faq/'),
-    icon: withBase('/get-in-touch-icon.svg'),
+    icon: 'help',
   },
 ];
 </script>
@@ -138,7 +133,7 @@ const collaborate = [
       <ul class="platforms">
         <li v-for="p in platforms" :key="p.id">
           <a :href="p.href" class="platform">
-            <span class="platform-icon" aria-hidden="true">
+            <span class="tile-icon platform-icon" aria-hidden="true">
               <svg :data-src="`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${p.icon}.svg`" fill="currentColor" />
             </span>
             <h3 class="platform-name">{{ p.label }}</h3>
@@ -155,11 +150,12 @@ const collaborate = [
       <ul class="shared">
         <li v-for="s in shared" :key="s.title">
           <a :href="s.href" class="shared-card">
-            <component :is="s.image" class="shared-art" aria-hidden="true" />
+            <span class="tile-icon"><CardIcon :name="s.icon" /></span>
             <span>
               <span class="shared-title">{{ s.title }}</span>
               <span class="shared-description">{{ s.description }}</span>
             </span>
+            <span class="vpi-arrow-right card-arrow" aria-hidden="true" />
           </a>
         </li>
       </ul>
@@ -170,9 +166,10 @@ const collaborate = [
       <ul class="quick">
         <li v-for="q in quickLinks" :key="q.title">
           <a :href="q.href" class="quick-card">
-            <component :is="q.image" class="quick-art" aria-hidden="true" />
+            <span class="tile-icon quick-icon"><CardIcon :name="q.icon" /></span>
             <span class="quick-title">{{ q.title }}</span>
             <span class="quick-description">{{ q.description }}</span>
+            <span class="vpi-arrow-right card-arrow" aria-hidden="true" />
           </a>
         </li>
       </ul>
@@ -195,11 +192,7 @@ const collaborate = [
       <ul class="collaborate-cards">
         <li v-for="c in collaborate" :key="c.text">
           <a :href="c.href" class="collaborate-card">
-            <img v-if="c.icon" :src="c.icon" alt="" width="40" height="40" class="collaborate-icon" />
-            <svg v-else class="collaborate-icon" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
-              <circle cx="24" cy="24" r="24" fill="#BE3830" />
-              <path d="M24 16v16M16 24h16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
-            </svg>
+            <span class="tile-icon"><CardIcon :name="c.icon" /></span>
             <span class="collaborate-card-text">
               <span class="collaborate-card-title">{{ c.text }}</span>
               <span class="collaborate-card-description">{{ c.description }}</span>
@@ -248,14 +241,14 @@ a:focus-visible {
   grid-template-columns: 1fr;
   gap: 24px 40px;
   padding: 48px 32px;
-  border-radius: 16px;
+  border-radius: var(--warp-radius-l);
   background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-bg-soft) 60%);
 }
 
 .eyebrow {
   margin: 0 0 8px;
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--vp-c-text-2);
@@ -264,7 +257,7 @@ a:focus-visible {
 .title {
   margin: 0;
   font-size: clamp(56px, 9vw, 112px);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1;
   letter-spacing: -0.04em;
   color: var(--vp-c-text-1);
@@ -301,20 +294,15 @@ a:focus-visible {
   height: 100%;
   padding: 24px 56px 24px 24px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
+  border-radius: var(--warp-radius-m);
   background: var(--vp-c-bg);
   box-shadow: var(--vp-shadow-2);
-  transition: border-color 0.15s ease, transform 0.15s ease;
-}
-
-.entry:hover {
-  border-color: var(--vp-c-brand-1);
-  transform: translateY(-2px);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .entry-title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--vp-c-text-1);
 }
 
@@ -331,19 +319,63 @@ a:focus-visible {
   position: absolute;
   right: 24px;
   top: 50%;
-  color: var(--vp-c-brand-1);
+  color: var(--vp-c-text-3);
   transform: translateY(-50%);
+}
+
+/* Every card on the home page has the same hover as the site's card pattern (.dc-card in custom.css):
+   brand border, shadow, 2px lift, and the arrow turns brand and nudges right */
+.entry:hover,
+.platform:hover,
+.shared-card:hover,
+.quick-card:hover,
+.collaborate-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vp-shadow-3);
+  transform: translateY(-2px);
+}
+
+.card-arrow {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  color: var(--vp-c-text-3);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.shared-card .card-arrow {
+  top: 50%;
+  right: 24px;
+  margin-top: -8px;
+}
+
+.quick-card .card-arrow {
+  /* centred on the icon tile, like the platform cards */
+  top: 40px;
+  right: 24px;
+}
+
+.entry:hover .arrow,
+.shared-card:hover .card-arrow,
+.quick-card:hover .card-arrow,
+.collaborate-card:hover .collaborate-arrow {
+  color: var(--vp-c-brand-1);
+}
+
+.shared-card:hover .card-arrow,
+.quick-card:hover .card-arrow {
+  transform: translateX(3px);
 }
 
 /* Sections */
 .section {
-  margin-top: 72px;
+  margin-top: var(--warp-space-16);
 }
 
 .section-title {
   margin: 0;
   font-size: clamp(32px, 4vw, 48px);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
 }
@@ -367,40 +399,43 @@ a:focus-visible {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 24px 24px 20px;
+  padding: var(--warp-card-padding);
   border: 1px solid var(--vp-c-divider);
-  border-radius: 16px;
+  border-radius: var(--warp-radius-m);
   background: var(--vp-c-bg);
   transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
-.platform:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: var(--vp-shadow-3);
-  transform: translateY(-2px);
-}
-
-.platform-icon {
+/* Icon tile: the same on every home card (platforms, shared, quick links, collaborate) */
+.tile-icon {
   display: inline-flex;
+  flex: none;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  background: var(--vp-c-bg-soft);
-  color: var(--vp-c-text-1);
+  border-radius: var(--warp-radius-m);
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.platform-icon svg {
+.tile-icon svg {
   width: 24px;
   height: 24px;
 }
 
-.platform:hover .platform-icon {
-  background: var(--vp-c-brand-soft);
-  color: var(--vp-c-brand-1);
+.platform:hover .tile-icon,
+.shared-card:hover .tile-icon,
+.quick-card:hover .tile-icon,
+.collaborate-card:hover .tile-icon {
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-bg);
+}
+
+.platform-icon,
+.quick-icon {
+  margin-bottom: 20px;
 }
 
 .platform-name {
@@ -408,7 +443,7 @@ a:focus-visible {
   padding: 0;
   border: 0;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
@@ -429,17 +464,17 @@ a:focus-visible {
 
 .platform-arrow {
   position: absolute;
-  top: 36px;
+  top: 40px;
   right: 24px;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   color: var(--vp-c-text-3);
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .platform:hover .platform-arrow {
   color: var(--vp-c-brand-1);
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 
 /* Shared */
@@ -451,32 +486,22 @@ a:focus-visible {
 }
 
 .shared-card {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   height: 100%;
-  padding: 24px;
+  padding: 24px 56px 24px 24px;
   border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   background: var(--vp-c-bg);
-  transition: border-color 0.15s ease;
-}
-
-.shared-card:hover {
-  border-color: var(--vp-c-brand-1);
-}
-
-/* native 86px size: vite-svg-loader's SVGO strips viewBox, so these SVGs crop instead of scaling */
-.shared-art {
-  flex: none;
-  width: 86px;
-  height: 86px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .shared-title {
   display: block;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--vp-c-text-1);
 }
 
@@ -495,28 +520,19 @@ a:focus-visible {
 }
 
 .quick-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 16px;
+  padding: var(--warp-card-padding);
   border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
+  border-radius: var(--warp-radius-m);
   background: var(--vp-c-bg);
-  transition: border-color 0.15s ease;
-}
-
-.quick-card:hover {
-  border-color: var(--vp-c-brand-1);
-}
-
-.quick-art {
-  width: 100%;
-  height: 96px;
-  margin-bottom: 12px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .quick-title {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--vp-c-text-1);
 }
 
@@ -532,9 +548,9 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  margin-top: 72px;
+  margin-top: var(--warp-space-16);
   padding: 40px 24px;
-  border-radius: 24px;
+  border-radius: var(--warp-radius-l);
   background:
     radial-gradient(120% 140% at 0% 0%, var(--vp-c-brand-soft), transparent 60%),
     radial-gradient(80% 120% at 100% 100%, var(--vp-c-brand-soft), transparent 70%),
@@ -560,7 +576,7 @@ a:focus-visible {
 .collaborate-title {
   margin: 0;
   font-size: clamp(32px, 4vw, 44px);
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.1;
   letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
@@ -607,29 +623,12 @@ a:focus-visible {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px 20px 16px 16px;
+  padding: var(--warp-space-4) var(--warp-space-6) var(--warp-space-4) var(--warp-space-4);
   border: 1px solid transparent;
-  border-radius: 16px;
+  border-radius: var(--warp-radius-m);
   background: var(--vp-c-bg);
   box-shadow: var(--vp-shadow-1);
   transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
-}
-
-.collaborate-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: var(--vp-shadow-2);
-  transform: translateX(4px);
-}
-
-.collaborate-icon {
-  flex: none;
-  width: 40px;
-  height: 40px;
-  transition: transform 0.2s ease;
-}
-
-.collaborate-card:hover .collaborate-icon {
-  transform: rotate(-8deg) scale(1.08);
 }
 
 .collaborate-card-text {
@@ -638,7 +637,7 @@ a:focus-visible {
 
 .collaborate-card-title {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--vp-c-text-1);
 }
 
@@ -697,29 +696,32 @@ a:focus-visible {
 
   .collaborate {
     grid-template-columns: 1fr 1fr;
-    gap: 56px;
-    padding: 56px;
+    gap: var(--warp-space-12);
+    padding: var(--warp-space-12);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .entry,
   .platform,
-  .platform-icon,
+  .tile-icon,
   .platform-arrow,
   .shared-card,
   .quick-card,
   .slack,
   .collaborate-card,
-  .collaborate-icon {
+  .card-arrow {
     transition: none;
   }
 
   .entry:hover,
   .platform:hover,
   .platform:hover .platform-arrow,
+  .shared-card:hover,
+  .quick-card:hover,
   .collaborate-card:hover,
-  .collaborate-card:hover .collaborate-icon {
+  .shared-card:hover .card-arrow,
+  .quick-card:hover .card-arrow {
     transform: none;
   }
 }

@@ -1,70 +1,66 @@
-<script setup>
-const pages = [{
-  title: "Tokens",
-  description: "Introduction to Warp tokens, our structure, supported brands and a token overview.",
-  href: "tokens/intro",
-},
-{
-  title: "Illustrations",
-  description: "Figma links to our different brands' illustration libraries.",
-  href: "illustrations/",
-},
-{
-  title: "Typography",
-  description: "Guidelines on UX Writing, font styles and links to our brand fonts.",
-  href: "typography/",
-},
-{
-  title: "Accessibility",
-  description: "Requirements, accessibility playbook and useful Figma plugins.",
-  href: "accessibility/",
-},
-{
-  title: "Brands",
-  description: "Supported brands and brand guidelines.",
-  href: "brands/",
-},
-{
-  title: "Data visualization",
-  description: "Getting started, chart types, color usage and success criteria.",
-  href: "data-visualization/introduction/",
-},
-{
-  title: "Elevation",
-  description: "Elevation as a concept, the basics and surface type overview.",
-  href: "elevation/",
-},
-{
-  title: "Dark mode",
-  description: "Support in WARP and guidance for switching modes in Figma.",
-  href: "dark-mode",
-},
-{
-  title: "Motion",
-  description: "Guidelines for motion.",
-  href: "motion/",
-}]
-</script>
+---
+title: Design Language
+cards:
+  - title: Tokens
+    text: Warp tokens, their structure, supported brands and a token overview.
+    href: /design-language/tokens/intro/
+    icon: tokens
+  - title: Typography
+    text: UX writing guidelines, font styles and the brand fonts.
+    href: /design-language/typography/
+    icon: type
+  - title: Accessibility
+    text: Requirements, the accessibility playbook and useful Figma plugins.
+    href: /design-language/accessibility/
+    icon: accessibility
+  - title: Brands
+    text: Supported brands and brand guidelines.
+    href: /design-language/brands/
+    icon: brands
+  - title: Illustrations
+    text: Figma links to each brand's illustration library.
+    href: /design-language/illustrations/
+    icon: image
+  - title: Data visualization
+    text: Getting started, chart types, colour usage and success criteria.
+    href: /design-language/data-visualization/introduction/
+    icon: chart
+  - title: Elevation
+    text: Elevation as a concept, the basics and the surface types.
+    href: /design-language/elevation/
+    icon: elevation
+  - title: Dark mode
+    text: Dark mode support in Warp and switching modes in Figma.
+    href: /design-language/dark-mode/
+    icon: moon
+  - title: Motion
+    text: Guidelines for motion.
+    href: /design-language/motion/
+    icon: motion
+  - title: About the design system
+    text: Mission, values and principles.
+    href: /design-language/about/
+    icon: mission
+platforms:
+  - title: Web foundation
+    href: /web/foundations/
+    logo: webcomponentsdotorg
+  - title: iOS foundation
+    href: /ios/foundations/
+    logo: apple
+  - title: Android foundation
+    href: /android/foundations/
+    logo: android
+---
 
 # Design Language
+
 The shared foundation of Warp: the principles, colour, typography, elevation, motion and other visual decisions that every platform builds on. Pages here are platform-agnostic; where a platform implements a topic in its own way, the page links to the platform-specific details.
 
-Platform foundations: [Web](/web/foundations/) · [iOS](/ios/foundations/) · [Android](/android/foundations/)
+<NavCards :items="$frontmatter.cards" />
 
-<cards class="grid grid-cols-1 sm:grid-cols-2 gap-12">
-  <card
-    v-for="page in pages"
-    :key="page.title"
-    class="flex flex-col border border-gray-200 p-4 rounded-md shadow-sm"
-  >
-    <h3 class="h4 text-m! static! mt-16! mx-16!">
-      <a
-        :href="page.href"
-        class="block before:content-empty before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 focus:outline-0"
-      >
-        {{ page.title }}
-      </a>
-    </h3>
-    <p class="m-16! text-s">{{ page.description }}</p>
-  </card>
-</cards>
+## Platform foundations
+
+How each platform implements the Design Language.
+
+<NavCards :items="$frontmatter.platforms" :columns="3" variant="row" />

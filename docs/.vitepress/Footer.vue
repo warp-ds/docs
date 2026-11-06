@@ -69,7 +69,7 @@ import WarpLogo from '../src/warp-logo.svg';
 
 .footer-column-title {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--vp-c-brand-1);
   text-transform: uppercase;
   margin-bottom: 10px;

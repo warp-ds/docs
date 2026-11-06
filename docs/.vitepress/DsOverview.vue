@@ -42,8 +42,15 @@ const allItems = computed(() =>
   Object.entries(manifestSection.value).map(([slug, entry]) => ({
     slug,
     title: entry.title,
-    description: `${entry.title} ${props.type === 'components' ? 'component' : 'pattern'}.`,
     frameworks: frameworksOf(entry),
+    // short facts instead of a generic description: implementations on Web, lifecycle on native
+    meta: [
+      entry.status === 'deprecated' ? 'Deprecated' : null,
+      props.platform === 'web' ? frameworksOf(entry).join(' · ') : null,
+      props.platform !== 'web' && entry.pages.length === 1 && entry.pages[0] === 'code' ? 'Code only' : null,
+    ]
+      .filter(Boolean)
+      .join(' · '),
     svgComponent: placeholderBySlug.value[slug],
     href: withBase(
       `/${props.platform}/${props.type}/${slug}/${entry.pages.includes('overview') ? 'overview' : entry.pages[0]}`,
@@ -88,8 +95,8 @@ function showAll() {
 
 <template>
   <div class="overview">
-    <div class="filters py-16 rounded-8 mb-16">
-      <div class="pt-8 mb-16">
+    <div class="filters">
+      <div class="search">
         <DsSearchInput v-model="q" placeholder="Filter by title or description…" aria-label="Filter components" />
       </div>
 
@@ -115,36 +122,20 @@ function showAll() {
       </div>
     </div>
 
-    <cards class="grid grid-cols-1 sm:grid-cols-3 gap-12">
-      <card
-        v-for="c in filtered"
-        :key="c.slug"
-        class="flex flex-col border border-gray-200 rounded-md shadow-sm"
-        style="background-color: var(--vp-c-muted-bg)"
-      >
-        <h3 class="h4 text-m! static! mt-16! mx-16!">
-          <a :href="c.href" class="block before:content-empty before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 focus:outline-0">
-            {{ c.title }}
-          </a>
-        </h3>
-
-        <div
-          class="order-first"
-          style="aspect-ratio: 4/3; display:flex; justify-content:center; align-items:center; background-color: var(--vp-c-bg-soft);"
-        >
-          <component
-            v-if="c.svgComponent"
-            :is="c.svgComponent"
-            :aria-label="c.placeholder.label"
-            role="img"
-            class="max-w-[80%] max-h-[80%]"
-          />
-          <div v-else class="placeholder-fallback">{{ c.placeholder.label }}</div>
-        </div>
-
-        <p class="m-16! text-s">{{ c.description }}</p>
-      </card>
-    </cards>
+    <ul class="dc-grid dc-grid--3">
+      <li v-for="c in filtered" :key="c.slug">
+        <a :href="c.href" class="dc-card dc-card--media">
+          <span class="dc-card__media">
+            <component v-if="c.svgComponent" :is="c.svgComponent" aria-hidden="true" />
+            <span v-else class="placeholder-fallback">{{ c.placeholder.label }}</span>
+          </span>
+          <span class="dc-card__body">
+            <span class="dc-card__title">{{ c.title }}</span>
+            <span v-if="c.meta" class="dc-card__meta">{{ c.meta }}</span>
+          </span>
+        </a>
+      </li>
+    </ul>
 
     <div v-if="filtered.length === 0" class="empty">
       <em>No {{ type === 'components' ? 'components' : 'patterns' }} match your filter.</em>
@@ -154,17 +145,28 @@ function showAll() {
 
 <style scoped>
 /* Filter buttons (square-ish, accessible) */
+/* filters: search, then framework chips (same 8px radius as the header switch) */
+.filters {
+  margin: var(--warp-space-6) 0 0;
+}
+
+.search {
+  margin-bottom: var(--warp-space-3);
+}
+
 .filter-btn {
   display: inline-flex;
   align-items: center;
-  gap: .5rem;
-  min-height: 36px;
-  padding: 8px 12px;
-  border-radius: 8px;
+  gap: var(--warp-space-2);
+  min-height: 32px;
+  padding: 0 var(--warp-space-3);
+  border-radius: var(--warp-radius-s);
+  font-size: 14px;
+  font-weight: 500;
   border: 1px solid var(--vp-c-border);
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
-  font: inherit;
+  font-family: inherit;
   cursor: pointer;
   user-select: none;
   transition: background .15s ease, border-color .15s ease, color .15s ease, box-shadow .15s ease;
@@ -188,7 +190,10 @@ function showAll() {
 
 .placeholder-fallback { font-size: 12px; opacity: .7; color: var(--vp-c-text-2); }
 .empty {
-  margin-top: 1rem; padding: 1rem; border: 1px dashed var(--vp-c-border);
-  border-radius: 8px; background: var(--vp-c-bg-soft);
+  margin-top: var(--warp-space-4);
+  padding: var(--warp-space-4);
+  border: 1px dashed var(--vp-c-border);
+  border-radius: var(--warp-radius-m);
+  background: var(--vp-c-bg-soft);
 }
 </style>

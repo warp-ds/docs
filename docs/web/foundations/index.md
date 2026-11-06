@@ -1,13 +1,36 @@
 ---
 title: Web foundation
+cards:
+  - title: CSS classes
+    text: Utility classes generated with UnoCSS.
+    href: /web/foundations/css-classes/unocss
+    icon: code
+  - title: Customization
+    text: How far Warp components can be customised, and how.
+    href: /web/foundations/customization/
+    icon: sliders
+  - title: Dark mode
+    text: Dark mode in Warp Elements.
+    href: /web/foundations/dark-mode/
+    icon: moon
+  - title: Keyboard navigation
+    text: Focus order and moving around with the keyboard.
+    href: /web/foundations/keyboard/navigation/
+    icon: keyboard
+  - title: Keyboard shortcuts
+    text: Shortcuts and how to add them without conflicts.
+    href: /web/foundations/keyboard/shortcuts/
+    icon: keyboard
+  - title: Font weights
+    text: How font weights render in web browsers.
+    href: /web/foundations/font-weights/
+    icon: font
 ---
 
 # Web foundation
 
 Web-specific foundations. For colour, typography, elevation, tokens and other design-language topics that apply to every platform, see [Design Language](/design-language/).
 
-- [CSS classes](/web/foundations/css-classes/unocss) — utility classes generated with UnoCSS.
-- [Customization](/web/foundations/customization/) — how far Warp components can be customised, and how.
-- [Dark mode in Warp Elements](/web/foundations/dark-mode/) and [in Warp React (legacy)](/web/foundations/dark-mode/react).
-- [Keyboard navigation](/web/foundations/keyboard/navigation/) and [keyboard shortcuts](/web/foundations/keyboard/shortcuts/).
-- [Font weights in web browsers](/web/foundations/font-weights/).
+<NavCards :items="$frontmatter.cards" />
+
+Still on Warp React (legacy)? See [dark mode in Warp React](/web/foundations/dark-mode/react).

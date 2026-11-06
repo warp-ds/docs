@@ -30,85 +30,19 @@ const patterns = computed(() => {
 </script>
 
 <template>
-  <ul class="patterns-index">
-    <li v-for="p in patterns" :key="p.slug" class="pattern">
-      <div class="art" aria-hidden="true">
-        <component :is="p.svg" v-if="p.svg" class="svg" />
-      </div>
-      <h3 class="title">
-        <a :href="p.platforms[0].href">{{ p.title }}</a>
-      </h3>
-      <p class="platforms">
-        <span class="caption">Available on: </span>
-        <template v-for="(pl, i) in p.platforms" :key="pl.id">
-          <a :href="pl.href">{{ pl.label }}</a><span v-if="i < p.platforms.length - 1" aria-hidden="true"> · </span>
-        </template>
-      </p>
+  <!-- same media card as the components grid; the card opens the first platform, the header switch on
+       that page moves between platforms -->
+  <ul class="dc-grid dc-grid--3">
+    <li v-for="p in patterns" :key="p.slug">
+      <a :href="p.platforms[0].href" class="dc-card dc-card--media">
+        <span class="dc-card__media" aria-hidden="true">
+          <component :is="p.svg" v-if="p.svg" />
+        </span>
+        <span class="dc-card__body">
+          <span class="dc-card__title">{{ p.title }}</span>
+          <span class="dc-card__meta">{{ p.platforms.map((pl) => pl.label).join(' · ') }}</span>
+        </span>
+      </a>
     </li>
   </ul>
 </template>
-
-<style scoped>
-.patterns-index {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 16px;
-  margin: 24px 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.pattern {
-  margin: 0;
-  overflow: hidden;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  background: var(--vp-c-bg);
-}
-
-.art {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  aspect-ratio: 4 / 3;
-  background: var(--vp-c-bg-soft);
-}
-
-.svg {
-  max-width: 70%;
-  max-height: 70%;
-}
-
-.title {
-  margin: 16px 16px 4px !important;
-  padding: 0 !important;
-  border: 0 !important;
-  font-size: 16px !important;
-}
-
-.title a {
-  color: var(--vp-c-text-1);
-  text-decoration: none;
-}
-
-.title a:hover {
-  color: var(--vp-c-brand-1);
-}
-
-.platforms {
-  margin: 0 16px 16px !important;
-  font-size: 13px;
-  color: var(--vp-c-text-2);
-}
-
-.platforms a {
-  color: var(--vp-c-brand-1);
-  font-weight: 500;
-}
-
-.title a:focus-visible,
-.platforms a:focus-visible {
-  outline: 2px solid var(--vp-c-brand-1);
-  outline-offset: 2px;
-}
-</style>

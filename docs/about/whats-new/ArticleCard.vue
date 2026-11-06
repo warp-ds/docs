@@ -1,76 +1,52 @@
-<template>
-  <a :href="href" class="card">
-    <h3 class="title">{{ title }}</h3>
-    <p v-if="excerpt" class="excerpt" v-html="excerpt"></p>
-    <p class="date">{{ new Date(date).toDateString() }}</p>
-  </a>
-</template>
-<script>
-export default {
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-    excerpt: {
-      type: String,
-      required: true,
-    },
-    date: {
-      type: String,
-      required: true,
-    },
-    href: {
-      type: String,
-      required: true,
-    },
-  },
-};
+<script setup>
+// One post on the What's new index, in the site's card pattern (theme/custom.css `.dc-card`).
+import { computed } from 'vue';
+
+const props = defineProps({
+  title: { type: String, required: true },
+  excerpt: { type: String, default: '' },
+  date: { type: String, required: true },
+  href: { type: String, required: true },
+});
+
+// The whole card is a link, so links inside the excerpt become plain text (a link inside a link is
+// invalid HTML: the browser splits it and hydration fails)
+const excerptHtml = computed(() => props.excerpt.replace(/<\/?a\b[^>]*>/g, ''));
+
+// UTC, so the server render and the browser agree on the day (no hydration mismatch)
+const formatted = computed(() =>
+  new Date(props.date).toLocaleDateString('en-GB', {
+    timeZone: 'UTC',
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  }),
+);
 </script>
 
+<template>
+  <a :href="href" class="dc-card">
+    <span class="dc-card__meta article-date"><time :datetime="date">{{ formatted }}</time></span>
+    <span class="dc-card__title article-title">{{ title }}</span>
+    <!-- excerpt is rendered markdown (block content), so a div, not a span -->
+    <div v-if="excerpt" class="dc-card__text article-excerpt" v-html="excerptHtml" />
+    <span class="vpi-arrow-right dc-card__arrow" aria-hidden="true" />
+  </a>
+</template>
+
 <style scoped>
-.card {
-    border: 1px solid var(--vp-c-border);
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    color: var(--vp-c-text-1);
-    display: block;
-    padding: 1.5rem;
-    position: relative;
-    text-decoration: none;
-    transition: box-shadow .1s ease;
-    width: 100%;
-}
-a {
-  color: inherit;
-  text-decoration: inherit;
+/* date above the title in a list of posts */
+.article-date {
+  margin: 0 0 var(--warp-space-1);
+  padding: 0;
 }
 
-.card:hover {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
-  transition: ease-in-out 0.2s all;
+.article-title {
+  font-size: 18px;
 }
 
-.flex {
-  display: flex;
-}
-
-.p-12 {
-  padding: 1.2rem;
-}
-
-.media {
-  width: 45%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-.details {
-  margin-left: 1.2rem;
-}
-
-.title {
-  margin-top: 0.5rem;
+.article-excerpt :deep(p) {
+  margin: 0;
+  line-height: 1.55;
 }
 </style>

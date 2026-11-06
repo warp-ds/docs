@@ -23,7 +23,9 @@
   --vp-c-brand-3: #cf4840;
   --vp-c-brand-soft: rgba(255, 72, 64, 0.14);
   --vp-custom-block-tip-bg: rgba(var(--w-s-rgb-background-info), 0.1);
-  --vp-c-text-1: #3c3c43;
+  /* near-black body text (was #3c3c43, which read grey); text-2 follows so the hierarchy holds */
+  --vp-c-text-1: #1d1d22;
+  --vp-c-text-2: #55555d;
   --vp-c-text-1-inverted: #fffbd5;
   --vp-c-border: #c0c0d1;
   --vp-c-bg: #ffffff;
@@ -66,7 +68,7 @@ html.dark {
   --vp-c-brand-soft: var(--vp-c-indigo-soft);
   --vp-home-hero-name-color: #f6d553;
   --vp-c-text-1: #fffbd5;
-  --vp-c-text-1-inverted: #3c3c43;
+  --vp-c-text-1-inverted: #1d1d22;
   --vp-sidebar-bg-color: #182237;
   --vp-c-bg: #131b2d;
   --vp-c-bg-inverted: #ffffff;
@@ -133,12 +135,22 @@ html {
   border-color: var(--w-s-color-border);
 }
 
+/* Site font: Inter (self-hosted variable font bundled with the VitePress default theme). Brand fonts
+   (Finntype, …) stay loaded for the brand-themed component examples only. */
+:root,
 body {
   --vp-font-family-base:
-    Finntype, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: auto;
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* native form controls don't inherit the font (e.g. the brand theme <select> above examples) */
+select,
+option,
+input,
+textarea,
+button {
+  font-family: inherit;
 }
 
 html.dark body {
@@ -193,17 +205,36 @@ html.dark body {
   }
 }
 
-/* weight was 500, finnfont doesnt ship 'medium', but might be fun to actually ship the right fonts here? */
+/* Inter ships every weight: nav links medium, titles semibold (never bold) */
 .VPNavBarMenuLink {
-  font-weight: 700 !important;
+  font-weight: 500 !important;
 }
+.VPSidebarItem.level-0 > .item .text {
+  font-weight: 600;
+}
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5,
+.vp-doc h6 {
+  font-weight: 600;
+}
+/* Vertical rhythm (spacing scale in the Docs UI system below): sections 48, sub-sections 32, 24 */
 .vp-doc h2 {
   border-top-width: 0px;
-  margin: 24px 0 16px;
+  padding-top: 0;
+  margin: 48px 0 16px;
 }
-/* wasn't enough breathing room here, add some more */
+.vp-doc h3 {
+  margin: 32px 0 12px;
+}
 .vp-doc h4 {
-  margin: 24px 0 0 0;
+  margin: 24px 0 8px;
+}
+/* prev / next and other footer cards use the card radius */
+.VPDocFooter .pager-link {
+  border-radius: var(--warp-radius-m);
 }
 /* line-height was comically large */
 .vp-doc p {
@@ -413,7 +444,7 @@ html.dark body {
   padding: 4px 8px;
   margin: 0px 8px;
   border-radius: 4px;
-  font-weight: bold;
+  font-weight: 600;
 }
 .component {
   padding: 16px;
@@ -491,4 +522,243 @@ td:has(.td-reset) {
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------------------------------------
+   Docs UI system: one spacing scale, one radius scale, one card pattern for the whole site.
+   Used by NavCards, PlatformOverview, DsOverview, PatternsIndex, What's new and the home page.
+     spacing  4 · 8 · 12 · 16 · 24 · 32 · 48 · 64
+     radius   8 (controls) · 12 (cards) · 16 (panels)
+   --------------------------------------------------------------------------------------------------- */
+:root {
+  --warp-space-1: 4px;
+  --warp-space-2: 8px;
+  --warp-space-3: 12px;
+  --warp-space-4: 16px;
+  --warp-space-6: 24px;
+  --warp-space-8: 32px;
+  --warp-space-12: 48px;
+  --warp-space-16: 64px;
+  --warp-radius-s: 8px;
+  --warp-radius-m: 12px;
+  --warp-radius-l: 16px;
+  --warp-card-padding: var(--warp-space-6);
+  --warp-card-gap: var(--warp-space-4);
+}
+
+/* Grid of cards */
+.dc-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--warp-card-gap);
+  margin: var(--warp-space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.vp-doc .dc-grid {
+  margin: var(--warp-space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dc-grid > li,
+.vp-doc .dc-grid > li {
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .dc-grid--2,
+  .dc-grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .dc-grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Card: the whole card is the link; title, text, optional meta pinned to the bottom, arrow top right */
+.dc-card,
+.vp-doc .dc-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--warp-card-padding);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--warp-radius-m);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-weight: 400;
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+a.dc-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vp-shadow-3);
+  transform: translateY(-2px);
+}
+
+a.dc-card:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+.dc-card__icon {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: var(--warp-space-4);
+  border-radius: 10px;
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.dc-card__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+a.dc-card:hover .dc-card__icon {
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-bg);
+}
+
+.dc-card__title {
+  display: block;
+  padding-right: var(--warp-space-8);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--vp-c-text-1);
+}
+
+.dc-card__text {
+  display: block;
+  margin-top: var(--warp-space-1);
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--vp-c-text-2);
+}
+
+.dc-card__meta {
+  display: block;
+  margin-top: auto;
+  padding-top: var(--warp-space-4);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+}
+
+/* .dc-card prefix: beats VitePress' generic [class*=' vpi-'] icon rule */
+.dc-card .dc-card__arrow {
+  position: absolute;
+  top: var(--warp-card-padding);
+  right: var(--warp-card-padding);
+  width: 16px;
+  height: 16px;
+  color: var(--vp-c-text-3);
+  transition:
+    color 0.15s ease,
+    transform 0.15s ease;
+}
+
+a.dc-card:hover .dc-card__arrow {
+  color: var(--vp-c-brand-1);
+  transform: translateX(3px);
+}
+
+/* card with a picture on top (components, patterns): the picture bleeds to the card edges */
+.dc-card.dc-card--media {
+  padding: 0;
+}
+
+.dc-card__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16 / 10;
+  border-bottom: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg-soft);
+}
+
+.dc-card__media > * {
+  max-width: 72%;
+  max-height: 72%;
+}
+
+.dc-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: var(--warp-space-4) var(--warp-space-4) var(--warp-space-4);
+}
+
+.dc-card--media .dc-card__title {
+  padding-right: 0;
+}
+
+/* compact horizontal card (related links, shared sections) */
+.dc-card.dc-card--row {
+  flex-direction: row;
+  align-items: center;
+  gap: var(--warp-space-4);
+  padding: var(--warp-space-4) var(--warp-space-12) var(--warp-space-4) var(--warp-space-4);
+}
+
+.dc-card--row .dc-card__icon {
+  margin-bottom: 0;
+}
+
+.dc-card.dc-card--row .dc-card__arrow {
+  top: 50%;
+  right: var(--warp-space-6);
+  margin-top: -8px;
+}
+
+.dc-card--row .dc-card__title {
+  padding-right: 0;
+}
+
+/* not available yet: not a link, muted, dashed */
+.dc-card.dc-card--disabled {
+  border-style: dashed;
+  background: var(--vp-c-bg-alt);
+}
+
+.dc-card--disabled .dc-card__icon {
+  background: var(--vp-c-default-soft);
+  color: var(--vp-c-text-3);
+}
+
+.dc-card--disabled .dc-card__title,
+.dc-card--disabled .dc-card__text {
+  color: var(--vp-c-text-3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dc-card,
+  .dc-card__icon,
+  .dc-card .dc-card__arrow {
+    transition: none;
+  }
+
+  a.dc-card:hover,
+  a.dc-card:hover .dc-card__arrow {
+    transform: none;
+  }
 }

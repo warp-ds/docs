@@ -25,6 +25,7 @@ import DsSearchInput from '../DsSearchInput.vue';
 import FrameworkTabs from '../FrameworkTabs.vue';
 import HomeLanding from '../HomeLanding.vue';
 import InProgressStatus from '../InProgressStatus.vue';
+import NavCards from '../NavCards.vue';
 import NavCta from '../NavCta.vue';
 import PageContext from '../PageContext.vue';
 import PatternsIndex from '../PatternsIndex.vue';
@@ -91,6 +92,7 @@ export default {
     app.component('DsOverview', DsOverview);
     app.component('PlatformCoverage', PlatformCoverage);
     app.component('PlatformOverview', PlatformOverview);
+    app.component('NavCards', NavCards);
     app.component('PatternsIndex', PatternsIndex);
     app.component('HomeLanding', HomeLanding);
     app.component('WidthController', WidthController);

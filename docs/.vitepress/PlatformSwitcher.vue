@@ -168,7 +168,7 @@ function onFocusOut(event) {
   display: block;
   padding: 0 0 6px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--vp-c-text-2);

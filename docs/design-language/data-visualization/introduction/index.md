@@ -1,59 +1,36 @@
-<script setup>
-const pages = [{
-  title: "Figma Library",
-  description: "How to connect and use the Figma library. Mostly for designers.",
-  href: "../figma-library/",
-},
-{
-  title: "Components for dataviz",
-  description: "Overview of Figma components. Mostly for designers.",
-  href: "../components/",
-},
-{
-  title: "Color Guidelines",
-  description: "Guidelines for using the dataviz colors. Mostly for designers.",
-  href: "../color/introduction/",
-},
-{
-  title: "Tokens & CSS",
-  description: "Guidelines for implementing colors in code using tokens and CSS. Mostly for developers.",
-  href: "../tokens/introduction/",
-},
-{
-  title: "Interaction",
-  description: "Guidelines for interacting with dataviz. For designers and developers.",
-  href: "../interaction/",
-},
-{
-  title: "Success Criteria",
-  description: "Success criteria for creating accessible and useful data visualizations. For designers and developers.",
-  href: "../success-criteria/introduction/",
-}]
-</script>
+---
+cards:
+  - title: Figma library
+    text: How to connect and use the Figma library. Mostly for designers.
+    href: /design-language/data-visualization/figma-library/
+    icon: figma
+  - title: Components for dataviz
+    text: Overview of the Figma components. Mostly for designers.
+    href: /design-language/data-visualization/components/
+    icon: components
+  - title: Colour guidelines
+    text: Guidelines for using the dataviz colours. Mostly for designers.
+    href: /design-language/data-visualization/color/introduction/
+    icon: language
+  - title: Tokens and CSS
+    text: Implementing colours in code with tokens and CSS. Mostly for developers.
+    href: /design-language/data-visualization/tokens/introduction/
+    icon: tokens
+  - title: Interaction
+    text: Guidelines for interacting with dataviz. For designers and developers.
+    href: /design-language/data-visualization/interaction/
+    icon: motion
+  - title: Success criteria
+    text: Criteria for accessible and useful data visualizations. For designers and developers.
+    href: /design-language/data-visualization/success-criteria/introduction/
+    icon: accessibility
+---
 
 # Introduction to Data Visualization 
 
 ![A bar chart, donut chart and bubble graph](/foundations/dataviz/graphs-light-and-dark.png)
 
-<br>
-<cards class="grid grid-cols-1 sm:grid-cols-2 gap-12">
-  <card
-    v-for="page in pages"
-    :key="page.title"
-    class="flex flex-col border border-gray-200 p-4 rounded-md shadow-sm"
-  >
-    <h3 class="h4 text-m! static! mt-16! mx-16!">
-      <a
-        :href="page.href"
-        class="block before:content-empty before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 focus:outline-0"
-      >
-        {{ page.title }}
-      </a>
-    </h3>
-    <p class="m-16! text-s">{{ page.description }}</p>
-  </card>
-</cards>
-<br>
+<NavCards :items="$frontmatter.cards" />
 
 
 On this page you will find a general introduction to working with data visualization – commonly referred to as ✨ **dataviz** ✨.
