@@ -188,21 +188,6 @@ html.dark body {
     order: -1;
     flex-grow: 0;
   }
-  .VPNavBar .theme-switcher-container {
-    flex-grow: 1;
-    display: flex;
-    margin-left: 16px;
-  }
-}
-@media (max-width: 767px) {
-  .VPNavBar .theme-switcher-container {
-    display: none;
-  }
-}
-@media (min-width: 768px) and (max-width: 1023px) {
-  .VPNavBar .theme-switcher label {
-    display: none;
-  }
 }
 
 /* Inter ships every weight: nav links medium, titles semibold (never bold) */

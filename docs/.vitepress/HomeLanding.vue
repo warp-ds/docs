@@ -372,17 +372,25 @@ a:focus-visible {
   margin-top: var(--warp-space-16);
 }
 
+/* same as a doc page H1 (VitePress .vp-doc h1): 28px, 32px from 768px */
 .section-title {
   margin: 0;
-  font-size: clamp(32px, 4vw, 48px);
+  font-size: 28px;
   font-weight: 600;
+  line-height: 40px;
   letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
 }
 
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+}
+
 .section-lede {
   max-width: 640px;
-  margin: 12px 0 0;
+  margin: var(--warp-space-2) 0 0;
   color: var(--vp-c-text-2);
 }
 
@@ -442,7 +450,7 @@ a:focus-visible {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -575,11 +583,17 @@ a:focus-visible {
 
 .collaborate-title {
   margin: 0;
-  font-size: clamp(32px, 4vw, 44px);
+  font-size: 28px;
   font-weight: 600;
-  line-height: 1.1;
+  line-height: 40px;
   letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
+}
+
+@media (min-width: 768px) {
+  .collaborate-title {
+    font-size: 32px;
+  }
 }
 
 .collaborate-text {

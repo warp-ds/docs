@@ -5,7 +5,8 @@
 //  0. status badges — this platform's implementations and their status ("Elements | released",
 //     "React | legacy", …; frontmatter `status:` overrides "released", e.g. deprecated)
 //  1. page tabs — Overview | Usage | Styling | Code | Accessibility (each tab is its own page, so URLs,
-//     search and prev/next keep working)
+//     search and prev/next keep working), and the Theme control at the right end of the same row, on every
+//     tab (one site-wide choice for the live examples, so new examples on any tab just work)
 //  2. Web Code pages only: a second-level Framework control — Elements + legacy React / React 19 / Vue
 //  3. the "pending review" notice for seeded pages, below the header (so the header never shifts)
 // The platform switch (Web | iOS | Android) is in PageContext.vue.
@@ -15,6 +16,7 @@ import Badge from './Badge.vue';
 import { usePlatform } from './composables/platform.js';
 import manifest from './platform-manifest.json';
 import SeededNotice from './SeededNotice.vue';
+import ThemeSwitcher from './ThemeSwitcher.vue';
 
 const PAGE_LABELS = {
   overview: 'Overview',
@@ -83,17 +85,20 @@ const frameworks = computed(() => {
     <ul v-if="badges.length" class="status" aria-label="Implementation status">
       <li v-for="b in badges" :key="b.label"><Badge :framework="b.label" :status="b.status" /></li>
     </ul>
-    <nav v-if="tabs.length > 1" class="page-tabs" :aria-label="`${entry.title} pages`">
-      <a
-        v-for="tab in tabs"
-        :key="tab.page"
-        :href="tab.href"
-        class="page-tab"
-        :class="{ active: tab.current }"
-        :aria-current="tab.current ? 'page' : undefined"
-        >{{ tab.label }}</a
-      >
-    </nav>
+    <div class="tab-row">
+      <nav v-if="tabs.length > 1" class="page-tabs" :aria-label="`${entry.title} pages`">
+        <a
+          v-for="tab in tabs"
+          :key="tab.page"
+          :href="tab.href"
+          class="page-tab"
+          :class="{ active: tab.current }"
+          :aria-current="tab.current ? 'page' : undefined"
+          >{{ tab.label }}</a
+        >
+      </nav>
+      <ThemeSwitcher in-header class="tab-row-theme" />
+    </div>
     <nav v-if="frameworks.length" class="frameworks" aria-label="Web framework">
       <span class="caption" aria-hidden="true">Framework</span>
       <ul>
@@ -127,11 +132,51 @@ const frameworks = computed(() => {
   line-height: 1;
 }
 
+/* tabs left, Theme right, one divider under both */
+.tab-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: var(--warp-space-4);
+  min-height: 45px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
 .page-tabs {
   display: flex;
   flex-wrap: wrap;
+  align-self: stretch;
   gap: 4px;
-  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.tab-row-theme {
+  margin-left: auto;
+  padding: 6px 0;
+}
+
+/* phones: tabs in one scrollable row with the divider under them, Theme on its own line below */
+@media (max-width: 639px) {
+  .tab-row {
+    border-bottom: 0;
+  }
+
+  .page-tabs {
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    border-bottom: 1px solid var(--vp-c-divider);
+    scrollbar-width: none;
+  }
+
+  .page-tab {
+    flex: none;
+  }
+
+  .tab-row-theme {
+    margin: var(--warp-space-3) 0 0;
+    padding: 0;
+  }
 }
 
 .page-tab {

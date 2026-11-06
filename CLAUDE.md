@@ -82,7 +82,7 @@ These Vue components are registered globally for use in markdown files:
 | `<Do>`, `<DoDont>` | Do/Don't guidance blocks with images |
 | `<TabsContent>` | Generic tab container with slots |
 | `<Cards>`, `<Card>` | Card grid layouts |
-| `<ThemeSwitcher />` | Brand theme toggle for examples |
+| `<ThemeSwitcher />` | Brand theme for the live examples (one choice for the whole site, remembered). On component/pattern pages the "Theme" dropdown is always in the page header, right of the tabs, on every tab, so the tag is not needed there (it renders nothing). On other pages it renders inline |
 | `<WidthController />` | Responsive example container |
 
 ### Styling

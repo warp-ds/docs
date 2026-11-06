@@ -18,7 +18,7 @@ export default {
     };
 
     const state = reactive({
-      currentTheme: (typeof window !== 'undefined' && localStorage.getItem('warpTheme')) || themes.Finn,
+      currentTheme: (typeof window !== 'undefined' && localStorage.getItem('warpTheme')) || themes['Finn light'], // default: Finn light
     });
 
     const rewriteStylesheets = (theme) => {
