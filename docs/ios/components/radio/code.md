@@ -1,7 +1,10 @@
-# Radio - iOS
-Radios allow users to select a single option from a list.
+# Radio
 
 <ComponentsStatus />
+
+Radios allow users to select a single option from a list.
+
+See also [Checkbox](/ios/components/checkbox/overview.md), [Select](/ios/components/select/overview.md), [Switch](/ios/components/switch/overview.md), and [Radio buttons](/web/components/radio-buttons/overview.md).
 
 ## iOS
 

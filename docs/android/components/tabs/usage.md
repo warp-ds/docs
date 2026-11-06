@@ -4,11 +4,11 @@ seededFrom: /web/components/tabs/usage
 seededAt: 2026-11-05
 ---
 
-# Tabs - Usage
-
-Tabs organise related content into sections that sit at the same level, and let people switch between them without leaving the page.
+# Tabs
 
 <ComponentsStatus />
+
+Tabs organise related content into sections that sit at the same level, and let people switch between them without leaving the page.
 
 ## Guidelines
 

@@ -1,4 +1,4 @@
-# Steps - Usage
+# Steps
 
 <ComponentsStatus />
 

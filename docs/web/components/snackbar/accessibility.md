@@ -1,8 +1,10 @@
-# Snackbar - Accessibility
+# Snackbar
+
+<ComponentsStatus />
 
 A Snackbar shows brief user feedback messages that overlay content, with an optional action such as Undo.
 
-<ComponentsStatus />
+See also [Alert](/web/components/alert/overview.md).
 
 ## General
 

@@ -101,6 +101,7 @@ const iconName = computed(() => ICON_FILENAME_MAP[props.framework.toLowerCase()]
 .ds-badge--beta       { --ds-badge-status-bg: var(--ds-fw-chip-beta-bg,       #a06a00); --ds-badge-status-fg: var(--ds-fw-chip-beta-fg,       #fff); }
 .ds-badge--developing { --ds-badge-status-bg: var(--ds-fw-chip-developing-bg, #a46000); --ds-badge-status-fg: var(--ds-fw-chip-developing-fg, #fff); }
 .ds-badge--planned    { --ds-badge-status-bg: var(--ds-fw-chip-planned-bg,    #0b5fad); --ds-badge-status-fg: var(--ds-fw-chip-planned-fg,    #fff); }
+.ds-badge--legacy     { --ds-badge-status-bg: var(--ds-fw-chip-legacy-bg,     #6b6b6b); --ds-badge-status-fg: var(--ds-fw-chip-legacy-fg,     #fff); }
 .ds-badge--deprecated { --ds-badge-status-bg: var(--ds-fw-chip-deprecated-bg, #be3830); --ds-badge-status-fg: var(--ds-fw-chip-deprecated-fg, #fff); }
 .ds-badge--unsupported{ --ds-badge-status-bg: var(--ds-fw-chip-unsupported-bg,#c4c4c4); --ds-badge-status-fg: var(--ds-fw-chip-unsupported-fg,#111); }
 

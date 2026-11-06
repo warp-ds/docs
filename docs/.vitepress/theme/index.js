@@ -26,10 +26,10 @@ import FrameworkTabs from '../FrameworkTabs.vue';
 import HomeLanding from '../HomeLanding.vue';
 import InProgressStatus from '../InProgressStatus.vue';
 import NavCta from '../NavCta.vue';
-import NavDocsLabel from '../NavDocsLabel.vue';
+import PageContext from '../PageContext.vue';
 import PatternsIndex from '../PatternsIndex.vue';
 import PlatformCoverage from '../PlatformCoverage.vue';
-import PlatformLinks from '../PlatformLinks.vue';
+import PlatformOverview from '../PlatformOverview.vue';
 import RedirectNotFound from '../RedirectNotFound.vue';
 import { resolveRedirect } from '../redirect-rules.js';
 import SeededNotice from '../SeededNotice.vue';
@@ -51,12 +51,11 @@ export default {
   Layout() {
     return h(DefaultTheme.Layout, null, {
       'layout-bottom': () => h(Footer),
-      'nav-bar-title-after': () => h(NavDocsLabel),
       'nav-bar-content-after': () => h(NavCta),
       'nav-screen-content-after': () => h(NavCta, { screen: true }),
       'sidebar-nav-before': () => h(SidebarComposer, { position: 'before' }),
       'sidebar-nav-after': () => h(SidebarComposer, { position: 'after' }),
-      'doc-before': () => [h(PlatformLinks), h(SeededNotice)],
+      'doc-before': () => [h(PageContext), h(SeededNotice)],
       'not-found': () => h(RedirectNotFound),
     });
   },
@@ -91,6 +90,7 @@ export default {
     app.component('WarpBadge', Badge);
     app.component('DsOverview', DsOverview);
     app.component('PlatformCoverage', PlatformCoverage);
+    app.component('PlatformOverview', PlatformOverview);
     app.component('PatternsIndex', PatternsIndex);
     app.component('HomeLanding', HomeLanding);
     app.component('WidthController', WidthController);

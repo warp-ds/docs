@@ -1,7 +1,8 @@
-# Date picker - Styling
-A date picker allows the user to select a specific calendar date.
+# Date picker
 
 <ComponentsStatus />
+
+A date picker allows the user to select a specific calendar date.
 
 ## Layout and sizing
 Text field and picker popover padding and size measurements.

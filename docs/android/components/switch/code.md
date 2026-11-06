@@ -1,7 +1,9 @@
-# Switch - Android
-The Switch component allows users to toggle between two states.
+# Switch
 
 <ComponentsStatus />
+
+The Switch component allows users to toggle between two states.
+
 <FrameworkTabs />
 
 ### Syntax

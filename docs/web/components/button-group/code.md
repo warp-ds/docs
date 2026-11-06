@@ -2,7 +2,7 @@
 elements: false
 ---
 
-# Button group - Code
+# Button group
 
 <ComponentsStatus />
 

@@ -1,8 +1,9 @@
-# Page indicator - Elements
+# Page indicator
+
+<ComponentsStatus />
 
 A page indicator shows the total amount of pages (or images) and the current page using dots.
 
-<ComponentsStatus />
 <FrameworkTabs />
 <ThemeSwitcher />
 

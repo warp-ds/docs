@@ -265,6 +265,11 @@ html.dark body {
   margin-top: 0.5rem;
   padding-top: 0.5rem;
 }
+/* Top-level links without children (Patterns, platform Overview) get the same rhythm as the collapsed
+   groups (VitePress gives non-collapsible level-0 items 24px) */
+.VPSidebar .VPSidebarItem.level-0.is-link:not(.collapsible) {
+  padding-bottom: 10px;
+}
 /* ---------------------------------------------------------------
    Image plate
 
@@ -448,4 +453,42 @@ td:has(.td-reset) {
 .logo-grid__logo:nth-of-type(even) {
   background-color: rgb(27, 27, 31);
   color: rgb(255, 255, 255);
+}
+
+/* ---------------------------------------------------------------------------------------------------
+   Full-width shell (Fluent 2 style): the sidebar is pinned to the left edge and the outline to the right
+   edge at any viewport width; the reading column stays a fixed, readable width, centered in between.
+   The column width does not depend on the page (outline or not), so switching pages never shifts it.
+   --------------------------------------------------------------------------------------------------- */
+:root {
+  --vp-layout-max-width: 100vw;
+  --warp-doc-width: 768px;
+}
+
+.VPContent .VPDoc .content .content-container {
+  max-width: var(--warp-doc-width);
+}
+
+@media (min-width: 1280px) {
+  .VPContent .VPDoc .content {
+    min-width: 0;
+  }
+
+  .VPContent .VPDoc.has-aside .aside {
+    flex: 0 0 256px;
+  }
+}
+
+/* Framework H2 before <FrameworkTabs /> ("## React"): kept for search and the outline, hidden visually
+   because the Framework control in the page header already names it. */
+.vp-doc h2:has(+ .framework-tabs-marker) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
 }

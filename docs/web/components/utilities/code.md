@@ -2,7 +2,7 @@
 elements: false
 ---
 
-# Utilities - Code
+# Utilities
 
 <ComponentsStatus />
 

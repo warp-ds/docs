@@ -2,7 +2,7 @@
 elements: false
 ---
 
-# Radio buttons - Code
+# Radio buttons
 
 <ComponentsStatus />
 

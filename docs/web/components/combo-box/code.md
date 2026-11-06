@@ -1,7 +1,9 @@
-# Combo box - Elements
-A combo box combines a dropdown list with an editable text input, allowing users to either select an option or type their own.
+# Combo box
 
 <ComponentsStatus />
+
+A combo box combines a dropdown list with an editable text input, allowing users to either select an option or type their own.
+
 <FrameworkTabs />
 <ThemeSwitcher />
 

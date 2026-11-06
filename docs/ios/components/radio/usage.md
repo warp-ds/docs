@@ -4,13 +4,13 @@ seededFrom: /web/components/radio/usage
 seededAt: 2026-11-05
 ---
 
-# Radio - Usage
+# Radio
+
+<ComponentsStatus />
 
 Radio buttons let users select one option from a set of mutually exclusive choices.
 
 See also [Checkbox](/ios/components/checkbox/overview.md), [Select](/ios/components/select/overview.md), [Switch](/ios/components/switch/overview.md), and [Radio buttons](/web/components/radio-buttons/overview.md).
-
-<ComponentsStatus />
 
 ## Guidelines
 

@@ -1,7 +1,8 @@
-# Logo - Accessibility
-Vend's logos are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+# Logo
 
 <ComponentsStatus />
+
+Vend's logos are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 ## Alt text
 To ensure accessibility for users who rely on assistive technologies, all logos include translated alt texts.

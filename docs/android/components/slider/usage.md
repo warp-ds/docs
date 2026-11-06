@@ -4,11 +4,11 @@ seededFrom: /web/components/slider/usage
 seededAt: 2026-11-05
 ---
 
-# Slider - Usage
-
-Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
+# Slider
 
 <ComponentsStatus />
+
+Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
 ## Guidelines
 

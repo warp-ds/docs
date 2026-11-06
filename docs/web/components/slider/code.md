@@ -1,10 +1,9 @@
-# Slider - Elements
+# Slider
+
+<ComponentsStatus />
 
 Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
-
-
-<ComponentsStatus />
 <FrameworkTabs />
 <ThemeSwitcher />
 

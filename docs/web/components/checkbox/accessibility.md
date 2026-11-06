@@ -1,8 +1,8 @@
-# Checkbox - Accessibility
-
-Checkboxes allow users to select one or more options from a number of choices.
+# Checkbox
 
 <ComponentsStatus />
+
+Checkboxes allow users to select one or more options from a number of choices.
 
 ## General 
 

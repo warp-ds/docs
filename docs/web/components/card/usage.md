@@ -1,4 +1,4 @@
-# Card - Usage
+# Card
 
 <ComponentsStatus />
 

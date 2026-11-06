@@ -4,11 +4,11 @@ seededFrom: /web/components/badge/overview
 seededAt: 2026-11-05
 ---
 
-# Badge - Overview
-
-Badges are used to highlight a relevant piece of information, like status or category.
+# Badge
 
 <ComponentsStatus />
+
+Badges are used to highlight a relevant piece of information, like status or category.
 
 Badges are small, contextual elements used to display concise, informative labels. They highlight relevant information such as statuses, categories, counts, roles, or activity indicators, helping users quickly identify and differentiate items at a glance.
 

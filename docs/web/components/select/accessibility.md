@@ -1,7 +1,8 @@
-# Select - Accessibility
-A select is a form input component that lets users choose one option from a predefined list.
+# Select
 
 <ComponentsStatus />
+
+A select is a form input component that lets users choose one option from a predefined list.
 
 ## General
 If a visible label isn't specified, an **aria-label** should be provided to the Select for accessibility. If the field is labeled by a separate element, an **aria-labelledby** prop should be provided using the id of the labeling element instead.

@@ -1,7 +1,8 @@
-# Link - Android
-Link component to use when creating links that look like buttons.
+# Link
 
 <ComponentsStatus />
+
+Link component to use when creating links that look like buttons.
 
 ## Android
 

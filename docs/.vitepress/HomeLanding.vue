@@ -12,7 +12,6 @@ import HeroSVG from '../src/warp-hero.svg';
 import manifest from './platform-manifest.json';
 
 const count = (platform, type) => Object.keys(manifest[platform][type]).length;
-const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
 const entries = [
   {
@@ -27,23 +26,21 @@ const entries = [
   },
 ];
 
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+
+// one card per platform; the whole card links to the platform overview (the sidebar takes it from there)
 const platforms = [
-  { id: 'web', label: 'Web', tech: 'Warp Elements (web components)' },
-  { id: 'ios', label: 'iOS', tech: 'SwiftUI' },
-  { id: 'android', label: 'Android', tech: 'Jetpack Compose' },
+  { id: 'web', label: 'Web', tech: 'Warp Elements (web components)', icon: 'webcomponentsdotorg' },
+  { id: 'ios', label: 'iOS', tech: 'SwiftUI', icon: 'apple' },
+  { id: 'android', label: 'Android', tech: 'Jetpack Compose', icon: 'android' },
 ].map((p) => {
   const patterns = count(p.id, 'patterns');
   return {
     ...p,
-    summary: [plural(count(p.id, 'components'), 'component'), patterns ? plural(patterns, 'pattern') : null]
+    href: withBase(`/${p.id}/`),
+    meta: [plural(count(p.id, 'components'), 'component'), patterns ? plural(patterns, 'pattern') : null]
       .filter(Boolean)
       .join(' · '),
-    href: withBase(`/${p.id}/`),
-    links: [
-      { text: 'Get started', href: withBase(`/get-started/${p.id}/`) },
-      { text: 'Foundation', href: withBase(`/${p.id}/foundations/`) },
-      { text: 'Components', href: withBase(`/${p.id}/components/`) },
-    ],
   };
 });
 
@@ -89,10 +86,27 @@ const quickLinks = [
   },
 ];
 
+const SLACK = 'https://sch-chat.slack.com/archives/C04P0GYTHPV';
+
 const collaborate = [
-  { text: 'How to contribute', href: withBase('/about/help/authoring-guide/') },
-  { text: 'Request a new component', href: withBase('/about/help/requests/new-component/') },
-  { text: 'Get help', href: withBase('/about/help/faq/') },
+  {
+    text: 'Contribute guidance',
+    description: 'Improve a page or write a new one with the authoring guide.',
+    href: withBase('/about/help/authoring-guide/'),
+    icon: withBase('/collaborate-icon.svg'),
+  },
+  {
+    text: 'Request a component',
+    description: 'Tell us what is missing and what your team needs it for.',
+    href: withBase('/about/help/requests/new-component/'),
+    icon: null, // drawn inline: a plus in the same red circle
+  },
+  {
+    text: 'Get help',
+    description: 'Find answers in the FAQ, or reach the Warp team.',
+    href: withBase('/about/help/faq/'),
+    icon: withBase('/get-in-touch-icon.svg'),
+  },
 ];
 </script>
 
@@ -122,15 +136,16 @@ const collaborate = [
       <h2 id="home-platforms" class="section-title">Platforms</h2>
       <p class="section-lede">Each platform has its own foundation, components and patterns, documented on its own schedule.</p>
       <ul class="platforms">
-        <li v-for="p in platforms" :key="p.id" class="platform">
-          <a :href="p.href" class="platform-name">{{ p.label }}</a>
-          <p class="platform-tech">{{ p.tech }}</p>
-          <p class="platform-summary">{{ p.summary }}</p>
-          <ul class="platform-links" :aria-label="`${p.label} sections`">
-            <li v-for="l in p.links" :key="l.text">
-              <a :href="l.href">{{ l.text }}</a>
-            </li>
-          </ul>
+        <li v-for="p in platforms" :key="p.id">
+          <a :href="p.href" class="platform">
+            <span class="platform-icon" aria-hidden="true">
+              <svg :data-src="`https://cdn.jsdelivr.net/npm/simple-icons@13/icons/${p.icon}.svg`" fill="currentColor" />
+            </span>
+            <h3 class="platform-name">{{ p.label }}</h3>
+            <span class="platform-tech">{{ p.tech }}</span>
+            <span class="platform-meta">{{ p.meta }}</span>
+            <span class="vpi-arrow-right platform-arrow" aria-hidden="true" />
+          </a>
         </li>
       </ul>
     </section>
@@ -164,28 +179,51 @@ const collaborate = [
     </section>
 
     <section class="collaborate" aria-labelledby="home-collaborate">
-      <div>
+      <div class="collaborate-intro">
+        <p class="eyebrow">Built together</p>
         <h2 id="home-collaborate" class="collaborate-title">Help evolve Warp</h2>
-        <p>
-          Contribute guidance, request a component, or ask a question in
-          <a href="https://sch-chat.slack.com/archives/C04P0GYTHPV" target="_blank" rel="noopener">#warp-design-system</a>
-          on Slack.
+        <p class="collaborate-text">
+          Warp grows with the teams that use it. Every guideline, component request and question makes it better
+          for everyone.
         </p>
+        <a :href="SLACK" target="_blank" rel="noopener" class="slack">
+          <img :src="withBase('/slack-icon.svg')" alt="" width="20" height="20" />
+          <span>Ask in <strong>#warp-design-system</strong></span>
+          <span class="visually-hidden">(Slack, opens in a new tab)</span>
+        </a>
       </div>
-      <ul class="collaborate-links">
+      <ul class="collaborate-cards">
         <li v-for="c in collaborate" :key="c.text">
-          <a :href="c.href">{{ c.text }} <span class="vpi-arrow-right arrow" aria-hidden="true" /></a>
+          <a :href="c.href" class="collaborate-card">
+            <img v-if="c.icon" :src="c.icon" alt="" width="40" height="40" class="collaborate-icon" />
+            <svg v-else class="collaborate-icon" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+              <circle cx="24" cy="24" r="24" fill="#BE3830" />
+              <path d="M24 16v16M16 24h16" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+            </svg>
+            <span class="collaborate-card-text">
+              <span class="collaborate-card-title">{{ c.text }}</span>
+              <span class="collaborate-card-description">{{ c.description }}</span>
+            </span>
+            <span class="vpi-arrow-right collaborate-arrow" aria-hidden="true" />
+          </a>
         </li>
       </ul>
+      <div class="collaborate-stars" aria-hidden="true" />
     </section>
   </div>
 </template>
 
 <style scoped>
 .home {
-  max-width: 1120px;
+  max-width: 1376px;
   margin: 0 auto;
   padding: 32px 24px 96px;
+}
+
+@media (min-width: 960px) {
+  .home {
+    padding: 48px 48px 128px;
+  }
 }
 
 ul {
@@ -316,7 +354,7 @@ a:focus-visible {
   color: var(--vp-c-text-2);
 }
 
-/* Platforms */
+/* Platforms: one card per platform, the whole card is the link */
 .platforms {
   display: grid;
   grid-template-columns: 1fr;
@@ -325,57 +363,83 @@ a:focus-visible {
 }
 
 .platform {
-  padding: 28px 24px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px 24px 20px;
   border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: var(--vp-c-bg);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.platform:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vp-shadow-3);
+  transform: translateY(-2px);
+}
+
+.platform-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
   border-radius: 12px;
   background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.platform-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.platform:hover .platform-icon {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
 }
 
 .platform-name {
-  display: inline-block;
-  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 28px;
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
 }
 
-.platform-name:hover {
-  color: var(--vp-c-brand-1);
-}
-
 .platform-tech {
-  margin: 8px 0 0;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-}
-
-.platform-summary {
-  margin: 4px 0 16px;
-  font-size: 14px;
+  margin-top: 4px;
   color: var(--vp-c-text-2);
 }
 
-.platform-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.platform-links a {
-  display: inline-block;
-  padding: 4px 12px;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 999px;
+.platform-meta {
+  margin-top: auto;
+  padding-top: 24px;
   font-size: 14px;
-  font-weight: 500;
-  color: var(--vp-c-text-1);
-  background: var(--vp-c-bg);
+  font-weight: 600;
+  color: var(--vp-c-text-3);
 }
 
-.platform-links a:hover {
-  border-color: var(--vp-c-brand-1);
+.platform-arrow {
+  position: absolute;
+  top: 36px;
+  right: 24px;
+  width: 20px;
+  height: 20px;
+  color: var(--vp-c-text-3);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.platform:hover .platform-arrow {
   color: var(--vp-c-brand-1);
+  transform: translateX(4px);
 }
 
 /* Shared */
@@ -462,54 +526,138 @@ a:focus-visible {
   color: var(--vp-c-text-2);
 }
 
-/* Collaborate */
+/* Collaborate: warm brand panel, Slack as the primary action, three action cards */
 .collaborate {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 32px;
   margin-top: 72px;
-  padding: 32px;
-  border-radius: 16px;
-  background: var(--vp-c-bg-soft);
+  padding: 40px 24px;
+  border-radius: 24px;
+  background:
+    radial-gradient(120% 140% at 0% 0%, var(--vp-c-brand-soft), transparent 60%),
+    radial-gradient(80% 120% at 100% 100%, var(--vp-c-brand-soft), transparent 70%),
+    var(--vp-c-bg-soft);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* faint star field from the Warp brand assets */
+.collaborate-stars {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: url('/stars-background.svg') repeat-x top center / 1440px auto;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.collaborate-intro {
+  align-self: center;
 }
 
 .collaborate-title {
-  margin: 0 0 8px;
-  font-size: 28px;
+  margin: 0;
+  font-size: clamp(32px, 4vw, 44px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--vp-c-text-1);
+}
+
+.collaborate-text {
+  max-width: 440px;
+  margin: 16px 0 0;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
+
+.slack {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 28px;
+  padding: 12px 20px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  box-shadow: var(--vp-shadow-1);
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.slack:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vp-shadow-2);
+}
+
+.slack:focus-visible {
+  border-radius: 999px;
+}
+
+.collaborate-cards {
+  display: grid;
+  gap: 12px;
+}
+
+.collaborate-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px 16px 16px;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: var(--vp-c-bg);
+  box-shadow: var(--vp-shadow-1);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.collaborate-card:hover {
+  border-color: var(--vp-c-brand-1);
+  box-shadow: var(--vp-shadow-2);
+  transform: translateX(4px);
+}
+
+.collaborate-icon {
+  flex: none;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.collaborate-card:hover .collaborate-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.collaborate-card-text {
+  flex: 1;
+}
+
+.collaborate-card-title {
+  display: block;
   font-weight: 700;
   color: var(--vp-c-text-1);
 }
 
-.collaborate p {
-  margin: 0;
+.collaborate-card-description {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  line-height: 1.5;
   color: var(--vp-c-text-2);
 }
 
-.collaborate p a {
-  color: var(--vp-c-brand-1);
-  font-weight: 600;
+.collaborate-arrow {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  color: var(--vp-c-text-3);
 }
 
-.collaborate-links {
-  display: grid;
-  align-content: center;
-}
-
-.collaborate-links a {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--vp-c-divider);
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-}
-
-.collaborate-links li:last-child a {
-  border-bottom: 0;
-}
-
-.collaborate-links a:hover {
+.collaborate-card:hover .collaborate-arrow {
   color: var(--vp-c-brand-1);
 }
 
@@ -548,19 +696,30 @@ a:focus-visible {
   }
 
   .collaborate {
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 48px;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    padding: 56px;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .entry,
+  .platform,
+  .platform-icon,
+  .platform-arrow,
   .shared-card,
-  .quick-card {
+  .quick-card,
+  .slack,
+  .collaborate-card,
+  .collaborate-icon {
     transition: none;
   }
 
-  .entry:hover {
+  .entry:hover,
+  .platform:hover,
+  .platform:hover .platform-arrow,
+  .collaborate-card:hover,
+  .collaborate-card:hover .collaborate-icon {
     transform: none;
   }
 }

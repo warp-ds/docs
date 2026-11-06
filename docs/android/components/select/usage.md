@@ -4,10 +4,11 @@ seededFrom: /web/components/select/usage
 seededAt: 2026-11-05
 ---
 
-# Select - Usage
-A select is a form input component that lets users choose one option from a predefined list.
+# Select
 
 <ComponentsStatus />
+
+A select is a form input component that lets users choose one option from a predefined list.
 
 ## Guidelines
 

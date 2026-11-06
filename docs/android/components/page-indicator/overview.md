@@ -4,10 +4,11 @@ seededFrom: /web/components/page-indicator/overview
 seededAt: 2026-11-05
 ---
 
-# Page indicator - Overview
-A page indicator shows the total amount of pages (or images) and the current page using dots.
+# Page indicator
 
 <ComponentsStatus />
+
+A page indicator shows the total amount of pages (or images) and the current page using dots.
 
 ## General
 Page indicators help users understand that there are more images, or pages, available to scroll through, that are currently hidden from view.

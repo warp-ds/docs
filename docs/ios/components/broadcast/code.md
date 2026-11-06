@@ -1,7 +1,8 @@
-# Broadcast - iOS
-Broadcast automatically fetches broadcast messages for the current (or a given) url.
+# Broadcast
 
 <ComponentsStatus />
+
+Broadcast automatically fetches broadcast messages for the current (or a given) url.
 
 ## iOS
 

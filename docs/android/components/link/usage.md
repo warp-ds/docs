@@ -4,10 +4,11 @@ seededFrom: /web/components/link/usage
 seededAt: 2026-11-05
 ---
 
-# Link - Usage
-Link component to use when creating links that look like buttons.
+# Link
 
 <ComponentsStatus />
+
+Link component to use when creating links that look like buttons.
 
 ## Best practices / usage guidelines
 

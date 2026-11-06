@@ -1,8 +1,9 @@
-# Icons - React 19
+# Icons
+
+<ComponentsStatus />
 
 Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
-<ComponentsStatus />
 <FrameworkTabs />
 
 This component works the same way as `<w-icon>` from [@warp-ds/elements](/web/components/icons/code.md). Prefer using `<w-icon>` over this component.

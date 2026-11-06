@@ -4,10 +4,11 @@ seededFrom: /web/components/button-group/overview
 seededAt: 2026-11-05
 ---
 
-# Button group - Overview
-Button group is a grouping concept for buttons.
+# Button group
 
 <ComponentsStatus />
+
+Button group is a grouping concept for buttons.
 
 ## Usage
 

@@ -1,7 +1,8 @@
-# Divider - Overview
-A divider creates separation of content.
+# Divider
 
 <ComponentsStatus />
+
+A divider creates separation of content.
 
 ::: warning Native only
 For the web implementation of a "divider", see [CSS - Border - Divide](/web/foundations/css-classes/divide-width).

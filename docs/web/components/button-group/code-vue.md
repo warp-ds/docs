@@ -1,7 +1,8 @@
-# Button group - Vue
-Button group is a grouping concept for buttons.
+# Button group
 
 <ComponentsStatus />
+
+Button group is a grouping concept for buttons.
 
 ## Vue
 

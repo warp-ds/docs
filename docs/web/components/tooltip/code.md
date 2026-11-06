@@ -1,8 +1,9 @@
-# Tooltip - Elements
+# Tooltip
+
+<ComponentsStatus />
 
 A tooltip is a message box that is displayed when a user hovers over or gives focus to a UI element.
 
-<ComponentsStatus />
 <FrameworkTabs />
 <ThemeSwitcher />
 

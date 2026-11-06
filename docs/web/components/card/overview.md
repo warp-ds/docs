@@ -1,7 +1,8 @@
-# Card - Overview
-Card is an interactive layout component to display information.
+# Card
 
 <ComponentsStatus />
+
+Card is an interactive layout component to display information.
 
 ## Examples
 <ThemeSwitcher />

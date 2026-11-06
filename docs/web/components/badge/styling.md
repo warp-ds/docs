@@ -1,8 +1,8 @@
-# Badge - Styling
-
-Badges are used to highlight a relevant piece of information, like status or category.
+# Badge
 
 <ComponentsStatus />
+
+Badges are used to highlight a relevant piece of information, like status or category.
 
 ## Layout and spacing
 

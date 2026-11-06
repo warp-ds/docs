@@ -4,7 +4,7 @@ seededFrom: /web/components/checkbox/usage
 seededAt: 2026-11-05
 ---
 
-# Checkbox - Usage
+# Checkbox
 
 <ComponentsStatus />
 

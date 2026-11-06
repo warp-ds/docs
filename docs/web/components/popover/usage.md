@@ -1,4 +1,4 @@
-# Popover - Usage
+# Popover
 
 <ComponentsStatus />
 

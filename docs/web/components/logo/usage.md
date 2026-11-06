@@ -1,7 +1,8 @@
-# Logo - Usage
-Vend's logos are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+# Logo
 
 <ComponentsStatus />
+
+Vend's logos are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 ## Size variants
 The normal logo variant is the primary representation of the brand. This version should be used wherever there is adequate space for the logo to display clearly and maintain brand presence.

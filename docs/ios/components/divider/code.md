@@ -1,7 +1,8 @@
-# Divider - iOS
-A divider creates separation of content.
+# Divider
 
 <ComponentsStatus />
+
+A divider creates separation of content.
 
 ## iOS
 

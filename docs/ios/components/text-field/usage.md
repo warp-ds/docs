@@ -4,10 +4,11 @@ seededFrom: /web/components/text-field/usage
 seededAt: 2026-11-05
 ---
 
-# Text field - Usage
-A text field is a single-line input component used for entering and editing textual data.
+# Text field
 
 <ComponentsStatus />
+
+A text field is a single-line input component used for entering and editing textual data.
 
 ## Guidelines
 

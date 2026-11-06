@@ -1,7 +1,9 @@
-# Card - Elements
-Card is an interactive layout component to display information.
+# Card
 
 <ComponentsStatus />
+
+Card is an interactive layout component to display information.
+
 <FrameworkTabs />
 <ThemeSwitcher />
 

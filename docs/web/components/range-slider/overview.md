@@ -1,8 +1,9 @@
-# Range slider - Overview
+# Range slider
+
+<ComponentsStatus />
 
 Range sliders provide a visual indication of a selected interval within a defined range by moving two handles along a horizontal track to set both a minimum and maximum value.
 
-<ComponentsStatus />
 <ThemeSwitcher />
 
 ## Example

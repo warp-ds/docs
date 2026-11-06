@@ -1,10 +1,8 @@
-# Slider - React 19
-
-Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
-
-
+# Slider
 
 <ComponentsStatus />
+
+Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
 ## React 19
 

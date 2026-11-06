@@ -1,10 +1,10 @@
-# Alert - Usage
+# Alert
+
+<ComponentsStatus />
 
 Alerts show high-signal messages meant to be noticed by or prompt users. An alert sits inline in the page, carries a status colour and icon, and stays visible until the situation it describes is resolved.
 
 See also [Snackbar](/web/components/snackbar/overview.md), [Box](/web/components/box/overview.md), [Callout](/web/components/callout/overview.md), and [Modal](/web/components/modal/overview.md).
-
-<ComponentsStatus />
 
 ## Guidelines
 

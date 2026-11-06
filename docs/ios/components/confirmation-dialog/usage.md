@@ -1,10 +1,10 @@
-# Confirmation dialog - Usage
+# Confirmation dialog
+
+<ComponentsStatus />
 
 A confirmation dialog presents a set of choices in response to a user-initiated action.
 
 See also [Alert](/ios/components/alert/overview.md), [Modal](/ios/components/modal/overview.md).
-
-<ComponentsStatus />
 
 ## Guidelines
 

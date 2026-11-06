@@ -1,8 +1,11 @@
-# Alert - Elements
+# Alert
+
+<ComponentsStatus />
 
 Alerts show high-signal messages meant to be noticed and prompting users.
 
-<ComponentsStatus />
+See also [Snackbar](/web/components/snackbar/overview.md), [Box](/web/components/box/overview.md), [Callout](/web/components/callout/overview.md), and [Modal](/web/components/modal/overview.md).
+
 <FrameworkTabs />
 <ThemeSwitcher />
 

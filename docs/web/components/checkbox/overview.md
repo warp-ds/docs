@@ -1,8 +1,8 @@
-# Checkbox - Overview
-
-Checkboxes allow users to select one or more options from a number of choices.
+# Checkbox
 
 <ComponentsStatus />
+
+Checkboxes allow users to select one or more options from a number of choices.
 
 Checkboxes allow users to toggle an option on or off, or to select one or more items from a list. It typically combines a input (box) with a label that describes the action or choice. They can be used alone or group provide immediate visual feedback, and enhance accessibility when implemented with proper labels, grouping, and states.
 

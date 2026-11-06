@@ -1,7 +1,8 @@
-# Spinner - Android
-A spinner informs users about the loading of content.
+# Spinner
 
 <ComponentsStatus />
+
+A spinner informs users about the loading of content.
 
 ## Android
 

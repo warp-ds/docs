@@ -1,7 +1,9 @@
-# Date picker - Elements
-A date picker allows the user to select a specific calendar date.
+# Date picker
 
 <ComponentsStatus />
+
+A date picker allows the user to select a specific calendar date.
+
 <FrameworkTabs />
 <ThemeSwitcher />
 

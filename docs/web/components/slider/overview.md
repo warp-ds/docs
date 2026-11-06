@@ -1,8 +1,9 @@
-# Slider - Overview
+# Slider
+
+<ComponentsStatus />
 
 Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
 
-<ComponentsStatus />
 <ThemeSwitcher />
 
 ## Example

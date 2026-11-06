@@ -51,17 +51,18 @@ docs/
 - Platforms are independent: a component page on one platform never has to match another. A platform only lists components it actually has.
 - Pages with frontmatter `seeded: true` were copied from the Web docs and still need checking against the platform source. A notice is shown automatically. Remove the flag once reviewed.
 - Patterns are their own section (as in production): on `/patterns/` and `/{platform}/patterns/…` the sidebar shows only that platform's patterns under the switcher (`patternSidebars` in `sidebar/platform.js`), not Foundation/Components. A platform lists only the patterns it documents (Empty states: iOS + Android).
-- The home page (`index.md`, `layout: page`, `<HomeLanding />`) keeps the sidebar visible from the start, Fluent 2 style.
-- Cross-links between the Design Language and platform foundations are opt-in: a platform foundation page adds frontmatter `designLanguage: /design-language/<topic>/`. It then shows a "Shared guidance" link, and the Design Language page lists it under "Platform specifics" (collected by `pnpm generate-manifest`).
-- Component and pattern pages get page tabs (Overview | Usage | Styling | Code | Accessibility) and the platform availability line from `<ComponentsStatus />`. Each tab is a separate page.
+- The layout is full width (Fluent 2 style): sidebar pinned left, outline pinned right, and a fixed 768px reading column (`--warp-doc-width` in `theme/custom.css`) that does not depend on the page. The home page (`index.md`, `layout: page`, `<HomeLanding />`) keeps the sidebar visible from the start.
+- Cross-links between the Design Language and platform foundations are opt-in: a platform foundation page adds frontmatter `designLanguage: /design-language/<topic>/`. Both pages then show the same header switch, `Design Language | Web | iOS | Android` (collected by `pnpm generate-manifest`; a platform with several pages on one topic opens a menu).
+- Every doc page gets a context row above the H1 (`PageContext.vue`, `doc-before` slot): a breadcrumb, and on component/pattern pages a `Web | iOS | Android` switch (platforms without the item are shown as unavailable).
+- Component and pattern pages have one header on every tab, so switching tabs never moves the content: the H1 is the item name only (`# Alert`), with `<ComponentsStatus />` directly under it (status badges, page tabs, plus the Framework control on Web code pages). The page-specific lead paragraph comes after it, then the item's "See also" line, which is repeated on every tab. Each tab is a separate page; search results and the browser title add the page kind back (`config.js`: `Web › Alert › Usage`).
 - Old URLs (`/components/…`, `/patterns/…`, `/foundations/…`, `/blog/…`, …) redirect via `docs/.vitepress/redirects.json`: stub pages written in `buildEnd` (`build/redirect-stubs.js`), router hooks (`theme/index.js`) and a 404 fallback (`RedirectNotFound.vue`). When you move or delete a page, add an entry (old URL → new URL, no chains).
 
 ### Platform Manifest System
 
-The platform sidebars, the availability line, the Web code tabs and the overview grids are generated from a manifest:
+The platform sidebars, the header switch and status badges, the Web code tabs and the overview grids are generated from a manifest:
 
 1. Pages live at `docs/{web,ios,android}/{components,patterns}/{name}/{page}.md`
-2. `pnpm generate-manifest` (`scripts/generate-manifest.js`) scans them and writes `docs/.vitepress/platform-manifest.json`: per platform and item, its `pages`, `seeded` pages and (Web) `frameworks`; per platform, its top-level `foundations` pages; and `designLanguage`, the reverse map of cross-links. A Web `code.md` with frontmatter `elements: false` means there is no Elements implementation.
+2. `pnpm generate-manifest` (`scripts/generate-manifest.js`) scans them and writes `docs/.vitepress/platform-manifest.json`: per platform and item, its `pages`, `seeded` pages, `status` (frontmatter `status:`, omitted when released) and (Web) `frameworks`; per platform, its top-level `foundations` pages; and `designLanguage`, the reverse map of cross-links. A Web `code.md` with frontmatter `elements: false` means there is no Elements implementation.
 3. `sidebar/platform.js` builds each platform tree from the manifest. `sidebar/shared.js` holds the shared sections. `config.js` maps `/web/`, `/ios/`, `/android/` and `/` to the trees.
 4. `SidebarComposer.vue` (in the `sidebar-nav-before/after` slots) adds the shared sections, the `PlatformSwitcher` and the other tree. It imports the internal `VPSidebarGroup` from `vitepress/dist/…`, so re-check it when upgrading VitePress (pinned at 1.6.4).
 5. The pre-commit hook regenerates the manifest when platform component/pattern pages change.
@@ -72,8 +73,9 @@ These Vue components are registered globally for use in markdown files:
 
 | Component | Purpose |
 |-----------|---------|
-| `<ComponentsStatus />` | Page tabs (Overview, Usage, Styling, Code, Accessibility) + platform availability ("Available on: Web · iOS · Android", linking to the same page on each platform) |
-| `<FrameworkTabs />` | Second-level "Framework" control on Web Code pages: Elements + legacy React / React 19 / Vue (renders nothing on iOS/Android) |
+| `<ComponentsStatus />` | Page header under the H1: status badges (this platform's implementations: `Elements released`, `React legacy`, …), page tabs (Overview, Usage, Styling, Code, Accessibility), the Framework control on Web Code pages, and the seeded-page notice |
+| `<FrameworkTabs />` | Marker after the framework H2 on code pages (`## React`): hides that H2 visually (kept for search). The Framework control itself is rendered by `<ComponentsStatus />` |
+| `<PlatformOverview platform />` | Card grid on a platform overview page (`/web/`, `/ios/`, `/android/`): Get started, Foundation, Components, Patterns (with live counts; Patterns is a disabled card where none are documented) and the shared sections |
 | `<DsOverview type platform />` | Filterable grid of a platform's components or patterns |
 | `<PlatformCoverage type />` | Generated platform/framework coverage table |
 | `<Do>`, `<DoDont>` | Do/Don't guidance blocks with images |
@@ -102,8 +104,8 @@ Add it to each platform that has it; platforms are independent.
 
 1. Web: create `docs/web/components/{name}/` with `overview.md`, `usage.md`, `accessibility.md` and `code.md` (Elements). Add `code-react.md` / `code-react-19.md` / `code-vue.md` only for existing legacy implementations.
 2. iOS / Android: create `docs/{ios,android}/components/{name}/` with at least `overview.md` and `code.md`. Write `accessibility.md` only from behaviour verified against the platform source.
-3. Put `<ComponentsStatus />` under the H1 of every page, and `<FrameworkTabs />` on Web code pages.
-4. Run `pnpm generate-manifest`. The component then appears in that platform's sidebar, overview grid, availability line and the coverage page.
+3. On every page, use the item name as the H1 (`# Button`, not `# Button - Usage`) and put `<ComponentsStatus />` directly under it, before the lead paragraph. On code pages, add `<FrameworkTabs />` after the framework H2.
+4. Run `pnpm generate-manifest`. The component then appears in that platform's sidebar, overview grid, header switch and the coverage page. Its status badge says "released" unless a page sets frontmatter `status:` (`beta`, `developing`, `planned` or `deprecated`).
 5. Run `pnpm build && pnpm check:site`.
 
 ## Notes

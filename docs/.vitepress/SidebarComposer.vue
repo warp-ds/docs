@@ -45,7 +45,7 @@ const showAfter = computed(() => props.position === 'after' && !onPlatformPage.v
 
 <style scoped>
 .platform-block {
-  margin: 8px 0 0;
+  margin: 0;
   padding: 16px 0 8px;
   border-top: 1px solid var(--vp-c-divider);
 }

@@ -1,7 +1,8 @@
-# Logo - Overview
-Vend's logos are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+# Logo
 
 <ComponentsStatus />
+
+Vend's logos are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 ## Overview
 

@@ -1,7 +1,13 @@
-# Toast - iOS
-Toasts are brief user feedback messages that overlay content.
+---
+status: deprecated
+---
+
+# Toast
 
 <ComponentsStatus />
+
+Toasts are brief user feedback messages that overlay content.
+
 <FrameworkTabs />
 
 ::: warning Deprecated

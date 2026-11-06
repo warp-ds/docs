@@ -1,4 +1,4 @@
-# Expandable - Usage
+# Expandable
 
 <ComponentsStatus />
 

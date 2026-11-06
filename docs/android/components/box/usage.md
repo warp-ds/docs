@@ -4,13 +4,13 @@ seededFrom: /web/components/box/usage
 seededAt: 2026-11-05
 ---
 
-# Box - Usage
+# Box
+
+<ComponentsStatus />
 
 Box is a layout component used for separating content areas on a page. It groups related information inside a subtle surface so users can tell where one block of content ends and the next begins.
 
 See also [Alert](/android/components/alert/overview.md), [Card](/web/components/card/overview.md), and [Callout](/android/components/callout/overview.md).
-
-<ComponentsStatus />
 
 ## Guidelines
 

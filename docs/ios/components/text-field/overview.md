@@ -4,10 +4,11 @@ seededFrom: /web/components/text-field/overview
 seededAt: 2026-11-05
 ---
 
-# Text field - Overview
-A text field is a single-line input component used for entering and editing textual data.
+# Text field
 
 <ComponentsStatus />
+
+A text field is a single-line input component used for entering and editing textual data.
 
 ## General
 It supports a wide range of behaviours, labels, icons, prefixes/suffixes, tooltips, and error handling to support various use cases and accessibility needs. Text fields are a fundamental element of forms and search experiences across the product ecosystem.

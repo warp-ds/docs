@@ -4,10 +4,12 @@ import { data } from './iconNames.data.js'
 const iconNames = Object.keys(data);
 </script>
 
-# Icons - Overview
-Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+# Icons
 
 <ComponentsStatus />
+
+Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+
 <ThemeSwitcher />
 
 ## Phosphor

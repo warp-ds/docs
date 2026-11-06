@@ -4,10 +4,11 @@ seededFrom: /web/components/page-indicator/usage
 seededAt: 2026-11-05
 ---
 
-# Page indicator - Usage
-A page indicator shows the total amount of pages (or images) and the current page using dots.
+# Page indicator
 
 <ComponentsStatus />
+
+A page indicator shows the total amount of pages (or images) and the current page using dots.
 
 ## General
 

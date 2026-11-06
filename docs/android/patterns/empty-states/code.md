@@ -1,8 +1,8 @@
-# Empty states - Frameworks
-
-Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
+# Empty states
 
 <ComponentsStatus />
+
+Empty states are used to fill spaces when no content can be shown to the user, or is temporarily empty due to the nature of the feature.
 
 ## Android
 

@@ -4,13 +4,13 @@ seededFrom: /web/components/alert/overview
 seededAt: 2026-11-05
 ---
 
-# Alert - Overview
+# Alert
+
+<ComponentsStatus />
 
 Alerts show high-signal messages meant to be noticed by or prompt users. An alert sits inline in the page, carries a status colour and icon, and stays visible until the situation it describes is resolved.
 
 See also [Snackbar](/ios/components/snackbar/overview.md), [Box](/ios/components/box/overview.md), [Callout](/ios/components/callout/overview.md), and [Modal](/ios/components/modal/overview.md).
-
-<ComponentsStatus />
 
 ## General
 

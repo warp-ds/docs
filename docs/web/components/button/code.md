@@ -1,7 +1,9 @@
-# Button - Elements
-Buttons initiate events or actions within a page, informing users of what to expect next.
+# Button
 
 <ComponentsStatus />
+
+Buttons initiate events or actions within a page, informing users of what to expect next.
+
 <FrameworkTabs />
 <ThemeSwitcher />
 

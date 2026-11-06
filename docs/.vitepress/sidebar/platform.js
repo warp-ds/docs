@@ -44,7 +44,8 @@ function foundationItems(platform) {
  */
 export function platformSidebar(platform) {
   const label = PLATFORMS.find((p) => p.id === platform)?.label ?? platform;
-  const groups = [{ text: label, items: [{ text: `${label} overview`, link: `/${platform}/` }] }];
+  // `items: []` keeps it a top-level link (VitePress wraps bare links into an untitled group)
+  const groups = [{ text: 'Overview', link: `/${platform}/`, items: [] }];
   const foundation = foundationItems(platform);
   if (foundation.length) {
     groups.push({

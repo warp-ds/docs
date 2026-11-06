@@ -1,4 +1,4 @@
-# Pill - Usage
+# Pill
 
 <ComponentsStatus />
 

@@ -1,7 +1,8 @@
-# Text - Overview
-Pre-defined styles provide a font and size.
+# Text
 
 <ComponentsStatus />
+
+Pre-defined styles provide a font and size.
 
 ## Example
 <ThemeSwitcher />

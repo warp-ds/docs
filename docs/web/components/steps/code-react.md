@@ -1,7 +1,8 @@
-# Steps - React
-The steps component is built to handle user journeys, showing progress.
+# Steps
 
 <ComponentsStatus />
+
+The steps component is built to handle user journeys, showing progress.
 
 ## React
 

@@ -1,4 +1,4 @@
-# Icons - Usage
+# Icons
 
 <ComponentsStatus />
 

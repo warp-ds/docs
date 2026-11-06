@@ -1,8 +1,10 @@
-# Box - Accessibility
+# Box
+
+<ComponentsStatus />
 
 Box is a layout component used for separating content areas on a page. It groups related information inside a subtle surface so users can tell where one block of content ends and the next begins.
 
-<ComponentsStatus />
+See also [Alert](/web/components/alert/overview.md), [Card](/web/components/card/overview.md), and [Callout](/web/components/callout/overview.md).
 
 ## General
 

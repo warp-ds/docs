@@ -1,7 +1,8 @@
-# Divider - Android
-A divider creates separation of content.
+# Divider
 
 <ComponentsStatus />
+
+A divider creates separation of content.
 
 ## Android
 

@@ -1,8 +1,9 @@
-# Text area - Elements
+# Text area
+
+<ComponentsStatus />
 
 A text area allows users to input extended text content that covers multiple lines.
 
-<ComponentsStatus />
 <FrameworkTabs />
 <ThemeSwitcher />
 

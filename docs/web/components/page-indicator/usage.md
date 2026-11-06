@@ -1,7 +1,8 @@
-# Page indicator - Usage
-A page indicator shows the total amount of pages (or images) and the current page using dots.
+# Page indicator
 
 <ComponentsStatus />
+
+A page indicator shows the total amount of pages (or images) and the current page using dots.
 
 ## General
 

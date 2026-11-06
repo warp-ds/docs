@@ -1,7 +1,8 @@
-# Select - Overview
-A select is a form input component that lets users choose one option from a predefined list.
+# Select
 
 <ComponentsStatus />
+
+A select is a form input component that lets users choose one option from a predefined list.
 
 ## General
 

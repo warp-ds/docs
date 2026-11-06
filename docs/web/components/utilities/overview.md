@@ -1,7 +1,8 @@
-# Utilities - Overview
-These utility components are available to make some layout components interactive.
+# Utilities
 
 <ComponentsStatus />
+
+These utility components are available to make some layout components interactive.
 
 ## Example
 

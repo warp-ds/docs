@@ -1,8 +1,9 @@
-# Logo - Elements
+# Logo
+
+<ComponentsStatus />
 
 Brand logos for use on the web.
 
-<ComponentsStatus />
 <FrameworkTabs />
 <ThemeSwitcher />
 

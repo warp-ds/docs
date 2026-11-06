@@ -1,8 +1,9 @@
-# Switch - Elements
+# Switch
+
+<ComponentsStatus />
 
 The Switch component allows users to toggle between two states.
 
-<ComponentsStatus />
 <FrameworkTabs />
 <ThemeSwitcher />
 

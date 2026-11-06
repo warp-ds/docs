@@ -1,7 +1,8 @@
-# Spinner - Overview
-A spinner informs users about the loading of content.
+# Spinner
 
 <ComponentsStatus />
+
+A spinner informs users about the loading of content.
 
 ::: warning Native only
 For the web implementation of a "spinner", see [CSS - Animation - Spinner](/web/foundations/css-classes/animation#spinner).

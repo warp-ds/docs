@@ -1,8 +1,10 @@
-# Snackbar - iOS
+# Snackbar
+
+<ComponentsStatus />
 
 A Snackbar provides brief feedback messages that overlay content at the bottom of the screen, with optional action buttons.
 
-<ComponentsStatus />
+See also [Alert](/ios/components/alert/overview.md).
 
 ## iOS
 

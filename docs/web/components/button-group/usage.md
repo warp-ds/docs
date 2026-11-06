@@ -1,4 +1,4 @@
-# Button Group - Usage
+# Button Group
 
 <ComponentsStatus />
 

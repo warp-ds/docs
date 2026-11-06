@@ -318,7 +318,8 @@
       },
       "toast": {
         "title": "Toast",
-        "pages": ["code"]
+        "pages": ["code"],
+        "status": "deprecated"
       },
       "tooltip": {
         "title": "Tooltip",

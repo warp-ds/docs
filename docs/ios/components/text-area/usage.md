@@ -4,10 +4,11 @@ seededFrom: /web/components/text-area/usage
 seededAt: 2026-11-05
 ---
 
-# Text area - Usage
-A text area allows users to input extended text content that covers multiple lines.
+# Text area
 
 <ComponentsStatus />
+
+A text area allows users to input extended text content that covers multiple lines.
 
 ## Guidelines
 

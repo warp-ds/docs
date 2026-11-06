@@ -1,7 +1,10 @@
-# Alert - Android
-Alerts show high-signal messages meant to be noticed and prompting users.
+# Alert
 
 <ComponentsStatus />
+
+Alerts show high-signal messages meant to be noticed and prompting users.
+
+See also [Snackbar](/android/components/snackbar/overview.md), [Box](/android/components/box/overview.md), [Callout](/android/components/callout/overview.md), and [Modal](/android/components/modal/overview.md).
 
 ## Android
 

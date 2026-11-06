@@ -4,11 +4,11 @@ seededFrom: /web/components/range-slider/overview
 seededAt: 2026-11-05
 ---
 
-# Range slider - Overview
-
-Range sliders provide a visual indication of a selected interval within a defined range by moving two handles along a horizontal track to set both a minimum and maximum value.
+# Range slider
 
 <ComponentsStatus />
+
+Range sliders provide a visual indication of a selected interval within a defined range by moving two handles along a horizontal track to set both a minimum and maximum value.
 
 ## Overview
 

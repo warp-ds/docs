@@ -1,7 +1,8 @@
-# Date picker - Accessibility
-A date picker allows the user to select a specific calendar date.
+# Date picker
 
 <ComponentsStatus />
+
+A date picker allows the user to select a specific calendar date.
 
 ## Principle
 

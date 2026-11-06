@@ -1,7 +1,10 @@
-# Alert - React 19
-Alerts show high-signal messages meant to be noticed and prompting users.
+# Alert
 
 <ComponentsStatus />
+
+Alerts show high-signal messages meant to be noticed and prompting users.
+
+See also [Snackbar](/web/components/snackbar/overview.md), [Box](/web/components/box/overview.md), [Callout](/web/components/callout/overview.md), and [Modal](/web/components/modal/overview.md).
 
 ## React 19
 

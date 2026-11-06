@@ -1,7 +1,9 @@
-# Text field - Elements
-A text field is a single-line input component used for entering and editing textual data.
+# Text field
 
 <ComponentsStatus />
+
+A text field is a single-line input component used for entering and editing textual data.
+
 <FrameworkTabs />
 <ThemeSwitcher />
 

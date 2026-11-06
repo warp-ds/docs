@@ -74,6 +74,9 @@ function scanItem(platform, type, name) {
   const entry = { title: toTitle(name), pages };
   const seeded = pages.filter((p) => frontmatter(join(dir, `${p}.md`)).seeded === 'true');
   if (seeded.length) entry.seeded = seeded;
+  // optional lifecycle status for the header badges (frontmatter `status:` on any page; default released)
+  const status = pages.map((p) => frontmatter(join(dir, `${p}.md`)).status).find(Boolean);
+  if (status && status !== 'released') entry.status = status;
   if (platform === 'web' && pages.includes('code')) {
     const frameworks = [];
     if (frontmatter(join(dir, 'code.md')).elements !== 'false') frameworks.push('elements');

@@ -1,4 +1,4 @@
-# Pagination - Usage
+# Pagination
 
 <ComponentsStatus />
 

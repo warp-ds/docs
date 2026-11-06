@@ -1,8 +1,8 @@
-# Tooltip - Overview
-
-A tooltip is a small message box that appears when a user hovers over, focuses, or taps a UI element. It provides brief, supplementary information about that element.
+# Tooltip
 
 <ComponentsStatus />
+
+A tooltip is a small message box that appears when a user hovers over, focuses, or taps a UI element. It provides brief, supplementary information about that element.
 
 ## Example
 

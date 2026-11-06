@@ -4,10 +4,11 @@ seededFrom: /web/components/icons/overview
 seededAt: 2026-11-05
 ---
 
-# Icons - Overview
-Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
+# Icons
 
 <ComponentsStatus />
+
+Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
 
 ## Phosphor
 

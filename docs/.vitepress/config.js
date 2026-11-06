@@ -16,6 +16,26 @@ import { supported as supportedClasses } from './supported.js';
 const base = '/docs';
 const hostname = 'https://warp-ds.github.io/docs/';
 
+// Component and pattern pages share one H1 on every tab ("Alert"), so the page kind is added back for
+// search results and the browser title: "Web › Alert › Usage", "Alert · Usage · Web".
+const PLATFORM_LABELS = { web: 'Web', ios: 'iOS', android: 'Android' };
+const PAGE_KINDS = {
+  overview: 'Overview',
+  usage: 'Usage',
+  styling: 'Styling',
+  code: 'Code',
+  'code-react': 'Code (React, legacy)',
+  'code-react-19': 'Code (React 19, legacy)',
+  'code-vue': 'Code (Vue, legacy)',
+  accessibility: 'Accessibility',
+};
+function itemPage(relativePath) {
+  const m = relativePath.match(/^(web|ios|android)\/(?:components|patterns)\/[^/]+\/([^/]+)\.md$/);
+  if (!m) return null;
+  const kind = m[1] === 'web' && m[2] === 'code' ? 'Code (Elements)' : (PAGE_KINDS[m[2]] ?? m[2]);
+  return { platform: PLATFORM_LABELS[m[1]], kind };
+}
+
 export default defineConfig({
   lang: 'en',
   title: 'Warp Design System',
@@ -100,14 +120,20 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
-        // Three parallel platform trees share titles ("Button - Overview"); label results by platform.
+        // Three parallel platform trees share titles, and component tabs share one H1: label results
+        // by platform, and by page kind on component/pattern pages ("Web › Alert › Usage").
         _render(src, env, md) {
           const html = md.render(src, env);
           if (env.frontmatter?.search === false) return '';
-          const labels = { web: 'Web', ios: 'iOS', android: 'Android' };
-          const platform = env.relativePath.match(/^(web|ios|android)\//)?.[1];
+          const platform = PLATFORM_LABELS[env.relativePath.match(/^(web|ios|android)\//)?.[1]];
           if (!platform) return html;
-          return html.replace(/<h1([^>]*)>/, `<h1$1>${labels[platform]} › `);
+          const item = itemPage(env.relativePath);
+          return html.replace(/<h1([^>]*)>(.*?)<\/h1>/s, (_, attrs, inner) => {
+            const text = item
+              ? inner.replace(/(<a [^>]*class="header-anchor"[^>]*>.*?<\/a>)?$/s, ` › ${item.kind}$1`)
+              : inner;
+            return `<h1${attrs}>${platform} › ${text}</h1>`;
+          });
         },
       },
     },
@@ -129,6 +155,12 @@ export default defineConfig({
       '/android/': platformSidebars.android,
       '/': sharedSidebar,
     },
+  },
+  transformPageData(pageData) {
+    const item = itemPage(pageData.relativePath);
+    if (item && pageData.title && !pageData.frontmatter.title) {
+      pageData.title = `${pageData.title} · ${item.kind} · ${item.platform}`;
+    }
   },
   buildEnd(siteConfig) {
     writeRedirectStubs(siteConfig, hostname);

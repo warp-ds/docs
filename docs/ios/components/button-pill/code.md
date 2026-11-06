@@ -1,7 +1,8 @@
-# Button Pill - iOS
-Button pill allows users to toggle an element to their favourites.
+# Button Pill
 
 <ComponentsStatus />
+
+Button pill allows users to toggle an element to their favourites.
 
 ## iOS
 

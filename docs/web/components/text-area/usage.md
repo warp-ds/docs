@@ -1,7 +1,8 @@
-# Text area - Usage
-A text area allows users to input extended text content that covers multiple lines.
+# Text area
 
 <ComponentsStatus />
+
+A text area allows users to input extended text content that covers multiple lines.
 
 ## Guidelines
 

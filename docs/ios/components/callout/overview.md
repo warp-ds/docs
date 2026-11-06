@@ -4,13 +4,13 @@ seededFrom: /web/components/callout/overview
 seededAt: 2026-11-05
 ---
 
-# Callout - Overview
+# Callout
+
+<ComponentsStatus />
 
 Callouts are snippets of information, drawing attention to important content. A callout is anchored to something on screen — a button, a field, a piece of copy — and points at it with an arrow.
 
 See also [Tooltip](/ios/components/tooltip/overview.md), [Popover](/web/components/popover/overview.md), [Alert](/ios/components/alert/overview.md), and [Box](/ios/components/box/overview.md).
-
-<ComponentsStatus />
 
 ## General
 

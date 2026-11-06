@@ -1,4 +1,4 @@
-# Utilities - Usage
+# Utilities
 
 <ComponentsStatus />
 

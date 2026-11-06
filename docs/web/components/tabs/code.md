@@ -1,7 +1,9 @@
-# Tabs - Elements
-Tabs are used to group content, allowing users to navigate views without leaving the page.
+# Tabs
 
 <ComponentsStatus />
+
+Tabs are used to group content, allowing users to navigate views without leaving the page.
+
 <FrameworkTabs />
 <ThemeSwitcher />
 
