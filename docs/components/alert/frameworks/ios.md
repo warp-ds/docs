@@ -165,10 +165,29 @@ enum Warp.AlertDialog.Action.Style {
     case destructive
     /// A cancel action, displayed prominently by the system.
     case cancel
+    /// A primary action button, displayed with greater prominence than `.default`.
+    case primary
 }
 ```
 
 Always include a `.cancel` action. Without it, users have no safe exit from the dialog.
+
+Use `.primary` for the main confirmation action. The first `.primary` action gets the `defaultAction` keyboard shortcut, which the system renders in bold. Only the first `.primary` action gets this shortcut.
+
+```swift example
+Button("Delete account") {
+    showDeleteAlert = true
+}
+.warpAlert(
+    title: "Delete account?",
+    message: "This action cannot be undone.",
+    actions: [
+        Warp.AlertDialog.Action(title: "Delete", style: .primary) { deleteAccount() },
+        Warp.AlertDialog.Action(title: "Cancel", style: .cancel) { }
+    ],
+    isPresented: $showDeleteAlert
+)
+```
 
 ### Parameters
 
@@ -187,7 +206,7 @@ Always include a `.cancel` action. Without it, users have no safe exit from the 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | title | String | | The button label. Use a verb ("Delete", "Save", "Cancel"). |
-| style | Style | `.default` | Visual style. Use `.destructive` for irreversible actions, `.cancel` for the dismiss action. |
+| style | Style | `.default` | Visual style. Use `.destructive` for irreversible actions, `.cancel` for the dismiss action, `.primary` for the main confirmation action (bold, via the `defaultAction` shortcut). |
 | handler | () -> Void | | Closure executed when the action is tapped. |
 
 <component-questions />

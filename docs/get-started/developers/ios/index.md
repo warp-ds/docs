@@ -10,6 +10,8 @@ If you have any questions or need clarification, please don't hesitate to reach 
 
 A guide on how to integrate Warp into your project.
 
+**Requirements:** Warp requires a minimum deployment target of **iOS 18**.
+
 ### Swift Package Manager
 You can use the url for Warp on Xcode default package manager or use it like below in your Package.swift file:
 
@@ -22,25 +24,69 @@ You can use a specific branch or version, but we suggest using our latest versio
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/warp-ds/warp-ios.git", "0.0.1"..."999.0.0")
+    .package(url: "https://github.com/warp-ds/warp-ios.git", from: "1.2.0")
 ]
 ```
 
+Warp 1.0.0 and later follow [Semantic Versioning](https://semver.org/). `from: "1.2.0"` accepts any `1.x` release from 1.2.0 up to, but not including, 2.0.0, so you receive new components and fixes without breaking changes.
+
 ## 2. Apply theme
 
-To start using Warp you must first initialize the theme depending on the selected target of the project.
+To start using Warp you set the brand for your app with the `.warpTheme(_:)` view modifier. The theme is injected through the SwiftUI environment, so apply it once on the root view of your `WindowGroup`:
 
 ```swift
-Warp.Config.warpTheme = .tori
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .warpTheme(.finn)
+        }
+    }
+}
 ```
 
-Right now we support `.finn`, `.tori`, `.dba` and `.blocket` with `.finn` as the default one.
+To use a different brand for part of the view hierarchy, apply `.warpTheme(_:)` to that subtree. Descendants read the closest brand:
+
+```swift
+VStack {
+    HeaderView()
+    ToriSection()
+        .warpTheme(.tori)
+}
+```
+
+Supported brands are the `Warp.Brand` cases: `.finn`, `.tori`, `.dba`, `.blocket`, `.vend` and `.neutral`. The default brand is `.finn`. Without a `.warpTheme(_:)` modifier, the environment falls back to the global `Warp.Theme` variable, which is `.finn` unless you change it.
+
+The global `Warp.Theme` variable (for example `Warp.Theme = .tori`) still works, but it is **deprecated** and shows deprecation warnings. Migrate to `.warpTheme(_:)`.
+
+### Font registration
+
+Fonts for a brand must be registered before use. Register them for the brand you apply, for example in your app's `init`:
+
+```swift
+@main
+struct MyApp: App {
+    init() {
+        try? Warp.Typography.registerFonts(for: .finn)
+    }
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .warpTheme(.finn)
+        }
+    }
+}
+```
+
+`Warp.Typography.registerFonts()` without a parameter is **deprecated** because it reads the global `Warp.Theme`. Use `registerFonts(for:)` instead.
 
 ## 3. Use Warp components
 
 Use the Warp components just like any other SwiftUI or UIKit view. The selected theme will give it the correct colors, styling and language.
 
-```swift exmaple
+```swift
 Warp.Button(
     title: "button",
     action: {}
@@ -49,7 +95,18 @@ Warp.Button(
 
 ## 4. Use Warp tokens
 
-We hightly recommend using `Warp.Token.SOME_TOKEN` for `Color` and `Warp.UIToken.SOME_TOKEN` for `UIColor` to specify a color.
+We highly recommend using `theme.token.SOME_TOKEN` for `Color` and `theme.uiToken.SOME_TOKEN` for `UIColor` to specify a color. Read the theme from the environment, so the color follows the brand applied with `.warpTheme(_:)`:
+
+```swift
+struct StatusText: View {
+    @Environment(\.warpTheme) private var theme
+
+    var body: some View {
+        Text("Status")
+            .foregroundColor(theme.token.textSubtle)
+    }
+}
+```
 
 To get you started tokens will start with one of the following categories:
 `Surface`
@@ -58,22 +115,22 @@ To get you started tokens will start with one of the following categories:
 `Icon`
 `Text`
 
-In some special cases we have some brand specific colors that can be used by `Warp.Color.SOME_COLOR` for `Color` and `Warp.UIColor.SOME_COLOR` for `UIColor`.
+In some special cases we have brand specific colors that are available through `ColorProvider(theme:)` for `Color` and `UIColorProvider(theme:)` for `UIColor`. Pass the theme from the environment:
 
-An example of this case is `Warp.Color.badgeNeutralBackground` which is defined below.
+```swift
+struct BadgeView: View {
+    @Environment(\.warpTheme) private var theme
 
-```swift exmaple
-public var badgeNeutralBackground: Color {
-    switch Warp.Theme {
-    case .blocket: return Color.dynamicColor(defaultColor: BlocketColors.gray100, darkModeColor: BlocketColors.gray600)
-    case .dba: return Color.dynamicColor(defaultColor: DbaColors.gray100, darkModeColor: DbaColors.gray600)
-    case .finn: return Color.dynamicColor(defaultColor: FinnColors.gray100, darkModeColor: FinnColors.gray600)
-    case .tori: return Color.dynamicColor(defaultColor: ToriColors.gray100, darkModeColor: ToriColors.gray600)
+    var body: some View {
+        Circle()
+            .fill(ColorProvider(theme: theme).badgeNeutralBackground)
     }
 }
 ```
 
-Another group of colors available is `Warp.DatavizToken.SOME_TOKEN` for `Color` and `Warp.DatavizToken.SOME_TOKEN` for `UIColor` that should be used on charts and similar use cases, and had the following categories:
+`Warp.Color` and `Warp.UIColor` are **deprecated**. They read the global `Warp.Theme` and show deprecation warnings. Use `ColorProvider(theme:)` and `UIColorProvider(theme:)` with `@Environment(\.warpTheme)` instead. `ColorProvider(token:)` and `UIColorProvider(token:)` are deprecated too, in favour of the `theme:` initializers.
+
+Another group of colors available is `Warp.DatavizToken.SOME_TOKEN` for `Color` and `Warp.DatavizUIToken.SOME_TOKEN` for `UIColor` that should be used on charts and similar use cases, and had the following categories:
 `Line`
 `Background`
 `Border`
@@ -82,20 +139,20 @@ Another group of colors available is `Warp.DatavizToken.SOME_TOKEN` for `Color` 
 
 Avoid using the colors directly since they can be brand specific.
 
-```swift exmaple
+```swift
 Warp.Text(
-    L10n.ConfirmPersonalData.ConfirmPersonalData.collectioninfo,
+    "Personal data is collected here",
     style: .caption,
-    color: Warp.Token.textSubtle
+    color: theme.token.textSubtle
 )
 ```
 
-Still using UIKit? We got you covered with `Warp.UIToken`.
+Still using UIKit? UIKit views have no environment, so read a brand's UIKit tokens directly from `Warp.Brand`. Use the brand your app applies:
 
-```swift exmaple
+```swift
 private lazy var myView: UIView = {
     let view = UIView(withAutoLayout: true)
-    view.backgroundColor = Warp.UIToken.background
+    view.backgroundColor = Warp.Brand.finn.uiToken.background
     return view
 }()
 ```
@@ -107,7 +164,7 @@ All Warp components will provide a bridge to be able to use with legacy code. Ch
 
 By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
-```swift exmaple
+```swift
 Warp.Button(
     title: "button",
     action: {}
