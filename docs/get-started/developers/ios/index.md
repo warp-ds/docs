@@ -80,7 +80,7 @@ struct MyApp: App {
 }
 ```
 
-`Warp.Typography.registerFonts()` without a parameter is **deprecated** because it reads the global `Warp.Theme`. Use `registerFonts(for:)` instead.
+`Warp.Typography.registerFonts()` without a parameter reads the global `Warp.Theme`, so avoid it. Use `registerFonts(for:)` instead.
 
 ## 3. Use Warp components
 
@@ -128,7 +128,7 @@ struct BadgeView: View {
 }
 ```
 
-`Warp.Color` and `Warp.UIColor` are **deprecated**. They read the global `Warp.Theme` and show deprecation warnings. Use `ColorProvider(theme:)` and `UIColorProvider(theme:)` with `@Environment(\.warpTheme)` instead. `ColorProvider(token:)` and `UIColorProvider(token:)` are deprecated too, in favour of the `theme:` initializers.
+Avoid colour setup that reads the global `Warp.Theme`. Use `ColorProvider(theme:)` and `UIColorProvider(theme:)` with `@Environment(\.warpTheme)` instead. `ColorProvider(token:)` and `UIColorProvider(token:)` are **deprecated** and show deprecation warnings, so migrate to the `theme:` initializers.
 
 Another group of colors available is `Warp.DatavizToken.SOME_TOKEN` for `Color` and `Warp.DatavizUIToken.SOME_TOKEN` for `UIColor` that should be used on charts and similar use cases, and had the following categories:
 `Line`

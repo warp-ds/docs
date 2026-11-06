@@ -22,3 +22,5 @@ Menu rows use the system row height. If you build a custom trigger, keep its tap
 - Items are read in the order in which they are declared. Activating an item with a double tap runs its action.
 - Destructive items are shown in red. Their titles should name the action, such as "Delete", so the meaning does not depend on colour.
 - The standard VoiceOver dismiss gesture closes the menu without choosing an item.
+
+<component-questions />

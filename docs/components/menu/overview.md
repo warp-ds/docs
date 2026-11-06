@@ -26,3 +26,5 @@ Item titles are set by the operating system, so Warp controls only the icon colo
 
 - A single destructive action that needs confirmation. Use the [Confirmation dialog](/components/confirmation-dialog/overview.md) instead.
 - The main actions of a screen. Show them as buttons so they stay visible.
+
+<component-questions />

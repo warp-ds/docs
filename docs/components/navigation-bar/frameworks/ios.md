@@ -104,7 +104,7 @@ NavigationStack {
             Warp.ToolbarItem(icon: .close, placement: .topBarLeading) {
                 dismiss()
             }
-            Warp.ToolbarItem(title: "Save", icon: .save, placement: .topBarTrailing, style: .primary) {
+            Warp.ToolbarItem(title: "Save", placement: .topBarTrailing, style: .primary) {
                 save()
             }
         }

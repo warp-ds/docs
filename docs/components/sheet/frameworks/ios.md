@@ -64,7 +64,7 @@ Navigation bar styling is separate. Apply it to the content inside the `Navigati
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | style | Warp.SheetStyle | `.medium` | `.medium` allows medium and large detents. `.fullScreen` allows the large detent only. |
-| dragIndicator | Visibility | `.visible` | Visibility of the grabber. Use `.hidden` for sheets that must not be dismissed by dragging. |
+| dragIndicator | Visibility | `.visible` | Visibility of the grabber only. It does not prevent dismissal. Use `.interactiveDismissDisabled()` to block swipe-to-dismiss. |
 | background | Warp.SheetBackground | `.automatic` | Background treatment: `.automatic`, `.solid`, `.color(Color)` or `.none`. |
 
 <component-questions />

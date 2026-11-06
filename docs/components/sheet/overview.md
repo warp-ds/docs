@@ -27,3 +27,5 @@ Sheets come in two styles:
 
 - For critical decisions that need a response. Use [Confirmation dialog](/components/confirmation-dialog/overview.md).
 - For a short list of actions. Use [Menu](/components/menu/overview.md).
+
+<component-questions />

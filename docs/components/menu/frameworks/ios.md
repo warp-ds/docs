@@ -45,7 +45,7 @@ Warp.Menu("Actions") {
         Warp.MenuButton("Bookmark", icon: .bookmark) { bookmark() }
         Warp.MenuButton("Archive", icon: .archiveBox) { archive() }
     }
-    Warp.MenuButton("Delete", icon: .delete, style: .destructive) { delete() }
+    Warp.MenuButton("Delete", icon: .bin, style: .destructive) { delete() }
 }
 ```
 
@@ -55,7 +55,7 @@ Use `Warp.MenuButton` inside a context menu:
 Text("Ad title")
     .contextMenu {
         Warp.MenuButton("Share", icon: .shareIOS) { share() }
-        Warp.MenuButton("Delete", icon: .delete, style: .destructive) { delete() }
+        Warp.MenuButton("Delete", icon: .bin, style: .destructive) { delete() }
     }
 ```
 
@@ -64,7 +64,7 @@ Style a native SwiftUI `Menu` with a custom label:
 ```swift example
 SwiftUI.Menu("Options") {
     Warp.MenuButton("Share", icon: .shareIOS) { share() }
-    Warp.MenuButton("Delete", icon: .delete, style: .destructive) { delete() }
+    Warp.MenuButton("Delete", icon: .bin, style: .destructive) { delete() }
 }
 .warpMenuButton(style: .default)
 ```

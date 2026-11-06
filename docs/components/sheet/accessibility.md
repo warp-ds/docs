@@ -20,3 +20,5 @@ Controls inside a sheet should be at least 44 × 44 pt.
 
 - When a sheet opens, VoiceOver focus moves into it and the content behind is not reachable.
 - The standard VoiceOver dismiss gesture closes the sheet.
+
+<component-questions />

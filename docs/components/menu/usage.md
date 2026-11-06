@@ -22,3 +22,5 @@ See also [Confirmation dialog](/components/confirmation-dialog/overview.md).
 - Items appear in the order in which they are declared.
 - Destructive items use the destructive role. The system shows their title in red, and Warp shows their icon in the negative icon colour.
 - The `.warpMenuButton(style:)` modifier applies Warp colour and font to a native SwiftUI `Menu` trigger. Use it when you need a native `Menu` with a custom label. Use `Warp.Menu` otherwise.
+
+<component-questions />
