@@ -44,9 +44,11 @@ const showAfter = computed(() => props.position === 'after' && !onPlatformPage.v
 </template>
 
 <style scoped>
+/* Section break between the shared zone and the platform zone: a full-width divider (bleeds over the
+   sidebar's 32px side padding) with generous space on both sides, then the switcher as the zone header */
 .platform-block {
-  margin: 0;
-  padding: 16px 0 8px;
+  margin: 20px -32px 16px;
+  padding: 24px 32px 0;
   border-top: 1px solid var(--vp-c-divider);
 }
 </style>

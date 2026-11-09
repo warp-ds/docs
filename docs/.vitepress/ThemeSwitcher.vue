@@ -62,7 +62,7 @@ const visible = computed(() => props.inHeader || !isItemPage.value);
 select {
   height: 32px;
   padding: 0 32px 0 12px;
-  border: 1px solid var(--vp-c-divider);
+  border: 1px solid var(--warp-control-border);
   border-radius: var(--warp-radius-s);
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
@@ -71,11 +71,11 @@ select {
   font-weight: 600;
   cursor: pointer;
   appearance: none;
-  transition: border-color 0.15s ease;
+  transition: border-color var(--warp-duration) var(--warp-ease);
 }
 
 select:hover {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--warp-control-border-hover);
 }
 
 select:focus-visible {

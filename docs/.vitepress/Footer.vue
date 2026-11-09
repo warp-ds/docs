@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer-column logo-column">
-      <div style="width:122px;">
+      <div class="footer-logo">
         <WarpLogo />
       </div>
     </div>
@@ -26,104 +26,85 @@ import WarpLogo from '../src/warp-logo.svg';
 </script>
 
 <style scoped>
+/* Quiet footer: the logo on the left, two link columns, aligned with the content area (not the sidebar) */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: var(--vp-c-bg);
-  border-top: 1px solid var(--vp-c-gutter);
-  width: 100%;
   position: relative;
   z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+  padding: 40px 24px 48px;
+  border-top: 1px solid var(--vp-c-divider);
+  background-color: #ffffff;
+  overflow: hidden;
 }
 
-.footer::before,
-.footer::after {
+html.dark .footer {
+  background-color: var(--vp-c-bg-alt);
+}
+
+/* faint star field from the Warp brand assets */
+.footer::before {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  width: 100%;
-  z-index: 1;
+  inset: auto 0 0;
+  height: 104px;
+  background: url('/stars-background.svg') no-repeat center/cover;
+  opacity: 0.6;
   pointer-events: none;
 }
 
-.footer::before {
-  bottom: 0;
-  height: 104px;
-  background: url('/stars-background.svg') no-repeat center/cover;
-}
-/*
-.footer::after {
-   top: -8px;
-  height: 8px;
-  background: url('hero-wavy-line.svg') no-repeat center/cover;
-  transform: scaleY(-1);
-}
-*/
 .footer-column {
-  flex: 1;
-  margin: 0 20px;
-  z-index: 2;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-logo {
+  width: 96px;
 }
 
 .footer-column-title {
-  font-size: 14px;
+  margin: 0 0 4px;
+  font-size: 13px;
   font-weight: 600;
-  color: var(--vp-c-brand-1);
-  text-transform: uppercase;
-  margin-bottom: 10px;
+  line-height: 20px;
+  color: var(--vp-c-text-1);
 }
 
 .footer-link {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--vp-c-text-1);
-  font-size: 16px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color var(--warp-duration) var(--warp-ease);
 }
 
 .footer-link:hover {
-  text-decoration: underline;
+  color: var(--vp-c-brand-1);
 }
 
-.logo-column {
-  display: flex;
-  justify-content: flex-start;
+.footer-link:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-/* Media Queries */
+@media (min-width: 640px) {
+  .footer {
+    grid-template-columns: 2fr 1fr 1fr;
+    padding: 48px 48px 56px;
+  }
+}
+
 @media (min-width: 960px) {
   .has-sidebar ~ .footer {
     width: calc(100% - var(--vp-sidebar-width, 300px));
     margin-left: var(--vp-sidebar-width, 300px);
-  }
-}
-
-@media (min-width: 1440px) {
-  .has-sidebar ~ .footer {
-    width: calc(100% - ((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px));
-    margin-left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
-  }
-}
-
-@media (max-width: 960px) {
-  .footer {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .footer-column {
-    margin: 12px 0;
-    text-align: left;
-    width: 100%;
-  }
-
-  .footer-link {
-    font-size: 14px;
-  }
-
-  .footer-column-title {
-    font-size: 12px;
   }
 }
 </style>

@@ -121,8 +121,8 @@ const frameworks = computed(() => {
 .status {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 16px;
+  gap: 6px;
+  margin: 0 0 20px;
   padding: 0;
   list-style: none;
 }
@@ -189,14 +189,18 @@ const frameworks = computed(() => {
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition:
+    color var(--warp-duration) var(--warp-ease),
+    border-color var(--warp-duration) var(--warp-ease);
 }
 
 .page-tab:hover {
   color: var(--vp-c-text-1);
+  border-bottom-color: var(--warp-control-border-hover);
 }
 
-.page-tab.active {
+.page-tab.active,
+.page-tab.active:hover {
   color: var(--vp-c-brand-1);
   border-bottom-color: var(--vp-c-brand-1);
 }
@@ -240,22 +244,27 @@ const frameworks = computed(() => {
 }
 
 .frameworks a {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: var(--warp-radius-s);
   color: var(--vp-c-text-2);
   font-weight: 600;
   text-decoration: none;
+  transition:
+    color var(--warp-duration) var(--warp-ease),
+    background-color var(--warp-duration) var(--warp-ease);
 }
 
 .frameworks a:hover {
   color: var(--vp-c-text-1);
-  background: var(--vp-c-bg-soft);
+  background: var(--warp-nav-hover-bg);
 }
 
 .frameworks a.current {
-  color: var(--vp-c-text-1);
-  background: var(--vp-c-default-soft);
+  color: var(--vp-c-brand-1);
+  background: var(--warp-nav-active-bg);
 }
 
 .component-nav :deep(.seeded-notice) {

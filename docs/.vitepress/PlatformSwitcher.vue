@@ -166,10 +166,10 @@ function onFocusOut(event) {
 
 .label {
   display: block;
-  padding: 0 0 6px;
-  font-size: 12px;
+  padding: 0 0 8px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--vp-c-text-2);
 }
@@ -180,18 +180,20 @@ function onFocusOut(event) {
   justify-content: space-between;
   width: 100%;
   min-height: 36px;
-  padding: 6px 10px;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 6px;
+  padding: 6px 10px 6px 12px;
+  border: 1px solid var(--warp-control-border);
+  border-radius: var(--warp-radius-s);
   background: var(--vp-c-bg);
+  box-shadow: var(--warp-shadow-1);
   color: var(--vp-c-text-1);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  transition: border-color var(--warp-duration) var(--warp-ease);
 }
 
 .trigger:hover {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--warp-control-border-hover);
 }
 
 .trigger:focus-visible,
@@ -203,7 +205,8 @@ function onFocusOut(event) {
 .chevron {
   width: 16px;
   height: 16px;
-  transition: transform 0.15s ease;
+  color: var(--vp-c-text-2);
+  transition: transform var(--warp-duration) var(--warp-ease);
 }
 
 .chevron.open {
@@ -219,8 +222,8 @@ function onFocusOut(event) {
   margin: 0;
   padding: 4px;
   list-style: none;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 6px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--warp-radius-s);
   background: var(--vp-c-bg-elv);
   box-shadow: var(--vp-shadow-3);
 }
@@ -229,8 +232,8 @@ function onFocusOut(event) {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 8px;
-  border-radius: 4px;
+  padding: 7px 8px;
+  border-radius: 6px;
   font-size: 14px;
   color: var(--vp-c-text-1);
   cursor: pointer;

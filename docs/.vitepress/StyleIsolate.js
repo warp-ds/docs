@@ -62,9 +62,9 @@ if (typeof window !== 'undefined' && !customElements.get('style-isolate')) {
             font-weight: bold;
           }
           .component {
-            padding: 16px;
-            border: 2px solid var(--vp-c-gray-1);
-            border-radius: 8px;
+            padding: var(--warp-example-padding, 24px);
+            border: 1px solid var(--warp-example-border, var(--vp-c-divider));
+            border-radius: var(--warp-example-radius, 12px);
             background-color: var(--w-s-color-background);
           }
           .space-y-16 > * + * {

@@ -179,15 +179,21 @@ ul {
 }
 
 .crumbs li + li::before {
-  content: '/';
-  margin: 0 8px;
-  color: var(--vp-c-text-3);
+  content: '';
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin: 0 10px 1px 8px;
+  border-top: 1.5px solid var(--vp-c-text-3);
+  border-right: 1.5px solid var(--vp-c-text-3);
+  transform: rotate(45deg);
 }
 
 .crumbs a {
   color: var(--vp-c-text-2);
   font-weight: 500;
   text-decoration: none;
+  transition: color var(--warp-duration) var(--warp-ease);
 }
 
 .crumbs a:hover {
@@ -211,7 +217,7 @@ ul {
   gap: 2px;
   padding: 2px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  border-radius: var(--warp-radius-s);
   background: var(--vp-c-bg-soft);
 }
 
@@ -232,6 +238,10 @@ ul {
   white-space: nowrap;
   text-decoration: none;
   cursor: pointer;
+  transition:
+    color var(--warp-duration) var(--warp-ease),
+    background-color var(--warp-duration) var(--warp-ease),
+    box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 a.seg:hover,
@@ -242,7 +252,11 @@ button.seg:hover {
 .seg.current {
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
-  box-shadow: 0 0 0 1px var(--vp-c-divider), 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0 0 1px var(--vp-c-divider), var(--warp-shadow-1);
+}
+
+html.dark .seg.current {
+  background: var(--vp-c-bg-elv);
 }
 
 .seg.unavailable {
@@ -270,8 +284,8 @@ button.seg:hover {
   min-width: 220px;
   padding: 6px;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
-  background: var(--vp-c-bg);
+  border-radius: var(--warp-radius-m);
+  background: var(--vp-c-bg-elv);
   box-shadow: var(--vp-shadow-3);
 }
 
@@ -284,7 +298,7 @@ button.seg:hover {
 }
 
 .menu a:hover {
-  background: var(--vp-c-bg-soft);
+  background: var(--warp-nav-hover-bg);
 }
 
 .menu a[aria-current='page'] {

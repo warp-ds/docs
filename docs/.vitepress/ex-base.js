@@ -30,8 +30,8 @@ export const buildWc = (elementName, baseVueComponent, rootProperties) => {
           --ex-bg-el-color: #3b82f680;
           --ex-bg-bg-color: #60a5fa1a;
           padding: 32px;
-          border: 2px solid var(--vp-c-gray-1);
-          border-radius: 8px;
+          border: 1px solid var(--warp-example-border, var(--vp-c-divider));
+          border-radius: var(--warp-example-radius, 12px);
           margin-bottom: 8px;
           background-color: var(--vp-c-bg-soft);
           color: var(--vp-c-text-2);
@@ -58,9 +58,9 @@ export const buildWc = (elementName, baseVueComponent, rootProperties) => {
           background: linear-gradient(to bottom right, transparent 0%, transparent 47%, rgba(var(--w-s-rgb-border-warning), .2) 48%, rgba(var(--w-s-rgb-border-warning), .2) 52%, transparent 53%, transparent 100%);
         }
         .component {
-          padding: 16px;
-          border: 2px solid var(--vp-c-gray-1);
-          border-radius: 8px;
+          padding: var(--warp-example-padding, 24px);
+          border: 1px solid var(--warp-example-border, var(--vp-c-divider));
+          border-radius: var(--warp-example-radius, 12px);
           margin-bottom: 8px;
           background-color: var(--w-s-color-background);
         }

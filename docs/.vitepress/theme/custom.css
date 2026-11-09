@@ -4,7 +4,7 @@
 
 :root {
   /* Tokens that are the same in light and dark mode */
-  --vp-radius: 4px;
+  --vp-radius: 8px;
   --vp-c-bg-banner: #182237;
 
   --vp-font-size-1: 52px;
@@ -33,6 +33,8 @@
   --vp-c-bg-soft: #f6f6f7;
   --vp-c-bg-soft-inverted: #182237;
   --vp-c-bg-alt: #f5f5f5;
+  /* sidebar: a lighter grey than --vp-c-bg-alt, just enough to set it apart from the white page */
+  --vp-sidebar-bg-color: #fafafb;
   /* These are for svgs, to make them contrasty enough both in light and dark mode */
   --vp-c-svg1: #fffbd5;
   --vp-c-svg2: #131b2d;
@@ -41,71 +43,86 @@
   --vp-c-svg11: #131b2d;
   --vp-c-svg12: #ffffff;
 
-  --ds-fw-chip-released-bg: #2e7d32;
-  --ds-fw-chip-released-fg: #ffffff;
-
-  --ds-fw-chip-beta-bg: #a06a00; /* yellow/orange */
-  --ds-fw-chip-beta-fg: #ffffff;
-
-  --ds-fw-chip-developing-bg: #a46000;
-  --ds-fw-chip-developing-fg: #ffffff;
-
-  --ds-fw-chip-planned-bg: #0b5fad;
-  --ds-fw-chip-planned-fg: #ffffff;
-
-  --ds-fw-chip-unsupported-bg: #777777;
-  --ds-fw-chip-unsupported-fg: #ffffff;
-
-  --ds-fw-chip-deprecated-bg: #be3830;
-  --ds-fw-chip-deprecated-fg: #fff;
+  /* Status (Badge.vue): soft tint, readable text (≥ 4.5:1 on its tint) and a saturated dot */
+  --ds-status-released-bg: #e6f4ea;
+  --ds-status-released-fg: #1e6b2c;
+  --ds-status-released-dot: #2e9d4a;
+  --ds-status-beta-bg: #fdf1d8;
+  --ds-status-beta-fg: #7d5200;
+  --ds-status-beta-dot: #d99a00;
+  --ds-status-developing-bg: #fdebd8;
+  --ds-status-developing-fg: #864a00;
+  --ds-status-developing-dot: #e07b00;
+  --ds-status-planned-bg: #e3eefb;
+  --ds-status-planned-fg: #0b5394;
+  --ds-status-planned-dot: #2b7de1;
+  --ds-status-legacy-bg: #efeff2;
+  --ds-status-legacy-fg: #55555d;
+  --ds-status-legacy-dot: #9a9aa3;
+  --ds-status-deprecated-bg: #fbe7e5;
+  --ds-status-deprecated-fg: #a3302a;
+  --ds-status-deprecated-dot: #d6453c;
 }
 
 /* Dark mode */
 html.dark {
-  --vp-c-brand-1: #f6d553;
-  --vp-c-brand-2: #f6d553;
-  --vp-c-brand-3: #f6d553;
-  --vp-c-brand-soft: var(--vp-c-indigo-soft);
-  --vp-home-hero-name-color: #f6d553;
-  --vp-c-text-1: #fffbd5;
-  --vp-c-text-1-inverted: #1d1d22;
-  --vp-sidebar-bg-color: #182237;
-  --vp-c-bg: #131b2d;
+  /* Brand stays Warp red in dark mode. brand-1 (text, links, active states) is lifted so it reads on the
+     near-black surfaces (≈ 6:1 on --vp-c-bg); brand-3 is the solid fill behind white text (≈ 5:1). */
+  --vp-c-brand-1: #f26b60;
+  --vp-c-brand-2: #f6877d;
+  --vp-c-brand-3: #c63f36;
+  --vp-c-brand-soft: rgba(242, 107, 96, 0.14);
+  --vp-home-hero-name-color: #f26b60;
+  /* Near-black surfaces with a slight blue cast: sidebar and code a step darker than the page, cards and
+     menus a step lighter */
+  --vp-c-bg: #0e1015;
+  --vp-c-bg-alt: #0a0b0f;
+  --vp-c-bg-soft: #15181f;
+  --vp-c-bg-elv: #1a1d25;
+  --vp-sidebar-bg-color: #0a0b0f;
+  --vp-nav-bg-color: #0e1015;
   --vp-c-bg-inverted: #ffffff;
-  --vp-c-bg-soft: #182237;
   --vp-c-bg-soft-inverted: #f6f6f7;
-  --vp-c-bg-alt: #0b0f1d;
-  --vp-nav-bg-color: #131b2d;
-  --vp-code-color: #efc2bf;
+  --vp-c-divider: #242833;
+  --vp-c-gutter: #050608;
+  --vp-c-border: #4a4f5c;
+  --vp-c-default-soft: rgba(150, 160, 185, 0.14);
+  /* near-white text with the same cool cast; solid greys for secondary text
+     (text-2 ≈ 11:1, text-3 ≈ 6:1 on --vp-c-bg) */
+  --vp-c-text-1: #eceef3;
+  --vp-c-text-2: #c2c6d0;
+  --vp-c-text-3: #8b91a0;
+  --vp-c-text-1-inverted: #1d1d22;
+  --vp-code-color: #f4a49c;
   --vp-c-tip-1: var(--vp-code-color);
-  --vp-code-bg: #0b0f1d;
+  --vp-code-bg: #1a1d25;
   --vp-custom-block-tip-code-bg: var(--vp-code-bg);
-  --vp-code-block-bg: #0b0f1d;
-  --vp-c-border: #5c5c66;
-  --vp-c-svg1: #fffbd5;
-  --vp-c-svg2: #9eacc9;
-  --vp-c-svg3: #d4d9e3;
-  --vp-c-svg10: #1b263e;
+  --vp-code-block-bg: #0a0b0f;
+  --vp-c-svg1: #eceef3;
+  --vp-c-svg2: #9aa2b4;
+  --vp-c-svg3: #d4d8e0;
+  --vp-c-svg10: #1a1d25;
   --vp-c-svg11: #ffffff;
   --vp-c-svg12: #000000;
 
-  --ds-fw-chip-released-bg: #2e7d32;
-  --ds-fw-chip-released-fg: #ffffff;
-
-  --ds-fw-chip-beta-bg: #b07d00; /* a touch brighter in dark */
-  --ds-fw-chip-beta-fg: #ffffff;
-
-  --ds-fw-chip-developing-bg: #a46000;
-  --ds-fw-chip-developing-fg: #ffffff;
-
-  --ds-fw-chip-planned-bg: #0b5fad;
-  --ds-fw-chip-planned-fg: #ffffff;
-
-  --ds-fw-chip-unsupported-bg: #555555;
-  --ds-fw-chip-unsupported-fg: #ffffff;
-
-  --ds-fw-chip-deprecated-bg: #be3830;
-  --ds-fw-chip-deprecated-fg: #fff;
+  --ds-status-released-bg: rgba(76, 194, 116, 0.16);
+  --ds-status-released-fg: #8fdca7;
+  --ds-status-released-dot: #4cc274;
+  --ds-status-beta-bg: rgba(240, 183, 58, 0.16);
+  --ds-status-beta-fg: #f6d27a;
+  --ds-status-beta-dot: #f0b73a;
+  --ds-status-developing-bg: rgba(239, 148, 64, 0.16);
+  --ds-status-developing-fg: #f6b679;
+  --ds-status-developing-dot: #ef9440;
+  --ds-status-planned-bg: rgba(90, 160, 240, 0.16);
+  --ds-status-planned-fg: #9cc6f6;
+  --ds-status-planned-dot: #5aa0f0;
+  --ds-status-legacy-bg: rgba(158, 172, 201, 0.14);
+  --ds-status-legacy-fg: #c3c9d6;
+  --ds-status-legacy-dot: #8e98ae;
+  --ds-status-deprecated-bg: rgba(238, 107, 96, 0.16);
+  --ds-status-deprecated-fg: #f4a49c;
+  --ds-status-deprecated-dot: #ee6b60;
 }
 
 /* Map the custom doc content to the --vp tokens, or set them directly */
@@ -158,10 +175,8 @@ html.dark body {
   color: var(--vp-c-text-1);
 }
 
-.dark .VPNavBarTitle {
-  --vp-c-text-1: #f6d553;
-}
-.dark .VPNavBarTitle .title {
+/* no divider under the site title above the sidebar (VitePress draws one from 960px), in either mode */
+.VPNavBarTitle .title {
   border-bottom-color: transparent !important;
 }
 .VPNavBar .container {
@@ -169,9 +184,6 @@ html.dark body {
 }
 .VPNavBar .divider {
   padding-left: 0 !important;
-}
-.dark .VPSidebar {
-  --vp-c-divider: #fffbd525;
 }
 
 .dark .VPHero .image-bg {
@@ -272,20 +284,43 @@ html.dark body {
 .VPSidebarItem.has-active.collapsible > .item .caret {
   color: var(--vp-c-text-1);
 }
-.VPSidebarItem.collapsible .item:hover *,
-.VPSidebarItem.has-active.collapsible > .item:hover .text {
-  color: var(--vp-c-brand-2);
+.VPSidebarItem.collapsible > .item:hover .text {
+  color: var(--vp-c-text-1);
 }
-.VPSidebar .VPSidebarGroup + .VPSidebarGroup {
-  border-top: 1px solid var(--vp-c-divider);
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
+/* Sidebar rhythm: two zones, shared (Get started … About Warp) and platform (switcher + its tree).
+   Inside a zone the top-level rows form one compact list (no divider between every row); the only
+   divider is the full-width break before the Platform switcher (SidebarComposer.vue .platform-block). */
+.VPSidebar .nav .group,
+.VPSidebar .nav .group + .group {
+  padding-top: 0;
+  border-top: 0;
 }
-/* Top-level links without children (Patterns, platform Overview) get the same rhythm as the collapsed
-   groups (VitePress gives non-collapsible level-0 items 24px) */
-.VPSidebar .VPSidebarItem.level-0.is-link:not(.collapsible) {
-  padding-bottom: 10px;
+
+.VPSidebar .VPSidebarItem.level-0,
+.VPSidebar .VPSidebarItem.collapsed.level-0 {
+  padding-bottom: 4px;
 }
+
+/* roomier rows at every level: 36px tall (VitePress: 32px) with 2px between rows */
+.VPSidebar .VPSidebarItem .item .text {
+  padding: 6px 0;
+}
+
+.VPSidebar .VPSidebarItem .item .caret {
+  height: 36px;
+}
+
+/* an open section keeps some air before the next top-level row */
+.VPSidebar .VPSidebarItem.level-0.collapsible:not(.collapsed) {
+  padding-bottom: 12px;
+}
+
+/* the first row of the sidebar, whichever zone renders first */
+.VPSidebar .nav > .group:first-of-type,
+.VPSidebar .nav > .sidebar-composer > .group:first-child {
+  padding-top: 16px;
+}
+
 /* ---------------------------------------------------------------
    Image plate
 
@@ -432,9 +467,9 @@ html.dark body {
   font-weight: 600;
 }
 .component {
-  padding: 16px;
-  border: 2px solid var(--vp-c-gray-1);
-  border-radius: 8px;
+  padding: var(--warp-example-padding);
+  border: 1px solid var(--warp-example-border);
+  border-radius: var(--warp-example-radius);
   margin-bottom: 8px;
   background-color: var(--w-s-color-background);
 }
@@ -449,7 +484,7 @@ td:has(.td-reset) {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto;
   column-gap: 18px;
-  border: 2px solid var(--vp-c-gray-1);
+  border: 1px solid var(--vp-c-divider);
   border-radius: 12px;
   overflow: hidden;
 }
@@ -485,6 +520,21 @@ td:has(.td-reset) {
   max-width: var(--warp-doc-width);
 }
 
+/* With --vp-layout-max-width: 100vw, VitePress sizes the sidebar and the nav title area at >=1440px from
+   "100% - 100vw", which leaves them half a scrollbar narrower than the content offset (a ~7px gap next to
+   full-bleed content such as the home hero). Pin both to the sidebar width the content uses. */
+@media (min-width: 1440px) {
+  .Layout aside.VPSidebar {
+    width: var(--vp-sidebar-width);
+    padding-left: 32px;
+  }
+
+  .VPNav .VPNavBar.has-sidebar .container .title {
+    width: var(--vp-sidebar-width);
+    padding-left: 32px;
+  }
+}
+
 @media (min-width: 1280px) {
   .VPContent .VPDoc .content {
     min-width: 0;
@@ -513,7 +563,7 @@ td:has(.td-reset) {
    Docs UI system: one spacing scale, one radius scale, one card pattern for the whole site.
    Used by NavCards, PlatformOverview, DsOverview, PatternsIndex, What's new and the home page.
      spacing  4 · 8 · 12 · 16 · 24 · 32 · 48 · 64
-     radius   8 (controls) · 12 (cards) · 16 (panels)
+     radius   8 (controls) · 12 (icon tiles, code, callouts, tables) · 24 (cards) · 32 (panels)
    --------------------------------------------------------------------------------------------------- */
 :root {
   --warp-space-1: 4px;
@@ -526,9 +576,16 @@ td:has(.td-reset) {
   --warp-space-16: 64px;
   --warp-radius-s: 8px;
   --warp-radius-m: 12px;
-  --warp-radius-l: 16px;
+  --warp-radius-l: 24px;
+  --warp-radius-xl: 32px;
   --warp-card-padding: var(--warp-space-6);
   --warp-card-gap: var(--warp-space-4);
+  /* Cards are flat: a 1px divider border, no shadow at rest or on hover; hover only turns the border
+     brand red. Corners 24px; icon tiles keep 12px (24px would turn a 40-48px tile into a circle). */
+  --warp-card-radius: var(--warp-radius-l);
+  --warp-card-border: var(--vp-c-divider);
+  --warp-card-border-hover: var(--vp-c-brand-1);
+  --warp-card-icon-radius: var(--warp-radius-m);
 }
 
 /* Grid of cards */
@@ -573,23 +630,20 @@ td:has(.td-reset) {
   flex-direction: column;
   height: 100%;
   padding: var(--warp-card-padding);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: var(--warp-radius-m);
+  border: 1px solid var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
   background: var(--vp-c-bg);
   color: var(--vp-c-text-1);
   font-weight: 400;
   text-decoration: none;
   overflow: hidden;
   transition:
-    border-color 0.15s ease,
-    box-shadow 0.15s ease,
-    transform 0.15s ease;
+    border-color var(--warp-duration) var(--warp-ease),
+    box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 a.dc-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: var(--vp-shadow-3);
-  transform: translateY(-2px);
+  border-color: var(--warp-card-border-hover);
 }
 
 a.dc-card:focus-visible {
@@ -605,12 +659,12 @@ a.dc-card:focus-visible {
   width: 40px;
   height: 40px;
   margin-bottom: var(--warp-space-4);
-  border-radius: 10px;
+  border-radius: var(--warp-card-icon-radius);
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
   transition:
-    background-color 0.15s ease,
-    color 0.15s ease;
+    background-color var(--warp-duration) var(--warp-ease),
+    color var(--warp-duration) var(--warp-ease);
 }
 
 .dc-card__icon svg {
@@ -629,6 +683,7 @@ a.dc-card:hover .dc-card__icon {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.4;
+  letter-spacing: -0.01em;
   color: var(--vp-c-text-1);
 }
 
@@ -658,8 +713,8 @@ a.dc-card:hover .dc-card__icon {
   height: 16px;
   color: var(--vp-c-text-3);
   transition:
-    color 0.15s ease,
-    transform 0.15s ease;
+    color var(--warp-duration) var(--warp-ease),
+    transform var(--warp-duration) var(--warp-ease);
 }
 
 a.dc-card:hover .dc-card__arrow {
@@ -679,11 +734,17 @@ a.dc-card:hover .dc-card__arrow {
   aspect-ratio: 16 / 10;
   border-bottom: 1px solid var(--vp-c-divider);
   background: var(--vp-c-bg-soft);
+  transition: background-color var(--warp-duration) var(--warp-ease);
 }
 
 .dc-card__media > * {
   max-width: 72%;
   max-height: 72%;
+  transition: transform 0.24s var(--warp-ease);
+}
+
+a.dc-card:hover .dc-card__media > * {
+  transform: scale(1.04);
 }
 
 .dc-card__body {
@@ -742,8 +803,415 @@ a.dc-card:hover .dc-card__arrow {
     transition: none;
   }
 
-  a.dc-card:hover,
-  a.dc-card:hover .dc-card__arrow {
+  a.dc-card:hover .dc-card__arrow,
+  a.dc-card:hover .dc-card__media > * {
     transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------------------------------
+   Polish layer: shared motion, elevation and focus tokens, then the VitePress chrome (nav, sidebar,
+   outline, pager) and the doc content (links, headings, code, callouts, tables) tuned to one look.
+   Colours come from the --vp-* tokens above, so light and dark stay paired.
+   --------------------------------------------------------------------------------------------------- */
+:root {
+  --warp-duration: 160ms;
+  --warp-ease: cubic-bezier(0.2, 0, 0, 1);
+  --warp-shadow-1: 0 1px 2px rgba(16, 24, 40, 0.05);
+  --warp-shadow-2: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.06);
+  --warp-shadow-3: 0 2px 4px rgba(16, 24, 40, 0.04), 0 12px 28px -6px rgba(16, 24, 40, 0.12);
+  --warp-control-border: color-mix(in srgb, var(--vp-c-text-1) 16%, transparent);
+  --warp-control-border-hover: color-mix(in srgb, var(--vp-c-text-1) 32%, transparent);
+  --warp-nav-hover-bg: color-mix(in srgb, var(--vp-c-text-1) 5%, transparent);
+  --warp-nav-active-bg: color-mix(in srgb, var(--vp-c-brand-1) 9%, transparent);
+  --warp-example-border: var(--vp-c-divider);
+  --warp-example-radius: var(--warp-radius-m);
+  --warp-example-padding: var(--warp-space-6);
+  --vp-shadow-3: var(--warp-shadow-3);
+  --vp-code-block-bg: #f7f7f8;
+}
+
+html.dark {
+  --warp-shadow-1: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --warp-shadow-2: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --warp-shadow-3: 0 2px 4px rgba(0, 0, 0, 0.3), 0 12px 28px -6px rgba(0, 0, 0, 0.5);
+  --warp-nav-active-bg: color-mix(in srgb, var(--vp-c-brand-1) 14%, transparent);
+  --vp-code-block-bg: #0a0b0f;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--vp-c-brand-1) 22%, transparent);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ---------- Nav bar: translucent with a blur, so the page stays present while you scroll ---------- */
+.VPNav .VPNavBar,
+.VPNav .VPNavBar.has-sidebar,
+.VPNav .VPNavBar:not(.home.top) {
+  background-color: color-mix(in srgb, var(--vp-c-bg) 82%, transparent);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  backdrop-filter: saturate(180%) blur(14px);
+}
+
+.VPNav .VPNavBar .container,
+.VPNav .VPNavBar .content-body,
+.VPNav .VPNavBar.has-sidebar .title,
+.VPNav .VPNavBar:not(.home.top) .content-body {
+  background-color: transparent;
+}
+
+.VPNav .VPNavBar.screen-open {
+  background-color: var(--vp-c-bg);
+}
+
+.VPNav .VPNavBar .divider-line {
+  background-color: var(--vp-c-divider);
+}
+
+.VPNavBarTitle .title {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.VPNavBarMenuLink {
+  border-radius: var(--warp-radius-s);
+  transition: color var(--warp-duration) var(--warp-ease);
+}
+
+/* Search (desktop field; on phones it is an icon button and stays borderless) */
+@media (min-width: 768px) {
+  .DocSearch-Button {
+    border: 1px solid var(--vp-c-divider) !important;
+    border-radius: var(--warp-radius-s) !important;
+    transition:
+      border-color var(--warp-duration) var(--warp-ease),
+      background-color var(--warp-duration) var(--warp-ease) !important;
+  }
+
+  .DocSearch-Button:hover {
+    border-color: var(--warp-control-border-hover) !important;
+  }
+
+  .DocSearch-Button-Key {
+    border-radius: 4px !important;
+  }
+}
+
+/* ---------- Sidebar: rows are soft pills, the current page is tinted with the brand ---------- */
+.VPSidebar {
+  border-right: 1px solid var(--vp-c-divider);
+}
+
+.VPSidebar .VPSidebarItem > .item {
+  margin: 2px 0 2px -8px;
+  padding: 0 8px;
+  width: calc(100% + 8px);
+  border-radius: var(--warp-radius-s);
+  transition: background-color var(--warp-duration) var(--warp-ease);
+}
+
+.VPSidebar .VPSidebarItem.is-link > .item:hover,
+.VPSidebar .VPSidebarItem.collapsible > .item:hover {
+  background-color: var(--warp-nav-hover-bg);
+}
+
+.VPSidebar .VPSidebarItem.is-active > .item {
+  background-color: var(--warp-nav-active-bg);
+}
+
+.VPSidebar .VPSidebarItem.is-active > .item .text {
+  font-weight: 600;
+}
+
+/* the pill marks the current page, the thin bar is no longer needed */
+.VPSidebar .VPSidebarItem > .item > .indicator {
+  display: none;
+}
+
+.VPSidebar .VPSidebarItem .text {
+  transition: color var(--warp-duration) var(--warp-ease);
+}
+
+.VPSidebar .VPSidebarItem.is-link > .item > .link:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* ---------- Outline (On this page) ---------- */
+.VPDocAsideOutline .outline-title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.VPDocAsideOutline .outline-link {
+  font-size: 13px;
+  transition: color var(--warp-duration) var(--warp-ease);
+}
+
+.VPDocAsideOutline .outline-link.active {
+  font-weight: 500;
+}
+
+/* ---------- Doc content ---------- */
+.vp-doc h1 {
+  letter-spacing: -0.025em;
+}
+
+.vp-doc h2 {
+  letter-spacing: -0.02em;
+}
+
+.vp-doc h3,
+.vp-doc h4 {
+  letter-spacing: -0.01em;
+}
+
+/* the item description right under the page header reads as a lead paragraph */
+.vp-doc .component-nav + p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc p,
+.vp-doc li {
+  line-height: 1.65;
+}
+
+.vp-doc li + li {
+  margin-top: 6px;
+}
+
+/* links: a soft underline that firms up on hover (only refines links that are underlined already) */
+.vp-doc a {
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+  text-underline-offset: 3px;
+  transition:
+    color var(--warp-duration) var(--warp-ease),
+    text-decoration-color var(--warp-duration) var(--warp-ease);
+}
+
+.vp-doc a:hover {
+  text-decoration-color: currentColor;
+}
+
+.vp-doc a:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.vp-doc :not(pre) > code {
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.875em;
+}
+
+.vp-doc hr {
+  margin: 48px 0;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc blockquote {
+  border-left: 3px solid var(--vp-c-divider);
+  padding-left: 16px;
+  color: var(--vp-c-text-2);
+}
+
+/* ---------- Code blocks ---------- */
+.vp-doc div[class*="language-"] {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--warp-radius-m);
+}
+
+@media (max-width: 639px) {
+  .vp-doc div[class*="language-"] {
+    border-radius: var(--warp-radius-s);
+  }
+}
+
+.vp-doc div[class*="language-"] > span.lang {
+  top: 8px;
+  right: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+}
+
+.vp-doc div[class*="language-"] > button.copy {
+  top: 8px;
+  right: 8px;
+  border-radius: var(--warp-radius-s);
+}
+
+.vp-code-group .tabs {
+  border: 1px solid var(--vp-c-divider);
+  border-bottom: 0;
+  border-radius: var(--warp-radius-m) var(--warp-radius-m) 0 0;
+}
+
+.vp-code-group div[class*="language-"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* ---------- Callouts (tip, info, warning, danger, details, the pending-review notice) ---------- */
+.custom-block {
+  border: 1px solid transparent;
+  border-radius: var(--warp-radius-m);
+  padding: 16px 20px 8px;
+  line-height: 1.6;
+}
+
+.custom-block.info {
+  border-color: color-mix(in srgb, var(--vp-c-text-1) 8%, transparent);
+}
+
+.custom-block.tip {
+  border-color: color-mix(in srgb, var(--vp-c-tip-1) 22%, transparent);
+}
+
+.custom-block.warning {
+  border-color: color-mix(in srgb, var(--vp-c-warning-1) 26%, transparent);
+}
+
+.custom-block.danger {
+  border-color: color-mix(in srgb, var(--vp-c-danger-1) 22%, transparent);
+}
+
+.custom-block.details {
+  border-color: var(--vp-c-divider);
+}
+
+.custom-block .custom-block-title {
+  font-weight: 600;
+}
+
+/* ---------- Tables: one rounded frame, quiet header, row hover ---------- */
+.vp-doc table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--warp-radius-m);
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.vp-doc tr {
+  border-top: 0;
+  background-color: transparent;
+  transition: background-color var(--warp-duration) var(--warp-ease);
+}
+
+.vp-doc tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+.vp-doc tbody tr:hover {
+  background-color: color-mix(in srgb, var(--vp-c-bg-soft) 70%, transparent);
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 10px 16px;
+  line-height: 1.55;
+}
+
+.vp-doc th + th,
+.vp-doc td + td {
+  border-left: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-soft);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+/* ---------- Edit link and prev / next ---------- */
+.VPDocFooter .edit-link-button {
+  color: var(--vp-c-text-2);
+  font-weight: 500;
+  transition: color var(--warp-duration) var(--warp-ease);
+}
+
+.VPDocFooter .edit-link-button:hover {
+  color: var(--vp-c-brand-1);
+}
+
+.VPDocFooter .pager-link {
+  padding: 14px 18px;
+  border-color: var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
+  transition:
+    border-color var(--warp-duration) var(--warp-ease),
+    box-shadow var(--warp-duration) var(--warp-ease);
+}
+
+.VPDocFooter .pager-link:hover {
+  border-color: var(--warp-card-border-hover);
+}
+
+.VPDocFooter .pager-link .desc {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+}
+
+.VPDocFooter .pager-link .title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* ---------- Doc-wide controls (legacy helper classes) ---------- */
+.doc-button:focus-visible,
+.doc-pill:focus-visible,
+.doc-input:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
+}
+
+.doc-input {
+  border-color: var(--warp-control-border);
+  transition: border-color var(--warp-duration) var(--warp-ease);
+}
+
+.doc-input:hover {
+  border-color: var(--warp-control-border-hover);
+}
+
+.beta-badge {
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* ---------- Motion preferences ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .VPDocFooter .pager-link,
+  .VPSidebar .VPSidebarItem > .item,
+  .vp-doc tr {
+    transition: none;
   }
 }

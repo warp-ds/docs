@@ -1,10 +1,18 @@
 <script setup>
 // Home page (layout: page, so the sidebar is visible from the start — Fluent 2 style).
 // Platform numbers come from platform-manifest.json, so they stay current.
-import { withBase } from 'vitepress';
+import { useData, withBase } from 'vitepress';
+import { computed } from 'vue';
 import HeroSVG from '../src/warp-hero.svg';
 import CardIcon from './CardIcon.vue';
 import manifest from './platform-manifest.json';
+import WayglimBackground from './WayglimBackground.vue';
+
+// The Wayglim engine composites over one flat colour; render it over pure white (light) or pure black (dark)
+// and let the blend mode on .hero-bg (multiply / screen) drop that colour, so only the light lands on the hero's
+// own gradient. Changing the theme remounts the background with the other colour.
+const { isDark } = useData();
+const wayglimSettings = computed(() => ({ background: isDark.value ? [0, 0, 0] : [1, 1, 1] }));
 
 const count = (platform, type) => Object.keys(manifest[platform][type]).length;
 
@@ -108,6 +116,7 @@ const collaborate = [
 <template>
   <div class="home">
     <section class="hero" aria-labelledby="home-title">
+      <WayglimBackground class="hero-bg" :settings="wayglimSettings" />
       <div class="hero-text">
         <p class="eyebrow">Welcome to</p>
         <h1 id="home-title" class="title">Warp</h1>
@@ -201,21 +210,24 @@ const collaborate = [
           </a>
         </li>
       </ul>
-      <div class="collaborate-stars" aria-hidden="true" />
     </section>
   </div>
 </template>
 
 <style scoped>
+/* The hero runs the full width of the content area; every other section keeps the 1280px reading width */
 .home {
-  max-width: 1376px;
-  margin: 0 auto;
-  padding: 32px 24px 96px;
+  padding: 0 24px 96px;
+}
+
+.home > :not(.hero) {
+  max-width: 1280px;
+  margin-inline: auto;
 }
 
 @media (min-width: 960px) {
   .home {
-    padding: 48px 48px 128px;
+    padding: 0 48px 128px;
   }
 }
 
@@ -235,14 +247,39 @@ a:focus-visible {
   border-radius: 8px;
 }
 
-/* Hero */
+/* Hero: full width (it cancels the page's side padding), a vertical gradient from the page colour to a slightly
+   deeper one, and the interactive Wayglim light (WayglimBackground.vue) on top of it, behind the content */
 .hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 24px 40px;
-  padding: 48px 32px;
-  border-radius: var(--warp-radius-l);
-  background: linear-gradient(135deg, var(--vp-c-brand-soft), var(--vp-c-bg-soft) 60%);
+  gap: 40px;
+  margin: 0 -24px;
+  padding: 88px 24px 72px;
+  border-bottom: 1px solid var(--vp-c-divider);
+  background: linear-gradient(180deg, #ffffff 0%, #ececef 100%);
+}
+
+html.dark .hero {
+  background: linear-gradient(180deg, #08090c 0%, #101218 100%);
+}
+
+/* the engine draws over white / black; these blends drop that colour and keep the light */
+.hero-bg {
+  mix-blend-mode: multiply;
+}
+
+html.dark .hero-bg {
+  mix-blend-mode: screen;
+}
+
+.hero > .hero-text,
+.hero > .hero-art,
+.hero > .entries {
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -293,16 +330,16 @@ a:focus-visible {
   gap: 4px;
   height: 100%;
   padding: 24px 56px 24px 24px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: var(--warp-radius-m);
+  border: 1px solid var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
   background: var(--vp-c-bg);
-  box-shadow: var(--vp-shadow-2);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: border-color var(--warp-duration) var(--warp-ease), box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 .entry-title {
   font-size: 22px;
   font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--vp-c-text-1);
 }
 
@@ -324,15 +361,13 @@ a:focus-visible {
 }
 
 /* Every card on the home page has the same hover as the site's card pattern (.dc-card in custom.css):
-   brand border, shadow, 2px lift, and the arrow turns brand and nudges right */
+   flat, the border turns brand red, and the arrow turns brand and nudges right */
 .entry:hover,
 .platform:hover,
 .shared-card:hover,
 .quick-card:hover,
 .collaborate-card:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: var(--vp-shadow-3);
-  transform: translateY(-2px);
+  border-color: var(--warp-card-border-hover);
 }
 
 .card-arrow {
@@ -340,7 +375,7 @@ a:focus-visible {
   width: 16px;
   height: 16px;
   color: var(--vp-c-text-3);
-  transition: color 0.15s ease, transform 0.15s ease;
+  transition: color var(--warp-duration) var(--warp-ease), transform var(--warp-duration) var(--warp-ease);
 }
 
 .shared-card .card-arrow {
@@ -408,10 +443,10 @@ a:focus-visible {
   flex-direction: column;
   height: 100%;
   padding: var(--warp-card-padding);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: var(--warp-radius-m);
+  border: 1px solid var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
   background: var(--vp-c-bg);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: border-color var(--warp-duration) var(--warp-ease), box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 /* Icon tile: the same on every home card (platforms, shared, quick links, collaborate) */
@@ -422,10 +457,10 @@ a:focus-visible {
   justify-content: center;
   width: 48px;
   height: 48px;
-  border-radius: var(--warp-radius-m);
+  border-radius: var(--warp-card-icon-radius);
   background: var(--vp-c-brand-soft);
   color: var(--vp-c-brand-1);
-  transition: background-color 0.15s ease, color 0.15s ease;
+  transition: background-color var(--warp-duration) var(--warp-ease), color var(--warp-duration) var(--warp-ease);
 }
 
 .tile-icon svg {
@@ -477,7 +512,7 @@ a:focus-visible {
   width: 16px;
   height: 16px;
   color: var(--vp-c-text-3);
-  transition: color 0.15s ease, transform 0.15s ease;
+  transition: color var(--warp-duration) var(--warp-ease), transform var(--warp-duration) var(--warp-ease);
 }
 
 .platform:hover .platform-arrow {
@@ -500,10 +535,10 @@ a:focus-visible {
   gap: 20px;
   height: 100%;
   padding: 24px 56px 24px 24px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
+  border: 1px solid var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
   background: var(--vp-c-bg);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: border-color var(--warp-duration) var(--warp-ease), box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 .shared-title {
@@ -533,10 +568,10 @@ a:focus-visible {
   flex-direction: column;
   height: 100%;
   padding: var(--warp-card-padding);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: var(--warp-radius-m);
+  border: 1px solid var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
   background: var(--vp-c-bg);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: border-color var(--warp-duration) var(--warp-ease), box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 .quick-title {
@@ -550,7 +585,10 @@ a:focus-visible {
   color: var(--vp-c-text-2);
 }
 
-/* Collaborate: warm brand panel, Slack as the primary action, three action cards */
+/* Collaborate: shares the hero's idea (a neutral gradient lit by Warp red) but not its elements. No streak, no
+   grain: a smooth red glow sits in the bottom-right corner and fine concentric orbit lines spread from it,
+   echoing the orbits around the planet in the hero artwork. The base gradient runs the other way (grey to
+   white). Pure CSS. */
 .collaborate {
   position: relative;
   display: grid;
@@ -558,23 +596,43 @@ a:focus-visible {
   gap: 32px;
   margin-top: var(--warp-space-16);
   padding: 40px 24px;
-  border-radius: var(--warp-radius-l);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: var(--warp-radius-xl);
   background:
-    radial-gradient(120% 140% at 0% 0%, var(--vp-c-brand-soft), transparent 60%),
-    radial-gradient(80% 120% at 100% 100%, var(--vp-c-brand-soft), transparent 70%),
-    var(--vp-c-bg-soft);
+    radial-gradient(circle at 100% 100%, rgba(229, 22, 18, 0.26), rgba(229, 22, 18, 0.08) 32%, transparent 58%),
+    linear-gradient(180deg, #ececef 0%, #ffffff 100%);
   overflow: hidden;
   isolation: isolate;
 }
 
-/* faint star field from the Warp brand assets */
-.collaborate-stars {
+html.dark .collaborate {
+  background:
+    radial-gradient(circle at 100% 100%, rgba(229, 22, 18, 0.34), rgba(229, 22, 18, 0.1) 32%, transparent 58%),
+    linear-gradient(180deg, #101218 0%, #08090c 100%);
+}
+
+/* orbit lines around the glow, fading out with distance */
+.collaborate::before {
+  content: '';
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: url('/stars-background.svg') repeat-x top center / 1440px auto;
-  opacity: 0.7;
+  background: repeating-radial-gradient(
+    circle at 100% 100%,
+    transparent 0 55px,
+    rgba(229, 22, 18, 0.2) 55px 56px
+  );
+  -webkit-mask-image: radial-gradient(circle at 100% 100%, #000 10%, transparent 72%);
+  mask-image: radial-gradient(circle at 100% 100%, #000 10%, transparent 72%);
   pointer-events: none;
+}
+
+html.dark .collaborate::before {
+  background: repeating-radial-gradient(
+    circle at 100% 100%,
+    transparent 0 55px,
+    rgba(255, 92, 82, 0.22) 55px 56px
+  );
 }
 
 .collaborate-intro {
@@ -613,15 +671,13 @@ a:focus-visible {
   border: 1px solid var(--vp-c-divider);
   border-radius: 999px;
   background: var(--vp-c-bg);
-  box-shadow: var(--vp-shadow-1);
   color: var(--vp-c-text-1);
   font-weight: 500;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color var(--warp-duration) var(--warp-ease), box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 .slack:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: var(--vp-shadow-2);
+  border-color: var(--warp-card-border-hover);
 }
 
 .slack:focus-visible {
@@ -638,11 +694,10 @@ a:focus-visible {
   align-items: center;
   gap: 16px;
   padding: var(--warp-space-4) var(--warp-space-6) var(--warp-space-4) var(--warp-space-4);
-  border: 1px solid transparent;
-  border-radius: var(--warp-radius-m);
+  border: 1px solid var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
   background: var(--vp-c-bg);
-  box-shadow: var(--vp-shadow-1);
-  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+  transition: border-color var(--warp-duration) var(--warp-ease), box-shadow var(--warp-duration) var(--warp-ease);
 }
 
 .collaborate-card-text {
@@ -687,7 +742,12 @@ a:focus-visible {
 @media (min-width: 960px) {
   .hero {
     grid-template-columns: 1.3fr 1fr;
-    padding: 64px 48px;
+    align-content: center;
+    gap: 56px 40px;
+    min-height: 680px;
+    margin: 0 -48px;
+    /* content lines up with the 1280px column of the sections below */
+    padding: 144px max(48px, calc((100% + 96px - 1280px) / 2)) 128px;
   }
 
   .hero-art {
@@ -728,12 +788,7 @@ a:focus-visible {
     transition: none;
   }
 
-  .entry:hover,
-  .platform:hover,
   .platform:hover .platform-arrow,
-  .shared-card:hover,
-  .quick-card:hover,
-  .collaborate-card:hover,
   .shared-card:hover .card-arrow,
   .quick-card:hover .card-arrow {
     transform: none;

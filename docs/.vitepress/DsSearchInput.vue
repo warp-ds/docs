@@ -60,13 +60,16 @@ function clear() {
   width: 100%;
   height: 40px;
   padding: 8px 36px 8px 36px; /* room for icon + clear */
-  border-radius: var(--vp-input-radius, 4px);
-  border: 1px solid var(--vp-c-input-border);
+  border-radius: var(--warp-radius-s);
+  border: 1px solid var(--warp-control-border);
   background: var(--vp-c-input-bg);
   color: var(--vp-c-input-text);
   outline: none;
   transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
   font: inherit;
+}
+.ds-search__input:hover {
+  border-color: var(--warp-control-border-hover);
 }
 .ds-search__input::placeholder {
   color: var(--vp-c-text-2);
@@ -83,12 +86,18 @@ function clear() {
   min-width: 24px;
   padding: 0 6px;
   border-radius: 999px;
-  border: 1px solid var(--vp-c-border);
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-1);
+  border: 0;
+  background: var(--vp-c-default-soft);
+  color: var(--vp-c-text-2);
   cursor: pointer;
+  transition: background-color var(--warp-duration) var(--warp-ease), color var(--warp-duration) var(--warp-ease);
 }
 .ds-search__clear:hover {
-  filter: brightness(0.98);
+  color: var(--vp-c-text-1);
+  background: var(--warp-control-border);
+}
+.ds-search__clear:focus-visible {
+  outline: 2px solid var(--vp-c-brand-1);
+  outline-offset: 2px;
 }
 </style>

@@ -49,12 +49,12 @@ docs/
 
 - Sources live where they are served (no `rewrites`). Do not put `foo.md` next to a `foo/` folder (GitHub Pages may redirect `/foo` to `/foo/`); that is why the legacy Web code pages are flat siblings (`code-react.md`).
 - Platforms are independent: a component page on one platform never has to match another. A platform only lists components it actually has.
-- Pages with frontmatter `seeded: true` were copied from the Web docs and still need checking against the platform source. A notice is shown automatically. Remove the flag once reviewed.
+- Pages with frontmatter `seeded: true` were copied from the Web docs and still need checking against the platform source. A notice is shown automatically. Remove the flag once reviewed. Pages written from the platform source code but not yet reviewed by the platform team (the iOS/Android foundation pages) use frontmatter `pendingReview: true` instead, which shows a similar notice.
 - Patterns are their own section (as in production): on `/patterns/` and `/{platform}/patterns/…` the sidebar shows only that platform's patterns under the switcher (`patternSidebars` in `sidebar/platform.js`), not Foundation/Components. A platform lists only the patterns it documents (Empty states: iOS + Android).
 - The layout is full width (Fluent 2 style): sidebar pinned left, outline pinned right, and a fixed 768px reading column (`--warp-doc-width` in `theme/custom.css`) that does not depend on the page. The home page (`index.md`, `layout: page`, `<HomeLanding />`) keeps the sidebar visible from the start.
 - Cross-links between the Design Language and platform foundations are opt-in: a platform foundation page adds frontmatter `designLanguage: /design-language/<topic>/`. Both pages then show the same header switch, `Design Language | Web | iOS | Android` (collected by `pnpm generate-manifest`; a platform with several pages on one topic opens a menu).
 - Every doc page gets a context row above the H1 (`PageContext.vue`, `doc-before` slot): a breadcrumb, and on component/pattern pages a `Web | iOS | Android` switch (platforms without the item are shown as unavailable).
-- Component and pattern pages have one header on every tab, so switching tabs never moves the content: the H1 is the item name only (`# Alert`), with `<ComponentsStatus />` directly under it (status badges, page tabs, plus the Framework control on Web code pages). The page-specific lead paragraph comes after it, then the item's "See also" line, which is repeated on every tab. Each tab is a separate page; search results and the browser title add the page kind back (`config.js`: `Web › Alert › Usage`).
+- Component and pattern pages have one header on every tab, so switching tabs never moves the content: the H1 is the item name only (`# Alert`), with `<ComponentsStatus />` directly under it (status badges, page tabs, plus the Framework control on Web code pages). The item description (one lead paragraph) is written only on the Overview tab, right after `<ComponentsStatus />`; `config.js` uses it as the meta description of every tab of that item. The "See also" line follows it on Overview and Usage only. Usage, Code, Styling and Accessibility start with their own content. Each tab is a separate page; search results and the browser title add the page kind back (`config.js`: `Web › Alert › Usage`).
 - Old URLs (`/components/…`, `/patterns/…`, `/foundations/…`, `/blog/…`, …) redirect via `docs/.vitepress/redirects.json`: stub pages written in `buildEnd` (`build/redirect-stubs.js`), router hooks (`theme/index.js`) and a 404 fallback (`RedirectNotFound.vue`). When you move or delete a page, add an entry (old URL → new URL, no chains).
 
 ### Platform Manifest System
@@ -87,7 +87,7 @@ These Vue components are registered globally for use in markdown files:
 
 ### Styling
 
-- **Docs UI system** (end of `theme/custom.css`): one spacing scale (`--warp-space-*`: 4, 8, 12, 16, 24, 32, 48, 64), one radius scale (`--warp-radius-s/m/l`: 8 controls, 12 cards, 16 panels) and one card pattern (`.dc-grid`, `.dc-card` with `--media`, `--row` and `--disabled`). Every card on the site (NavCards, PlatformOverview, the components and patterns grids, What's new, the home page) uses it; reuse it rather than styling new cards.
+- **Docs UI system** (end of `theme/custom.css`): one spacing scale (`--warp-space-*`: 4, 8, 12, 16, 24, 32, 48, 64), one radius scale (`--warp-radius-s/m/l/xl`: 8 controls, 12 icon tiles/code/callouts/tables, 24 cards, 32 panels) and one card pattern (flat: 1px border, no shadow; hover turns the border brand red) (`.dc-grid`, `.dc-card` with `--media`, `--row` and `--disabled`). Every card on the site (NavCards, PlatformOverview, the components and patterns grids, What's new, the home page) uses it; reuse it rather than styling new cards.
 - Overview and landing pages use `<NavCards>` instead of bullet lists of links.
 - Typography: Inter; titles are semibold (600), never bold; body text is near-black (`--vp-c-text-1: #1d1d22`). Headings: H2 48px above, H3 32px, H4 24px.
 
@@ -109,7 +109,7 @@ Add it to each platform that has it; platforms are independent.
 
 1. Web: create `docs/web/components/{name}/` with `overview.md`, `usage.md`, `accessibility.md` and `code.md` (Elements). Add `code-react.md` / `code-react-19.md` / `code-vue.md` only for existing legacy implementations.
 2. iOS / Android: create `docs/{ios,android}/components/{name}/` with at least `overview.md` and `code.md`. Write `accessibility.md` only from behaviour verified against the platform source.
-3. On every page, use the item name as the H1 (`# Button`, not `# Button - Usage`) and put `<ComponentsStatus />` directly under it, before the lead paragraph. On code pages, add `<FrameworkTabs />` after the framework H2.
+3. On every page, use the item name as the H1 (`# Button`, not `# Button - Usage`) and put `<ComponentsStatus />` directly under it. Write the one-paragraph description on `overview.md` only (then "See also", repeated on `usage.md`); other tabs start with their own content. On code pages, add `<FrameworkTabs />` after the framework H2.
 4. Run `pnpm generate-manifest`. The component then appears in that platform's sidebar, overview grid, header switch and the coverage page. Its status badge says "released" unless a page sets frontmatter `status:` (`beta`, `developing`, `planned` or `deprecated`).
 5. Run `pnpm build && pnpm check:site`.
 

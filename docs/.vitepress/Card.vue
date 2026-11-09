@@ -12,16 +12,26 @@
 -->
 
 <template>
-  <article class="docs-card rounded-4 shadow-s focus-within:shadow-m hover:shadow-m overflow-hidden relative">
+  <article class="docs-card">
     <slot></slot>
   </article>
 </template>
 
 <style scoped>
-  .docs-card{
-    border: 1px solid var(--vp-c-card-border, transparent);
-  }
-  .docs-card:hover{
-    --vp-c-card-border: var(--vp-c-brand-1)
-  }
+/* legacy content card: the site's flat card pattern (tokens in theme/custom.css) */
+.docs-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--warp-card-border);
+  border-radius: var(--warp-card-radius);
+  background: var(--vp-c-bg);
+  transition:
+    border-color var(--warp-duration) var(--warp-ease),
+    box-shadow var(--warp-duration) var(--warp-ease);
+}
+
+.docs-card:hover,
+.docs-card:focus-within {
+  border-color: var(--warp-card-border-hover);
+}
 </style>
