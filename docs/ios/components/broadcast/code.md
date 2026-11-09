@@ -1,12 +1,18 @@
+---
+status: deprecated
+---
+
 # Broadcast
 
 <ComponentsStatus />
 
-Broadcast automatically fetches broadcast messages for the current (or a given) url.
-
 ## iOS
 
 <FrameworkTabs />
+
+::: warning Deprecated
+`Warp.Broadcast` is deprecated in warp-ios and will be removed in a future release. Use an [Alert](/ios/components/alert/code.md) with the warning variant instead.
+:::
 
 
 ### Syntax

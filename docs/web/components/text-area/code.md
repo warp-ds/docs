@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A text area allows users to input extended text content that covers multiple lines.
-
 <FrameworkTabs />
 <ThemeSwitcher />
 

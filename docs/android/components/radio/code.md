@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Radios allow users to select a single option from a list.
-
-See also [Checkbox](/android/components/checkbox/overview.md), [Select](/android/components/select/overview.md), [Switch](/android/components/switch/overview.md), and [Radio buttons](/web/components/radio-buttons/overview.md).
-
 ## Android
 
 <FrameworkTabs />

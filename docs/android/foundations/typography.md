@@ -1,4 +1,5 @@
 ---
+pendingReview: true
 title: Typography — Android
 designLanguage: /design-language/typography/
 ---

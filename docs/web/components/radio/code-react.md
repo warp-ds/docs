@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Radios allow users to select a single option from a list.
-
-See also [Checkbox](/web/components/checkbox/overview.md), [Select](/web/components/select/overview.md), [Switch](/web/components/switch/overview.md), and [Radio buttons](/web/components/radio-buttons/overview.md).
-
 ## React
 
 <FrameworkTabs />

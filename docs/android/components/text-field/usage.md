@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-A text field is a single-line input component used for entering and editing textual data.
-
 ## Guidelines
 
 ### When to use

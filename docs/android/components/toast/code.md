@@ -1,8 +1,18 @@
-# Toast - Android
-Toasts are brief user feedback messages that overlay content.
+---
+status: deprecated
+---
+
+# Toast
 
 <ComponentsStatus />
+
+## Android
+
 <FrameworkTabs />
+
+::: warning Deprecated
+Toast is deprecated in favour of [Snackbar](/android/components/snackbar/code.md). Use Snackbar for new work, and move existing toasts to Snackbar when you next touch them.
+:::
 
 ### Syntax
 
@@ -38,7 +48,6 @@ object WarpToastDuration {
 
 The toast can be used by creating it once and then shown by setting text using the WarpToastState. Duration can be adjusted as well as the style. If needed it is possible to set a custom onDismiss function, but if not set it will show for the built in duration time until it disappears.
 
-
 ```kotlin example
 val toastSuccess = remember { WarpToastState() }
 val toastWarning = remember { WarpToastState() }
@@ -73,8 +82,6 @@ WarpToast(
     duration = WarpToastDuration.INFINITE
     )
 ```
-
-
 
 ### Legacy support
 Not supported

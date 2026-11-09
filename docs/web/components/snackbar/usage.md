@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Snackbars provide brief, contextual feedback about an operation or system status at the bottom of the screen. They inform users about processes, confirmations, warnings, or errors in a non-intrusive way.
-
 **Note:** The Toast component is deprecated. Use Snackbar for all toast-style notifications.
 
 See also [Alert](/web/components/alert/overview.md).

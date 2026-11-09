@@ -1,8 +1,14 @@
-# Toast - React 19
-Toasts are brief user feedback messages that overlay content.
+# Toast
 
 <ComponentsStatus />
+
+## React 19
+
 <FrameworkTabs />
+
+::: warning Deprecated
+Toast is deprecated in favour of [Snackbar](/web/components/snackbar/overview.md). Use Snackbar for new work, and move existing toasts to Snackbar when you next touch them.
+:::
 
 ### Import
 
@@ -46,7 +52,7 @@ addWToast({
 The toast component is designed to automatically close by default, and it is recommended to avoid adding the manual dismiss button due to accessibility guidelines. If the toast absolutely must be dismissible, set the `dismissible` property to `true`.
 :::
 
-**Read more** under [Accessibility](/components/toast/accessibility).
+**Read more** under [Accessibility](/web/components/toast/accessibility.md).
 
 ```js
 addWToast({

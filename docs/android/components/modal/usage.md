@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-A modal is a focused dialog that temporarily blocks the interface to request a specific decision or input. Because it pauses the experience, use it sparingly for high-priority tasks.
-
 ## What are modals?
 Modals is a pattern where we display a view on top of the current page. The most common use of modals is where users' full attention is required for a specific task.
 

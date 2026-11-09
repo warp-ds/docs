@@ -1,4 +1,5 @@
 ---
+pendingReview: true
 title: Tokens — Android
 designLanguage: /design-language/tokens/intro/
 ---

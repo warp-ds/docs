@@ -1,4 +1,5 @@
 ---
+pendingReview: true
 title: Typography — iOS
 designLanguage: /design-language/typography/
 ---

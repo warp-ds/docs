@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Button group is a grouping concept for buttons.
-
 ## iOS
 
 <FrameworkTabs />

@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A date picker allows the user to select a specific calendar date.
-
 ## React-19
 
 <FrameworkTabs />

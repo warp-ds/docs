@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Link component to use when creating links that look like buttons.
-
 ## Layout and spacing
 
 <div class="grid grid-cols-2 gap-24">

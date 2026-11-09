@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-These utility components are available to make some layout components interactive.
-
 ## Vue
 
 ### wClickable

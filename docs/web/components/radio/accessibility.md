@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Radio buttons let users select one option from a set of mutually exclusive choices.
-
-See also [Checkbox](/web/components/checkbox/overview.md), [Select](/web/components/select/overview.md), [Switch](/web/components/switch/overview.md), and [Radio buttons](/web/components/radio-buttons/overview.md).
-
 ## General
 
 An accessible Radio group communicates three things: the question being asked, every available option, and which option is selected. Users must be able to understand and change the selection with a keyboard, a screen reader, touch, voice control, and enlarged text.

@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Card is an interactive layout component to display information.
-
 ## Vue
 
 <FrameworkTabs />

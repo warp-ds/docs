@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A modal is a focused dialog that temporarily blocks the interface to request a specific decision or input. Because it pauses the experience, use it sparingly for high-priority tasks.
-
 ## General
 Modal needs either aria-label or aria-labelledby to be accessible to screen readers.
 

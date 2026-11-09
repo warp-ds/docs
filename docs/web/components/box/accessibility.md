@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Box is a layout component used for separating content areas on a page. It groups related information inside a subtle surface so users can tell where one block of content ends and the next begins.
-
-See also [Alert](/web/components/alert/overview.md), [Card](/web/components/card/overview.md), and [Callout](/web/components/callout/overview.md).
-
 ## General
 
 The grouping a Box creates is **visual**. A subtle background or a border tells sighted users "these things belong together", but it communicates nothing to a screen reader, and nothing to someone who cannot distinguish the surface from the page background.

@@ -29,7 +29,7 @@
       "button-group": {
         "title": "Button group",
         "pages": ["overview", "usage", "code"],
-        "frameworks": ["vue"]
+        "frameworks": ["elements", "vue"]
       },
       "callout": {
         "title": "Callout",
@@ -109,7 +109,7 @@
       "radio-buttons": {
         "title": "Radio buttons",
         "pages": ["overview", "usage", "code"],
-        "frameworks": ["react", "vue"]
+        "frameworks": ["elements", "react", "vue"]
       },
       "range-slider": {
         "title": "Range slider",
@@ -156,6 +156,12 @@
         "pages": ["overview", "usage", "code", "accessibility"],
         "frameworks": ["elements", "react", "vue"]
       },
+      "toast": {
+        "title": "Toast",
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "status": "deprecated",
+        "frameworks": ["elements", "react-19"]
+      },
       "tooltip": {
         "title": "Tooltip",
         "pages": ["overview", "usage", "code", "accessibility"],
@@ -189,7 +195,8 @@
       },
       "broadcast": {
         "title": "Broadcast",
-        "pages": ["overview", "code"]
+        "pages": ["overview", "code"],
+        "status": "deprecated"
       },
       "button": {
         "title": "Button",
@@ -318,7 +325,8 @@
       },
       "toast": {
         "title": "Toast",
-        "pages": ["code"],
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"],
         "status": "deprecated"
       },
       "tooltip": {
@@ -493,6 +501,12 @@
         "title": "Text field",
         "pages": ["overview", "usage", "code"],
         "seeded": ["overview", "usage"]
+      },
+      "toast": {
+        "title": "Toast",
+        "pages": ["overview", "usage", "code"],
+        "seeded": ["overview", "usage"],
+        "status": "deprecated"
       },
       "tooltip": {
         "title": "Tooltip",

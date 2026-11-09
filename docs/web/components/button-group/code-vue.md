@@ -2,11 +2,13 @@
 
 <ComponentsStatus />
 
-Button group is a grouping concept for buttons.
-
 ## Vue
 
 <FrameworkTabs />
+
+### Example
+
+<buttongroup-example />
 
 ### Import
 

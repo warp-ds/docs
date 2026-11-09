@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Box is a layout component used for separating content areas on a page.
-
-See also [Alert](/ios/components/alert/overview.md), [Card](/web/components/card/overview.md), and [Callout](/ios/components/callout/overview.md).
-
 ## iOS
 
 <FrameworkTabs />

@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Alerts show high-signal messages meant to be noticed by or prompt users. An alert sits inline in the page, carries a status colour and icon, and stays visible until the situation it describes is resolved.
-
-See also [Snackbar](/web/components/snackbar/overview.md), [Box](/web/components/box/overview.md), [Callout](/web/components/callout/overview.md), and [Modal](/web/components/modal/overview.md).
-
 ## General
 
 An alert is a message that must reach everyone, including people who cannot see it appear. That makes accessibility part of the component's core purpose rather than a finishing touch.

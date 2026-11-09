@@ -1,4 +1,5 @@
 ---
+pendingReview: true
 title: Tokens — iOS
 designLanguage: /design-language/tokens/intro/
 ---

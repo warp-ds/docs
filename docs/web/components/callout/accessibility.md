@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Callouts are snippets of information, drawing attention to important content. A callout is anchored to something on screen — a button, a field, a piece of copy — and points at it with an arrow.
-
-See also [Tooltip](/web/components/tooltip/overview.md), [Popover](/web/components/popover/overview.md), [Alert](/web/components/alert/overview.md), and [Box](/web/components/box/overview.md).
-
 ## General
 
 A callout works visually: a bubble and an arrow join a message to an element. Neither half of that pairing survives on its own. A screen reader user gets the message but not the arrow, and a user with low vision may see the bubble without ever registering what it points at.

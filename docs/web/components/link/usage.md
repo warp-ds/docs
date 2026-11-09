@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Link component to use when creating links that look like buttons.
-
 ## Best practices / usage guidelines
 
 - Always underline inline links to help users easily identify the interactive portion of the text.

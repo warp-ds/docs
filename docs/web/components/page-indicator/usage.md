@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A page indicator shows the total amount of pages (or images) and the current page using dots.
-
 ## General
 
 Page indicators are usually used in image carousels, and supported by carousel controls that give the user power to navigate through the carousel of images.

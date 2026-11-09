@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Link component to use when creating links that look like buttons.
-
 ## Android
 
 <FrameworkTabs />

@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-Tabs organise related content into sections that sit at the same level, and let people switch between them without leaving the page.
-
 ## Guidelines
 
 - Use tabs only for sections that are **peers** — alternative views of one subject, readable in any order.

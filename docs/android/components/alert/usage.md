@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-Alerts show high-signal messages meant to be noticed by or prompt users. An alert sits inline in the page, carries a status colour and icon, and stays visible until the situation it describes is resolved.
-
 See also [Snackbar](/android/components/snackbar/overview.md), [Box](/android/components/box/overview.md), [Callout](/android/components/callout/overview.md), and [Modal](/android/components/modal/overview.md).
 
 ## Guidelines

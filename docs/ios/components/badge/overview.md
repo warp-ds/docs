@@ -8,7 +8,7 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-Badges are used to highlight a relevant piece of information, like status or category.
+Badges label a small piece of metadata—such as a status, category, price, or sponsorship—so people can scan nearby content quickly.
 
 Badges are small, contextual elements used to display concise, informative labels. They highlight relevant information such as statuses, categories, counts, roles, or activity indicators, helping users quickly identify and differentiate items at a glance.
 

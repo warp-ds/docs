@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Button pill allows users to toggle an element to their favourites.
-
 ## iOS
 
 <FrameworkTabs />

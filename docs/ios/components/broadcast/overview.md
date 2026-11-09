@@ -1,16 +1,29 @@
+---
+status: deprecated
+---
+
 # Broadcast
 
 <ComponentsStatus />
 
-Broadcast automatically fetches broadcast messages for the current (or a given) url.
+A longer broadcast message that can span several lines, shown at the top or bottom edge of a view.
 
-## General
-Uses toast apis under the hood.
+See also [Alert](/ios/components/alert/overview.md).
 
-**N.B.** Broadcast should only be included once per page to avoid duplicate broadcast messages being displayed. The preferred method for including broadcast is to use the [broadcast-podlet](https://github.schibsted.io/finn/broadcast-podlet) provided by the communication team.
+::: warning Deprecated
+`Warp.Broadcast` is deprecated in warp-ios and will be removed in a future release. Use an [Alert](/ios/components/alert/overview.md) with the warning variant instead.
+:::
 
-## Example
+## When to use
 
-See the [toast component](/ios/components/snackbar/overview.md) for examples, as `broadcast` utilizes it to display messages.
+Broadcast was meant for announcements or information outside the normal user flow. For new work, use an Alert with the warning variant.
+
+## Behaviour
+
+- Appears from the top or bottom edge of the view (`Warp.BroadcastEdge`: `.top` or `.bottom`).
+- Can be dismissible by the user, which adds a close button (`isDismissable`, on by default).
+- Shown and hidden through a binding (`isPresented`). Added with the `.warpBroadcast` modifier, it overlays the view at that edge and animates in and out.
+
+See [Code](/ios/components/broadcast/code.md) for the full API.
 
 <component-questions />

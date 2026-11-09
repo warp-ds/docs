@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-A text area allows users to input extended text content that covers multiple lines.
-
 ## Guidelines
 
 ### When to use

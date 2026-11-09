@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A tooltip is a small message box that appears when a user hovers over, focuses, or taps a UI element. It provides brief, supplementary information about that element.
-
 ## General
 
 Tooltip content is hidden by default, so it's easy to make it unreachable for people who don't use a mouse. Two rules cover most of the risk:

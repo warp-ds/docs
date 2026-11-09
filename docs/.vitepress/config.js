@@ -1,3 +1,5 @@
+import { existsSync, readFileSync, statSync } from 'node:fs';
+import { join } from 'node:path';
 import { classes as componentClasses } from '@warp-ds/css/component-classes/classes';
 import { presetDocs } from '@warp-ds/preset-docs';
 import { presetWarp } from '@warp-ds/uno';
@@ -34,6 +36,32 @@ function itemPage(relativePath) {
   if (!m) return null;
   const kind = m[1] === 'web' && m[2] === 'code' ? 'Code (Elements)' : (PAGE_KINDS[m[2]] ?? m[2]);
   return { platform: PLATFORM_LABELS[m[1]], kind };
+}
+
+// The item description is written once, as the lead paragraph of its overview.md (the other tabs don't
+// repeat it). Every tab of the item gets it as its meta description, for search engines and link previews.
+const itemDescriptions = new Map();
+function itemDescription(srcDir, relativePath) {
+  const dir = relativePath.match(/^((?:web|ios|android)\/(?:components|patterns)\/[^/]+)\//)?.[1];
+  if (!dir) return '';
+  const file = join(srcDir, dir, 'overview.md');
+  const mtime = existsSync(file) ? statSync(file).mtimeMs : 0;
+  if (itemDescriptions.get(dir)?.mtime !== mtime) {
+    const body = mtime ? readFileSync(file, 'utf8').split('<ComponentsStatus />')[1] : undefined;
+    const lead = body
+      ?.split(/\n[ \t]*\n/)
+      .map((p) => p.trim())
+      .find((p) => p && !/^(<|#|:::|-|\*|\||```)/.test(p));
+    const text =
+      lead && !lead.startsWith('See also')
+        ? lead
+            .replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
+            .replace(/[`*_]/g, '')
+            .replace(/\s+/g, ' ')
+        : '';
+    itemDescriptions.set(dir, { mtime, text });
+  }
+  return itemDescriptions.get(dir).text;
 }
 
 export default defineConfig({
@@ -156,10 +184,14 @@ export default defineConfig({
       '/': sharedSidebar,
     },
   },
-  transformPageData(pageData) {
+  transformPageData(pageData, { siteConfig }) {
     const item = itemPage(pageData.relativePath);
     if (item && pageData.title && !pageData.frontmatter.title) {
       pageData.title = `${pageData.title} · ${item.kind} · ${item.platform}`;
+    }
+    if (item && !pageData.frontmatter.description) {
+      const description = itemDescription(siteConfig.srcDir, pageData.relativePath);
+      if (description) pageData.description = description;
     }
   },
   buildEnd(siteConfig) {

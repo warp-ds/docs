@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Pre-defined styles provide a font and size.
-
 ## iOS
 
 <FrameworkTabs />

@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-A tooltip is a small message box that appears when a user hovers over, focuses, or taps a UI element. It provides brief, supplementary information about that element.
-
 ## Guidelines
 
 - Use tooltips for supplementary information only. The interface must still make sense with every tooltip closed.

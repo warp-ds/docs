@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Tabs organise related content into sections that sit at the same level, and let people switch between them without leaving the page.
-
 ## Vue
 
 <FrameworkTabs />

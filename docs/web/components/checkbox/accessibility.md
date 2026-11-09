@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Checkboxes allow users to select one or more options from a number of choices.
-
 ## General 
 
 Every checkbox must have a clear, programmatically associated label. Labels should be visible text, not hidden, unless there’s a strong reason (checkbox card).

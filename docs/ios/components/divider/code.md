@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A divider creates separation of content.
-
 ## iOS
 
 <FrameworkTabs />

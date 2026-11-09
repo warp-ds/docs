@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Brand logos for use on the web.
-
 <FrameworkTabs />
 <ThemeSwitcher />
 

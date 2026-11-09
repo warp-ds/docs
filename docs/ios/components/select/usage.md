@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-A select is a form input component that lets users choose one option from a predefined list.
-
 ## Guidelines
 
 ### When to use

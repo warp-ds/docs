@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-Callouts are snippets of information, drawing attention to important content.
-
-See also [Tooltip](/android/components/tooltip/overview.md), [Popover](/android/components/popover/overview.md), [Alert](/android/components/alert/overview.md), and [Box](/android/components/box/overview.md).
-
 ## Android
 
 <FrameworkTabs />

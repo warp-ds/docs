@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Badges label a small piece of metadata—such as a status, category, price, or sponsorship—so people can scan nearby content quickly.
-
 ## Guidelines
 
 - Use a badge only when its label supports nearby content.

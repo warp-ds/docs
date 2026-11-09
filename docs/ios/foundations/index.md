@@ -1,4 +1,5 @@
 ---
+pendingReview: true
 title: iOS foundation
 cards:
   - title: Theming

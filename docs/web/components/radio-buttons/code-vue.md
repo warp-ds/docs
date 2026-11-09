@@ -2,11 +2,13 @@
 
 <ComponentsStatus />
 
-Radio buttons allow users to select a single option from a button group.
-
 ## Vue
 
 <FrameworkTabs />
+
+### Example
+
+<radiobuttons-example />
 
 ### Import
 

@@ -1,15 +1,22 @@
-# Toast - Overview
+---
+status: deprecated
+---
+
+# Toast
+
+<ComponentsStatus />
 
 Toasts are brief user feedback messages that overlay content.
 
-<ComponentsStatus />
+See also [Snackbar](/web/components/snackbar/overview.md) and [Alert](/web/components/alert/overview.md).
+
+::: warning Deprecated
+Toast is deprecated in favour of [Snackbar](/web/components/snackbar/overview.md). Use Snackbar for new work, and move existing toasts to Snackbar when you next touch them.
+:::
+
 <ThemeSwitcher />
 
 <toast-example />
-
-## Deprecated
-
-The Toast component is deprecated in favor of [Snackbar](../snackbar/overview.md).
 
 ## General
 
@@ -18,7 +25,6 @@ A toast overlay is used to provide system status notifications, such as error, c
 ## Variants
 
 ### Positive
-
 
 <div class="grid grid-cols-2 gap-24">
   <div class="py-16">

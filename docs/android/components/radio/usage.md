@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-Radio buttons let users select one option from a set of mutually exclusive choices.
-
 See also [Checkbox](/android/components/checkbox/overview.md), [Select](/android/components/select/overview.md), [Switch](/android/components/switch/overview.md), and [Radio buttons](/web/components/radio-buttons/overview.md).
 
 ## Guidelines

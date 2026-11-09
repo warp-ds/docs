@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A text field is a single-line input component used for entering and editing textual data.
-
 ## Android
 
 <FrameworkTabs />
@@ -141,7 +139,7 @@ WarpTextField(
 ```
 
 ### Icons
- 
+
 WarpTextField supports showing a leading and/or a trailing icon. The component expects a @Composable which ideally should be an icon composable.
 
 ```kotlin
@@ -156,7 +154,7 @@ WarpTextField(
 ```
 
 ### Prefix & Suffix
- 
+
 WarpTextField supports showing a prefix or suffix text. When set this text will appear permanently infront of or behind the value. 
 
 ```kotlin
@@ -166,7 +164,7 @@ WarpTextField(
     label = "Price",
     suffixText = "kr" 
     )
-    
+
 WarpTextField(
     value = "",
     onValueChange = { },            

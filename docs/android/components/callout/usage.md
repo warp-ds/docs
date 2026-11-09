@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-Callouts are snippets of information, drawing attention to important content. A callout is anchored to something on screen — a button, a field, a piece of copy — and points at it with an arrow.
-
 See also [Tooltip](/android/components/tooltip/overview.md), [Popover](/android/components/popover/overview.md), [Alert](/android/components/alert/overview.md), and [Box](/android/components/box/overview.md).
 
 ## Guidelines

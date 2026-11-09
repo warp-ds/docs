@@ -8,8 +8,6 @@ seededAt: 2026-11-05
 
 <ComponentsStatus />
 
-Range sliders provide a visual indication of a selected interval within a defined range by moving two handles along a horizontal track to set both a minimum and maximum value.
-
 ## Guidelines
 
 - Range sliders are best suited for when people need to quickly select an interval within a designated range. They offer an intuitive way to adjust settings like volume, price filters, or relative distances.

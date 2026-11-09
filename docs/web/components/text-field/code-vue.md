@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-A text field is a single-line input component used for entering and editing textual data.
-
 ## Vue
 
 <FrameworkTabs />

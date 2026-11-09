@@ -6,8 +6,6 @@ status: deprecated
 
 <ComponentsStatus />
 
-Toasts are brief user feedback messages that overlay content.
-
 <FrameworkTabs />
 
 ::: warning Deprecated

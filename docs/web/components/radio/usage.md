@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Radio buttons let users select one option from a set of mutually exclusive choices.
-
 See also [Checkbox](/web/components/checkbox/overview.md), [Select](/web/components/select/overview.md), [Switch](/web/components/switch/overview.md), and [Radio buttons](/web/components/radio-buttons/overview.md).
 
 ## Guidelines

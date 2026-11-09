@@ -1,4 +1,5 @@
 ---
+pendingReview: true
 title: Android foundation
 cards:
   - title: Theming

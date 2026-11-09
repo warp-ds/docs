@@ -112,7 +112,7 @@ There is no disabled tab in Warp. A tab whose content isn't available yet should
 ## Platform considerations
 
 **Web**
-`<w-tabs>` owns the selection state and the keyboard behaviour. Each `<w-tab>` points at its panel with a `for` attribute matching the panel's `id`. The tab row sizes each tab to its label and does not scroll, so keep the set short enough to fit the narrowest screen you support. See [Elements](/ios/components/tabs/code.md), [React](/web/components/tabs/code-react.md), and [Vue](/web/components/tabs/code-vue.md).
+`<w-tabs>` owns the selection state and the keyboard behaviour. Each `<w-tab>` points at its panel with a `for` attribute matching the panel's `id`. The tab row sizes each tab to its label and does not scroll, so keep the set short enough to fit the narrowest screen you support. See [Elements](/web/components/tabs/code.md), [React](/web/components/tabs/code-react.md), and [Vue](/web/components/tabs/code-vue.md).
 
 **Android**
 `WarpTabRow` supports two layouts. Set `scrollable` to choose between them.

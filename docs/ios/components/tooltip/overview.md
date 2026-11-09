@@ -117,7 +117,7 @@ Tooltips are positioned relative to their trigger.
 
 ### Staying in view
 
-On the web, the tooltip uses [Floating UI](https://floating-ui.com/) to flip and shift automatically when there isn't room for the requested placement. See the [Elements](/ios/components/tooltip/code.md) page for live examples.
+On the web, the tooltip uses [Floating UI](https://floating-ui.com/) to flip and shift automatically when there isn't room for the requested placement. See the [Elements](/web/components/tooltip/code.md) page for live examples.
 
 ### Offsets
 

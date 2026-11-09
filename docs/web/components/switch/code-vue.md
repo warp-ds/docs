@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-The Switch component allows users to toggle between two states.
-
 ## Vue
 
 <FrameworkTabs />

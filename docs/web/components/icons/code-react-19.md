@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Warp’s icons are crafted to deliver consistency, clarity, and scalability across our multi-brand product ecosystem.
-
 <FrameworkTabs />
 
 This component works the same way as `<w-icon>` from [@warp-ds/elements](/web/components/icons/code.md). Prefer using `<w-icon>` over this component.

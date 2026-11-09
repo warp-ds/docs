@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Sliders allow users to adjust a single value within a defined range by moving a handle along a horizontal track.
-
 ## General
 
 The Slider component is designed to be keyboard accessible and compatible with screen readers.

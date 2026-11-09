@@ -2,10 +2,6 @@
 
 <ComponentsStatus />
 
-A confirmation dialog presents a set of choices in response to a user-initiated action.
-
-See also [Alert](/ios/components/alert/overview.md), [Modal](/ios/components/modal/overview.md).
-
 ## General
 
 `Warp.ConfirmationDialog` is a thin wrapper around the native SwiftUI confirmation dialog (`.confirmationDialog`, presented with `.warpConfirmationDialog()`). The system presents the dialog and provides its VoiceOver, focus and dismissal behaviour; Warp only supplies the title, the optional message, the actions and their styling. Your responsibility is clear, meaningful text.

@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Tabs organise related content into sections that sit at the same level, and let people switch between them without leaving the page.
-
 ## General
 
 Tabs hide most of their content. Everything that isn't in the selected panel is invisible to sighted users and, when the panel is marked hidden, invisible to screen readers too. Two rules follow from that:

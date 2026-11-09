@@ -2,8 +2,6 @@
 
 <ComponentsStatus />
 
-Range sliders provide a visual indication of a selected interval within a defined range by moving two handles along a horizontal track to set both a minimum and maximum value.
-
 ## React 19
 
 <FrameworkTabs />

@@ -1,16 +1,24 @@
----
-elements: false
----
-
 # Radio buttons
 
 <ComponentsStatus />
 
 <FrameworkTabs />
+<ThemeSwitcher />
 
-::: info No Warp Elements implementation yet
-Radio buttons is not available in Warp Elements. The legacy framework implementations are still documented:
+In Warp Elements, radio buttons are a single selection [button group](/web/components/button-group/code.md): a [radio group](/web/components/radio/code.md) with `type="button"`. Give the group a `label`; it is visually hidden but read by assistive technology.
 
-- [React (legacy)](./code-react.md)
-- [Vue (legacy)](./code-vue.md)
-:::
+<elements-example>
+
+```html
+<w-radio-group label="Package size" name="package-size" type="button">
+	<w-radio value="small">Small</w-radio>
+	<w-radio value="medium">Medium</w-radio>
+	<w-radio value="large">Large</w-radio>
+</w-radio-group>
+```
+
+</elements-example>
+
+For attributes, events and the styling API, see [`w-radio-group` and `w-radio`](/web/components/radio/code.md).
+
+<component-questions />
