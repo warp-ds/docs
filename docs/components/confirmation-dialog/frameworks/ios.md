@@ -54,7 +54,7 @@ Button("Delete") {
 )
 ```
 
-A Cancel button is provided automatically by the system. Do not add one manually.
+A Cancel button is provided automatically by the system. Do not add one manually unless you need a custom title, in which case use the `.cancel` style below.
 
 ### Action styles
 
@@ -64,8 +64,34 @@ enum Warp.ConfirmationDialog.Action.Style {
     case `default`
     /// A destructive action, displayed in red.
     case destructive
+    /// A cancel button. The system renders it with bold styling and places it at the
+    /// bottom of the action sheet. Use this to provide a custom-titled cancel button
+    /// (e.g. "Never mind") instead of the automatic system "Cancel" button.
+    case cancel
+    /// A primary action button. Rendered at the top of the action sheet to convey
+    /// visual prominence through position.
+    case primary
 }
 ```
+
+`.primary` actions are moved to the top of the action sheet. Action sheets have no bold-default mechanism, so position is the only visual difference from `.default`.
+
+```swift example
+Button("Delete") {
+    showDeleteConfirmation = true
+}
+.warpConfirmationDialog(
+    title: "Delete photo?",
+    message: "This photo will be removed from your library.",
+    actions: [
+        Warp.ConfirmationDialog.Action(title: "Delete", style: .destructive) { deletePhoto() },
+        Warp.ConfirmationDialog.Action(title: "Keep", style: .primary) { }
+    ],
+    isPresented: $showDeleteConfirmation
+)
+```
+
+`.cancel` is shown bold at the bottom. On iPad, the dialog appears as a popover, which hides cancel-role buttons, and tapping outside does not run the cancel handler. Only the first `.cancel` action is used.
 
 ### Parameters
 
@@ -83,7 +109,7 @@ enum Warp.ConfirmationDialog.Action.Style {
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
 | title | String | | The action button label. Use a verb ("Delete", "Archive", "Share"). |
-| style | Style | `.default` | Visual style of the button. Use `.destructive` for irreversible actions. |
+| style | Style | `.default` | Visual style of the button. Use `.destructive` for irreversible actions, `.primary` for the main action (shown at the top), `.cancel` for a custom-titled cancel button. |
 | handler | () -> Void | | Closure executed when the action is tapped. |
 
 <component-questions />

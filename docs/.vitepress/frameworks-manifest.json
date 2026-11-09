@@ -302,6 +302,12 @@
         "file": "ios"
       }
     ],
+    "menu": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
     "modal": [
       {
         "name": "Android",
@@ -322,6 +328,18 @@
       {
         "name": "Vue",
         "file": "vue"
+      }
+    ],
+    "navigation-bar": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
+    "notification-badge": [
+      {
+        "name": "iOS",
+        "file": "ios"
       }
     ],
     "page-indicator": [
@@ -442,6 +460,12 @@
         "file": "react-19"
       }
     ],
+    "segmented-control": [
+      {
+        "name": "iOS",
+        "file": "ios"
+      }
+    ],
     "select": [
       {
         "name": "Android",
@@ -462,6 +486,12 @@
       {
         "name": "Vue",
         "file": "vue"
+      }
+    ],
+    "sheet": [
+      {
+        "name": "iOS",
+        "file": "ios"
       }
     ],
     "slider": [
@@ -556,6 +586,12 @@
       {
         "name": "Vue",
         "file": "vue"
+      }
+    ],
+    "tab-bar": [
+      {
+        "name": "iOS",
+        "file": "ios"
       }
     ],
     "tabs": [
