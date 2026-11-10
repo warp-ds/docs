@@ -1,0 +1,604 @@
+$ NODE_ENV=production vitepress build docs
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+llmstxt »   vitepress-plugin-llms initialized (client build) with workDir: /Users/iurii.shatalov@m10s.io/warp-docs/docs
+llmstxt »   Build started, file collection cleared
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+
+stars-background.svg referenced in stars-background.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+
+... referenced in ... didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/20s-scientists.jpg referenced in ../../images/20s-scientists.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/50s-scientists_240.jpg referenced in ../../images/50s-scientists_240.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/50s-scientists.jpg referenced in ../../images/50s-scientists.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/office-warping.png referenced in ../../images/office-warping.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/repeatable.png referenced in ../../images/repeatable.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+llmstxt »   Processing 518 markdown files from /Users/iurii.shatalov@m10s.io/warp-docs/docs
+llmstxt » ⚠ [remark-include] Include file not found: ../../../../node_modules/@warp-ds/elements/dist/docs/styling/api.md
+llmstxt » ⚠ [remark-include] Include file not found: ../../../../node_modules/@warp-ds/elements/dist/docs/step/styling.md
+llmstxt » ⚠ [remark-include] Include file not found: ../../../../node_modules/@warp-ds/elements/dist/docs/toast/styling.md
+llmstxt »   Generating llms.txt...
+llmstxt »   Generating full documentation bundle (llms-full.txt)...
+llmstxt » ✓ Processed components/alert/frameworks/android.md
+llmstxt » ✓ Processed foundations/css-classes/align-content.md
+llmstxt » ✓ Processed components/badge/frameworks/android.md
+llmstxt » ✓ Processed components/box/frameworks/android.md
+llmstxt » ✓ Processed components/broadcast/overview.md
+llmstxt » ✓ Processed components/breadcrumbs/frameworks/elements.md
+llmstxt » ✓ Processed components/button/accessibility.md
+llmstxt » ✓ Processed components/button-group/frameworks/vue.md
+llmstxt » ✓ Processed components/callout/frameworks/android.md
+llmstxt » ✓ Processed components/button/frameworks/react.md
+llmstxt » ✓ Processed components/card/overview.md
+llmstxt » ✓ Processed components/button-pill/overview.md
+llmstxt » ✓ Processed components/checkbox/frameworks/android.md
+llmstxt » ✓ Processed foundations/data-visualization/success-criteria/cognitive.md
+llmstxt » ✓ Processed components/combo-box/overview.md
+llmstxt » ✓ Processed get-started/designers/custom-components.md
+llmstxt » ✓ Processed foundations/data-visualization/color/introduction.md
+llmstxt » ✓ Processed components/confirmation-dialog/overview.md
+llmstxt » ✓ Processed components/button-group/overview.md
+llmstxt » ✓ Processed foundations/data-visualization/components.md
+llmstxt » ✓ Processed foundations/dark-mode/figma.md
+llmstxt » ✓ Processed components/date-picker/accessibility.md
+llmstxt » ✓ Processed components/combo-box/frameworks/react.md
+llmstxt » ✓ Processed components/divider/usage.md
+llmstxt » ✓ Processed components/date-picker/frameworks/react-19.md
+llmstxt » ✓ Processed patterns/empty-states/accessibility.md
+llmstxt » ✓ Processed components/expandable/overview.md
+llmstxt » ✓ Processed get-started/developers/android.md
+llmstxt » ✓ Processed patterns/empty-states/frameworks/ios.md
+llmstxt » ✓ Processed foundations/data-visualization/tokens/icon.md
+llmstxt » ✓ Processed components/icons/accessibility.md
+llmstxt » ✓ Processed components/icons/frameworks/react-19.md
+llmstxt » ✓ Processed components/expandable/frameworks/vue.md
+llmstxt » ✓ Processed foundations/keyboard/navigation.md
+llmstxt » ✓ Processed components/link/frameworks/elements.md
+llmstxt » ✓ Processed components/logo/frameworks/elements.md
+llmstxt » ✓ Processed components/modal/accessibility.md
+llmstxt » ✓ Processed components/modal/frameworks/react.md
+llmstxt » ✓ Processed help/faq.md
+llmstxt » ✓ Processed foundations/tokens/overview.md
+llmstxt » ✓ Processed get-started/developers/web/migrate-from-fabric.md
+llmstxt » ✓ Processed components/page-indicator/accessibility.md
+llmstxt » ✓ Processed components/page-indicator/frameworks/react-19.md
+llmstxt » ✓ Processed components/pagination/accessibility.md
+llmstxt » ✓ Processed components/pill/overview.md
+llmstxt » ✓ Processed components/popover/overview.md
+llmstxt » ✓ Processed components/popover/frameworks/vue.md
+llmstxt » ✓ Processed components/radio/frameworks/android.md
+llmstxt » ✓ Processed components/radio-buttons/overview.md
+llmstxt » ✓ Processed components/range-slider/frameworks/android.md
+llmstxt » ✓ Processed collaborate/request-component-changes.md
+llmstxt » ✓ Processed components/select/frameworks/android.md
+llmstxt » ✓ Processed components/slider/frameworks/android.md
+llmstxt » ✓ Processed components/snackbar/frameworks/android.md
+llmstxt » ✓ Processed components/spinner/overview.md
+llmstxt » ✓ Processed components/steps/overview.md
+llmstxt » ✓ Processed components/switch/overview.md
+llmstxt » ✓ Processed components/text/overview.md
+llmstxt » ✓ Processed components/text-area/accessibility.md
+llmstxt » ✓ Processed components/tabs/frameworks/android.md
+llmstxt » ✓ Processed components/text-field/frameworks/android.md
+llmstxt » ✓ Processed components/text-area/frameworks/react.md
+llmstxt » ✓ Processed components/switch/frameworks/vue.md
+llmstxt » ✓ Processed components/toast/frameworks/elements.md
+llmstxt » ✓ Processed components/text-field/accessibility.md
+llmstxt » ✓ Processed components/tooltip/frameworks/android.md
+llmstxt » ✓ Processed components/utilities/overview.md
+llmstxt » ✓ Processed .vitepress/ComponentDesignGuidelines.md
+llmstxt » ✓ Processed components/utilities/frameworks/vue.md
+llmstxt » ✓ Generated llms.txt (~11.8K tokens, 34.2 kB) with 518 documentation links
+llmstxt » ✓ Processed foundations/accessibility.md
+llmstxt » ✓ Processed components/alert/overview.md
+llmstxt » ✓ Processed components/alert/accessibility.md
+llmstxt » ✓ Processed components/alert/frameworks/ios.md
+llmstxt » ✓ Processed components/alert/usage.md
+llmstxt » ✓ Processed components/alert/frameworks/react-19.md
+llmstxt » ✓ Processed components/alert/frameworks/react.md
+llmstxt » ✓ Processed foundations/css-classes/align-self.md
+llmstxt » ✓ Processed components/alert/frameworks/elements.md
+llmstxt » ✓ Processed components/alert/frameworks/vue.md
+llmstxt » ✓ Processed foundations/css-classes/appearance.md
+llmstxt » ✓ Processed foundations/css-classes/align-items.md
+llmstxt » ✓ Processed foundations/css-classes/backdrop-blur.md
+llmstxt » ✓ Processed foundations/css-classes/background-clip.md
+llmstxt » ✓ Processed foundations/css-classes/aspect-ratio.md
+llmstxt » ✓ Processed foundations/css-classes/background-attachment.md
+llmstxt » ✓ Processed foundations/css-classes/background-color.md
+llmstxt » ✓ Processed foundations/css-classes/background-size.md
+llmstxt » ✓ Processed foundations/css-classes/animation.md
+llmstxt » ✓ Processed foundations/css-classes/background-origin.md
+llmstxt » ✓ Processed components/badge/accessibility.md
+llmstxt » ✓ Processed foundations/css-classes/background-position.md
+llmstxt » ✓ Processed foundations/css-classes/background-image.md
+llmstxt » ✓ Processed foundations/css-classes/background-repeat.md
+llmstxt » ✓ Processed components/badge/frameworks/elements.md
+llmstxt » ✓ Processed components/badge/overview.md
+llmstxt » ✓ Processed components/badge/styling.md
+llmstxt » ✓ Processed components/badge/usage.md
+llmstxt » ✓ Processed components/badge/frameworks/vue.md
+llmstxt » ✓ Processed foundations/css-classes/border-collapse.md
+llmstxt » ✓ Processed foundations/css-classes/border-radius.md
+llmstxt » ✓ Processed foundations/css-classes/border-color.md
+llmstxt » ✓ Processed foundations/css-classes/border-style.md
+llmstxt » ✓ Processed foundations/css-classes/border-spacing.md
+llmstxt » ✓ Processed foundations/css-classes/border-width.md
+llmstxt » ✓ Processed components/box/accessibility.md
+llmstxt » ✓ Processed components/badge/frameworks/ios.md
+llmstxt » ✓ Processed components/box/overview.md
+llmstxt » ✓ Processed components/box/usage.md
+llmstxt » ✓ Processed components/badge/frameworks/react.md
+llmstxt » ✓ Processed components/box/frameworks/elements.md
+llmstxt » ✓ Processed components/box/frameworks/react.md
+llmstxt » ✓ Processed foundations/css-classes/box-sizing.md
+llmstxt » ✓ Processed foundations/css-classes/box-shadow.md
+llmstxt » ✓ Processed components/box/frameworks/ios.md
+llmstxt » ✓ Processed foundations/brands.md
+llmstxt » ✓ Processed components/breadcrumbs/overview.md
+llmstxt » ✓ Processed components/box/frameworks/vue.md
+llmstxt » ✓ Processed components/breadcrumbs/accessibility.md
+llmstxt » ✓ Processed foundations/css-classes/break-before.md
+llmstxt » ✓ Processed components/breadcrumbs/usage.md
+llmstxt » ✓ Processed foundations/css-classes/break-after.md
+llmstxt » ✓ Processed components/breadcrumbs/frameworks/vue.md
+llmstxt » ✓ Processed components/breadcrumbs/styling.md
+llmstxt » ✓ Processed foundations/css-classes/break-inside.md
+llmstxt » ✓ Processed components/breadcrumbs/frameworks/react.md
+llmstxt » ✓ Processed components/button/overview.md
+llmstxt » ✓ Processed components/broadcast/usage.md
+llmstxt » ✓ Processed components/button/usage.md
+llmstxt » ✓ Processed components/button/frameworks/vue.md
+llmstxt » ✓ Processed components/button/frameworks/react-19.md
+llmstxt » ✓ Processed components/button-group/usage.md
+llmstxt » ✓ Processed components/button-pill/usage.md
+llmstxt » ✓ Processed components/callout/frameworks/elements.md
+llmstxt » ✓ Processed components/callout/accessibility.md
+llmstxt » ✓ Processed components/callout/overview.md
+llmstxt » ✓ Processed components/callout/frameworks/ios.md
+llmstxt » ✓ Processed components/callout/frameworks/react.md
+llmstxt » ✓ Processed foundations/css-classes/caret.md
+llmstxt » ✓ Processed components/callout/usage.md
+llmstxt » ✓ Processed components/card/usage.md
+llmstxt » ✓ Processed components/checkbox/accessibility.md
+llmstxt » ✓ Processed components/checkbox/overview.md
+llmstxt » ✓ Processed components/checkbox/frameworks/elements.md
+llmstxt » ✓ Processed components/callout/frameworks/vue.md
+llmstxt » ✓ Processed components/checkbox/frameworks/ios.md
+llmstxt » ✓ Processed components/checkbox/frameworks/vue.md
+llmstxt » ✓ Processed components/checkbox/frameworks/react.md
+llmstxt » ✓ Processed components/checkbox/usage.md
+llmstxt » ✓ Processed foundations/css-classes/clear.md
+llmstxt » ✓ Processed foundations/css-classes/class-variants.md
+llmstxt » ✓ Processed components/combo-box/usage.md
+llmstxt » ✓ Processed foundations/css-classes/columns.md
+llmstxt » ✓ Processed foundations/css-classes/content.md
+llmstxt » ✓ Processed components.md
+llmstxt » ✓ Processed components/confirmation-dialog/usage.md
+llmstxt » ✓ Processed foundations/customization.md
+llmstxt » ✓ Processed components/confirmation-dialog/accessibility.md
+llmstxt » ✓ Processed foundations/dark-mode.md
+llmstxt » ✓ Processed foundations/css-classes/cursor.md
+llmstxt » ✓ Processed foundations/dark-mode/elements.md
+llmstxt » ✓ Processed foundations/data-visualization/color/data-colors.md
+llmstxt » ✓ Processed foundations/dark-mode/react.md
+llmstxt » ✓ Processed components/date-picker/styling.md
+llmstxt » ✓ Processed components/date-picker/usage.md
+llmstxt » ✓ Processed components/date-picker/overview.md
+llmstxt » ✓ Processed foundations/css-classes/display.md
+llmstxt » ✓ Processed get-started/designers/designing-for-multibrand.md
+llmstxt » ✓ Processed foundations/css-classes/divide-style.md
+llmstxt » ✓ Processed foundations/css-classes/divide-width.md
+llmstxt » ✓ Processed components/divider/overview.md
+llmstxt » ✓ Processed foundations/css-classes/divide-color.md
+llmstxt » ✓ Processed foundations/elevation.md
+llmstxt » ✓ Processed foundations/css-classes/drop-shadow.md
+llmstxt » ✓ Processed patterns/empty-states/overview.md
+llmstxt » ✓ Processed patterns/empty-states/usage.md
+llmstxt » ✓ Processed patterns/empty-states/frameworks/android.md
+llmstxt » ✓ Processed foundations/css-classes/flex-basis.md
+llmstxt » ✓ Processed foundations/css-classes/flex.md
+llmstxt » ✓ Processed foundations/data-visualization/figma-library.md
+llmstxt » ✓ Processed foundations/css-classes/flex-direction.md
+llmstxt » ✓ Processed foundations/css-classes/flex-wrap.md
+llmstxt » ✓ Processed foundations/css-classes/flex-shrink.md
+llmstxt » ✓ Processed foundations/css-classes/flex-grow.md
+llmstxt » ✓ Processed components/expandable/frameworks/react.md
+llmstxt » ✓ Processed foundations/css-classes/floats.md
+llmstxt » ✓ Processed foundations/css-classes/font-variant-numeric.md
+llmstxt » ✓ Processed foundations/css-classes/font-size.md
+llmstxt » ✓ Processed foundations/css-classes/font-weight.md
+llmstxt » ✓ Processed foundations.md
+llmstxt » ✓ Processed foundations/css-classes/font-style.md
+llmstxt » ✓ Processed components/DsFrameworkStatus.md
+llmstxt » ✓ Processed patterns/DsFrameworkStatus.md
+llmstxt » ✓ Processed foundations/css-classes/gap.md
+llmstxt » ✓ Processed get-started.md
+llmstxt » ✓ Processed components/expandable/usage.md
+llmstxt » ✓ Processed foundations/css-classes/grid-auto-flow.md
+llmstxt » ✓ Processed foundations/css-classes/grid-auto-columns.md
+llmstxt » ✓ Processed foundations/css-classes/grid-auto-rows.md
+llmstxt » ✓ Processed foundations/css-classes/grid-row-se.md
+llmstxt » ✓ Processed foundations/css-classes/grid-template-columns.md
+llmstxt » ✓ Processed foundations/css-classes/grid-column-se.md
+llmstxt » ✓ Processed foundations/css-classes/states.md
+llmstxt » ✓ Processed foundations/css-classes/height.md
+llmstxt » ✓ Processed foundations/css-classes/grid-template-rows.md
+llmstxt » ✓ Processed foundations/css-classes/icon-color.md
+llmstxt » ✓ Processed get-started/developers/ios.md
+llmstxt » ✓ Processed get-started/developers/web.md
+llmstxt » ✓ Processed components/icons/overview.md
+llmstxt » ✓ Processed components/icons/styling.md
+llmstxt » ✓ Processed foundations/illustrations.md
+llmstxt » ✓ Processed components/icons/usage.md
+llmstxt » ✓ Processed foundations/data-visualization/interaction.md
+llmstxt » ✓ Processed foundations/css-classes/isolate.md
+llmstxt » ✓ Processed foundations/data-visualization/success-criteria/introduction.md
+llmstxt » ✓ Processed foundations/data-visualization/introduction.md
+llmstxt » ✓ Processed foundations/css-classes/justify-items.md
+llmstxt » ✓ Processed foundations/css-classes/justify-self.md
+llmstxt » ✓ Processed foundations/data-visualization/tokens/line.md
+llmstxt » ✓ Processed foundations/css-classes/justify-content.md
+llmstxt » ✓ Processed foundations/data-visualization/color/lines-points.md
+llmstxt » ✓ Processed foundations/css-classes/line-height.md
+llmstxt » ✓ Processed components/link/accessibility.md
+llmstxt » ✓ Processed foundations/data-visualization/success-criteria/keyboard.md
+llmstxt » ✓ Processed components/link/overview.md
+llmstxt » ✓ Processed components/link/frameworks/android.md
+llmstxt » ✓ Processed foundations/keyboard/shortcuts.md
+llmstxt » ✓ Processed components/link/frameworks/react-19.md
+llmstxt » ✓ Processed components/link/styling.md
+llmstxt » ✓ Processed components/logo/accessibility.md
+llmstxt » ✓ Processed foundations/css-classes/list-style-position.md
+llmstxt » ✓ Processed components/link/usage.md
+llmstxt » ✓ Processed foundations/css-classes/list-style-type.md
+llmstxt » ✓ Processed components/logo/frameworks/ios.md
+llmstxt » ✓ Processed components/logo/frameworks/android.md
+llmstxt » ✓ Processed components/logo/overview.md
+llmstxt » ✓ Processed foundations/css-classes/margin.md
+llmstxt » ✓ Processed components/logo/usage.md
+llmstxt » ✓ Processed foundations/css-classes/max-height.md
+llmstxt » ✓ Processed help/authoring-guide.md
+llmstxt » ✓ Processed foundations/css-classes/max-width.md
+llmstxt » ✓ Processed foundations/css-classes/min-height.md
+llmstxt » ✓ Processed foundations/css-classes/min-width.md
+llmstxt » ✓ Processed get-started/mission-values-principles.md
+llmstxt » ✓ Processed components/modal/overview.md
+llmstxt » ✓ Processed components/modal/usage.md
+llmstxt » ✓ Processed get-started/designers/migrate-from-fabric.md
+llmstxt » ✓ Processed pre-migrating.md
+llmstxt » ✓ Processed foundations/css-classes/order.md
+llmstxt » ✓ Processed foundations/css-classes/object-fit.md
+llmstxt » ✓ Processed foundations/motion.md
+llmstxt » ✓ Processed foundations/css-classes/object-position.md
+llmstxt » ✓ Processed components/modal/frameworks/vue.md
+llmstxt » ✓ Processed foundations/css-classes/outline-color.md
+llmstxt » ✓ Processed foundations/css-classes/opacity.md
+llmstxt » ✓ Processed foundations/css-classes/overscroll.md
+llmstxt » ✓ Processed foundations/css-classes/outline-offset.md
+llmstxt » ✓ Processed foundations/css-classes/outline-width.md
+llmstxt » ✓ Processed foundations/css-classes/overflow.md
+llmstxt » ✓ Processed foundations/css-classes/outline-style.md
+llmstxt » ✓ Processed foundations/css-classes/padding.md
+llmstxt » ✓ Processed components/page-indicator/usage.md
+llmstxt » ✓ Processed components/pagination/overview.md
+llmstxt » ✓ Processed foundations/css-classes/place-content.md
+llmstxt » ✓ Processed components/pagination/usage.md
+llmstxt » ✓ Processed components/page-indicator/overview.md
+llmstxt » ✓ Processed foundations/css-classes/place-items.md
+llmstxt » ✓ Processed foundations/css-classes/place-self.md
+llmstxt » ✓ Processed foundations/css-classes/position.md
+llmstxt » ✓ Processed components/popover/usage.md
+llmstxt » ✓ Processed components/radio/accessibility.md
+llmstxt » ✓ Processed components/pill/usage.md
+llmstxt » ✓ Processed foundations/css-classes/pointer-events.md
+llmstxt » ✓ Processed components/radio/frameworks/ios.md
+llmstxt » ✓ Processed components/radio/overview.md
+llmstxt » ✓ Processed components/radio/frameworks/elements.md
+llmstxt » ✓ Processed patterns.md
+llmstxt » ✓ Processed components/radio/frameworks/vue.md
+llmstxt » ✓ Processed components/radio/frameworks/react.md
+llmstxt » ✓ Processed components/range-slider/accessibility.md
+llmstxt » ✓ Processed components/radio-buttons/usage.md
+llmstxt » ✓ Processed components/radio/usage.md
+llmstxt » ✓ Processed components/range-slider/frameworks/ios.md
+llmstxt » ✓ Processed components/range-slider/usage.md
+llmstxt » ✓ Processed components/range-slider/overview.md
+llmstxt » ✓ Processed help/report-bugs.md
+llmstxt » ✓ Processed foundations/css-classes/rotate.md
+llmstxt » ✓ Processed components/range-slider/frameworks/react-19.md
+llmstxt » ✓ Processed components/range-slider/frameworks/elements.md
+llmstxt » ✓ Processed foundations/css-classes/scale.md
+llmstxt » ✓ Processed foundations/data-visualization/success-criteria/screenreader.md
+llmstxt » ✓ Processed foundations/css-classes/scroll-snap-stop.md
+llmstxt » ✓ Processed foundations/css-classes/resize.md
+llmstxt » ✓ Processed foundations/css-classes/scroll-snap-align.md
+llmstxt » ✓ Processed foundations/css-classes/screen-readers.md
+llmstxt » ✓ Processed foundations/css-classes/scroll-behavior.md
+llmstxt » ✓ Processed collaborate/request-new-component.md
+llmstxt » ✓ Processed foundations/css-classes/scroll-snap-type.md
+llmstxt » ✓ Processed components/select/frameworks/ios.md
+llmstxt » ✓ Processed components/select/overview.md
+llmstxt » ✓ Processed components/select/accessibility.md
+llmstxt » ✓ Processed components/select/frameworks/react.md
+llmstxt » ✓ Processed components/select/frameworks/vue.md
+llmstxt » ✓ Processed components/slider/accessibility.md
+llmstxt » ✓ Processed foundations/css-classes/skew.md
+llmstxt » ✓ Processed components/select/usage.md
+llmstxt » ✓ Processed components/slider/frameworks/react.md
+llmstxt » ✓ Processed components/slider/overview.md
+llmstxt » ✓ Processed components/select/frameworks/elements.md
+llmstxt » ✓ Processed components/slider/frameworks/ios.md
+llmstxt » ✓ Processed components/slider/frameworks/react-19.md
+llmstxt » ✓ Processed components/slider/usage.md
+llmstxt » ✓ Processed foundations/css-classes/space-between.md
+llmstxt » ✓ Processed components/slider/frameworks/elements.md
+llmstxt » ✓ Processed components/snackbar/accessibility.md
+llmstxt » ✓ Processed components/snackbar/usage.md
+llmstxt » ✓ Processed components/snackbar/overview.md
+llmstxt » ✓ Processed components/snackbar/frameworks/elements.md
+llmstxt » ✓ Processed components/spinner/usage.md
+llmstxt » ✓ Processed components/snackbar/frameworks/ios.md
+llmstxt » ✓ Processed help/support.md
+llmstxt » ✓ Processed components/switch/usage.md
+llmstxt » ✓ Processed components/steps/usage.md
+llmstxt » ✓ Processed foundations/css-classes/table-layout.md
+llmstxt » ✓ Processed components/tabs/accessibility.md
+llmstxt » ✓ Processed components/tabs/frameworks/react.md
+llmstxt » ✓ Processed components/tabs/overview.md
+llmstxt » ✓ Processed components/tabs/frameworks/elements.md
+llmstxt » ✓ Processed components/tabs/frameworks/ios.md
+llmstxt » ✓ Processed components/tabs/frameworks/vue.md
+llmstxt » ✓ Processed components/text/usage.md
+llmstxt » ✓ Processed foundations/data-visualization/tokens/text.md
+llmstxt » ✓ Processed foundations/data-visualization/color/text-icons.md
+llmstxt » ✓ Processed foundations/css-classes/text-align.md
+llmstxt » ✓ Processed foundations/css-classes/surface.md
+llmstxt » ✓ Processed foundations/css-classes/text-color.md
+llmstxt » ✓ Processed components/tabs/usage.md
+llmstxt » ✓ Processed components/text-area/overview.md
+llmstxt » ✓ Processed foundations/css-classes/text-decoration.md
+llmstxt » ✓ Processed components/text-field/frameworks/react.md
+llmstxt » ✓ Processed components/text-field/frameworks/ios.md
+llmstxt » ✓ Processed components/text-field/frameworks/elements.md
+llmstxt » ✓ Processed components/text-field/frameworks/vue.md
+llmstxt » ✓ Processed foundations/css-classes/text-transform.md
+llmstxt » ✓ Processed components/text-field/overview.md
+llmstxt » ✓ Processed components/text-field/usage.md
+llmstxt » ✓ Processed foundations/css-classes/text-overflow.md
+llmstxt » ✓ Processed components/toast/accessibility.md
+llmstxt » ✓ Processed components/toast/frameworks/android.md
+llmstxt » ✓ Processed components/toast/overview.md
+llmstxt » ✓ Processed components/toast/frameworks/ios.md
+llmstxt » ✓ Processed components/toast/frameworks/react-19.md
+llmstxt » ✓ Processed foundations/tokens/intro.md
+llmstxt » ✓ Processed foundations/data-visualization/tokens/introduction.md
+llmstxt » ✓ Processed components/toast/usage.md
+llmstxt » ✓ Processed components/text-area/usage.md
+llmstxt » ✓ Processed components/tooltip/frameworks/ios.md
+llmstxt » ✓ Processed components/tooltip/frameworks/elements.md
+llmstxt » ✓ Processed components/tooltip/overview.md
+llmstxt » ✓ Processed components/tooltip/usage.md
+llmstxt » ✓ Processed components/tooltip/frameworks/react.md
+llmstxt » ✓ Processed components/tooltip/frameworks/vue.md
+llmstxt » ✓ Processed foundations/css-classes/top-right-bottom-left.md
+llmstxt » ✓ Processed foundations/css-classes/transform-origin.md
+llmstxt » ✓ Processed foundations/css-classes/touch-action.md
+llmstxt » ✓ Processed foundations/css-classes/transition-delay.md
+llmstxt » ✓ Processed foundations/css-classes/transition-duration.md
+llmstxt » ✓ Processed foundations/css-classes/translate.md
+llmstxt » ✓ Processed foundations/css-classes/unocss.md
+llmstxt » ✓ Processed foundations/css-classes/transition-timing.md
+llmstxt » ✓ Processed foundations/css-classes/helpers.md
+llmstxt » ✓ Processed components/tooltip/accessibility.md
+llmstxt » ✓ Processed foundations/typography.md
+llmstxt » ✓ Processed get-started/developers/web/web-components.md
+llmstxt » ✓ Processed components/utilities/usage.md
+llmstxt » ✓ Processed foundations/css-classes/user-select.md
+llmstxt » ✓ Processed foundations/css-classes/transition-property.md
+llmstxt » ✓ Processed foundations/data-visualization/success-criteria/visual.md
+llmstxt » ✓ Processed foundations/css-classes/vertical-align.md
+llmstxt » ✓ Processed foundations/css-classes/visibility.md
+llmstxt » ✓ Processed .vitepress/ComponentQuestions.md
+llmstxt » ✓ Processed foundations/font-weights.md
+llmstxt » ✓ Processed get-started/designers/warp-in-figma.md
+llmstxt » ✓ Processed foundations/css-classes/introduction.md
+llmstxt » ✓ Processed foundations/css-classes/what-is-warp.md
+llmstxt » ✓ Processed components/slider/frameworks/vue.md
+llmstxt » ✓ Processed foundations/css-classes/whitespace.md
+llmstxt » ✓ Processed components/text-area/frameworks/vue.md
+llmstxt » ✓ Processed foundations/css-classes/will-change.md
+llmstxt » ✓ Processed foundations/css-classes/width.md
+llmstxt » ✓ Processed foundations/css-classes/z-index.md
+llmstxt » ✓ Processed foundations/css-classes/word-break.md
+llmstxt » ✓ Generated llms-full.txt (~441.5K tokens, 1.55 MB) with 518 markdown files
+llmstxt » ✓ Processed components/broadcast/frameworks/ios.md
+llmstxt » ✓ Processed components/button-pill/frameworks/ios.md
+llmstxt » ✓ Processed components/card/frameworks/elements.md
+llmstxt » ✓ Processed components/confirmation-dialog/frameworks/ios.md
+llmstxt » ✓ Processed components/divider/frameworks/android.md
+llmstxt » ✓ Processed components/pagination/frameworks/elements.md
+llmstxt » ✓ Processed components/pill/frameworks/android.md
+llmstxt » ✓ Processed components/radio-buttons/frameworks/react.md
+llmstxt » ✓ Processed components/spinner/frameworks/ios.md
+llmstxt » ✓ Processed components/steps/frameworks/android.md
+llmstxt » ✓ Processed components/text/frameworks/android.md
+llmstxt » ✓ Processed blog/posts/2024/week33.md
+llmstxt » ✓ Processed foundations/data-visualization/tokens/background.md
+llmstxt » ✓ Processed foundations/data-visualization/color/bars-areas.md
+llmstxt » ✓ Processed foundations/data-visualization/tokens/border.md
+llmstxt » ✓ Processed get-started/developers/web/custom-components.md
+llmstxt » ✓ Processed components/button/frameworks/android.md
+llmstxt » ✓ Processed components/button/frameworks/elements.md
+llmstxt » ✓ Processed components/button/frameworks/ios.md
+llmstxt » ✓ Processed components/card/frameworks/vue.md
+llmstxt » ✓ Processed components/button-group/frameworks/ios.md
+llmstxt » ✓ Processed foundations/data-visualization/color/chart-colors.md
+llmstxt » ✓ Processed foundations/data-visualization/tokens/chart.md
+llmstxt » ✓ Processed components/combo-box/frameworks/elements.md
+llmstxt » ✓ Processed components/date-picker/frameworks/android.md
+llmstxt » ✓ Processed components/date-picker/frameworks/elements.md
+llmstxt » ✓ Processed components/divider/frameworks/ios.md
+llmstxt » ✓ Processed components/card/frameworks/react.md
+llmstxt » ✓ Processed components/expandable/frameworks/android.md
+llmstxt » ✓ Processed components/date-picker/frameworks/ios.md
+llmstxt » ✓ Processed components/expandable/frameworks/ios.md
+llmstxt » ✓ Processed components/icons/frameworks/elements.md
+llmstxt » ✓ Processed components/icons/frameworks/android.md
+llmstxt » ✓ Processed components/icons/frameworks/ios.md
+llmstxt » ✓ Processed components/expandable/frameworks/elements.md
+llmstxt » ✓ Processed components/modal/frameworks/elements.md
+llmstxt » ✓ Processed components/modal/frameworks/android.md
+llmstxt » ✓ Processed components/modal/frameworks/ios.md
+llmstxt » ✓ Processed components/page-indicator/frameworks/elements.md
+llmstxt » ✓ Processed components/pagination/frameworks/react.md
+llmstxt » ✓ Processed components/page-indicator/frameworks/ios.md
+llmstxt » ✓ Processed components/page-indicator/frameworks/android.md
+llmstxt » ✓ Processed components/pill/frameworks/vue.md
+llmstxt » ✓ Processed components/pill/frameworks/react.md
+llmstxt » ✓ Processed components/pill/frameworks/ios.md
+llmstxt » ✓ Processed components/popover/frameworks/android.md
+llmstxt » ✓ Processed components/pill/frameworks/elements.md
+llmstxt » ✓ Processed components/radio-buttons/frameworks/vue.md
+llmstxt » ✓ Processed components/steps/frameworks/react.md
+llmstxt » ✓ Processed components/popover/frameworks/react.md
+llmstxt » ✓ Processed components/spinner/frameworks/android.md
+llmstxt » ✓ Processed components/switch/frameworks/android.md
+llmstxt » ✓ Processed components/steps/frameworks/vue.md
+llmstxt » ✓ Processed components/popover/frameworks/elements.md
+llmstxt » ✓ Processed components/switch/frameworks/elements.md
+llmstxt » ✓ Processed components/switch/frameworks/react.md
+llmstxt » ✓ Processed components/text/frameworks/ios.md
+llmstxt » ✓ Processed components/switch/frameworks/ios.md
+llmstxt » ✓ Processed components/text-area/frameworks/elements.md
+llmstxt » ✓ Processed components/steps/frameworks/elements.md
+llmstxt » ✓ Processed components/steps/frameworks/ios.md
+llmstxt » ✓ Processed components/text-area/frameworks/ios.md
+llmstxt » ✓ Processed blog/posts/2025/icons-v260.md
+llmstxt » ✓ Processed blog/posts/2023/icons-v130.md
+llmstxt » ✓ Processed blog/posts/2026/android-0.0.53.md
+llmstxt » ✓ Processed blog/posts/2023/icons-v140.md
+llmstxt » ✓ Processed blog/posts/2024/warp-2-0.md
+llmstxt » ✓ Processed blog/posts/2024/android-0.0.27.md
+llmstxt » ✓ Processed blog/posts/2024/icons-v2.md
+llmstxt » ✓ Processed blog/posts/2024/android-0.0.33.md
+llmstxt » ✓ Processed blog/posts/2024/android-0.0.28.md
+llmstxt » ✓ Processed blog/posts/2024/android-0.0.29.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.40.md
+llmstxt » ✓ Processed blog/posts/2025/icons-v270.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.39.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.38.md
+llmstxt » ✓ Processed blog/posts/2024/android-0.0.34.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.45.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.48.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.50.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.46.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.44.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.43.md
+llmstxt » ✓ Processed blog/posts/2026/android-0.0.51.md
+llmstxt » ✓ Processed blog/posts/2026/design-06-23.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.37.md
+llmstxt » ✓ Processed blog/posts/2026/android-0.0.54.md
+llmstxt » ✓ Processed blog/posts/2025/week46.md
+llmstxt » ✓ Processed blog/posts/2025/ios-0.0.63.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.42.md
+llmstxt » ✓ Processed blog/posts/2026/design-01-05.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.47.md
+llmstxt » ✓ Processed blog/posts/2025/ios-0.0.64.md
+llmstxt » ✓ Processed blog/posts/2025/android-0.0.49.md
+llmstxt » ✓ Processed blog/posts/2025/design-10-07.md
+llmstxt » ✓ Processed blog/posts/2025/ios-0.0.68.md
+llmstxt » ✓ Processed blog/posts/2025/ios-0.0.67.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.72.md
+llmstxt » ✓ Processed blog/posts/2025/design-04-14.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.76.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.74.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.71.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.77.md
+llmstxt » ✓ Processed blog/posts/2025/ios-0.0.70.md
+llmstxt » ✓ Processed blog/posts/2025/design-08-18.md
+llmstxt » ✓ Processed blog/posts/2025/ios-0.0.69.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.75.md
+llmstxt » ✓ Processed blog/posts/2025/ios-0.0.65.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.79.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.81.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.80.md
+llmstxt » ✓ Processed blog/posts/2026/android-0.0.52.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.83.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.84.md
+llmstxt » ✓ Processed blog/posts/2024/week21.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.82.md
+llmstxt » ✓ Processed blog/posts/2024/week10.md
+llmstxt » ✓ Processed blog/posts/2023/week48.md
+llmstxt » ✓ Processed blog/posts/2025/week7.md
+llmstxt » ✓ Processed blog/posts/2023/week51.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.73.md
+llmstxt » ✓ Processed blog/posts/2024/week7.md
+llmstxt » ✓ Processed blog/posts/2024/week47.md
+llmstxt » ✓ Processed blog/posts/2024/week15.md
+llmstxt » ✓ Processed blog/posts/2026/ios-0.0.85.md
+llmstxt » ✓ Processed blog/posts/2023/week45.md
+llmstxt » ✓ Processed blog/posts/2023/october.md
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+llmstxt »   vitepress-plugin-llms initialized (SSR build) with workDir: /Users/iurii.shatalov@m10s.io/warp-docs/docs
+llmstxt »   Build started, file collection cleared
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+Deprecation [legacy-js-api]: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+
+More info: https://sass-lang.com/d/legacy-js-api
+
+stars-background.svg referenced in stars-background.svg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+"wButton" is imported from external module "@warp-ds/vue" but never used in "docs/components/radio-buttons/Example.vue".
+
+... referenced in ... didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/20s-scientists.jpg referenced in ../../images/20s-scientists.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/50s-scientists_240.jpg referenced in ../../images/50s-scientists_240.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/50s-scientists.jpg referenced in ../../images/50s-scientists.jpg didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/office-warping.png referenced in ../../images/office-warping.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+
+../../images/repeatable.png referenced in ../../images/repeatable.png didn't resolve at build time, it will remain unchanged to be resolved at runtime
+llmstxt »   Skipping LLMs docs generation in SSR build
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...
+- generating sitemap...
+[32m✓[0m generating sitemap...
+build complete in 19.19s.
+real 20.55
+user 29.20
+sys 3.73
+EXIT 0

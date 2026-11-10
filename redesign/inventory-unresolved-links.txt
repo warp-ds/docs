@@ -1,0 +1,15 @@
+blog/ArticleCard.vue -> blog/href
+blog/index.md -> blog/article.url
+components/breadcrumbs/frameworks/react.md -> url/1
+components/breadcrumbs/frameworks/react.md -> url/2
+components/breadcrumbs/frameworks/vue.md -> url/1
+components/breadcrumbs/frameworks/vue.md -> url/2
+components/breadcrumbs/overview.md -> url/1
+components/breadcrumbs/overview.md -> url/2
+components/card/frameworks/react.md -> components/card/frameworks/...
+foundations/data-visualization/introduction/index.md -> foundations/data-visualization/introduction/page.href
+foundations/index.md -> foundations/page.href
+get-started/developers/web/index.md -> marketplace
+get-started/developers/web/index.md -> marketplace/furniture
+get-started/index.md -> get-started/page.href
+index.md -> card.href

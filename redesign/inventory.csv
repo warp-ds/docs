@@ -1,0 +1,519 @@
+path,url,section,item,page_kind,platform,framework,title,words,lines,inbound_links,flags
+docs/blog/index.md,/blog/,blog,,section-index,shared,,,21,19,0,near-empty script
+docs/blog/posts/2023/icons-v130.md,/blog/posts/2023/icons-v130,blog,,blog-post,shared,,@warp-ds/icons v1.3.0,90,55,0,
+docs/blog/posts/2023/icons-v140.md,/blog/posts/2023/icons-v140,blog,,blog-post,shared,,@warp-ds/icons v1.4.0,89,57,0,
+docs/blog/posts/2023/october.md,/blog/posts/2023/october,blog,,blog-post,shared,,What's been cooking in Warp lately,349,38,0,
+docs/blog/posts/2023/week45.md,/blog/posts/2023/week45,blog,,blog-post,shared,,WARP release 1.2.0,367,76,0,
+docs/blog/posts/2023/week48.md,/blog/posts/2023/week48,blog,,blog-post,shared,,WARP releases,345,69,0,
+docs/blog/posts/2023/week51.md,/blog/posts/2023/week51,blog,,blog-post,shared,,WARP releases,235,61,0,
+docs/blog/posts/2024/android-0.0.27.md,/blog/posts/2024/android-0.0.27,blog,,blog-post,shared,,WARP Android release v.0.0.27,45,35,0,
+docs/blog/posts/2024/android-0.0.28.md,/blog/posts/2024/android-0.0.28,blog,,blog-post,shared,,WARP Android release v.0.0.28,160,94,0,
+docs/blog/posts/2024/android-0.0.29.md,/blog/posts/2024/android-0.0.29,blog,,blog-post,shared,,WARP Android release v.0.0.29,41,33,0,
+docs/blog/posts/2024/android-0.0.33.md,/blog/posts/2024/android-0.0.33,blog,,blog-post,shared,,WARP Android release v.0.0.33,75,65,0,
+docs/blog/posts/2024/android-0.0.34.md,/blog/posts/2024/android-0.0.34,blog,,blog-post,shared,,WARP Android release v.0.0.34,107,70,0,placeholder
+docs/blog/posts/2024/icons-v2.md,/blog/posts/2024/icons-v2,blog,,blog-post,shared,,@warp-ds/icons v2.0.0 - breaking changes incoming!,205,338,0,deprecated-mention
+docs/blog/posts/2024/warp-2-0.md,/blog/posts/2024/warp-2-0,blog,,blog-post,shared,,@warp-ds v2 - DBA Changes Are Here!,280,136,0,deprecated-mention
+docs/blog/posts/2024/week10.md,/blog/posts/2024/week10,blog,,blog-post,shared,,WARP releases,131,40,0,
+docs/blog/posts/2024/week15.md,/blog/posts/2024/week15,blog,,blog-post,shared,,WARP releases,216,56,0,
+docs/blog/posts/2024/week21.md,/blog/posts/2024/week21,blog,,blog-post,shared,,WARP releases,380,80,0,
+docs/blog/posts/2024/week33.md,/blog/posts/2024/week33,blog,,blog-post,shared,,@warp-ds v2 - Stable releases,783,189,0,
+docs/blog/posts/2024/week47.md,/blog/posts/2024/week47,blog,,blog-post,shared,,WARP releases,188,53,0,
+docs/blog/posts/2024/week7.md,/blog/posts/2024/week7,blog,,blog-post,shared,,WARP releases,185,50,0,
+docs/blog/posts/2025/android-0.0.37.md,/blog/posts/2025/android-0.0.37,blog,,blog-post,shared,,WARP Android release v.0.0.37,267,87,0,
+docs/blog/posts/2025/android-0.0.38.md,/blog/posts/2025/android-0.0.38,blog,,blog-post,shared,,WARP Android release v.0.0.38,87,56,0,
+docs/blog/posts/2025/android-0.0.39.md,/blog/posts/2025/android-0.0.39,blog,,blog-post,shared,,WARP Android release v.0.0.39,104,90,0,
+docs/blog/posts/2025/android-0.0.40.md,/blog/posts/2025/android-0.0.40,blog,,blog-post,shared,,WARP Android release v.0.0.40,85,72,0,
+docs/blog/posts/2025/android-0.0.42.md,/blog/posts/2025/android-0.0.42,blog,,blog-post,shared,,WARP Android release v.0.0.42,72,58,0,
+docs/blog/posts/2025/android-0.0.43.md,/blog/posts/2025/android-0.0.43,blog,,blog-post,shared,,WARP Android release v.0.0.43,66,45,0,
+docs/blog/posts/2025/android-0.0.44.md,/blog/posts/2025/android-0.0.44,blog,,blog-post,shared,,WARP Android release v.0.0.44,72,49,0,
+docs/blog/posts/2025/android-0.0.45.md,/blog/posts/2025/android-0.0.45,blog,,blog-post,shared,,WARP Android release v.0.0.45,90,30,0,
+docs/blog/posts/2025/android-0.0.46.md,/blog/posts/2025/android-0.0.46,blog,,blog-post,shared,,WARP Android release v.0.0.46,48,43,0,
+docs/blog/posts/2025/android-0.0.47.md,/blog/posts/2025/android-0.0.47,blog,,blog-post,shared,,WARP Android release v.0.0.47,349,131,0,
+docs/blog/posts/2025/android-0.0.48.md,/blog/posts/2025/android-0.0.48,blog,,blog-post,shared,,WARP Android release v.0.0.48,67,28,0,
+docs/blog/posts/2025/android-0.0.49.md,/blog/posts/2025/android-0.0.49,blog,,blog-post,shared,,WARP Android release v.0.0.49,118,78,0,
+docs/blog/posts/2025/android-0.0.50.md,/blog/posts/2025/android-0.0.50,blog,,blog-post,shared,,WARP Android release v.0.0.50,42,45,0,
+docs/blog/posts/2025/design-04-14.md,/blog/posts/2025/design-04-14,blog,,blog-post,shared,,WARP Figma updates,212,46,0,placeholder
+docs/blog/posts/2025/design-08-18.md,/blog/posts/2025/design-08-18,blog,,blog-post,shared,,WARP Figma updates,284,36,0,deprecated-mention
+docs/blog/posts/2025/design-10-07.md,/blog/posts/2025/design-10-07,blog,,blog-post,shared,,WARP Figma updates,678,109,0,
+docs/blog/posts/2025/icons-v260.md,/blog/posts/2025/icons-v260,blog,,blog-post,shared,,@warp-ds/icons v2.6.0,105,29,0,
+docs/blog/posts/2025/icons-v270.md,/blog/posts/2025/icons-v270,blog,,blog-post,shared,,@warp-ds/icons v2.7.0,76,16,0,
+docs/blog/posts/2025/ios-0.0.63.md,/blog/posts/2025/ios-0.0.63,blog,,blog-post,shared,,WARP iOS release v.0.0.63,69,38,0,deprecated-mention
+docs/blog/posts/2025/ios-0.0.64.md,/blog/posts/2025/ios-0.0.64,blog,,blog-post,shared,,WARP iOS release v.0.0.64,58,24,0,
+docs/blog/posts/2025/ios-0.0.65.md,/blog/posts/2025/ios-0.0.65,blog,,blog-post,shared,,WARP iOS release v.0.0.65,386,137,0,
+docs/blog/posts/2025/ios-0.0.67.md,/blog/posts/2025/ios-0.0.67,blog,,blog-post,shared,,WARP iOS release v.0.0.67,67,26,0,
+docs/blog/posts/2025/ios-0.0.68.md,/blog/posts/2025/ios-0.0.68,blog,,blog-post,shared,,WARP iOS release v.0.0.68,74,57,0,
+docs/blog/posts/2025/ios-0.0.69.md,/blog/posts/2025/ios-0.0.69,blog,,blog-post,shared,,WARP iOS release v.0.0.69,68,54,0,
+docs/blog/posts/2025/ios-0.0.70.md,/blog/posts/2025/ios-0.0.70,blog,,blog-post,shared,,WARP iOS release v.0.0.70,34,47,0,near-empty
+docs/blog/posts/2025/week46.md,/blog/posts/2025/week46,blog,,blog-post,shared,,WARP elements release,493,82,0,live-web-example script
+docs/blog/posts/2025/week7.md,/blog/posts/2025/week7,blog,,blog-post,shared,,WARP releases,277,102,0,
+docs/blog/posts/2026/android-0.0.51.md,/blog/posts/2026/android-0.0.51,blog,,blog-post,shared,,WARP Android release v.0.0.51,46,35,0,
+docs/blog/posts/2026/android-0.0.52.md,/blog/posts/2026/android-0.0.52,blog,,blog-post,shared,,WARP Android release v.0.0.52,59,26,0,
+docs/blog/posts/2026/android-0.0.53.md,/blog/posts/2026/android-0.0.53,blog,,blog-post,shared,,WARP Android release v.0.0.53,20,18,0,near-empty
+docs/blog/posts/2026/android-0.0.54.md,/blog/posts/2026/android-0.0.54,blog,,blog-post,shared,,WARP Android release v.0.0.54,18,17,0,near-empty
+docs/blog/posts/2026/design-01-05.md,/blog/posts/2026/design-01-05,blog,,blog-post,shared,,WARP Figma updates,557,86,0,
+docs/blog/posts/2026/design-06-23.md,/blog/posts/2026/design-06-23,blog,,blog-post,shared,,Warp Figma Updates,383,62,0,deprecated-mention
+docs/blog/posts/2026/ios-0.0.71.md,/blog/posts/2026/ios-0.0.71,blog,,blog-post,shared,,WARP iOS release v.0.0.71,76,38,0,
+docs/blog/posts/2026/ios-0.0.72.md,/blog/posts/2026/ios-0.0.72,blog,,blog-post,shared,,WARP iOS release v.0.0.72,18,16,0,near-empty
+docs/blog/posts/2026/ios-0.0.73.md,/blog/posts/2026/ios-0.0.73,blog,,blog-post,shared,,WARP iOS release v.0.0.73,31,22,0,near-empty
+docs/blog/posts/2026/ios-0.0.74.md,/blog/posts/2026/ios-0.0.74,blog,,blog-post,shared,,WARP iOS release v.0.0.74,32,21,0,near-empty
+docs/blog/posts/2026/ios-0.0.75.md,/blog/posts/2026/ios-0.0.75,blog,,blog-post,shared,,WARP iOS release v.0.0.75,48,18,0,
+docs/blog/posts/2026/ios-0.0.76.md,/blog/posts/2026/ios-0.0.76,blog,,blog-post,shared,,WARP iOS release v.0.0.76,22,17,0,near-empty
+docs/blog/posts/2026/ios-0.0.77.md,/blog/posts/2026/ios-0.0.77,blog,,blog-post,shared,,WARP iOS release v.0.0.77,59,34,0,
+docs/blog/posts/2026/ios-0.0.79.md,/blog/posts/2026/ios-0.0.79,blog,,blog-post,shared,,WARP iOS release v.0.0.79,83,58,0,
+docs/blog/posts/2026/ios-0.0.80.md,/blog/posts/2026/ios-0.0.80,blog,,blog-post,shared,,WARP iOS release v.0.0.80,33,21,0,near-empty
+docs/blog/posts/2026/ios-0.0.81.md,/blog/posts/2026/ios-0.0.81,blog,,blog-post,shared,,WARP iOS release v.0.0.81,83,60,0,
+docs/blog/posts/2026/ios-0.0.82.md,/blog/posts/2026/ios-0.0.82,blog,,blog-post,shared,,WARP iOS release v.0.0.82,46,36,0,
+docs/blog/posts/2026/ios-0.0.83.md,/blog/posts/2026/ios-0.0.83,blog,,blog-post,shared,,WARP iOS release v.0.0.83,29,28,0,near-empty
+docs/blog/posts/2026/ios-0.0.84.md,/blog/posts/2026/ios-0.0.84,blog,,blog-post,shared,,WARP iOS release v.0.0.84,25,35,0,near-empty
+docs/blog/posts/2026/ios-0.0.85.md,/blog/posts/2026/ios-0.0.85,blog,,blog-post,shared,,WARP iOS release v.0.0.85,171,110,0,
+docs/collaborate/request-component-changes/index.md,/collaborate/request-component-changes/,collaborate,,guide,shared,,Request component changes,101,15,1,
+docs/collaborate/request-new-component/index.md,/collaborate/request-new-component/,collaborate,,guide,shared,,Request new component,148,21,1,
+docs/components/alert/accessibility.md,/components/alert/accessibility,components,alert,accessibility,shared(web-oriented),,Alert - Accessibility,2364,207,1,live-web-example ComponentsStatus
+docs/components/alert/frameworks/android.md,/components/alert/frameworks/android,components,alert,framework,android,android,Alert - Android,215,109,0,ComponentsStatus FrameworkTabs
+docs/components/alert/frameworks/elements.md,/components/alert/frameworks/elements,components,alert,framework,web,elements,Alert - Elements,14,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/alert/frameworks/ios.md,/components/alert/frameworks/ios,components,alert,framework,ios,ios,Alert - iOS,399,193,0,ComponentsStatus FrameworkTabs
+docs/components/alert/frameworks/react-19.md,/components/alert/frameworks/react-19,components,alert,framework,web,react-19,Alert - React 19,203,65,0,ComponentsStatus FrameworkTabs
+docs/components/alert/frameworks/react.md,/components/alert/frameworks/react,components,alert,framework,web,react,Alert - React,192,69,0,ComponentsStatus FrameworkTabs
+docs/components/alert/frameworks/vue.md,/components/alert/frameworks/vue,components,alert,framework,web,vue,Alert - Vue,113,54,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/alert/overview.md,/components/alert/overview,components,alert,overview,shared(web-oriented),,Alert - Overview,785,162,16,live-web-example ComponentsStatus
+docs/components/alert/usage.md,/components/alert/usage,components,alert,usage,shared(web-oriented),,Alert - Usage,1572,192,0,ComponentsStatus DoDont
+docs/components/badge/accessibility.md,/components/badge/accessibility,components,badge,accessibility,shared(web-oriented),,Badge - Accessibility,50,11,0,ComponentsStatus
+docs/components/badge/frameworks/android.md,/components/badge/frameworks/android,components,badge,framework,android,android,Badge - Android,128,87,0,ComponentsStatus FrameworkTabs
+docs/components/badge/frameworks/elements.md,/components/badge/frameworks/elements,components,badge,framework,web,elements,Badge - Elements,16,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/badge/frameworks/ios.md,/components/badge/frameworks/ios,components,badge,framework,ios,ios,Badge - iOS,142,89,0,ComponentsStatus FrameworkTabs
+docs/components/badge/frameworks/react.md,/components/badge/frameworks/react,components,badge,framework,web,react,Badge - React,118,45,0,ComponentsStatus FrameworkTabs
+docs/components/badge/frameworks/vue.md,/components/badge/frameworks/vue,components,badge,framework,web,vue,Badge - Vue,99,51,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/badge/overview.md,/components/badge/overview,components,badge,overview,shared(web-oriented),,Badge - Overview,434,149,0,live-web-example ComponentsStatus
+docs/components/badge/styling.md,/components/badge/styling,components,badge,styling,shared(web-oriented),,Badge - Styling,102,22,0,ComponentsStatus
+docs/components/badge/usage.md,/components/badge/usage,components,badge,usage,shared(web-oriented),,Badge - Usage,418,110,0,ComponentsStatus DoDont
+docs/components/box/accessibility.md,/components/box/accessibility,components,box,accessibility,shared(web-oriented),,Box - Accessibility,1121,100,0,ComponentsStatus
+docs/components/box/frameworks/android.md,/components/box/frameworks/android,components,box,framework,android,android,Box - Android,265,133,0,ComponentsStatus FrameworkTabs
+docs/components/box/frameworks/elements.md,/components/box/frameworks/elements,components,box,framework,web,elements,Box - Elements,15,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/box/frameworks/ios.md,/components/box/frameworks/ios,components,box,framework,ios,ios,Box - iOS,186,83,0,ComponentsStatus FrameworkTabs
+docs/components/box/frameworks/react.md,/components/box/frameworks/react,components,box,framework,web,react,Box - React,127,44,0,ComponentsStatus FrameworkTabs
+docs/components/box/frameworks/vue.md,/components/box/frameworks/vue,components,box,framework,web,vue,Box - Vue,138,53,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/box/overview.md,/components/box/overview,components,box,overview,shared(web-oriented),,Box - Overview,600,126,5,live-web-example ComponentsStatus
+docs/components/box/usage.md,/components/box/usage,components,box,usage,shared(web-oriented),,Box - Usage,1252,139,0,ComponentsStatus DoDont
+docs/components/breadcrumbs/accessibility.md,/components/breadcrumbs/accessibility,components,breadcrumbs,accessibility,shared(web-oriented),,Breadcrumbs - Accessibility,69,12,0,ComponentsStatus
+docs/components/breadcrumbs/frameworks/elements.md,/components/breadcrumbs/frameworks/elements,components,breadcrumbs,framework,web,elements,Breadcrumbs - Elements,27,14,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/breadcrumbs/frameworks/react.md,/components/breadcrumbs/frameworks/react,components,breadcrumbs,framework,web,react,Breadcrumbs - React,91,43,0,ComponentsStatus FrameworkTabs
+docs/components/breadcrumbs/frameworks/vue.md,/components/breadcrumbs/frameworks/vue,components,breadcrumbs,framework,web,vue,Breadcrumbs - Vue,87,50,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/breadcrumbs/overview.md,/components/breadcrumbs/overview,components,breadcrumbs,overview,shared(web-oriented),,Breadcrumbs - Overview,213,33,2,live-web-example ComponentsStatus
+docs/components/breadcrumbs/styling.md,/components/breadcrumbs/styling,components,breadcrumbs,styling,shared(web-oriented),,Breadcrumbs - Styling,125,45,0,ComponentsStatus
+docs/components/breadcrumbs/usage.md,/components/breadcrumbs/usage,components,breadcrumbs,usage,shared(web-oriented),,Breadcrumbs - Usage,542,66,0,ComponentsStatus
+docs/components/broadcast/frameworks/ios.md,/components/broadcast/frameworks/ios,components,broadcast,framework,ios,ios,Broadcast - iOS,138,76,0,ComponentsStatus FrameworkTabs
+docs/components/broadcast/overview.md,/components/broadcast/overview,components,broadcast,overview,shared(web-oriented),,Broadcast - Overview,71,15,1,ComponentsStatus
+docs/components/broadcast/usage.md,/components/broadcast/usage,components,broadcast,usage,shared(web-oriented),,Broadcast - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/button-group/frameworks/ios.md,/components/button-group/frameworks/ios,components,button-group,framework,ios,ios,Button group - iOS,120,55,0,ComponentsStatus FrameworkTabs
+docs/components/button-group/frameworks/vue.md,/components/button-group/frameworks/vue,components,button-group,framework,web,vue,Button group - Vue,117,80,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/button-group/overview.md,/components/button-group/overview,components,button-group,overview,shared(web-oriented),,Button group - Overview,41,16,1,live-web-example ComponentsStatus
+docs/components/button-group/usage.md,/components/button-group/usage,components,button-group,usage,shared(web-oriented),,Button Group - Usage,14,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/button-pill/frameworks/ios.md,/components/button-pill/frameworks/ios,components,button-pill,framework,ios,ios,Button Pill - iOS,81,57,0,ComponentsStatus FrameworkTabs
+docs/components/button-pill/overview.md,/components/button-pill/overview,components,button-pill,overview,shared(web-oriented),,Button pill - Overview,14,6,0,near-empty ComponentsStatus
+docs/components/button-pill/usage.md,/components/button-pill/usage,components,button-pill,usage,shared(web-oriented),,Button Pill - Usage,14,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/button/accessibility.md,/components/button/accessibility,components,button,accessibility,shared(web-oriented),,Button - Accessibility,43,10,0,ComponentsStatus
+docs/components/button/frameworks/android.md,/components/button/frameworks/android,components,button,framework,android,android,Button - Android,412,221,0,ComponentsStatus FrameworkTabs
+docs/components/button/frameworks/elements.md,/components/button/frameworks/elements,components,button,framework,web,elements,Button - Elements,17,15,1,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/button/frameworks/ios.md,/components/button/frameworks/ios,components,button,framework,ios,ios,Button - iOS,253,115,0,ComponentsStatus FrameworkTabs
+docs/components/button/frameworks/react-19.md,/components/button/frameworks/react-19,components,button,framework,web,react-19,Button - React 19,316,123,0,ComponentsStatus FrameworkTabs
+docs/components/button/frameworks/react.md,/components/button/frameworks/react,components,button,framework,web,react,Button - React,581,132,0,ComponentsStatus FrameworkTabs
+docs/components/button/frameworks/vue.md,/components/button/frameworks/vue,components,button,framework,web,vue,Button - Vue,154,61,0,live-web-example deprecated-mention ComponentsStatus FrameworkTabs
+docs/components/button/overview.md,/components/button/overview,components,button,overview,shared(web-oriented),,Button - Overview,31,25,1,near-empty live-web-example ComponentsStatus
+docs/components/button/usage.md,/components/button/usage,components,button,usage,shared(web-oriented),,Button - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/callout/accessibility.md,/components/callout/accessibility,components,callout,accessibility,shared(web-oriented),,Callout - Accessibility,1162,94,1,live-web-example ComponentsStatus
+docs/components/callout/frameworks/android.md,/components/callout/frameworks/android,components,callout,framework,android,android,Callout - Android,376,177,0,ComponentsStatus FrameworkTabs
+docs/components/callout/frameworks/elements.md,/components/callout/frameworks/elements,components,callout,framework,web,elements,Callout - Elements,682,131,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/callout/frameworks/ios.md,/components/callout/frameworks/ios,components,callout,framework,ios,ios,Callout - iOS,162,72,0,ComponentsStatus FrameworkTabs
+docs/components/callout/frameworks/react.md,/components/callout/frameworks/react,components,callout,framework,web,react,Callout - React,710,165,0,ComponentsStatus FrameworkTabs
+docs/components/callout/frameworks/vue.md,/components/callout/frameworks/vue,components,callout,framework,web,vue,Callout - Vue,712,169,0,live-web-example ComponentsStatus FrameworkTabs script
+docs/components/callout/overview.md,/components/callout/overview,components,callout,overview,shared(web-oriented),,Callout - Overview,826,139,7,live-web-example ComponentsStatus
+docs/components/callout/usage.md,/components/callout/usage,components,callout,usage,shared(web-oriented),,Callout - Usage,1443,140,1,ComponentsStatus DoDont
+docs/components/card/frameworks/elements.md,/components/card/frameworks/elements,components,card,framework,web,elements,Card - Elements,11,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/card/frameworks/react.md,/components/card/frameworks/react,components,card,framework,web,react,Card - React,378,234,0,ComponentsStatus FrameworkTabs
+docs/components/card/frameworks/vue.md,/components/card/frameworks/vue,components,card,framework,web,vue,Card - Vue,77,41,0,ComponentsStatus FrameworkTabs
+docs/components/card/overview.md,/components/card/overview,components,card,overview,shared(web-oriented),,Card - Overview,62,91,2,live-web-example ComponentsStatus
+docs/components/card/usage.md,/components/card/usage,components,card,usage,shared(web-oriented),,Card - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/checkbox/accessibility.md,/components/checkbox/accessibility,components,checkbox,accessibility,shared(web-oriented),,Checkbox - Accessibility,129,31,0,ComponentsStatus
+docs/components/checkbox/frameworks/android.md,/components/checkbox/frameworks/android,components,checkbox,framework,android,android,Checkbox - Android,388,185,0,ComponentsStatus FrameworkTabs
+docs/components/checkbox/frameworks/elements.md,/components/checkbox/frameworks/elements,components,checkbox,framework,web,elements,Checkbox - Elements,16,15,1,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/checkbox/frameworks/ios.md,/components/checkbox/frameworks/ios,components,checkbox,framework,ios,ios,Checkbox - iOS,296,115,0,ComponentsStatus FrameworkTabs
+docs/components/checkbox/frameworks/react.md,/components/checkbox/frameworks/react,components,checkbox,framework,web,react,Checkbox - React,717,282,0,ComponentsStatus FrameworkTabs
+docs/components/checkbox/frameworks/vue.md,/components/checkbox/frameworks/vue,components,checkbox,framework,web,vue,Checkbox - Vue,426,97,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/checkbox/overview.md,/components/checkbox/overview,components,checkbox,overview,shared(web-oriented),,Checkbox - Overview,180,61,6,live-web-example ComponentsStatus
+docs/components/checkbox/usage.md,/components/checkbox/usage,components,checkbox,usage,shared(web-oriented),,Checkbox - Usage,529,172,0,ComponentsStatus DoDont
+docs/components/combo-box/frameworks/elements.md,/components/combo-box/frameworks/elements,components,combo-box,framework,web,elements,Combo box - Elements,26,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/combo-box/frameworks/react.md,/components/combo-box/frameworks/react,components,combo-box,framework,web,react,Combo box - React,762,352,0,ComponentsStatus FrameworkTabs
+docs/components/combo-box/overview.md,/components/combo-box/overview,components,combo-box,overview,shared(web-oriented),,Combo box - Overview,93,15,1,live-web-example ComponentsStatus
+docs/components/combo-box/usage.md,/components/combo-box/usage,components,combo-box,usage,shared(web-oriented),,Combo Box - Usage,14,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/confirmation-dialog/accessibility.md,/components/confirmation-dialog/accessibility,components,confirmation-dialog,accessibility,shared(web-oriented),,Confirmation dialog - Accessibility,269,37,0,ComponentsStatus
+docs/components/confirmation-dialog/frameworks/ios.md,/components/confirmation-dialog/frameworks/ios,components,confirmation-dialog,framework,ios,ios,Confirmation dialog - iOS,163,90,0,ComponentsStatus FrameworkTabs
+docs/components/confirmation-dialog/overview.md,/components/confirmation-dialog/overview,components,confirmation-dialog,overview,shared(web-oriented),,Confirmation dialog - Overview,223,22,0,ComponentsStatus
+docs/components/confirmation-dialog/usage.md,/components/confirmation-dialog/usage,components,confirmation-dialog,usage,shared(web-oriented),,Confirmation dialog - Usage,579,78,0,ComponentsStatus
+docs/components/date-picker/accessibility.md,/components/date-picker/accessibility,components,date-picker,accessibility,shared(web-oriented),,Date picker - Accessibility,301,72,0,ComponentsStatus
+docs/components/date-picker/frameworks/android.md,/components/date-picker/frameworks/android,components,date-picker,framework,android,android,Date picker - Android,174,105,0,ComponentsStatus FrameworkTabs
+docs/components/date-picker/frameworks/elements.md,/components/date-picker/frameworks/elements,components,date-picker,framework,web,elements,Date picker - Elements,15,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/date-picker/frameworks/ios.md,/components/date-picker/frameworks/ios,components,date-picker,framework,ios,ios,Date picker - iOS,198,113,0,ComponentsStatus FrameworkTabs
+docs/components/date-picker/frameworks/react-19.md,/components/date-picker/frameworks/react-19,components,date-picker,framework,web,react-19,Date picker - React 19,224,52,0,ComponentsStatus FrameworkTabs
+docs/components/date-picker/overview.md,/components/date-picker/overview,components,date-picker,overview,shared(web-oriented),,Date picker - Overview,261,45,0,live-web-example ComponentsStatus
+docs/components/date-picker/styling.md,/components/date-picker/styling,components,date-picker,styling,shared(web-oriented),,Date picker - Styling,100,17,0,ComponentsStatus
+docs/components/date-picker/usage.md,/components/date-picker/usage,components,date-picker,usage,shared(web-oriented),,Date picker - Usage,394,34,0,ComponentsStatus
+docs/components/divider/frameworks/android.md,/components/divider/frameworks/android,components,divider,framework,android,android,Divider - Android,63,47,0,ComponentsStatus FrameworkTabs
+docs/components/divider/frameworks/ios.md,/components/divider/frameworks/ios,components,divider,framework,ios,ios,Divider - iOS,67,50,0,ComponentsStatus FrameworkTabs
+docs/components/divider/overview.md,/components/divider/overview,components,divider,overview,shared(web-oriented),,Divider - Overview,46,13,1,ComponentsStatus
+docs/components/divider/usage.md,/components/divider/usage,components,divider,usage,shared(web-oriented),,Divider - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/DsFrameworkStatus.md,/components/DsFrameworkStatus,components,,status,shared,,Framework Support Matrix,278,47,0,deprecated-mention
+docs/components/expandable/frameworks/android.md,/components/expandable/frameworks/android,components,expandable,framework,android,android,Expandable - Android,136,79,0,ComponentsStatus FrameworkTabs
+docs/components/expandable/frameworks/elements.md,/components/expandable/frameworks/elements,components,expandable,framework,web,elements,Expandable - Elements,17,14,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/expandable/frameworks/ios.md,/components/expandable/frameworks/ios,components,expandable,framework,ios,ios,Expandable - iOS,153,83,0,ComponentsStatus FrameworkTabs
+docs/components/expandable/frameworks/react.md,/components/expandable/frameworks/react,components,expandable,framework,web,react,Expandable - React,242,131,0,ComponentsStatus FrameworkTabs
+docs/components/expandable/frameworks/vue.md,/components/expandable/frameworks/vue,components,expandable,framework,web,vue,Expandable - Vue,197,107,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/expandable/overview.md,/components/expandable/overview,components,expandable,overview,shared(web-oriented),,Expandable - Overview,36,31,3,near-empty live-web-example ComponentsStatus
+docs/components/expandable/usage.md,/components/expandable/usage,components,expandable,usage,shared(web-oriented),,Expandable - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/icons/accessibility.md,/components/icons/accessibility,components,icons,accessibility,shared(web-oriented),,Icons - Accessibility,119,18,0,ComponentsStatus
+docs/components/icons/frameworks/android.md,/components/icons/frameworks/android,components,icons,framework,android,android,Icons - Android,160,83,0,ComponentsStatus FrameworkTabs
+docs/components/icons/frameworks/elements.md,/components/icons/frameworks/elements,components,icons,framework,web,elements,Icons - Elements,78,51,1,live-web-example uses-include ComponentsStatus FrameworkTabs
+docs/components/icons/frameworks/ios.md,/components/icons/frameworks/ios,components,icons,framework,ios,ios,Icons - iOS,315,121,0,ComponentsStatus FrameworkTabs
+docs/components/icons/frameworks/react-19.md,/components/icons/frameworks/react-19,components,icons,framework,web,react-19,Icons - React 19,110,45,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/icons/overview.md,/components/icons/overview,components,icons,overview,shared(web-oriented),,Icons - Overview,245,37,2,live-web-example ComponentsStatus script
+docs/components/icons/styling.md,/components/icons/styling,components,icons,styling,shared(web-oriented),,Icons - Styling,186,36,0,ComponentsStatus
+docs/components/icons/usage.md,/components/icons/usage,components,icons,usage,shared(web-oriented),,Icons - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/index.md,/components/,components,,section-index,shared,,Component overview,14,9,0,near-empty DsOverview
+docs/components/link/accessibility.md,/components/link/accessibility,components,link,accessibility,shared(web-oriented),,Link - Accessibility,107,22,0,ComponentsStatus
+docs/components/link/frameworks/android.md,/components/link/frameworks/android,components,link,framework,android,android,Link - Android,143,92,0,ComponentsStatus FrameworkTabs
+docs/components/link/frameworks/elements.md,/components/link/frameworks/elements,components,link,framework,web,elements,Link - Elements,13,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/link/frameworks/react-19.md,/components/link/frameworks/react-19,components,link,framework,web,react-19,Link - React 19,314,133,0,ComponentsStatus FrameworkTabs
+docs/components/link/overview.md,/components/link/overview,components,link,overview,shared(web-oriented),,Link - Overview,246,62,0,live-web-example ComponentsStatus
+docs/components/link/styling.md,/components/link/styling,components,link,styling,shared(web-oriented),,Link - Styling,173,51,0,ComponentsStatus
+docs/components/link/usage.md,/components/link/usage,components,link,usage,shared(web-oriented),,Link - Usage,890,95,0,ComponentsStatus
+docs/components/logo/accessibility.md,/components/logo/accessibility,components,logo,accessibility,shared(web-oriented),,Logo - Accessibility,101,17,0,ComponentsStatus
+docs/components/logo/frameworks/android.md,/components/logo/frameworks/android,components,logo,framework,android,android,Logo - Android,71,76,0,ComponentsStatus FrameworkTabs
+docs/components/logo/frameworks/elements.md,/components/logo/frameworks/elements,components,logo,framework,web,elements,Logo - Elements,145,322,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/logo/frameworks/ios.md,/components/logo/frameworks/ios,components,logo,framework,ios,ios,Logo - iOS,30,12,0,near-empty in-progress-stub ComponentsStatus FrameworkTabs
+docs/components/logo/overview.md,/components/logo/overview,components,logo,overview,shared(web-oriented),,Logo - Overview,103,15,0,ComponentsStatus
+docs/components/logo/usage.md,/components/logo/usage,components,logo,usage,shared(web-oriented),,Logo - Usage,323,33,0,ComponentsStatus
+docs/components/modal/accessibility.md,/components/modal/accessibility,components,modal,accessibility,shared(web-oriented),,Modal - Accessibility,89,11,0,ComponentsStatus
+docs/components/modal/frameworks/android.md,/components/modal/frameworks/android,components,modal,framework,android,android,Modal - Android,255,112,0,ComponentsStatus FrameworkTabs
+docs/components/modal/frameworks/elements.md,/components/modal/frameworks/elements,components,modal,framework,web,elements,Modal - Elements,32,18,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/modal/frameworks/ios.md,/components/modal/frameworks/ios,components,modal,framework,ios,ios,Modal - iOS,224,77,0,ComponentsStatus FrameworkTabs
+docs/components/modal/frameworks/react.md,/components/modal/frameworks/react,components,modal,framework,web,react,Modal - React,362,234,0,ComponentsStatus FrameworkTabs
+docs/components/modal/frameworks/vue.md,/components/modal/frameworks/vue,components,modal,framework,web,vue,Modal - Vue,371,88,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/modal/overview.md,/components/modal/overview,components,modal,overview,shared(web-oriented),,Modal - Overview,102,13,11,live-web-example ComponentsStatus
+docs/components/modal/usage.md,/components/modal/usage,components,modal,usage,shared(web-oriented),,Modal - Usage,632,71,0,ComponentsStatus
+docs/components/page-indicator/accessibility.md,/components/page-indicator/accessibility,components,page-indicator,accessibility,shared(web-oriented),,Page indicator - Accessibility,64,9,0,ComponentsStatus
+docs/components/page-indicator/frameworks/android.md,/components/page-indicator/frameworks/android,components,page-indicator,framework,android,android,Page indicator - Android,85,65,0,ComponentsStatus FrameworkTabs
+docs/components/page-indicator/frameworks/elements.md,/components/page-indicator/frameworks/elements,components,page-indicator,framework,web,elements,Page indicator - Elements,20,17,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/page-indicator/frameworks/ios.md,/components/page-indicator/frameworks/ios,components,page-indicator,framework,ios,ios,Page indicator - iOS,70,39,0,ComponentsStatus FrameworkTabs
+docs/components/page-indicator/frameworks/react-19.md,/components/page-indicator/frameworks/react-19,components,page-indicator,framework,web,react-19,Page indicator - React 19,81,49,0,ComponentsStatus FrameworkTabs
+docs/components/page-indicator/overview.md,/components/page-indicator/overview,components,page-indicator,overview,shared(web-oriented),,Page indicator - Overview,121,38,0,live-web-example ComponentsStatus
+docs/components/page-indicator/usage.md,/components/page-indicator/usage,components,page-indicator,usage,shared(web-oriented),,Page indicator - Usage,351,52,0,ComponentsStatus
+docs/components/pagination/accessibility.md,/components/pagination/accessibility,components,pagination,accessibility,shared(web-oriented),,Pagination - Accessibility,48,11,0,ComponentsStatus
+docs/components/pagination/frameworks/elements.md,/components/pagination/frameworks/elements,components,pagination,framework,web,elements,Pagination - Elements,22,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/pagination/frameworks/react.md,/components/pagination/frameworks/react,components,pagination,framework,web,react,Pagination - React,148,57,0,ComponentsStatus FrameworkTabs
+docs/components/pagination/overview.md,/components/pagination/overview,components,pagination,overview,shared(web-oriented),,Pagination - Overview,101,29,0,live-web-example ComponentsStatus
+docs/components/pagination/usage.md,/components/pagination/usage,components,pagination,usage,shared(web-oriented),,Pagination - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/pill/frameworks/android.md,/components/pill/frameworks/android,components,pill,framework,android,android,Pill - Android,221,123,0,ComponentsStatus FrameworkTabs
+docs/components/pill/frameworks/elements.md,/components/pill/frameworks/elements,components,pill,framework,web,elements,Pill - Elements,27,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/pill/frameworks/ios.md,/components/pill/frameworks/ios,components,pill,framework,ios,ios,Pill - iOS,191,69,0,ComponentsStatus FrameworkTabs
+docs/components/pill/frameworks/react.md,/components/pill/frameworks/react,components,pill,framework,web,react,Pill - React,223,76,0,deprecated-mention ComponentsStatus FrameworkTabs
+docs/components/pill/frameworks/vue.md,/components/pill/frameworks/vue,components,pill,framework,web,vue,Pill - Vue,176,81,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/pill/overview.md,/components/pill/overview,components,pill,overview,shared(web-oriented),,Pill - Overview,38,18,5,near-empty live-web-example ComponentsStatus
+docs/components/pill/usage.md,/components/pill/usage,components,pill,usage,shared(web-oriented),,Pill - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/popover/frameworks/android.md,/components/popover/frameworks/android,components,popover,framework,android,android,Popover - Android,248,99,0,ComponentsStatus FrameworkTabs
+docs/components/popover/frameworks/elements.md,/components/popover/frameworks/elements,components,popover,framework,web,elements,Popover - Elements,653,125,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/popover/frameworks/react.md,/components/popover/frameworks/react,components,popover,framework,web,react,Popover - React,689,209,0,ComponentsStatus FrameworkTabs
+docs/components/popover/frameworks/vue.md,/components/popover/frameworks/vue,components,popover,framework,web,vue,Popover - Vue,691,188,0,live-web-example ComponentsStatus FrameworkTabs script
+docs/components/popover/overview.md,/components/popover/overview,components,popover,overview,shared(web-oriented),,Popover - Overview,25,10,4,near-empty live-web-example ComponentsStatus
+docs/components/popover/usage.md,/components/popover/usage,components,popover,usage,shared(web-oriented),,Popover - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/radio-buttons/frameworks/react.md,/components/radio-buttons/frameworks/react,components,radio-buttons,framework,web,react,Radio buttons - React,432,160,0,ComponentsStatus FrameworkTabs
+docs/components/radio-buttons/frameworks/vue.md,/components/radio-buttons/frameworks/vue,components,radio-buttons,framework,web,vue,Radio buttons - Vue,426,98,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/radio-buttons/overview.md,/components/radio-buttons/overview,components,radio-buttons,overview,shared(web-oriented),,Radio buttons - Overview,17,11,3,near-empty live-web-example ComponentsStatus
+docs/components/radio-buttons/usage.md,/components/radio-buttons/usage,components,radio-buttons,usage,shared(web-oriented),,Radio Buttons - Usage,14,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/radio/accessibility.md,/components/radio/accessibility,components,radio,accessibility,shared(web-oriented),,Radio - Accessibility,1225,98,0,ComponentsStatus
+docs/components/radio/frameworks/android.md,/components/radio/frameworks/android,components,radio,framework,android,android,Radio - Android,335,139,0,ComponentsStatus FrameworkTabs
+docs/components/radio/frameworks/elements.md,/components/radio/frameworks/elements,components,radio,framework,web,elements,Radio - Elements,15,17,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/radio/frameworks/ios.md,/components/radio/frameworks/ios,components,radio,framework,ios,ios,Radio - iOS,316,106,0,ComponentsStatus FrameworkTabs
+docs/components/radio/frameworks/react.md,/components/radio/frameworks/react,components,radio,framework,web,react,Radio - React,434,148,0,ComponentsStatus FrameworkTabs
+docs/components/radio/frameworks/vue.md,/components/radio/frameworks/vue,components,radio,framework,web,vue,Radio - Vue,423,97,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/radio/overview.md,/components/radio/overview,components,radio,overview,shared(web-oriented),,Radio - Overview,537,105,4,live-web-example ComponentsStatus
+docs/components/radio/usage.md,/components/radio/usage,components,radio,usage,shared(web-oriented),,Radio - Usage,770,114,0,ComponentsStatus DoDont
+docs/components/range-slider/accessibility.md,/components/range-slider/accessibility,components,range-slider,accessibility,shared(web-oriented),,Range slider - Accessibility,201,42,0,ComponentsStatus
+docs/components/range-slider/frameworks/android.md,/components/range-slider/frameworks/android,components,range-slider,framework,android,android,Range slider - Android,421,147,0,ComponentsStatus FrameworkTabs
+docs/components/range-slider/frameworks/elements.md,/components/range-slider/frameworks/elements,components,range-slider,framework,web,elements,Range slider - Elements,58,13,0,ComponentsStatus FrameworkTabs
+docs/components/range-slider/frameworks/ios.md,/components/range-slider/frameworks/ios,components,range-slider,framework,ios,ios,Range slider - iOS,199,96,0,ComponentsStatus FrameworkTabs
+docs/components/range-slider/frameworks/react-19.md,/components/range-slider/frameworks/react-19,components,range-slider,framework,web,react-19,Range slider - React 19,177,114,0,ComponentsStatus FrameworkTabs
+docs/components/range-slider/overview.md,/components/range-slider/overview,components,range-slider,overview,shared(web-oriented),,Range slider - Overview,256,53,2,live-web-example ComponentsStatus
+docs/components/range-slider/usage.md,/components/range-slider/usage,components,range-slider,usage,shared(web-oriented),,Range slider - Usage,1782,449,0,live-web-example ComponentsStatus script DoDont
+docs/components/select/accessibility.md,/components/select/accessibility,components,select,accessibility,shared(web-oriented),,Select - Accessibility,112,16,0,ComponentsStatus
+docs/components/select/frameworks/android.md,/components/select/frameworks/android,components,select,framework,android,android,Select - Android,218,92,0,ComponentsStatus FrameworkTabs
+docs/components/select/frameworks/elements.md,/components/select/frameworks/elements,components,select,framework,web,elements,Select - Elements,19,16,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/select/frameworks/ios.md,/components/select/frameworks/ios,components,select,framework,ios,ios,Select - iOS,145,72,0,placeholder ComponentsStatus FrameworkTabs
+docs/components/select/frameworks/react.md,/components/select/frameworks/react,components,select,framework,web,react,Select - React,403,142,0,ComponentsStatus FrameworkTabs
+docs/components/select/frameworks/vue.md,/components/select/frameworks/vue,components,select,framework,web,vue,Select - Vue,379,96,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/select/overview.md,/components/select/overview,components,select,overview,shared(web-oriented),,Select - Overview,316,130,8,live-web-example ComponentsStatus
+docs/components/select/usage.md,/components/select/usage,components,select,usage,shared(web-oriented),,Select - Usage,355,142,0,placeholder ComponentsStatus
+docs/components/slider/accessibility.md,/components/slider/accessibility,components,slider,accessibility,shared(web-oriented),,Slider - Accessibility,188,42,0,ComponentsStatus
+docs/components/slider/frameworks/android.md,/components/slider/frameworks/android,components,slider,framework,android,android,Slider - Android,331,96,0,ComponentsStatus FrameworkTabs
+docs/components/slider/frameworks/elements.md,/components/slider/frameworks/elements,components,slider,framework,web,elements,Slider - Elements,22,19,1,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/slider/frameworks/ios.md,/components/slider/frameworks/ios,components,slider,framework,ios,ios,Slider - iOS,202,90,0,ComponentsStatus FrameworkTabs
+docs/components/slider/frameworks/react-19.md,/components/slider/frameworks/react-19,components,slider,framework,web,react-19,Slider - React 19,159,112,0,ComponentsStatus FrameworkTabs
+docs/components/slider/frameworks/react.md,/components/slider/frameworks/react,components,slider,framework,web,react,Slider - React,141,83,0,ComponentsStatus FrameworkTabs
+docs/components/slider/frameworks/vue.md,/components/slider/frameworks/vue,components,slider,framework,web,vue,Slider - Vue,116,78,0,live-web-example ComponentsStatus FrameworkTabs script
+docs/components/slider/overview.md,/components/slider/overview,components,slider,overview,shared(web-oriented),,Slider - Overview,220,48,2,live-web-example ComponentsStatus
+docs/components/slider/usage.md,/components/slider/usage,components,slider,usage,shared(web-oriented),,Slider - Usage,584,107,0,ComponentsStatus DoDont
+docs/components/snackbar/accessibility.md,/components/snackbar/accessibility,components,snackbar,accessibility,shared(web-oriented),,Snackbar - Accessibility,131,21,0,ComponentsStatus
+docs/components/snackbar/frameworks/android.md,/components/snackbar/frameworks/android,components,snackbar,framework,android,android,Snackbar - Android,357,215,0,ComponentsStatus FrameworkTabs
+docs/components/snackbar/frameworks/elements.md,/components/snackbar/frameworks/elements,components,snackbar,framework,web,elements,Snackbar - Elements,19,16,1,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/snackbar/frameworks/ios.md,/components/snackbar/frameworks/ios,components,snackbar,framework,ios,ios,Snackbar - iOS,311,166,0,ComponentsStatus FrameworkTabs
+docs/components/snackbar/overview.md,/components/snackbar/overview,components,snackbar,overview,shared(web-oriented),,Snackbar - Overview,194,58,9,live-web-example deprecated-mention ComponentsStatus script
+docs/components/snackbar/usage.md,/components/snackbar/usage,components,snackbar,usage,shared(web-oriented),,Snackbar - Usage,906,191,0,deprecated-mention ComponentsStatus DoDont
+docs/components/spinner/frameworks/android.md,/components/spinner/frameworks/android,components,spinner,framework,android,android,Spinner - Android,59,58,0,ComponentsStatus FrameworkTabs
+docs/components/spinner/frameworks/ios.md,/components/spinner/frameworks/ios,components,spinner,framework,ios,ios,Spinner - iOS,94,53,0,ComponentsStatus FrameworkTabs
+docs/components/spinner/overview.md,/components/spinner/overview,components,spinner,overview,shared(web-oriented),,Spinner - Overview,33,26,1,near-empty ComponentsStatus
+docs/components/spinner/usage.md,/components/spinner/usage,components,spinner,usage,shared(web-oriented),,Spinner - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/steps/frameworks/android.md,/components/steps/frameworks/android,components,steps,framework,android,android,Steps - Android,264,147,0,ComponentsStatus FrameworkTabs
+docs/components/steps/frameworks/elements.md,/components/steps/frameworks/elements,components,steps,framework,web,elements,Steps - Elements,13,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/steps/frameworks/ios.md,/components/steps/frameworks/ios,components,steps,framework,ios,ios,Steps - iOS,210,104,0,ComponentsStatus FrameworkTabs
+docs/components/steps/frameworks/react.md,/components/steps/frameworks/react,components,steps,framework,web,react,Steps - React,168,132,0,ComponentsStatus FrameworkTabs
+docs/components/steps/frameworks/vue.md,/components/steps/frameworks/vue,components,steps,framework,web,vue,Steps - Vue,94,103,0,live-web-example ComponentsStatus FrameworkTabs script
+docs/components/steps/overview.md,/components/steps/overview,components,steps,overview,shared(web-oriented),,Steps - Overview,67,57,2,live-web-example ComponentsStatus
+docs/components/steps/usage.md,/components/steps/usage,components,steps,usage,shared(web-oriented),,Steps - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/switch/frameworks/android.md,/components/switch/frameworks/android,components,switch,framework,android,android,Switch - Android,110,70,0,ComponentsStatus FrameworkTabs
+docs/components/switch/frameworks/elements.md,/components/switch/frameworks/elements,components,switch,framework,web,elements,Switch - Elements,12,16,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/switch/frameworks/ios.md,/components/switch/frameworks/ios,components,switch,framework,ios,ios,Switch - iOS,96,51,0,ComponentsStatus FrameworkTabs
+docs/components/switch/frameworks/react.md,/components/switch/frameworks/react,components,switch,framework,web,react,Switch - React,173,62,0,ComponentsStatus FrameworkTabs
+docs/components/switch/frameworks/vue.md,/components/switch/frameworks/vue,components,switch,framework,web,vue,Switch - Vue,86,53,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/switch/overview.md,/components/switch/overview,components,switch,overview,shared(web-oriented),,Switch - Overview,15,16,3,near-empty live-web-example ComponentsStatus
+docs/components/switch/usage.md,/components/switch/usage,components,switch,usage,shared(web-oriented),,Switch - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/tabs/accessibility.md,/components/tabs/accessibility,components,tabs,accessibility,shared(web-oriented),,Tabs - Accessibility,1479,164,1,live-web-example ComponentsStatus
+docs/components/tabs/frameworks/android.md,/components/tabs/frameworks/android,components,tabs,framework,android,android,Tabs - Android,185,93,1,ComponentsStatus FrameworkTabs
+docs/components/tabs/frameworks/elements.md,/components/tabs/frameworks/elements,components,tabs,framework,web,elements,Tabs - Elements,17,17,1,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/tabs/frameworks/ios.md,/components/tabs/frameworks/ios,components,tabs,framework,ios,ios,Tabs - iOS,80,55,1,ComponentsStatus FrameworkTabs
+docs/components/tabs/frameworks/react.md,/components/tabs/frameworks/react,components,tabs,framework,web,react,Tabs - React,383,182,1,ComponentsStatus FrameworkTabs
+docs/components/tabs/frameworks/vue.md,/components/tabs/frameworks/vue,components,tabs,framework,web,vue,Tabs - Vue,204,132,1,live-web-example ComponentsStatus FrameworkTabs script
+docs/components/tabs/overview.md,/components/tabs/overview,components,tabs,overview,shared(web-oriented),,Tabs - Overview,825,168,1,live-web-example ComponentsStatus
+docs/components/tabs/usage.md,/components/tabs/usage,components,tabs,usage,shared(web-oriented),,Tabs - Usage,1326,224,1,live-web-example ComponentsStatus DoDont
+docs/components/text-area/accessibility.md,/components/text-area/accessibility,components,text-area,accessibility,shared(web-oriented),,Text area - Accessibility,102,13,0,ComponentsStatus
+docs/components/text-area/frameworks/elements.md,/components/text-area/frameworks/elements,components,text-area,framework,web,elements,Text area - Elements,17,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/text-area/frameworks/ios.md,/components/text-area/frameworks/ios,components,text-area,framework,ios,ios,Text area - iOS,164,76,0,ComponentsStatus FrameworkTabs
+docs/components/text-area/frameworks/react.md,/components/text-area/frameworks/react,components,text-area,framework,web,react,Text area - React,623,166,0,placeholder deprecated-mention ComponentsStatus FrameworkTabs
+docs/components/text-area/frameworks/vue.md,/components/text-area/frameworks/vue,components,text-area,framework,web,vue,Text area - Vue,376,100,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/text-area/overview.md,/components/text-area/overview,components,text-area,overview,shared(web-oriented),,Text area - Overview,242,112,4,live-web-example ComponentsStatus
+docs/components/text-area/usage.md,/components/text-area/usage,components,text-area,usage,shared(web-oriented),,Text area - Usage,361,154,0,placeholder ComponentsStatus
+docs/components/text-field/accessibility.md,/components/text-field/accessibility,components,text-field,accessibility,shared(web-oriented),,Text field - Accessibility,106,13,0,ComponentsStatus
+docs/components/text-field/frameworks/android.md,/components/text-field/frameworks/android,components,text-field,framework,android,android,Text field - Android,586,235,0,placeholder ComponentsStatus FrameworkTabs
+docs/components/text-field/frameworks/elements.md,/components/text-field/frameworks/elements,components,text-field,framework,web,elements,Text field - Elements,19,15,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/text-field/frameworks/ios.md,/components/text-field/frameworks/ios,components,text-field,framework,ios,ios,Text field - iOS,218,77,0,ComponentsStatus FrameworkTabs
+docs/components/text-field/frameworks/react.md,/components/text-field/frameworks/react,components,text-field,framework,web,react,Text field - React,805,217,0,placeholder deprecated-mention ComponentsStatus FrameworkTabs
+docs/components/text-field/frameworks/vue.md,/components/text-field/frameworks/vue,components,text-field,framework,web,vue,Text field - Vue,558,172,0,live-web-example ComponentsStatus FrameworkTabs
+docs/components/text-field/overview.md,/components/text-field/overview,components,text-field,overview,shared(web-oriented),,Text field - Overview,451,155,9,live-web-example ComponentsStatus
+docs/components/text-field/usage.md,/components/text-field/usage,components,text-field,usage,shared(web-oriented),,Text field - Usage,417,156,0,placeholder ComponentsStatus
+docs/components/text/frameworks/android.md,/components/text/frameworks/android,components,text,framework,android,android,Text - Android,204,116,0,ComponentsStatus FrameworkTabs
+docs/components/text/frameworks/ios.md,/components/text/frameworks/ios,components,text,framework,ios,ios,Text - iOS,122,68,0,ComponentsStatus FrameworkTabs
+docs/components/text/overview.md,/components/text/overview,components,text,overview,shared(web-oriented),,Text - Overview,25,54,0,near-empty ComponentsStatus
+docs/components/text/usage.md,/components/text/usage,components,text,usage,shared(web-oriented),,Text - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/components/toast/accessibility.md,/components/toast/accessibility,components,toast,accessibility,shared(web-oriented),,Toast - Accessibility,156,15,1,deprecated-mention ComponentsStatus
+docs/components/toast/frameworks/android.md,/components/toast/frameworks/android,components,toast,framework,android,android,Toast - Android,167,99,0,ComponentsStatus FrameworkTabs
+docs/components/toast/frameworks/elements.md,/components/toast/frameworks/elements,components,toast,framework,web,elements,Toast - Elements,11,14,0,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/toast/frameworks/ios.md,/components/toast/frameworks/ios,components,toast,framework,ios,ios,Toast - iOS,170,108,0,ComponentsStatus FrameworkTabs
+docs/components/toast/frameworks/react-19.md,/components/toast/frameworks/react-19,components,toast,framework,web,react-19,Toast - React 19,232,75,0,ComponentsStatus FrameworkTabs
+docs/components/toast/overview.md,/components/toast/overview,components,toast,overview,shared(web-oriented),,Toast - Overview,260,74,2,live-web-example deprecated-mention ComponentsStatus
+docs/components/toast/usage.md,/components/toast/usage,components,toast,usage,shared(web-oriented),,Toast - Usage,287,41,0,deprecated-mention ComponentsStatus
+docs/components/tooltip/accessibility.md,/components/tooltip/accessibility,components,tooltip,accessibility,shared(web-oriented),,Tooltip - Accessibility,1014,118,1,live-web-example ComponentsStatus
+docs/components/tooltip/frameworks/android.md,/components/tooltip/frameworks/android,components,tooltip,framework,android,android,Tooltip - Android,215,91,0,ComponentsStatus FrameworkTabs
+docs/components/tooltip/frameworks/elements.md,/components/tooltip/frameworks/elements,components,tooltip,framework,web,elements,Tooltip - Elements,23,16,1,near-empty uses-include ComponentsStatus FrameworkTabs
+docs/components/tooltip/frameworks/ios.md,/components/tooltip/frameworks/ios,components,tooltip,framework,ios,ios,Tooltip - iOS,121,58,0,ComponentsStatus FrameworkTabs
+docs/components/tooltip/frameworks/react.md,/components/tooltip/frameworks/react,components,tooltip,framework,web,react,Tooltip - React,682,134,0,ComponentsStatus FrameworkTabs
+docs/components/tooltip/frameworks/vue.md,/components/tooltip/frameworks/vue,components,tooltip,framework,web,vue,Tooltip - Vue,691,150,0,live-web-example ComponentsStatus FrameworkTabs script
+docs/components/tooltip/overview.md,/components/tooltip/overview,components,tooltip,overview,shared(web-oriented),,Tooltip - Overview,818,137,3,live-web-example ComponentsStatus
+docs/components/tooltip/usage.md,/components/tooltip/usage,components,tooltip,usage,shared(web-oriented),,Tooltip - Usage,1132,206,0,ComponentsStatus DoDont
+docs/components/utilities/frameworks/vue.md,/components/utilities/frameworks/vue,components,utilities,framework,web,vue,Utilities - Vue,49,14,0,ComponentsStatus
+docs/components/utilities/overview.md,/components/utilities/overview,components,utilities,overview,shared(web-oriented),,Utilities - Overview,14,10,0,near-empty live-web-example ComponentsStatus
+docs/components/utilities/usage.md,/components/utilities/usage,components,utilities,usage,shared(web-oriented),,Utilities - Usage,13,12,0,near-empty in-progress-stub ComponentsStatus
+docs/foundations/accessibility/index.md,/foundations/accessibility/,foundations,accessibility,guide,shared,,Accessibility,151,34,0,
+docs/foundations/brands/index.md,/foundations/brands/,foundations,brands,guide,shared,,Brands,74,19,0,
+docs/foundations/css-classes/align-content.md,/foundations/css-classes/align-content,foundations,css-classes,guide,web,,Align Content,274,144,0,
+docs/foundations/css-classes/align-items.md,/foundations/css-classes/align-items,foundations,css-classes,guide,web,,Align Items,189,125,0,
+docs/foundations/css-classes/align-self.md,/foundations/css-classes/align-self,foundations,css-classes,guide,web,,Align Self,218,124,0,
+docs/foundations/css-classes/animation.md,/foundations/css-classes/animation,foundations,css-classes,guide,web,,Animation,255,41,1,
+docs/foundations/css-classes/appearance.md,/foundations/css-classes/appearance,foundations,css-classes,guide,web,,Appearance,48,19,0,
+docs/foundations/css-classes/aspect-ratio.md,/foundations/css-classes/aspect-ratio,foundations,css-classes,guide,web,,Aspect Ratio,198,72,0,
+docs/foundations/css-classes/backdrop-blur.md,/foundations/css-classes/backdrop-blur,foundations,css-classes,guide,web,,Backdrop Blur,150,94,0,
+docs/foundations/css-classes/background-attachment.md,/foundations/css-classes/background-attachment,foundations,css-classes,guide,web,,Background Attachment,463,64,0,
+docs/foundations/css-classes/background-clip.md,/foundations/css-classes/background-clip,foundations,css-classes,guide,web,,Background Clip,147,62,0,
+docs/foundations/css-classes/background-color.md,/foundations/css-classes/background-color,foundations,css-classes,guide,web,,Background Color,927,160,0,
+docs/foundations/css-classes/background-image.md,/foundations/css-classes/background-image,foundations,css-classes,guide,web,,Background Image,72,29,0,
+docs/foundations/css-classes/background-origin.md,/foundations/css-classes/background-origin,foundations,css-classes,guide,web,,Background Origin,96,43,0,
+docs/foundations/css-classes/background-position.md,/foundations/css-classes/background-position,foundations,css-classes,guide,web,,Background Position,215,101,0,
+docs/foundations/css-classes/background-repeat.md,/foundations/css-classes/background-repeat,foundations,css-classes,guide,web,,Background Repeat,111,63,0,
+docs/foundations/css-classes/background-size.md,/foundations/css-classes/background-size,foundations,css-classes,guide,web,,Background Size,80,50,0,
+docs/foundations/css-classes/border-collapse.md,/foundations/css-classes/border-collapse,foundations,css-classes,guide,web,,Border Collapse,158,149,1,
+docs/foundations/css-classes/border-color.md,/foundations/css-classes/border-color,foundations,css-classes,guide,web,,Border Color,949,180,1,
+docs/foundations/css-classes/border-radius.md,/foundations/css-classes/border-radius,foundations,css-classes,guide,web,,Border Radius,352,135,0,
+docs/foundations/css-classes/border-spacing.md,/foundations/css-classes/border-spacing,foundations,css-classes,guide,web,,Border Spacing,190,92,0,
+docs/foundations/css-classes/border-style.md,/foundations/css-classes/border-style,foundations,css-classes,guide,web,,Border Style,194,73,0,
+docs/foundations/css-classes/border-width.md,/foundations/css-classes/border-width,foundations,css-classes,guide,web,,Border Width,365,118,0,
+docs/foundations/css-classes/box-shadow.md,/foundations/css-classes/box-shadow,foundations,css-classes,guide,web,,Box Shadow,153,55,0,
+docs/foundations/css-classes/box-sizing.md,/foundations/css-classes/box-sizing,foundations,css-classes,guide,web,,Box Sizing,232,110,0,
+docs/foundations/css-classes/break-after.md,/foundations/css-classes/break-after,foundations,css-classes,guide,web,,Break After,158,45,0,
+docs/foundations/css-classes/break-before.md,/foundations/css-classes/break-before,foundations,css-classes,guide,web,,Break Before,158,45,0,
+docs/foundations/css-classes/break-inside.md,/foundations/css-classes/break-inside,foundations,css-classes,guide,web,,Break Inside,139,41,0,
+docs/foundations/css-classes/caret.md,/foundations/css-classes/caret,foundations,css-classes,guide,web,,Caret Color,83,32,0,
+docs/foundations/css-classes/class-variants.md,/foundations/css-classes/class-variants,foundations,css-classes,guide,web,,Class Variants,238,76,0,
+docs/foundations/css-classes/clear.md,/foundations/css-classes/clear,foundations,css-classes,guide,web,,Clear,605,96,0,
+docs/foundations/css-classes/columns.md,/foundations/css-classes/columns,foundations,css-classes,guide,web,,Columns,169,148,0,
+docs/foundations/css-classes/content.md,/foundations/css-classes/content,foundations,css-classes,guide,web,,Content,178,73,0,
+docs/foundations/css-classes/cursor.md,/foundations/css-classes/cursor,foundations,css-classes,guide,web,,Cursor,306,90,0,
+docs/foundations/css-classes/display.md,/foundations/css-classes/display,foundations,css-classes,guide,web,,Display,587,328,0,
+docs/foundations/css-classes/divide-color.md,/foundations/css-classes/divide-color,foundations,css-classes,guide,web,,Divide Color,925,148,0,
+docs/foundations/css-classes/divide-style.md,/foundations/css-classes/divide-style,foundations,css-classes,guide,web,,Divide Style,96,40,0,
+docs/foundations/css-classes/divide-width.md,/foundations/css-classes/divide-width,foundations,css-classes,guide,web,,Divide Width,303,110,2,
+docs/foundations/css-classes/drop-shadow.md,/foundations/css-classes/drop-shadow,foundations,css-classes,guide,web,,Drop Shadow,202,58,0,
+docs/foundations/css-classes/flex-basis.md,/foundations/css-classes/flex-basis,foundations,css-classes,guide,web,,Flex Basis,164,60,0,
+docs/foundations/css-classes/flex-direction.md,/foundations/css-classes/flex-direction,foundations,css-classes,guide,web,,Flex Direction,153,104,0,
+docs/foundations/css-classes/flex-grow.md,/foundations/css-classes/flex-grow,foundations,css-classes,guide,web,,Flex Grow,132,77,0,
+docs/foundations/css-classes/flex-shrink.md,/foundations/css-classes/flex-shrink,foundations,css-classes,guide,web,,Flex Shrink,128,77,0,
+docs/foundations/css-classes/flex-wrap.md,/foundations/css-classes/flex-wrap,foundations,css-classes,guide,web,,Flex Wrap,135,78,0,
+docs/foundations/css-classes/flex.md,/foundations/css-classes/flex,foundations,css-classes,guide,web,,Flex,152,116,0,
+docs/foundations/css-classes/floats.md,/foundations/css-classes/floats,foundations,css-classes,guide,web,,Floats,474,70,0,
+docs/foundations/css-classes/font-size.md,/foundations/css-classes/font-size,foundations,css-classes,guide,web,,Font Size,554,107,0,
+docs/foundations/css-classes/font-style.md,/foundations/css-classes/font-style,foundations,css-classes,guide,web,,Font Style,71,31,0,
+docs/foundations/css-classes/font-variant-numeric.md,/foundations/css-classes/font-variant-numeric,foundations,css-classes,guide,web,,Font Variant Numeric,206,118,0,placeholder
+docs/foundations/css-classes/font-weight.md,/foundations/css-classes/font-weight,foundations,css-classes,guide,web,,Font Weight,58,32,0,
+docs/foundations/css-classes/gap.md,/foundations/css-classes/gap,foundations,css-classes,guide,web,,Gap,211,86,0,
+docs/foundations/css-classes/grid-auto-columns.md,/foundations/css-classes/grid-auto-columns,foundations,css-classes,guide,web,,Grid Auto Columns,157,49,0,
+docs/foundations/css-classes/grid-auto-flow.md,/foundations/css-classes/grid-auto-flow,foundations,css-classes,guide,web,,Grid Auto Flow,272,107,0,placeholder
+docs/foundations/css-classes/grid-auto-rows.md,/foundations/css-classes/grid-auto-rows,foundations,css-classes,guide,web,,Grid Auto Rows,156,48,0,
+docs/foundations/css-classes/grid-column-se.md,/foundations/css-classes/grid-column-se,foundations,css-classes,guide,web,,Grid Columns Start / End,205,84,0,
+docs/foundations/css-classes/grid-row-se.md,/foundations/css-classes/grid-row-se,foundations,css-classes,guide,web,,Grid Rows Start / End,200,75,0,
+docs/foundations/css-classes/grid-template-columns.md,/foundations/css-classes/grid-template-columns,foundations,css-classes,guide,web,,Grid Template Columns,169,65,0,
+docs/foundations/css-classes/grid-template-rows.md,/foundations/css-classes/grid-template-rows,foundations,css-classes,guide,web,,Grid Template Rows,170,65,0,
+docs/foundations/css-classes/height.md,/foundations/css-classes/height,foundations,css-classes,guide,web,,Height,244,89,0,
+docs/foundations/css-classes/helpers.md,/foundations/css-classes/helpers,foundations,css-classes,guide,web,,Useful Warp Helper Classes,93,26,0,
+docs/foundations/css-classes/icon-color.md,/foundations/css-classes/icon-color,foundations,css-classes,guide,web,,Icon Color,517,131,0,live-web-example
+docs/foundations/css-classes/introduction.md,/foundations/css-classes/introduction,foundations,css-classes,guide,web,,What is Warp CSS?,4,2,0,near-empty
+docs/foundations/css-classes/isolate.md,/foundations/css-classes/isolate,foundations,css-classes,guide,web,,Isolate,95,35,0,
+docs/foundations/css-classes/justify-content.md,/foundations/css-classes/justify-content,foundations,css-classes,guide,web,,Justify Content,265,144,0,
+docs/foundations/css-classes/justify-items.md,/foundations/css-classes/justify-items,foundations,css-classes,guide,web,,Justify items,174,156,0,
+docs/foundations/css-classes/justify-self.md,/foundations/css-classes/justify-self,foundations,css-classes,guide,web,,Justify Self,217,156,0,
+docs/foundations/css-classes/line-height.md,/foundations/css-classes/line-height,foundations,css-classes,guide,web,,Line Height,207,71,0,
+docs/foundations/css-classes/list-style-position.md,/foundations/css-classes/list-style-position,foundations,css-classes,guide,web,,List Style Position,102,55,0,
+docs/foundations/css-classes/list-style-type.md,/foundations/css-classes/list-style-type,foundations,css-classes,guide,web,,List Style Type,202,75,0,
+docs/foundations/css-classes/margin.md,/foundations/css-classes/margin,foundations,css-classes,guide,web,,Margin,394,141,0,
+docs/foundations/css-classes/max-height.md,/foundations/css-classes/max-height,foundations,css-classes,guide,web,,Max-Height,215,54,0,
+docs/foundations/css-classes/max-width.md,/foundations/css-classes/max-width,foundations,css-classes,guide,web,,Max-Width,282,80,0,placeholder
+docs/foundations/css-classes/min-height.md,/foundations/css-classes/min-height,foundations,css-classes,guide,web,,Min-Height,297,72,0,
+docs/foundations/css-classes/min-width.md,/foundations/css-classes/min-width,foundations,css-classes,guide,web,,Min-Width,288,71,0,
+docs/foundations/css-classes/object-fit.md,/foundations/css-classes/object-fit,foundations,css-classes,guide,web,,Object Fit,193,123,0,
+docs/foundations/css-classes/object-position.md,/foundations/css-classes/object-position,foundations,css-classes,guide,web,,Object Position,164,105,0,
+docs/foundations/css-classes/opacity.md,/foundations/css-classes/opacity,foundations,css-classes,guide,web,,Opacity,56,37,0,
+docs/foundations/css-classes/order.md,/foundations/css-classes/order,foundations,css-classes,guide,web,,Order,172,61,0,
+docs/foundations/css-classes/outline-color.md,/foundations/css-classes/outline-color,foundations,css-classes,guide,web,,Outline Color,855,143,0,
+docs/foundations/css-classes/outline-offset.md,/foundations/css-classes/outline-offset,foundations,css-classes,guide,web,,Outline Offset,147,64,0,
+docs/foundations/css-classes/outline-style.md,/foundations/css-classes/outline-style,foundations,css-classes,guide,web,,Outline Style,214,86,0,
+docs/foundations/css-classes/outline-width.md,/foundations/css-classes/outline-width,foundations,css-classes,guide,web,,Outline Width,136,66,0,
+docs/foundations/css-classes/overflow.md,/foundations/css-classes/overflow,foundations,css-classes,guide,web,,Overflow,382,206,0,
+docs/foundations/css-classes/overscroll.md,/foundations/css-classes/overscroll,foundations,css-classes,guide,web,,Overscroll Behavior,675,78,0,
+docs/foundations/css-classes/padding.md,/foundations/css-classes/padding,foundations,css-classes,guide,web,,Padding,353,138,0,
+docs/foundations/css-classes/place-content.md,/foundations/css-classes/place-content,foundations,css-classes,guide,web,,Place Content,274,157,0,
+docs/foundations/css-classes/place-items.md,/foundations/css-classes/place-items,foundations,css-classes,guide,web,,Place Items,190,157,0,
+docs/foundations/css-classes/place-self.md,/foundations/css-classes/place-self,foundations,css-classes,guide,web,,Place Self,208,147,0,
+docs/foundations/css-classes/pointer-events.md,/foundations/css-classes/pointer-events,foundations,css-classes,guide,web,,Pointer Events,223,89,0,
+docs/foundations/css-classes/position.md,/foundations/css-classes/position,foundations,css-classes,guide,web,,Position,379,297,1,
+docs/foundations/css-classes/resize.md,/foundations/css-classes/resize,foundations,css-classes,guide,web,,Resize,158,82,0,
+docs/foundations/css-classes/rotate.md,/foundations/css-classes/rotate,foundations,css-classes,guide,web,,Rotate,233,93,0,
+docs/foundations/css-classes/scale.md,/foundations/css-classes/scale,foundations,css-classes,guide,web,,Scale,204,81,0,
+docs/foundations/css-classes/screen-readers.md,/foundations/css-classes/screen-readers,foundations,css-classes,guide,web,,Screen Readers,128,35,1,
+docs/foundations/css-classes/scroll-behavior.md,/foundations/css-classes/scroll-behavior,foundations,css-classes,guide,web,,Scroll Behavior,119,46,0,
+docs/foundations/css-classes/scroll-snap-align.md,/foundations/css-classes/scroll-snap-align,foundations,css-classes,guide,web,,Scroll Snap Align,219,178,1,
+docs/foundations/css-classes/scroll-snap-stop.md,/foundations/css-classes/scroll-snap-stop,foundations,css-classes,guide,web,,Scroll Snap Stop,92,21,0,
+docs/foundations/css-classes/scroll-snap-type.md,/foundations/css-classes/scroll-snap-type,foundations,css-classes,guide,web,,Scroll Snap Type,117,28,0,
+docs/foundations/css-classes/skew.md,/foundations/css-classes/skew,foundations,css-classes,guide,web,,Skew,221,96,0,
+docs/foundations/css-classes/space-between.md,/foundations/css-classes/space-between,foundations,css-classes,guide,web,,Space Between,338,111,0,
+docs/foundations/css-classes/states.md,/foundations/css-classes/states,foundations,css-classes,guide,web,,"Handling Hover, Focus and Other States",965,261,1,placeholder
+docs/foundations/css-classes/surface.md,/foundations/css-classes/surface,foundations,css-classes,guide,web,,Surface,169,53,0,
+docs/foundations/css-classes/table-layout.md,/foundations/css-classes/table-layout,foundations,css-classes,guide,web,,Table Layout,190,151,0,
+docs/foundations/css-classes/text-align.md,/foundations/css-classes/text-align,foundations,css-classes,guide,web,,Text Align,324,73,0,
+docs/foundations/css-classes/text-color.md,/foundations/css-classes/text-color,foundations,css-classes,guide,web,,Text Color,597,162,0,placeholder
+docs/foundations/css-classes/text-decoration.md,/foundations/css-classes/text-decoration,foundations,css-classes,guide,web,,Text Decoration,73,36,0,
+docs/foundations/css-classes/text-overflow.md,/foundations/css-classes/text-overflow,foundations,css-classes,guide,web,,Text Overflow,163,73,0,
+docs/foundations/css-classes/text-transform.md,/foundations/css-classes/text-transform,foundations,css-classes,guide,web,,Text Transform,99,41,0,
+docs/foundations/css-classes/top-right-bottom-left.md,/foundations/css-classes/top-right-bottom-left,foundations,css-classes,guide,web,,Top / Right / Bottom / Left,287,157,0,placeholder
+docs/foundations/css-classes/touch-action.md,/foundations/css-classes/touch-action,foundations,css-classes,guide,web,,Touch Action,109,25,0,
+docs/foundations/css-classes/transform-origin.md,/foundations/css-classes/transform-origin,foundations,css-classes,guide,web,,Transform Origin,168,74,0,
+docs/foundations/css-classes/transition-delay.md,/foundations/css-classes/transition-delay,foundations,css-classes,guide,web,,Transition Delay,140,60,0,
+docs/foundations/css-classes/transition-duration.md,/foundations/css-classes/transition-duration,foundations,css-classes,guide,web,,Transition Duration,109,56,0,
+docs/foundations/css-classes/transition-property.md,/foundations/css-classes/transition-property,foundations,css-classes,guide,web,,Transition Property,283,69,0,
+docs/foundations/css-classes/transition-timing.md,/foundations/css-classes/transition-timing,foundations,css-classes,guide,web,,Transition Timing,189,67,0,
+docs/foundations/css-classes/translate.md,/foundations/css-classes/translate,foundations,css-classes,guide,web,,Translate,310,100,0,
+docs/foundations/css-classes/unocss.md,/foundations/css-classes/unocss,foundations,css-classes,guide,web,,UnoCSS Overview,335,25,1,
+docs/foundations/css-classes/user-select.md,/foundations/css-classes/user-select,foundations,css-classes,guide,web,,User Select,256,114,0,
+docs/foundations/css-classes/vertical-align.md,/foundations/css-classes/vertical-align,foundations,css-classes,guide,web,,Vertical Align,305,151,0,
+docs/foundations/css-classes/visibility.md,/foundations/css-classes/visibility,foundations,css-classes,guide,web,,Visibility,195,214,0,placeholder
+docs/foundations/css-classes/what-is-warp.md,/foundations/css-classes/what-is-warp,foundations,css-classes,guide,web,,What is Warp CSS?,20,6,0,near-empty
+docs/foundations/css-classes/whitespace.md,/foundations/css-classes/whitespace,foundations,css-classes,guide,web,,Whitespace,304,113,0,
+docs/foundations/css-classes/width.md,/foundations/css-classes/width,foundations,css-classes,guide,web,,Width,294,150,0,
+docs/foundations/css-classes/will-change.md,/foundations/css-classes/will-change,foundations,css-classes,guide,web,,Will Change,177,36,0,
+docs/foundations/css-classes/word-break.md,/foundations/css-classes/word-break,foundations,css-classes,guide,web,,Word Break,171,74,0,
+docs/foundations/css-classes/z-index.md,/foundations/css-classes/z-index,foundations,css-classes,guide,web,,Z-Index,333,139,0,
+docs/foundations/customization/index.md,/foundations/customization/,foundations,customization,guide,web,,Component Customization Philosophy,551,206,0,live-web-example
+docs/foundations/dark-mode/elements.md,/foundations/dark-mode/elements,foundations,dark-mode,guide,web,elements,Dark mode in Warp Elements,99,56,0,
+docs/foundations/dark-mode/figma.md,/foundations/dark-mode/figma,foundations,dark-mode,guide,shared,,Dark mode in Figma,93,12,0,
+docs/foundations/dark-mode/index.md,/foundations/dark-mode/,foundations,dark-mode,guide,shared,,Dark mode in Warp,61,12,0,
+docs/foundations/dark-mode/react.md,/foundations/dark-mode/react,foundations,dark-mode,guide,web,react,Dark mode in Warp React,208,104,0,
+docs/foundations/data-visualization/color/bars-areas/index.md,/foundations/data-visualization/color/bars-areas/,foundations,data-visualization,guide,shared,,Bars & Areas (dataviz),1510,171,3,
+docs/foundations/data-visualization/color/chart-colors/index.md,/foundations/data-visualization/color/chart-colors/,foundations,data-visualization,guide,shared,,Chart Colors (dataviz),572,74,2,
+docs/foundations/data-visualization/color/data-colors/index.md,/foundations/data-visualization/color/data-colors/,foundations,data-visualization,guide,shared,,Data Colors (dataviz),2056,312,1,
+docs/foundations/data-visualization/color/introduction/index.md,/foundations/data-visualization/color/introduction/,foundations,data-visualization,guide,shared,,Color Guidelines for Design (dataviz),1291,108,3,
+docs/foundations/data-visualization/color/lines-points/index.md,/foundations/data-visualization/color/lines-points/,foundations,data-visualization,guide,shared,,Lines & Points (dataviz),826,83,2,
+docs/foundations/data-visualization/color/text-icons/index.md,/foundations/data-visualization/color/text-icons/,foundations,data-visualization,guide,shared,,Text & Icons (dataviz),659,73,3,
+docs/foundations/data-visualization/components/index.md,/foundations/data-visualization/components/,foundations,data-visualization,guide,shared,,Chart Components,652,64,2,
+docs/foundations/data-visualization/figma-library/index.md,/foundations/data-visualization/figma-library/,foundations,data-visualization,guide,shared,,Figma Library (dataviz),524,58,0,
+docs/foundations/data-visualization/interaction/index.md,/foundations/data-visualization/interaction/,foundations,data-visualization,guide,shared,,Interaction with Dataviz,1025,101,1,
+docs/foundations/data-visualization/introduction/index.md,/foundations/data-visualization/introduction/,foundations,data-visualization,guide,shared,,Introduction to Data Visualization,1048,151,0,script
+docs/foundations/data-visualization/success-criteria/cognitive/index.md,/foundations/data-visualization/success-criteria/cognitive/,foundations,data-visualization,guide,shared,,Cognitive Accessibility (dataviz),545,70,0,
+docs/foundations/data-visualization/success-criteria/introduction/index.md,/foundations/data-visualization/success-criteria/introduction/,foundations,data-visualization,guide,shared,,Introduction to Dataviz Success Criteria,118,14,2,
+docs/foundations/data-visualization/success-criteria/keyboard/index.md,/foundations/data-visualization/success-criteria/keyboard/,foundations,data-visualization,guide,shared,,Keyboard Navigation (dataviz),491,65,1,
+docs/foundations/data-visualization/success-criteria/screenreader/index.md,/foundations/data-visualization/success-criteria/screenreader/,foundations,data-visualization,guide,shared,,Screen Reader (dataviz),1410,167,1,
+docs/foundations/data-visualization/success-criteria/visual/index.md,/foundations/data-visualization/success-criteria/visual/,foundations,data-visualization,guide,shared,,Visual Accessibility (dataviz),990,132,1,
+docs/foundations/data-visualization/tokens/background/index.md,/foundations/data-visualization/tokens/background/,foundations,data-visualization,guide,shared,,Background (dataviz),1856,154,2,
+docs/foundations/data-visualization/tokens/border/index.md,/foundations/data-visualization/tokens/border/,foundations,data-visualization,guide,shared,,Border (dataviz),1073,120,2,
+docs/foundations/data-visualization/tokens/chart/index.md,/foundations/data-visualization/tokens/chart/,foundations,data-visualization,guide,shared,,Chart Colors (dataviz),202,37,1,
+docs/foundations/data-visualization/tokens/icon/index.md,/foundations/data-visualization/tokens/icon/,foundations,data-visualization,guide,shared,,Icon Colors (dataviz),1037,118,1,
+docs/foundations/data-visualization/tokens/introduction/index.md,/foundations/data-visualization/tokens/introduction/,foundations,data-visualization,guide,shared,,Tokens & CSS for Dataviz Colors,861,183,6,
+docs/foundations/data-visualization/tokens/line/index.md,/foundations/data-visualization/tokens/line/,foundations,data-visualization,guide,shared,,Line (dataviz),1010,117,1,
+docs/foundations/data-visualization/tokens/text/index.md,/foundations/data-visualization/tokens/text/,foundations,data-visualization,guide,shared,,Text (dataviz),1011,116,1,
+docs/foundations/elevation/index.md,/foundations/elevation/,foundations,elevation,guide,shared,,Elevation,852,175,1,
+docs/foundations/font-weights/index.md,/foundations/font-weights/,foundations,font-weights,guide,shared,,Understanding Font Weights in Web Browsers,1125,165,0,
+docs/foundations/illustrations/index.md,/foundations/illustrations/,foundations,illustrations,guide,shared,,Illustrations,387,83,0,
+docs/foundations/index.md,/foundations/,foundations,index,section-index,shared,,Foundations,196,77,0,script
+docs/foundations/keyboard/navigation/index.md,/foundations/keyboard/navigation/,foundations,keyboard,guide,shared,,Keyboard navigation,69,6,0,
+docs/foundations/keyboard/shortcuts/index.md,/foundations/keyboard/shortcuts/,foundations,keyboard,guide,shared,,Keyboard shortcuts,164,30,0,live-web-example
+docs/foundations/motion/index.md,/foundations/motion/,foundations,motion,guide,shared,,Motion,49,9,0,
+docs/foundations/tokens/intro/index.md,/foundations/tokens/intro/,foundations,tokens,guide,shared,,Tokens,265,33,1,
+docs/foundations/tokens/overview/index.md,/foundations/tokens/overview/,foundations,tokens,guide,shared,,Overview,67,32,1,
+docs/foundations/typography/index.md,/foundations/typography/,foundations,typography,guide,shared,,Typography,395,65,0,
+docs/get-started/designers/custom-components/index.md,/get-started/designers/custom-components/,get-started,design,guide,shared,,Building custom components with WARP,194,26,0,
+docs/get-started/designers/designing-for-multibrand/index.md,/get-started/designers/designing-for-multibrand/,get-started,design,guide,shared,,Designing for multibrand,480,63,0,
+docs/get-started/designers/migrate-from-fabric/index.md,/get-started/designers/migrate-from-fabric/,get-started,design,guide,shared,,Migrate from Fabric,140,17,0,
+docs/get-started/designers/warp-in-figma/index.md,/get-started/designers/warp-in-figma/,get-started,design,guide,shared,,WARP in Figma,436,80,0,
+docs/get-started/developers/android/index.md,/get-started/developers/android/,get-started,android,guide,android,,Get started for Android developers,299,167,0,placeholder
+docs/get-started/developers/ios/index.md,/get-started/developers/ios/,get-started,ios,guide,ios,,Get started for iOS developers,346,115,0,
+docs/get-started/developers/web/custom-components/index.md,/get-started/developers/web/custom-components/,get-started,web,guide,web,,Building Custom Elements with Warp,864,245,0,
+docs/get-started/developers/web/index.md,/get-started/developers/web/,get-started,web,guide,web,,Getting started with Warp,1244,299,5,live-web-example script
+docs/get-started/developers/web/migrate-from-fabric/index.md,/get-started/developers/web/migrate-from-fabric/,get-started,web,guide,web,,Migrate from Fabric,642,98,0,
+docs/get-started/developers/web/web-components.md,/get-started/developers/web/web-components,get-started,web,guide,web,,,8,2,0,near-empty
+docs/get-started/index.md,/get-started/,get-started,,section-index,shared,,Get started,105,48,3,script
+docs/get-started/mission-values-principles/index.md,/get-started/mission-values-principles/,get-started,mission-values-principles,guide,shared,,"Mission, values, principles",425,36,0,
+docs/help/authoring-guide/index.md,/help/authoring-guide/,help,,guide,shared,,Markdown Cheat Sheet for Warp Docs,497,316,0,
+docs/help/faq/index.md,/help/faq/,help,,guide,shared,,FAQ,319,33,0,
+docs/help/report-bugs/index.md,/help/report-bugs/,help,,guide,shared,,Report bugs/errors,33,7,0,near-empty
+docs/help/support/index.md,/help/support/,help,,guide,shared,,Support,221,71,0,script
+docs/index.md,/,root,,home,shared,,,1595,612,0,script
+docs/patterns/DsFrameworkStatus.md,/patterns/DsFrameworkStatus,patterns,,status,shared,,Framework Support Matrix,18,11,0,near-empty
+docs/patterns/empty-states/accessibility.md,/patterns/empty-states/accessibility,patterns,empty-states,accessibility,shared(web-oriented),,Empty states - Accessibility,53,10,0,ComponentsStatus
+docs/patterns/empty-states/frameworks/android.md,/patterns/empty-states/frameworks/android,patterns,empty-states,framework,android,android,Empty states - Frameworks,218,109,0,ComponentsStatus FrameworkTabs
+docs/patterns/empty-states/frameworks/ios.md,/patterns/empty-states/frameworks/ios,patterns,empty-states,framework,ios,ios,Empty states - Frameworks,587,150,0,ComponentsStatus FrameworkTabs
+docs/patterns/empty-states/overview.md,/patterns/empty-states/overview,patterns,empty-states,overview,shared(web-oriented),,Empty states - Overview,522,113,1,ComponentsStatus
+docs/patterns/empty-states/usage.md,/patterns/empty-states/usage,patterns,empty-states,usage,shared(web-oriented),,Empty states - Usage,1358,180,0,ComponentsStatus
+docs/patterns/index.md,/patterns/,patterns,,section-index,shared,,Patterns overview,22,9,0,near-empty DsOverview
+docs/pre-migrating.md,/pre-migrating,root,,other,shared,,"Moving to Fabric, to prepare for Warp",75,34,0,

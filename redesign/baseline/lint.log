@@ -1,0 +1,3 @@
+$ pnpm biome lint .
+Checked 78 files in 50ms. No fixes applied.
+EXIT 0

@@ -1,0 +1,47 @@
+PASS  section / — h1="Vend’s Design System"
+PASS  section /get-started/ — h1="Get started ​"
+PASS  section /get-started/design/ — h1="Get started: Design ​"
+PASS  section /foundations/ — h1="Foundations ​"
+PASS  section /foundations/about/ — h1="Mission, values, principles ​"
+PASS  section /about/ — h1="About Warp ​"
+PASS  section /about/whats-new/ — h1="What's new in WARP"
+PASS  section /about/platform-coverage — h1="Platform coverage ​"
+PASS  section /web/ — h1="Web ​"
+PASS  section /ios/ — h1="iOS ​"
+PASS  section /android/ — h1="Android ​"
+PASS  section /web/components/ — h1="Web components ​"
+PASS  section /ios/components/ — h1="iOS components ​"
+PASS  section /android/patterns/ — h1="Android patterns ​"
+PASS  header has Docs label, search, Changelog, About DS, Get started, GitHub — Warp Design SystemDocs | SearchK | Changelog | About DS | github | extra navigation | github | Get started | mobile navigation
+PASS  iOS page sidebar: shared sections + switcher + iOS tree — Get started | Foundation (Design Language) | About Warp | iOS | Components | Patterns
+PASS  active item highlighted in platform tree — active="Code"
+PASS  switch iOS→Android on Button/code keeps page — /docs/android/components/button/code
+PASS  switch Android→Web on Button/code keeps page — /docs/web/components/button/code
+PASS  Web code tabs: Elements + legacy — Elements, React (legacy), React 19 (legacy), Vue (legacy)
+PASS  availability line (Web current, iOS, Android) — Web*,iOS,Android
+PASS  Breadcrumbs (Web only) → iOS falls back to /ios/components/ — /docs/ios/components/
+PASS  Confirmation dialog availability shows iOS only — iOS
+PASS  Confirmation dialog (iOS only) → Android falls back — /docs/android/components/
+PASS  shared page: switching swaps tree, no navigation — /docs/foundations/typography/ | Get started | Foundation (Design Language) | About Warp | Android | Components | Patterns
+PASS  shared page: choice remembered after reload — Android
+PASS  seeded notice on seeded iOS page — Pending iOS review This page was copied from the Web documentation and has not y
+PASS  trigger ARIA (haspopup=listbox, expanded=false, name) — {"haspopup":"listbox","expanded":"false","controls":"platform-switcherv-0-list","name":"Platform Web"}
+PASS  ArrowDown opens listbox, focuses it, active=selected — {"focusedIsList":true,"visible":true,"active":"Web","selected":["Web"],"expanded":"true"}
+PASS  ArrowDown/End/Home/type-ahead move active option — iOS,Android,Web,Android
+PASS  Escape closes and returns focus to trigger (no navigation) — {"focusOnTrigger":true,"expanded":"false"}
+PASS  Tab closes the listbox — expanded=false
+PASS  Space opens, Enter selects iOS → navigates to same page — /docs/ios/components/button/overview live="Showing iOS navigation"
+PASS  in-app link to old URL redirects (router hook) — /docs/ios/components/button/code#syntax
+PASS  back button returns to the previous page — /docs/web/
+PASS  hard load of old deep URL redirects (stub page) — /docs/ios/components/button/code
+PASS  hard load /blog/ — /docs/about/whats-new/
+PASS  hard load /components/toast/overview — /docs/web/components/snackbar/overview
+PASS  hard load /foundations/css-classes/margin — /docs/web/foundations/css-classes/margin
+PASS  hard load /get-started/developers/web/ — /docs/get-started/web/
+PASS  search results labelled by platform — #iOS › Button group - Overview || #Web › Button group - Overview || #iOS › Button pill - Overview || #Android › Button - Overview
+PASS  mobile drawer: shared sections + switcher + Android tree — Get started | Foundation (Design Language) | About Warp | Android | Components | Patterns
+PASS  mobile: switch Android→iOS keeps page — /docs/ios/components/button/code
+PASS  mobile nav screen has Get started CTA — count=1
+FAIL  no console errors / hydration warnings — http://localhost:5299/docs/about/whats-new/ :: Hydration completed but contains mismatches. || http://localhost:5299/docs/web/components/breadcrumbs/overview :: Hydration completed but contains mismatches. || http://localhost:5299/docs/web/components/button/overview :: Hydration completed but contains mismatches.
+
+44/45 checks passed

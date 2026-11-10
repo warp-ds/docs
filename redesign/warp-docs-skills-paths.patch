@@ -1,0 +1,132 @@
+diff --git a/README.md b/README.md
+index bf0b66a..fb33dca 100644
+--- a/README.md
++++ b/README.md
+@@ -211,7 +211,7 @@ Preview it:
+ ```bash
+ pnpm install     # first time only
+ pnpm dev
+-# → http://localhost:5173/docs/components/alert/overview
++# → http://localhost:5173/docs/web/components/alert/overview
+ ```
+ 
+ Then review, commit and open a PR yourself — the skill does not push anything.
+@@ -232,7 +232,7 @@ owner and the August 2026 documentation audit:
+ | 7 | `overview.md` carries a Figma / Elements / iOS / Android naming table wherever the four diverge. |
+ | 8 | `accessibility.md` is never a stub — all six sections, every claim sourced. |
+ 
+-`docs/components/alert/` is the reference implementation of all eight.
++`docs/web/components/alert/` is the reference implementation of all eight.
+ 
+ ### Audit an existing component
+ 
+diff --git a/skills/audit-component/SKILL.md b/skills/audit-component/SKILL.md
+index 1a9f52e..6430d16 100644
+--- a/skills/audit-component/SKILL.md
++++ b/skills/audit-component/SKILL.md
+@@ -16,9 +16,10 @@ The user provides a component name (e.g., "Alert", "Button", "Modal")
+ ### 1. Locate Documentation
+ 
+ 1. Find the component's documentation directory:
+-   - Path: `warp-docs/docs/components/<component-name>/`
++   - Path: `warp-docs/docs/web/components/<component-name>/`
+    - Check for: `overview.md`, `usage.md`, `accessibility.md`
+-   - Check for framework docs: `frameworks/` subdirectory
++   - Check for the Code page: `code.md` (Web: Warp Elements; legacy tabs `code-react.md`, `code-react-19.md`, `code-vue.md`)
++   - iOS / Android pages are independent: `warp-docs/docs/ios/components/<component-name>/` and `warp-docs/docs/android/components/<component-name>/`
+ 
+ ### 2. Completeness Check
+ 
+diff --git a/skills/document-component/SKILL.md b/skills/document-component/SKILL.md
+index 78746f1..a3f8aae 100644
+--- a/skills/document-component/SKILL.md
++++ b/skills/document-component/SKILL.md
+@@ -66,7 +66,7 @@ The user will provide:
+ - **Reference component** (optional): An existing well-documented component to use as a style reference
+ 
+ **Default reference is `alert`.** It is the most recent page written to all of the rules below and shipped in
+-[docs#227](https://github.com/warp-ds/docs/pull/227) — read `docs/components/alert/{overview,usage,accessibility}.md`
++[docs#227](https://github.com/warp-ds/docs/pull/227) — read `docs/web/components/alert/{overview,usage,accessibility}.md`
+ before you write anything. `range-slider` is the best reference for a dense Do/Don't set; `badge` for a simple
+ variant-driven page.
+ 
+@@ -823,14 +823,14 @@ cd warp-docs
+ pnpm install              # first run only
+ pnpm build                # MUST pass — catches dead links, bad image paths, malformed Vue tags
+ pnpm check                # Biome lint + format, with auto-fix. The repo has a pre-commit hook.
+-pnpm generate-frameworks  # only if you added or changed anything under frameworks/
++pnpm generate-manifest    # only if you added, removed or renamed pages under docs/{web,ios,android}/components/
+ ```
+ 
+ Then preview and actually look at the page:
+ 
+ ```bash
+ pnpm dev
+-# → http://localhost:5173/docs/components/<component-name>/overview
++# → http://localhost:5173/docs/web/components/<component-name>/overview
+ ```
+ 
+ Check by eye, because the build cannot: that each `<DoDont>` renders as one side-by-side pair (overlapping
+@@ -899,7 +899,7 @@ ls -lh "path/to/output.svg"
+ ## Important Notes
+ 
+ - **Asset placeholders**: If referenced images don't exist in Figma, use `add_comment` to request them from designers
+-- **Framework docs**: This skill focuses on the main documentation files (overview, usage, accessibility). Framework-specific implementation docs in the `frameworks/` subdirectory are typically maintained separately
++- **Framework docs**: This skill focuses on the main documentation files (overview, usage, accessibility). Code pages (`code.md`, plus legacy `code-react*.md` / `code-vue.md` on Web) and the iOS/Android pages under `docs/ios/` and `docs/android/` are typically maintained separately
+ - **Existing content**: If documentation already exists, enhance it rather than replacing it entirely. Preserve any custom examples or specific guidance that's already there
+ - **Figma limitations**: If Figma component details are incomplete, make reasonable assumptions based on similar components and note what information was inferred
+ 
+@@ -951,14 +951,14 @@ Use this checklist to avoid VitePress build errors:
+ □ RULE 8: accessibility.md has all six required sections, none of them a stub
+ □ pnpm build passes (catches dead links and malformed tags; dev server does not)
+ □ pnpm check passes (Biome — the repo has a pre-commit hook)
+-□ Component page loads at /docs/components/<name>/overview and renders correctly by eye
++□ Component page loads at /docs/web/components/<name>/overview and renders correctly by eye
+ ```
+ 
+ Verify the one-pair-per-wrapper rule mechanically:
+ 
+ ```bash
+ awk '/<DoDont>/{c=0} /<Do /{c++} /<\/DoDont>/{if(c!=2) print FILENAME": "NR" has "c" <Do> children"}' \
+-  docs/components/<name>/*.md
++  docs/web/components/<name>/*.md
+ ```
+ 
+ Silence means every wrapper holds exactly one pair. Any output is a block that will render stacked.
+@@ -981,7 +981,7 @@ Silence means every wrapper holds exactly one pair. Any output is a block that w
+ - Check file sizes (not 0 bytes)
+ - Run `pnpm build` before considering it complete
+ - Use text descriptions when images are missing — silently, with no note about the absence
+-- Read `docs/components/alert/` first; it is the current reference page
++- Read `docs/web/components/alert/` first; it is the current reference page
+ 
+ ## Output Format
+ 
+@@ -997,7 +997,7 @@ After completing the documentation, provide:
+ 
+ ### VitePress Build Errors (Most Common)
+ 
+-**Error**: `Failed to resolve import "/components/xxx/xxx.svg" from "docs/components/xxx/overview.md"`
++**Error**: `Failed to resolve import "/components/xxx/xxx.svg" from "docs/web/components/xxx/overview.md"`
+ 
+ **Cause**: Documentation references an image file that doesn't exist on disk.
+ 
+diff --git a/skills/list-components/SKILL.md b/skills/list-components/SKILL.md
+index 725875c..8f53bab 100644
+--- a/skills/list-components/SKILL.md
++++ b/skills/list-components/SKILL.md
+@@ -17,12 +17,12 @@ List all components in the WARP Design System and show their documentation statu
+    - Note component properties and variants
+ 
+ 2. **From Docs Repository**:
+-   - Scan `warp-docs/docs/components/` directory
++   - Scan `warp-docs/docs/web/components/`, `warp-docs/docs/ios/components/` and `warp-docs/docs/android/components/`
+    - Check for each component:
+      - `overview.md` exists and has content
+      - `usage.md` exists and has content  
+      - `accessibility.md` exists
+-     - Framework implementations in `frameworks/`
++     - Platform availability and code pages from `warp-docs/docs/.vitepress/platform-manifest.json` (Web, iOS, Android)
+    - Look for "in progress" markers
+ 
+ 3. **Cross-reference**:

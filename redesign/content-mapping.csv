@@ -1,0 +1,533 @@
+old_path,old_url,new_urls,action,notes
+docs/components/alert/overview.md,/components/alert/overview,/web/components/alert/overview ; /ios/components/alert/overview ; /android/components/alert/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/alert/usage.md,/components/alert/usage,/web/components/alert/usage ; /ios/components/alert/usage ; /android/components/alert/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/alert/accessibility.md,/components/alert/accessibility,/web/components/alert/accessibility,move,not copied to native (needs source verification)
+docs/components/alert/frameworks/android.md,/components/alert/frameworks/android,/android/components/alert/code,move,
+docs/components/alert/frameworks/elements.md,/components/alert/frameworks/elements,/web/components/alert/code,move,Elements = primary Code page
+docs/components/alert/frameworks/ios.md,/components/alert/frameworks/ios,/ios/components/alert/code,move,
+docs/components/alert/frameworks/react-19.md,/components/alert/frameworks/react-19,/web/components/alert/code-react-19,move,legacy framework tab
+docs/components/alert/frameworks/react.md,/components/alert/frameworks/react,/web/components/alert/code-react,move,legacy framework tab
+docs/components/alert/frameworks/vue.md,/components/alert/frameworks/vue,/web/components/alert/code-vue,move,legacy framework tab
+docs/components/badge/overview.md,/components/badge/overview,/web/components/badge/overview ; /ios/components/badge/overview ; /android/components/badge/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/badge/usage.md,/components/badge/usage,/web/components/badge/usage ; /ios/components/badge/usage ; /android/components/badge/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/badge/styling.md,/components/badge/styling,/web/components/badge/styling,move,
+docs/components/badge/accessibility.md,/components/badge/accessibility,/web/components/badge/accessibility,move,not copied to native (needs source verification)
+docs/components/badge/frameworks/android.md,/components/badge/frameworks/android,/android/components/badge/code,move,
+docs/components/badge/frameworks/elements.md,/components/badge/frameworks/elements,/web/components/badge/code,move,Elements = primary Code page
+docs/components/badge/frameworks/ios.md,/components/badge/frameworks/ios,/ios/components/badge/code,move,
+docs/components/badge/frameworks/react.md,/components/badge/frameworks/react,/web/components/badge/code-react,move,legacy framework tab
+docs/components/badge/frameworks/vue.md,/components/badge/frameworks/vue,/web/components/badge/code-vue,move,legacy framework tab
+docs/components/box/overview.md,/components/box/overview,/web/components/box/overview ; /ios/components/box/overview ; /android/components/box/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/box/usage.md,/components/box/usage,/web/components/box/usage ; /ios/components/box/usage ; /android/components/box/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/box/accessibility.md,/components/box/accessibility,/web/components/box/accessibility,move,not copied to native (needs source verification)
+docs/components/box/frameworks/android.md,/components/box/frameworks/android,/android/components/box/code,move,
+docs/components/box/frameworks/elements.md,/components/box/frameworks/elements,/web/components/box/code,move,Elements = primary Code page
+docs/components/box/frameworks/ios.md,/components/box/frameworks/ios,/ios/components/box/code,move,
+docs/components/box/frameworks/react.md,/components/box/frameworks/react,/web/components/box/code-react,move,legacy framework tab
+docs/components/box/frameworks/vue.md,/components/box/frameworks/vue,/web/components/box/code-vue,move,legacy framework tab
+docs/components/breadcrumbs/overview.md,/components/breadcrumbs/overview,/web/components/breadcrumbs/overview,move,
+docs/components/breadcrumbs/usage.md,/components/breadcrumbs/usage,/web/components/breadcrumbs/usage,move,
+docs/components/breadcrumbs/styling.md,/components/breadcrumbs/styling,/web/components/breadcrumbs/styling,move,
+docs/components/breadcrumbs/accessibility.md,/components/breadcrumbs/accessibility,/web/components/breadcrumbs/accessibility,move,
+docs/components/breadcrumbs/frameworks/elements.md,/components/breadcrumbs/frameworks/elements,/web/components/breadcrumbs/code,move,Elements = primary Code page
+docs/components/breadcrumbs/frameworks/react.md,/components/breadcrumbs/frameworks/react,/web/components/breadcrumbs/code-react,move,legacy framework tab
+docs/components/breadcrumbs/frameworks/vue.md,/components/breadcrumbs/frameworks/vue,/web/components/breadcrumbs/code-vue,move,legacy framework tab
+docs/components/broadcast/overview.md,/components/broadcast/overview,/ios/components/broadcast/overview,move,native-only component
+docs/components/broadcast/usage.md,/components/broadcast/usage,,drop,"in-progress stub, native-only component; redirect to overview"
+docs/components/broadcast/frameworks/ios.md,/components/broadcast/frameworks/ios,/ios/components/broadcast/code,move,
+docs/components/button/overview.md,/components/button/overview,/web/components/button/overview ; /ios/components/button/overview ; /android/components/button/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/button/usage.md,/components/button/usage,/web/components/button/usage,move,in-progress stub: web only
+docs/components/button/accessibility.md,/components/button/accessibility,/web/components/button/accessibility,move,not copied to native (needs source verification)
+docs/components/button/frameworks/android.md,/components/button/frameworks/android,/android/components/button/code,move,
+docs/components/button/frameworks/elements.md,/components/button/frameworks/elements,/web/components/button/code,move,Elements = primary Code page
+docs/components/button/frameworks/ios.md,/components/button/frameworks/ios,/ios/components/button/code,move,
+docs/components/button/frameworks/react-19.md,/components/button/frameworks/react-19,/web/components/button/code-react-19,move,legacy framework tab
+docs/components/button/frameworks/react.md,/components/button/frameworks/react,/web/components/button/code-react,move,legacy framework tab
+docs/components/button/frameworks/vue.md,/components/button/frameworks/vue,/web/components/button/code-vue,move,legacy framework tab
+docs/components/button-group/overview.md,/components/button-group/overview,/web/components/button-group/overview ; /ios/components/button-group/overview,move + seed,"seed ios (strip web examples, seeded: true)"
+docs/components/button-group/usage.md,/components/button-group/usage,/web/components/button-group/usage,move,in-progress stub: web only
+docs/components/button-group/frameworks/ios.md,/components/button-group/frameworks/ios,/ios/components/button-group/code,move,
+docs/components/button-group/frameworks/vue.md,/components/button-group/frameworks/vue,/web/components/button-group/code-vue,move,legacy framework tab
+docs/components/button-pill/overview.md,/components/button-pill/overview,/ios/components/button-pill/overview,move,native-only component
+docs/components/button-pill/usage.md,/components/button-pill/usage,,drop,"in-progress stub, native-only component; redirect to overview"
+docs/components/button-pill/frameworks/ios.md,/components/button-pill/frameworks/ios,/ios/components/button-pill/code,move,
+docs/components/callout/overview.md,/components/callout/overview,/web/components/callout/overview ; /ios/components/callout/overview ; /android/components/callout/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/callout/usage.md,/components/callout/usage,/web/components/callout/usage ; /ios/components/callout/usage ; /android/components/callout/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/callout/accessibility.md,/components/callout/accessibility,/web/components/callout/accessibility,move,not copied to native (needs source verification)
+docs/components/callout/frameworks/android.md,/components/callout/frameworks/android,/android/components/callout/code,move,
+docs/components/callout/frameworks/elements.md,/components/callout/frameworks/elements,/web/components/callout/code,move,Elements = primary Code page
+docs/components/callout/frameworks/ios.md,/components/callout/frameworks/ios,/ios/components/callout/code,move,
+docs/components/callout/frameworks/react.md,/components/callout/frameworks/react,/web/components/callout/code-react,move,legacy framework tab
+docs/components/callout/frameworks/vue.md,/components/callout/frameworks/vue,/web/components/callout/code-vue,move,legacy framework tab
+docs/components/card/overview.md,/components/card/overview,/web/components/card/overview,move,
+docs/components/card/usage.md,/components/card/usage,/web/components/card/usage,move,in-progress stub: web only
+docs/components/card/frameworks/elements.md,/components/card/frameworks/elements,/web/components/card/code,move,Elements = primary Code page
+docs/components/card/frameworks/react.md,/components/card/frameworks/react,/web/components/card/code-react,move,legacy framework tab
+docs/components/card/frameworks/vue.md,/components/card/frameworks/vue,/web/components/card/code-vue,move,legacy framework tab
+docs/components/checkbox/overview.md,/components/checkbox/overview,/web/components/checkbox/overview ; /ios/components/checkbox/overview ; /android/components/checkbox/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/checkbox/usage.md,/components/checkbox/usage,/web/components/checkbox/usage ; /ios/components/checkbox/usage ; /android/components/checkbox/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/checkbox/accessibility.md,/components/checkbox/accessibility,/web/components/checkbox/accessibility,move,not copied to native (needs source verification)
+docs/components/checkbox/frameworks/android.md,/components/checkbox/frameworks/android,/android/components/checkbox/code,move,
+docs/components/checkbox/frameworks/elements.md,/components/checkbox/frameworks/elements,/web/components/checkbox/code,move,Elements = primary Code page
+docs/components/checkbox/frameworks/ios.md,/components/checkbox/frameworks/ios,/ios/components/checkbox/code,move,
+docs/components/checkbox/frameworks/react.md,/components/checkbox/frameworks/react,/web/components/checkbox/code-react,move,legacy framework tab
+docs/components/checkbox/frameworks/vue.md,/components/checkbox/frameworks/vue,/web/components/checkbox/code-vue,move,legacy framework tab
+docs/components/combo-box/overview.md,/components/combo-box/overview,/web/components/combo-box/overview,move,
+docs/components/combo-box/usage.md,/components/combo-box/usage,/web/components/combo-box/usage,move,in-progress stub: web only
+docs/components/combo-box/frameworks/elements.md,/components/combo-box/frameworks/elements,/web/components/combo-box/code,move,Elements = primary Code page
+docs/components/combo-box/frameworks/react.md,/components/combo-box/frameworks/react,/web/components/combo-box/code-react,move,legacy framework tab
+docs/components/confirmation-dialog/overview.md,/components/confirmation-dialog/overview,/ios/components/confirmation-dialog/overview,move,native-only component
+docs/components/confirmation-dialog/usage.md,/components/confirmation-dialog/usage,/ios/components/confirmation-dialog/usage,move,native-only component
+docs/components/confirmation-dialog/accessibility.md,/components/confirmation-dialog/accessibility,/ios/components/confirmation-dialog/accessibility,move,native-only component; verify against platform source before publishing
+docs/components/confirmation-dialog/frameworks/ios.md,/components/confirmation-dialog/frameworks/ios,/ios/components/confirmation-dialog/code,move,
+docs/components/date-picker/overview.md,/components/date-picker/overview,/web/components/date-picker/overview ; /ios/components/date-picker/overview ; /android/components/date-picker/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/date-picker/usage.md,/components/date-picker/usage,/web/components/date-picker/usage ; /ios/components/date-picker/usage ; /android/components/date-picker/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/date-picker/styling.md,/components/date-picker/styling,/web/components/date-picker/styling,move,
+docs/components/date-picker/accessibility.md,/components/date-picker/accessibility,/web/components/date-picker/accessibility,move,not copied to native (needs source verification)
+docs/components/date-picker/frameworks/android.md,/components/date-picker/frameworks/android,/android/components/date-picker/code,move,
+docs/components/date-picker/frameworks/elements.md,/components/date-picker/frameworks/elements,/web/components/date-picker/code,move,Elements = primary Code page
+docs/components/date-picker/frameworks/ios.md,/components/date-picker/frameworks/ios,/ios/components/date-picker/code,move,
+docs/components/date-picker/frameworks/react-19.md,/components/date-picker/frameworks/react-19,/web/components/date-picker/code-react-19,move,legacy framework tab
+docs/components/divider/overview.md,/components/divider/overview,/ios/components/divider/overview ; /android/components/divider/overview,move + copy,native-only component
+docs/components/divider/usage.md,/components/divider/usage,,drop,"in-progress stub, native-only component; redirect to overview"
+docs/components/divider/frameworks/android.md,/components/divider/frameworks/android,/android/components/divider/code,move,
+docs/components/divider/frameworks/ios.md,/components/divider/frameworks/ios,/ios/components/divider/code,move,
+docs/components/expandable/overview.md,/components/expandable/overview,/web/components/expandable/overview ; /ios/components/expandable/overview ; /android/components/expandable/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/expandable/usage.md,/components/expandable/usage,/web/components/expandable/usage,move,in-progress stub: web only
+docs/components/expandable/frameworks/android.md,/components/expandable/frameworks/android,/android/components/expandable/code,move,
+docs/components/expandable/frameworks/elements.md,/components/expandable/frameworks/elements,/web/components/expandable/code,move,Elements = primary Code page
+docs/components/expandable/frameworks/ios.md,/components/expandable/frameworks/ios,/ios/components/expandable/code,move,
+docs/components/expandable/frameworks/react.md,/components/expandable/frameworks/react,/web/components/expandable/code-react,move,legacy framework tab
+docs/components/expandable/frameworks/vue.md,/components/expandable/frameworks/vue,/web/components/expandable/code-vue,move,legacy framework tab
+docs/components/icons/overview.md,/components/icons/overview,/web/components/icons/overview ; /ios/components/icons/overview ; /android/components/icons/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/icons/usage.md,/components/icons/usage,/web/components/icons/usage,move,in-progress stub: web only
+docs/components/icons/styling.md,/components/icons/styling,/web/components/icons/styling,move,
+docs/components/icons/accessibility.md,/components/icons/accessibility,/web/components/icons/accessibility,move,not copied to native (needs source verification)
+docs/components/icons/frameworks/android.md,/components/icons/frameworks/android,/android/components/icons/code,move,
+docs/components/icons/frameworks/elements.md,/components/icons/frameworks/elements,/web/components/icons/code,move,Elements = primary Code page
+docs/components/icons/frameworks/ios.md,/components/icons/frameworks/ios,/ios/components/icons/code,move,
+docs/components/icons/frameworks/react-19.md,/components/icons/frameworks/react-19,/web/components/icons/code-react-19,move,legacy framework tab
+docs/components/link/overview.md,/components/link/overview,/web/components/link/overview ; /android/components/link/overview,move + seed,"seed android (strip web examples, seeded: true)"
+docs/components/link/usage.md,/components/link/usage,/web/components/link/usage ; /android/components/link/usage,move + seed,"seed android (strip web examples, seeded: true)"
+docs/components/link/styling.md,/components/link/styling,/web/components/link/styling,move,
+docs/components/link/accessibility.md,/components/link/accessibility,/web/components/link/accessibility,move,not copied to native (needs source verification)
+docs/components/link/frameworks/android.md,/components/link/frameworks/android,/android/components/link/code,move,
+docs/components/link/frameworks/elements.md,/components/link/frameworks/elements,/web/components/link/code,move,Elements = primary Code page
+docs/components/link/frameworks/react-19.md,/components/link/frameworks/react-19,/web/components/link/code-react-19,move,legacy framework tab
+docs/components/logo/overview.md,/components/logo/overview,/web/components/logo/overview ; /ios/components/logo/overview ; /android/components/logo/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/logo/usage.md,/components/logo/usage,/web/components/logo/usage ; /ios/components/logo/usage ; /android/components/logo/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/logo/accessibility.md,/components/logo/accessibility,/web/components/logo/accessibility,move,not copied to native (needs source verification)
+docs/components/logo/frameworks/android.md,/components/logo/frameworks/android,/android/components/logo/code,move,
+docs/components/logo/frameworks/elements.md,/components/logo/frameworks/elements,/web/components/logo/code,move,Elements = primary Code page
+docs/components/logo/frameworks/ios.md,/components/logo/frameworks/ios,/ios/components/logo/code,move,
+docs/components/modal/overview.md,/components/modal/overview,/web/components/modal/overview ; /ios/components/modal/overview ; /android/components/modal/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/modal/usage.md,/components/modal/usage,/web/components/modal/usage ; /ios/components/modal/usage ; /android/components/modal/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/modal/accessibility.md,/components/modal/accessibility,/web/components/modal/accessibility,move,not copied to native (needs source verification)
+docs/components/modal/frameworks/android.md,/components/modal/frameworks/android,/android/components/modal/code,move,
+docs/components/modal/frameworks/elements.md,/components/modal/frameworks/elements,/web/components/modal/code,move,Elements = primary Code page
+docs/components/modal/frameworks/ios.md,/components/modal/frameworks/ios,/ios/components/modal/code,move,
+docs/components/modal/frameworks/react.md,/components/modal/frameworks/react,/web/components/modal/code-react,move,legacy framework tab
+docs/components/modal/frameworks/vue.md,/components/modal/frameworks/vue,/web/components/modal/code-vue,move,legacy framework tab
+docs/components/page-indicator/overview.md,/components/page-indicator/overview,/web/components/page-indicator/overview ; /ios/components/page-indicator/overview ; /android/components/page-indicator/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/page-indicator/usage.md,/components/page-indicator/usage,/web/components/page-indicator/usage ; /ios/components/page-indicator/usage ; /android/components/page-indicator/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/page-indicator/accessibility.md,/components/page-indicator/accessibility,/web/components/page-indicator/accessibility,move,not copied to native (needs source verification)
+docs/components/page-indicator/frameworks/android.md,/components/page-indicator/frameworks/android,/android/components/page-indicator/code,move,
+docs/components/page-indicator/frameworks/elements.md,/components/page-indicator/frameworks/elements,/web/components/page-indicator/code,move,Elements = primary Code page
+docs/components/page-indicator/frameworks/ios.md,/components/page-indicator/frameworks/ios,/ios/components/page-indicator/code,move,
+docs/components/page-indicator/frameworks/react-19.md,/components/page-indicator/frameworks/react-19,/web/components/page-indicator/code-react-19,move,legacy framework tab
+docs/components/pagination/overview.md,/components/pagination/overview,/web/components/pagination/overview,move,
+docs/components/pagination/usage.md,/components/pagination/usage,/web/components/pagination/usage,move,in-progress stub: web only
+docs/components/pagination/accessibility.md,/components/pagination/accessibility,/web/components/pagination/accessibility,move,
+docs/components/pagination/frameworks/elements.md,/components/pagination/frameworks/elements,/web/components/pagination/code,move,Elements = primary Code page
+docs/components/pagination/frameworks/react.md,/components/pagination/frameworks/react,/web/components/pagination/code-react,move,legacy framework tab
+docs/components/pill/overview.md,/components/pill/overview,/web/components/pill/overview ; /ios/components/pill/overview ; /android/components/pill/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/pill/usage.md,/components/pill/usage,/web/components/pill/usage,move,in-progress stub: web only
+docs/components/pill/frameworks/android.md,/components/pill/frameworks/android,/android/components/pill/code,move,
+docs/components/pill/frameworks/elements.md,/components/pill/frameworks/elements,/web/components/pill/code,move,Elements = primary Code page
+docs/components/pill/frameworks/ios.md,/components/pill/frameworks/ios,/ios/components/pill/code,move,
+docs/components/pill/frameworks/react.md,/components/pill/frameworks/react,/web/components/pill/code-react,move,legacy framework tab
+docs/components/pill/frameworks/vue.md,/components/pill/frameworks/vue,/web/components/pill/code-vue,move,legacy framework tab
+docs/components/popover/overview.md,/components/popover/overview,/web/components/popover/overview ; /android/components/popover/overview,move + seed,"seed android (strip web examples, seeded: true)"
+docs/components/popover/usage.md,/components/popover/usage,/web/components/popover/usage,move,in-progress stub: web only
+docs/components/popover/frameworks/android.md,/components/popover/frameworks/android,/android/components/popover/code,move,
+docs/components/popover/frameworks/elements.md,/components/popover/frameworks/elements,/web/components/popover/code,move,Elements = primary Code page
+docs/components/popover/frameworks/react.md,/components/popover/frameworks/react,/web/components/popover/code-react,move,legacy framework tab
+docs/components/popover/frameworks/vue.md,/components/popover/frameworks/vue,/web/components/popover/code-vue,move,legacy framework tab
+docs/components/radio/overview.md,/components/radio/overview,/web/components/radio/overview ; /ios/components/radio/overview ; /android/components/radio/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/radio/usage.md,/components/radio/usage,/web/components/radio/usage ; /ios/components/radio/usage ; /android/components/radio/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/radio/accessibility.md,/components/radio/accessibility,/web/components/radio/accessibility,move,not copied to native (needs source verification)
+docs/components/radio/frameworks/android.md,/components/radio/frameworks/android,/android/components/radio/code,move,
+docs/components/radio/frameworks/elements.md,/components/radio/frameworks/elements,/web/components/radio/code,move,Elements = primary Code page
+docs/components/radio/frameworks/ios.md,/components/radio/frameworks/ios,/ios/components/radio/code,move,
+docs/components/radio/frameworks/react.md,/components/radio/frameworks/react,/web/components/radio/code-react,move,legacy framework tab
+docs/components/radio/frameworks/vue.md,/components/radio/frameworks/vue,/web/components/radio/code-vue,move,legacy framework tab
+docs/components/radio-buttons/overview.md,/components/radio-buttons/overview,/web/components/radio-buttons/overview,move,
+docs/components/radio-buttons/usage.md,/components/radio-buttons/usage,/web/components/radio-buttons/usage,move,in-progress stub: web only
+docs/components/radio-buttons/frameworks/react.md,/components/radio-buttons/frameworks/react,/web/components/radio-buttons/code-react,move,legacy framework tab
+docs/components/radio-buttons/frameworks/vue.md,/components/radio-buttons/frameworks/vue,/web/components/radio-buttons/code-vue,move,legacy framework tab
+docs/components/range-slider/overview.md,/components/range-slider/overview,/web/components/range-slider/overview ; /ios/components/range-slider/overview ; /android/components/range-slider/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/range-slider/usage.md,/components/range-slider/usage,/web/components/range-slider/usage ; /ios/components/range-slider/usage ; /android/components/range-slider/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/range-slider/accessibility.md,/components/range-slider/accessibility,/web/components/range-slider/accessibility,move,not copied to native (needs source verification)
+docs/components/range-slider/frameworks/android.md,/components/range-slider/frameworks/android,/android/components/range-slider/code,move,
+docs/components/range-slider/frameworks/elements.md,/components/range-slider/frameworks/elements,/web/components/range-slider/code,move,Elements = primary Code page
+docs/components/range-slider/frameworks/ios.md,/components/range-slider/frameworks/ios,/ios/components/range-slider/code,move,
+docs/components/range-slider/frameworks/react-19.md,/components/range-slider/frameworks/react-19,/web/components/range-slider/code-react-19,move,legacy framework tab
+docs/components/select/overview.md,/components/select/overview,/web/components/select/overview ; /ios/components/select/overview ; /android/components/select/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/select/usage.md,/components/select/usage,/web/components/select/usage ; /ios/components/select/usage ; /android/components/select/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/select/accessibility.md,/components/select/accessibility,/web/components/select/accessibility,move,not copied to native (needs source verification)
+docs/components/select/frameworks/android.md,/components/select/frameworks/android,/android/components/select/code,move,
+docs/components/select/frameworks/elements.md,/components/select/frameworks/elements,/web/components/select/code,move,Elements = primary Code page
+docs/components/select/frameworks/ios.md,/components/select/frameworks/ios,/ios/components/select/code,move,
+docs/components/select/frameworks/react.md,/components/select/frameworks/react,/web/components/select/code-react,move,legacy framework tab
+docs/components/select/frameworks/vue.md,/components/select/frameworks/vue,/web/components/select/code-vue,move,legacy framework tab
+docs/components/slider/overview.md,/components/slider/overview,/web/components/slider/overview ; /ios/components/slider/overview ; /android/components/slider/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/slider/usage.md,/components/slider/usage,/web/components/slider/usage ; /ios/components/slider/usage ; /android/components/slider/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/slider/accessibility.md,/components/slider/accessibility,/web/components/slider/accessibility,move,not copied to native (needs source verification)
+docs/components/slider/frameworks/android.md,/components/slider/frameworks/android,/android/components/slider/code,move,
+docs/components/slider/frameworks/elements.md,/components/slider/frameworks/elements,/web/components/slider/code,move,Elements = primary Code page
+docs/components/slider/frameworks/ios.md,/components/slider/frameworks/ios,/ios/components/slider/code,move,
+docs/components/slider/frameworks/react-19.md,/components/slider/frameworks/react-19,/web/components/slider/code-react-19,move,legacy framework tab
+docs/components/slider/frameworks/react.md,/components/slider/frameworks/react,/web/components/slider/code-react,move,legacy framework tab
+docs/components/slider/frameworks/vue.md,/components/slider/frameworks/vue,/web/components/slider/code-vue,move,legacy framework tab
+docs/components/snackbar/overview.md,/components/snackbar/overview,/web/components/snackbar/overview ; /ios/components/snackbar/overview ; /android/components/snackbar/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/snackbar/usage.md,/components/snackbar/usage,/web/components/snackbar/usage ; /ios/components/snackbar/usage ; /android/components/snackbar/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/snackbar/accessibility.md,/components/snackbar/accessibility,/web/components/snackbar/accessibility,move,not copied to native (needs source verification)
+docs/components/snackbar/frameworks/android.md,/components/snackbar/frameworks/android,/android/components/snackbar/code,move,
+docs/components/snackbar/frameworks/elements.md,/components/snackbar/frameworks/elements,/web/components/snackbar/code,move,Elements = primary Code page
+docs/components/snackbar/frameworks/ios.md,/components/snackbar/frameworks/ios,/ios/components/snackbar/code,move,
+docs/components/spinner/overview.md,/components/spinner/overview,/ios/components/spinner/overview ; /android/components/spinner/overview,move + copy,native-only component
+docs/components/spinner/usage.md,/components/spinner/usage,,drop,"in-progress stub, native-only component; redirect to overview"
+docs/components/spinner/frameworks/android.md,/components/spinner/frameworks/android,/android/components/spinner/code,move,
+docs/components/spinner/frameworks/ios.md,/components/spinner/frameworks/ios,/ios/components/spinner/code,move,
+docs/components/steps/overview.md,/components/steps/overview,/web/components/steps/overview ; /ios/components/steps/overview ; /android/components/steps/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/steps/usage.md,/components/steps/usage,/web/components/steps/usage,move,in-progress stub: web only
+docs/components/steps/frameworks/android.md,/components/steps/frameworks/android,/android/components/steps/code,move,
+docs/components/steps/frameworks/elements.md,/components/steps/frameworks/elements,/web/components/steps/code,move,Elements = primary Code page
+docs/components/steps/frameworks/ios.md,/components/steps/frameworks/ios,/ios/components/steps/code,move,
+docs/components/steps/frameworks/react.md,/components/steps/frameworks/react,/web/components/steps/code-react,move,legacy framework tab
+docs/components/steps/frameworks/vue.md,/components/steps/frameworks/vue,/web/components/steps/code-vue,move,legacy framework tab
+docs/components/switch/overview.md,/components/switch/overview,/web/components/switch/overview ; /ios/components/switch/overview ; /android/components/switch/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/switch/usage.md,/components/switch/usage,/web/components/switch/usage,move,in-progress stub: web only
+docs/components/switch/frameworks/android.md,/components/switch/frameworks/android,/android/components/switch/code,move,
+docs/components/switch/frameworks/elements.md,/components/switch/frameworks/elements,/web/components/switch/code,move,Elements = primary Code page
+docs/components/switch/frameworks/ios.md,/components/switch/frameworks/ios,/ios/components/switch/code,move,
+docs/components/switch/frameworks/react.md,/components/switch/frameworks/react,/web/components/switch/code-react,move,legacy framework tab
+docs/components/switch/frameworks/vue.md,/components/switch/frameworks/vue,/web/components/switch/code-vue,move,legacy framework tab
+docs/components/tabs/overview.md,/components/tabs/overview,/web/components/tabs/overview ; /ios/components/tabs/overview ; /android/components/tabs/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/tabs/usage.md,/components/tabs/usage,/web/components/tabs/usage ; /ios/components/tabs/usage ; /android/components/tabs/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/tabs/accessibility.md,/components/tabs/accessibility,/web/components/tabs/accessibility,move,not copied to native (needs source verification)
+docs/components/tabs/frameworks/android.md,/components/tabs/frameworks/android,/android/components/tabs/code,move,
+docs/components/tabs/frameworks/elements.md,/components/tabs/frameworks/elements,/web/components/tabs/code,move,Elements = primary Code page
+docs/components/tabs/frameworks/ios.md,/components/tabs/frameworks/ios,/ios/components/tabs/code,move,
+docs/components/tabs/frameworks/react.md,/components/tabs/frameworks/react,/web/components/tabs/code-react,move,legacy framework tab
+docs/components/tabs/frameworks/vue.md,/components/tabs/frameworks/vue,/web/components/tabs/code-vue,move,legacy framework tab
+docs/components/text/overview.md,/components/text/overview,/ios/components/text/overview ; /android/components/text/overview,move + copy,native-only component
+docs/components/text/usage.md,/components/text/usage,,drop,"in-progress stub, native-only component; redirect to overview"
+docs/components/text/frameworks/android.md,/components/text/frameworks/android,/android/components/text/code,move,
+docs/components/text/frameworks/ios.md,/components/text/frameworks/ios,/ios/components/text/code,move,
+docs/components/text-area/overview.md,/components/text-area/overview,/web/components/text-area/overview ; /ios/components/text-area/overview,move + seed,"seed ios (strip web examples, seeded: true)"
+docs/components/text-area/usage.md,/components/text-area/usage,/web/components/text-area/usage ; /ios/components/text-area/usage,move + seed,"seed ios (strip web examples, seeded: true)"
+docs/components/text-area/accessibility.md,/components/text-area/accessibility,/web/components/text-area/accessibility,move,not copied to native (needs source verification)
+docs/components/text-area/frameworks/elements.md,/components/text-area/frameworks/elements,/web/components/text-area/code,move,Elements = primary Code page
+docs/components/text-area/frameworks/ios.md,/components/text-area/frameworks/ios,/ios/components/text-area/code,move,
+docs/components/text-area/frameworks/react.md,/components/text-area/frameworks/react,/web/components/text-area/code-react,move,legacy framework tab
+docs/components/text-area/frameworks/vue.md,/components/text-area/frameworks/vue,/web/components/text-area/code-vue,move,legacy framework tab
+docs/components/text-field/overview.md,/components/text-field/overview,/web/components/text-field/overview ; /ios/components/text-field/overview ; /android/components/text-field/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/text-field/usage.md,/components/text-field/usage,/web/components/text-field/usage ; /ios/components/text-field/usage ; /android/components/text-field/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/text-field/accessibility.md,/components/text-field/accessibility,/web/components/text-field/accessibility,move,not copied to native (needs source verification)
+docs/components/text-field/frameworks/android.md,/components/text-field/frameworks/android,/android/components/text-field/code,move,
+docs/components/text-field/frameworks/elements.md,/components/text-field/frameworks/elements,/web/components/text-field/code,move,Elements = primary Code page
+docs/components/text-field/frameworks/ios.md,/components/text-field/frameworks/ios,/ios/components/text-field/code,move,
+docs/components/text-field/frameworks/react.md,/components/text-field/frameworks/react,/web/components/text-field/code-react,move,legacy framework tab
+docs/components/text-field/frameworks/vue.md,/components/text-field/frameworks/vue,/web/components/text-field/code-vue,move,legacy framework tab
+docs/components/toast/overview.md,/components/toast/overview,,archive,Deprecated: archive; redirect to Snackbar
+docs/components/toast/usage.md,/components/toast/usage,,archive,Deprecated: archive; redirect to Snackbar
+docs/components/toast/accessibility.md,/components/toast/accessibility,,archive,Deprecated: archive; redirect to Snackbar
+docs/components/toast/frameworks/android.md,/components/toast/frameworks/android,,archive,Deprecated on android; redirect to Snackbar
+docs/components/toast/frameworks/elements.md,/components/toast/frameworks/elements,,archive,Deprecated on web; redirect to Snackbar
+docs/components/toast/frameworks/ios.md,/components/toast/frameworks/ios,/ios/components/toast/code,move,warp-ios Toast has no deprecation marker (Q5)
+docs/components/toast/frameworks/react-19.md,/components/toast/frameworks/react-19,,archive,Deprecated on web; redirect to Snackbar
+docs/components/tooltip/overview.md,/components/tooltip/overview,/web/components/tooltip/overview ; /ios/components/tooltip/overview ; /android/components/tooltip/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/tooltip/usage.md,/components/tooltip/usage,/web/components/tooltip/usage ; /ios/components/tooltip/usage ; /android/components/tooltip/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/components/tooltip/accessibility.md,/components/tooltip/accessibility,/web/components/tooltip/accessibility,move,not copied to native (needs source verification)
+docs/components/tooltip/frameworks/android.md,/components/tooltip/frameworks/android,/android/components/tooltip/code,move,
+docs/components/tooltip/frameworks/elements.md,/components/tooltip/frameworks/elements,/web/components/tooltip/code,move,Elements = primary Code page
+docs/components/tooltip/frameworks/ios.md,/components/tooltip/frameworks/ios,/ios/components/tooltip/code,move,
+docs/components/tooltip/frameworks/react.md,/components/tooltip/frameworks/react,/web/components/tooltip/code-react,move,legacy framework tab
+docs/components/tooltip/frameworks/vue.md,/components/tooltip/frameworks/vue,/web/components/tooltip/code-vue,move,legacy framework tab
+docs/components/utilities/overview.md,/components/utilities/overview,/web/components/utilities/overview,move,
+docs/components/utilities/usage.md,/components/utilities/usage,/web/components/utilities/usage,move,in-progress stub: web only
+docs/components/utilities/frameworks/vue.md,/components/utilities/frameworks/vue,/web/components/utilities/code-vue,move,legacy framework tab
+docs/patterns/empty-states/overview.md,/patterns/empty-states/overview,/web/patterns/empty-states/overview ; /ios/patterns/empty-states/overview ; /android/patterns/empty-states/overview,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/patterns/empty-states/usage.md,/patterns/empty-states/usage,/web/patterns/empty-states/usage ; /ios/patterns/empty-states/usage ; /android/patterns/empty-states/usage,move + seed,"seed ios+android (strip web examples, seeded: true)"
+docs/patterns/empty-states/accessibility.md,/patterns/empty-states/accessibility,/web/patterns/empty-states/accessibility,move,not copied to native (needs source verification)
+docs/patterns/empty-states/frameworks/android.md,/patterns/empty-states/frameworks/android,/android/patterns/empty-states/code,move,
+docs/patterns/empty-states/frameworks/ios.md,/patterns/empty-states/frameworks/ios,/ios/patterns/empty-states/code,move,
+docs/blog/index.md,/blog/,/about/whats-new/,move,"What's new (header ""Changelog"")"
+docs/blog/posts/2023/icons-v130.md,/blog/posts/2023/icons-v130,/about/whats-new/2023/icons-v130,move,
+docs/blog/posts/2023/icons-v140.md,/blog/posts/2023/icons-v140,/about/whats-new/2023/icons-v140,move,
+docs/blog/posts/2023/october.md,/blog/posts/2023/october,/about/whats-new/2023/october,move,
+docs/blog/posts/2023/week45.md,/blog/posts/2023/week45,/about/whats-new/2023/week45,move,
+docs/blog/posts/2023/week48.md,/blog/posts/2023/week48,/about/whats-new/2023/week48,move,
+docs/blog/posts/2023/week51.md,/blog/posts/2023/week51,/about/whats-new/2023/week51,move,
+docs/blog/posts/2024/android-0.0.27.md,/blog/posts/2024/android-0.0.27,/about/whats-new/2024/android-0.0.27,move,
+docs/blog/posts/2024/android-0.0.28.md,/blog/posts/2024/android-0.0.28,/about/whats-new/2024/android-0.0.28,move,
+docs/blog/posts/2024/android-0.0.29.md,/blog/posts/2024/android-0.0.29,/about/whats-new/2024/android-0.0.29,move,
+docs/blog/posts/2024/android-0.0.33.md,/blog/posts/2024/android-0.0.33,/about/whats-new/2024/android-0.0.33,move,
+docs/blog/posts/2024/android-0.0.34.md,/blog/posts/2024/android-0.0.34,/about/whats-new/2024/android-0.0.34,move,
+docs/blog/posts/2024/icons-v2.md,/blog/posts/2024/icons-v2,/about/whats-new/2024/icons-v2,move,
+docs/blog/posts/2024/warp-2-0.md,/blog/posts/2024/warp-2-0,/about/whats-new/2024/warp-2-0,move,
+docs/blog/posts/2024/week10.md,/blog/posts/2024/week10,/about/whats-new/2024/week10,move,
+docs/blog/posts/2024/week15.md,/blog/posts/2024/week15,/about/whats-new/2024/week15,move,
+docs/blog/posts/2024/week21.md,/blog/posts/2024/week21,/about/whats-new/2024/week21,move,
+docs/blog/posts/2024/week33.md,/blog/posts/2024/week33,/about/whats-new/2024/week33,move,
+docs/blog/posts/2024/week47.md,/blog/posts/2024/week47,/about/whats-new/2024/week47,move,
+docs/blog/posts/2024/week7.md,/blog/posts/2024/week7,/about/whats-new/2024/week7,move,
+docs/blog/posts/2025/android-0.0.37.md,/blog/posts/2025/android-0.0.37,/about/whats-new/2025/android-0.0.37,move,
+docs/blog/posts/2025/android-0.0.38.md,/blog/posts/2025/android-0.0.38,/about/whats-new/2025/android-0.0.38,move,
+docs/blog/posts/2025/android-0.0.39.md,/blog/posts/2025/android-0.0.39,/about/whats-new/2025/android-0.0.39,move,
+docs/blog/posts/2025/android-0.0.40.md,/blog/posts/2025/android-0.0.40,/about/whats-new/2025/android-0.0.40,move,
+docs/blog/posts/2025/android-0.0.42.md,/blog/posts/2025/android-0.0.42,/about/whats-new/2025/android-0.0.42,move,
+docs/blog/posts/2025/android-0.0.43.md,/blog/posts/2025/android-0.0.43,/about/whats-new/2025/android-0.0.43,move,
+docs/blog/posts/2025/android-0.0.44.md,/blog/posts/2025/android-0.0.44,/about/whats-new/2025/android-0.0.44,move,
+docs/blog/posts/2025/android-0.0.45.md,/blog/posts/2025/android-0.0.45,/about/whats-new/2025/android-0.0.45,move,
+docs/blog/posts/2025/android-0.0.46.md,/blog/posts/2025/android-0.0.46,/about/whats-new/2025/android-0.0.46,move,
+docs/blog/posts/2025/android-0.0.47.md,/blog/posts/2025/android-0.0.47,/about/whats-new/2025/android-0.0.47,move,
+docs/blog/posts/2025/android-0.0.48.md,/blog/posts/2025/android-0.0.48,/about/whats-new/2025/android-0.0.48,move,
+docs/blog/posts/2025/android-0.0.49.md,/blog/posts/2025/android-0.0.49,/about/whats-new/2025/android-0.0.49,move,
+docs/blog/posts/2025/android-0.0.50.md,/blog/posts/2025/android-0.0.50,/about/whats-new/2025/android-0.0.50,move,
+docs/blog/posts/2025/design-04-14.md,/blog/posts/2025/design-04-14,/about/whats-new/2025/design-04-14,move,
+docs/blog/posts/2025/design-08-18.md,/blog/posts/2025/design-08-18,/about/whats-new/2025/design-08-18,move,
+docs/blog/posts/2025/design-10-07.md,/blog/posts/2025/design-10-07,/about/whats-new/2025/design-10-07,move,
+docs/blog/posts/2025/icons-v260.md,/blog/posts/2025/icons-v260,/about/whats-new/2025/icons-v260,move,
+docs/blog/posts/2025/icons-v270.md,/blog/posts/2025/icons-v270,/about/whats-new/2025/icons-v270,move,
+docs/blog/posts/2025/ios-0.0.63.md,/blog/posts/2025/ios-0.0.63,/about/whats-new/2025/ios-0.0.63,move,
+docs/blog/posts/2025/ios-0.0.64.md,/blog/posts/2025/ios-0.0.64,/about/whats-new/2025/ios-0.0.64,move,
+docs/blog/posts/2025/ios-0.0.65.md,/blog/posts/2025/ios-0.0.65,/about/whats-new/2025/ios-0.0.65,move,
+docs/blog/posts/2025/ios-0.0.67.md,/blog/posts/2025/ios-0.0.67,/about/whats-new/2025/ios-0.0.67,move,
+docs/blog/posts/2025/ios-0.0.68.md,/blog/posts/2025/ios-0.0.68,/about/whats-new/2025/ios-0.0.68,move,
+docs/blog/posts/2025/ios-0.0.69.md,/blog/posts/2025/ios-0.0.69,/about/whats-new/2025/ios-0.0.69,move,
+docs/blog/posts/2025/ios-0.0.70.md,/blog/posts/2025/ios-0.0.70,/about/whats-new/2025/ios-0.0.70,move,
+docs/blog/posts/2025/week46.md,/blog/posts/2025/week46,/about/whats-new/2025/week46,move,
+docs/blog/posts/2025/week7.md,/blog/posts/2025/week7,/about/whats-new/2025/week7,move,
+docs/blog/posts/2026/android-0.0.51.md,/blog/posts/2026/android-0.0.51,/about/whats-new/2026/android-0.0.51,move,
+docs/blog/posts/2026/android-0.0.52.md,/blog/posts/2026/android-0.0.52,/about/whats-new/2026/android-0.0.52,move,
+docs/blog/posts/2026/android-0.0.53.md,/blog/posts/2026/android-0.0.53,/about/whats-new/2026/android-0.0.53,move,
+docs/blog/posts/2026/android-0.0.54.md,/blog/posts/2026/android-0.0.54,/about/whats-new/2026/android-0.0.54,move,
+docs/blog/posts/2026/design-01-05.md,/blog/posts/2026/design-01-05,/about/whats-new/2026/design-01-05,move,
+docs/blog/posts/2026/design-06-23.md,/blog/posts/2026/design-06-23,/about/whats-new/2026/design-06-23,move,
+docs/blog/posts/2026/ios-0.0.71.md,/blog/posts/2026/ios-0.0.71,/about/whats-new/2026/ios-0.0.71,move,
+docs/blog/posts/2026/ios-0.0.72.md,/blog/posts/2026/ios-0.0.72,/about/whats-new/2026/ios-0.0.72,move,
+docs/blog/posts/2026/ios-0.0.73.md,/blog/posts/2026/ios-0.0.73,/about/whats-new/2026/ios-0.0.73,move,
+docs/blog/posts/2026/ios-0.0.74.md,/blog/posts/2026/ios-0.0.74,/about/whats-new/2026/ios-0.0.74,move,
+docs/blog/posts/2026/ios-0.0.75.md,/blog/posts/2026/ios-0.0.75,/about/whats-new/2026/ios-0.0.75,move,
+docs/blog/posts/2026/ios-0.0.76.md,/blog/posts/2026/ios-0.0.76,/about/whats-new/2026/ios-0.0.76,move,
+docs/blog/posts/2026/ios-0.0.77.md,/blog/posts/2026/ios-0.0.77,/about/whats-new/2026/ios-0.0.77,move,
+docs/blog/posts/2026/ios-0.0.79.md,/blog/posts/2026/ios-0.0.79,/about/whats-new/2026/ios-0.0.79,move,
+docs/blog/posts/2026/ios-0.0.80.md,/blog/posts/2026/ios-0.0.80,/about/whats-new/2026/ios-0.0.80,move,
+docs/blog/posts/2026/ios-0.0.81.md,/blog/posts/2026/ios-0.0.81,/about/whats-new/2026/ios-0.0.81,move,
+docs/blog/posts/2026/ios-0.0.82.md,/blog/posts/2026/ios-0.0.82,/about/whats-new/2026/ios-0.0.82,move,
+docs/blog/posts/2026/ios-0.0.83.md,/blog/posts/2026/ios-0.0.83,/about/whats-new/2026/ios-0.0.83,move,
+docs/blog/posts/2026/ios-0.0.84.md,/blog/posts/2026/ios-0.0.84,/about/whats-new/2026/ios-0.0.84,move,
+docs/blog/posts/2026/ios-0.0.85.md,/blog/posts/2026/ios-0.0.85,/about/whats-new/2026/ios-0.0.85,move,
+docs/collaborate/request-component-changes/index.md,/collaborate/request-component-changes/,/about/help/requests/component-changes/,move,Help › Requests
+docs/collaborate/request-new-component/index.md,/collaborate/request-new-component/,/about/help/requests/new-component/,move,Help › Requests
+docs/components/DsFrameworkStatus.md,/components/DsFrameworkStatus,/about/platform-coverage,replace,one generated matrix from manifest
+docs/components/index.md,/components/,/web/components/,replace,DsOverview per platform (web/ios/android indexes)
+docs/foundations/accessibility/index.md,/foundations/accessibility/,/foundations/accessibility/,keep,shared Design Language
+docs/foundations/brands/index.md,/foundations/brands/,/foundations/brands/,keep,shared Design Language
+docs/foundations/css-classes/align-content.md,/foundations/css-classes/align-content,/web/foundations/css-classes/align-content,move,Web › Foundation
+docs/foundations/css-classes/align-items.md,/foundations/css-classes/align-items,/web/foundations/css-classes/align-items,move,Web › Foundation
+docs/foundations/css-classes/align-self.md,/foundations/css-classes/align-self,/web/foundations/css-classes/align-self,move,Web › Foundation
+docs/foundations/css-classes/animation.md,/foundations/css-classes/animation,/web/foundations/css-classes/animation,move,Web › Foundation
+docs/foundations/css-classes/appearance.md,/foundations/css-classes/appearance,/web/foundations/css-classes/appearance,move,Web › Foundation
+docs/foundations/css-classes/aspect-ratio.md,/foundations/css-classes/aspect-ratio,/web/foundations/css-classes/aspect-ratio,move,Web › Foundation
+docs/foundations/css-classes/backdrop-blur.md,/foundations/css-classes/backdrop-blur,/web/foundations/css-classes/backdrop-blur,move,Web › Foundation
+docs/foundations/css-classes/background-attachment.md,/foundations/css-classes/background-attachment,/web/foundations/css-classes/background-attachment,move,Web › Foundation
+docs/foundations/css-classes/background-clip.md,/foundations/css-classes/background-clip,/web/foundations/css-classes/background-clip,move,Web › Foundation
+docs/foundations/css-classes/background-color.md,/foundations/css-classes/background-color,/web/foundations/css-classes/background-color,move,Web › Foundation
+docs/foundations/css-classes/background-image.md,/foundations/css-classes/background-image,/web/foundations/css-classes/background-image,move,Web › Foundation
+docs/foundations/css-classes/background-origin.md,/foundations/css-classes/background-origin,/web/foundations/css-classes/background-origin,move,Web › Foundation
+docs/foundations/css-classes/background-position.md,/foundations/css-classes/background-position,/web/foundations/css-classes/background-position,move,Web › Foundation
+docs/foundations/css-classes/background-repeat.md,/foundations/css-classes/background-repeat,/web/foundations/css-classes/background-repeat,move,Web › Foundation
+docs/foundations/css-classes/background-size.md,/foundations/css-classes/background-size,/web/foundations/css-classes/background-size,move,Web › Foundation
+docs/foundations/css-classes/border-collapse.md,/foundations/css-classes/border-collapse,/web/foundations/css-classes/border-collapse,move,Web › Foundation
+docs/foundations/css-classes/border-color.md,/foundations/css-classes/border-color,/web/foundations/css-classes/border-color,move,Web › Foundation
+docs/foundations/css-classes/border-radius.md,/foundations/css-classes/border-radius,/web/foundations/css-classes/border-radius,move,Web › Foundation
+docs/foundations/css-classes/border-spacing.md,/foundations/css-classes/border-spacing,/web/foundations/css-classes/border-spacing,move,Web › Foundation
+docs/foundations/css-classes/border-style.md,/foundations/css-classes/border-style,/web/foundations/css-classes/border-style,move,Web › Foundation
+docs/foundations/css-classes/border-width.md,/foundations/css-classes/border-width,/web/foundations/css-classes/border-width,move,Web › Foundation
+docs/foundations/css-classes/box-shadow.md,/foundations/css-classes/box-shadow,/web/foundations/css-classes/box-shadow,move,Web › Foundation
+docs/foundations/css-classes/box-sizing.md,/foundations/css-classes/box-sizing,/web/foundations/css-classes/box-sizing,move,Web › Foundation
+docs/foundations/css-classes/break-after.md,/foundations/css-classes/break-after,/web/foundations/css-classes/break-after,move,Web › Foundation
+docs/foundations/css-classes/break-before.md,/foundations/css-classes/break-before,/web/foundations/css-classes/break-before,move,Web › Foundation
+docs/foundations/css-classes/break-inside.md,/foundations/css-classes/break-inside,/web/foundations/css-classes/break-inside,move,Web › Foundation
+docs/foundations/css-classes/caret.md,/foundations/css-classes/caret,/web/foundations/css-classes/caret,move,Web › Foundation
+docs/foundations/css-classes/class-variants.md,/foundations/css-classes/class-variants,/web/foundations/css-classes/class-variants,move,Web › Foundation
+docs/foundations/css-classes/clear.md,/foundations/css-classes/clear,/web/foundations/css-classes/clear,move,Web › Foundation
+docs/foundations/css-classes/columns.md,/foundations/css-classes/columns,/web/foundations/css-classes/columns,move,Web › Foundation
+docs/foundations/css-classes/content.md,/foundations/css-classes/content,/web/foundations/css-classes/content,move,Web › Foundation
+docs/foundations/css-classes/cursor.md,/foundations/css-classes/cursor,/web/foundations/css-classes/cursor,move,Web › Foundation
+docs/foundations/css-classes/display.md,/foundations/css-classes/display,/web/foundations/css-classes/display,move,Web › Foundation
+docs/foundations/css-classes/divide-color.md,/foundations/css-classes/divide-color,/web/foundations/css-classes/divide-color,move,Web › Foundation
+docs/foundations/css-classes/divide-style.md,/foundations/css-classes/divide-style,/web/foundations/css-classes/divide-style,move,Web › Foundation
+docs/foundations/css-classes/divide-width.md,/foundations/css-classes/divide-width,/web/foundations/css-classes/divide-width,move,Web › Foundation
+docs/foundations/css-classes/drop-shadow.md,/foundations/css-classes/drop-shadow,/web/foundations/css-classes/drop-shadow,move,Web › Foundation
+docs/foundations/css-classes/flex-basis.md,/foundations/css-classes/flex-basis,/web/foundations/css-classes/flex-basis,move,Web › Foundation
+docs/foundations/css-classes/flex-direction.md,/foundations/css-classes/flex-direction,/web/foundations/css-classes/flex-direction,move,Web › Foundation
+docs/foundations/css-classes/flex-grow.md,/foundations/css-classes/flex-grow,/web/foundations/css-classes/flex-grow,move,Web › Foundation
+docs/foundations/css-classes/flex-shrink.md,/foundations/css-classes/flex-shrink,/web/foundations/css-classes/flex-shrink,move,Web › Foundation
+docs/foundations/css-classes/flex-wrap.md,/foundations/css-classes/flex-wrap,/web/foundations/css-classes/flex-wrap,move,Web › Foundation
+docs/foundations/css-classes/flex.md,/foundations/css-classes/flex,/web/foundations/css-classes/flex,move,Web › Foundation
+docs/foundations/css-classes/floats.md,/foundations/css-classes/floats,/web/foundations/css-classes/floats,move,Web › Foundation
+docs/foundations/css-classes/font-size.md,/foundations/css-classes/font-size,/web/foundations/css-classes/font-size,move,Web › Foundation
+docs/foundations/css-classes/font-style.md,/foundations/css-classes/font-style,/web/foundations/css-classes/font-style,move,Web › Foundation
+docs/foundations/css-classes/font-variant-numeric.md,/foundations/css-classes/font-variant-numeric,/web/foundations/css-classes/font-variant-numeric,move,Web › Foundation
+docs/foundations/css-classes/font-weight.md,/foundations/css-classes/font-weight,/web/foundations/css-classes/font-weight,move,Web › Foundation
+docs/foundations/css-classes/gap.md,/foundations/css-classes/gap,/web/foundations/css-classes/gap,move,Web › Foundation
+docs/foundations/css-classes/grid-auto-columns.md,/foundations/css-classes/grid-auto-columns,/web/foundations/css-classes/grid-auto-columns,move,Web › Foundation
+docs/foundations/css-classes/grid-auto-flow.md,/foundations/css-classes/grid-auto-flow,/web/foundations/css-classes/grid-auto-flow,move,Web › Foundation
+docs/foundations/css-classes/grid-auto-rows.md,/foundations/css-classes/grid-auto-rows,/web/foundations/css-classes/grid-auto-rows,move,Web › Foundation
+docs/foundations/css-classes/grid-column-se.md,/foundations/css-classes/grid-column-se,/web/foundations/css-classes/grid-column-se,move,Web › Foundation
+docs/foundations/css-classes/grid-row-se.md,/foundations/css-classes/grid-row-se,/web/foundations/css-classes/grid-row-se,move,Web › Foundation
+docs/foundations/css-classes/grid-template-columns.md,/foundations/css-classes/grid-template-columns,/web/foundations/css-classes/grid-template-columns,move,Web › Foundation
+docs/foundations/css-classes/grid-template-rows.md,/foundations/css-classes/grid-template-rows,/web/foundations/css-classes/grid-template-rows,move,Web › Foundation
+docs/foundations/css-classes/height.md,/foundations/css-classes/height,/web/foundations/css-classes/height,move,Web › Foundation
+docs/foundations/css-classes/helpers.md,/foundations/css-classes/helpers,/web/foundations/css-classes/helpers,move,Web › Foundation
+docs/foundations/css-classes/icon-color.md,/foundations/css-classes/icon-color,/web/foundations/css-classes/icon-color,move,Web › Foundation
+docs/foundations/css-classes/introduction.md,/foundations/css-classes/introduction,/web/foundations/css-classes/introduction,move,Web › Foundation
+docs/foundations/css-classes/isolate.md,/foundations/css-classes/isolate,/web/foundations/css-classes/isolate,move,Web › Foundation
+docs/foundations/css-classes/justify-content.md,/foundations/css-classes/justify-content,/web/foundations/css-classes/justify-content,move,Web › Foundation
+docs/foundations/css-classes/justify-items.md,/foundations/css-classes/justify-items,/web/foundations/css-classes/justify-items,move,Web › Foundation
+docs/foundations/css-classes/justify-self.md,/foundations/css-classes/justify-self,/web/foundations/css-classes/justify-self,move,Web › Foundation
+docs/foundations/css-classes/line-height.md,/foundations/css-classes/line-height,/web/foundations/css-classes/line-height,move,Web › Foundation
+docs/foundations/css-classes/list-style-position.md,/foundations/css-classes/list-style-position,/web/foundations/css-classes/list-style-position,move,Web › Foundation
+docs/foundations/css-classes/list-style-type.md,/foundations/css-classes/list-style-type,/web/foundations/css-classes/list-style-type,move,Web › Foundation
+docs/foundations/css-classes/margin.md,/foundations/css-classes/margin,/web/foundations/css-classes/margin,move,Web › Foundation
+docs/foundations/css-classes/max-height.md,/foundations/css-classes/max-height,/web/foundations/css-classes/max-height,move,Web › Foundation
+docs/foundations/css-classes/max-width.md,/foundations/css-classes/max-width,/web/foundations/css-classes/max-width,move,Web › Foundation
+docs/foundations/css-classes/min-height.md,/foundations/css-classes/min-height,/web/foundations/css-classes/min-height,move,Web › Foundation
+docs/foundations/css-classes/min-width.md,/foundations/css-classes/min-width,/web/foundations/css-classes/min-width,move,Web › Foundation
+docs/foundations/css-classes/object-fit.md,/foundations/css-classes/object-fit,/web/foundations/css-classes/object-fit,move,Web › Foundation
+docs/foundations/css-classes/object-position.md,/foundations/css-classes/object-position,/web/foundations/css-classes/object-position,move,Web › Foundation
+docs/foundations/css-classes/opacity.md,/foundations/css-classes/opacity,/web/foundations/css-classes/opacity,move,Web › Foundation
+docs/foundations/css-classes/order.md,/foundations/css-classes/order,/web/foundations/css-classes/order,move,Web › Foundation
+docs/foundations/css-classes/outline-color.md,/foundations/css-classes/outline-color,/web/foundations/css-classes/outline-color,move,Web › Foundation
+docs/foundations/css-classes/outline-offset.md,/foundations/css-classes/outline-offset,/web/foundations/css-classes/outline-offset,move,Web › Foundation
+docs/foundations/css-classes/outline-style.md,/foundations/css-classes/outline-style,/web/foundations/css-classes/outline-style,move,Web › Foundation
+docs/foundations/css-classes/outline-width.md,/foundations/css-classes/outline-width,/web/foundations/css-classes/outline-width,move,Web › Foundation
+docs/foundations/css-classes/overflow.md,/foundations/css-classes/overflow,/web/foundations/css-classes/overflow,move,Web › Foundation
+docs/foundations/css-classes/overscroll.md,/foundations/css-classes/overscroll,/web/foundations/css-classes/overscroll,move,Web › Foundation
+docs/foundations/css-classes/padding.md,/foundations/css-classes/padding,/web/foundations/css-classes/padding,move,Web › Foundation
+docs/foundations/css-classes/place-content.md,/foundations/css-classes/place-content,/web/foundations/css-classes/place-content,move,Web › Foundation
+docs/foundations/css-classes/place-items.md,/foundations/css-classes/place-items,/web/foundations/css-classes/place-items,move,Web › Foundation
+docs/foundations/css-classes/place-self.md,/foundations/css-classes/place-self,/web/foundations/css-classes/place-self,move,Web › Foundation
+docs/foundations/css-classes/pointer-events.md,/foundations/css-classes/pointer-events,/web/foundations/css-classes/pointer-events,move,Web › Foundation
+docs/foundations/css-classes/position.md,/foundations/css-classes/position,/web/foundations/css-classes/position,move,Web › Foundation
+docs/foundations/css-classes/resize.md,/foundations/css-classes/resize,/web/foundations/css-classes/resize,move,Web › Foundation
+docs/foundations/css-classes/rotate.md,/foundations/css-classes/rotate,/web/foundations/css-classes/rotate,move,Web › Foundation
+docs/foundations/css-classes/scale.md,/foundations/css-classes/scale,/web/foundations/css-classes/scale,move,Web › Foundation
+docs/foundations/css-classes/screen-readers.md,/foundations/css-classes/screen-readers,/web/foundations/css-classes/screen-readers,move,Web › Foundation
+docs/foundations/css-classes/scroll-behavior.md,/foundations/css-classes/scroll-behavior,/web/foundations/css-classes/scroll-behavior,move,Web › Foundation
+docs/foundations/css-classes/scroll-snap-align.md,/foundations/css-classes/scroll-snap-align,/web/foundations/css-classes/scroll-snap-align,move,Web › Foundation
+docs/foundations/css-classes/scroll-snap-stop.md,/foundations/css-classes/scroll-snap-stop,/web/foundations/css-classes/scroll-snap-stop,move,Web › Foundation
+docs/foundations/css-classes/scroll-snap-type.md,/foundations/css-classes/scroll-snap-type,/web/foundations/css-classes/scroll-snap-type,move,Web › Foundation
+docs/foundations/css-classes/skew.md,/foundations/css-classes/skew,/web/foundations/css-classes/skew,move,Web › Foundation
+docs/foundations/css-classes/space-between.md,/foundations/css-classes/space-between,/web/foundations/css-classes/space-between,move,Web › Foundation
+docs/foundations/css-classes/states.md,/foundations/css-classes/states,/web/foundations/css-classes/states,move,Web › Foundation
+docs/foundations/css-classes/surface.md,/foundations/css-classes/surface,/web/foundations/css-classes/surface,move,Web › Foundation
+docs/foundations/css-classes/table-layout.md,/foundations/css-classes/table-layout,/web/foundations/css-classes/table-layout,move,Web › Foundation
+docs/foundations/css-classes/text-align.md,/foundations/css-classes/text-align,/web/foundations/css-classes/text-align,move,Web › Foundation
+docs/foundations/css-classes/text-color.md,/foundations/css-classes/text-color,/web/foundations/css-classes/text-color,move,Web › Foundation
+docs/foundations/css-classes/text-decoration.md,/foundations/css-classes/text-decoration,/web/foundations/css-classes/text-decoration,move,Web › Foundation
+docs/foundations/css-classes/text-overflow.md,/foundations/css-classes/text-overflow,/web/foundations/css-classes/text-overflow,move,Web › Foundation
+docs/foundations/css-classes/text-transform.md,/foundations/css-classes/text-transform,/web/foundations/css-classes/text-transform,move,Web › Foundation
+docs/foundations/css-classes/top-right-bottom-left.md,/foundations/css-classes/top-right-bottom-left,/web/foundations/css-classes/top-right-bottom-left,move,Web › Foundation
+docs/foundations/css-classes/touch-action.md,/foundations/css-classes/touch-action,/web/foundations/css-classes/touch-action,move,Web › Foundation
+docs/foundations/css-classes/transform-origin.md,/foundations/css-classes/transform-origin,/web/foundations/css-classes/transform-origin,move,Web › Foundation
+docs/foundations/css-classes/transition-delay.md,/foundations/css-classes/transition-delay,/web/foundations/css-classes/transition-delay,move,Web › Foundation
+docs/foundations/css-classes/transition-duration.md,/foundations/css-classes/transition-duration,/web/foundations/css-classes/transition-duration,move,Web › Foundation
+docs/foundations/css-classes/transition-property.md,/foundations/css-classes/transition-property,/web/foundations/css-classes/transition-property,move,Web › Foundation
+docs/foundations/css-classes/transition-timing.md,/foundations/css-classes/transition-timing,/web/foundations/css-classes/transition-timing,move,Web › Foundation
+docs/foundations/css-classes/translate.md,/foundations/css-classes/translate,/web/foundations/css-classes/translate,move,Web › Foundation
+docs/foundations/css-classes/unocss.md,/foundations/css-classes/unocss,/web/foundations/css-classes/unocss,move,Web › Foundation
+docs/foundations/css-classes/user-select.md,/foundations/css-classes/user-select,/web/foundations/css-classes/user-select,move,Web › Foundation
+docs/foundations/css-classes/vertical-align.md,/foundations/css-classes/vertical-align,/web/foundations/css-classes/vertical-align,move,Web › Foundation
+docs/foundations/css-classes/visibility.md,/foundations/css-classes/visibility,/web/foundations/css-classes/visibility,move,Web › Foundation
+docs/foundations/css-classes/what-is-warp.md,/foundations/css-classes/what-is-warp,/web/foundations/css-classes/what-is-warp,move,Web › Foundation
+docs/foundations/css-classes/whitespace.md,/foundations/css-classes/whitespace,/web/foundations/css-classes/whitespace,move,Web › Foundation
+docs/foundations/css-classes/width.md,/foundations/css-classes/width,/web/foundations/css-classes/width,move,Web › Foundation
+docs/foundations/css-classes/will-change.md,/foundations/css-classes/will-change,/web/foundations/css-classes/will-change,move,Web › Foundation
+docs/foundations/css-classes/word-break.md,/foundations/css-classes/word-break,/web/foundations/css-classes/word-break,move,Web › Foundation
+docs/foundations/css-classes/z-index.md,/foundations/css-classes/z-index,/web/foundations/css-classes/z-index,move,Web › Foundation
+docs/foundations/customization/index.md,/foundations/customization/,/web/foundations/customization/,move,Web › Foundation
+docs/foundations/dark-mode/elements.md,/foundations/dark-mode/elements,/web/foundations/dark-mode/,move,Web › Foundation
+docs/foundations/dark-mode/figma.md,/foundations/dark-mode/figma,/foundations/dark-mode/figma,keep,shared Design Language
+docs/foundations/dark-mode/index.md,/foundations/dark-mode/,/foundations/dark-mode/,keep,shared Design Language; links to Web + Figma dark-mode pages
+docs/foundations/dark-mode/react.md,/foundations/dark-mode/react,/web/foundations/dark-mode/react,move,legacy
+docs/foundations/data-visualization/color/bars-areas/index.md,/foundations/data-visualization/color/bars-areas/,/foundations/data-visualization/color/bars-areas/,keep,shared Design Language
+docs/foundations/data-visualization/color/chart-colors/index.md,/foundations/data-visualization/color/chart-colors/,/foundations/data-visualization/color/chart-colors/,keep,shared Design Language
+docs/foundations/data-visualization/color/data-colors/index.md,/foundations/data-visualization/color/data-colors/,/foundations/data-visualization/color/data-colors/,keep,shared Design Language
+docs/foundations/data-visualization/color/introduction/index.md,/foundations/data-visualization/color/introduction/,/foundations/data-visualization/color/introduction/,keep,shared Design Language
+docs/foundations/data-visualization/color/lines-points/index.md,/foundations/data-visualization/color/lines-points/,/foundations/data-visualization/color/lines-points/,keep,shared Design Language
+docs/foundations/data-visualization/color/text-icons/index.md,/foundations/data-visualization/color/text-icons/,/foundations/data-visualization/color/text-icons/,keep,shared Design Language
+docs/foundations/data-visualization/components/index.md,/foundations/data-visualization/components/,/foundations/data-visualization/components/,keep,shared Design Language
+docs/foundations/data-visualization/figma-library/index.md,/foundations/data-visualization/figma-library/,/foundations/data-visualization/figma-library/,keep,shared Design Language
+docs/foundations/data-visualization/interaction/index.md,/foundations/data-visualization/interaction/,/foundations/data-visualization/interaction/,keep,shared Design Language
+docs/foundations/data-visualization/introduction/index.md,/foundations/data-visualization/introduction/,/foundations/data-visualization/introduction/,keep,shared Design Language
+docs/foundations/data-visualization/success-criteria/cognitive/index.md,/foundations/data-visualization/success-criteria/cognitive/,/foundations/data-visualization/success-criteria/cognitive/,keep,shared Design Language
+docs/foundations/data-visualization/success-criteria/introduction/index.md,/foundations/data-visualization/success-criteria/introduction/,/foundations/data-visualization/success-criteria/introduction/,keep,shared Design Language
+docs/foundations/data-visualization/success-criteria/keyboard/index.md,/foundations/data-visualization/success-criteria/keyboard/,/foundations/data-visualization/success-criteria/keyboard/,keep,shared Design Language
+docs/foundations/data-visualization/success-criteria/screenreader/index.md,/foundations/data-visualization/success-criteria/screenreader/,/foundations/data-visualization/success-criteria/screenreader/,keep,shared Design Language
+docs/foundations/data-visualization/success-criteria/visual/index.md,/foundations/data-visualization/success-criteria/visual/,/foundations/data-visualization/success-criteria/visual/,keep,shared Design Language
+docs/foundations/data-visualization/tokens/background/index.md,/foundations/data-visualization/tokens/background/,/foundations/data-visualization/tokens/background/,keep,"shared Design Language; flag: Tokens & CSS is web-ish, split later"
+docs/foundations/data-visualization/tokens/border/index.md,/foundations/data-visualization/tokens/border/,/foundations/data-visualization/tokens/border/,keep,"shared Design Language; flag: Tokens & CSS is web-ish, split later"
+docs/foundations/data-visualization/tokens/chart/index.md,/foundations/data-visualization/tokens/chart/,/foundations/data-visualization/tokens/chart/,keep,"shared Design Language; flag: Tokens & CSS is web-ish, split later"
+docs/foundations/data-visualization/tokens/icon/index.md,/foundations/data-visualization/tokens/icon/,/foundations/data-visualization/tokens/icon/,keep,"shared Design Language; flag: Tokens & CSS is web-ish, split later"
+docs/foundations/data-visualization/tokens/introduction/index.md,/foundations/data-visualization/tokens/introduction/,/foundations/data-visualization/tokens/introduction/,keep,"shared Design Language; flag: Tokens & CSS is web-ish, split later"
+docs/foundations/data-visualization/tokens/line/index.md,/foundations/data-visualization/tokens/line/,/foundations/data-visualization/tokens/line/,keep,"shared Design Language; flag: Tokens & CSS is web-ish, split later"
+docs/foundations/data-visualization/tokens/text/index.md,/foundations/data-visualization/tokens/text/,/foundations/data-visualization/tokens/text/,keep,"shared Design Language; flag: Tokens & CSS is web-ish, split later"
+docs/foundations/elevation/index.md,/foundations/elevation/,/foundations/elevation/,keep,"shared Design Language; flag: contains CSS class names, split later"
+docs/foundations/font-weights/index.md,/foundations/font-weights/,/web/foundations/font-weights/,move,Web › Foundation
+docs/foundations/illustrations/index.md,/foundations/illustrations/,/foundations/illustrations/,keep,shared Design Language
+docs/foundations/index.md,/foundations/,/foundations/,keep,update cards
+docs/foundations/keyboard/navigation/index.md,/foundations/keyboard/navigation/,/web/foundations/keyboard/navigation/,move,Web › Foundation › General web guidelines
+docs/foundations/keyboard/shortcuts/index.md,/foundations/keyboard/shortcuts/,/web/foundations/keyboard/shortcuts/,move,Web › Foundation › General web guidelines
+docs/foundations/motion/index.md,/foundations/motion/,/foundations/motion/,keep,shared Design Language
+docs/foundations/tokens/intro/index.md,/foundations/tokens/intro/,/foundations/tokens/intro/,keep,shared Design Language
+docs/foundations/tokens/overview/index.md,/foundations/tokens/overview/,/foundations/tokens/overview/,keep,shared Design Language
+docs/foundations/typography/index.md,/foundations/typography/,/foundations/typography/,keep,shared Design Language
+docs/get-started/designers/custom-components/index.md,/get-started/designers/custom-components/,/get-started/design/custom-components/,move,Design › Getting access / set up
+docs/get-started/designers/designing-for-multibrand/index.md,/get-started/designers/designing-for-multibrand/,/get-started/design/designing-for-multibrand/,move,Design › Getting access / set up
+docs/get-started/designers/migrate-from-fabric/index.md,/get-started/designers/migrate-from-fabric/,/get-started/design/migrate-from-fabric/,move,Design › Getting access / set up
+docs/get-started/designers/warp-in-figma/index.md,/get-started/designers/warp-in-figma/,/get-started/design/warp-in-figma/,move,Design › Getting access / set up
+docs/get-started/developers/android/index.md,/get-started/developers/android/,/get-started/android/,move,
+docs/get-started/developers/ios/index.md,/get-started/developers/ios/,/get-started/ios/,move,
+docs/get-started/developers/web/custom-components/index.md,/get-started/developers/web/custom-components/,/get-started/web/custom-components/,move,
+docs/get-started/developers/web/index.md,/get-started/developers/web/,/get-started/web/,move,Web › Getting access / set up
+docs/get-started/developers/web/migrate-from-fabric/index.md,/get-started/developers/web/migrate-from-fabric/,/get-started/web/migrate-from-fabric/,move,
+docs/get-started/developers/web/web-components.md,/get-started/developers/web/web-components,,drop,one-line pointer page
+docs/get-started/index.md,/get-started/,/get-started/,keep,update cards
+docs/get-started/mission-values-principles/index.md,/get-started/mission-values-principles/,/foundations/about/,move,"Foundation › About DS (header ""About DS"")"
+docs/help/authoring-guide/index.md,/help/authoring-guide/,/about/help/authoring-guide/,move,Help › Support › How to contribute
+docs/help/faq/index.md,/help/faq/,/about/help/faq/,move,
+docs/help/report-bugs/index.md,/help/report-bugs/,/about/help/report-bugs/,move,
+docs/help/support/index.md,/help/support/,/about/help/support/,move,
+docs/index.md,/,/,keep,update cards to new URLs
+docs/patterns/DsFrameworkStatus.md,/patterns/DsFrameworkStatus,/about/platform-coverage,replace,one generated matrix from manifest
+docs/patterns/index.md,/patterns/,/web/patterns/,replace,DsOverview per platform
+docs/pre-migrating.md,/pre-migrating,,archive,"orphan, stale Fabric note"
+(new),,/web/components/button-group/code,new,"New: Code page with ""no Elements implementation"" note + legacy tabs (vue)"
+(new),,/web/components/radio-buttons/code,new,"New: Code page with ""no Elements implementation"" note + legacy tabs (react, vue)"
+(new),,/web/components/utilities/code,new,"New: Code page with ""no Elements implementation"" note + legacy tabs (vue)"
+(new),,/get-started/design/,new,New index: Design › Getting access / set up
+(new),,/about/,new,New index: About Warp
+(new),,/about/platform-coverage,new,New: generated platform/framework matrix (replaces 2 DsFrameworkStatus pages)
+(new),,/web/,new,New platform index
+(new),,/ios/,new,New platform index
+(new),,/android/,new,New platform index
+(new),,/web/foundations/,new,New index: Web › Foundation
+(new),,/ios/components/,new,New index (DsOverview platform=ios)
+(new),,/android/components/,new,New index (DsOverview platform=android)
+(new),,/ios/patterns/,new,New index
+(new),,/android/patterns/,new,New index
