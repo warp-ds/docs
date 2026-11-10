@@ -12,7 +12,9 @@ import WayglimBackground from './WayglimBackground.vue';
 // and let the blend mode on .hero-bg (multiply / screen) drop that colour, so only the light lands on the hero's
 // own gradient. Changing the theme remounts the background with the other colour.
 const { isDark } = useData();
-const wayglimSettings = computed(() => ({ background: isDark.value ? [0, 0, 0] : [1, 1, 1] }));
+// maxPixelRatio 1: the light is soft and blurred, so a 1x canvas looks the same as 2x on high-density screens
+// (compared side by side) while the GPU draws a quarter of the pixels.
+const wayglimSettings = computed(() => ({ background: isDark.value ? [0, 0, 0] : [1, 1, 1], maxPixelRatio: 1 }));
 
 const count = (platform, type) => Object.keys(manifest[platform][type]).length;
 
