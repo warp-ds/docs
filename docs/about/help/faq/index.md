@@ -7,7 +7,7 @@ To answer the most frequently asked questions the following list is constantly u
 Design tokens are representing visual properties like colours, typography, and spacing. They ensure consistency and flexibility across brands, simplifying style management and customisation. By abstracting design decisions into tokens, designers can efficiently adapt each brand's visual aspects while maintaining cohesiveness.
 
 ### Does WARP support Android and iOS components?
-Currently we are using the same components for all platforms. This might change later due to the restrictions that come with a hybrid strategy.Eventually we will have a more fleshed out “native vs. custom” approach.
+Yes. WARP has native component libraries for iOS (SwiftUI) and Android (Jetpack Compose), alongside WARP Elements for the web. Each platform has its own section in these docs: [Web](/web/), [iOS](/ios/) and [Android](/android/). A platform only lists the components it has, and [Platform coverage](/about/platform-coverage) shows which components exist where.
 
 ### Can I create custom components?
 Try as much as you can to use WARP components, but sometimes you need something custom.

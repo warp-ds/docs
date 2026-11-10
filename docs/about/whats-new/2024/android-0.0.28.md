@@ -6,7 +6,7 @@ date: 2024-09-18
 Switch, Spinner & Radio components!
 ---
 
-# Warp Android release 0.0.28
+# WARP Android release 0.0.28
 
 ## 2024-09-18
 
@@ -20,7 +20,7 @@ fun WarpSwitch(
 )
 ```
 
-* Switch component now available in Warp, ([more info here](https://warp-ds.github.io/tech-docs/components/switch/))
+* Switch component now available in WARP, ([more info here](https://warp-ds.github.io/tech-docs/components/switch/))
 * Supports Finn, Tori & DBA
 * Supports legacy layouts written in XML
 
@@ -38,7 +38,7 @@ fun WarpRadio(
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() }
 )
 ```
-* Radio component now available in Warp, ([more info here](https://warp-ds.github.io/tech-docs/components/radio/))
+* Radio component now available in WARP, ([more info here](https://warp-ds.github.io/tech-docs/components/radio/))
 * Radio group supports vertical & horizontal orientation
 * Supports Finn, Tori & DBA
 * Supports legacy layouts written in XML
@@ -51,7 +51,7 @@ fun WarpSpinner(
 )
 ```
 
-* Spinner component now available in Warp, ([more info here](https://warp-ds.github.io/tech-docs/components/spinner/))
+* Spinner component now available in WARP, ([more info here](https://warp-ds.github.io/tech-docs/components/spinner/))
 * Supports Finn, Tori & DBA
 * Supports legacy layouts written in XML
 

@@ -7,7 +7,7 @@ Add roundness for Vend buttons
 
 ---
 
-# Warp Android release 0.0.54
+# WARP Android release 0.0.54
 
 ## 2026-02-02
 

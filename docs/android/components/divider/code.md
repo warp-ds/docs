@@ -19,7 +19,7 @@ fun WarpDivider(
 
 
 ### Visual options
-Warp supports horizontal and vertical dividers. The divider can also be either solid or dashed.
+WARP supports horizontal and vertical dividers. The divider can also be either solid or dashed.
 ```kotlin
 WarpDivider() // Basic usage, will fill width of parent
 WarpDivider(

@@ -32,7 +32,7 @@ When working with multiple brands it's important to know what your designs look 
 
 ### Default component styling
 
-The components in Warp are based on the old FINN design system called Fabric and the default styling of every component is therefore in the style of FINN.
+The components in WARP are based on the old FINN design system called Fabric and the default styling of every component is therefore in the style of FINN.
 
 ::: image-block
 ![FINN button with the text "Confirm"](/get-started/default-component-styling.svg)

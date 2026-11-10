@@ -1,10 +1,14 @@
-# Building Custom Elements with Warp
+---
+needsReview: true
+---
+
+# Building Custom Elements with WARP
 
 ## Background
 
 The shadow DOM brings great power but also great complexity, especially once you bring a style library into the mix.
 
-In order to solve nasty issues like FOUT (flash of unstyled text) and FOUC (flash of unstyled content) when writing custom elements for Warp, a base class has been created. This can be extended to get out of the box FOUC/FOUT-free styling both on the server (SSR) and in the browser (client side).
+In order to solve nasty issues like FOUT (flash of unstyled text) and FOUC (flash of unstyled content) when writing custom elements for WARP, a base class has been created. This can be extended to get out of the box FOUC/FOUT-free styling both on the server (SSR) and in the browser (client side).
 
 ## How does it work?
 
@@ -12,7 +16,7 @@ The base class, [WarpElement](https://github.com/warp-ds/labs/tree/main/warp-ele
 
 ### Server side
 
-On the server side, the base class adds CSS `@import(...)` statements to the server rendered markup for the various Warp CSS files; fonts, brand, resets and components. This works because when the browser sees these statements, it won't render anything until these imports have been resolved so there's no unwanted flicker of unstyled content that you would see if you used this technique client side.
+On the server side, the base class adds CSS `@import(...)` statements to the server rendered markup for the various WARP CSS files; fonts, brand, resets and components. This works because when the browser sees these statements, it won't render anything until these imports have been resolved so there's no unwanted flicker of unstyled content that you would see if you used this technique client side.
 
 ### Client side
 
@@ -131,7 +135,7 @@ Next, add an npm run scripts to `package.json`
 }
 ```
 
-And finally, run the script to produce a build with references to Lit and Warp Element replaced with references to URLs on the Eik server
+And finally, run the script to produce a build with references to Lit and WARP Element replaced with references to URLs on the Eik server
 
 ```bash
 npm run build

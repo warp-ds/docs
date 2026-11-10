@@ -22,7 +22,7 @@ Warp.Divider()
 ```
 
 ### Visual options
-Warp supports horizontal and vertical dividers. The divider can also be either solid or dashed.
+WARP supports horizontal and vertical dividers. The divider can also be either solid or dashed.
 
 ```swift
 Warp.Divider(

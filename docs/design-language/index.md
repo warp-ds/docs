@@ -2,7 +2,7 @@
 title: Design Language
 cards:
   - title: Tokens
-    text: Warp tokens, their structure, supported brands and a token overview.
+    text: WARP tokens, their structure, supported brands and a token overview.
     href: /design-language/tokens/intro/
     icon: tokens
   - title: Typography
@@ -30,15 +30,15 @@ cards:
     href: /design-language/elevation/
     icon: elevation
   - title: Dark mode
-    text: Dark mode support in Warp and switching modes in Figma.
+    text: Dark mode support in WARP and switching modes in Figma.
     href: /design-language/dark-mode/
     icon: moon
   - title: Motion
     text: Guidelines for motion.
     href: /design-language/motion/
     icon: motion
-  - title: About the design system
-    text: Mission, values and principles.
+  - title: Mission and principles
+    text: Why WARP exists and the principles behind it.
     href: /design-language/about/
     icon: mission
 platforms:
@@ -55,7 +55,7 @@ platforms:
 
 # Design Language
 
-The shared foundation of Warp: the principles, colour, typography, elevation, motion and other visual decisions that every platform builds on. Pages here are platform-agnostic; where a platform implements a topic in its own way, the page links to the platform-specific details.
+The shared foundation of WARP: the principles, colour, typography, elevation, motion and other visual decisions that every platform builds on. Pages here are platform-agnostic; where a platform implements a topic in its own way, the page links to the platform-specific details.
 
 <NavCards :items="$frontmatter.cards" />
 

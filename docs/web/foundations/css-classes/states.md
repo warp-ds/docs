@@ -6,13 +6,13 @@ Using utilities to style elements on hover, focus, and more.
 
 ## Basic usage
 
-Every utility class in Warp can be applied conditionally by adding a modifier to the beginning of the class name that describes the condition you want to target.
+Every utility class in WARP can be applied conditionally by adding a modifier to the beginning of the class name that describes the condition you want to target.
 
 For example, to apply the `p-16` class (padding:16px) on the sm breakpoint (from 480px and up), use the `sm:p-16` class.
 
 ## Modifier support
 
-Warp includes modifiers for just about everything you’ll ever need, including:
+WARP includes modifiers for just about everything you’ll ever need, including:
 
 - Pseudo-classes, like `:hover`, `:focus`, `:first-child`, and `:required`
 - Pseudo-elements, like `::before`, `::after`, `::placeholder`, and `::selection`
@@ -95,7 +95,7 @@ Style elements on hover, focus, and active using the `hover`, `focus`, and `acti
 <div class="s-bg-positive hover:s-bg-positive-hover"></div>
 ```
 
-Warp also includes modifiers for other interactive states like `:visited`, `:focus-within`, `:focus-visible`, and more.
+WARP also includes modifiers for other interactive states like `:visited`, `:focus-within`, `:focus-visible`, and more.
 
 ### First, last, odd, and even
 Style an element when it is the first-child or last-child using the `first` and `last` modifiers.
@@ -125,7 +125,7 @@ You can also style an element when it’s an odd or even child using the `odd` a
 </table>
 ```
 
-Warp also includes modifiers for other structural pseudo-classes like `:only-child`, `:first-of-type`, `:empty`, and more.
+WARP also includes modifiers for other structural pseudo-classes like `:only-child`, `:first-of-type`, `:empty`, and more.
 
 ### Form states
 Style form elements in different states using modifiers like `required`, `invalid`, and `disabled`.
@@ -146,9 +146,9 @@ Style form elements in different states using modifiers like `required`, `invali
 "/>
 ```
 
-Warp also includes modifiers for other form states like `:read-only`, `:indeterminate`, `:checked`, and more.
+WARP also includes modifiers for other form states like `:read-only`, `:indeterminate`, `:checked`, and more.
 
-We should always use the Warp components for form elements if possible, they handle state styling internally by Warp automagic.
+We should always use the WARP components for form elements if possible, they handle state styling internally by WARP automagic.
 
 
 ## Pseudo-elements
@@ -160,7 +160,7 @@ Style the ::before and ::after pseudo-elements using the `before` and `after` mo
   <span class="after:ml-16 ..."></span>
 ```
 
-It’s worth noting that you don’t really need `::before` and `::after` pseudo-elements for most things in Warp projects — it’s usually simpler to just use a real HTML element.
+It’s worth noting that you don’t really need `::before` and `::after` pseudo-elements for most things in WARP projects — it’s usually simpler to just use a real HTML element.
 
 ### Placeholder text
 Style the placeholder text of any input or textarea using the `placeholder` modifier.
@@ -256,5 +256,5 @@ Use the `motion-reduce` modifier to conditionally add styles when the user has r
 </button>
 ```
 
-Warp also includes a `motion-safe` modifier that only adds styles when the user has not requested reduced motion.
+WARP also includes a `motion-safe` modifier that only adds styles when the user has not requested reduced motion.
 This can be useful when using the `motion-reduce` helper would mean having to “undo” a lot of styles.

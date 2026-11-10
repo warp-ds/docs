@@ -24,7 +24,7 @@ seededAt: 2026-11-05
 
 ### When not to use
 
-- Don’t use sliders for small ranges (e.g., 1-10). Use a [Checkbox](/android/components/checkbox/overview.md) or Stepper instead (Note: Steppers are not yet available in Warp; please reach out if your use case requires one).
+- Don’t use sliders for small ranges (e.g., 1-10). Use a [Checkbox](/android/components/checkbox/overview.md) or Stepper instead (Note: Steppers are not yet available in WARP; please reach out if your use case requires one).
 - Don’t use for complex input values that aren’t numeric (e.g., categories or words). Use a [Select](/android/components/select/overview.md), Checkbox, [Radio](/android/components/radio/overview.md), [Pill](/android/components/pill/overview.md), or [Text field](/android/components/text-field/overview.md) instead.
 - Don’t use when only one value needs to be defined. Use the [Slider](/android/components/slider/overview.md) instead.
 
@@ -369,7 +369,7 @@ The native Range slider implementation on iOS and Android currently follows plat
 
 ### Recommendation for native
 
-- Use the Warp Range slider component standalone (label and text fields not visible).
+- Use the WARP Range slider component standalone (label and text fields not visible).
 - Use native text fields for manual value entry to ensure platform-standard keyboard behaviour and accessibility.
 - The component is a combination (custom component), not a single native control.
 - Use native haptic APIs (e.g., UISelectionFeedbackGenerator on iOS or LocalHapticFeedback on Android) to provide a tactile "click" as the handle snaps to increments or reaches boundaries.

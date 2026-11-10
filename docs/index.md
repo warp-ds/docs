@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Warp Design System
+title: WARP Design System
 editLink: false
 ---
 

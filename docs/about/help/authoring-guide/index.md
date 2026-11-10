@@ -1,6 +1,6 @@
-# Markdown Cheat Sheet for Warp Docs
+# WARP Docs content guideline
 
-This guide is for designers, content editors, and anyone writing documentation in Warp's VitePress-based system. It shows what you can do in Markdown, with optional Vue components and styling extensions.
+This guide is for designers, content editors, and anyone writing documentation in WARP's VitePress-based system. It shows what you can do in Markdown, with optional Vue components and styling extensions.
 
 ---
 
@@ -55,7 +55,7 @@ This guide is for designers, content editors, and anyone writing documentation i
 ---
 
 #### Links
-[Visit Warp DS](https://warp-ds.dev)
+[Visit WARP DS](https://warp-ds.dev)
 
 ```md
 [Visit Warp DS](https://warp-ds.dev)
@@ -65,7 +65,7 @@ This guide is for designers, content editors, and anyone writing documentation i
 
 #### Images
 
-![THE Warp](/images/la01.jpg)
+![THE WARP](/images/la01.jpg)
 
 ```md
 ![THE Warp](/images/la01.jpg)
@@ -168,7 +168,7 @@ Never override token values directly.
 ##### ::: image-block
 
 ::: image-block
-![THE Warp](/images/la01.jpg)
+![THE WARP](/images/la01.jpg)
 :::
 
 ```md
@@ -314,7 +314,7 @@ cards:
 
 ## 🎨 Styling with UnoCSS
 
-Warp Docs uses `@warp-ds/uno` and `@warp-ds/preset-docs`:
+WARP Docs uses `@warp-ds/uno` and `@warp-ds/preset-docs`:
 
 * Utility classes like `pd-text-sm`, `bg-[--vp-c-bg-soft]`, `text-[--vp-c-text-1]`
 * Shortcuts like `ex-box`, `ex-font`, `ex-pic-no`

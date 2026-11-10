@@ -5,7 +5,7 @@
 <FrameworkTabs />
 <ThemeSwitcher />
 
-In Warp Elements, radio buttons are a single selection [button group](/web/components/button-group/code.md): a [radio group](/web/components/radio/code.md) with `type="button"`. Give the group a `label`; it is visually hidden but read by assistive technology.
+In WARP Elements, radio buttons are a single selection [button group](/web/components/button-group/code.md): a [radio group](/web/components/radio/code.md) with `type="button"`. Give the group a `label`; it is visually hidden but read by assistive technology.
 
 <elements-example>
 

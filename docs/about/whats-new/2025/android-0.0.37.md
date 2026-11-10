@@ -6,7 +6,7 @@ date: 2025-01-20
 Bugfixes & token updates
 ---
 
-# Warp Android release 0.0.37 
+# WARP Android release 0.0.37 
 
 ## 2025-01-20
 

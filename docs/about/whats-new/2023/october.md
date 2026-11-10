@@ -1,19 +1,19 @@
 ---
-title: "What's been cooking in Warp lately"
+title: "What's been cooking in WARP lately"
 date: 2023-11-10
 ---
 
-Updated Tori colors, new Figma Component Library in progress, updated icons, and Warp colors for Android and iOS... Read on to discover all the exciting updates and improvements we've made in Warp the past couple of months 🎉
+Updated Tori colors, new Figma Component Library in progress, updated icons, and WARP colors for Android and iOS... Read on to discover all the exciting updates and improvements we've made in WARP the past couple of months 🎉
 
 ---
 
-# What's been cooking in Warp lately
+# What's been cooking in WARP lately
 
 ## Design Updates
 
 We have synced with Tori Marketing to decide on accessible brand colors in the Tori UI. Petroleum will be the primary color. The watermelon color will be used as the secondary color and for front page icons.
 
-In addition, the designers are working on a new Component Library in Figma. This update includes a cleanup of our color tokens, incorporating the new Tori colors, support for DBA colors, and the DBA theme across all our components. Stay tuned for more details on when this Component Library will be ready for use. Plus, we've connected our native apps to our Warp token system, ensuring a consistent look and feel across all platforms.
+In addition, the designers are working on a new Component Library in Figma. This update includes a cleanup of our color tokens, incorporating the new Tori colors, support for DBA colors, and the DBA theme across all our components. Stay tuned for more details on when this Component Library will be ready for use. Plus, we've connected our native apps to our WARP token system, ensuring a consistent look and feel across all platforms.
 
 ## Web Updates
 
@@ -34,4 +34,4 @@ Make sure you have the newest versions of our packages to get the latest changes
 
 ## Native Updates
 
-The Proof of Concept (POC) for both Android and iOS has been a success! We've implemented a button and a textfield component, with styling changes that adapt to the brand. Our next focus is on replacing old colors in the Finniverse kit (used by Finn.no) with Warp colors. We are currently going through the Finn and NMP apps to ensure we replace all the old colors.
+The Proof of Concept (POC) for both Android and iOS has been a success! We've implemented a button and a textfield component, with styling changes that adapt to the brand. Our next focus is on replacing old colors in the Finniverse kit (used by Finn.no) with WARP colors. We are currently going through the Finn and NMP apps to ensure we replace all the old colors.

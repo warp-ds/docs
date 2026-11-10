@@ -18,7 +18,7 @@ Use `box-border` to set an element’s `box-sizing` to `border-box`, telling the
 
 This means a 128px × 128px element with a 2px border and 16px of padding on all sides will be rendered as 100px × 100px, with an internal content area of 92px × 92px.
 
-Warp makes this the default for all elements in the preflight base styles.
+WARP makes this the default for all elements in the preflight base styles.
 
 <example-container>
   <div class="ex-inner-box">

@@ -7,7 +7,7 @@ Fix for Transparent color
 
 ---
 
-# Warp Android release 0.0.53
+# WARP Android release 0.0.53
 
 ## 2026-01-26
 

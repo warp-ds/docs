@@ -11,7 +11,7 @@ cards:
     href: /android/foundations/tokens
     icon: tokens
   - title: Typography
-    text: The 14 Warp text styles, the font each brand uses, and how to apply them.
+    text: The 14 WARP text styles, the font each brand uses, and how to apply them.
     href: /android/foundations/typography
     icon: type
   - title: Elevation
@@ -20,16 +20,16 @@ cards:
     icon: elevation
 related:
   - title: Icons
-    text: The Warp icon set in Compose.
+    text: The WARP icon set in Compose.
     href: /android/components/icons/code
     icon: icons
 ---
 
 # Android foundation
 
-How the Warp foundations work in Jetpack Compose. For colour, typography, elevation, tokens and other design-language topics that apply to every platform, see the [Design Language](/design-language/).
+How the WARP foundations work in Jetpack Compose. For colour, typography, elevation, tokens and other design-language topics that apply to every platform, see the [Design Language](/design-language/).
 
-To add Warp to your app, start with [Get started on Android](/get-started/android/).
+To add WARP to your app, start with [Get started on Android](/get-started/android/).
 
 ## Topics
 

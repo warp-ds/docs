@@ -6,7 +6,7 @@ designLanguage: /design-language/elevation/
 
 # Elevation
 
-On iOS, elevation combines a Warp shadow (`Warp.Shadow`) with an elevated surface colour token. Shadows are the same for every brand; surface colours change with the brand and with light and dark mode.
+On iOS, elevation combines a WARP shadow (`Warp.Shadow`) with an elevated surface colour token. Shadows are the same for every brand; surface colours change with the brand and with light and dark mode.
 
 ## Shadows
 
@@ -41,7 +41,7 @@ struct FilterTile: View {
 }
 ```
 
-To react to touches, pass the pressed state from a `ButtonStyle`, as the Warp sample app does ([ShadowView.swift](https://github.com/warp-ds/warp-ios/blob/main/SampleApp/Components/ShadowView.swift)):
+To react to touches, pass the pressed state from a `ButtonStyle`, as the WARP sample app does ([ShadowView.swift](https://github.com/warp-ds/warp-ios/blob/main/SampleApp/Components/ShadowView.swift)):
 
 ```swift
 struct ElevatedButtonStyle: ButtonStyle {
@@ -59,7 +59,7 @@ struct ElevatedButtonStyle: ButtonStyle {
 
 ### Add a shadow in UIKit
 
-Call `addShadow(_:)` on a `UIView`. It adds two shadow sublayers that copy the view's `backgroundColor` and `layer.cornerRadius`, replacing any Warp shadow added before, so set both first. Call `layoutShadowLayers()` after layout so the shadow follows the view's size:
+Call `addShadow(_:)` on a `UIView`. It adds two shadow sublayers that copy the view's `backgroundColor` and `layer.cornerRadius`, replacing any WARP shadow added before, so set both first. Call `layoutShadowLayers()` after layout so the shadow follows the view's size:
 
 ```swift
 final class TileViewController: UIViewController {

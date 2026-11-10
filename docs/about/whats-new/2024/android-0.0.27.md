@@ -7,7 +7,7 @@ Checkbox component & Compose update
 
 ---
 
-# Warp Android release 0.0.27
+# WARP Android release 0.0.27
 
 ## 2024-08-08
 
@@ -24,7 +24,7 @@ fun WarpCheckbox(
 )
 ```
 
-* Checkbox component now available in Warp, ([more info here](https://warp-ds.github.io/docs/components/checkbox/))
+* Checkbox component now available in WARP, ([more info here](https://warp-ds.github.io/docs/components/checkbox/))
 * Supports Finn, Tori & DBA
 * Supports legacy layouts written in XML
 

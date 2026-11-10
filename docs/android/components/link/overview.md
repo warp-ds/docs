@@ -13,9 +13,9 @@ Link component to use when creating links that look like buttons.
 ## General
 A link is interactive text that serves as a lightweight navigational element. It directs users to another location, such as a different website, a specific section on the same page, or an external resource.
 
-See the component in Figma: [Warp - Components / Link](https://www.figma.com/design/pLorEdyAMCZXoxkaCSgREO/Warp-Portal---Documentation?node-id=2436-1497&m=dev)
+See the component in Figma: [WARP - Components / Link](https://www.figma.com/design/pLorEdyAMCZXoxkaCSgREO/Warp-Portal---Documentation?node-id=2436-1497&m=dev)
 
-Related components: [Button](https://www.figma.com/design/pLorEdyAMCZXoxkaCSgREO/Warp-Portal---Documentation?node-id=2392-6379&m=dev)
+Related components: [Button](/android/components/button/overview.md)
 
 ## Variants
 
@@ -38,7 +38,7 @@ Related components: [Button](https://www.figma.com/design/pLorEdyAMCZXoxkaCSgREO
   </div>
 
   <div class="py-16">
-  Alternative variant in which the link is visually styled as a button (web only). This variant is not recommended, but it is still available in Warp for legacy support.
+  Alternative variant in which the link is visually styled as a button (web only). This variant is not recommended, but it is still available in WARP for legacy support.
   </div>
 </div>
 

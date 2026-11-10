@@ -6,7 +6,7 @@ date: 2025-10-06
 Taxonomy icons & WarpPageIndicator 
 ---
 
-# Warp Android release 0.0.47
+# WARP Android release 0.0.47
 
 ## 2025-10-06
 

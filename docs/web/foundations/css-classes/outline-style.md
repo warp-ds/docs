@@ -50,13 +50,13 @@ Use the `outline-{style}` utilities to set the outline style for an element.
 ### Removing outlines
 Use `outline-none` to hide the default browser outline on focused elements.
 
-It is highly recommended to apply Warp's focus styling for accessibility when using this utility.
+It is highly recommended to apply WARP's focus styling for accessibility when using this utility.
 
 <example-container>
   <div class="flex flex-col sm:flex-row items-center justify-center gap-x-16 gap-y-8 px-0 sm:px-10 font-mono font-bold">
     <input type="text" class="focus:outline s-bg s-border rounded border border-solid py-4 px-6 w-full" placeholder="Default focus style" />
     <input type="text" class="outline-none s-bg s-border rounded border border-solid py-4 px-6 w-full" placeholder="No focus with outline-none" />
-    <input type="text" class="focusable focus:[--w-outline-offset:-2px] s-bg s-border rounded border border-solid py-4 px-6 w-full" placeholder="Warp's focus style" />
+    <input type="text" class="focusable focus:[--w-outline-offset:-2px] s-bg s-border rounded border border-solid py-4 px-6 w-full" placeholder="WARP's focus style" />
   </div>
 </example-container>
 
@@ -71,7 +71,7 @@ The `outline-none` utility is implemented using a transparent outline under the 
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers. For example, use `hover:outline-dashed` to only apply the `outline-dashed` utility on hover.
+WARP lets you conditionally apply utility classes in different states using variant modifiers. For example, use `hover:outline-dashed` to only apply the `outline-dashed` utility on hover.
 
 ```html
 <div class="outline hover:outline-dashed"></div>

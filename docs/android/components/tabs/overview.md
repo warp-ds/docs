@@ -107,7 +107,7 @@ A tab is either selected or not. The tab list itself has no states of its own.
 
 **Focus** is drawn by the platform's focus ring on the tab itself; it is not a separate visual in the library. See [Accessibility](/web/components/tabs/accessibility.md).
 
-There is no disabled tab in Warp. A tab whose content isn't available yet should be removed from the set, not greyed out — see [Usage](/android/components/tabs/usage.md).
+There is no disabled tab in WARP. A tab whose content isn't available yet should be removed from the set, not greyed out — see [Usage](/android/components/tabs/usage.md).
 
 ## Platform considerations
 
@@ -142,7 +142,7 @@ There is no disabled tab in Warp. A tab whose content isn't available yet should
 Android tabs are 48dp tall, meeting the platform's minimum touch target. See [Android](/android/components/tabs/code.md).
 
 **iOS/iPadOS**
-The iOS package ships `Warp.Tabs`, which takes an array of `Warp.TabItem` and a `selectedIndex` binding. See [iOS](/ios/components/tabs/code.md).
+The iOS package ships `Warp.Tabs`, which takes an array of `Warp.TabItem` and a `selectedIndex` binding.
 
 <div class="grid grid-cols-2 gap-24 py-16">
   <div class="image-plate">

@@ -25,7 +25,7 @@ Use the `scroll-smooth` utilities to enable smooth scrolling within an element.
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:scroll-auto` to only apply the `scroll-auto` utility on hover.
 
 ```html

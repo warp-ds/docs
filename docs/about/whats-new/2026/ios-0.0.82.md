@@ -7,13 +7,13 @@ DatePicker update and new ConfirmationDialog component
 
 ---
 
-# Warp iOS release 0.0.82
+# WARP iOS release 0.0.82
 
 ## 2026-06-29
 
 #### ConfirmationDialog component
 
-New `.warpConfirmationDialog()` modifier wraps the native iOS confirmation dialog with Warp-styled actions.
+New `.warpConfirmationDialog()` modifier wraps the native iOS confirmation dialog with WARP-styled actions.
 
 ```swift
 Text("Content")

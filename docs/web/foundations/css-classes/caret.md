@@ -5,7 +5,7 @@
 Utilities for controlling the color of the text input cursor.
 
 ::: tip Note
-If you are using the Warp input components (and you probably should use them for theming purposes) `caret` is already set as default.
+If you are using the WARP input components (and you probably should use them for theming purposes) `caret` is already set as default.
 :::
 
 ## Quick reference

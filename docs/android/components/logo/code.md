@@ -72,4 +72,10 @@ Not supported
 
 ### Parameters
 
-<api-table type=android component="Logo" />
+| Name | Type | Default | Description |
+| --- | --- | --- | --- |
+| `brand` | `String` or `Brand` | required | The brand to show, as an identifier string (`"finn"`) or a `Brand` value (`Brand.Finn`). |
+| `small` | `Boolean` | `false` | Shows the 32x32 square logo instead of the full logo. |
+| `modifier` | `Modifier` | `Modifier` | Modifier applied to the logo. |
+
+<component-questions />

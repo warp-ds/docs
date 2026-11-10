@@ -3,7 +3,7 @@ title: 'WARP releases'
 date: 2023-12-01
 ---
 
-We have now released new versions of our Warp packages:
+We have now released new versions of our WARP packages:
 - [@warp-ds/elements: 1.2.1](https://www.npmjs.com/package/@warp-ds/elements)
 - [@warp-ds/react: 1.2.1](https://www.npmjs.com/package/@warp-ds/react)
 - [@warp-ds/vue: 1.2.2](https://www.npmjs.com/package/@warp-ds/vue)
@@ -13,7 +13,7 @@ We have now released new versions of our Warp packages:
 
 # Week 48
 
-These past few weeks we have worked hard to fix reported issues, as well as bring you new stuff in our Warp packages. Below is an overview of the latest changes.
+These past few weeks we have worked hard to fix reported issues, as well as bring you new stuff in our WARP packages. Below is an overview of the latest changes.
 
 
 ## @warp-ds/elements@1.2.1
@@ -22,7 +22,7 @@ These past few weeks we have worked hard to fix reported issues, as well as brin
 
 * **textfield:** allow styling input's left padding when prefix is wider than 40px ([#116](https://github.com/warp-ds/elements/issues/116)) ([ac890c7](https://github.com/warp-ds/elements/commit/ac890c79d877a851fe536436aa598ef5e18308ec))
 * publish individual web components to eik ([#111](https://github.com/warp-ds/elements/issues/111)) ([0915221](https://github.com/warp-ds/elements/commit/09152215ec3ccf40643403c2d64edb6b9f76ea89))
-* **expandable** use Warp chevron icons instead of inline svgs ([#107](https://github.com/warp-ds/elements/issues/107)) ([87faf60](https://github.com/warp-ds/elements/commit/87faf60be3ac5d5460b04add6f5b408844b31bd7))
+* **expandable** use WARP chevron icons instead of inline svgs ([#107](https://github.com/warp-ds/elements/issues/107)) ([87faf60](https://github.com/warp-ds/elements/commit/87faf60be3ac5d5460b04add6f5b408844b31bd7))
 * **expandable:** fix long titles overflowing chevron
 * **expandable** only show focus indicator in on focus-visible 
 * **tabs:** left align all tabs instead of stretch

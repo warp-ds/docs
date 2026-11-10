@@ -2,19 +2,19 @@
 title: 'WARP Figma updates'
 date: 2026-01-05
 ---
-Warp Figma Component Library updates
+WARP Figma Component Library updates
 
 ---
 
 ## **Happy New Year!** 🎉
 
-We're starting off 2026 with several updates to our **Warp Components Figma library**:
+We're starting off 2026 with several updates to our **WARP Components Figma library**:
 
 ### Library navigation improvements
 
 We've added new "Patterns" and "Vend Assets" dividers added to the Figma page list to improve wayfinding and make it easier to locate these components categories. More details below in this update.
 
-![Screenshot showing the Figma page list in the Warp Components library file.](/whats-new/2026/design-01-05-1.svg)
+![Screenshot showing the Figma page list in the WARP Components library file.](/whats-new/2026/design-01-05-1.svg)
 
 ### New Empty states pattern released
 
@@ -30,7 +30,7 @@ This pattern was a fantastic cross-team effort! 👏 Huge thanks to:
 
 👉 [Learn more about Empty states and our guidelines here](/patterns/)
 
-![Example of the Empty state 'Fail to load’ variant shown in the context of FINN's iOS app, and screenshot of the pattern's usage guidelines on Warp Portal.](/whats-new/2026/design-01-05-2.svg)
+![Example of the Empty state 'Fail to load’ variant shown in the context of FINN's iOS app, and screenshot of the pattern's usage guidelines on WARP Portal.](/whats-new/2026/design-01-05-2.svg)
 
 ### Improvements to DBA dark mode tokens
 
@@ -83,4 +83,4 @@ This banner informs users that Vend is the data controller responsible for proce
 
 Looking forward to a 2026 full of collaboration and contributions from across Vend. 🤎
 
-**– Your Warp Design System friends**
+**– Your WARP Design System friends**

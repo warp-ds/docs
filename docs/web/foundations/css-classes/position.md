@@ -127,34 +127,34 @@ Any `offsets` are calculated relative to the viewport and the element will act a
   <div class="ex-inner-box p-0 pd-bg-blue-500 p-4 rounded-4">
     <div class="pd-text-white ex-font pb-4 px-2">Imaginary browser window</div>
     <div class="relative s-bg h-[200] overflow-y-scroll">
-      <h4 class="sticky border-b s-border/50 s-bg/50 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m">Warp Scientists</h4>
+      <h4 class="sticky border-b s-border/50 s-bg/50 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m">WARP Scientists</h4>
       <ul class="divide-y">
         <li class="flex items-center p-16">
           <img src="/images/matter.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
           <div>
             <div class="font-bold">Justina Matter</div>
-            Warp Scientist
+            WARP Scientist
           </div>
         </li>
         <li class="flex items-center p-16">
           <img src="/images/profile1.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
           <div>
             <div class="font-bold">Narve Hoops</div>
-            Warp Scientist
+            WARP Scientist
           </div>
         </li>
         <li class="flex items-center p-16">
           <img src="/images/profile5.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
           <div>
             <div class="font-bold">Dagny Calamity</div>
-            Warp Scientist
+            WARP Scientist
           </div>
         </li>
         <li class="flex items-center p-16">
           <img src="/images/profile2.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
           <div>
             <div class="font-bold">Joar Quack</div>
-            Warp Scientist
+            WARP Scientist
           </div>
         </li>
     </ul>
@@ -188,7 +188,7 @@ Any `offsets` are calculated relative to the element’s normal position and the
   <div class="ex-inner-box relative p-0">
     <div class="overflow-y-scroll h-[200]">
       <div>
-        <h4 class="sticky border-b s-border/50 s-bg-primary/10 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m mb-0">A - Warp Scientists</h4>
+        <h4 class="sticky border-b s-border/50 s-bg-primary/10 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m mb-0">A - WARP Scientists</h4>
         <ul class="divide-y">
           <li class="flex items-center px-12 py-8">
             <img src="/images/matter.jpg" class="h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
@@ -209,7 +209,7 @@ Any `offsets` are calculated relative to the element’s normal position and the
         </ul>
       </div>
       <div class="pt-32">
-        <h4 class="sticky border-b s-border/50 s-bg-positive/10 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m mb-0">B - Warp Scientists</h4>
+        <h4 class="sticky border-b s-border/50 s-bg-positive/10 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m mb-0">B - WARP Scientists</h4>
         <ul class="divide-y">
           <li class="flex items-center px-12 py-8">
             <img src="/images/matter.jpg" class="h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
@@ -230,7 +230,7 @@ Any `offsets` are calculated relative to the element’s normal position and the
         </ul>
       </div>
       <div class="pt-32">
-        <h4 class="sticky border-b s-border/50 s-bg-negative/10 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m mb-0">C - Warp Scientists</h4>
+        <h4 class="sticky border-b s-border/50 s-bg-negative/10 left-0 right-0 top-0 px-16 py-8 backdrop-blur-m mb-0">C - WARP Scientists</h4>
         <ul class="divide-y">
           <li class="flex items-center px-12 py-8">
             <img src="/images/matter.jpg" class="h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />

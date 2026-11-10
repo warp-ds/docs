@@ -7,13 +7,13 @@ Semantic spacing and StateView improvements
 
 ---
 
-# Warp iOS release 0.0.80
+# WARP iOS release 0.0.80
 
 ## 2026-05-07
 
 #### Semantic spacing
 
-- Added semantic spacing values to the Warp token system
+- Added semantic spacing values to the WARP token system
 
 #### StateView update
 

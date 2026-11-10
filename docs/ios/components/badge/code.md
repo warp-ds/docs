@@ -58,7 +58,7 @@ enum Warp.BadgePosition {
 
 ### Legacy support
 
-By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+By default all WARP components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
 ```swift exmaple
 Warp.Badge(

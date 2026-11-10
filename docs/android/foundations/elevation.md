@@ -6,7 +6,7 @@ designLanguage: /design-language/elevation/
 
 # Elevation
 
-On Android, Warp expresses elevation with two kinds of tokens: shadow sizes in `WarpTheme.dimensions` and surface colours in `WarpTheme.colors.surface`. Use them together to lift content above the page.
+On Android, WARP expresses elevation with two kinds of tokens: shadow sizes in `WarpTheme.dimensions` and surface colours in `WarpTheme.colors.surface`. Use them together to lift content above the page.
 
 ## Shadow tokens
 
@@ -62,7 +62,7 @@ The modifiers are `@Composable` functions, so call them from composable code.
 
 Surface colours come from the brand theme and change between light and dark mode.
 
-## How Warp components use elevation
+## How WARP components use elevation
 
 | Component     | Shadow                                      | Surface        |
 | ------------- | ------------------------------------------- | -------------- |

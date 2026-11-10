@@ -6,7 +6,7 @@ date: 2025-10-07
 Taxonomy icons & RangeSlider 
 ---
 
-# Warp iOS release 0.0.65
+# WARP iOS release 0.0.65
 
 ## 2025-10-07
 

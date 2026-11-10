@@ -56,7 +56,7 @@ The inline type sits in the content flow and needs no positioning logic. The pop
 
 ### States
 
-Callout is static. It has no hover, pressed, disabled, loading, or error state — the bubble either is on screen or is not. The close button carries its own states, and on web it is a Warp button with a normal focus indicator.
+Callout is static. It has no hover, pressed, disabled, loading, or error state — the bubble either is on screen or is not. The close button carries its own states, and on web it is a WARP button with a normal focus indicator.
 
 There is also no entry or exit animation on any platform. The callout appears and disappears immediately.
 

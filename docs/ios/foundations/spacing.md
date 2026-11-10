@@ -5,7 +5,7 @@ title: Spacing — iOS
 
 # Spacing
 
-Warp spacing values are `CGFloat` constants on `Warp.Spacing`, measured in points. They are the same for every brand.
+WARP spacing values are `CGFloat` constants on `Warp.Spacing`, measured in points. They are the same for every brand.
 
 ## Semantic values
 

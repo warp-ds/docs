@@ -6,7 +6,7 @@
 
 <FrameworkTabs />
 
-`StateView` is a flexible SwiftUI generic view component to display visual representations of various UI states. It supports an icon or illustration, optional title and description text, primary and secondary action buttons, and an optional brand logo endorsement. Designed for Warp, it is highly customizable and accessible.
+`StateView` is a flexible SwiftUI generic view component to display visual representations of various UI states. It supports an icon or illustration, optional title and description text, primary and secondary action buttons, and an optional brand logo endorsement. Designed for WARP, it is highly customizable and accessible.
 
 ### Generic usage
 
@@ -29,7 +29,7 @@ StateView(
 
 ## Variants
 
-Warp provides a set of predefined `StateView` variants for common UI states. Each variant wraps the base `StateView` with specific configuration, predefined images, texts, and actions to simplify displaying these states.
+WARP provides a set of predefined `StateView` variants for common UI states. Each variant wraps the base `StateView` with specific configuration, predefined images, texts, and actions to simplify displaying these states.
 
 Note on overriding: Each variant conforms to `StateViewConfigurable` and can be customized using the provided `.override(...)` helpers. Use these helpers to change the image, image dimensions, tint color, accessibility label, title, description, primary/quiet buttons, or `showLogo`. They return a modified copy, so multiple overrides may be chained (for example: `LoginStateView(...).override(title: "Sign in").override(showLogo: false)`). This should be used as a last resort action because variants are designed to be used without modification to maintain similar appearance. 
 
@@ -104,11 +104,11 @@ VerifyIdentityStateView(
 )
 ```
 
-Each variant leverages the consistent `StateView` styling and accessibility features, simplifying state management and UI presentation across Warp-based apps.
+Each variant leverages the consistent `StateView` styling and accessibility features, simplifying state management and UI presentation across WARP-based apps.
 
 ## Features
 
-- Display either a Warp icon or a custom illustration image.
+- Display either a WARP icon or a custom illustration image.
 - Optional title and rich description text with scroll support (for scalable fonts)
 - Primary and secondary (quiet) buttons for user interaction.
 - Optional brand logo endorsement that adapts theme-based branding.
@@ -117,11 +117,11 @@ Each variant leverages the consistent `StateView` styling and accessibility feat
 
 ## Accessibility
 
-The illustration uses the provided `imageContentDescription` as its accessibility label. Warp icons use default accessibility label
+The illustration uses the provided `imageContentDescription` as its accessibility label. WARP icons use default accessibility label
 
 ## Theming and Branding
 
-Certain variants (i.e. `LoginStateView`) adapts the displayed endorsement logo according to the current Warp theme (`finn`, `blocket`, `tori`, `dba`, `vend`, `neutral`), ensuring consistent brand representation.
+Certain variants (i.e. `LoginStateView`) adapts the displayed endorsement logo according to the current WARP theme (`finn`, `blocket`, `tori`, `dba`, `vend`, `neutral`), ensuring consistent brand representation.
 
 ### Parameters
 
@@ -135,7 +135,7 @@ Certain variants (i.e. `LoginStateView`) adapts the displayed endorsement logo a
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| image | StateImage? | nil | Optional state image — either a Warp icon or a custom illustration. If omitted, no image is displayed. |
+| image | StateImage? | nil | Optional state image — either a WARP icon or a custom illustration. If omitted, no image is displayed. |
 | imageWidth | number? | nil | Optional width override for the image (overrides default icon size/illustration width; use sparingly). |
 | imageHeight | number? | nil | Optional height override for the image (overrides default illustration height; use sparingly). |
 | tintColor | Color? | nil | Optional tint color applied to the illustration where supported. |

@@ -32,7 +32,7 @@ The same two types go by different names in Figma, on web, and on the native pla
 | Pointer direction | `Pointer` | `placement` | `arrowEdge` | `edge` |
 | Dismissible | `Dismissble` | `can-close` | close icon appears when `onTapped` is set | `closable` |
 
-The web property for the popover type is called `highlight`, not `popover`. On `w-attention` the `popover` property is a different, neutral-surfaced style documented under [Popover](/android/components/popover/overview.md).
+The web property for the popover type is called `highlight`, not `popover`. On `w-attention` the `popover` property is a different, neutral-surfaced style documented under [Popover](/web/components/popover/overview.md) on Web.
 
 ## Types
 

@@ -116,7 +116,7 @@ A tab is either selected or not. The tab list itself has no states of its own.
 
 **Focus** is drawn by the platform's focus ring on the tab itself; it is not a separate visual in the library. See [Accessibility](/web/components/tabs/accessibility.md).
 
-There is no disabled tab in Warp. A tab whose content isn't available yet should be removed from the set, not greyed out — see [Usage](/web/components/tabs/usage.md).
+There is no disabled tab in WARP. A tab whose content isn't available yet should be removed from the set, not greyed out — see [Usage](/web/components/tabs/usage.md).
 
 ## Platform considerations
 

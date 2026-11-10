@@ -73,7 +73,7 @@ Use the `cursor-{style}` to control which cursor is displayed when hovering over
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `focus:cursor-auto` to only apply the `cursor-auto` utility on focus.
 
 ```html

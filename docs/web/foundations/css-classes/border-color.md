@@ -132,7 +132,7 @@ This works for both semantic and arbitrary classes with any primitive `--w-{colo
 Please be advised that by using primitive variables you will lose theming possibilities, therefore we highly recommend only using semantic classes and tokens.
 :::
 
-<example-container class="bg-center bg-[url(../../images/50s-scientists.jpg)]">
+<example-container class="bg-center bg-[url(/docs/images/50s-scientists.jpg)]">
   <div class="grid grid-cols-4 gap-16 justify-items-center">
     <div class="s-border/50 hover:s-border/100 h-80 w-80 border-8 rounded-16 s-bg/10 backdrop-blur-m transition-colors ease-in-out duration-700"></div>
     <div class="s-border-t-primary/55 hover:s-border-t-primary/100 h-80 w-80 border-t-8 rounded-16 s-bg/50 backdrop-blur-m transition-colors ease-in-out duration-700"></div>

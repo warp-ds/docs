@@ -20,7 +20,7 @@ See also [Alert](/ios/components/alert/overview.md).
 
 - Always include action buttons with descriptive labels when users can respond to the notification.
 
-- Snackbar items automatically disappear after a predefined timeout of 5000 ms ('short'), 20000 ms ('long') or 'infinite' (6000000 ms), depending on the context or the length of the message. Queue messages and show maximum 3 snackbars at once to maintain clarity.
+- Snackbar items automatically disappear after a predefined timeout of 4 seconds ('short') or 10 seconds ('long'), or stay until dismissed ('infinite'), depending on the context or the length of the message. Queue messages and show maximum 3 snackbars at once to maintain clarity.
 
 - Stack vertically from bottom to top. Queue additional messages and show them as space becomes available. Most recent message appears at the top of the stack.
 
@@ -56,11 +56,11 @@ Review the behaviour guidelines for each snackbar element below.
 
 Snackbars automatically disappear after a predefined timeout:
 
-- **Short** (5000 ms): Brief confirmations without actions ("Item saved", "Copied to clipboard").
+- **Short** (4 seconds): Brief confirmations without actions ("Item saved", "Copied to clipboard").
 
-- **Long** (20000 ms): Messages with actions or longer text ("Message deleted" with Undo button).
+- **Long** (10 seconds): Messages with actions or longer text ("Message deleted" with Undo button).
 
-- **Infinite** (6000000 ms): Critical messages requiring acknowledgment (errors, warnings with close button).
+- **Infinite** (until dismissed): Critical messages requiring acknowledgment (errors, warnings with close button).
 
 <DoDont>
 <Do imgurl="/docs/components/snackbar/usage-duration-do.svg">

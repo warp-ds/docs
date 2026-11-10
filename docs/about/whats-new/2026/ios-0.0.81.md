@@ -7,7 +7,7 @@ New Snackbar component and icons
 
 ---
 
-# Warp iOS release 0.0.81
+# WARP iOS release 0.0.81
 
 ## 2026-06-10
 

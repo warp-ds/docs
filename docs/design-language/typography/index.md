@@ -6,11 +6,11 @@ Use Typography to create visual hierarchy, making things readable and beautiful.
 
 A type scale is a selection of type styles used across a product to ensure consistency.
 
-We have a predefined type scale (font sizes and line heights) that is used across all themes in Warp. The following example shows an overview of the type scale using the FINN theme. You can find an overview of the type scale for all themes in our [WARP Component library](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=11099-1148)
+We have a predefined type scale (font sizes and line heights) that is used across all themes in WARP. The following example shows an overview of the type scale using the FINN theme. You can find an overview of the type scale for all themes in our [WARP Component library](https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/WARP---Components?node-id=11099-1148)
 
 ## Type scale tokens
 
-Each theme in Warp has its own predefined typeface (see below) and font which are connected to a set of primitive tokens in Warp that capture all of their default properties: Font family, Size, Weight, Line height.
+Each theme in WARP has its own predefined typeface (see below) and font which are connected to a set of primitive tokens in WARP that capture all of their default properties: Font family, Size, Weight, Line height.
 
 ::: image-block
 ![Overview of different types font styles](/foundations/font-style-scale.png)

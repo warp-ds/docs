@@ -72,7 +72,7 @@ Do not add your own colour to a callout to imply a status. Users who cannot dist
 ### Text resizing and Dynamic Type
 
 - The bubble grows with its text on every platform. Do not constrain its height, and never truncate the message to make it fit — on Android the text is clipped rather than ellipsised, so a fixed width silently loses words.
-- On iOS, Warp text styles are built with `relativeTo:`, so the callout text scales with Dynamic Type. Check the largest accessibility sizes: a one-line message can become four lines, and the callout may then cover the element it points at.
+- On iOS, WARP text styles are built with `relativeTo:`, so the callout text scales with Dynamic Type. Check the largest accessibility sizes: a one-line message can become four lines, and the callout may then cover the element it points at.
 - On web, the callout must stay readable and fully visible at 200% zoom. A popover callout positioned against a small anchor is the case most likely to break, because the bubble grows but the anchor does not.
 - Keep the message short. Every accessibility problem in this section gets worse the longer the text is.
 

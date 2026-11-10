@@ -7,7 +7,7 @@ WarpState component!
 
 ---
 
-# Warp Android release 0.0.50
+# WARP Android release 0.0.50
 
 ## 2025-12-16
 

@@ -44,7 +44,7 @@ Use the `delay-{amount}` utilities to control an element’s transition-delay.
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:delay-300` to only apply the `delay-300` utility on hover.
 
 ```html

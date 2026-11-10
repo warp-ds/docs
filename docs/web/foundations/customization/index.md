@@ -21,7 +21,7 @@ When the design system can't accommodate this, teams historically:
 
 ## Controlled Escape Hatches
 
-To prevent forks while maintaining consistency, Warp components provide **three levels of customization** - documented ways to handle edge cases:
+To prevent forks while maintaining consistency, WARP components provide **three levels of customization** - documented ways to handle edge cases:
 
 ### Level 1: Component Tokens (Recommended)
 

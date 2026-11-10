@@ -6,7 +6,7 @@ date: 2025-02-17
 Toast component & new icons
 ---
 
-# Warp Android release 0.0.38 
+# WARP Android release 0.0.38 
 
 ## 2025-02-17
 

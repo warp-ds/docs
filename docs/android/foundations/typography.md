@@ -6,7 +6,7 @@ designLanguage: /design-language/typography/
 
 # Typography
 
-Warp for Android has 14 text styles. Every brand uses the same sizes and line heights; the brand theme supplies the font.
+WARP for Android has 14 text styles. Every brand uses the same sizes and line heights; the brand theme supplies the font.
 
 ## Text styles
 
@@ -89,4 +89,4 @@ fun Price(amount: String) {
 }
 ```
 
-Inside a brand theme, `LocalTextStyle` is set to `WarpTheme.typography.body`, so a Material `Text` without a `style` uses the brand's body style ([WarpTheme.kt](https://github.com/warp-ds/warp-android/blob/develop/warp/src/main/java/com/schibsted/nmp/warp/theme/WarpTheme.kt)). Outside a brand theme the Warp text styles fall back to `TextStyle.Default`.
+Inside a brand theme, `LocalTextStyle` is set to `WarpTheme.typography.body`, so a Material `Text` without a `style` uses the brand's body style ([WarpTheme.kt](https://github.com/warp-ds/warp-android/blob/develop/warp/src/main/java/com/schibsted/nmp/warp/theme/WarpTheme.kt)). Outside a brand theme the WARP text styles fall back to `TextStyle.Default`.

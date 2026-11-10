@@ -6,13 +6,13 @@
 
 <FrameworkTabs />
 
-### Warp Resources
+### WARP Resources
 
-Warp icons are located within the Warp framework. They are ImageVectors created from vector drawables located in Icon/Icons.xcassets.
+WARP icons are located within the WARP framework. They are ImageVectors created from vector drawables located in Icon/Icons.xcassets.
 
 We have 4 levels of `icons` and `logos`:
 
-`Warp.Icon` which is an enum defining all available `template` icons in the Warp design system.
+`Warp.Icon` which is an enum defining all available `template` icons in the WARP design system.
 
 `Warp.TaxonomyIcon` which is an enum of `template` icons used for markets.
 
@@ -88,7 +88,7 @@ enum Warp.BrandLogo.LogoSize {
 
 ### Legacy support
 
-By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+By default all WARP components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
 ```swift example
 Warp.IconView(.activeAds).uiView

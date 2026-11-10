@@ -12,7 +12,7 @@ Vend's logos are crafted to deliver consistency, clarity, and scalability across
 
 ## Overview
 
-![Example Warp logos and their small variants in light in their regular and inverted versions](/components/logo/overview.svg)
+![Example WARP logos and their small variants in light in their regular and inverted versions](/components/logo/overview.svg)
 
 ## Need new logos?
 If you need a new logo or adjustments to an existing one, please submit a request in Slack [#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)

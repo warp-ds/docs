@@ -7,7 +7,7 @@ StateView component
 
 ---
 
-# Warp iOS release 0.0.70
+# WARP iOS release 0.0.70
 
 ## 2025-12-16
 

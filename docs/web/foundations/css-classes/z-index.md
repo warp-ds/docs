@@ -2,7 +2,7 @@
 
 ---
 title: Z-Index
-description: Utilities for controlling the stack order of an element in Warp UnoCSS.
+description: Utilities for controlling the stack order of an element in WARP UnoCSS.
 ---
 
 # Z-Index
@@ -18,7 +18,7 @@ Utilities for controlling the stack order of an element.
 > Available values <br />
 > `{index}`: `0`, `10`, `20`, `30`, `40`, `50` , `auto`
 
-Warp uses a **limited z-index scale** to ensure consistent layering across the design system.
+WARP uses a **limited z-index scale** to ensure consistent layering across the design system.
 This helps prevent overlap bugs, “z-index wars,” and unpredictable UI behavior.
 
 ---
@@ -45,7 +45,7 @@ The z-index should be kept within these semantic layers:
 
 ### Setting the z-index
 
-Control the stack order (or three-dimensional positioning) of an element in Warp, regardless of order it has been displayed, using the `z-{index}` utilities.
+Control the stack order (or three-dimensional positioning) of an element in WARP, regardless of order it has been displayed, using the `z-{index}` utilities.
 
 <example-container>
   <div class="flex justify-center -space-x-24">
@@ -113,10 +113,10 @@ Then, inside that context, smaller z-index values can be used safely:
 </div>
 ```
 
-### Why Warp Limits Arbitrary z-index Values
+### Why WARP Limits Arbitrary z-index Values
 
 Allowing arbitrary z-index values quickly leads to conflicts between teams and components.
-Warp’s strict layering system ensures:
+WARP’s strict layering system ensures:
 
 - Predictable behavior across frameworks and components
 - Visual consistency across modals, headers, and dropdowns
@@ -134,5 +134,5 @@ If unique stacking is needed, create a new stacking context instead of raising z
 
 ---
 
-> **Remember:** In Warp, consistency often have to beat flexibility.
+> **Remember:** In WARP, consistency often have to beat flexibility.
 > The fewer z-index values we have and need, the fewer layering issues we will have.

@@ -36,6 +36,6 @@ Use snackbars for success confirmations, process status updates, non-critical wa
 
 ## Example
 
-See [more examples on the Elements page](/ios/components/snackbar/code.md#examples).
+See more examples on the [Code page](/ios/components/snackbar/code.md).
 
 <component-questions />

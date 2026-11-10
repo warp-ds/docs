@@ -26,43 +26,43 @@ Use the `backdrop-blur-{size}` utilities to control an element’s backdrop blur
   <div class="flex flex-wrap gap-16 justify-items-center justify-around">
     <div class="text-center">
       <strong class="ex-font-dark">backdrop-blur-none</strong>
-      <div class="p-16 bg-[url(../../images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
+      <div class="p-16 bg-[url(/docs/images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
         <div class="backdrop-blur-none border pd-border-white absolute inset-16 rounded-8"></div>
       </div>
     </div>
     <div class="text-center">
       <strong class="ex-font-dark">backdrop-blur-s</strong>
-      <div class="p-16 bg-[url(../../images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
+      <div class="p-16 bg-[url(/docs/images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
         <div class="backdrop-blur-s border pd-border-white absolute inset-16 rounded-8"></div>
       </div>
     </div>
     <div class="text-center">
       <strong class="ex-font-dark">backdrop-blur-m</strong>
-      <div class="p-16 bg-[url(../../images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
+      <div class="p-16 bg-[url(/docs/images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
         <div class="backdrop-blur-m border pd-border-white absolute inset-16 rounded-8"></div>
       </div>
     </div>
     <div class="text-center">
       <strong class="ex-font-dark">backdrop-blur-l</strong>
-      <div class="p-16 bg-[url(../../images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
+      <div class="p-16 bg-[url(/docs/images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
         <div class="backdrop-blur-l border pd-border-white absolute inset-16 rounded-8"></div>
       </div>
     </div>
     <div class="text-center">
       <strong class="ex-font-dark">backdrop-blur-xl</strong>
-      <div class="p-16 bg-[url(../../images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
+      <div class="p-16 bg-[url(/docs/images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
         <div class="backdrop-blur-xl border pd-border-white absolute inset-16 rounded-8"></div>
       </div>
     </div>
     <div class="text-center">
       <strong class="ex-font-dark">backdrop-blur-xxl</strong>
-      <div class="p-16 bg-[url(../../images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
+      <div class="p-16 bg-[url(/docs/images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
         <div class="backdrop-blur-xxl border pd-border-white absolute inset-16 rounded-8"></div>
       </div>
     </div>
     <div class="text-center">
       <strong class="ex-font-dark">backdrop-blur-xxxl</strong>
-      <div class="p-16 bg-[url(../../images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
+      <div class="p-16 bg-[url(/docs/images/20s-scientists.jpg)] bg-contain w-144 h-144 mx-auto mt-8 relative rounded-8 shadow-m">
         <div class="backdrop-blur-xxxl border pd-border-white absolute inset-16 rounded-8"></div>
       </div>
     </div>

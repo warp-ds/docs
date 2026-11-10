@@ -1,18 +1,22 @@
+---
+pendingReview: true
+---
+
 # Confirmation dialog
 
 <ComponentsStatus />
 
 ## General
 
-`Warp.ConfirmationDialog` is a thin wrapper around the native SwiftUI confirmation dialog (`.confirmationDialog`, presented with `.warpConfirmationDialog()`). The system presents the dialog and provides its VoiceOver, focus and dismissal behaviour; Warp only supplies the title, the optional message, the actions and their styling. Your responsibility is clear, meaningful text.
+`Warp.ConfirmationDialog` is a thin wrapper around the native SwiftUI confirmation dialog (`.confirmationDialog`, presented with `.warpConfirmationDialog()`). The system presents the dialog and provides its VoiceOver, focus and dismissal behaviour; WARP only supplies the title, the optional message, the actions and their styling. Your responsibility is clear, meaningful text.
 
-## What Warp sets up
+## What WARP sets up
 
 - **Title is always shown.** The dialog is presented with a visible title, so VoiceOver users get the same context as sighted users. Write the title as the question being decided ("Delete this ad?").
 - **Message is optional.** Use it for consequences the user must know before choosing ("This cannot be undone.").
 - **Action order.** Actions with the `.primary` style are placed first; the others keep the order you pass them in. VoiceOver reads the actions in this visual order.
 - **Cancel.** The system adds a Cancel button automatically. Use a `.cancel` action only to give it a custom title; only the first `.cancel` action is used.
-- **Destructive actions.** `.destructive` maps to SwiftUI's destructive button role, and Warp colours the label with the negative text token.
+- **Destructive actions.** `.destructive` maps to SwiftUI's destructive button role, and WARP colours the label with the negative text token.
 
 ## Writing accessible actions
 
@@ -32,6 +36,6 @@
 
 ## Motion
 
-Warp adds no custom animation; the dialog uses the system presentation.
+WARP adds no custom animation; the dialog uses the system presentation.
 
 <component-questions />

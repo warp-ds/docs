@@ -6,11 +6,11 @@ date: 2024-10-11
 Icons!
 ---
 
-# Warp Android release 0.0.29
+# WARP Android release 0.0.29
 
 ## 2024-10-11
 
-### Warp Icon support
+### WARP Icon support
 ```kotlin example
 Icon(
         imageVector = WarpTheme.icons.animalPaw,
@@ -27,6 +27,6 @@ Icon(
     />
 ```
 
-* Icons now available in Warp, ([more info & fulll list of icons can be found here](https://warp-ds.github.io/tech-docs/components/icons/))
+* Icons now available in WARP, ([more info & fulll list of icons can be found here](https://warp-ds.github.io/tech-docs/components/icons/))
 * Supports Finn, Tori & DBA
 * Supports legacy layouts written in XML

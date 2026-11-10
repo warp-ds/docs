@@ -11,7 +11,7 @@ An accessible Radio group communicates three things: the question being asked, e
 - Keep options in a logical DOM and reading order that matches the visual order.
 - Express the selected, disabled, required, and invalid states programmatically as well as visually.
 - Associate help and error text with the group. Do not rely on colour or position alone.
-- Use the Warp components without replacing their native interaction with click handlers on generic elements.
+- Use the WARP components without replacing their native interaction with click handlers on generic elements.
 
 ## Keyboard
 
@@ -27,7 +27,7 @@ Radio groups use a single tab stop. Once focus enters the group, arrow keys move
 
 Disabled options are skipped during arrow-key navigation. Do not add separate tab stops to every option or use `Enter` as a custom selection key; both conflict with the established Radio interaction.
 
-On Web, the current Warp Elements implementation provides roving `tabindex`, arrow-key wrapping, disabled-option skipping, and Space selection. Test keyboard behaviour again if application code changes option order or conditionally removes options.
+On Web, the current WARP Elements implementation provides roving `tabindex`, arrow-key wrapping, disabled-option skipping, and Space selection. Test keyboard behaviour again if application code changes option order or conditionally removes options.
 
 ## Screen reader
 
@@ -53,7 +53,7 @@ Screen readers should announce the group label, the option label, the Radio role
 
 ### Web
 
-Warp Elements exposes each `w-radio` with the `radio` role and programmatic checked, disabled, and invalid states through `ElementInternals`. `w-radio-group` renders a fieldset with the `radiogroup` role and connects its visible label and help text to the group.
+WARP Elements exposes each `w-radio` with the `radio` role and programmatic checked, disabled, and invalid states through `ElementInternals`. `w-radio-group` renders a fieldset with the `radiogroup` role and connects its visible label and help text to the group.
 
 - Always set a shared `name` so the selected value participates in form submission.
 - Prefer `w-radio-group` over manually coordinating standalone options. It supplies group labelling, roving focus, validation, and keyboard navigation.
@@ -61,7 +61,7 @@ Warp Elements exposes each `w-radio` with the `radio` role and programmatic chec
 - Do not override `role`, `tabindex`, or the component's arrow-key handling.
 - The component's required validation message defaults to “Please select an option.” Supply a more specific message when the question benefits from it.
 
-These details were verified against Warp Elements 2.11.0, the version used by this documentation site.
+These details were verified against WARP Elements 2.11.0, the version used by this documentation site.
 
 ### iOS
 

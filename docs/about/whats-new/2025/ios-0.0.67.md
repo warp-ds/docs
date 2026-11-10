@@ -7,7 +7,7 @@ Blocket font update & Divider component
 
 ---
 
-# Warp iOS release 0.0.67
+# WARP iOS release 0.0.67
 
 ## 2025-10-21
 

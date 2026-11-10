@@ -123,7 +123,7 @@ Do not use weights like 300 or 500, as they will fallback to 400 (Light) and may
 
 
 #### Example
-- If another font-file is defined at a later stage, lets say a medium font (500) in between the regular and bold we use today in Warp, the calculations of the breakpoints between what font-file wins will change as well
+- If another font-file is defined at a later stage, lets say a medium font (500) in between the regular and bold we use today in WARP, the calculations of the breakpoints between what font-file wins will change as well
 
 For the weights `400`, `500`, and `700`, here’s how the weight  are divided:
 

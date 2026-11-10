@@ -6,7 +6,7 @@ date: 2025-08-21
 Updated regular icons
 ---
 
-# Warp iOS release 0.0.63
+# WARP iOS release 0.0.63
 
 ## 2025-08-21
 
@@ -34,5 +34,5 @@ enum Warp.Toast.Duration {
     case custom(interval: TimeInterval)
 }
 ```
-- Add snapshot tests coverage for most Warp components
+- Add snapshot tests coverage for most WARP components
 - Deprecate `Broadcast` component, use `Alert` with `warning` style instead

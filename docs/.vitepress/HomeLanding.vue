@@ -21,12 +21,12 @@ const count = (platform, type) => Object.keys(manifest[platform][type]).length;
 const entries = [
   {
     title: 'Design',
-    description: 'Get access to the Warp Figma libraries and design for every brand.',
+    description: 'Get access to the WARP Figma libraries and design for every brand.',
     href: withBase('/get-started/design/'),
   },
   {
     title: 'Develop',
-    description: 'Install Warp for Web, iOS or Android and start building.',
+    description: 'Install WARP for Web, iOS or Android and start building.',
     href: withBase('/get-started/'),
   },
 ];
@@ -35,7 +35,7 @@ const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
 
 // one card per platform; the whole card links to the platform overview (the sidebar takes it from there)
 const platforms = [
-  { id: 'web', label: 'Web', tech: 'Warp Elements (web components)', icon: 'webcomponentsdotorg' },
+  { id: 'web', label: 'Web', tech: 'WARP Elements (web components)', icon: 'webcomponentsdotorg' },
   { id: 'ios', label: 'iOS', tech: 'SwiftUI', icon: 'apple' },
   { id: 'android', label: 'Android', tech: 'Jetpack Compose', icon: 'android' },
 ].map((p) => {
@@ -105,13 +105,13 @@ const collaborate = [
   },
   {
     text: 'Get help',
-    description: 'Find answers in the FAQ, or reach the Warp team.',
+    description: 'Find answers in the FAQ, or reach the WARP team.',
     href: withBase('/about/help/faq/'),
     icon: 'help',
   },
   {
     text: 'Ask in #warp-design-system',
-    description: 'Talk to the Warp team and other teams on Slack.',
+    description: 'Talk to the WARP team and other teams on Slack.',
     href: SLACK,
     icon: 'slack',
     external: 'Slack, opens in a new tab',
@@ -203,7 +203,7 @@ const collaborate = [
         <p class="eyebrow">Built together</p>
         <h2 id="home-collaborate" class="collaborate-title">Help evolve WARP</h2>
         <p class="collaborate-text">
-          Warp grows with the teams that use it. Every guideline, component request and question makes it better
+          WARP grows with the teams that use it. Every guideline, component request and question makes it better
           for everyone.
         </p>
       </div>

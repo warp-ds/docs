@@ -7,7 +7,7 @@ Navigation bar Liquid Glass style modifiers
 
 ---
 
-# Warp iOS release 0.0.83
+# WARP iOS release 0.0.83
 
 ## 2026-07-02
 

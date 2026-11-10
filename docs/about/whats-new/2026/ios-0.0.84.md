@@ -7,13 +7,13 @@ UITabBar styling helpers
 
 ---
 
-# Warp iOS release 0.0.84
+# WARP iOS release 0.0.84
 
 ## 2026-07-08
 
 #### UITabBar styling helpers
 
-New UIKit helpers for styling `UITabBar` and `UITabBarItem` with Warp design tokens.
+New UIKit helpers for styling `UITabBar` and `UITabBarItem` with WARP design tokens.
 
 ```swift
 // Apply Warp styling globally at app launch

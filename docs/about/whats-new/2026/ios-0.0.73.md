@@ -7,7 +7,7 @@ Scrollable StateViews and new icons
 
 ---
 
-# Warp iOS release 0.0.73
+# WARP iOS release 0.0.73
 
 ## 2026-02-09
 

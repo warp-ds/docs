@@ -119,7 +119,7 @@ If you need to use a one-off padding value, use square brackets to generate a pr
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers. For example, use `hover:py-32` to only apply the `py-32` utility on hover.
+WARP lets you conditionally apply utility classes in different states using variant modifiers. For example, use `hover:py-32` to only apply the `py-32` utility on hover.
 
 ```html
 <div class="py-24 hover:py-32">

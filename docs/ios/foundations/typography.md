@@ -6,7 +6,7 @@ designLanguage: /design-language/typography/
 
 # Typography
 
-Warp text styles are cases of `Warp.Typography`. Each style has a fixed size and weight, uses the brand's typeface, and scales with Dynamic Type.
+WARP text styles are cases of `Warp.Typography`. Each style has a fixed size and weight, uses the brand's typeface, and scales with Dynamic Type.
 
 ## Text styles
 
@@ -68,7 +68,7 @@ Warp.Text("Recently viewed", style: .title3)
 Warp.Text("Delivered to your door", style: .body, color: Warp.Token.textSubtle)
 ```
 
-To use a Warp style on any SwiftUI `Text` or view, use `font(from:)`. It is available on `Text` and on `View`:
+To use a WARP style on any SwiftUI `Text` or view, use `font(from:)`. It is available on `Text` and on `View`:
 
 ```swift
 Text("Price")
@@ -99,7 +99,7 @@ If the brand font is not registered, `uiFont` returns the system font for the ma
 
 ## Dynamic Type
 
-All Warp text styles scale with the user's text size setting:
+All WARP text styles scale with the user's text size setting:
 
 - In SwiftUI, `font` is created with `Font.custom(_:size:relativeTo:)`, using the text style in the table above.
 - In UIKit, `uiFont` is scaled with `UIFontMetrics` for the same text style. Set `adjustsFontForContentSizeCategory` to `true` on labels so they update when the setting changes while the app is running.

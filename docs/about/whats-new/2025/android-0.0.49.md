@@ -7,7 +7,7 @@ Select & Logo component, 16 new icons
 
 ---
 
-# Warp Android release 0.0.49
+# WARP Android release 0.0.49
 
 ## 2025-11-19
 

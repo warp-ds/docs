@@ -7,7 +7,7 @@ Logo component, 16 new icons
 
 ---
 
-# Warp iOS release 0.0.69
+# WARP iOS release 0.0.69
 
 ## 2025-11-20
 

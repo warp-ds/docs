@@ -1,6 +1,6 @@
 > Helper Classes
 
-# Useful Warp Helper Classes
+# Useful WARP Helper Classes
 
 ## Page Container
 

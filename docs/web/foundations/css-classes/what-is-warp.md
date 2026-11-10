@@ -1,5 +1,5 @@
 > Introduction
 
-# What is Warp CSS?
+# What is WARP CSS?
 
-Warp CSS combines utility CSS – popularized by Tailwind – and theming via CSS variables.
+WARP CSS combines utility CSS – popularized by Tailwind – and theming via CSS variables.

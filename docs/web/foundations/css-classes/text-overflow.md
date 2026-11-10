@@ -21,7 +21,7 @@ Use `truncate` to prevent text from wrapping and truncate overflowing text with 
   <example-container>
     <div class="ex-inner-box s-text text-body max-w-full">
       <p class="truncate mb-0">
-        A really long finnish word, that has nothing to do with Warp technology, is
+        A really long finnish word, that has nothing to do with WARP technology, is
         Lentokonesuihkuturbiinimoottoriapumekaanikkoaliupseerioppilas, meaning
         Aeroplane jet turbine motor assistant mechanic non-commissioned officer in training.
       </p>

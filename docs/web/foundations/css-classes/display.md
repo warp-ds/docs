@@ -107,7 +107,7 @@ Use `flex` to create a block-level flex container.
       <img src="/images/matter.jpg" class="h-64 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Justina Matter</div>
-        <span>Warp Scientist</span>
+        <span>WARP Scientist</span>
       </div>
     </div>
   </div>

@@ -66,7 +66,7 @@ Use `resize-none` to prevent an element from being resizable.
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:resize` to only apply the `resize` utility on hover.
 ```html
 <div class="resize-none hover:resize"></div>

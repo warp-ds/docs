@@ -6,11 +6,11 @@ cards:
     href: /web/foundations/css-classes/unocss
     icon: code
   - title: Customization
-    text: How far Warp components can be customised, and how.
+    text: How far WARP components can be customised, and how.
     href: /web/foundations/customization/
     icon: sliders
   - title: Dark mode
-    text: Dark mode in Warp Elements.
+    text: Dark mode in WARP Elements.
     href: /web/foundations/dark-mode/
     icon: moon
   - title: Keyboard navigation
@@ -33,4 +33,4 @@ Web-specific foundations. For colour, typography, elevation, tokens and other de
 
 <NavCards :items="$frontmatter.cards" />
 
-Still on Warp React (legacy)? See [dark mode in Warp React](/web/foundations/dark-mode/react).
+Still on WARP React (legacy)? See [dark mode in WARP React](/web/foundations/dark-mode/react).

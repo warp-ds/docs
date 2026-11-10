@@ -120,7 +120,7 @@ This works for both semantic and arbitrary classes with any primitive `--w-{colo
 Please be advised that by using primitive variables you will lose theming possibilities, therefore we highly recommend only using semantic classes and tokens.
 :::
 
-<example-container class="bg-center bg-[url(../../images/50s-scientists.jpg)]">
+<example-container class="bg-center bg-[url(/docs/images/50s-scientists.jpg)]">
   <div class="flex justify-items-stretch rounded-8 divide-x-8 s-divide-x-primary-subtle/60 w-full mb-24 overflow-hidden">
     <div class="flex-1"><div class="p-24 text-center ex-font-dark s-bg/80 backdrop-blur-m">01</div></div>
     <div class="flex-1"><div class="p-24 text-center ex-font-dark s-bg/80 backdrop-blur-m">02</div></div>

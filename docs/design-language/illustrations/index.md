@@ -1,5 +1,5 @@
 # Illustrations
-Warp currently doesn't provide illustrations. If you need to use them in your work, use the brand-specific illustration libraries linked below.
+WARP currently doesn't provide illustrations. If you need to use them in your work, use the brand-specific illustration libraries linked below.
 
 ## Branded illustrations libraries in Figma
 
@@ -18,9 +18,9 @@ When using illustrations, make sure they look good both in light or dark mode. I
 
 ![An illustration of a bicyclist in light mode and dark mode](/foundations/illustrations_light-dark-mode.svg)
 
-## Using illustrations in Warp components (Figma)
+## Using illustrations in WARP components (Figma)
 
-Some Warp components support the use of illustrations. These components often include an **illustration placeholder**, which you can replace with a brand-specific illustration.
+Some WARP components support the use of illustrations. These components often include an **illustration placeholder**, which you can replace with a brand-specific illustration.
 
 Here's a step-by-step guide on using illustrations:
 
@@ -35,7 +35,7 @@ Here's a step-by-step guide on using illustrations:
   <iframe 
     src="https://www.youtube.com/embed/O3CZ8NxYVS0"
     style="aspect-ratio: 16 / 9; width: 100%;"
-    title="Warp - Add library to working file"
+    title="WARP - Add library to working file"
     frameborder="0"
     allowfullscreen>
   </iframe>
@@ -54,15 +54,15 @@ Brand illustrations won't always match the component placeholder's aspect ratio.
   <iframe 
     src="https://www.youtube.com/embed/JUpMin6Axgg"
     style="aspect-ratio: 16 / 9; width: 100%;"
-    title="Warp - Keep illustration's correct aspect ratio"
+    title="WARP - Keep illustration's correct aspect ratio"
     frameborder="0"
     allowfullscreen>
   </iframe>
 </div>
 
-### Use Instance swap on Warp components
+### Use Instance swap on WARP components
 
-If a Warp component includes an illustration placeholder, you can replace it using Instance swap, without detaching the component.
+If a WARP component includes an illustration placeholder, you can replace it using Instance swap, without detaching the component.
 
 1. Select the component you want to use.
 2. In the right side bar, look for the illustration-related property.
@@ -76,7 +76,7 @@ If a Warp component includes an illustration placeholder, you can replace it usi
   <iframe 
     src="https://www.youtube.com/embed/KwGIfqLbMo8"
     style="aspect-ratio: 16 / 9; width: 100%;"
-    title="Warp - Use Instance swap on Warp components"
+    title="WARP - Use Instance swap on WARP components"
     frameborder="0"
     allowfullscreen>
   </iframe>

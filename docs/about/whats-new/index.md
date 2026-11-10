@@ -7,9 +7,9 @@ import ArticleCard from './ArticleCard.vue'
 import { data } from './posts.data.js'
 </script>
 
-# What's new in Warp
+# What's new in WARP
 
-Release notes, roadmap updates and articles from the Warp Design System team.
+Release notes, roadmap updates and articles from the WARP Design System team.
 
 <ul class="dc-grid">
   <li v-for="article in data" :key="article.url">

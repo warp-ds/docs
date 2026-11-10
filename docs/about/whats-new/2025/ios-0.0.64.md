@@ -6,7 +6,7 @@ date: 2025-09-23
 DatePicker component & Neutral theme
 ---
 
-# Warp iOS release 0.0.64
+# WARP iOS release 0.0.64
 
 ## 2025-09-23
 

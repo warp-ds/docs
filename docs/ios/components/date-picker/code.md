@@ -6,7 +6,7 @@
 
 <FrameworkTabs />
 
-### Warp Style Modifier
+### WARP Style Modifier
 
 The `.warpStyle()` modifier applies brand-specific theming (tint color) to a native SwiftUI `DatePicker`. It must be called directly on the `DatePicker` before any other modifiers.
 

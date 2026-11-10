@@ -7,7 +7,7 @@ New icons and style tokens update
 
 ---
 
-# Warp Android release 0.0.52
+# WARP Android release 0.0.52
 
 ## 2026-01-21
 

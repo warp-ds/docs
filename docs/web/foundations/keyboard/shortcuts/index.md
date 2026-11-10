@@ -4,7 +4,7 @@ designLanguage: /design-language/accessibility/
 
 # Keyboard shortcuts
 
-Some Warp components come with custom keyboard shortcuts.
+Some WARP components come with custom keyboard shortcuts.
 
 To help users discover these shortcuts we show them as popovers in the context of the element they activate, but only if we determine that the user is interacting with the app or page using a keyboard.
 
@@ -12,7 +12,7 @@ To help users discover these shortcuts we show them as popovers in the context o
 
 ### Show keyboard shortcut hints
 
-If you have your own keyboard shortcuts and want to highlight them the same way as Warp, look for the presence of the `data-w-keyboardinteraction` attribute on `<html>` and conditionally show a popover with the keyboard shortcut.
+If you have your own keyboard shortcuts and want to highlight them the same way as WARP, look for the presence of the `data-w-keyboardinteraction` attribute on `<html>` and conditionally show a popover with the keyboard shortcut.
 
 - The keyboard shortcut itself must always be possible to use, not just if we have detected keyboard interaction.
   - Some screen readers, such as JAWS, send `click` events even though the user is behind a keyboard.

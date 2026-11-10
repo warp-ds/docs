@@ -6,7 +6,7 @@ date: 2025-03-11
 Tooltip component & dataviz tokens
 ---
 
-# Warp Android release 0.0.39 
+# WARP Android release 0.0.39 
 
 ## 2025-03-11
 
@@ -36,7 +36,7 @@ WarpToast(
 ```
 
 #### Dataviz color tokens
-- Warp colors now contain dataviz color tokens and can be accessed the same way as any other colors
+- WARP colors now contain dataviz color tokens and can be accessed the same way as any other colors
 ```kotlin
 object DatavizColors : WarpDatavizColors {
     override val chart: WarpDatavizChartColors = DatavizChartColors

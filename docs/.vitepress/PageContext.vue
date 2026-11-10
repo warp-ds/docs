@@ -42,7 +42,7 @@ const crumbs = computed(() => {
   } else if (url.startsWith('/design-language/')) add('Design Language', '/design-language/');
   else if (url.startsWith('/get-started/')) add('Get started', '/get-started/');
   else if (url.startsWith('/about/')) {
-    add('About Warp', '/about/');
+    add('About WARP', '/about/');
     if (url.startsWith('/about/whats-new/')) add("What's new", '/about/whats-new/');
   }
   return out;

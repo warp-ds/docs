@@ -3,7 +3,7 @@ title: 'WARP releases'
 date: 2024-05-21
 ---
 
-Lots of bug fixes and features in Warp Elements and React and 1 tiny breaking change in Warp Vue
+Lots of bug fixes and features in WARP Elements and React and 1 tiny breaking change in WARP Vue
 
 ---
 

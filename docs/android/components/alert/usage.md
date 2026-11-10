@@ -35,7 +35,6 @@ See also [Snackbar](/android/components/snackbar/overview.md), [Box](/android/co
 - **For static supporting content** that is part of the page regardless of state. Use [Box](/android/components/box/overview.md), which groups content without claiming urgency.
 - **To draw attention to a specific element** on screen. Use [Callout](/android/components/callout/overview.md), which points at its target.
 - **To force a decision before the user can continue.** Use [Modal](/android/components/modal/overview.md), which blocks the interface until the user responds.
-- **For site-wide operational messages** fetched from the communication team. Use [Broadcast](/ios/components/broadcast/overview.md).
 - **For a single field's validation error.** Use the error state of [Text field](/android/components/text-field/overview.md) or the relevant input, so the message sits next to the field it belongs to.
 - **For marketing or promotional content.** Alerts signal status. Using one to advertise erodes trust in every other alert.
 
@@ -47,7 +46,7 @@ On web, visibility is controlled by you with the `show` property. The alert rend
 
 - Show the alert as soon as the condition it describes is true, and keep it visible until that condition changes.
 - Do not auto-dismiss an alert on a timer. Users who are reading slowly, using a screen reader, or looking away will miss it. If a message can safely vanish, it should have been a [Snackbar](/android/components/snackbar/overview.md).
-- Warp's Alert has no built-in close button. If you add your own dismiss control, make sure dismissing does not hide something the user still needs — and remember the choice, so the same alert does not reappear on every page load.
+- WARP's Alert has no built-in close button. If you add your own dismiss control, make sure dismissing does not hide something the user still needs — and remember the choice, so the same alert does not reappear on every page load.
 - When an alert appears in response to a user action, move focus to it or to the first field that needs fixing. See [Accessibility](/web/components/alert/accessibility.md).
 
 ### Variants

@@ -2,7 +2,7 @@
 designLanguage: /design-language/dark-mode/
 ---
 
-# Dark mode in Warp Elements
+# Dark mode in WARP Elements
 
 WARP offers light and dark mode for all supported brands.
 

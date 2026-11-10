@@ -76,7 +76,7 @@ Use `transform-cpu` to force things back to the CPU if you need to undo this con
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use hover:rotate-45 to only apply the rotate-45 utility on hover.
 
 ```html

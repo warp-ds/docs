@@ -36,6 +36,6 @@ Use snackbars for success confirmations, process status updates, non-critical wa
 
 ## Example
 
-See [more examples on the Elements page](/android/components/snackbar/code.md#examples).
+See more examples on the [Code page](/android/components/snackbar/code.md).
 
 <component-questions />

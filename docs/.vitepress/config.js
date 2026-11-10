@@ -64,10 +64,40 @@ function itemDescription(srcDir, relativePath) {
   return itemDescriptions.get(dir).text;
 }
 
+// Prev/next on platform pages, from the page's own sidebar tree (as VitePress would), but item tabs are labelled
+// with the item name: VitePress uses the sidebar text alone, so "Previous page: Code" could be any component.
+const ITEM_TAB_LINK = /^\/(?:web|ios|android)\/(?:components|patterns)\/[^/]+\/[^/]+$/;
+const flatSidebars = {};
+
+function flattenSidebar(items, parent, out = []) {
+  for (const entry of items) {
+    if (entry.link) {
+      const link = entry.link.replace(/\.md$/, '');
+      out.push({ link, text: parent && ITEM_TAB_LINK.test(link) ? `${parent} › ${entry.text}` : entry.text });
+    }
+    if (entry.items) flattenSidebar(entry.items, entry.text, out);
+  }
+  return out;
+}
+
+function setPrevNext(pageData) {
+  const m = pageData.relativePath.match(/^(web|ios|android)\/(patterns\/)?/);
+  if (!m) return;
+  const key = `${m[1]}${m[2] ? '-patterns' : ''}`;
+  flatSidebars[key] ??= flattenSidebar(m[2] ? patternSidebars[m[1]] : platformSidebars[m[1]]);
+  const list = flatSidebars[key];
+  const link = `/${pageData.relativePath.replace(/(^|\/)index\.md$/, '$1').replace(/\.md$/, '')}`;
+  const i = list.findIndex((entry) => entry.link === link);
+  if (i < 0) return;
+  const fm = pageData.frontmatter;
+  if (fm.prev === undefined && list[i - 1]) fm.prev = { text: list[i - 1].text, link: list[i - 1].link };
+  if (fm.next === undefined && list[i + 1]) fm.next = { text: list[i + 1].text, link: list[i + 1].link };
+}
+
 export default defineConfig({
   lang: 'en',
-  title: 'Warp Design System',
-  description: 'Documentation for Warp Design System',
+  title: 'WARP Design System',
+  description: 'Documentation for WARP Design System',
   lastUpdated: false,
   cleanUrls: true,
   sitemap: {
@@ -169,8 +199,8 @@ export default defineConfig({
     outline: 'deep',
     socialLinks: [{ icon: 'github', link: 'https://github.com/warp-ds' }],
     nav: [
-      { text: 'Changelog', link: '/about/whats-new/', activeMatch: '^/about/whats-new/' },
-      { text: 'About DS', link: '/design-language/about/' },
+      { text: "What's new", link: '/about/whats-new/', activeMatch: '^/about/whats-new/' },
+      { text: 'Mission and principles', link: '/design-language/about/' },
     ],
     // Each page gets the tree it belongs to (keeps prev/next and active state native).
     // SidebarComposer.vue adds the shared sections, the Platform switcher and the other tree.
@@ -185,6 +215,15 @@ export default defineConfig({
     },
   },
   transformPageData(pageData, { siteConfig }) {
+    setPrevNext(pageData);
+    // What's new posts: PostHeader.vue shows the date, and the frontmatter title when the post has no H1 of its own
+    if (/^about\/whats-new\/\d{4}\//.test(pageData.relativePath)) {
+      const body = readFileSync(join(siteConfig.srcDir, pageData.relativePath), 'utf8').replace(
+        /^---[\s\S]*?\n---/,
+        '',
+      );
+      pageData.frontmatter.postHasTitle = /^#\s/m.test(body.replace(/```[\s\S]*?```/g, ''));
+    }
     const item = itemPage(pageData.relativePath);
     if (item && pageData.title && !pageData.frontmatter.title) {
       pageData.title = `${pageData.title} · ${item.kind} · ${item.platform}`;

@@ -15,17 +15,17 @@ const LABELS = { web: 'Web', ios: 'iOS', android: 'Android' };
 
 const COPY = {
   web: {
-    start: 'Install Warp Elements, then set up styles, fonts and the brand theme.',
+    start: 'Install WARP Elements, then set up styles, fonts and the brand theme.',
     foundation: 'CSS classes, customization, dark mode, keyboard support and font weights.',
     components: 'Overview, usage, code and accessibility for every web component.',
   },
   ios: {
-    start: 'Add the Warp Swift package to your app and set the brand theme.',
+    start: 'Add the WARP Swift package to your app and set the brand theme.',
     foundation: 'Theming, tokens, typography, spacing, shape and elevation in SwiftUI.',
     components: 'Design and code guidance for every SwiftUI component.',
   },
   android: {
-    start: 'Add the Warp library to your app and set the brand theme.',
+    start: 'Add the WARP library to your app and set the brand theme.',
     foundation: 'Theming, tokens, typography and elevation in Jetpack Compose.',
     components: 'Design and code guidance for every Compose component.',
   },
@@ -62,7 +62,7 @@ const cards = computed(() => {
       ? {
           icon: 'patterns',
           title: 'Patterns',
-          text: 'Guidance for recurring user tasks, built from Warp components.',
+          text: 'Guidance for recurring user tasks, built from WARP components.',
           href: `/${p}/patterns/`,
           meta: plural(patterns, 'pattern'),
         }

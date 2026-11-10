@@ -6,13 +6,13 @@ date: 2024-11-19
 WarpIcon component & localization
 ---
 
-# Warp Android release 0.0.34 
+# WARP Android release 0.0.34 
 
 ## 2024-11-19
 
 ### WarpIcon component
 
-WarpIcon now available in Warp android! This component provides the icon including content descriptions for all brands.
+WarpIcon now available in WARP android! This component provides the icon including content descriptions for all brands.
 Can be created from an identifier string or a WarpIconResource
 
 ```kotlin example

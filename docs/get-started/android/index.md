@@ -1,18 +1,22 @@
+---
+needsReview: true
+---
+
 
 # Get started for Android developers
 
-This page describes how to get started building an application with Warp components.
+This page describes how to get started building an application with WARP components.
 
-If you have any questions or need clarification, please don't hesitate to reach out to the Warp team on the [#warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) channel on Slack!
+If you have any questions or need clarification, please don't hesitate to reach out to the WARP team on the [#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV) channel on Slack!
 
 
-## 1. Integrate Warp
+## 1. Integrate WARP
 
-A guide on how to integrate Warp into your project.
+A guide on how to integrate WARP into your project.
 
 ### Gradle
 
-Warp is used together with a brand theme and should be installed for a specific flavor of the code. Supported brands: Finn, Tori, DBA, Blocket, Vend and Neutral (see [Theming](/android/foundations/theming.md)).
+WARP is used together with a brand theme and should be installed for a specific flavor of the code. Supported brands: Finn, Tori, DBA, Blocket, Vend and Neutral (see [Theming](/android/foundations/theming.md)).
 
 ```groovy
 implementation("com.schibsted.nmp.warp:warp-android:0.0.27")
@@ -28,7 +32,7 @@ dbaImplementation("com.schibsted.nmp.warp:warp-android-dba:0.0.27")
 
 
 ## 2. Apply theme
-To start using Warp you must first initialize the theme depending on the selected flavor of the code. There should be a file like this for each flavor and this file should live in the flavor specific code package. This applies only to compose. To use legacy components in xml see [legacy support](#legacy-support).
+To start using WARP you must first initialize the theme depending on the selected flavor of the code. There should be a file like this for each flavor and this file should live in the flavor specific code package. This applies only to compose. To use legacy components in xml see [legacy support](#legacy-support).
 
 ```kotlin
 
@@ -39,8 +43,8 @@ fun WarpNmpTheme(content: @Composable () -> Unit) {
 }
 ```
 
-## 3. Use Warp components
-Use the composable theme which you initiated earlier to be able to use Warp components. The selected flavor of the code will give it the correct colors and styling. 
+## 3. Use WARP components
+Use the composable theme which you initiated earlier to be able to use WARP components. The selected flavor of the code will give it the correct colors and styling. 
 
 ```kotlin exmaple
 @Composable
@@ -69,7 +73,7 @@ fun MainScreen() {
 }
 ```
 ### Legacy support
-All Warp components have xml support to be able to use Warp with legacy layouts. Use Warp components as any other custom View components.
+All WARP components have xml support to be able to use WARP with legacy layouts. Use WARP components as any other custom View components.
 
 To be able to apply the correct styling to legacy components it is required to use Koin dependency injection. You will need to integrate Koin into your project (unless it already is there).
 

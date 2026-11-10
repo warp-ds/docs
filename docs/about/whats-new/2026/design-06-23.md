@@ -1,5 +1,5 @@
 ---
-title: 'Warp Figma Updates'
+title: 'WARP Figma Updates'
 date: 2026-06-23
 
 ---
@@ -8,11 +8,11 @@ Added 8 new icons & new Snackbar component
 
 ---
 
-# Warp Figma updates
+# WARP Figma updates
 
-## Warp Figma icon library update
+## WARP Figma icon library update
   
-We’ve added a new batch of icons to the Warp icon library that is now available in Figma as well as in code on all platforms.
+We’ve added a new batch of icons to the WARP icon library that is now available in Figma as well as in code on all platforms.
 What’s new:
 - File
 - FileText

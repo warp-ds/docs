@@ -161,7 +161,7 @@ Use the `snap-end` utility to snap an element to its end when being scrolled ins
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:snap-start` to only apply the `snap-start` utility on hover.
 
 ```html

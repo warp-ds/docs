@@ -7,7 +7,7 @@ Blocket font update & Divider component
 
 ---
 
-# Warp Android release 0.0.48
+# WARP Android release 0.0.48
 
 ## 2025-10-21
 

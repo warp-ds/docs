@@ -1,3 +1,7 @@
+---
+seeded: true
+---
+
 # Empty states
 
 <ComponentsStatus />
@@ -13,7 +17,7 @@ Empty states can occur for different reasons. This component includes variants f
 
 **Don't use for**
 - Global system messaging (e.g., system maintenance coming up). Use the [Alert](/android/components/alert/overview.md) instead.
-- Feedback messaging (e.g., address saved to favourites). Use the [Toast](/android/components/snackbar/overview.md) instead.
+- Feedback messaging (e.g., address saved to favourites). Use the [Snackbar](/android/components/snackbar/overview.md) instead.
 
 ## Types of empty states
 
@@ -78,7 +82,7 @@ Empty states can include icons or illustrations to help communicate the message.
 ### Illustrations
 
 - Use imagery thoughtfully. Metaphors or objects may not translate across all cultures or languages.
-Illustrations are currently not provided by Warp, but can be added by product teams using their own assets. [See available branded illustration libraries here](https://warp-ds.github.io/docs/foundations/illustrations/#branded-illustration-libraries-in-figma).
+Illustrations are currently not provided by WARP, but can be added by product teams using their own assets. [See available branded illustration libraries here](https://warp-ds.github.io/docs/foundations/illustrations/#branded-illustration-libraries-in-figma).
 - Use illustrations at the default size of <code>200×200px</code>.
 - Don't use other illustration sizes or distort proportions.
 
@@ -115,7 +119,7 @@ When creating a custom empty state:
 - Keep layout and spacing aligned with existing variants.
 - Use system tokens for colour, typography, and iconography.
 
-These foundations should work out of the box but, if you need further guidance, reach out to the Warp team on Slack ([#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)).
+These foundations should work out of the box but, if you need further guidance, reach out to the WARP team on Slack ([#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV)).
 
 ## Behavior
 The only required element in the Empty state component is the title, which uses the <code>T3</code> heading token. All other elements are optional and should be included based on the use case.

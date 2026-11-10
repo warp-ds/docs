@@ -58,7 +58,7 @@ Specify an element’s transform origin using the `origin-{keyword}` utilities.
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:origin-top` to only apply the `origin-top` utility on hover.
 
 ```html

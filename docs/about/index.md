@@ -1,5 +1,5 @@
 ---
-title: About Warp
+title: About WARP
 help:
   - title: FAQ
     text: Answers to the questions we hear most often.
@@ -9,12 +9,12 @@ help:
     text: Who to contact, and where, when you need help.
     href: /about/help/support/
     icon: support
-  - title: Doc authoring guide
+  - title: WARP Docs content guideline
     text: How to write and contribute to these docs.
     href: /about/help/authoring-guide/
     icon: edit
   - title: Request a new component
-    text: Propose a component that Warp does not have yet.
+    text: Propose a component that WARP does not have yet.
     href: /about/help/requests/new-component/
     icon: request
   - title: Request component changes
@@ -34,15 +34,15 @@ news:
     text: Which components are documented on Web, iOS and Android.
     href: /about/platform-coverage
     icon: coverage
-  - title: About the design system
-    text: What Warp is and why it exists.
+  - title: Mission and principles
+    text: What WARP is and why it exists.
     href: /design-language/about/
     icon: mission
 ---
 
-# About Warp
+# About WARP
 
-Help, contribution and news about the Warp Design System.
+Help, contribution and news about the WARP Design System.
 
 ## Help and contribution
 

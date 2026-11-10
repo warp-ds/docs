@@ -101,7 +101,7 @@ Moving focus is often more reliable than announcing, and it helps sighted keyboa
 ## Keyboard interaction
 
 - Keep the DOM order the same as the visual order, so tabbing follows what users see.
-- Every link and button in the alert must show a visible focus indicator. Warp components handle this — do not remove the outline.
+- Every link and button in the alert must show a visible focus indicator. WARP components handle this — do not remove the outline.
 - Do not attach a click handler to the alert container. A click target that is not a button or link cannot be reached by keyboard at all.
 
 ## Screen reader considerations
@@ -119,7 +119,7 @@ Moving focus is often more reliable than announcing, and it helps sighted keyboa
 
 - Text inside the alert must meet at least **4.5:1** against the alert surface, or **3:1** for large text (18.66px bold, or 24px and above).
 - Links, buttons, and the status icon need at least **3:1** against the surface.
-- Use the Warp alert tokens as they are. The surfaces are defined per brand and per theme, so a hard-coded text or border colour that passes in one brand or in light mode can fail in another.
+- Use the WARP alert tokens as they are. The surfaces are defined per brand and per theme, so a hard-coded text or border colour that passes in one brand or in light mode can fail in another.
 - Do not place an alert on a custom background. The variant surfaces are designed against the standard page background.
 
 ### Colour independence
@@ -186,7 +186,7 @@ What this means in practice:
 
 The web alert **does** animate. Showing or hiding it runs an expand or collapse height transition on the wrapper.
 
-That transition does **not** respect `prefers-reduced-motion`, even though other Warp elements do. If reduced motion matters for your surface, you currently have to suppress the animation yourself or avoid toggling `show` on content that moves a lot of the page.
+That transition does **not** respect `prefers-reduced-motion`, even though other WARP elements do. If reduced motion matters for your surface, you currently have to suppress the animation yourself or avoid toggling `show` on content that moves a lot of the page.
 
 Never make the alert flash or pulse to attract attention — content that flashes more than three times per second is a WCAG failure and can trigger seizures.
 

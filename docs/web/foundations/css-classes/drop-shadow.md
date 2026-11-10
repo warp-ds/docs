@@ -22,19 +22,19 @@ Use the `drop-shadow-s`, `drop-shadow-m`, `drop-shadow-l`, `drop-shadow-xl` util
   <div class="grid md:grid-cols-4 grid-cols-2 justify-items-center gap-24 my-8">
     <div class="flex flex-col items-center shrink-0">
       <h4 class="ex-heading">drop-shadow-s</h4>
-      <img class="w-96 drop-shadow-s" src="/warp-logo-small.svg" alt="Warp logo with a small drop shadow" />
+      <img class="w-96 drop-shadow-s" src="/warp-logo-small.svg" alt="WARP logo with a small drop shadow" />
     </div>
     <div class="flex flex-col items-center shrink-0">
       <h4 class="ex-heading">drop-shadow-m</h4>
-      <img class="w-96 drop-shadow-m" src="/warp-logo-small.svg" alt="Warp logo with a medium drop shadow" />
+      <img class="w-96 drop-shadow-m" src="/warp-logo-small.svg" alt="WARP logo with a medium drop shadow" />
     </div>
     <div class="flex flex-col items-center shrink-0">
       <h4 class="ex-heading">drop-shadow-l</h4>
-      <img class="w-96 drop-shadow-l" src="/warp-logo-small.svg" alt="Warp logo with a large drop shadow" />
+      <img class="w-96 drop-shadow-l" src="/warp-logo-small.svg" alt="WARP logo with a large drop shadow" />
     </div>
     <div class="flex flex-col items-center shrink-0">
       <h4 class="ex-heading">drop-shadow-xl</h4>
-      <img class="w-96 drop-shadow-xl" src="/warp-logo-small.svg" alt="Warp logo with an extra large drop shadow" />
+      <img class="w-96 drop-shadow-xl" src="/warp-logo-small.svg" alt="WARP logo with an extra large drop shadow" />
     </div>
   </div>
 </example-container>

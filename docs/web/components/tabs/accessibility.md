@@ -9,7 +9,7 @@ Tabs hide most of their content. Everything that isn't in the selected panel is 
 1. **Never hide something essential behind an unselected tab.** If a user has to find the right tab to discover that an action exists, the interface has failed before the tab is even used.
 2. **The tab set must be operable end to end from the keyboard.** Arrow keys, not just <kbd>Tab</kbd>.
 
-Warp implements the [WAI-ARIA Tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) for you. Roles, selection state, panel association, and keyboard navigation are handled by the component — you mostly need to avoid undoing them.
+WARP implements the [WAI-ARIA Tabs pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tabs/) for you. Roles, selection state, panel association, and keyboard navigation are handled by the component — you mostly need to avoid undoing them.
 
 ## ARIA
 
@@ -98,7 +98,7 @@ Each tab is announced with its label, its role, its selected state, and its posi
 
 ## Touch and click targets
 
-| Platform | Minimum | Warp tabs |
+| Platform | Minimum | WARP tabs |
 | --- | --- | --- |
 | Web | 44×44px | Tab height comes from 16px top padding, 8px bottom padding, and the 4px indicator around the label — comfortably above the 24×24px WCAG 2.2 AA minimum |
 | Android | 48×48dp | `WarpTabRow` is 48dp tall |
@@ -118,7 +118,7 @@ Width is the more common failure. A one-word tab like "Map" is narrow, and narro
 | Selected label | `--w-s-color-text-link` | 4.5:1 (text) |
 | Active indicator | `--w-s-color-border-selected` | 3:1 (non-text) |
 
-Every Warp theme meets or exceeds these ratios against its own background, in both light and dark mode. The margin is narrowest on the selected label, so don't override these tokens with hard-coded colours — tab labels are small text, and there's less headroom than a single brand's numbers would suggest.
+Every WARP theme meets or exceeds these ratios against its own background, in both light and dark mode. The margin is narrowest on the selected label, so don't override these tokens with hard-coded colours — tab labels are small text, and there's less headroom than a single brand's numbers would suggest.
 
 **Colour independence** — the selected tab is marked by the underline *and* the colour change, so it survives greyscale and colour-vision differences. If you restyle tabs, keep a non-colour signal.
 

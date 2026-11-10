@@ -31,7 +31,7 @@ Use links when you want users to:
 
 - Supports internal and external links.
 - Supports different interactive states to signal interactivity.
-- Links receive Warp’s global focus indicator styling when navigating with a keyboard.
+- Links receive WARP’s global focus indicator styling when navigating with a keyboard.
 
 ## Interaction
 
@@ -41,7 +41,7 @@ Use links when you want users to:
 | ------------ | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
 | **Default**  | Default colour with optional underline based on use case.                           | No underline; styled with default color.                                  |
 | **Hover**    | Pointer cursor appears and text link underline toggles depending on use case.       | Pointer cursor appears and underline disappear to indicate interactivity. |
-| **Focus**    | Warp focus indicator appears and text link underline toggles depending on use case. | System-native focus indicator (if applicable).                            |
+| **Focus**    | WARP focus indicator appears and text link underline toggles depending on use case. | System-native focus indicator (if applicable).                            |
 | **Active**   | Maintains Hover state behavior.                                                     | Maintains Hover state behavior. Haptic feedback (if applicable).          |
 | **Visited**  | Same as Default state behavior.                                                     | N/A                                                                       |
 | **Disabled** | N/A                                                                                 | N/A                                                                       |

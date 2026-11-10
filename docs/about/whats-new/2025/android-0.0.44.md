@@ -6,7 +6,7 @@ date: 2025-06-25
 Slider & updated regular icons
 ---
 
-# Warp Android release 0.0.44
+# WARP Android release 0.0.44
 
 ## 2025-06-25
 

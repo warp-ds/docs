@@ -7,7 +7,7 @@ New Alert components, theme environment tokens and icons
 
 ---
 
-# Warp iOS release 0.0.85
+# WARP iOS release 0.0.85
 
 ## 2026-08-24
 
@@ -35,7 +35,7 @@ Warp.Alert(
 
 #### Alert dialog (native modal)
 
-New `.warpAlert()` modifier presents a native iOS alert dialog with Warp-styled actions. Supports an optional custom content view (e.g. `TextField`) above the action buttons.
+New `.warpAlert()` modifier presents a native iOS alert dialog with WARP-styled actions. Supports an optional custom content view (e.g. `TextField`) above the action buttons.
 
 ```swift
 // Basic usage
@@ -66,7 +66,7 @@ someView
 
 #### Theme environment tokens
 
-Warp token and UIToken providers are now accessible directly from the injected `warpTheme` environment value (`Warp.Brand`), enabling environment-safe token access without the global `Warp.Token`.
+WARP token and UIToken providers are now accessible directly from the injected `warpTheme` environment value (`Warp.Brand`), enabling environment-safe token access without the global `Warp.Token`.
 
 ```swift
 struct MyView: View {
@@ -81,7 +81,7 @@ struct MyView: View {
 
 #### Context menu and Menu components
 
-New `Warp.Menu`, `Warp.MenuButton`, and `.warpMenuButton(style:)` modifier for SwiftUI menus and context menus with Warp icon and token support.
+New `Warp.Menu`, `Warp.MenuButton`, and `.warpMenuButton(style:)` modifier for SwiftUI menus and context menus with WARP icon and token support.
 
 ```swift
 Warp.Menu("Actions") {

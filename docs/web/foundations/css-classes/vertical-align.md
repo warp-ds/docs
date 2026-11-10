@@ -28,7 +28,7 @@ Use `align-baseline` to align the baseline of an element with the baseline of it
       <span class="inline-block align-baseline text-xxl mr-10 leading-none">
         <span class="absolute -mx-8 inset-x-0 top-1 bottom-4 pd-border-pink-300 border-y-1 border-dashed"></span>
         <span class="absolute -mx-8 top-0 h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
-        <span class="relative z-20">Warp</span>
+        <span class="relative z-20">WARP</span>
       </span>
       <span class="relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
@@ -48,7 +48,7 @@ Use `align-top` to align the top of an element and its descendants with the top 
       <span class="inline-block align-top text-xxl mr-10 leading-none">
         <span class="absolute -mx-8 inset-x-0 top-1 bottom-4 pd-border-pink-300 border-y-1 border-dashed"></span>
         <span class="absolute -mx-8 top-0 h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
-        <span class="relative z-20">Warp</span>
+        <span class="relative z-20">WARP</span>
       </span>
       <span class="relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
@@ -64,7 +64,7 @@ Use `align-middle` to align the middle of an element with the baseline plus half
       <span class="inline-block align-middle text-xxl mr-10 leading-none">
         <span class="absolute -mx-8 inset-x-0 top-1 bottom-4 pd-border-pink-300 border-y-1 border-dashed"></span>
         <span class="absolute -mx-8 top-0 h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
-        <span class="relative z-20">Warp</span>
+        <span class="relative z-20">WARP</span>
       </span>
       <span class="relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
@@ -80,7 +80,7 @@ Use `align-bottom` to align the bottom of an element and its descendants with th
       <span class="inline-block align-bottom text-xxl mr-10 leading-none">
         <span class="absolute -mx-8 inset-x-0 top-1 bottom-4 pd-border-pink-300 border-y-1 border-dashed"></span>
         <span class="absolute -mx-8 top-0 h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
-        <span class="relative z-20">Warp</span>
+        <span class="relative z-20">WARP</span>
       </span>
       <span class="relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
@@ -96,7 +96,7 @@ Use `align-text-top` to align the top of an element with the top of the parent e
       <span class="inline-block align-text-top text-xxl mr-10 leading-none">
         <span class="absolute -mx-8 inset-x-0 top-1 bottom-4 pd-border-pink-300 border-y-1 border-dashed"></span>
         <span class="absolute -mx-8 top-0 h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
-        <span class="relative z-20">Warp</span>
+        <span class="relative z-20">WARP</span>
       </span>
       <span class="relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
@@ -112,7 +112,7 @@ Use `align-text-bottom` to align the bottom of an element with the bottom of the
       <span class="inline-block align-text-bottom text-xxl mr-10 leading-none">
         <span class="absolute -mx-8 inset-x-0 top-1 bottom-4 pd-border-pink-300 border-y-1 border-dashed"></span>
         <span class="absolute -mx-8 top-0 h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
-        <span class="relative z-20">Warp</span>
+        <span class="relative z-20">WARP</span>
       </span>
       <span class="relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
@@ -129,7 +129,7 @@ Use `align-sub` to align the bottom of an element with the subscript-baseline of
         <span class="absolute inset-x-0 top-0 bottom-8 pd-border-pink-300 border-y-1 border-dashed"></span>
         <span class="absolute h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
       </div>
-      <span class="inline-block mr-4 relative z-20 leading-none">Warp</span>
+      <span class="inline-block mr-4 relative z-20 leading-none">WARP</span>
       <span class="align-sub text-body relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
   </div>
@@ -143,7 +143,7 @@ Use `align-super` to align the bottom of an element with the superscript-baselin
     <div class="relative text-xxl leading-none">
       <span class="absolute -mx-8 inset-x-0 top-1 bottom-4 pd-border-pink-300 border-y-1 border-dashed"></span>
       <span class="absolute -mx-8 top-0 h-16 inset-x-0 pd-border-pink-300 border-b border-dashed"></span>
-      <span class="inline-block mr-4 relative z-20 leading-none">Warp</span>
+      <span class="inline-block mr-4 relative z-20 leading-none">WARP</span>
       <span class="align-super text-body relative z-20">The quick smart warp scientist drinks the hazy coffee.</span>
     </div>
   </div>

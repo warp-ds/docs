@@ -1,3 +1,7 @@
+---
+seeded: true
+---
+
 # Text
 
 <ComponentsStatus />

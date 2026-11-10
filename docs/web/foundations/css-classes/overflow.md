@@ -35,7 +35,7 @@ Use `overflow-visible` to prevent content within an element from being clipped. 
       <img src="/images/matter.jpg" class="absolute object-cover h-128 -ml-48 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div class="pl-112">
         <div class="font-bold">Justina Matter</div>
-        <span>Warp Scientist</span>
+        <span>WARP Scientist</span>
       </div>
     </div>
   </div>
@@ -54,7 +54,7 @@ Use `overflow-hidden` to clip any content within an element that overflows the b
       <img src="/images/matter.jpg" class="absolute object-cover h-128 -ml-48 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div class="pl-112">
         <div class="font-bold">Justina Matter</div>
-        <span>Warp Scientist</span>
+        <span>WARP Scientist</span>
       </div>
     </div>
   </div>
@@ -73,28 +73,28 @@ Use `overflow-auto` to add scrollbars to an element in the event that its conten
       <img src="/images/matter.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Justina Matter</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
     <div class="flex items-center p-16">
       <img src="/images/profile1.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Narve Hoops</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
     <div class="flex items-center p-16">
       <img src="/images/profile5.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Dagny Calamity</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
     <div class="flex items-center p-16">
       <img src="/images/profile2.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Joar Quack</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
   </div>
@@ -149,28 +149,28 @@ Use `overflow-y-scroll` to allow vertical scrolling and always show scrollbars u
       <img src="/images/matter.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Justina Matter</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
     <div class="flex items-center p-16">
       <img src="/images/profile1.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Narve Hoops</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
     <div class="flex items-center p-16">
       <img src="/images/profile5.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Dagny Calamity</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
     <div class="flex items-center p-16">
       <img src="/images/profile2.jpg" class="object-cover h-48 mr-16 rounded-full" alt="AI generated picture of 1950s scientists working on a warp drive" />
       <div>
         <div class="font-bold">Joar Quack</div>
-        Warp Scientist
+        WARP Scientist
       </div>
     </div>
   </div>

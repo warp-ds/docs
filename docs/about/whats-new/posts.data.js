@@ -2,24 +2,16 @@ import { createContentLoader } from 'vitepress';
 
 const base = '/docs';
 
+// Only what the What's new index shows (title, date, excerpt, link): the full posts are not shipped to the browser.
 export default createContentLoader('/about/whats-new/*/*.md', {
-  includeSrc: true, // include raw markdown source?
-  render: true, // include rendered full page HTML?
-  excerpt: true, // include excerpt?
+  excerpt: true,
   transform(rawData) {
-    // map, sort, or filter the raw data as you wish.
-    // the final result is what will be shipped to the client.
     return rawData
-      .sort((a, b) => {
-        return +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date);
-      })
+      .sort((a, b) => +new Date(b.frontmatter.date) - +new Date(a.frontmatter.date))
       .map((page) => ({
-        ...page,
-        frontmatter: {
-          ...page.frontmatter,
-          search: false,
-        },
         url: `${base}${page.url}`,
+        excerpt: page.excerpt,
+        frontmatter: { title: page.frontmatter.title, date: page.frontmatter.date },
       }));
   },
 });

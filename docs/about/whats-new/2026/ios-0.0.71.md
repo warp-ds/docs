@@ -7,7 +7,7 @@ New icons and style tokens update
 
 ---
 
-# Warp iOS release 0.0.71
+# WARP iOS release 0.0.71
 
 ## 2026-01-20
 

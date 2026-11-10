@@ -6,7 +6,7 @@ date: 2025-04-04
 Range Slider & compose update
 ---
 
-# Warp Android release 0.0.40 
+# WARP Android release 0.0.40 
 
 ## 2025-04-04
 

@@ -1,3 +1,7 @@
+---
+pendingReview: true
+---
+
 # Confirmation dialog
 
 <ComponentsStatus />
@@ -39,7 +43,7 @@ The system always provides a Cancel button. On iPhone it is the last item in the
 
 ### Destructive actions
 
-Mark actions that permanently delete, remove, or reset data as `.destructive`. Warp renders their label in the negative text colour, and they use SwiftUI's destructive button role. Place destructive actions above Cancel but below any non-destructive alternatives, so the user sees safe options first.
+Mark actions that permanently delete, remove, or reset data as `.destructive`. WARP renders their label in the negative text colour, and they use SwiftUI's destructive button role. Place destructive actions above Cancel but below any non-destructive alternatives, so the user sees safe options first.
 
 ### Title and message
 

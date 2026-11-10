@@ -6,7 +6,7 @@ date: 2025-09-23
 Datepicker & Neutral brand
 ---
 
-# Warp Android release 0.0.46
+# WARP Android release 0.0.46
 
 ## 2025-09-23
 

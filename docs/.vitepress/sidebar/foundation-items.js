@@ -151,7 +151,7 @@ export const foundationItems = [
     link: '/design-language/dark-mode/',
     items: [
       {
-        text: 'Dark mode in Warp',
+        text: 'Dark mode in WARP',
         link: '/design-language/dark-mode/',
       },
       {

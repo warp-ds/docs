@@ -47,7 +47,7 @@ Use the `outline-offset-{size}` utilities to set the outline offset for an eleme
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:outline-offset-4` to only apply the `outline-offset-4` utility on hover.
 
 ```html

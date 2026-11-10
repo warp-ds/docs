@@ -71,7 +71,7 @@ Use `pointer-events-none` to make an element ignore pointer events. The pointer 
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `focus:pointer-events-auto` to only apply the `pointer-events-auto` utility on focus.
 
 ```html

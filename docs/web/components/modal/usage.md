@@ -8,14 +8,6 @@ Modals is a pattern where we display a view on top of the current page. The most
 Often seen use cases are for example:  ‘app intro slides’ or ‘payment flows’.
 
 ## Open modal
-### iOS: ‘Slide in’
-A fast transition that pushes the new screen on top of your current screen, from the bottom to the top. Open your Messages app and hit the compose button in the top right corner to see how it works.
-LINK
-
-### Android
-Quite similar to how it is handled on iOS, except the way the content itself animates.See examples here:
-LINK
-
 ### Mobile Web
 Normal behaviour would be to slide up a new view on top of the current but with a transparent black layer in the back that animates in quickly together with the modal itself.
 
@@ -23,14 +15,6 @@ Normal behaviour would be to slide up a new view on top of the current but with 
 Normal behaviour for a bottom sheet when translated from mobile web to desktop web would be to open a “modal box” centered on the screen on top of the current screen with a shadow (transparent black layer) in between, as full screen modals does not work well on big screens.
 
 ## Close modal
-### iOS: ‘Slide out’
-Similar to how it animates in, just reversed when it slides out again.
-LINK
-
-### Android
-Similar to how it animates in, just reversed when it slides out again.
-LINK
-
 ### Mobile Web
 Similar to how it animates in, just reversed when it slides out again.
 

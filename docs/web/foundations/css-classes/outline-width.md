@@ -49,7 +49,7 @@ Use the `outline-{size}` utilities to set the outline width for an element.
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:outline-4` to only apply the `outline-4` utility on hover.
 
 ```html

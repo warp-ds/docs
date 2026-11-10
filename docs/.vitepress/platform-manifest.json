@@ -292,7 +292,8 @@
       },
       "spinner": {
         "title": "Spinner",
-        "pages": ["overview", "code"]
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
       },
       "steps": {
         "title": "Steps",
@@ -311,7 +312,8 @@
       },
       "text": {
         "title": "Text",
-        "pages": ["overview", "code"]
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
       },
       "text-area": {
         "title": "Text area",
@@ -338,7 +340,8 @@
     "patterns": {
       "empty-states": {
         "title": "Empty states",
-        "pages": ["overview", "usage", "code", "accessibility"]
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "seeded": ["overview", "usage", "accessibility"]
       }
     },
     "foundations": [
@@ -476,7 +479,8 @@
       },
       "spinner": {
         "title": "Spinner",
-        "pages": ["overview", "code"]
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
       },
       "steps": {
         "title": "Steps",
@@ -495,7 +499,8 @@
       },
       "text": {
         "title": "Text",
-        "pages": ["overview", "code"]
+        "pages": ["overview", "code"],
+        "seeded": ["overview"]
       },
       "text-field": {
         "title": "Text field",
@@ -517,7 +522,8 @@
     "patterns": {
       "empty-states": {
         "title": "Empty states",
-        "pages": ["overview", "usage", "code", "accessibility"]
+        "pages": ["overview", "usage", "code", "accessibility"],
+        "seeded": ["overview", "usage", "accessibility"]
       }
     },
     "foundations": [
@@ -568,12 +574,12 @@
       {
         "platform": "web",
         "url": "/web/foundations/dark-mode/",
-        "title": "Dark mode in Warp Elements"
+        "title": "Dark mode in WARP Elements"
       },
       {
         "platform": "web",
         "url": "/web/foundations/dark-mode/react",
-        "title": "Dark mode in Warp React"
+        "title": "Dark mode in WARP React"
       }
     ],
     "/design-language/elevation/": [

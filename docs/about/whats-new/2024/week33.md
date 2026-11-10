@@ -72,7 +72,7 @@ Be sure to include the React import map first.
 }
 ```
 
-While we no longer officially support React v17, in order to buy yourself time to migrate to React v18, you can add the Warp legacy map for interrim support.
+While we no longer officially support React v17, in order to buy yourself time to migrate to React v18, you can add the WARP legacy map for interrim support.
 When React v19 is released, React v17 support will be dropped entirely.
 Map order is important.
 
@@ -143,7 +143,7 @@ The following properties have been removed:
 The following exported objects/classes have either been removed or renamed:
 
 ::: tip Important Note
-If you are using the Warp components correctly, then you should not be affected by the following changes.
+If you are using the WARP components correctly, then you should not be affected by the following changes.
 :::
 
 | Exported object            | Class name(s)                                                            | Note                                                              |

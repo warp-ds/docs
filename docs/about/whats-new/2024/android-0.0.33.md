@@ -6,13 +6,13 @@ date: 2024-11-06
 WarpCallout is here!
 ---
 
-# Warp Android release 0.0.33
+# WARP Android release 0.0.33
 
 ## 2024-11-06
 
 ### WarpCallout component
 
-WarpCallout now available in Warp android! Can be either a popover or inline, 4 arrow directions available, closable option as well as dynamic placement given an anchor view. More info on the [tech docs site.](https://warp-ds.github.io/docs/components/callout/)
+WarpCallout now available in WARP android! Can be either a popover or inline, 4 arrow directions available, closable option as well as dynamic placement given an anchor view. More info on the [tech docs site.](https://warp-ds.github.io/docs/components/callout/)
 
 ```kotlin example
 val state = remember { CalloutState(false) }

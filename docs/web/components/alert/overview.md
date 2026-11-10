@@ -52,7 +52,7 @@ An alert communicates the **status of something the user is doing or looking at*
 Three properties define the component:
 
 - **Contextual**: the alert belongs next to the content it describes, not in a global corner of the screen.
-- **Persistent**: it stays until the underlying condition changes. Alerts have no auto-dismiss and, in Warp, no built-in close button.
+- **Persistent**: it stays until the underlying condition changes. Alerts have no auto-dismiss and, in WARP, no built-in close button.
 - **Status-carrying**: the variant is a statement about what happened, not a styling choice.
 
 Alert comes in four types — **Info**, **Warning**, **Negative**, and **Positive**. Pick the one that matches the severity of the situation. On web and Android the type defaults to info; on iOS the style is required. Always set it explicitly rather than relying on the default, so the severity is a decision rather than an accident.

@@ -1,4 +1,4 @@
-# Dark mode in Warp
+# Dark mode in WARP
 
 WARP offers light and dark mode for all supported brands.
 

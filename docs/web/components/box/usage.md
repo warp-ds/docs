@@ -57,7 +57,7 @@ Use bleed when the box is the full width of a mobile layout and the side gutters
 
 - Stack boxes vertically with consistent spacing between them. Do not let them touch.
 - Avoid nesting a box inside another box. Two subtle surfaces on top of each other read as a rendering mistake rather than a hierarchy.
-- If you need visual separation inside a box, use a [Divider](/ios/components/divider/overview.md) or headings, not a second box.
+- If you need visual separation inside a box, use headings or spacing, not a second box.
 
 ### States
 

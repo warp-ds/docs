@@ -1,17 +1,17 @@
 
 # Get started for iOS developers
 
-This page describes how to get started building an application with Warp components.
+This page describes how to get started building an application with WARP components.
 
-If you have any questions or need clarification, please don't hesitate to reach out to the Warp team on the [#warp-design-system](https://sch-chat.slack.com/archives/C04NF2K46LB) channel on Slack!
+If you have any questions or need clarification, please don't hesitate to reach out to the WARP team on the [#warp-design-system](https://sch-chat.slack.com/archives/C04P0GYTHPV) channel on Slack!
 
 
-## 1. Integrate Warp
+## 1. Integrate WARP
 
-A guide on how to integrate Warp into your project.
+A guide on how to integrate WARP into your project.
 
 ### Swift Package Manager
-You can use the url for Warp on Xcode default package manager or use it like below in your Package.swift file:
+You can use the url for WARP on Xcode default package manager or use it like below in your Package.swift file:
 
 ```swift
 dependencies: [
@@ -28,7 +28,7 @@ dependencies: [
 
 ## 2. Apply theme
 
-Set the brand in two places: assign the global `Warp.Theme` (registers the brand's fonts, selects its typeface and loads Warp's built-in strings) and apply `.warpTheme(_:)` near the root of your view hierarchy (Warp components read the theme from the SwiftUI environment).
+Set the brand in two places: assign the global `Warp.Theme` (registers the brand's fonts, selects its typeface and loads WARP's built-in strings) and apply `.warpTheme(_:)` near the root of your view hierarchy (WARP components read the theme from the SwiftUI environment).
 
 ```swift
 import SwiftUI
@@ -51,9 +51,9 @@ struct MyApp: App {
 
 Supported brands: `.finn` (default), `.tori`, `.dba`, `.blocket`, `.vend` and `.neutral`. See [Theming](/ios/foundations/theming.md) for details, runtime switching and dark mode.
 
-## 3. Use Warp components
+## 3. Use WARP components
 
-Use the Warp components just like any other SwiftUI or UIKit view. The selected theme will give it the correct colors, styling and language.
+Use the WARP components just like any other SwiftUI or UIKit view. The selected theme will give it the correct colors, styling and language.
 
 ```swift exmaple
 Warp.Button(
@@ -62,7 +62,7 @@ Warp.Button(
 )
 ```
 
-## 4. Use Warp tokens
+## 4. Use WARP tokens
 
 We hightly recommend using `Warp.Token.SOME_TOKEN` for `Color` and `Warp.UIToken.SOME_TOKEN` for `UIColor` to specify a color.
 
@@ -118,9 +118,9 @@ private lazy var myView: UIView = {
 
 ### Legacy support
 
-All Warp components will provide a bridge to be able to use with legacy code. Check each component's documentations for more information.
+All WARP components will provide a bridge to be able to use with legacy code. Check each component's documentations for more information.
 
-By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+By default all WARP components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
 ```swift exmaple
 Warp.Button(

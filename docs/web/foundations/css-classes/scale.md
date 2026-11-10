@@ -64,7 +64,7 @@ This can be useful when you want to remove transforms conditionally, such as on 
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:scale-125` to only apply the `scale-125` utility on hover.
 
 ```html

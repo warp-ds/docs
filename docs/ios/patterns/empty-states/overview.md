@@ -1,3 +1,7 @@
+---
+seeded: true
+---
+
 # Empty states
 
 <ComponentsStatus />
@@ -12,7 +16,7 @@ State, no-data state, empty view, zero-data state, no results, first-use state, 
 ## Anatomy
 
 ::: image-block
-![Example of a focused date input field with an open calendar below displaying January 2023 and the current selection is the 11th. The example is surrounded by four numbered highlights, pointing to the label, date input field, the optional calendar icon and the calendar popover](/patterns/emptystates/overview-anatomy.svg)
+![Anatomy of an empty state with six numbered parts: visual, title, description, primary action, secondary action and tagline](/patterns/emptystates/overview-anatomy.svg)
 :::
 
 

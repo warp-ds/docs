@@ -40,7 +40,7 @@ Warning: The options array should not be empty to ensure proper functionality.
 
 ### Legacy support
 
-By default Warp components return a SwiftUI View but a UIKit UIView is available as well:
+By default WARP components return a SwiftUI View but a UIKit UIView is available as well:
 
 ```swift
 Warp.Select(

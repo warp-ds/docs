@@ -7,7 +7,7 @@ DBA and Vend themes now share VendSans fonts
 
 ---
 
-# Warp iOS release 0.0.75
+# WARP iOS release 0.0.75
 
 ## 2026-02-24
 

@@ -50,7 +50,7 @@ If you need to use a one-off `transition-timing-function` value, you can use squ
 ## Applying conditionally
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:ease-in` to only apply the `ease-in` utility on hover.
 
 ```html

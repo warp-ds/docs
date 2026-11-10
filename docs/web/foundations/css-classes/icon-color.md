@@ -113,7 +113,7 @@ The examples below are inaccessible and purely for technical reference.
 Always make sure to have sufficient contrast.
 :::
 
-<example-container class="bg-center bg-[url(../../images/50s-scientists.jpg)]">
+<example-container class="bg-center bg-[url(/docs/images/50s-scientists.jpg)]">
   <div class="grid grid-cols-4 gap-16 justify-items-center">
     <div class="s-icon/60 hover:s-icon/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><w-icon name="StarFull" size="64px" /></div>
     <div class="s-icon-primary/60 hover:s-icon-primary/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16"><w-icon name="StarFull" size="64px" /></div>

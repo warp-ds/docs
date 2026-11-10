@@ -7,13 +7,13 @@ ThemeEnvironment injection and new icons
 
 ---
 
-# Warp iOS release 0.0.79
+# WARP iOS release 0.0.79
 
 ## 2026-04-28
 
 #### Theme environment injection
 
-Warp now supports injecting the brand theme via the SwiftUI environment. This replaces direct writes to `Warp.Theme` and enables per-subtree theme overrides.
+WARP now supports injecting the brand theme via the SwiftUI environment. This replaces direct writes to `Warp.Theme` and enables per-subtree theme overrides.
 
 ```swift
 // Set theme for the whole app
@@ -39,7 +39,7 @@ struct MyView: View {
 }
 ```
 
-All Warp components read the theme from the environment automatically. `StateViews` also support environment-injected themes with a fallback to the shared `Warp.Theme` global.
+All WARP components read the theme from the environment automatically. `StateViews` also support environment-injected themes with a fallback to the shared `Warp.Theme` global.
 
 #### Minimum iOS version
 

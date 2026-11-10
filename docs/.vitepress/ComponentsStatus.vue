@@ -11,7 +11,7 @@
 //  3. the "pending review" notice for seeded pages, below the header (so the header never shifts)
 // The platform switch (Web | iOS | Android) is in PageContext.vue.
 import { withBase } from 'vitepress';
-import { computed } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue';
 import Badge from './Badge.vue';
 import { usePlatform } from './composables/platform.js';
 import manifest from './platform-manifest.json';
@@ -37,6 +37,27 @@ const FRAMEWORKS = {
 };
 
 const { current } = usePlatform();
+
+// Phones: the tabs scroll sideways in one row. Fade the edge that has more tabs behind it, and bring the current
+// tab into view when it starts off-screen (e.g. Accessibility).
+const tabsEl = ref(null);
+const more = ref({ left: false, right: false });
+
+function updateMore() {
+  const el = tabsEl.value;
+  if (!el) return;
+  more.value = { left: el.scrollLeft > 1, right: el.scrollLeft + el.clientWidth < el.scrollWidth - 1 };
+}
+
+onMounted(() => {
+  const el = tabsEl.value;
+  const active = el?.querySelector('.active');
+  if (active && active.offsetLeft + active.offsetWidth > el.clientWidth) el.scrollLeft = active.offsetLeft - 16;
+  updateMore();
+  window.addEventListener('resize', updateMore);
+});
+
+onBeforeUnmount(() => window.removeEventListener('resize', updateMore));
 
 const entry = computed(() => {
   const c = current.value;
@@ -86,7 +107,14 @@ const frameworks = computed(() => {
       <li v-for="b in badges" :key="b.label"><Badge :framework="b.label" :status="b.status" /></li>
     </ul>
     <div class="tab-row">
-      <nav v-if="tabs.length > 1" class="page-tabs" :aria-label="`${entry.title} pages`">
+      <nav
+        v-if="tabs.length > 1"
+        ref="tabsEl"
+        class="page-tabs"
+        :class="{ 'more-left': more.left, 'more-right': more.right }"
+        :aria-label="`${entry.title} pages`"
+        @scroll.passive="updateMore"
+      >
         <a
           v-for="tab in tabs"
           :key="tab.page"
@@ -97,7 +125,8 @@ const frameworks = computed(() => {
           >{{ tab.label }}</a
         >
       </nav>
-      <ThemeSwitcher in-header class="tab-row-theme" />
+      <!-- brand theme for the live examples: only Web pages have them -->
+      <ThemeSwitcher v-if="current?.platform === 'web'" in-header class="tab-row-theme" />
     </div>
     <nav v-if="frameworks.length" class="frameworks" aria-label="Web framework">
       <span class="caption" aria-hidden="true">Framework</span>
@@ -167,6 +196,21 @@ const frameworks = computed(() => {
     overflow-x: auto;
     border-bottom: 1px solid var(--vp-c-divider);
     scrollbar-width: none;
+  }
+
+  .page-tabs.more-right {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 48px), transparent);
+  }
+
+  .page-tabs.more-left {
+    -webkit-mask-image: linear-gradient(to left, #000 calc(100% - 48px), transparent);
+    mask-image: linear-gradient(to left, #000 calc(100% - 48px), transparent);
+  }
+
+  .page-tabs.more-left.more-right {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 48px, #000 calc(100% - 48px), transparent);
   }
 
   .page-tab {

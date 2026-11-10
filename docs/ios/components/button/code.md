@@ -84,7 +84,7 @@ Warp.Button(
 
 ### Legacy support
 
-By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
+By default all WARP components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
 
 ```swift example
 Warp.Button(title: "Save") { /* Your action goes here */ }.uiView

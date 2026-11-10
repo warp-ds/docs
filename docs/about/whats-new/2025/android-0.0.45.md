@@ -6,7 +6,7 @@ date: 2025-09-02
 Miscellaneous improvements
 ---
 
-# Warp Android release 0.0.45
+# WARP Android release 0.0.45
 
 ## 2025-09-02
 

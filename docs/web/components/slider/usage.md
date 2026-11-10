@@ -18,7 +18,7 @@
 
 ### When not to use
 
-- Don’t use sliders for small ranges (e.g., 1-10). Use a [Checkbox](/web/components/checkbox/overview.md) or Stepper instead (Note: Steppers are not yet available in Warp; please reach out if your use case requires one).
+- Don’t use sliders for small ranges (e.g., 1-10). Use a [Checkbox](/web/components/checkbox/overview.md) or Stepper instead (Note: Steppers are not yet available in WARP; please reach out if your use case requires one).
 - Don’t use for complex input values that aren’t numeric (e.g., categories or words). Use a [Select](/web/components/select/overview.md), Checkbox, [Radio](/web/components/radio/overview.md), [Pill](/web/components/pill/overview.md), or [Text field](/web/components/text-field/overview.md) instead.
 - Don’t use when both minimum and maximum values need to be defined. Use the [Range slider](/web/components/range-slider/overview.md) instead.
 

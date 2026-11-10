@@ -10,7 +10,7 @@ For accessibility guidelines related to code, refer to the Code section.
 
 ### Keyboard navigation
 
-- Ensure links receive Warp’s global focus indicator styling when navigating with a keyboard.
+- Ensure links receive WARP’s global focus indicator styling when navigating with a keyboard.
 
 ### Voiceover / screen reader
 

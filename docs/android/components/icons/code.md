@@ -6,9 +6,9 @@
 
 <FrameworkTabs />
 
-### Warp Resources
+### WARP Resources
 
-Warp icons are located within the WarpResources object. They are WarpIconResources created from vector drawables located in res/drawable and content descriptions located in res/values/strings.xml. Each brand has their corresponding translations of the text.
+WARP icons are located within the WarpResources object. They are WarpIconResources created from vector drawables located in res/drawable and content descriptions located in res/values/strings.xml. Each brand has their corresponding translations of the text.
 
 ```kotlin
 object WarpResources {
@@ -71,7 +71,7 @@ icons.getIconByIdentifier("airplane")
 
 ### XML
 
-The icons are available as vector drawables in the Warp library inside res/drawable. The default size is 32 Dp.
+The icons are available as vector drawables in the WARP library inside res/drawable. The default size is 32 Dp.
 
 ```xml
 <ImageView

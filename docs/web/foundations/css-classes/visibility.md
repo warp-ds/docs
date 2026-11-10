@@ -62,17 +62,17 @@ This makes it possible to dynamically toggle rows and columns without affecting 
       <tr>
         <td>1</td>
         <td>Justina Matter</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
       <tr>
         <td>2</td>
         <td>Narve Hoops</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
       <tr>
         <td>3</td>
         <td>Dagny Calamity</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
     </tbody>
   </table>
@@ -89,17 +89,17 @@ This makes it possible to dynamically toggle rows and columns without affecting 
       <tr>
         <td>1</td>
         <td>Justina Matter</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
       <tr class="collapse" style="visibility: collapse;">
         <td>2</td>
         <td>Narve Hoops</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
       <tr>
         <td>3</td>
         <td>Dagny Calamity</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
     </tbody>
   </table>
@@ -116,17 +116,17 @@ This makes it possible to dynamically toggle rows and columns without affecting 
       <tr>
         <td>1</td>
         <td>Justina Matter</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
       <tr class="hidden">
         <td>2</td>
         <td>Narve Hoops</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
       <tr>
         <td>3</td>
         <td>Dagny Calamity</td>
-        <td>Warp Scientist</td>
+        <td>WARP Scientist</td>
       </tr>
     </tbody>
   </table>

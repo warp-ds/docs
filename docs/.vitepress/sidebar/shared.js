@@ -11,8 +11,8 @@ export const sharedSidebar = [
         text: 'Design',
         collapsed: true,
         items: [
-          { text: 'Getting access / set up', link: '/get-started/design/' },
-          { text: 'Warp in Figma', link: '/get-started/design/warp-in-figma/' },
+          { text: 'Overview', link: '/get-started/design/' },
+          { text: 'WARP in Figma', link: '/get-started/design/warp-in-figma/' },
           { text: 'Designing for multibrand', link: '/get-started/design/designing-for-multibrand/' },
           { text: 'Building custom components', link: '/get-started/design/custom-components/' },
           { text: 'Migrate from Fabric', link: '/get-started/design/migrate-from-fabric/' },
@@ -22,7 +22,7 @@ export const sharedSidebar = [
         text: 'Web',
         collapsed: true,
         items: [
-          { text: 'Getting access / set up', link: '/get-started/web/' },
+          { text: 'Set up', link: '/get-started/web/' },
           { text: 'Building custom components', link: '/get-started/web/custom-components/' },
           { text: 'Migrate from Fabric', link: '/get-started/web/migrate-from-fabric/' },
         ],
@@ -36,14 +36,14 @@ export const sharedSidebar = [
     collapsed: true,
     items: [
       { text: 'Overview', link: '/design-language/' },
-      { text: 'About DS', link: '/design-language/about/' },
+      { text: 'Mission and principles', link: '/design-language/about/' },
       ...foundationItems,
     ],
   },
   // Patterns are their own section; the Platform switcher picks whose patterns are listed
   { text: 'Patterns', link: '/patterns/', items: [] },
   {
-    text: 'About Warp',
+    text: 'About WARP',
     collapsed: true,
     items: [
       { text: 'Overview', link: '/about/' },
@@ -53,7 +53,7 @@ export const sharedSidebar = [
         items: [
           { text: 'FAQ', link: '/about/help/faq/' },
           { text: 'Support', link: '/about/help/support/' },
-          { text: 'Doc authoring guide', link: '/about/help/authoring-guide/' },
+          { text: 'WARP Docs content guideline', link: '/about/help/authoring-guide/' },
           { text: 'Request new component', link: '/about/help/requests/new-component/' },
           { text: 'Request component changes', link: '/about/help/requests/component-changes/' },
           { text: 'Report bugs/errors', link: '/about/help/report-bugs/' },

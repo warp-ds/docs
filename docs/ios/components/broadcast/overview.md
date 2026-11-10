@@ -1,5 +1,6 @@
 ---
 status: deprecated
+pendingReview: true
 ---
 
 # Broadcast

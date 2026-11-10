@@ -8,8 +8,8 @@ elements: false
 
 <FrameworkTabs />
 
-::: info No Warp Elements implementation yet
-Utilities is not available in Warp Elements. The legacy framework implementations are still documented:
+::: info No WARP Elements implementation yet
+Utilities is not available in WARP Elements. The legacy framework implementations are still documented:
 
 - [Vue (legacy)](./code-vue.md)
 :::

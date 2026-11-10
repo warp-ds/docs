@@ -4,29 +4,29 @@ Overview of our tokens types with names, descriptions and branded examples.
 ### Background
 
 ::: image-block
-![Add alt text](/foundations/token-overview-background.png)
+![Table of the background tokens (Default, Subtle, Disabled, Selected, Inverted, Primary, Secondary, Positive, Negative, Warning, Info, Notification and their subtle variants), each with a description and light and dark mode swatches for FINN, tori, dba and Blocket](/foundations/token-overview-background.png)
 :::
 
 ### Elevation
 
 ::: image-block
-![Add alt text](/foundations/token-overview-elevation.png)
+![Table of the elevation tokens Sunken, Elevated-100, Elevated-200 and Elevated-300, each with a description of where to use it and which shadow it uses, and light and dark mode swatches for FINN, tori, dba and Blocket](/foundations/token-overview-elevation.png)
 :::
 
 ### Text
 
 ::: image-block
-![Add alt text](/foundations/token-overview-text.png)
+![Table of the text tokens, each with a description and light and dark mode swatches for FINN, tori, dba and Blocket](/foundations/token-overview-text.png)
 :::
 
 ### Border
 
 ::: image-block
-![Add alt text](/foundations/token-overview-border.png)
+![Table of the border tokens, each with a description and light and dark mode swatches for FINN, tori, dba and Blocket](/foundations/token-overview-border.png)
 :::
 
 ### Icon
 
 ::: image-block
-![Add alt text](/foundations/token-overview-icon.png)
+![Table of the icon tokens, each with a description and light and dark mode swatches for FINN, tori, dba and Blocket](/foundations/token-overview-icon.png)
 :::

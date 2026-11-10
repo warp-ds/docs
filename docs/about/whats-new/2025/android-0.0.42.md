@@ -6,7 +6,7 @@ date: 2025-04-29
 Link component & Vend theme
 ---
 
-# Warp Android release 0.0.42
+# WARP Android release 0.0.42
 
 ## 2025-04-29
 

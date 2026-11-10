@@ -71,9 +71,9 @@ Win: ctrl + alt + O
 Search for the desired library and select "Add to file".
 
 ::: image-block
-![Figma library viewer with “DataViz” as user search input and one result with the Warp - DataViz figma library and the option to add the library to the file."](/get-started/figma-libraries-dataviz.svg)
+![Figma library viewer with “DataViz” as user search input and one result with the WARP - DataViz figma library and the option to add the library to the file."](/get-started/figma-libraries-dataviz.svg)
 :::
 
 ## Removing other libraries
 
-You might want to consider disabling other libraries to not accidentally pick any non-WARP components. All WARP libraries are marked with the "Warp"-prefix.
+You might want to consider disabling other libraries to not accidentally pick any non-WARP components. All WARP libraries are marked with the "WARP"-prefix.

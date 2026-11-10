@@ -12,7 +12,7 @@ Button group is a grouping concept for buttons.
 
 ## Usage
 
-This component is only supported in Warp Vue at the moment.
+This component is only supported in WARP Vue at the moment.
 For a React equivalent that serves a similar purpose, use the `Toggle` in [RadioButtons](/web/components/radio-buttons/overview.md).
 
 <component-questions />

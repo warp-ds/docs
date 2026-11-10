@@ -2,7 +2,7 @@
 title: 'WARP Figma updates'
 date: 2025-08-18
 ---
-Warp Figma Component Library updates
+WARP Figma Component Library updates
 
 ---
 

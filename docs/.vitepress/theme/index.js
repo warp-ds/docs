@@ -31,6 +31,7 @@ import PageContext from '../PageContext.vue';
 import PatternsIndex from '../PatternsIndex.vue';
 import PlatformCoverage from '../PlatformCoverage.vue';
 import PlatformOverview from '../PlatformOverview.vue';
+import PostHeader from '../PostHeader.vue';
 import RedirectNotFound from '../RedirectNotFound.vue';
 import { resolveRedirect } from '../redirect-rules.js';
 import SeededNotice from '../SeededNotice.vue';
@@ -56,7 +57,7 @@ export default {
       'nav-screen-content-after': () => h(NavCta, { screen: true }),
       'sidebar-nav-before': () => h(SidebarComposer, { position: 'before' }),
       'sidebar-nav-after': () => h(SidebarComposer, { position: 'after' }),
-      'doc-before': () => [h(PageContext), h(SeededNotice)],
+      'doc-before': () => [h(PageContext), h(SeededNotice), h(PostHeader)],
       'not-found': () => h(RedirectNotFound),
     });
   },

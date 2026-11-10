@@ -6,7 +6,7 @@ date: 2025-10-30
 Select component & Icon updates
 ---
 
-# Warp iOS release 0.0.68
+# WARP iOS release 0.0.68
 
 ## 2025-10-30
 

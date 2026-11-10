@@ -31,14 +31,14 @@ Prefer `aria-labelledby` pointing at a visible heading inside the box over `aria
 
 - Use a real heading element inside the box when the content needs a name. Do not fake it with bold text — bold is not announced as a heading and cannot be navigated to.
 - Keep the heading level correct for the surrounding page outline. The box does not create a new document section, so do not restart at `h2` inside a page that is already several levels deep.
-- Do not skip levels to get a smaller heading. Use the Warp typography classes to control size instead.
+- Do not skip levels to get a smaller heading. Use the WARP typography classes to control size instead.
 
 ## Keyboard interaction
 
 Box adds nothing to the tab order — it is not focusable, and it should not be.
 
 - Interactive elements inside the box follow normal DOM order. Keep the visual order and the DOM order the same.
-- Every link and button inside the box must show a visible focus indicator. Warp components handle this — do not remove the outline with custom CSS.
+- Every link and button inside the box must show a visible focus indicator. WARP components handle this — do not remove the outline with custom CSS.
 - Do not add `tabindex` to the box. A focusable element with no role and no action is a dead stop for keyboard users.
 - Do not attach a click handler to the box. A click target that is not a button or link cannot be reached by keyboard at all.
 
@@ -56,7 +56,7 @@ Box adds nothing to the tab order — it is not focusable, and it should not be.
 
 - Text inside the box must meet at least **4.5:1** against the box surface, or **3:1** for large text (18.66px bold, or 24px and above).
 - Interactive elements and meaningful graphics inside the box need at least **3:1** against the surface.
-- Use the Warp surface and text tokens together and do not override them. The neutral, info, and bordered surfaces are defined per brand and per theme, so a hard-coded text colour that passes in one brand or in light mode can fail in another.
+- Use the WARP surface and text tokens together and do not override them. The neutral, info, and bordered surfaces are defined per brand and per theme, so a hard-coded text colour that passes in one brand or in light mode can fail in another.
 - The border on the bordered variant is a visual aid, not information. Do not rely on it to convey meaning, and do not treat it as a substitute for a heading.
 
 ### Colour independence

@@ -3,7 +3,7 @@ title: 'WARP releases'
 date: 2023-12-20
 ---
 
-We have now released new versions of our Warp packages:
+We have now released new versions of our WARP packages:
 - [@warp-ds/elements: 1.2.2](https://www.npmjs.com/package/@warp-ds/elements)
 - [@warp-ds/react: 1.2.2](https://www.npmjs.com/package/@warp-ds/react)
 - [@warp-ds/vue: 1.2.3](https://www.npmjs.com/package/@warp-ds/vue)

@@ -605,11 +605,11 @@ export const webFoundationItems = [
     collapsed: true,
     items: [
       {
-        text: 'Dark mode in Warp Elements',
+        text: 'Dark mode in WARP Elements',
         link: '/web/foundations/dark-mode/',
       },
       {
-        text: 'Dark mode in Warp React (legacy)',
+        text: 'Dark mode in WARP React (legacy)',
         link: '/web/foundations/dark-mode/react',
       },
     ],

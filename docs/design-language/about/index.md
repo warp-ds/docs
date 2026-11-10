@@ -1,6 +1,6 @@
-# Mission, values, principles
+# Mission and principles
 
-The Warp Design System mission reflecting its values and principles.
+The WARP Design System mission reflecting its values and principles.
 
 ## Mission
 Our mission is to equip teams with high-quality tools and help them conquer must-win battles.

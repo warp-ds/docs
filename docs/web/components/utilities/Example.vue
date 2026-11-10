@@ -8,7 +8,7 @@ const foo = ref('');
   <div class="component">
     <h3 class="t4">Usage of clickable Card</h3>
     <w-card style="max-width: 300px;" clickable>
-      <img class="h-128 w-full object-cover rounded-tl-16" src="/images/office-warping.png" />
+      <img class="h-128 w-full object-cover rounded-tl-16" src="/images/office-warping.webp" />
       <w-badge position="top-left">Ukens bolig</w-badge>
       <div class="p-16">
         <p class="text-12">DNB Eiendom</p>

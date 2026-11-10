@@ -1,3 +1,7 @@
+---
+seeded: true
+---
+
 # Empty states
 
 <ComponentsStatus />

@@ -6,7 +6,7 @@ date: 2025-05-26
 Popover & focus modes
 ---
 
-# Warp Android release 0.0.43
+# WARP Android release 0.0.43
 
 ## 2025-05-26
 

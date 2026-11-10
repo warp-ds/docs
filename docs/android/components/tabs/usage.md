@@ -68,7 +68,7 @@ Selection is **automatic**: moving to a tab with the arrow keys selects it and s
 Load the first panel with the page. Panels can be loaded when first selected, but:
 
 - Reserve the panel's height so the page doesn't jump when content arrives.
-- Show a [Spinner](/ios/components/spinner/overview.md) inside the panel, not over the tab row.
+- Show a [Spinner](/android/components/spinner/overview.md) inside the panel, not over the tab row.
 - Keep the tab row interactive while a panel loads, so people can change their mind.
 
 ### Deep linking

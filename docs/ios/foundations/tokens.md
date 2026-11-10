@@ -6,7 +6,7 @@ designLanguage: /design-language/tokens/intro/
 
 # Tokens
 
-Warp tokens for iOS are Swift properties and constants. Colour tokens change with the brand and with light and dark mode; spacing, shape and shadow values are the same for every brand.
+WARP tokens for iOS are Swift properties and constants. Colour tokens change with the brand and with light and dark mode; spacing, shape and shadow values are the same for every brand.
 
 ## Token types
 

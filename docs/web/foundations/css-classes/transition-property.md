@@ -45,7 +45,7 @@ For situations where the user has specified that they prefer reduced motion, you
 ```
 
 ### Hover, focus, and other states
-Warp lets you conditionally apply utility classes in different states using variant modifiers.
+WARP lets you conditionally apply utility classes in different states using variant modifiers.
 For example, use `hover:transition-all` to only apply the `transition-all` utility on hover.
 
 ```html

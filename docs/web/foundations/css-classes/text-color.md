@@ -121,12 +121,12 @@ The examples below are inaccessible and purely for technical reference.
 Always make sure any text has sufficient contrast to its background.
 :::
 
-<example-container class="bg-center bg-[url(../../images/50s-scientists.jpg)]">
+<example-container class="bg-center bg-[url(/docs/images/50s-scientists.jpg)]">
   <div class="grid grid-cols-4 gap-16 justify-items-center">
-    <div class="s-text/60 hover:s-text/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">Warp</div>
-    <div class="s-text-link/50 hover:s-text-link/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">Warp</div>
-    <div class="text-[--w-s-color-text-positive/60] hover:text-[--w-s-color-text-positive/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">Warp</div>
-    <div class="text-[var(--w-black)/50] hover:text-[var(--w-black)/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">Warp</div>
+    <div class="s-text/60 hover:s-text/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">WARP</div>
+    <div class="s-text-link/50 hover:s-text-link/100 transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">WARP</div>
+    <div class="text-[--w-s-color-text-positive/60] hover:text-[--w-s-color-text-positive/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">WARP</div>
+    <div class="text-[var(--w-black)/50] hover:text-[var(--w-black)/100] transition-colors ease-in-out duration-700 text-xxl font-bold backdrop-blur-s s-bg/20 p-16 rounded-16">WARP</div>
   </div>
 </example-container>
 

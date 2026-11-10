@@ -7,7 +7,7 @@ New icons, accessibility improvements and Sendable conformance
 
 ---
 
-# Warp iOS release 0.0.77
+# WARP iOS release 0.0.77
 
 ## 2026-03-18
 

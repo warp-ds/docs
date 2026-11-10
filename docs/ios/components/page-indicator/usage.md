@@ -32,7 +32,7 @@ Page indicators are usually used in image carousels, and supported by carousel c
 - Have varying number of dots depending on the number of pages.
 - Center a page control at the bottom of the view or window. To ensure people always know where to find a page control, centre it horizontally and position it near the bottom of the view.
 
-<component-design-guidelines name="Warp - Components / Page indicator" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/branch/5VhDenFoNQFag7sjurrkVQ/WARP---Components?node-id=24975-5642&t=QMfAx1S5Uvo3jkM3-0" />
+<component-design-guidelines name="WARP - Components / Page indicator" link="https://www.figma.com/design/oHBCzDdJxHQ6fmFLYWUltf/branch/5VhDenFoNQFag7sjurrkVQ/WARP---Components?node-id=24975-5642&t=QMfAx1S5Uvo3jkM3-0" />
 
 ## Placement
 

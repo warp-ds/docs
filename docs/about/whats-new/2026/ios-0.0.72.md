@@ -7,7 +7,7 @@ Add roundness for Vend buttons
 
 ---
 
-# Warp iOS release 0.0.72
+# WARP iOS release 0.0.72
 
 ## 2026-02-02
 

@@ -1,30 +1,34 @@
+---
+needsReview: true
+---
+
 <style>
 td:first-of-type {
   white-space: nowrap;
 }
 </style>
 
-# Getting started with Warp
+# Set up WARP for the web
 
 :::tip For Vendies
 
-The Borealis application templates available on Backstage come with Warp already configured. We recommend you start there rather than setting up Warp from scratch.
+The Borealis application templates available on Backstage come with WARP already configured. We recommend you start there rather than setting up WARP from scratch.
 
 :::
 
-## Warp design system packages
+## WARP design system packages
 
-Warp for web consists of a few different packages:
+WARP for web consists of a few different packages:
 
 | Package                                                  | Description                                                                                                                                       |
 | -------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [@warp-ds/fonts](https://github.com/warp-ds/fonts)       | The fonts used by our different brands and the CSS needed to set them up.                                                                         |
-| [@warp-ds/css](https://github.com/warp-ds/css)           | The CSS versions of the Warp [design system tokens](/design-language/tokens/intro/) and a CSS reset.                                                  |
-| [@warp-ds/elements](https://github.com/warp-ds/elements) | The canonical version of Warp components for web, implemented as web components to work with any frontend framework. Includes wrappers for React. |
+| [@warp-ds/css](https://github.com/warp-ds/css)           | The CSS versions of the WARP [design system tokens](/design-language/tokens/intro/) and a CSS reset.                                                  |
+| [@warp-ds/elements](https://github.com/warp-ds/elements) | The canonical version of WARP components for web, implemented as web components to work with any frontend framework. Includes wrappers for React. |
 
 You don't tecnically need to `npm install` any of them.
 
-Borealis applications include these Warp packages on all pages through the shared HTML template.
+Borealis applications include these WARP packages on all pages through the shared HTML template.
 
 If you are not using the Vend HTML template through Borealis for some reason, make sure this HTML snippet is included in your document `<head>`. Adjust the brand according to your environment.
 
@@ -46,33 +50,33 @@ If you are not using the Vend HTML template through Borealis for some reason, ma
 </html>
 ```
 
-## Other Warp packages
+## Other WARP packages
 
-A handful of other Warp packages serve different needs, or have been replaced by packages in the list above:
+A handful of other WARP packages serve different needs, or have been replaced by packages in the list above:
 
 | Package                                                      | Description                                                                                                                              |
 | ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| [@warp-ds/uno](https://github.com/warp-ds/uno)               | Warp preset for [UnoCSS](/web/foundations/css-classes/unocss), an atomic CSS engine.                                                         |
-| [@warp-ds/react](https://github.com/warp-ds/react)           | A direct-in-React implementation of some Warp components. No longer actively maintained. Use `@warp-ds/elements` React wrappers instead. |
-| [@warp-ds/vue](https://github.com/warp-ds/vue)               | A direct-in-Vue implementation of some Warp components. No longer actively maintained. Use `@warp-ds/elements` components instead.       |
-| [@warp-ds/components](https://github.com/warp-ds/components) | A React 19 implementation of some Warp components. No longer actively maintained. Use `@warp-ds/elements` React wrappers instead.        |
+| [@warp-ds/uno](https://github.com/warp-ds/uno)               | WARP preset for [UnoCSS](/web/foundations/css-classes/unocss), an atomic CSS engine.                                                         |
+| [@warp-ds/react](https://github.com/warp-ds/react)           | A direct-in-React implementation of some WARP components. No longer actively maintained. Use `@warp-ds/elements` React wrappers instead. |
+| [@warp-ds/vue](https://github.com/warp-ds/vue)               | A direct-in-Vue implementation of some WARP components. No longer actively maintained. Use `@warp-ds/elements` components instead.       |
+| [@warp-ds/components](https://github.com/warp-ds/components) | A React 19 implementation of some WARP components. No longer actively maintained. Use `@warp-ds/elements` React wrappers instead.        |
 
 ## Editor integration
 
-For improved integration with your editor, install the Warp packages as development dependencies and set up these extensions (or equivalent for your editor):
+For improved integration with your editor, install the WARP packages as development dependencies and set up these extensions (or equivalent for your editor):
 
-- [Web Components Language Server] for hover info and code completion for Warp components.
+- [Web Components Language Server] for hover info and code completion for WARP components.
 - [CSS Variable Autocomplete](https://marketplace.visualstudio.com/items?itemName=vunguyentuan.vscode-css-variables) to get InstelliSense for CSS variables inside stylesheets.
-- [UnoCSS] for hover info and code completion for [Warp CSS classes](https://warp-ds.github.io/docs/foundations/css-classes/unocss).
+- [UnoCSS] for hover info and code completion for [WARP CSS classes](https://warp-ds.github.io/docs/foundations/css-classes/unocss).
 - [Lit](https://marketplace.visualstudio.com/items?itemName=runem.lit-plugin) for syntax highlighting and code completion in [Lit](https://lit.dev) components.
 
-For improved editor integration you should have Warp packages installed, so the tooling can process and show Warp documentation.
+For improved editor integration you should have WARP packages installed, so the tooling can process and show WARP documentation.
 
 ```sh
 npm install @warp-ds/elements
 ```
 
-In your tsconfig file, add Warp Elements to compiler options:
+In your tsconfig file, add WARP Elements to compiler options:
 
 ```json
 {
@@ -82,11 +86,11 @@ In your tsconfig file, add Warp Elements to compiler options:
 }
 ```
 
-The [Web Components Language Server] will automatically provide documentation on hover and code completions whenever you use Warp Elements, even in other frameworks such as React.
+The [Web Components Language Server] will automatically provide documentation on hover and code completions whenever you use WARP Elements, even in other frameworks such as React.
 
 ### Configuration for CSS variables IntelliSense
 
-Once you add brand token files to `lookupFiles` you should see Warp CSS variables as code suggestions when writing CSS `var(--w-s)`.
+Once you add brand token files to `lookupFiles` you should see WARP CSS variables as code suggestions when writing CSS `var(--w-s)`.
 
 ```
 // settings.json
@@ -105,19 +109,19 @@ Once you add brand token files to `lookupFiles` you should see Warp CSS variable
 
 ## Choose an approach to CSS
 
-Warp includes a set of ready made components, but you will still be writing a lot of CSS, especially for laying out the content on the page.
+WARP includes a set of ready made components, but you will still be writing a lot of CSS, especially for laying out the content on the page.
 
-How you want to manage your CSS is up to you. If you have no strong preference, Object oriented CSS (OOCSS) in plain CSS files using Warp CSS variables is a safe default with low risk of lock-in.
+How you want to manage your CSS is up to you. If you have no strong preference, Object oriented CSS (OOCSS) in plain CSS files using WARP CSS variables is a safe default with low risk of lock-in.
 
 :::tip
 
-Warp started out using Atomic CSS internally, but is gradually replacing it for a style closer to OOCSS.
+WARP started out using Atomic CSS internally, but is gradually replacing it for a style closer to OOCSS.
 
 :::
 
 ### Atomic CSS
 
-Warp started out being built with [UnoCSS](https://unocss.dev/), an [atomic CSS](https://css-tricks.com/lets-define-exactly-atomic-css/) engine.
+WARP started out being built with [UnoCSS](https://unocss.dev/), an [atomic CSS](https://css-tricks.com/lets-define-exactly-atomic-css/) engine.
 
 > Atomic CSS is the approach to CSS architecture that favors small, single-purpose classes with names based on visual function.
 
@@ -153,9 +157,9 @@ Internally `@warp-ds/elements` uses a style closer to this one, instead of UnoCS
 
 :::
 
-## Using Warp CSS variables
+## Using WARP CSS variables
 
-All Warp styles come from a style dictionary shared between Figma and code. This is essentially a list of names and their values (color codes, pixel sizes).
+All WARP styles come from a style dictionary shared between Figma and code. This is essentially a list of names and their values (color codes, pixel sizes).
 
 Entries in this style dictionary are available globally as [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties).
 
@@ -174,14 +178,14 @@ With the OOCSS or BEM approaches all you really need is a `.css` file and you ar
 
 For Atomic CSS the setup is a bit more involved.
 
-First you will need to install UnoCSS, the Warp UnoCSS preset and the "safelist" of classes UnoCSS can assume is always present (and so can be skipped in the compiled output).
+First you will need to install UnoCSS, the WARP UnoCSS preset and the "safelist" of classes UnoCSS can assume is always present (and so can be skipped in the compiled output).
 
 ```sh
 npm install --save-dev unocss @warp-ds/css @warp-ds/uno
 ```
 
 
-UnoCSS needs a `uno.config.ts` file to work properly. Here is a minimal config that includes Warp. Refer to the [UnoCSS documentation](https://unocss.dev/guide/config-file) for other options and possible integrations, such as what files to include in scans, and bundler plugins.
+UnoCSS needs a `uno.config.ts` file to work properly. Here is a minimal config that includes WARP. Refer to the [UnoCSS documentation](https://unocss.dev/guide/config-file) for other options and possible integrations, such as what files to include in scans, and bundler plugins.
 
 ```ts
 // uno.config.ts
@@ -201,11 +205,11 @@ export default defineConfig({
 });
 ```
 
-## Use Warp web components
+## Use WARP web components
 
-These components can be used in any framework and is the only set of Warp components for web that is actively maintained.
+These components can be used in any framework and is the only set of WARP components for web that is actively maintained.
 
-With the setup from the introduction, Warp web components are available globally and can be freely used in your application.
+With the setup from the introduction, WARP web components are available globally and can be freely used in your application.
 
 ```html
 <w-breadcrumbs aria-label="You are here">
@@ -221,9 +225,9 @@ Perhaps counterintuitively you should **not** `import` the components in your ow
 
 :::
   
-## Warp components in React
+## WARP components in React
 
-Use Warp Elements (web components) in React apps. The React-specific `@warp-ds/react` package is deprecated.
+Use WARP Elements (web components) in React apps. The React-specific `@warp-ds/react` package is deprecated.
 
 React apps should use the React wrappers provided by `@warp-ds/elements` to avoid some hydration mismatch errors when using server-side rendering.
 
@@ -253,9 +257,9 @@ export default function Example() {
 
 See each component's [Elements documentation](/web/components/button/code) for its attributes, properties and events.
 
-## Warp components in Vue
+## WARP components in Vue
 
-Use Warp Elements (web components) in Vue apps. The Vue-specific `@warp-ds/vue` package is deprecated.
+Use WARP Elements (web components) in Vue apps. The Vue-specific `@warp-ds/vue` package is deprecated.
 
 Configure Vue to treat tags starting with `w-` as custom elements. For a Vue 3 app using Vite, add `isCustomElement` to your existing Vue plugin configuration in `vite.config.js`:
 
@@ -280,7 +284,7 @@ For other build tools, see [Vue's custom element configuration](https://vuejs.or
 
 ### Using Elements components in Vue components
 
-Use Warp elements directly in Vue templates. No component imports or `app.use()` calls are needed.
+Use WARP elements directly in Vue templates. No component imports or `app.use()` calls are needed.
 
 ```vue
 <template>

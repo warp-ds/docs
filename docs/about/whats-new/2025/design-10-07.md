@@ -6,16 +6,16 @@ October 2025
 
 ---
 
-## Warp Figma Component Library updates
+## WARP Figma Component Library updates
 
-We've made several updates to the Warp Component Library in Figma to better align with implementation and improve usability.
+We've made several updates to the WARP Component Library in Figma to better align with implementation and improve usability.
 
 ### Neutral mode updates
 - **Blue primitives updated:** Replaced the former Oikotie Blue with Blocket Blue.
 - **Token changes:** All primitives for the `Primary`, `Selected` and `Info` token categories (backgrounds, borders, and icon fills) have been updated from Gray to Blue to better support Backoffice systems.
 - **Figma library updates:** Neutral theme added to Typography overview, Component overview (light/dark), and as example variations across all component pages.
 
-![Comparison of Warp components in the Neutral theme before and after the updates, illustrating new blue tokens.](/whats-new/2025/design-10-07-1.svg)
+![Comparison of WARP components in the Neutral theme before and after the updates, illustrating new blue tokens.](/whats-new/2025/design-10-07-1.svg)
 
 
 ### Accessible border tokens
@@ -25,7 +25,7 @@ We've made several updates to the Warp Component Library in Figma to better alig
 
 ![Visual overview showing how the new border strong tokens appear in each brand theme, including variations for light and dark modes.](/whats-new/2025/design-10-07-2.svg)
 
-![Comparison of Warp components using the new border strong tokens versus the old ones, highlighting improved contrast and consistency across light and dark themes for Radio, Checkbox, Text field, Text area, and Select components.](/whats-new/2025/design-10-07-3.svg)
+![Comparison of WARP components using the new border strong tokens versus the old ones, highlighting improved contrast and consistency across light and dark themes for Radio, Checkbox, Text field, Text area, and Select components.](/whats-new/2025/design-10-07-3.svg)
 
 
 ### Text area
@@ -37,7 +37,7 @@ We've made several updates to the Warp Component Library in Figma to better alig
 - Renamed elements labeling for consistency with Text field and Select components. 
 - Applied `Semantic/Color/Border/Strong` tokens to Default and Hover states.
 
-**Updated documentation:** [Text area - Warp Portal documentation](https://warp-ds.github.io/docs/components/textarea/)
+**Updated documentation:** [Text area - WARP Portal documentation](https://warp-ds.github.io/docs/components/textarea/)
 
 
 ### Text field
@@ -50,7 +50,7 @@ We've made several updates to the Warp Component Library in Figma to better alig
 - Removed the icon sizing property.
 - Applied `Semantic/Color/Border/Strong` tokens to Default and Hover states.
 
-**Updated documentation:** [Text field - Warp Portal documentation](https://warp-ds.github.io/docs/components/textfield/)
+**Updated documentation:** [Text field - WARP Portal documentation](https://warp-ds.github.io/docs/components/textfield/)
 
 
 ### Select
@@ -84,7 +84,7 @@ We've made several updates to the Warp Component Library in Figma to better alig
 - Applied `Semantic/Color/Border/Default` token to Track and Dot atoms in Incomplete state.
 
 
-## Warp Figma Icon Library updates
+## WARP Figma Icon Library updates
 
 All regular icons and "taxonomy icons" are now proportionally scalable in both stroke width and size. The full set of 259 icons is now consolidated under Regular icons. We've also expanded Figma keywords to make icons easier to find—for example, the Bin icon is now searchable with "Trash, Remove, Recycle, Delete."
 
@@ -95,9 +95,9 @@ All regular icons and "taxonomy icons" are now proportionally scalable in both s
 - 18 icons visually updated with minor tweaks for design coherence (e.g. `AnimalPaw`, `Tractor`, `Phone`, `PlaneTakeOff`).
 - 13 icons renamed for clarity, based on what they visually represent, rather than product-specific terms (e.g. "AgriculturalMachine" = `Tractor`, "Service" = `Wrench`).
 
-**Updated documentation:** [Icons - Warp Portal documentation](https://warp-ds.github.io/docs/components/icons/)
+**Updated documentation:** [Icons - WARP Portal documentation](https://warp-ds.github.io/docs/components/icons/)
 
-![Overview of newly added Warp icons displayed in both light and dark modes, showing all new additions introduced in this release.](/whats-new/2025/design-10-07-4.svg)
+![Overview of newly added WARP icons displayed in both light and dark modes, showing all new additions introduced in this release.](/whats-new/2025/design-10-07-4.svg)
 
 <br><br>
 

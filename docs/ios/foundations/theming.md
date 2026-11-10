@@ -6,7 +6,7 @@ designLanguage: /design-language/brands/
 
 # Theming
 
-A Warp theme is one brand from `Warp.Brand`. The theme decides which colour tokens, typeface and built-in strings Warp components use.
+A WARP theme is one brand from `Warp.Brand`. The theme decides which colour tokens, typeface and built-in strings WARP components use.
 
 ## Available brands
 
@@ -27,7 +27,7 @@ A Warp theme is one brand from `Warp.Brand`. The theme decides which colour toke
 
 There are two places the theme is stored, and an app should set both:
 
-- **The SwiftUI environment**, with the `.warpTheme(_:)` view modifier. Warp components and the `@Environment(\.warpTheme)` value read from here.
+- **The SwiftUI environment**, with the `.warpTheme(_:)` view modifier. WARP components and the `@Environment(\.warpTheme)` value read from here.
 - **The global `Warp.Theme`** static property. Assigning it registers the brand's fonts and loads the built-in strings for the brand's language ([Warp.swift](https://github.com/warp-ds/warp-ios/blob/main/Sources/Warp.swift), [Localized.swift](https://github.com/warp-ds/warp-ios/blob/main/Sources/Localized/Localized.swift)). The typography styles also pick their typeface from `Warp.Theme` ([Typography.swift](https://github.com/warp-ds/warp-ios/blob/main/Sources/Typography/Typography.swift)).
 
 ```swift
@@ -86,14 +86,14 @@ Some APIs read the environment and some read the global `Warp.Theme`. If both ar
 
 | Reads the environment (`.warpTheme(_:)`) | Reads the global `Warp.Theme` |
 | --- | --- |
-| Warp components | `Warp.Token`, `Warp.UIToken` |
+| WARP components | `Warp.Token`, `Warp.UIToken` |
 | `@Environment(\.warpTheme)` | `Warp.Color`, `Warp.UIColor` |
 | `ColorProvider(theme: theme)` with the environment context | `Warp.Typography` fonts (typeface) |
 | `withCardBackground` and `withBottomSheetBackground` | Language of built-in strings |
 
 ## Switch theme at runtime
 
-Keep the brand in state and pass it to `.warpTheme(_:)`. Assign `Warp.Theme` at the same time so fonts, typeface and strings follow. The Warp sample app switches brands this way ([ContentView.swift](https://github.com/warp-ds/warp-ios/blob/main/SampleApp/ContentView.swift)).
+Keep the brand in state and pass it to `.warpTheme(_:)`. Assign `Warp.Theme` at the same time so fonts, typeface and strings follow. The WARP sample app switches brands this way ([ContentView.swift](https://github.com/warp-ds/warp-ios/blob/main/SampleApp/ContentView.swift)).
 
 ```swift
 struct RootView: View {
@@ -120,7 +120,7 @@ struct RootView: View {
 
 ## Previews
 
-Warp provides preview traits that apply `.warpTheme(_:)` to a preview ([ThemePreviewModifier.swift](https://github.com/warp-ds/warp-ios/blob/main/Sources/Previews/ThemePreviewModifier.swift)): `.themeFinn`, `.themeTori`, `.themeDba`, `.themeBlocket`, `.themeVend` and `.themeNeutral`.
+WARP provides preview traits that apply `.warpTheme(_:)` to a preview ([ThemePreviewModifier.swift](https://github.com/warp-ds/warp-ios/blob/main/Sources/Previews/ThemePreviewModifier.swift)): `.themeFinn`, `.themeTori`, `.themeDba`, `.themeBlocket`, `.themeVend` and `.themeNeutral`.
 
 ```swift
 #Preview(traits: .themeTori) {
@@ -139,13 +139,13 @@ let view = UIView()
 view.backgroundColor = Warp.UIToken.background
 ```
 
-Warp components return a SwiftUI view by default. Use the `uiView` property to embed one in UIKit, as described in [Get started on iOS](/get-started/ios/).
+WARP components return a SwiftUI view by default. Use the `uiView` property to embed one in UIKit, as described in [Get started on iOS](/get-started/ios/).
 
 ## Light and dark mode
 
-Every Warp colour token holds a light and a dark value. Tokens are built with `Color.dynamicColor(defaultColor:darkModeColor:)` and `UIColor.dynamicColor(defaultColor:darkModeColor:)`, which pick the dark value when the trait collection's `userInterfaceStyle` is `.dark` and the light value otherwise ([Color+.swift](https://github.com/warp-ds/warp-ios/blob/main/Sources/Helpers/Color%2B.swift)).
+Every WARP colour token holds a light and a dark value. Tokens are built with `Color.dynamicColor(defaultColor:darkModeColor:)` and `UIColor.dynamicColor(defaultColor:darkModeColor:)`, which pick the dark value when the trait collection's `userInterfaceStyle` is `.dark` and the light value otherwise ([Color+.swift](https://github.com/warp-ds/warp-ios/blob/main/Sources/Helpers/Color%2B.swift)).
 
-This means Warp colours follow the system appearance, and also any override you apply with standard iOS APIs, such as `.preferredColorScheme(_:)` in SwiftUI or `overrideUserInterfaceStyle` in UIKit. Warp has no separate setting for light or dark mode.
+This means WARP colours follow the system appearance, and also any override you apply with standard iOS APIs, such as `.preferredColorScheme(_:)` in SwiftUI or `overrideUserInterfaceStyle` in UIKit. WARP has no separate setting for light or dark mode.
 
 `Color.dynamicColor(defaultColor:darkModeColor:)` and `UIColor.dynamicColor(defaultColor:darkModeColor:)` are public, so you can use them for your own colours that need a light and a dark value.
 

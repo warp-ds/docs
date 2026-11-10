@@ -1,3 +1,7 @@
+---
+pendingReview: true
+---
+
 # Confirmation dialog
 
 <ComponentsStatus />

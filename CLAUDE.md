@@ -49,7 +49,7 @@ docs/
 
 - Sources live where they are served (no `rewrites`). Do not put `foo.md` next to a `foo/` folder (GitHub Pages may redirect `/foo` to `/foo/`); that is why the legacy Web code pages are flat siblings (`code-react.md`).
 - Platforms are independent: a component page on one platform never has to match another. A platform only lists components it actually has.
-- Pages with frontmatter `seeded: true` were copied from the Web docs and still need checking against the platform source. A notice is shown automatically. Remove the flag once reviewed. Pages written from the platform source code but not yet reviewed by the platform team (the iOS/Android foundation pages) use frontmatter `pendingReview: true` instead, which shows a similar notice.
+- Pages with frontmatter `seeded: true` were copied from the Web docs and still need checking against the platform source. A notice is shown automatically. Remove the flag once reviewed. Pages written from the platform source code but not yet reviewed by the platform team (the iOS/Android foundation pages) use frontmatter `pendingReview: true` instead, which shows a similar notice. Older pages that may be out of date (e.g. Get started guides, also under `get-started/{web,ios,android}/`) use `needsReview: true`.
 - Patterns are their own section (as in production): on `/patterns/` and `/{platform}/patterns/…` the sidebar shows only that platform's patterns under the switcher (`patternSidebars` in `sidebar/platform.js`), not Foundation/Components. A platform lists only the patterns it documents (Empty states: iOS + Android).
 - The layout is full width (Fluent 2 style): sidebar pinned left, outline pinned right, and a fixed 768px reading column (`--warp-doc-width` in `theme/custom.css`) that does not depend on the page. The home page (`index.md`, `layout: page`, `<HomeLanding />`) keeps the sidebar visible from the start.
 - Cross-links between the Design Language and platform foundations are opt-in: a platform foundation page adds frontmatter `designLanguage: /design-language/<topic>/`. Both pages then show the same header switch, `Design Language | Web | iOS | Android` (collected by `pnpm generate-manifest`; a platform with several pages on one topic opens a menu).
@@ -82,7 +82,7 @@ These Vue components are registered globally for use in markdown files:
 | `<Do>`, `<DoDont>` | Do/Don't guidance blocks with images |
 | `<TabsContent>` | Generic tab container with slots |
 | `<Cards>`, `<Card>` | Card grid layouts |
-| `<ThemeSwitcher />` | Brand theme for the live examples (one choice for the whole site, remembered). On component/pattern pages the "Theme" dropdown is always in the page header, right of the tabs, on every tab, so the tag is not needed there (it renders nothing). On other pages it renders inline |
+| `<ThemeSwitcher />` | Brand theme for the live examples (one choice for the whole site, remembered). On Web component/pattern pages the "Theme" dropdown is always in the page header, right of the tabs, on every tab, so the tag is not needed there (it renders nothing). iOS and Android pages have no live examples, so they have no dropdown. On other pages it renders inline |
 | `<WidthController />` | Responsive example container |
 
 ### Styling

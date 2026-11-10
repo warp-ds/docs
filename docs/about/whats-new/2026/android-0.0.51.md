@@ -7,7 +7,7 @@ WarpRangeSlider component
 
 ---
 
-# Warp Android release 0.0.51
+# WARP Android release 0.0.51
 
 ## 2026-01-08
 

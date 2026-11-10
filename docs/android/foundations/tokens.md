@@ -6,7 +6,7 @@ designLanguage: /design-language/tokens/intro/
 
 # Tokens
 
-In Jetpack Compose, Warp tokens are Kotlin properties that you read from `WarpTheme`. Colour tokens come from the active brand theme and switch between light and dark mode; spacing, border, size and shape tokens are the same for every brand.
+In Jetpack Compose, WARP tokens are Kotlin properties that you read from `WarpTheme`. Colour tokens come from the active brand theme and switch between light and dark mode; spacing, border, size and shape tokens are the same for every brand.
 
 ## Reading tokens
 
@@ -44,7 +44,7 @@ fun InfoPanel(message: String) {
 }
 ```
 
-You can also import the properties directly, as the Warp components do:
+You can also import the properties directly, as the WARP components do:
 
 ```kotlin
 import com.schibsted.nmp.warp.theme.WarpTheme.colors
@@ -74,7 +74,7 @@ The table lists base names. Most tokens also have variants, built by adding a su
 | `inverted…` | `text.invertedSubtle`, `icon.invertedPrimary` | For use on inverted backgrounds |
 | `…Static`   | `text.static`, `icon.primaryStatic`       | Keeps the same value in light and dark mode |
 
-Semantic tokens (every group except `components`) aren't tied to a component, so you can use them to build your own UI and still get every brand and dark mode. The `components` group holds colours the Warp components use internally. Read more in [Tokens (Design Language)](/design-language/tokens/intro/).
+Semantic tokens (every group except `components`) aren't tied to a component, so you can use them to build your own UI and still get every brand and dark mode. The `components` group holds colours the WARP components use internally. Read more in [Tokens (Design Language)](/design-language/tokens/intro/).
 
 For the full list of names, see [WarpColors.kt](https://github.com/warp-ds/warp-android/blob/develop/warp/src/main/java/com/schibsted/nmp/warp/theme/WarpColors.kt).
 
@@ -129,13 +129,13 @@ The data-visualisation colours are shared: every brand uses `DatavizColors` in l
 | `dimensions.minimumTouchSize`  | 44 dp |
 | `dimensions.illustration`      | 200 dp |
 
-`dimensions.components` holds fixed sizes for individual Warp components, such as `textFieldHeight` and `topAppBarHeight`.
+`dimensions.components` holds fixed sizes for individual WARP components, such as `textFieldHeight` and `topAppBarHeight`.
 
 The shadow tokens (`shadowSmall` to `shadowXLarge`) are described in [Elevation](/android/foundations/elevation).
 
 ### Scaling with font size
 
-`dimensions.adaptDpToFontScale` multiplies a dp value by the user's font scale, so a size can grow along with text. You can cap the result with `coerceMaxSize`. `coerceMinSize` is only applied when you also pass `coerceMaxSize`. Warp's snackbar uses this helper.
+`dimensions.adaptDpToFontScale` multiplies a dp value by the user's font scale, so a size can grow along with text. You can cap the result with `coerceMaxSize`. `coerceMinSize` is only applied when you also pass `coerceMaxSize`. WARP's snackbar uses this helper.
 
 ```kotlin
 import androidx.compose.foundation.layout.size

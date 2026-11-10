@@ -1215,3 +1215,18 @@ body {
     transition: none;
   }
 }
+
+/* Tablets (768–1023px): the search button shows only its icon, as on phones, so the nav links and the
+   "Get started" button fit next to it */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .VPNavBarSearch .DocSearch-Button {
+    width: 40px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .VPNavBarSearch .DocSearch-Button-Placeholder,
+  .VPNavBarSearch .DocSearch-Button-Keys {
+    display: none;
+  }
+}
