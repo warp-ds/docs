@@ -9,6 +9,7 @@
       <h3 class="footer-column-title">Collaborate</h3>
       <a class="footer-link" :href="`${baseUrl}about/help/requests/new-component/`">Request new component</a>
       <a class="footer-link" :href="`${baseUrl}about/help/requests/component-changes/`">Request component changes</a>
+      <a class="footer-link" :href="`${baseUrl}about/help/authoring-guide/`">WARP Docs content guideline</a>
     </div>
     <div class="footer-column">
       <h3 class="footer-column-title">Help</h3>
@@ -42,17 +43,6 @@ import WarpLogo from '../src/warp-logo.svg';
 
 html.dark .footer {
   background-color: var(--vp-c-bg-alt);
-}
-
-/* faint star field from the Warp brand assets */
-.footer::before {
-  content: '';
-  position: absolute;
-  inset: auto 0 0;
-  height: 104px;
-  background: url('/stars-background.svg') no-repeat center/cover;
-  opacity: 0.6;
-  pointer-events: none;
 }
 
 .footer-column {

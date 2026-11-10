@@ -3,7 +3,7 @@
 // Platform numbers come from platform-manifest.json, so they stay current.
 import { useData, withBase } from 'vitepress';
 import { computed } from 'vue';
-import HeroSVG from '../src/warp-hero.svg';
+import BrandLogos from './BrandLogos.vue';
 import CardIcon from './CardIcon.vue';
 import manifest from './platform-manifest.json';
 import WayglimBackground from './WayglimBackground.vue';
@@ -93,13 +93,10 @@ const quickLinks = [
 
 const SLACK = 'https://sch-chat.slack.com/archives/C04P0GYTHPV';
 
+// "Contribute guidance" is hidden until the contribution model guideline exists: add it back first, linking to
+// that guideline ({ text: 'Contribute guidance', description: 'Improve a page or write a new one.', icon: 'edit' }).
+// The authoring guide it used to open is linked from the footer ("WARP Docs content guideline").
 const collaborate = [
-  {
-    text: 'Contribute guidance',
-    description: 'Improve a page or write a new one with the authoring guide.',
-    href: withBase('/about/help/authoring-guide/'),
-    icon: 'edit',
-  },
   {
     text: 'Request a component',
     description: 'Tell us what is missing and what your team needs it for.',
@@ -112,6 +109,13 @@ const collaborate = [
     href: withBase('/about/help/faq/'),
     icon: 'help',
   },
+  {
+    text: 'Ask in #warp-design-system',
+    description: 'Talk to the Warp team and other teams on Slack.',
+    href: SLACK,
+    icon: 'slack',
+    external: 'Slack, opens in a new tab',
+  },
 ];
 </script>
 
@@ -121,11 +125,11 @@ const collaborate = [
       <WayglimBackground class="hero-bg" :settings="wayglimSettings" />
       <div class="hero-text">
         <p class="eyebrow">Welcome to</p>
-        <h1 id="home-title" class="title">Warp</h1>
+        <h1 id="home-title" class="title">WARP</h1>
         <p class="tagline">Vend's design system. Design, build and ship coherent experiences across Web, iOS and Android.</p>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <HeroSVG class="hero-svg" />
+      <div class="hero-art">
+        <BrandLogos class="hero-logos" />
       </div>
       <ul class="entries">
         <li v-for="e in entries" :key="e.title">
@@ -187,28 +191,37 @@ const collaborate = [
     </section>
 
     <section class="collaborate" aria-labelledby="home-collaborate">
+      <div class="collaborate-bg" aria-hidden="true">
+        <span class="glow glow-ring glow-strong" />
+        <span class="glow glow-ring glow-mid" />
+        <span class="glow glow-ring glow-sharp" />
+        <span class="glow glow-orb glow-strong" />
+        <span class="glow glow-orb glow-mid" />
+        <span class="glow glow-orb glow-sharp" />
+      </div>
       <div class="collaborate-intro">
         <p class="eyebrow">Built together</p>
-        <h2 id="home-collaborate" class="collaborate-title">Help evolve Warp</h2>
+        <h2 id="home-collaborate" class="collaborate-title">Help evolve WARP</h2>
         <p class="collaborate-text">
           Warp grows with the teams that use it. Every guideline, component request and question makes it better
           for everyone.
         </p>
-        <a :href="SLACK" target="_blank" rel="noopener" class="slack">
-          <img :src="withBase('/slack-icon.svg')" alt="" width="20" height="20" />
-          <span>Ask in <strong>#warp-design-system</strong></span>
-          <span class="visually-hidden">(Slack, opens in a new tab)</span>
-        </a>
       </div>
       <ul class="collaborate-cards">
         <li v-for="c in collaborate" :key="c.text">
-          <a :href="c.href" class="collaborate-card">
+          <a
+            :href="c.href"
+            class="collaborate-card"
+            :target="c.external ? '_blank' : undefined"
+            :rel="c.external ? 'noopener' : undefined"
+          >
             <span class="tile-icon"><CardIcon :name="c.icon" /></span>
             <span class="collaborate-card-text">
               <span class="collaborate-card-title">{{ c.text }}</span>
               <span class="collaborate-card-description">{{ c.description }}</span>
             </span>
-            <span class="vpi-arrow-right collaborate-arrow" aria-hidden="true" />
+            <span v-if="c.external" class="visually-hidden">({{ c.external }})</span>
+            <span class="vpi-arrow-right collaborate-arrow" :class="{ external: c.external }" aria-hidden="true" />
           </a>
         </li>
       </ul>
@@ -268,12 +281,17 @@ html.dark .hero {
   background: linear-gradient(180deg, #08090c 0%, #101218 100%);
 }
 
-/* the engine draws over white / black; these blends drop that colour and keep the light */
+/* the engine draws over white / black; these blends drop that colour and keep the light. Under the canvas, a
+   still of the animation's first frame on the same white / black (pnpm wayglim-fallback): shown until the
+   animation draws, and instead of it where it can't run (no WebGL2, the script failed to load). The engine covers
+   the box from the centre at the studio aspect ratio, as `cover` does, so the still lines up at every size. */
 .hero-bg {
+  background: url('./wayglim/generated/fallback-light.webp') center / cover no-repeat;
   mix-blend-mode: multiply;
 }
 
 html.dark .hero-bg {
+  background-image: url('./wayglim/generated/fallback-dark.webp');
   mix-blend-mode: screen;
 }
 
@@ -310,14 +328,15 @@ html.dark .hero-bg {
   color: var(--vp-c-text-2);
 }
 
+/* Brand logos: a wrapped row on phones (between the tagline and the cards), a column from 960px */
 .hero-art {
-  display: none;
+  color: var(--vp-c-text-1);
 }
 
-.hero-svg {
-  width: 100%;
-  max-width: 360px;
-  height: auto;
+.hero-logos {
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 18px 28px;
 }
 
 .entries {
@@ -587,10 +606,11 @@ html.dark .hero-bg {
   color: var(--vp-c-text-2);
 }
 
-/* Collaborate: shares the hero's idea (a neutral gradient lit by Warp red) but not its elements. No streak, no
-   grain: a smooth red glow sits in the bottom-right corner and fine concentric orbit lines spread from it,
-   echoing the orbits around the planet in the hero artwork. The base gradient runs the other way (grey to
-   white). Pure CSS. */
+/* Collaborate (Figma: Yuri's Sandbox, "Help evolve WARP"): a grey-to-pink gradient and two red gradient shapes
+   with a progressive blur, sharp on one side and soft on the other. CSS has no progressive blur, so each shape is
+   drawn three times (strong blur, medium blur, sharp) and diagonal masks cross-fade the copies. The ring is
+   centred on the left edge of the card column, just above the bottom; the small orb sits in the top-right
+   corner, partly behind the first card. Pure CSS, static. */
 .collaborate {
   position: relative;
   display: grid;
@@ -600,41 +620,81 @@ html.dark .hero-bg {
   padding: 40px 24px;
   border: 1px solid var(--vp-c-divider);
   border-radius: var(--warp-radius-xl);
-  background:
-    radial-gradient(circle at 100% 100%, rgba(229, 22, 18, 0.26), rgba(229, 22, 18, 0.08) 32%, transparent 58%),
-    linear-gradient(180deg, #ececef 0%, #ffffff 100%);
+  background: linear-gradient(90deg, #eeeeee 30%, #f5d8d6 100%);
   overflow: hidden;
   isolation: isolate;
 }
 
 html.dark .collaborate {
-  background:
-    radial-gradient(circle at 100% 100%, rgba(229, 22, 18, 0.34), rgba(229, 22, 18, 0.1) 32%, transparent 58%),
-    linear-gradient(180deg, #101218 0%, #08090c 100%);
+  background: linear-gradient(90deg, #101218 30%, #2a1619 100%);
 }
 
-/* orbit lines around the glow, fading out with distance */
-.collaborate::before {
-  content: '';
+.collaborate-bg {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: repeating-radial-gradient(
-    circle at 100% 100%,
-    transparent 0 55px,
-    rgba(229, 22, 18, 0.2) 55px 56px
-  );
-  -webkit-mask-image: radial-gradient(circle at 100% 100%, #000 10%, transparent 72%);
-  mask-image: radial-gradient(circle at 100% 100%, #000 10%, transparent 72%);
   pointer-events: none;
 }
 
-html.dark .collaborate::before {
-  background: repeating-radial-gradient(
-    circle at 100% 100%,
-    transparent 0 55px,
-    rgba(255, 92, 82, 0.22) 55px 56px
-  );
+/* one copy of a shape: a circle of radius --r centred on (left, top), in a box with room for the blur */
+.glow {
+  --room: 150px;
+  position: absolute;
+  width: calc(2 * (var(--r) + var(--room)));
+  aspect-ratio: 1;
+  margin: calc(-1 * (var(--r) + var(--room))) 0 0 calc(-1 * (var(--r) + var(--room)));
+  background: radial-gradient(circle var(--r) at center, var(--stops));
+}
+
+.glow-strong {
+  filter: blur(50px);
+  -webkit-mask-image: linear-gradient(var(--sharp-side), #000 38%, transparent 50%);
+  mask-image: linear-gradient(var(--sharp-side), #000 38%, transparent 50%);
+}
+
+.glow-mid {
+  filter: blur(18px);
+  -webkit-mask-image: linear-gradient(var(--sharp-side), transparent 38%, #000 50%, transparent 62%);
+  mask-image: linear-gradient(var(--sharp-side), transparent 38%, #000 50%, transparent 62%);
+}
+
+.glow-sharp {
+  -webkit-mask-image: linear-gradient(var(--sharp-side), transparent 50%, #000 62%);
+  mask-image: linear-gradient(var(--sharp-side), transparent 50%, #000 62%);
+}
+
+/* the ring: sharp towards the bottom right; its centre matches the panel's left gradient colour */
+.glow-ring {
+  --r: 142px;
+  --sharp-side: 135deg;
+  --stops: #eeeeee 25.96%, #c90101 86.06%, #be3830 100%, transparent 100%;
+  top: calc(100% - 68px);
+  left: calc(50% + 24px);
+}
+
+/* the orb: sharp towards the left; its centre matches the panel's right gradient colour */
+.glow-orb {
+  --r: 90px;
+  --sharp-side: 300deg;
+  --stops: #f5d8d6 44.71%, #ff6259 86.06%, #be3830 100%, transparent 100%;
+  top: 45px;
+  left: calc(100% - 85px);
+}
+
+/* one column (below 960px): the orb would sit behind the heading, so only its edge shows in the corner */
+@media (max-width: 959px) {
+  .glow-orb {
+    top: -20px;
+    left: calc(100% - 10px);
+  }
+}
+
+html.dark .glow-ring {
+  --stops: #101218 25.96%, #c90101 86.06%, #be3830 100%, transparent 100%;
+}
+
+html.dark .glow-orb {
+  --stops: #2a1619 44.71%, #e5453c 86.06%, #be3830 100%, transparent 100%;
 }
 
 .collaborate-intro {
@@ -664,30 +724,9 @@ html.dark .collaborate::before {
   color: var(--vp-c-text-2);
 }
 
-.slack {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 28px;
-  padding: 12px 20px;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  background: var(--vp-c-bg);
-  color: var(--vp-c-text-1);
-  font-weight: 500;
-  transition: border-color var(--warp-duration) var(--warp-ease), box-shadow var(--warp-duration) var(--warp-ease);
-}
-
-.slack:hover {
-  border-color: var(--warp-card-border-hover);
-}
-
-.slack:focus-visible {
-  border-radius: 999px;
-}
-
 .collaborate-cards {
   display: grid;
+  align-content: center;
   gap: 12px;
 }
 
@@ -727,6 +766,11 @@ html.dark .collaborate::before {
   color: var(--vp-c-text-3);
 }
 
+/* opens another site in a new tab: the arrow points out */
+.collaborate-arrow.external {
+  transform: rotate(-45deg);
+}
+
 .collaborate-card:hover .collaborate-arrow {
   color: var(--vp-c-brand-1);
 }
@@ -743,9 +787,10 @@ html.dark .collaborate::before {
 
 @media (min-width: 960px) {
   .hero {
-    grid-template-columns: 1.3fr 1fr;
+    /* two equal columns with the cards' gap, so the logo column starts where the Develop card does */
+    grid-template-columns: 1fr 1fr;
     align-content: center;
-    gap: 56px 40px;
+    gap: 56px 16px;
     min-height: 680px;
     margin: 0 -48px;
     /* content lines up with the 1280px column of the sections below */
@@ -753,9 +798,15 @@ html.dark .collaborate::before {
   }
 
   .hero-art {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    align-self: center;
+    /* the card's padding and border: the logos line up with the "Develop" title */
+    padding-left: 25px;
+  }
+
+  .hero-logos {
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    gap: 22px;
   }
 
   .entries {
@@ -784,7 +835,6 @@ html.dark .collaborate::before {
   .platform-arrow,
   .shared-card,
   .quick-card,
-  .slack,
   .collaborate-card,
   .card-arrow {
     transition: none;

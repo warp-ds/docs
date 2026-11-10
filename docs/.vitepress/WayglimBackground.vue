@@ -14,6 +14,8 @@
 //    drops the whole page to a few frames per second.
 //  - Unmounting (or remounting on a settings change) releases the WebGL context right away instead of
 //    waiting for garbage collection, so theme switches don't pile up contexts.
+//  - The canvas fades in once its first frame is drawn, over whatever the box shows meanwhile (the home hero
+//    sets a still of the first frame as its background image, so the still turns into the animation).
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 
 const props = defineProps({
@@ -53,10 +55,26 @@ function destroy() {
   gl?.getExtension('WEBGL_lose_context')?.loseContext();
 }
 
+const FADE_IN = 'opacity 400ms cubic-bezier(0.22, 1, 0.36, 1)';
+
+// the engine draws its first frame on the next animation frame; reveal the canvas after that (at once for
+// reduced motion). Without WebGL2 the engine removes its canvas, so there is nothing to fade.
+function fadeIn(canvas) {
+  if (!canvas) return;
+  canvas.style.opacity = '0';
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) canvas.style.transition = FADE_IN;
+  requestAnimationFrame(() =>
+    requestAnimationFrame(() => {
+      canvas.style.opacity = '1';
+    }),
+  );
+}
+
 function mount() {
   destroy();
   if (unmounted || !mountWayglim || !exported.value || !container.value) return;
   player = mountWayglim(container.value, { ...exported.value.WAYGLIM_SETTINGS, ...props.settings });
+  fadeIn(container.value.querySelector('canvas'));
   if (softwareRendering) {
     // let the first frame draw, then hold it
     const held = player;

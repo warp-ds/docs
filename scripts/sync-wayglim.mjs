@@ -3,12 +3,14 @@
 // (docs/.vitepress/WayglimBackground.vue) can import:
 //   docs/.vitepress/wayglim/generated/settings.js  the studio settings, background and aspect ratio
 //   docs/.vitepress/wayglim/generated/engine.js    the engine (mountWayglim), byte for byte
+// then captures the hero's still fallback images from them (scripts/capture-wayglim-fallback.mjs, needs Chrome).
 // Accepts both export formats from the studio's Export → Code menu:
 //   - HTML (wayglim-background.html): engine script + settings script
 //   - Next.js / React (WayglimBackground.tsx): engine section + WAYGLIM_SETTINGS
 // Nothing is rewritten: the engine and the settings are copied verbatim; only `export` lines (and, for the HTML
 // engine, the closure the React export wraps it in) are added. Re-run after exporting a new look:
 //   pnpm sync-wayglim ~/Downloads/wayglim-background.html
+import { spawnSync } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { basename, dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -62,3 +64,15 @@ writeFileSync(
 );
 writeFileSync(join(outDir, 'engine.js'), `${header('engine, verbatim')}${engine}\n\nexport default mountWayglim;\n`);
 console.log(`Wayglim synced from ${source} into ${outDir}`);
+
+const capture = spawnSync(
+  process.execPath,
+  [join(dirname(fileURLToPath(import.meta.url)), 'capture-wayglim-fallback.mjs')],
+  {
+    stdio: 'inherit',
+  },
+);
+if (capture.status !== 0) {
+  console.warn('The hero fallback images were not updated: run `pnpm wayglim-fallback` before committing.');
+  process.exitCode = 1;
+}

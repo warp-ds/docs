@@ -19,7 +19,8 @@
     "prepare": "husky",
     "generate-manifest": "node scripts/generate-manifest.js",
     "check:site": "node scripts/check-site.mjs",
-    "sync-wayglim": "node scripts/sync-wayglim.mjs"
+    "sync-wayglim": "node scripts/sync-wayglim.mjs",
+    "wayglim-fallback": "node scripts/capture-wayglim-fallback.mjs"
   },
   "type": "module",
   "license": "Apache-2.0",
