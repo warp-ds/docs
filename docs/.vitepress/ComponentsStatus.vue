@@ -209,17 +209,20 @@ const frameworks = computed(() => {
 .frameworks a:focus-visible {
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 2px;
+}
+
+.page-tab:focus-visible {
   border-radius: 4px;
 }
 
 /* Second level under the Code tab: quiet text links, current one underlined */
+/* Framework choice: the same pill chips as the filters on the components overview (DsOverview.vue) */
 .frameworks {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px 16px;
-  padding: 12px 0 0;
-  font-size: 13px;
+  gap: 8px 16px;
+  padding: 16px 0 0;
 }
 
 .caption {
@@ -233,7 +236,7 @@ const frameworks = computed(() => {
 .frameworks ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: var(--warp-space-2);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -246,25 +249,34 @@ const frameworks = computed(() => {
 .frameworks a {
   display: inline-flex;
   align-items: center;
-  height: 28px;
-  padding: 0 10px;
-  border-radius: var(--warp-radius-s);
-  color: var(--vp-c-text-2);
-  font-weight: 600;
+  min-height: 32px;
+  padding: 0 var(--warp-space-3);
+  border: 1px solid var(--warp-control-border);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  font-weight: 500;
   text-decoration: none;
   transition:
     color var(--warp-duration) var(--warp-ease),
+    border-color var(--warp-duration) var(--warp-ease),
     background-color var(--warp-duration) var(--warp-ease);
 }
 
 .frameworks a:hover {
-  color: var(--vp-c-text-1);
-  background: var(--warp-nav-hover-bg);
+  border-color: var(--warp-control-border-hover);
 }
 
 .frameworks a.current {
-  color: var(--vp-c-brand-1);
+  border-color: color-mix(in srgb, var(--vp-c-brand-1) 45%, transparent);
   background: var(--warp-nav-active-bg);
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.frameworks a.current:hover {
+  border-color: var(--vp-c-brand-1);
 }
 
 .component-nav :deep(.seeded-notice) {

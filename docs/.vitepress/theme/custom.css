@@ -529,7 +529,7 @@ td:has(.td-reset) {
     padding-left: 32px;
   }
 
-  .VPNav .VPNavBar.has-sidebar .container .title {
+  .VPNav .VPNavBar.has-sidebar .container > .title {
     width: var(--vp-sidebar-width);
     padding-left: 32px;
   }
