@@ -152,7 +152,19 @@ function onFocusOut(event) {
         @click="choose(i)"
       >
         <span>{{ platform.label }}</span>
-        <span v-if="platform.id === selectedPlatform" class="vpi-check check" aria-hidden="true" />
+        <svg
+          v-if="platform.id === selectedPlatform"
+          class="check"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M5 12.5l4.5 4.5L19 7.5" />
+        </svg>
       </li>
     </ul>
     <span class="visually-hidden" aria-live="polite">{{ announcement }}</span>

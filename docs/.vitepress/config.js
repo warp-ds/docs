@@ -198,10 +198,7 @@ export default defineConfig({
     logo: '/warp-logo-small.svg',
     outline: 'deep',
     socialLinks: [{ icon: 'github', link: 'https://github.com/warp-ds' }],
-    nav: [
-      { text: "What's new", link: '/about/whats-new/', activeMatch: '^/about/whats-new/' },
-      { text: 'Mission and principles', link: '/design-language/about/' },
-    ],
+    nav: [{ text: "What's new", link: '/about/whats-new/', activeMatch: '^/about/whats-new/' }],
     // Each page gets the tree it belongs to (keeps prev/next and active state native).
     // SidebarComposer.vue adds the shared sections, the Platform switcher and the other tree.
     sidebar: {
