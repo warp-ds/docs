@@ -1,11 +1,11 @@
 # Button group - iOS
-Button group is a grouping concept for buttons.
+
+A button group is a type of form input displayed as multiple buttons in a group, typically used as a filter control.
 
 <ComponentsStatus />
+<FrameworkTabs />
 
 ## iOS
-
-<FrameworkTabs />
 
 ### Syntax
 
