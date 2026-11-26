@@ -1,0 +1,8 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="398" height="298" rx="4" fill="#EDEDED" stroke="#BDBDBD" stroke-width="2" stroke-dasharray="8 6"/>
+<rect x="1" y="1" width="398" height="8" fill="#0E9946"/>
+<text x="200" y="70" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0E9946">DO</text>
+<text x="200" y="110" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="3" fill="#9E9E9E">PLACEHOLDER</text>
+<text x="200" y="150" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#555">Product page showing the line 'Returns</text><text x="200" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#555">accepted within 14 days' as plain text, with</text><text x="200" y="190" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#555">no expandable.</text>
+<text x="200" y="282" text-anchor="middle" font-family="Menlo, monospace" font-size="11" fill="#9E9E9E">usage-short-content-do.svg</text>
+</svg>
