@@ -30,6 +30,10 @@ enum class WarpExpandableType {
 }
 ```
 
+Box bleed and Default with divider aren't available on Android.
+
+In both styles only the chevron is tappable, not the title.
+
 ### Default
 
 The default style for the expandable is just title with the icon button. The expanded content is a @Composable.

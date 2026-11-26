@@ -50,6 +50,8 @@ enum Warp.ExpandableStyle {
 }
 ```
 
+`.default`, `.box` and `.boxBleed` are the Default, Box and Box bleed variants. Default with divider isn't available on iOS.
+
 ### Legacy support
 
 By default all Warp components return a `SwiftUI View` but there is always a `UIKit UIView` available to use also.
