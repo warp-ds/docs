@@ -24,6 +24,7 @@ import DsSearchInput from '../DsSearchInput.vue';
 import FrameworkTabs from '../FrameworkTabs.vue';
 import InProgressStatus from '../InProgressStatus.vue';
 import TabsContent from '../TabsContent.vue';
+import TokenTable from '../TokenTable.vue';
 import WidthController from '../WidthController.vue';
 import warpThemeSwitcher from '../warp-theme-switcher.js';
 
@@ -63,6 +64,7 @@ export default {
     app.component('WidthController', WidthController);
     app.component('DsSearchInput', DsSearchInput);
     app.component('TabsContent', TabsContent);
+    app.component('TokenTable', TokenTable);
     app.component('UsageExample', UsageExample);
     app.component('UsageExamples', UsageExamples);
   },

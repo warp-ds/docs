@@ -1,32 +1,4 @@
 # Overview
-Overview of our tokens types with names, descriptions and branded examples.
+Overview of our tokens types with names, descriptions and branded examples. For how variants and states work, see [Usage](/foundations/tokens/usage/).
 
-### Background
-
-::: image-block
-![Add alt text](/foundations/token-overview-background.png)
-:::
-
-### Elevation
-
-::: image-block
-![Add alt text](/foundations/token-overview-elevation.png)
-:::
-
-### Text
-
-::: image-block
-![Add alt text](/foundations/token-overview-text.png)
-:::
-
-### Border
-
-::: image-block
-![Add alt text](/foundations/token-overview-border.png)
-:::
-
-### Icon
-
-::: image-block
-![Add alt text](/foundations/token-overview-icon.png)
-:::
+<TokenTable />

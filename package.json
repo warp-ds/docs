@@ -10,6 +10,7 @@
     "dev": "NODE_ENV=development vitepress dev docs",
     "format": "pnpm biome format --write .",
     "generate-frameworks": "node scripts/generate-frameworks.js",
+    "generate-tokens": "node scripts/generate-tokens.js",
     "lint:check": "pnpm biome lint .",
     "lint": "pnpm biome lint --write .",
     "review:docs": "node scripts/review-docs.mjs",
